@@ -1,0 +1,11 @@
+cat <<EOF  | psql
+drop table church_church;
+drop table church_churchbudget;
+drop table church_churchbudgettarget;
+drop table church_churchevent ;
+drop table church_churchscore ;
+drop table church_leader      ;
+drop table contact_contact    ;
+EOF
+echo "\dt" | psql 
+
