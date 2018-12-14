@@ -1,5 +1,21 @@
 *.pyc
 
+.idea
+.pytest_cache
+
+Documents-2018
 Documents
 
+bin/pip-list
+bin/welcome
+
+data/hammer.db
+data/test*
+
 hammer/secret_settings.py
+
+log/*.log
+
+migrations/
+
+superuser/initialize.py
