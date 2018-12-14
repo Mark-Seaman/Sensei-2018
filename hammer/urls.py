@@ -7,7 +7,6 @@ from django.views.generic.base import RedirectView
 
 
 import aspire.urls
-import church.urls
 import guide.urls
 import wiki.urls
 import life.urls
@@ -17,7 +16,6 @@ import tool.urls
 import health.urls
 import superuser.urls
 import unc.urls
-import workshop.urls
 
 
 urlpatterns = [
@@ -31,10 +29,6 @@ urlpatterns = [
     # Aspire
     url(r'^aspire/',    include(aspire.urls)),
     url(r'^aspire',     include(aspire.urls)),
-
-    # Church
-    url(r'^church/',    include(church.urls)),
-    url(r'^church',     include(church.urls)),
 
     # Doc
     url(r'^wiki/',       include(wiki.urls)),
@@ -61,9 +55,6 @@ urlpatterns = [
 
     url(r'^unc/',       include(unc.urls)),
     url(r'^unc',        include(unc.urls)),
-
-    # Workshop
-    url(r'^',           include(workshop.urls)),
 
     # Tool
     url(r'^',           include(tool.urls)),

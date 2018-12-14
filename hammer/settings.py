@@ -42,7 +42,6 @@ DEBUG = True
 # Application definition
 INSTALLED_APPS = [
     'aspire',
-    'church',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,7 +61,6 @@ INSTALLED_APPS = [
     'tool',
     'unc',
     'wiki',
-    'workshop',
 ]
 
 MIDDLEWARE_CLASSES = [
