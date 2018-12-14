@@ -1,0 +1,7 @@
+#!/bin/bash
+# Run a single Django command
+
+export p=$HOME/Projects/MyBook
+cd $p
+python manage.py $*
+

@@ -1,0 +1,58 @@
+{% extends "mybook_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <table class="table table-hover">
+
+                        <th>{{ object_list.0.0 }}</th>
+                        <th>{{ object_list.0.1 }}</th>
+                        <th>{{ object_list.0.2 }}</th>
+                        <th>{{ object_list.0.4 }}</th>
+
+                        {% for row in object_list.1 %}
+                            <tr>
+
+                                {#{% for value in row %}#}
+                                {#   <td>{{ value }}</td>#}
+                                {#{% endfor %}#}
+
+                                <td>{{ row.0 }}</td>
+                                <td><a href="/aspire/project_detail/{{ row.0 }}">{{ row.1 }}</a></td>
+                                <td><a href="/aspire/role/{{ row.2 }}">{{ row.2 }}</a></td>
+                                <td>{{ row.4 }}</td>
+
+                            </tr>
+                        {% endfor %}
+
+                        <tr>
+                            <td></td>
+                            <td><strong>Grand Total</strong></td>
+                            <td></td>
+                            <td><strong>{{ object_list.3 }}</strong></td>
+                        </tr>
+
+                    </table>
+
+                    <div class="row p-15">
+                        <a href="/aspire/project_add">
+                            <button class="btn palette-Green bg">Create New Project</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}
+

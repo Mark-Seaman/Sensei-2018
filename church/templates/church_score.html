@@ -1,0 +1,86 @@
+{% extends "church_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <a href="Index">Return to Dashboard</a>
+                    *
+                    <a href="church_score_list">History</a>
+
+                    <div class="card-body card-padding score-table">
+
+                        <table>
+                            <tr>
+                                <th class="th-score">Time</th>
+                                <th class="th-score">Money</th>
+                            </tr>
+                            <tr>
+                                <td class="score">
+                                    <a href="/church/Connect">
+                                        Connect
+                                        <br>
+                                        {{ scorecard.connect }}
+                                    </a>
+                                </td>
+                                <td class="score">
+                                    <a href="/church/Give">
+                                        Give
+                                        <br>
+                                        {{ scorecard.give }}
+                                    </a>
+                                </td>
+                                <td class="th-score">Lagging <br>Indicator</td>
+                            </tr>
+                            <tr>
+                                <td class="score">
+                                    <a href="/church/Lead">
+                                        Lead
+                                        <br>
+                                        {{ scorecard.lead }}
+                                    </a>
+                                </td>
+                                <td class="score">
+                                    <a href="/church/Invest">
+                                        Invest
+                                        <br>
+                                        {{ scorecard.invest }}
+                                    </a>
+                                </td>
+                                <td class="th-score">Leading <br>Indicator</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    {#                    <h2>Scoreboard History</h2>#}
+                    {#                    <table>#}
+                    {#                        <th class="th-score">Date</th>#}
+                    {#                        <th class="th-score">Connect</th>#}
+                    {#                        <th class="th-score">Lead</th>#}
+                    {#                        <th class="th-score">Give</th>#}
+                    {#                        <th class="th-score">Invest</th>#}
+                    {#                        {% for score in history %}#}
+                    {#                            <tr>#}
+                    {#                                {% for s in score %}#}
+                    {#                                    <td class="th-score">{{ s }}</td>#}
+                    {#                                {% endfor %}#}
+                    {#                            </tr>#}
+                    {#                        {% endfor %}#}
+                    {#                    </table>#}
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}
+

@@ -1,0 +1,69 @@
+{% extends "mybook_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1> {{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <form action="/book_edit/{{ object.pk }}" method="post">
+                        {% csrf_token %}
+
+                        <div class="form-group">
+                            <table class="table">
+
+                                <tr>
+                                    <td><label>Title</label></td>
+                                    <td>
+                                        <div class="container">
+                                            <div class="fg-line">
+                                                <div class="row" style="min-width: 100%">
+                                                    <strong>{{ form.title }}</strong></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><label>Published</label></td>
+                                    <td class="fg-line">
+                                        <strong>{{ form.published }}</strong>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><label>Document</label></td>
+                                    <td class="fg-line">
+                                        <strong>{{ form.doc }}</strong>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><label>Hours</label></td>
+                                    <td class="fg-line">
+                                        <strong>{{ form.hours }}</strong>
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                        </div>
+
+                        <div class="row p-20">
+                            <button class="btn palette-Green bg">Save Book</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+    </section>
+{% endblock %}
+

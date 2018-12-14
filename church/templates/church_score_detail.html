@@ -1,0 +1,52 @@
+{% extends "church.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    {% for row in score %}
+                        <div class="row">
+                            <label class="col-sm-4 f-700 text-right">{{ row.0 }}: </label>
+                            <span class="col-sm-2">
+                                {{ row.1 }}
+                                {% for star in row.2 %}
+                                    <i class="zmdi zmdi-star"></i>
+                                {% endfor %}
+                            </span>
+                        </div>
+                    {% endfor %}
+
+
+                    <div class="row p-25">
+                        <a href="/church/church_score_list">
+                            <button class="btn palette-Teal bg">Church Score</button>
+                        </a>
+
+                        <a href="/church/church_score_edit/{{ object.pk }}">
+                            <button class="btn palette-Teal bg">Edit Church Score</button>
+                        </a>
+
+                        <a href="/church/church_score_delete/{{ object.pk }}">
+                            <button class="btn palette-Teal bg">Delete Church Score</button>
+                        </a>
+                    </div>
+
+                    <br>
+                    <br>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+

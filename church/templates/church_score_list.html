@@ -1,0 +1,100 @@
+{% extends "church.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <p><b>Church:</b> {{ score.church }}</p>
+
+                    <div class="card-body card-padding table m-10">
+
+                        <div class="row">
+                            <b>Week &nbsp; {{ date.0 }} - {{ date.1 }}</b>
+                            <br><br>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3"></label>
+                            <label class="col-sm-2">Time </label>
+                            <label class="col-sm-2">Money </label>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3"></label>
+                            <label class="col-sm-2">
+                                <h3>{{ scorecard.0.0 }}</h3>
+                                {% for star in scorecard.0.2 %}<i class="zmdi zmdi-star"></i>{% endfor %}
+                            </label>
+                            <label class="col-sm-2">
+                                <h3>{{ scorecard.2.0 }}</h3>
+                                {% for star in scorecard.2.2 %}<i class="zmdi zmdi-star"></i>{% endfor %}
+                            </label>
+                            <label class="col-sm-2">
+                                <br>Lagging Indicator
+                            </label>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-3"></label>
+                            <label class="col-sm-2">
+                                <h3>{{ scorecard.1.0 }}</h3>
+                                {% for star in scorecard.1.2 %}<i class="zmdi zmdi-star"></i>{% endfor %}
+                            </label>
+                            <label class="col-sm-2">
+                                <h3>{{ scorecard.3.0 }}</h3>
+                                {% for star in scorecard.3.2 %}<i class="zmdi zmdi-star"></i>{% endfor %}
+                            </label>
+                            <label class="col-sm-2">
+                                <br>Leading Indicator
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <h2>History</h2>
+                    <div class="table p-10 m-10">
+
+                        <div class="row m-10">
+                            {% for x in labels %}
+                                <div class="col-sm-2"><b>{{ x }}</b></div>
+                            {% endfor %}
+                        </div>
+
+                        {% for row in values %}
+
+                            <div class="row m-10 p-t-20">
+                                <div class="col-sm-2"><a href="church_score_detail/{{ row.0.0 }}">{{ row.0.1 }}</a></div>
+                                {% for x in row.1 %}
+                                    {% autoescape off %}
+                                        <div class="col-sm-2">{{ x }}</div>
+                                    {% endautoescape %}
+                                {% endfor %}
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <a href="/church/church_score_add">
+                        <button class="btn palette-Teal bg">Create New Church_score</button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}
+
+

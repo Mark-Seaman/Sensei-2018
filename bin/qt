@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+# Run Quick test.
+
+print('Quick Test')
+print('Show an excerpt for booknotes/Integrity ')
+
+path = 'Documents/booknotes/Integrity'
+print('Path: %s\n\n' % path)
+
+
+print('Content: %s\n\n' % open(path).read().split('\n\n'))
+
+text = open(path).read().split('\n\n## Excerpts\n\n')
+excerpts = text[1].split('\n\n')
+excerpts = [e for e in excerpts if e and e!='\n']
+
+print('Excerpts: %s\n\n' % excerpts)

@@ -1,0 +1,53 @@
+{% extends "mybook_theme.html" %}
+
+
+{% block content %}
+
+    {% if books %}
+        <div class="card" brd-20>
+
+            <div class="card-header ch-alt">
+                <h1>{{ title }}</h1>
+            </div>
+
+            <div class="card-body card-padding">
+                <p>
+                    Select a new thot book to import.  The file will be read in as a dynamic outline.
+                </p>
+                {% for book in books %}
+                    <ul>
+                        <li>
+                            {% autoescape off %}
+                                {{ book }}
+                            {% endautoescape %}
+                        </li>
+                    </ul>
+                {% endfor %}
+            </div>
+
+        </div>
+    {% endif %}
+
+
+    {% if text %}
+        <div class="card" brd-20>
+
+            <div class="card-header ch-alt">
+                <h1><a href="/thot/{{ book.rootid }}">{{ book.title }}</a></h1>
+            </div>
+
+            <div class="card-body card-padding">
+                {% autoescape off %}
+                    {{ thots }}
+                {% endautoescape %}
+
+                {% autoescape off %}
+                    <pre>{{ text }}</pre>
+                {% endautoescape %}
+
+            </div>
+        </div>
+    {% endif %}
+
+
+{% endblock %}

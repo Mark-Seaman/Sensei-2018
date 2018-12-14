@@ -1,0 +1,128 @@
+{% extends "guide_theme.html" %}
+
+{% block card %}
+
+
+    <div class="card">
+
+        <div class="card-header ch-alt">
+            <h1>Design Reviews</h1>
+            <a href="/unc/student/{{ reviewer.id }}" class="btn">Test Page</a>
+            <a href="/unc/reviews/{{ reviewer.id }}" class="btn">Reviews Page</a>
+        </div>
+
+        <div class="card-body card-padding">
+
+
+            <h2>{{ reviewer.name }}</h2>
+
+            <h3>Total Points: {{ points.total }} (Reviewer {{ points.review }}, Designer: {{ points.design }})</h3>
+            <p>
+                <b>Final Project Points</b>
+            </p>
+            <ul>
+                <li>Designer: {{ points.design }}/80 Points</li>
+                <li>Reviewer: {{ points.review }}/20 Points</li>
+                <li>Total Project: {{ points.total }}/100 Points</li>
+            </ul>
+
+            <p>
+                <b>Reviewer Score</b>
+            </p>
+
+            <ul>
+                <li>
+                    Reviews Assigned: {{ completed.1 }}
+                </li>
+                <li>
+                    Reviews Completed: {{ completed.0 }}
+                </li>
+                <li>
+                    Success Rate: {{ completed.0 }} / {{ completed.1 }}
+                </li>
+                <li>
+                    Reviewer Score: {{ reviewer.reviewer_score }}%
+                </li>
+            </ul>
+
+            <p>
+                <b>Designer Score</b>
+            </p>
+            <ul>
+                <li>Designer Overall Score: {{ reviewer.designer_score }}%</li>
+            </ul>
+            <div class="page">
+                <a href="/unc/feedback/{{ reviewer.id }}" class="btn">Get Feedback</a>
+
+                <table class="table table-hover">
+                    <tr>
+                        <th>Page Reviewed</th>
+                        <th>Designer Score</th>
+                        <th>Review Score Details</th>
+                    </tr>
+
+                    {% for a in scores %}
+                        <tr>
+                            <td>{{ a.0 }}</td>
+                            <td>{{ a.1 }}%</td>
+                            <td>{{ a.2 }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+
+            <h2>Design Reviews To Do</h2>
+
+            <table class="table table-hover">
+
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Reviewer</th>
+                    <th>Designer</th>
+                    <th>Page</th>
+                </tr>
+
+                {% for r in reviews_to_do %}
+                    <tr>
+                        <td><a href="/unc/review/{{ r.pk }}">Update Review</a></td>
+                        <td>{{ r.date }}</td>
+                        <td><a href="/unc/reviews/{{ r.reviewer.id }}">{{ r.reviewer.email }}</a></td>
+                        <td><a href="/unc/reviews/{{ r.designer.id }}">{{ r.designer.email }}</a></td>
+                        <td><a href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.page }}</a></td>
+                    </tr>
+                {% endfor %}
+
+            </table>
+
+
+            <h2>Design Reviews Done</h2>
+
+            <table class="table table-hover">
+
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Reviewer</th>
+                    <th>Designer</th>
+                    <th>Page</th>
+                    <th>Score</th>
+                </tr>
+
+                {% for r in reviews_done %}
+                    <tr>
+                        <td><a href="/unc/review/{{ r.pk }}">Update Review</a></td>
+                        <td>{{ r.date }}</td>
+                        <td><a href="/unc/reviews/{{ r.reviewer.id }}">{{ r.reviewer.email }}</a></td>
+                        <td><a href="/unc/reviews/{{ r.designer.id }}">{{ r.designer.email }}</a></td>
+                        <td><a href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.page }}</a></td>
+                        <td>{{ r.score }}</td>
+                    </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

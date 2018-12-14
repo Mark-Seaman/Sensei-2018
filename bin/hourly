@@ -1,0 +1,48 @@
+#!/bin/bash
+# Run the hourly task as seaman
+
+if [ `hostname` == 'MyBook' ]
+then
+    export p=$HOME/MyBook
+else
+    export p=$HOME/Projects/MyBook
+fi
+
+# export p=$HOME/Projects/MyBook
+# export DJANGO_SETTINGS_MODULE=hammer.settings
+# export PROJECT_BASE="$HOME/Projects/Hammer"
+# export DROPLET_IP='45.55.50.13'
+# export SERVER_DIR=/home/django/MyBook
+# export imac='seaman@172.16.0.6'
+# export macbook='markseaman@172.16.0.15'
+# export hammer='seaman@172.16.0.2'
+
+# # Path variable
+# export PATH=$p:\
+# $p/bin:\
+# /bin:\
+# /sbin:\
+# /usr/bin:\
+# /usr/local/bin:\
+# /opt/local/bin
+
+# . $p/bin/bash-alias
+
+# cd $p
+
+{
+    echo `date` `id` " - $0 Started"
+
+    . $p/bin/bashrc
+
+    python bin/x.py hourly run
+
+    echo `date` " - $0 All done"
+} 2>&1 > $p/log/cron-hourly.log
+
+# figlet Hourly Log
+# echo $PATH
+# echo $p
+# ls -l $p/log/cron-hourly.log
+# cat $p/log/cron-hourly.log
+

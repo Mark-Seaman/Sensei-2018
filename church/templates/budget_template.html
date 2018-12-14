@@ -1,0 +1,40 @@
+<table class="table table-hover">
+
+    <th></th>
+    <th>Total</th>
+    {% if multiple_months %}
+        <th>Monthly</th>
+    {% endif %}
+    <th>Percent of Giving</th>
+
+    {% for budget in amounts %}
+        <tr>
+            <td><h2>{{ budget.0 }}</h2></td>
+        </tr>
+        {% for a in budget.1 %}
+
+            <tr>
+                <td><strong>{{ a.0 }}</strong></td>
+                <td><strong>{{ a.1 }}</strong></td>
+                {% if multiple_months %}
+                    <td><strong>{{ a.2 }}</strong></td>
+                {% endif %}
+                <td><strong>{{ a.3 }}</strong></td>
+            </tr>
+
+            {% for x in a.4 %}
+                <tr>
+                    <td>{{ x.0 }}</td>
+                    <td>{{ x.1 }}</td>
+                    {% if multiple_months %}
+                        <td>{{ x.2 }}</td>
+                    {% endif %}
+                    <td>{{ x.3 }}</td>
+                </tr>
+            {% endfor %}
+
+        {% endfor %}
+    {% endfor %}
+
+</table>
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    {% if title %}
+        <title>{{ title }}</title>
+    {% endif %}
+
+    <!-- Vendor CSS -->
+    <link href="/static/material/vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/static/material/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css"
+          rel="stylesheet">
+    <link href="/static/material/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css"
+          rel="stylesheet">
+    <link href="/static/material/vendors/bower_components/google-material-color/dist/palette.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="/static/material/css/app.min.1.css" rel="stylesheet">
+    <link href="/static/material/css/app.min.2.css" rel="stylesheet">
+
+    {#    <link rel="icon" href="http://www.unco.edu/favicon.ico">#}
+    <link rel="shortcut icon" type="image/png" href="/static/favicon.ico"/>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+          crossorigin="anonymous">
+
+    <link href="/static/guide.css" rel="stylesheet">
+
+    {% block stylesheet %}{% endblock %}
+</head>
+
+
+<body data-ma-header>
+
+       <header id="header" class="media">
+
+            <div class="pull-left h-logo">
+
+                <div class="menu-collapse" data-ma-action="sidebar-open" data-ma-target="main-menu">
+                    <div class="mc-wrap">
+                        <div class="mcw-line top palette-White bg"></div>
+                        <div class="mcw-line center palette-White bg"></div>
+                        <div class="mcw-line bottom palette-White bg"></div>
+                    </div>
+                </div>
+            </div>
+
+            {% block menu %}
+                <aside id="s-main-menu" class="sidebar">
+
+                    <div class="smm-header">
+                        <i class="zmdi zmdi-long-arrow-left" data-ma-action="sidebar-close"></i>
+                    </div>
+
+                    <ul class="main-menu">
+                        {% for m in menu %}
+                            <li {{ m.3 }}>
+                                <a href="{{ m.0 }}"><i class="zmdi {{ m.1 }}"></i> {{ m.2 }} </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </aside>
+            {% endblock %}
+
+
+            {% block banner %}
+
+                <div class="logo pull-left">
+                    <img class="logo-image">
+                </div>
+
+                <div class="pull-left">
+                    <a href="/">
+                        <h1>{{ site.0 }}</h1>
+                        <h2>{{ site.1 }}</h2>
+                    </a>
+                </div>
+
+            {% endblock %}
+
+            <div class="pull-right">
+
+                {% block user %}
+
+                    {% if user.is_authenticated and user.is_staff %}
+
+                        {% if settings.staging %}
+                            <h1>Staging</h1>
+                        {% endif %}
+                        <p>Logged In as <b>{{ user.username }}</b>.
+                        </p>
+                        <p>
+                            <a href="/password_change">Change password</a>
+                        </p>
+                        <div class="user-btn">
+                            <a href="/logout">
+                                <i class="zmdi zmdi-lock"></i><span>Log Out</span>
+                            </a>
+                        </div>
+
+                    {% else %}
+
+                        <button class="user-btn">
+                            <a href="/login/?next=/mybook/">
+                                <i class="zmdi zmdi-lock"></i><span>Log In</span>
+                            </a>
+                        </button>
+
+                        {% if not hide_signup %}
+                            <button class="user-btn">
+                                <a href="/signup">
+                                    <i class="zmdi zmdi-key"></i><span>Sign Up</span>
+                                </a>
+                            </button>
+                        {% endif %}
+
+                    {% endif %}
+
+                {% endblock %}
+            </div>
+
+        </header>
+
+    <script src="/static/material/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+
+
+    
+    <!-- Javascript Libraries -->
+    <section id="main">
+
+        {% block content %}
+            <section id="content">
+                <div class="container">
+
+                    {% block card %}
+
+                        <div class="card">
+
+                            <div class="card-header ch-alt">
+                                <h1>{{ title }}</h1>
+                            </div>
+
+                            <div class="card-body card-padding">
+
+                                {% block page %}
+                                {% endblock %}
+
+                            </div>
+                        </div>
+
+                    {% endblock %}
+
+                </div>
+            </section>
+        {% endblock %}
+
+
+        {% block footer %}
+            <footer>
+                {% if not photo %}
+                    <a href="http://seamansguide.com">
+                        Copyright &copy; 2018 Shrinking World
+                    </a>
+                {% endif %}
+            </footer>
+        {% endblock %}
+
+    </section>
+
+    <script src="/static/material/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="/static/material/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/static/material/vendors/bower_components/Waves/dist/waves.min.js"></script>
+    <script src="/static/material/vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+
+    <!-- Placeholder for IE9 -->
+    <!--[if IE 9 ]>
+            <script src="/static/material/vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+    <script src="/static/material/js/functions.js"></script>
+    <script src="/static/material/js/actions.js"></script>
+    <script src="/static/material/vendors/fileinput/fileinput.min.js"></script>
+    {#<script src="/static/material/js/demo.js"></script>#}
+</body>

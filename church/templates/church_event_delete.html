@@ -1,0 +1,37 @@
+{% extends "church.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <h2>Are you sure?</h2>
+                    <ul>
+                        <li>
+                            ID: {{ object.id }}
+                        </li>
+                        <li>
+                            Title: {{ church_event.title }}
+                        </li>
+
+                    </ul>
+
+                    <form action="" method="post">{% csrf_token %}
+                        <p>Are you sure you want to delete "{{ object }}"?</p>
+                        <input type="submit" value="Confirm"/>
+                    </form>
+
+                </div>
+
+            </div>
+    </section>
+{% endblock %}
+
+

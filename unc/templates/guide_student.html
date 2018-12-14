@@ -1,0 +1,36 @@
+{% extends "guide_theme.html" %}
+
+{% block content %}
+
+    <div class="card">
+
+        <div class="card-header ch-alt">
+            <h2>{{ title }}</h2>
+            <a href="{{ home.1 }}" class="btn">{{ home.0 }}</a>
+            <a href="/unc/student/{{ student.id }}" class="btn">Test Page</a>
+            <a href="/unc/reviews/{{ student.id }}" class="btn">Reviews Page</a>
+        </div>
+
+        <div class="card-body card-padding">
+
+            <h2>Information</h2>
+            <ul>
+                <li>Name: <b>{{ student.name }}</b></li>
+                <li>Email: <b>{{ student.email }}@bears.unco.edu</b></li>
+                <li>Domain: <b>{{ student.domain }}</b></li>
+
+            </ul>
+
+            <h3>Test Links</h3>
+            <ul>
+                {% for link in links %}
+                    <li>
+                        <a href="{{ link.0 }}">{{ link.1 }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+
+{% endblock %}

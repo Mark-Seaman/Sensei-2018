@@ -1,0 +1,48 @@
+{% extends "mybook_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <ul>
+                        <li>
+                            <label>ID: </label> {{ user.pk }}
+                        </li>
+                        <li>
+                            <label>Name: </label> {{ user.name }}
+                        </li>
+                        <li>
+                            <label>Notes: </label> {{ user.notes }}
+                        </li>
+                    </ul>
+
+                    <a href="/user_list">
+                        <button class="btn palette-Teal bg">User List</button>
+                    </a>
+
+                    <a href="/user_edit/{{ user.pk }}">
+                        <button class="btn palette-Teal bg">Edit User</button>
+                    </a>
+
+                    <a href="/user_delete/{{ user.pk }}">
+                        <button class="btn palette-Teal bg">Delete User</button>
+                    </a>
+                    <br>
+                    <br>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+

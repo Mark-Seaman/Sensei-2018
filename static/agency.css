@@ -1,0 +1,29 @@
+.main-menu {
+    position: relative;
+    top: 300px;
+}
+
+.user {
+    color: white;
+}
+
+.user * {
+    color: white;
+}
+
+
+a {
+    color: #df01a5;
+}
+
+a:hover {
+    color: black;
+}
+
+input {
+    min-width: 40em;
+}
+
+td {
+    height: 4em;
+}

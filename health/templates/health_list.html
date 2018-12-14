@@ -1,0 +1,54 @@
+{% extends "health_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <div class="container-fluid card-padding">
+                        <div class="table p-10">
+
+                            <div class="row m-10">
+                                {% for x in labels %}
+                                    <div class="col-sm-2"><b>{{ x }}</b></div>
+                                {% endfor %}
+                            </div>
+
+                            {% for row in values %}
+
+                                <div class="row m-10 p-t-20">
+                                    <div class="col-sm-2"><a href="{{ row.0.0 }}">{{ row.0.1 }}</a></div>
+                                    {% for x in row.1 %}
+                                        {% autoescape off %}
+                                            <div class="col-sm-2">{{ x }}</div>
+                                        {% endautoescape %}
+                                    {% endfor %}
+                                </div>
+
+                            {% endfor %}
+
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <a href="/health/health_add">
+                        <button class="btn palette-Teal bg">Create New Health Entry</button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}
+
+

@@ -1,0 +1,64 @@
+{% extends "mybook_theme.html" %}
+
+{% block page %}
+
+    <a class="btn" href="import">Import</a>
+    <a class="btn" href="export">Export</a>
+    <a class="btn" href="time">Summary</a>
+    {% if bad_days %}
+        <a class="btn" href="bad">Missing</a>
+    {% endif %}
+
+    <div class="page p-20">
+
+        <h2>Hours</h2>
+        <table class="table table-hover">
+            <tr>
+                {% for t in time_data.times %}
+                    <th>{{ t }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in time_data.hours %}
+                <tr>
+                    {% for hours in row %}
+                        <td>{{ hours }} hours</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+        <h2>Percentages</h2>
+        <table class="table table-hover">
+            <tr>
+                {% for t in time_data.times %}
+                    <th>{{ t }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in time_data.task_totals %}
+                <tr>
+                    {% for hours in row %}
+                        <td>{{ hours }} %</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Compared to Ideal</h2>
+        <table class="table table-hover">
+
+            <tr>
+                {% for t in time_data.times %}
+                    <th>{{ t }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in time_data.review %}
+                <tr>
+                    {% for hours in row %}
+                        <td>{{ hours }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}
+

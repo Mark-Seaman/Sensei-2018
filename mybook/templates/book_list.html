@@ -1,0 +1,56 @@
+{% extends "mybook_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+                    <div class="row">
+
+                        <table class="table table-hover">
+
+                            {#{% for label in labels %}#}
+                            {#    <th>{{ label }}</th>#}
+                            {#{% endfor %}#}
+                            <th>{{ labels.1 }}</th>
+                            <th>{{ labels.4 }}</th>
+                            <th>{{ labels.5 }}</th>
+
+
+
+                            {% for row in table %}
+                                <tr>
+                                    <td><a href="/book_detail/{{ row.0 }}">{{ row.1 }}</a></td>
+                                    <td>{{ row.4 }}</td>
+                                    <td>{{ row.5 }}</td>
+                                    {# {% for value in row %}#}
+                                    {#  <td>{{ value }}</td>#}
+                                    {# {% endfor %}#}
+
+                                </tr>
+                            {% endfor %}
+
+                        </table>
+
+                    </div>
+
+                    <div class="row">
+                        <a href="book_add">
+                            <button class="btn palette-Green bg">Create New Book</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+{% endblock %}
+

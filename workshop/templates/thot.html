@@ -1,0 +1,98 @@
+{% extends "mybook_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container-fluid">
+
+            <!-- Column 1 -->
+            <div class="col-sm-6">
+
+                {% block column1 %}
+
+                    <div class="card">
+                        <div class="card-header ch-alt">
+                            <h2><a href="/thotbook/{{ thot.thotbook.title }}">Thot Book: {{ thot.thotbook.title }}</a>
+                            </h2>
+                        </div>
+                        <div class="card-body card-padding">
+
+                            {% if parent %}
+
+                                <ul>
+                                    {% for t in parent %}
+                                        <li>
+                                            <a href="/thot/{{ t.pk }}"> {{ t.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+
+                        </div>
+                    </div>
+
+                    {% if objects %}
+                        <div class="card">
+
+                            <div class="card-body card-padding">
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <h1>{{ objects.0.title }}</h1>
+                                    </div>
+                                    <div class="col-sm-3 text-right">
+                                        <a class="btn palette-Green bg" href="/thot-edit/{{ objects.0.pk }}">
+                                            Edit Note
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row p-20">
+                                    <ul>
+                                        {% for t in objects.1 %}
+                                            <li>
+                                                <a href="/thot/{{ t.0.pk }}">  {{ t.0.title }}</a>
+                                                <ul>
+                                                    {% for x in t.1 %}
+                                                        <li>
+                                                            <a href="/thot/{{ x.pk }}">  {{ x.title }}</a>
+                                                        </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+
+
+                {% endblock %}
+
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-sm-6">
+                {% block column2 %}
+
+                    {% if text %}
+                        <div class="card">
+
+                            <div class="card-header ch-alt">
+                                <h2>{{ title }}</h2>
+                            </div>
+
+                            <div class="card-body card-padding">
+
+                                {% autoescape off %}
+                                    <p>{{ text }}</p>
+                                {% endautoescape %}
+
+                            </div>
+                        </div>
+                    {% endif %}
+
+                {% endblock %}
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

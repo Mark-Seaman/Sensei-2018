@@ -1,0 +1,46 @@
+{% extends "workshop_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <table class="table table-hover">
+
+                        <th>Category</th>
+                        <th>Dollars</th>
+                        <th>Date</th>
+
+                        {% for row in object_list %}
+                            <tr>
+
+                                <td>{{ row.category.name }}</td>
+                                <td>{{ row.dollars }}</td>
+                                <td>{{ row.date }}</td>
+{#                                <td><a href="/workshop/money_detail/{{ row }}">{{ row.date }}</a></td>#}
+
+                            </tr>
+                        {% endfor %}
+
+                    </table>
+
+                    <div class="row p-15">
+                        <a href="/money_add">
+                            <button class="btn palette-Green bg">Add Money</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}
+

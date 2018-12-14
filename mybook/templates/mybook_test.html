@@ -1,0 +1,131 @@
+{% extends "mybook_theme.html" %}
+
+
+{% block card %}
+
+    <h1>Web Test</h1>
+    <a href="test/xxx">Web Test</a>
+
+    <h2>Server Link Redirect</h2>
+    <p>Verify these redirects</p>
+    <ul>
+        <li>
+            <a href="http://shrinking-world.com">Exterior Brain</a>
+            - redirect to https://shrinking-world.com/brain/Index
+        </li>
+        <li>
+            <a href="http://shrinking-world.com">Shrinking World</a>
+            - redirect to https://shrinking-world.com/shrinking-world/Index
+        </li>
+        <li>
+            <a href="http://spiritual-things.org">Spiritual Things</a>
+            - redirect to https://spiritual-things.org/spiritual/Index
+        </li>
+        <li>
+            <a href="http://mybookonline.org">My Book Online</a>
+            - redirect to https://mybookonline.org/Index
+        </li>
+        <li>
+            <a href="http://markseaman.info">Mark Seaman Info</a>
+            - redirect to https://markseaman.info/info/Index
+        </li>
+        <li>
+            <a href="http://markseaman.org">Mark Seaman Org</a>
+            - redirect to https://markseaman.org/MarkSeaman/Index
+        </li>
+        <li>
+            <a href="http://seamansguide.com">Seaman's Guide</a>
+            - redirect to https://seamansguide.org/guide/Index
+        </li>
+        {% comment %}
+            shrinking-world.com,
+            shrinking-world.com,
+            seamanslog.com,
+            seamansguide.com
+        {% endcomment %}
+
+    </ul>
+
+    <h2>Index Redirect</h2>
+    <p>Verify these redirects</p>
+
+    <ul>
+        <li>
+            <a href="http://shrinking-world.com/brain">Exterior Brain</a>
+            - redirect to https://shrinking-world.com/brain/Index
+        </li>
+        <li>
+            <a href="http://markseaman.info/info">Mark Seaman Info</a>
+            - redirect to https://markseaman.info/info/Index
+        </li>
+    </ul>
+
+    <h2>Missing Pages</h2>
+    <p>Verify these redirects</p>
+
+    <ul>
+        <li>
+            <a href="http://shrinking-world.com/brain/i-am-missing">Exterior Brain</a>
+            - redirect to https://shrinking-world.com/missing/brain/i-am-missing
+        </li>
+        <li>
+            <a href="http://markseaman.info/info/i-am-missing">Mark Seaman Info</a>
+            - redirect to https://markseaman.info/missing/info/i-am-missing
+        </li>
+    </ul>
+
+
+    <h2>BACS 350</h2>
+    <p>Verify this real content</p>
+
+    <ul>
+        <li>
+            <a href="https://seamansguide.com/guide/PhpApps/Index.md">BACS 350</a>
+            - redirect to https://seamansguide.com/guide/PhpApps/Index.md
+        </li>
+        <li>
+            <a href="https://seamansguide.com/guide/PhpApps/Schedule">BACS 350 - Schedule</a>
+            - redirect to https://seamansguide.com/guide/PhpApps/Schedule
+        </li>
+        <li>
+            <a href="https://seamansguide.com/guide/PhpApps/Lesson01">BACS 350 - Lesson #1</a>
+            - redirect to https://seamansguide.com/guide/PhpApps/Lesson01
+        </li>
+        <li>
+            <a href="https://seamansguide.com/guide/PhpApps/Slides01">BACS 350 - Slides for Lesson #1</a>
+            - redirect to https://seamansguide.com/guide/PhpApps/Slides01
+        </li>
+        <li>
+            <a href="https://seamansguide.com/guide/PhpApps/Test">BACS 350 - Test</a>
+            - redirect to https://seamansguide.com/guide/PhpApps/Test
+        </li>
+    </ul>
+
+    <h2>BACS 200</h2>
+    <p>Verify this real content</p>
+
+    <ul>
+        <li>
+            <a href="https://seamansguide.com/guide/HtmlApps/Index.md">BACS 200</a>
+            - redirect to https://seamansguide.com/guide/HtmlApps/Index.md
+        </li>
+        <li>
+            <a href="https://seamansguide.com/guide/HtmlApps/Schedule">BACS 200 - Schedule</a>
+            - redirect to https://seamansguide.com/guide/HtmlApps/Schedule
+        </li>
+        <li>
+            <a href="https://seamansguide.com/guide/HtmlApps/Lesson01">BACS 200 - Lesson #1</a>
+            - redirect to https://seamansguide.com/guide/HtmlApps/Lesson01
+        </li>
+        <li>
+            <a href="https://seamansguide.com/guide/HtmlApps/Slides01">BACS 200 - Slides for Lesson #1</a>
+            - redirect to https://seamansguide.com/guide/HtmlApps/Slides01
+        </li>
+        <li>
+            <a href="https://seamansguide.com/guide/HtmlApps/Test">BACS 200 - Test</a>
+            - redirect to https://seamansguide.com/guide/HtmlApps/Test
+        </li>
+    </ul>
+
+{% endblock %}
+

@@ -1,0 +1,45 @@
+{% extends "church_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    {% for row in values %}
+                        <div class="row">
+                            <label class="col-sm-4 f-700 text-right">{{ row.0 }}: </label>
+                            <span class="col-sm-6">
+                                {{ row.1 }}
+                            </span>
+                        </div>
+                    {% endfor %}
+
+                    <div class="row p-20">
+                        <a href="/church/leader_list">
+                            <button class="btn palette-Teal bg">Leader List</button>
+                        </a>
+
+                        <a href="/church/leader_edit/{{ leader.pk }}">
+                            <button class="btn palette-Teal bg">Edit Leader</button>
+                        </a>
+
+                        <a href="/church/leader_delete/{{ leader.pk }}">
+                            <button class="btn palette-Teal bg">Delete Leader</button>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+

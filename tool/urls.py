@@ -1,0 +1,23 @@
+from django.conf.urls import url
+
+from tool.project import ProjectList, ProjectDetail, ProjectCreate, ProjectUpdate, ProjectDelete
+from tool.user_views import UserList, UserCreate, UserDetail, UserEdit, UserDelete
+
+
+urlpatterns = [
+
+    # Project Views
+    url(r'^project/$',                          ProjectList.as_view(),     name='project_list'),
+    url(r'^project/(?P<pk>\d+)$',               ProjectDetail.as_view(),   name='project-detail'),
+    url(r'^project/add$',                       ProjectCreate.as_view(),   name='project_add'),
+    url(r'^project/(?P<pk>\d+)/edit$',          ProjectUpdate.as_view(),   name='project_update'),
+    url(r'^project/(?P<pk>\d+)/delete$',        ProjectDelete.as_view(),   name='project_delete'),
+
+    # User
+    url(r'^user_add$',                   UserCreate.as_view(), name='user_add'),
+    url(r'^user_delete/(?P<pk>\d+)$',    UserDelete.as_view(), name='user-delete'),
+    url(r'^user_detail/(?P<pk>\d+)$',    UserDetail.as_view(), name='user-detail'),
+    url(r'^user_edit/(?P<pk>\d+)$',      UserEdit.as_view(),   name='user-edit'),
+    url(r'^user_list$',                  UserList.as_view(),   name='user_list'),
+
+]

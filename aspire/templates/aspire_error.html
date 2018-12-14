@@ -1,0 +1,38 @@
+{% extends "mybook_theme.html" %}
+
+
+{% block libs %}
+{% endblock %}
+
+
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="card" brd-20>
+
+                    <div class="card-header ch-alt">
+                        Document: {{ title }},  Path: {{ doc }}
+                    </div>
+
+                    <div class="card-body card-padding">
+
+                        <h1>ASPIRE ERROR</h1>
+                        {% if text %}
+                            {% autoescape off %}
+                                <p>{{ text }}</p>
+                            {% endautoescape %}
+                        {% else %}
+                            <h2>No document found. {{ doc }}</h2>
+                        {% endif %}
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

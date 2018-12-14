@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+
+{#    {% for row in blocks %}#}
+{##}
+{#        <div>#}
+{##}
+{#            <div class="cb-label">{{ row.0 }}</div>#}
+{##}
+{#            {% for b in row.1 %}#}
+{#                <div class="cb {{ b }}"></div>#}
+{#            {% endfor %}#}
+{##}
+{#        </div>#}
+{#    {% endfor %}#}
+
+    {% for row in rows %}
+
+        <div>
+
+            <div class="cb-label">{{ row.0 }}</div>
+
+            {% for b in row.1 %}
+                <div class="cb {{ b }}"></div>
+            {% endfor %}
+
+        </div>
+    {% endfor %}
+
+{% endblock %}
+

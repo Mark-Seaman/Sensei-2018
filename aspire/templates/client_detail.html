@@ -1,0 +1,51 @@
+{% extends "mybook_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+                    <div class="container-fluid">
+
+                        {% for v in values %}
+
+                            <div class="row m-t-15">
+                                <div class="col-sm-3 text-right">
+                                    <label>{{ v.0 }}: </label>
+                                </div>
+                                <div class="col-sm-7">
+                                    <b>{{ v.1 }}</b>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+
+                        <div class="m-25 text-center">
+                            <a href="/aspire/client_list">
+                                <button class="btn palette-Green bg">Client List</button>
+                            </a>
+
+                            <a href="/aspire/client_edit/{{ client.pk }}">
+                                <button class="btn palette-Green bg">Edit Client</button>
+                            </a>
+
+                            <a href="/aspire/client_delete/{{ client.pk }}">
+                                <button class="btn palette-Green bg">Delete Client</button>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+

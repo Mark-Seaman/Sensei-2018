@@ -1,0 +1,94 @@
+{% extends "hammer_theme.html" %}
+
+
+{% block libs %}
+
+    <link href="/static/hammer.css" rel="stylesheet">
+
+{% endblock %}
+
+
+{% block user %}
+    <div class="pull-right">
+
+        {% if user.is_authenticated and user.is_staff %}
+
+            <p class="htext">
+                Logged in as,
+                <strong>{% firstof user.first_name user.username %}</strong>.
+                <!-- <a href="/password_change">Change password</a> -->
+                <a class="hlink" href="/hire/logout">Log out</a>
+            </p>
+
+        {% else %}
+
+            <p class="htext">You are not logged in.
+                <a class="hlink" href="/hire/login/?next=/hire/"><b>Login</b></a>
+            </p>
+
+        {% endif %}
+
+    </div>
+{% endblock %}
+
+
+{% block menu %}
+    <aside id="s-main-menu" class="sidebar">
+
+        <div class="smm-header">
+            <i class="zmdi zmdi-long-arrow-left" data-ma-action="sidebar-close"></i>
+        </div>
+
+        <ul class="smm-alerts">
+            <li data-user-alert="sua-tasks" data-ma-action="sidebar-open" data-ma-target="user-alerts">
+                <i class="zmdi zmdi-view-list-alt"></i>
+            </li>
+        </ul>
+
+        <ul class="main-menu">
+            {% for m in settings.menu %}
+                <li {{ m.3 }}>
+                    <a href="{{ m.0 }}"><i class="zmdi {{ m.1 }}"></i> {{ m.2 }} </a>
+                </li>
+            {% endfor %}
+        </ul>
+
+
+    </aside>
+{% endblock %}
+
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="card">
+                    <div class="card-header ch-alt">
+                        <h1>{{ title }}</h1>
+                    </div>
+
+                    <div class="card-body card-padding">
+
+                        {% block page %}
+                        {% endblock %}
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+
+{% block footer %}
+    <footer id="footer">
+
+        <a href="http://shrinking-world.com">
+            {# <img src="/static/SWS_Globe_small.jpg"> #}
+            <p>Copyright &copy; 2016 Shrinking World Solutions, Inc.</p>
+        </a>
+
+    </footer>
+{% endblock %}

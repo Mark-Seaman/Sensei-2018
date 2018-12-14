@@ -1,0 +1,73 @@
+{% extends "mybook_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <table class="table table-hover">
+
+                        {% for row in values %}
+                            <tr>
+                                <td>{{ row.0 }}</td>
+                                <td><strong>{{ row.1 }}</strong></td>
+                            </tr>
+                        {% endfor %}
+                        <tr>
+                            <td>Index</td>
+                            <td><strong><a href="/aspire/{{ values.1.1 }}">aspire/{{ values.1.1 }}</a></strong></td>
+                        </tr>
+                    </table>
+                    {% for row in goals %}
+
+                        <pre>
+                            {{ row }}
+                        </pre>
+                    {% endfor %}
+
+                    <div class="row p-15">
+                        <a href="/aspire/project_list">
+                            <button class="btn palette-Green bg">Project List</button>
+                        </a>
+                        <a href="/aspire/project_edit/{{ project.pk }}">
+                            <button class="btn palette-Green bg">Edit Project</button>
+                        </a>
+                        <a href="/aspire/project_delete/{{ project.pk }}">
+                            <button class="btn palette-Green bg">Delete Project</button>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+            {#            <div class="container">#}
+            {##}
+            {#                <div class="card">#}
+            {##}
+            {#                    <div class="card-header ch-alt">#}
+            {#                        <h2>{{ doc }}</h2>#}
+            {#                    </div>#}
+            {##}
+            {#                    <div class="card-body card-padding">#}
+            {#                        {% if text %}#}
+            {#                            {% autoescape off %}#}
+            {#                                <p>{{ text }}</p>#}
+            {#                            {% endautoescape %}#}
+            {#                        {% else %}#}
+            {#                            <h2>No document found. {{ doc }}</h2>#}
+            {#                        {% endif %}#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+        </div>
+    </section>
+{% endblock %}
+
+

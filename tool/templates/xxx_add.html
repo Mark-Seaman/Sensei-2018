@@ -1,0 +1,28 @@
+{% extends "yyy_theme.html" %}
+
+{% block card %}
+
+    <form method="post">{% csrf_token %}
+        <div class="form-group">
+            <table class="table table-responsive">
+
+                <tr>
+                    <td><label>{{ form.name.label_tag }}</label></td>
+                    <td class="fg-line">
+                        <strong>{{ form.name }}</strong>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="row p-20">
+            <button class="btn palette-Green bg">Save Xxx</button>
+        </div>
+
+    </form>
+
+{% endblock %}
+
+

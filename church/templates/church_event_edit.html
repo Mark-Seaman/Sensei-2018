@@ -1,0 +1,31 @@
+{% extends "church.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>Edit Church_event</h1>
+                </div>
+
+                <div class="card-body card-padding">
+                    <h2>{{ object.title }}</h2>
+                    <p>
+
+                    </p>
+
+                    <form action="/church/church_event_edit/{{ object.pk }}" method="post">{% csrf_token %}
+                        <table>
+                            {{ form.as_table }}
+                        </table>
+                        <br>
+                        <br>
+                        <button class="btn palette-Teal bg">Save Church_event</button>
+                    </form>
+                </div>
+
+            </div>
+    </section>
+{% endblock %}

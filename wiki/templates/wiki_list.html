@@ -1,0 +1,34 @@
+{% extends "mybook_theme.html" %}
+
+{% block card %}
+
+    <div class="card">
+
+        <div class="card-header ch-alt">
+            <h1>{{ title }}</h1>
+        </div>
+
+        <div class="card-body card-padding">
+
+            <table class="table table-hover">
+
+                {% for row in object_list %}
+                    <tr>
+                        <td><a href="/wiki/detail/{{ row.pk }}">{{ row.title }}</a></td>
+                        <td><a href="/wiki/{{ row.slug }}">{{ row.slug }}</a></td>
+                    </tr>
+                {% endfor %}
+
+            </table>
+
+            <div class="row p-15">
+                <a href="/wiki/add">
+                    <button class="btn palette-Green bg">Add Doc</button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,75 @@
+{% extends "admin_theme.html" %}
+
+
+{% block card %}
+    <div class="card">
+
+        <div class="card-header ch-alt">
+            <h2>{{ card_title }}</h2>
+        </div>
+
+        <div class="card-body card-padding">
+
+            {% if doc %}
+                {% autoescape off %}
+                    <p>{{ doc }}</p>
+                {% endautoescape %}
+            {% else %}
+                <h2>No Document. </h2>
+            {% endif %}
+
+
+{#            {% if object_list %}#}
+{#                <table class="table table-hover">#}
+{#                    {% for x in labels %}#}
+{#                        <th>{{ x }}</th>#}
+{#                    {% endfor %}#}
+{##}
+{#                    {% for row in object_list %}#}
+{#                        <tr>#}
+{#                            <td>#}
+{#                                {{ row.0 }}#}
+{#                            </td>#}
+{#                            <td>{% if row.1 %}#}
+{#                                <pre>{{ row.1 }}</pre>#}
+{#                            {% endif %}#}
+{##}
+{#                            </td>#}
+{#                        </tr>#}
+{#                    {% endfor %}#}
+{#                </table>#}
+{#            {% else %}#}
+{#                <h2>Empty list. </h2>#}
+{#            {% endif %}#}
+{##}
+{##}
+{#            {% if detail %}#}
+{#                {% for x in detail %}#}
+{#                    <div class="row">#}
+{#                        <div class="col-sm-6 text-right">#}
+{#                            {{ x.0 }}#}
+{#                        </div>#}
+{#                        <div class="col-sm-6">#}
+{#                            <strong><a href="/superuser/{{ x.1 }}">{{ x.2 }}</a></strong>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            {% else %}#}
+{#                <h2>No items found. </h2>#}
+{#            {% endif %}#}
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+
+{% block column1 %}
+{% endblock %}
+
+
+{% block column2 %}
+{% endblock %}

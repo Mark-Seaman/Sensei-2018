@@ -1,0 +1,40 @@
+{% extends "mybook_theme.html" %}
+
+
+{% block libs %}
+{% endblock %}
+
+
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="card" brd-20>
+
+                    <div class="card-header ch-alt">
+                        <h1> {{ title }}</h1>
+                    </div>
+
+                    <div class="card-body card-padding">
+                        <p>Missing Page</p>
+                        <p>
+                            I'm sorry that the page you requested can not be located. Please contact technical support
+                            for additional information.
+                        </p>
+                        <p>
+                            Return to <a href="/aspire/">Home</a>
+                        </p>
+                        <p>
+                            or <a href="/aspire/login">Login</a>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

@@ -1,0 +1,31 @@
+# My Book System Config
+
+This guide teaches how to configure a MyBook server that is running Ubuntu 16.04.
+
+## Config Files
+
+ReadMe - This doc describing setup
+
+Gunicorn - Web server configuration - /etc/systemd/system/gunicorn.service
+
+    gunicorn.P.orig, gunicorn.P.1 
+
+Nginx - Web server configuration - /etc/nginx/sites-available/django
+
+    nginx.P.orig, nginx.P.1, nginx.P.2     
+    nginx.S.orig, nginx.S.1, nginx.S.2   
+
+Command Script
+
+    x.py - This command script is executed as root to update system files
+
+    usage:  ./x.py  command
+
+        gunicorn
+        nginx
+        set-gunicorn
+        set-nginx
+
+Cron    
+    cron.P - Configure to cron to renew SSL  - Paste to execute
+

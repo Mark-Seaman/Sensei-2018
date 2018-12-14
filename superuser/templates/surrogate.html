@@ -1,0 +1,48 @@
+{% extends "admin_theme.html" %}
+
+
+{% block card %}
+    <div class="card">
+
+        <div class="card-header ch-alt">
+            <h2>{{ card_title }} #{{ id }}</h2>
+        </div>
+
+        <div class="card-body card-padding">
+
+            <a href="/superuser/users">User list</a>
+            {% if detail %}
+
+                {% for x in detail %}
+                    <div class="row">
+                        <div class="col-sm-4 text-right">
+                            <label>{{ x.0 }}</label>
+                        </div>
+                        <div class="col-sm-8">
+                            <strong>{{ x.1 }}</strong>
+{#                            <a href="/superuser/{{ x.1 }}">{{ x.2 }}</a>#}
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <h2>No users found. </h2>
+
+            {% endif %}
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+{% block column1 %}
+{% endblock %}
+
+
+{% block column2 %}
+{% endblock %}

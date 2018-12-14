@@ -1,0 +1,35 @@
+{% extends "mybook_theme.html" %}
+
+{% block card %}
+
+    <div class="card">
+
+        <div class="card-header ch-alt">
+            <h1>{{ title }}</h1>
+        </div>
+
+        <div class="card-body card-padding">
+
+            <form method="post">{% csrf_token %}
+                {{ form.errors }}
+
+                <div class="form-group">
+                    <p class="fg-line">
+                        {{ form.title }}
+                    </p>
+                    <p class="fg-line">
+                        {{ form.body }}
+                    </p>
+                </div>
+
+                <button class="btn palette-Green bg">Save Page</button>
+                <a class="btn palette-Green bg" href="/wiki/detail/{{ form.instance.pk }}">Cancel</a>
+                <a class="btn palette-Green bg" href="/wiki/delete/{{ form.instance.pk }}">Delete Doc</a>
+
+            </form>
+        </div>
+
+    </div>
+
+{% endblock %}
+

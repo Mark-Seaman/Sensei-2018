@@ -1,0 +1,229 @@
+Fri Dec 14 09:00:00 MST 2018 uid=501(seaman) gid=20(staff) groups=20(staff),12(everyone),61(localaccounts),79(_appserverusr),80(admin),81(_appserveradm),98(_lpadmin),701(com.apple.sharepoint.group.1),33(_appstore),100(_lpoperator),204(_developer),250(_analyticsusers),395(com.apple.access_ftp),101(com.apple.access_screensharing-disabled),102(com.apple.access_ssh-disabled)  - /Users/seaman/Projects/MyBook/bin/hourly Started
+p = /Users/seaman/Projects/MyBook
+ _ __  __            
+(_)  \/  | __ _  ___ 
+| | |\/| |/ _` |/ __|
+| | |  | | (_| | (__ 
+|_|_|  |_|\__,_|\___|
+                     
+ __  __         ____              _    
+|  \/  |_   _  | __ )  ___   ___ | | __
+| |\/| | | | | |  _ \ / _ \ / _ \| |/ /
+| |  | | |_| | | |_) | (_) | (_) |   < 
+|_|  |_|\__, | |____/ \___/ \___/|_|\_\
+        |___/                          
+PATH =  /Users/seaman/Projects/MyBook:/Users/seaman/Projects/MyBook/bin:/bin:/sbin:/usr/local/bin:/opt/local/bin:/usr/bin:/usr/local/mysql/bin
+Active python = /Users/seaman/Tools/env-python27/bin/python
+
+PATH= /Users/seaman/Tools/env-python27/bin /Users/seaman/Projects/MyBook /Users/seaman/Projects/MyBook/bin /bin /sbin /usr/local/bin /opt/local/bin /usr/bin /usr/local/mysql/bin
+env= SERVER_DIR=/home/django/MyBook SHELL=/bin/sh book=/Users/seaman/Projects/Leverage CLICOLOR=true USER=seaman blue=uncobacs@unco-bacs.org __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0 mbw=/Users/seaman/Archive/rcp/mbw VIRTUAL_ENV=/Users/seaman/Tools/env-python27 macbook=markseaman@10.0.0.167 u3=/Users/seaman/Projects/UNC/BACS350/Notes PATH=/Users/seaman/Tools/env-python27/bin:/Users/seaman/Projects/MyBook:/Users/seaman/Projects/MyBook/bin:/bin:/sbin:/usr/local/bin:/opt/local/bin:/usr/bin:/usr/local/mysql/bin u2=/Users/seaman/Projects/UNC/BACS200/Notes VERSIONER_PYTHON_VERSION=2.7 _=/usr/bin/env PWD=/Users/seaman/Projects/MyBook PROJECT_BASE=/Users/seaman/Projects/Hammer imac=seaman@10.0.0.48 HISTCONTROL=ignoreboth SHLVL=3 HOME=/Users/seaman p=/Users/seaman/Projects/MyBook unc=/Users/seaman/Projects/UNC LOGNAME=seaman s=/Users/seaman/Sensei VERSIONER_PYTHON_PREFER_32_BIT=no hammer=seaman@172.16.0.2
+Python: /Users/seaman/Tools/env-python27/bin/python
+running tests ...
+app
+archive
+aspire
+booknotes
+cmd
+css
+data
+datatype
+days
+
+--------------------------------------------------------------------------------
+                              **Scriptor Exception**
+--------------------------------------------------------------------------------
+Scriptor Exception (tst [])
+Traceback (most recent call last):
+  File "/Users/seaman/Projects/MyBook/tool/management/commands/scriptor.py", line 58, in handle
+    tst_command(self, args)
+  File "/Users/seaman/Projects/MyBook/tool/tst.py", line 72, in tst_command
+    tst_run(self,args)
+  File "/Users/seaman/Projects/MyBook/tool/tst.py", line 227, in tst_run
+    run_test(self,test_entry)
+  File "/Users/seaman/Projects/MyBook/tool/tst.py", line 206, in run_test
+    text = test_entry[1]()
+  File "/Users/seaman/Projects/MyBook/test/days_test.py", line 15, in days_schedule_test
+    return open('Documents/unc/schedule.csv').read()
+IOError: [Errno 2] No such file or directory: 'Documents/unc/schedule.csv'
+app-classes
+app-functions
+app-html-files
+app-list
+app-settings
+app-show
+app-signature
+app-switches
+app-url
+archive-content
+archive-dirs
+archive-files
+archive-nts
+archive-repo
+aspire-list
+aspire-report
+aspire-show
+aspire-week
+author-drafts
+author-score
+author-summary
+booknotes-lines
+booknotes-list
+budget-list
+budget-show
+budget-total
+church-export
+cmd-list
+cmd-show
+css
+data-files
+data-migrate
+data-save
+data-tables
+datatype-list
+datatype-show
+days-list
+days-month
+days-schedule
+days-show
+doc
+doc-encoding
+doc-file
+doc-file-missing
+doc-help
+doc-render
+doc-search
+email
+faceblog-list
+faceblog-show
+health-list
+health-score
+hourly-list
+hourly-show
+hours-activity
+hours-add
+hours-days
+hours-show
+hours-summary
+hours-work
+i-list
+i-show
+life-index
+life-list
+life-show
+music-list
+mybook-menu
+mybook-menu-aspire
+mybook-menu-booknotes
+mybook-menu-brain
+mybook-menu-leverage
+mybook-menu-list
+mybook-menu-mybook
+mybook-menu-software
+mybook-menu-spiritual
+mybook-menu-swo
+mybook-redirect
+mybook-site-title
+node-self
+opc-list
+opc-show
+ops-help
+ops-server
+ops-server-type
+ops-status
+page-diff
+page-list
+page-text
+plan-list
+plan-show
+project-export
+project-import
+project-list
+project-template
+reuse-list
+reuse-show
+robot-list
+robot-results
+score-list
+score-show
+seamanslog-list
+seamanslog-show
+seamanslog-summary
+seamanslog-words
+software-list
+software-show
+software-stats
+software-summary
+src-base
+src-changed
+src-common
+src-diff
+src-list
+src-missing
+src-same
+src-unique
+staging-host
+staging-ip
+system-cron
+system-disk-free
+system-files-count
+system-host
+system-ip
+system-pandoc
+system-pip
+system-python-files
+system-python-version
+system-python-virtualenv
+table-format
+table-from-text
+table-sort
+table-to-text
+task-import
+task-month
+task-totals
+task-week
+task-work
+text-agents
+text-anchors
+text-div
+text-findall
+text-format
+text-functions
+text-grep
+text-help
+text-links
+text-markdown
+text-match
+text-no-match
+text-outline
+text-regex-shortest
+text-round-trip
+text-select
+text-select-lines
+text-signatures
+text-transforms
+text-url
+thot-list
+thot-show
+tst
+tst-time
+unc-files
+user-list
+vc-pull
+vc-status
+wordpress-host
+wordpress-list
+echo "PATH=" `path`
+shell:echo "PATH=" `path`
+echo "env=" `env`
+shell:echo "env=" `env`
+echo Python: `which python`
+shell:echo Python: `which python`
+# git status
+shell:# git status
+x tst
+python:cd $p && python bin/x.py tst
+x tst list
+python:cd $p && python bin/x.py tst list
+x tst send
+python:cd $p && python bin/x.py tst send
+Fri Dec 14 09:00:09 MST 2018  - /Users/seaman/Projects/MyBook/bin/hourly All done

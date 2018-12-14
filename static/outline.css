@@ -1,0 +1,35 @@
+body {
+    padding: 2em;
+    margin: 20px;
+    background-color: white;
+}
+
+h1  {
+    color: blue;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: .5em;
+    border: solid blue 4px;
+    text-align: center;
+    background-color: #eeeeff;
+}
+
+h2 {
+    color: green;
+    padding: .3em;
+    border: solid green 2px;
+    margin-top: 1em;
+    background-color: #eeffee;
+}
+
+h3  {
+    color: green;
+}
+
+h4  {
+    color: blue;
+}
+
+h5 {
+    color: green;
+}

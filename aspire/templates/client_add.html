@@ -1,0 +1,53 @@
+{% extends "mybook_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <form action="client_add" method="post">{% csrf_token %}
+                       <div class="container-fluid">
+
+                            <div class="row m-t-20">
+                                <div class="col-sm-3 text-right">Name:</div>
+                                <div class="col-sm-7">
+                                    <input class="form-control input" type="text" name="name">
+                                </div>
+                            </div>
+
+
+                            <div class="row m-t-20">
+                                <div class="col-sm-3 text-right">Email:</div>
+                                <div class="col-sm-7">
+                                    <input class="form-control input" type="email" name="email">
+                                </div>
+                            </div>
+
+                            <div class="row m-t-20">
+                                <div class="col-sm-3 text-right">Organization:</div>
+                                <div class="col-sm-7">
+                                    <input class="form-control input" type="text" name="organization">
+                                </div>
+                            </div>
+
+                            <div class="row m-t-20">
+                                <button  class="btn palette-Green bg">Create client</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+    </section>
+{% endblock %}
+
+

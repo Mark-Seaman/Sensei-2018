@@ -1,0 +1,39 @@
+{% extends "tool_theme.html" %}
+
+
+<li class="sub-menu">
+    <a href="" data-ma-action="submenu-toggle"><i class="zmdi zmdi-menu"></i> 3 Level Menu</a>
+
+    <ul>
+        <li><a href="form-elements.html">Level 2 link</a></li>
+        <li><a href="form-components.html">Another level 2 Link</a></li>
+        <li><a href="form-validations.html">One more 2</a></li>
+    </ul>
+</li>
+
+
+{% block content %}
+
+    <h1>{{ title }}</h1>
+
+    <p>Theme Selection </p>
+
+    <ul>
+        <li><a href="/static/material/index.html">Theme Interview</a></li>
+        <li><a href="/static/agency/index.html">Theme agency</a></li>
+        <li><a href="/static/freelancer/index.html">Theme freelancer</a></li>
+        <li><a href="/static/creative/index.html">Theme creative</a></li>
+        <li><a href="/static/identity/index.html">Theme identity</a></li>
+    </ul>
+
+
+    <p>List of Files</p>
+    <ul>
+        {% for f in files %}
+            <li>
+                <a href="/{{ f }}">{{ f }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

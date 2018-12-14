@@ -1,0 +1,417 @@
+[
+    {
+        "fields": {
+            "name": "Contribute"
+        },
+        "model": "life.aspect",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "name": "Relate"
+        },
+        "model": "life.aspect",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "name": "Learn"
+        },
+        "model": "life.aspect",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "name": "Enjoy"
+        },
+        "model": "life.aspect",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "age": -1,
+            "aspect": 1,
+            "summary": "None"
+        },
+        "model": "life.experience",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "age": -1,
+            "aspect": 1,
+            "summary": "Before I was born"
+        },
+        "model": "life.experience",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "age": 0,
+            "aspect": 1,
+            "summary": "Born Sep 1, 1959"
+        },
+        "model": "life.experience",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "age": 59,
+            "aspect": 1,
+            "summary": "Second year at UNC\r\nFirst time teaching PHP/MySQL\r\nThird time teaching HTML Intro\r\nBuild design review system\r\nRefine classroom lesson system\r\nSeeing limits of my contribution at UNC\r\nCreate Life Journey Notebook\r\nxxx"
+        },
+        "model": "life.experience",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "age": 59,
+            "aspect": 4,
+            "summary": "Learn to rest while awake at night\r\nStruggle with pessimism over our society and politics\r\nBegin reviewing my life story"
+        },
+        "model": "life.experience",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "age": 59,
+            "aspect": 2,
+            "summary": "Create alliance with Mehrgan and Moe\r\nMove to new office with Dan & Vish\r\nStruggle with my role in church\r\n\r\nStacie:\r\nTravel to AZ with mom and sisters\r\nLive broadcast of Missions Conference\r\nStart staff development at Greeley Vineyard\r\nCoach training & Spiritual Direction\r\nMeet with Sri Lanka partners\r\n\r\nChristine (37):\r\nInsurance billing problems with Gall Bladder surgery\r\n\r\nJosiah (34):\r\nTrying to finish PhD in 2019\r\nOpportunity for Biola University\r\nSam does not want to live in LA\r\n\r\nRachel (31):\r\nDue on Nov 30\r\nBaby Shower and other preparations"
+        },
+        "model": "life.experience",
+        "pk": 6
+    },
+    {
+        "fields": {
+            "age": 59,
+            "aspect": 3,
+            "summary": "Learn PHP coding\r\nSetup Apache server on Mac & Windows\r\nTeaching style - explain code examples, produce templates\r\nLimitations of my role at church\r\nLimitations of my role at UNC\r\nBuild applications quickly\r\nPersonal retreat"
+        },
+        "model": "life.experience",
+        "pk": 7
+    },
+    {
+        "fields": {
+            "age": 58,
+            "aspect": 1,
+            "summary": "Start teaching at UNC\r\nTeach Web Dev Intro\r\nTeach Software Engineering for Chris Harris\r\nConduct design reviews in BACS 200\r\nBuild classroom & lesson presentation system over Christmas break\r\nUse Reveal JS for showing slides\r\nTeach Web Dev in Spring\r\nExpress interest in teaching Intermediate Web Dev"
+        },
+        "model": "life.experience",
+        "pk": 8
+    },
+    {
+        "fields": {
+            "age": 58,
+            "aspect": 2,
+            "summary": "Develop relationship with Mehrgan\r\nSignificant interactions with students\r\nDeep satisfaction in teaching others\r\nSpend time with Don Seaman at High school reunion\r\nMeet with Greg McCutchan in July 2017 \r\n\r\nChurch:\r\nCooling of connection with Greeley Vineyard\r\nResign from Church board (Aug 2018)\r\nBad political conversations with friends & relatives (stop facebook)\r\n\r\nStacie:\r\nRelationship with Stacie deepened in trust and respect\r\nResearch for Vineyard healthcare\r\nPrayer team at Missions Conference\r\nKaren Fields as Spiritual Director\r\nStart coaching training\r\nTexas trip for Lucy's 80 birthday\r\n\r\nChristine (36):\r\nGall Bladder surgery (Jan 2017)\r\n\r\nJosiah (33):\r\nVisit London in July after River Cruise\r\nConflict between Josiah & Sam\r\nLondon record heat in London\r\nCassie visits Colorado\r\n\r\nRachel (30):\r\nBuild meaningful connection with Andrew and Rachel\r\n    * church involvement\r\n    * leisure time\r\nPregnant in Feb, 2018\r\nMasters degree (Dec 2017)\r\nAndrew working an Behavioral Health hospital\r\nUNC cancels teaching job"
+        },
+        "model": "life.experience",
+        "pk": 9
+    },
+    {
+        "fields": {
+            "age": 58,
+            "aspect": 4,
+            "summary": "River Cruise Trip - Austria, Germany, Netherlands, England"
+        },
+        "model": "life.experience",
+        "pk": 10
+    },
+    {
+        "fields": {
+            "age": 58,
+            "aspect": 3,
+            "summary": "Learn about Emotional Intelligence\r\nGrowth books - 100 Years, Principles, Tribe of Mentors, Activate Your Brain, Habits, Originals\r\nAudiobooks on drive to UNC\r\nAttend PyCon in Cleveland, OH\r\nMeaning Model - Contribute, Relate, Learn, Enjoy"
+        },
+        "model": "life.experience",
+        "pk": 11
+    },
+    {
+        "fields": {
+            "age": 57,
+            "aspect": 2,
+            "summary": "Stacie:\r\nWork together on Who2Hire\r\n\r\nChristine (35):\r\nWork at King Soopers\r\n\r\nJosiah (32):\r\nVisit London in May\r\nTravel to Paris\r\n\r\nRachel (29):\r\nBuy house in Jan 2016\r\nWork on Masters degree\r\nTeach Japanese culture and language at UNC\r\n\r\nChurch:\r\nSchool of Kingdom Ministry (Sep 2016 - May 2017)\r\nLack of direction in ministry\r\nStruggle with School of Kingdom Ministry\r\nVineyard National Conference in Anahiem\r\n\r\nTravel to CA to see Deb & Bob Moyer\r\n\r\n40 year high school reunion"
+        },
+        "model": "life.experience",
+        "pk": 12
+    },
+    {
+        "fields": {
+            "age": 57,
+            "aspect": 1,
+            "summary": "Women2Women\r\n* Complete work on Women2Women application (Agency Portal)\r\n* Conflict over billing practices\r\n\r\nLow revenue for Shrinking World (no new work)\r\n* Decide that we can retire and be OK\r\n* Start investing with Personal Captital\r\n\r\nCreate Who2Hire application and business\r\n* Build app (1000 hours)\r\n* Difficulty marketing application\r\n\r\nCreate booknotes website"
+        },
+        "model": "life.experience",
+        "pk": 13
+    },
+    {
+        "fields": {
+            "age": 57,
+            "aspect": 3,
+            "summary": "Global Leadership Summit\r\nNational Vineyard Conference\r\n\r\n\r\nLearn about emotions\r\n    * Study books Destiny, Originals, Fully Charged, EQ 2.0, Next 100 Years\r\n\r\nPersonal growth challenges\r\n    * Battle disillusionment over career and church\r\n    * No longer need to make money\r\n    * Tension over Who2Hire business\r\n    * Spiritual and emotional and intellectual growth\r\n    * Understand meaning = contribute + connect + understand + enjoy\r\n    * Clarify my identity and identify life purpose\r\n    * Meltdown of politics"
+        },
+        "model": "life.experience",
+        "pk": 14
+    },
+    {
+        "fields": {
+            "age": 57,
+            "aspect": 4,
+            "summary": "Travel to \r\n* Missouri, Tennessee, Kentucky, Maryland, Washington (Oct 2016)\r\n* Arizona - Jan 2017 (Dad's 85)\r\n* Hawaii - Feb 2017\r\n* England, France, Iceland - May 2017\r\n* California, Arizona - July 2017\r\n\r\nWestminster Trip\r\n* watch soccer game with Andrew\r\n* time away with Stacie\r\n* personal retreat"
+        },
+        "model": "life.experience",
+        "pk": 15
+    },
+    {
+        "fields": {
+            "age": 56,
+            "aspect": 1,
+            "summary": "Publish \"The Leverage Principle\" ebook (Dec 2015)\r\n\r\nWomen2Women \r\n* Start project in Dec 2015\r\n* First release in April\r\n* Extended to include Agency Portal\r\n* Conflict over billing and schedule\r\n\r\nSemantic Arts\r\n* work with Dave McComb on Siemans contract (Oct - Nov 2015)\r\n\r\nCreative Leap\r\n* meet with Greg McGutchen on phone\r\n* meet with Greg in Boulder\r\n* meet with Greg and Josiah"
+        },
+        "model": "life.experience",
+        "pk": 16
+    },
+    {
+        "fields": {
+            "age": 55,
+            "aspect": 1,
+            "summary": "Shrinking World:\r\n* Pipescan deployed in Dec 2014\r\n* Demand for more business\r\n* Stacie leaves Banner to join Shrinking World - Nov 2014\r\n* Josiah, Jim, Mark N. join Shrinking World - Dec 2014\r\n* Setup S-Corp,  payroll, and employees for SWS - Jan 2015\r\n* PRS work collapses - Feb 2015\r\n* Jim works until May 2015\r\n\r\nStart writing book\r\n\r\nClose App Thumper - Jun 2015\r\n\r\nPyCon 2015"
+        },
+        "model": "life.experience",
+        "pk": 17
+    },
+    {
+        "fields": {
+            "age": 55,
+            "aspect": 2,
+            "summary": "Church:\r\n* Active in Greeley Vineyard\r\n* Preach Feb 1\r\n* Mentor and resource for Beilmans\r\n* Join board and setup budget (Oct 2014)\r\n* Host FPU\r\n\r\nStacie:\r\nWedding takes a big physical toll on Stacie\r\nAfter watching Cassie she can barely walk\r\nDr says she should try to avoid surgery\r\nStarts doing therapeutic massage every other week\r\n\r\nChristine (34):\r\nStart work at King Soopers\r\n\r\nJosiah (31):\r\nMove to CO Springs\r\nDifficult visit to Co Springs for Mothers Day\r\nCannot find work\r\n\r\nRachel (28):\r\nAndrew and Rachel get engaged - Nov 2014\r\nRachel's wedding - Aug 2015\r\nLots of relatives come to the wedding\r\nElen is very helpful during the wedding"
+        },
+        "model": "life.experience",
+        "pk": 18
+    },
+    {
+        "fields": {
+            "age": 55,
+            "aspect": 4,
+            "summary": "Trip to Hawaii - Nov 2014\r\nExtended time off - Dec 2014\r\nK-Love Cruise with Christine & Rachel - Jan 2105\r\nDrive to Key West, stay at Key Largo\r\nPyCon in Montreal with Stacie, Jim, Eric, Josiah - May 2015"
+        },
+        "model": "life.experience",
+        "pk": 19
+    },
+    {
+        "fields": {
+            "age": 55,
+            "aspect": 3,
+            "summary": "PyCon in Montreal with Stacie, Jim, Eric, Josiah - May 2015\r\n\r\nStruggle with personal problems:\r\n* Identity crisis\r\n* Disappointment over business failures\r\n* Loss of hope\r\n* Stress with Stacie\r\n* Fear of the future\r\n* Overwhelming frustration"
+        },
+        "model": "life.experience",
+        "pk": 20
+    },
+    {
+        "fields": {
+            "age": 42,
+            "aspect": 4,
+            "summary": "None"
+        },
+        "model": "life.experience",
+        "pk": 21
+    },
+    {
+        "fields": {
+            "age": 54,
+            "aspect": 2,
+            "summary": "AZ trip and K-Love Cruise - Jan 2014\r\n\r\nChurch:\r\nStart with Beilman's home group - Nov 2013\r\nSwitch to Greeley Vineyard - May 2014\r\nPastor hand-off - Aug 2014\r\nStacie joins board - Aug 2014\r\n\r\nGet to know Andrew\r\nSpend time with Garcias - June 2014"
+        },
+        "model": "life.experience",
+        "pk": 22
+    },
+    {
+        "fields": {
+            "age": 54,
+            "aspect": 1,
+            "summary": "App Thumper \r\n* Work throughout the year\r\n\r\nShrinking World:\r\n* Eric joins company - Jan 2014\r\n* Todd joins company - Jan 2014\r\n* Work on PRS \r\n* PyCon Montreal (Stacie) - April 2014\r\n* Start Impact SRS - May 2014"
+        },
+        "model": "life.experience",
+        "pk": 23
+    },
+    {
+        "fields": {
+            "age": 54,
+            "aspect": 4,
+            "summary": "Baltimore/DC trip - Oct 2013\r\nAZ trip and K-Love Cruise - Jan 2014\r\nPyCon Montreal (Stacie) - April 2014\r\nBlues Fest with Garcias - June 2014"
+        },
+        "model": "life.experience",
+        "pk": 24
+    },
+    {
+        "fields": {
+            "age": 54,
+            "aspect": 3,
+            "summary": "PyCon Montreal (Stacie) - April 2014"
+        },
+        "model": "life.experience",
+        "pk": 25
+    },
+    {
+        "fields": {
+            "age": 53,
+            "aspect": 1,
+            "summary": "Searching for new work (Sep - Dec) 2012\r\nWork with Chris Crownhart - Oct/Nov  2012\r\nHire Bryan for watermill support - Nov 2012\r\nStart Pipe Scan coding - Jan 2013\r\nStart App Thumper LLC - Feb  2013\r\nHail storm damages roof - Aug 2013\r\nRepair roof - Dec 2013"
+        },
+        "model": "life.experience",
+        "pk": 26
+    },
+    {
+        "fields": {
+            "age": 53,
+            "aspect": 2,
+            "summary": "Cassandriel is born - Oct 5, 2012\r\nJordan/Israel/Austria - Nov  2012\r\nSpend time with Hoods\r\nRachel visits Hong Kong - Dec 2012\r\nVineyard National Conference - June 2013\r\nRachel returns to USA- Aug 2013\r\nJosiah creates New Line Technical Innovations\r\nVisit from Dave Seaman \r\nVisit from Mandy & JD"
+        },
+        "model": "life.experience",
+        "pk": 27
+    },
+    {
+        "fields": {
+            "age": 53,
+            "aspect": 3,
+            "summary": "PyCon Santa Clara (Stacie) - April 2013"
+        },
+        "model": "life.experience",
+        "pk": 28
+    },
+    {
+        "fields": {
+            "age": 53,
+            "aspect": 4,
+            "summary": "Visit Monte Ray with Stacie - Apr 2012\r\nVisit Jordan/Israel/Austria\r\npuzzle from Vienna\r\nanniversary in Denver\r\nJosiah & Sam & Cassandriel for Christmas"
+        },
+        "model": "life.experience",
+        "pk": 29
+    },
+    {
+        "fields": {
+            "age": 52,
+            "aspect": 1,
+            "summary": "Searching for new work (Feb - Aug 2012)\r\nNoCoNet and Two-hour Job Search\r\nHigh level of uncertainty and insecurity\r\nPresent to SW Architects group - Aug  2012\r\nNew Tech Meetups  2012\r\nReplace furnance and A/C\r\nStart Exterior Brain project\r\nUpdate MyBook online website\r\n50 tricks ideas\r\nBuild automatic test framework at Watermill\r\nStart work on PRS project - Jun 2012"
+        },
+        "model": "life.experience",
+        "pk": 30
+    },
+    {
+        "fields": {
+            "age": 52,
+            "aspect": 2,
+            "summary": "Vineyard Missions Conference - Oct 2011\r\nGlen Erie retreat - Dec 2011\r\nRachel visits from Japan - July 2012\r\nAuction for Youth initiative\r\ntravel to Dave Seaman's 80th birthday\r\nMeet  with Tim Musselwhite Jan 2012\r\nStart home group - Jan 2012\r\nWeekly Skype with Rachel \r\nWeekly Skype with Hoods\r\nSam pregnant - Feb 2012\r\nProgramming project with Josiah\r\nHOA web site\r\nJosiah starts with migraines\r\nTurmoil starts at Banner (Optimization)\r\nChristine works for Eric\r\nJoin church tech team\r\nJosiah gets leave of absence from CU - Jun 2012"
+        },
+        "model": "life.experience",
+        "pk": 31
+    },
+    {
+        "fields": {
+            "age": 52,
+            "aspect": 3,
+            "summary": "PyCon Santa Clara - April  2012\r\nQuarterly personal retreat\r\nBudgeting model\r\nSeaman's Log (weekly articles)\r\nSpiritual Transformation, Prayer Journal and Practices\r\nLearn about self-publishing\r\nBuy ultra book - Apr 2012\r\nLean Startup - Agile business model\r\nTrust ramp\r\nJuan and Lynn Mora"
+        },
+        "model": "life.experience",
+        "pk": 32
+    },
+    {
+        "fields": {
+            "age": 52,
+            "aspect": 4,
+            "summary": "Winter Park Blues - July  2012 - Ana Popovic\r\nTravel to Arizona\r\nAnxiety over business strategy\r\nGreeley Blues Jam - Jun 2012"
+        },
+        "model": "life.experience",
+        "pk": 33
+    },
+    {
+        "fields": {
+            "age": 51,
+            "aspect": 1,
+            "summary": "OSCON Portland with Josiah - June 2011\r\nBuild out Watermill accounting system\r\nCommute to Brighton"
+        },
+        "model": "life.experience",
+        "pk": 34
+    },
+    {
+        "fields": {
+            "age": 51,
+            "aspect": 4,
+            "summary": "Tsunami - Mar 2011\r\nTravel  to Hawaii & Japan - Mar/Apr 2011\r\nArizona trip with Banner - Mediserve"
+        },
+        "model": "life.experience",
+        "pk": 35
+    },
+    {
+        "fields": {
+            "age": 51,
+            "aspect": 2,
+            "summary": "Visit Rachel in Japan 2011"
+        },
+        "model": "life.experience",
+        "pk": 36
+    },
+    {
+        "fields": {
+            "age": 50,
+            "aspect": 2,
+            "summary": "Move into new house on 50th birthday\r\nHost regular parties in new house\r\nMeet all our neighbors\r\nHoppes over for Thanksgiving"
+        },
+        "model": "life.experience",
+        "pk": 37
+    },
+    {
+        "fields": {
+            "age": 50,
+            "aspect": 1,
+            "summary": "Decide to double productivity - Jan 2010\r\nFocus on scripting and automation\r\nBuild Support Center infrastructure\r\nGet Proficient at Django\r\nAttend OSCON in June 2010"
+        },
+        "model": "life.experience",
+        "pk": 38
+    },
+    {
+        "fields": {
+            "age": 51,
+            "aspect": 3,
+            "summary": "Learn Git,  Django, Python"
+        },
+        "model": "life.experience",
+        "pk": 39
+    },
+    {
+        "fields": {
+            "age": 50,
+            "aspect": 3,
+            "summary": "Read Pragmatic Thinking and Learning\r\nRead Productive Programmer\r\nFully embrace God's blessing for our family"
+        },
+        "model": "life.experience",
+        "pk": 40
+    },
+    {
+        "fields": {
+            "age": 50,
+            "aspect": 4,
+            "summary": "Thrilled to be living in Water Valley\r\nEvery day is a resort stay"
+        },
+        "model": "life.experience",
+        "pk": 41
+    },
+    {
+        "fields": {
+            "age": 56,
+            "aspect": 2,
+            "summary": "Stacie:\r\nBi-Weekly massages\r\n\r\nChristine (34):\r\nWork as Pharmacy technician\r\n\r\nJosiah (31):\r\n\r\nRachel (28):\r\nCelebrate 1 year in Aug 2016\r\nWork as sales person for solar panels\r\n\r\nChurch:\r\nFallout from presidential race sours relationships for church, family, neighbors\r\n\r\nTravel to visit relatives in Tennessee, Kentucky, Misouri, Maryland, Washington"
+        },
+        "model": "life.experience",
+        "pk": 42
+    },
+    {
+        "fields": {
+            "age": 56,
+            "aspect": 4,
+            "summary": "Tension over politics"
+        },
+        "model": "life.experience",
+        "pk": 43
+    }
+]

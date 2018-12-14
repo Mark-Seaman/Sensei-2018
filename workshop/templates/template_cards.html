@@ -1,0 +1,26 @@
+{% extends "mybook_theme.html" %}
+
+
+{% block content %}
+
+    <section id="content">
+        <div class="container-fluid">
+
+            {% for c in cards %}
+                <div class="card" style="float: inherit">
+                    <div class="card-header ch-alt">
+                        <h2>{{ c.0 }}</h2>
+                    </div>
+                    <div class="card-body card-padding">
+                        {% autoescape off %}
+                            {{ c.1 }}
+                        {% endautoescape %}
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </section>
+
+{% endblock %}
+

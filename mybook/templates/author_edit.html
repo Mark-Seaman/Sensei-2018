@@ -1,0 +1,44 @@
+{% extends "mybook_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1> {{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <form action="../author_edit/{{ object.pk }}" method="post">{% csrf_token %}
+
+                        <div class="form-group">
+                            {#                            {{ form.as_p }}#}
+                            {#                            {% for x in fields %}#}
+                            {#                                <div class="fg-line p-t-25">#}
+                            {#                                    <label>{{ x.0 }}:</label>#}
+                            {#                                    <input type="text" class="form-control input" name="{{ x.1 }}" value="{{ x.2 }}">#}
+                            {#                                </div>#}
+                            {#                            {% endfor %}#}
+                            <div class="fg-line p-t-25">
+                                <label>{{ form.user.label_tag }}:</label>
+                                <span>{{ form.user }}</span>
+                            </div>
+                            <div class="fg-line p-t-25">
+                                <label>{{ form.organization.label_tag }}:</label>
+                                <span>{{ form.organization }}</span>
+                            </div>
+                        </div>
+
+                        <div class="row p-20">
+                            <button class="btn palette-Teal bg">Save Author</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+    </section>
+{% endblock %}

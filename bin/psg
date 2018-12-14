@@ -1,0 +1,5 @@
+#!/bin/bash
+# Grep the process status list
+
+ps -ef | grep $1 | grep -v 'psg\|grep'
+

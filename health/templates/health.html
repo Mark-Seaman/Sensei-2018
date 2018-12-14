@@ -1,0 +1,29 @@
+{% extends "health_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="card">
+                    <div class="card-header ch-alt">
+                        <h1>HEALTH SCORE</h1>
+                    </div>
+
+                    <div class="card-body card-padding">
+                        <p>
+                            Health scorecard
+                        </p>
+
+                        {% autoescape off %}
+                            {{ doc_text }}
+                        {% endautoescape %}
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

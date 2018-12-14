@@ -1,0 +1,205 @@
+#!/bin/bash
+# MyBook Aliases
+
+alias 200='x guide lesson HtmlApps'
+alias 350='x guide lesson PhpApps'
+
+alias activity='x hours activity'
+alias ad='cd $p/Documents/aspire/clients/Mark-Seaman'
+alias ae='x aspire edit'
+alias app='x app'
+alias aspire='x aspire'
+alias author='x author'
+
+alias b='brackets'
+alias bl='cd $p/bin && ls *.py'
+alias blue='ssh uncobacs@unco-bacs.org'
+alias blue-cp='rsync -auv $p/Documents/guide/HtmlApps/web-root/ uncobacs@unco-bacs.org:~/public_html/bacs_200'
+alias bluepull="ssh uncobacs@unco-bacs.org 'pwd && git pull && git status'"
+alias book='x book'
+alias booknotes='x booknotes'
+alias budget='x budget'
+
+alias calendar='x web https://calendar.google.com/calendar/render?pli=1#main_7'
+alias candidate='x hire candidate'
+alias ce='x cmd edit'
+alias chrome='open /Applications/Google\ Chrome.app/'
+alias church='x church'
+alias cl='x cmd list'
+alias client='x client'
+alias cmd='x cmd'
+alias co='vc commit'
+alias cphp='d cphp && brackets $p/Documents/guide/PhpApps/web-root'
+alias commit='vc commit'
+alias console='x ops console'
+alias cw='x collab web'
+
+alias data='x data'
+alias days='x hours days'
+alias datatype='x datatype'
+alias de='x doc edit'
+alias deploy='x ops deploy; x web'
+alias dj='cd $p && python ./manage.py'
+alias dl='x doc list'
+alias doc='cd $p/Documents; cd'
+alias drafts='cd $p/Documents/aspire/clients/Mark-Seaman/Write/drafts/Liberty && author drafts'
+alias ds='x doc search'
+
+alias ea='e $p/bin/bash-alias; . $p/bin/bash-alias'
+alias email='x email'
+alias ep='brackets $p/Documents/guide/PhpApps/web-root'
+alias ev='e $p/bin/bash-vars'
+alias excerpt='x booknotes excerpt'
+
+alias faceblog='x faceblog'
+alias facebook='x web facebook.com'
+alias firefox='open /Applications/Firefox.app'
+
+alias g='grep'
+alias ga='git add -A'
+alias gc='git commit -m'
+alias gco='git checkout'
+alias gd='vc diff'
+alias gl='git log --name-only'
+alias gs='vc status'
+alias guide='x guide'
+
+alias h='history|tail -40'
+alias hammer=". ~/Projects/Hammer/bin/bashrc"
+alias health='x health'
+alias hire='x hire'
+alias home='. ~/bin/bashrc'
+alias host='hostname'
+alias hours='x hours'
+
+alias i='x i'
+alias interview='x hire interview'
+alias interviewer='x hire interviewer'
+alias ip='ifconfig|grep "inet "'
+alias ipscan='nmap -sP 172.16.0.0/24'
+alias ix='x i note:'
+
+alias kiwi='open /Applications/Kiwi\ for\ Gmail\ Lite.app'
+
+alias mb=". $p/bin/bashrc"
+alias mbd='d $p/Documents/mybook/author/Mark-Seaman'
+alias music='x music'
+
+alias l='ls -al'
+alias le='less'
+alias life='x life'
+alias ll='ls -l'
+alias log='tail -99 $p/log/hammer.log'
+
+alias n=ntsh.py
+alias note='open /Applications/Evernote.app'
+
+alias opening='x hire opening'
+alias ops='x ops'
+
+alias p='python'
+alias page='x page'
+alias pages='b $p/Documents'
+alias plan='x plan'
+alias project='x project'
+alias pt='cd $p/bin && python page_tests.py'
+alias pull='vc pull'
+alias push='vc push'
+
+alias question='x hire question'
+
+alias r=reset
+alias re='x reuse edit'
+alias rl='x reuse list'
+alias reuse='x reuse'
+alias robot='x robot'
+
+alias s='x app search'
+alias score='x score'
+alias sd='x src diff'
+alias se='x seamanslog edit'
+alias seamanslog='x seamanslog'
+alias search='x app search'
+alias send='x send'
+alias sensei='cd ~/Sensei && b .'
+alias session='x hire session'
+alias sign='. $HOME/Projects/SignSpan/sss/bin/bashrc'
+alias skill='x hire skill'
+alias slog='x seamanslog'
+alias software='x software'
+alias sol="brackets $p/Documents/guide/PhpApps/web-root/solution"
+alias spiritual='x spiritual'
+alias src='x src'
+alias ssh-imac='ssh $imac'
+alias ssh-macbook='ssh $macbook'
+alias syslog='x staging command x log'
+
+alias task='x task'
+alias te='x tst edit'
+alias text='x text'
+alias thot='x thot'
+alias thotdir='cd $p/Documents/thot'
+alias toole='x tool edit'
+alias tools='x tool list'
+alias tlike='x tst like'
+alias tlist='x tst list'
+alias todo='x todo'
+alias tout='x tst output'
+alias tres='x tst results|less'
+alias trun='x tst run'
+alias tst='x tst'
+
+alias u='cd ..'
+export unc="$HOME/Projects/UNC"
+alias unc=". $unc/bin/bashrc-mac"
+alias unc-spring=". $HOME/Projects/UNC-2018-Spring/Tools/bin/bashrc-mac"
+alias user='x user'
+alias update='x ops update'
+
+alias vc='x vc'
+
+alias w2w='. $HOME/Projects/w2w/bin/bashrc'
+alias wam='. $HOME/Projects/w2w/bin/bashrc'
+alias web='x web'
+alias who2hire='. $HOME/Projects/Who2Hire/bin/bashrc'
+alias wp='x wordpress '
+
+alias x=''; unalias x
+
+
+# ------------------------------
+# Functions
+
+function x {
+    sh -c "python $p/bin/x.py $*"
+}
+
+function d {
+    d=$1
+    [ "$1" == "html" ]  && d="$p/Documents/guide/HtmlApps"
+    [ "$1" == "ihtml" ] && d="$p/static/images/guide/HtmlApps"
+    [ "$1" == "chtml" ] && d="$p/Documents/guide/HtmlApps/web-root"
+    [ "$1" == "lhtml" ] && d="$p/Documents/guide/HtmlApps/lesson"
+    [ "$1" == "php" ]   && d="$p/Documents/guide/PhpApps"
+    [ "$1" == "cphp" ]  && d="$p/Documents/guide/PhpApps/web-root"
+    [ "$1" == "lphp" ]  && d="$p/Documents/guide/PhpApps/lesson"
+    [ "$1" == "iphp" ]  && d="$p/static/images/guide/PhpApps"
+    [ "$1" == "teach" ] && d="$p/Documents/guide/Teaching"
+    [ "$1" == "books" ] && d="$p/Documents/booknotes"
+    [ "$1" == "htdocs" ] && d="/Applications/XAMPP/xamppfiles/htdocs"
+    echo $d; pushd $d; ls -al
+}
+
+function bup {
+    echo 'Commit and push code to Bluehost'
+    co "$*" && bluepull
+}
+
+function teach {
+    x guide lesson Teaching/$1.md
+}
+
+function show {
+    e `which $1`
+}
+

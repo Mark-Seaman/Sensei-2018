@@ -1,0 +1,248 @@
+{% extends "admin_theme.html" %}
+
+
+{% block xcard %}
+    <div class="card" brd-20>
+
+        <div class="card-header ch-alt">
+            <h2>{{ card_title }}</h2>
+        </div>
+
+        <div class="card-body card-padding">
+            <div class="row">
+                <a href="/static/material">Material Template Demo Page</a>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 text-right">
+                    <strong>System Log</strong>
+                </div>
+                <div class="col-sm-6">
+                    <a href="/superuser/log">Log</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 text-right">
+                    <strong>Test Results</strong>
+                </div>
+                <div class="col-sm-6">
+                    <a href="/superuser/tests">Tests</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 text-right">
+                    <strong>Django Users</strong>
+                </div>
+                <div class="col-sm-6">
+                    <a href="/superuser/users">Users</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 text-right">
+                    <strong>Material Template</strong>
+                </div>
+                <div class="col-sm-6">
+                    <a href="/superuser/material">Material Demo Page</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block xcolumn1 %}
+
+    <!-- Dashboard -->
+    <div class="card p-10">
+
+        <div class="card-header ch-alt">
+            <h2>Control Panel Dashboard</h2>
+        </div>
+
+        <div class="card-body card-padding">
+
+            <div class="row">
+                <div class="col-sm-6 text-right">
+                    <strong>System Log</strong>
+                </div>
+                <div class="col-sm-6">
+                    <a href="/superuser/log">Log</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 text-right">
+                    <strong>Test Results</strong>
+                </div>
+                <div class="col-sm-6">
+                    <a href="/superuser/tests">Tests</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 text-right">
+                    <strong>Django Users</strong>
+                </div>
+                <div class="col-sm-6">
+                    <a href="/superuser/users">Users</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 text-right">
+                    <strong>Material Template</strong>
+                </div>
+                <div class="col-sm-6">
+                    <a href="/superuser/material">Material Demo Page</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Margin -->
+    <div class="card m-10">
+
+        <div class="card-header ch-alt">
+            <h2>Margin
+                <small>eg: <code>&lt;div class="m-10 m-b-0"&gt;&lt;div&gt;</code></small>
+            </h2>
+        </div>
+
+        <div class="card-body card-padding">
+            <strong class="d-block m-b-10">Margin</strong>
+            <code>code block here</code>
+            <code>and there</code>
+            <br/>
+            <br/>
+            <strong class="d-block m-b-10">Margin Top</strong>
+            <code>more code</code>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block xcontent %}
+    <section id="content">
+        <div class="container">
+
+            <div class="c-header">
+                <h2>{{ title }}</h2>
+            </div>
+
+            <!-- Row of Columns -->
+            <div class="row">
+
+                <!-- Column 1 of Cards -->
+                <div class="col-sm-6">
+
+                    <!-- Dashboard -->
+                    <div class="card">
+
+                        <div class="card-header ch-alt">
+                            <h2>Control Panel Dashboard</h2>
+                        </div>
+
+                        <div class="card-body card-padding">
+
+                            <div class="row">
+                                <div class="col-sm-6 text-right">
+                                    <strong>System Log</strong>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a href="/superuser/log">Log</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 text-right">
+                                    <strong>Test Results</strong>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a href="/superuser/tests">Tests</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 text-right">
+                                    <strong>Django Users</strong>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a href="/superuser/users">Users</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 text-right">
+                                    <strong>Material Template</strong>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a href="/superuser/material">Material Demo Page</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- Margin -->
+                    <div class="card">
+
+                        <div class="card-header ch-alt">
+                            <h2>Margin
+                                <small>eg: <code>&lt;div class="m-10 m-b-0"&gt;&lt;div&gt;</code></small>
+                            </h2>
+                        </div>
+
+                        <div class="card-body card-padding">
+                            <strong class="d-block m-b-10">Margin</strong>
+                            <code>code block here</code>
+                            <code>and there</code>
+                            <br/>
+                            <br/>
+                            <strong class="d-block m-b-10">Margin Top</strong>
+                            <code>more code</code>
+                        </div>
+                    </div>
+
+                    <!-- Font Size -->
+                    <div class="card">
+
+                        <div class="card-header ch-alt">
+                            <h2>Font Size</h2>
+                        </div>
+
+                        <div class="card-body card-padding">
+                            <code>Choice 1</code>
+                            <code>Choice 2</code>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Column 2 of Cards -->
+                <div class="col-sm-6">
+
+                    <!-- Leverage -->
+                    <div class="card">
+                        <div class="card-header ch-alt">
+                            <h2>The Leverage Principle
+                                <small>by Mark Seaman</small>
+                            </h2>
+                        </div>
+                        <div class="card-body card-padding">
+                            <img src="/static/images/Leverage_Principle_Small.jpg">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}
+
+

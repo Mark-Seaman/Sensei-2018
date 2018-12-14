@@ -1,0 +1,46 @@
+{% extends "mybook_theme.html" %}
+
+
+{% block card %}
+
+    <div class="card">
+
+        <div class="card-header ch-alt">
+            <h1>My Life Story</h1>
+            <p>by Mark Seaman</p>
+        </div>
+
+        <div class="card-body card-padding">
+
+            <h3>{{ title }}</h3>
+
+            <table>
+
+                <tr>
+                    <th>Age</th>
+                    <th>Year</th>
+                    {% for label in labels %}
+                        <th>{{ label }}</th>
+                    {% endfor %}
+                </tr>
+
+                {% for row in table %}
+                    <tr>
+
+                        {% for c in row %}
+                            <td>
+                                {% autoescape off %}
+                                    {{ c }}
+                                {% endautoescape %}
+                            </td>
+                        {% endfor %}
+
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+
+    </div>
+
+{% endblock %}

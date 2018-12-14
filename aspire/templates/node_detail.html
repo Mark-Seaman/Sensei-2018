@@ -1,0 +1,46 @@
+{% extends "mybook_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <ul>
+                        <li>
+                            <label>ID: </label> {{ object.pk }}
+                        </li>
+                        <li>
+                            <label>Name: </label> {{ object.name }}
+                        </li>
+
+                    </ul>
+
+                    <a href="/aspire/node_list">
+                        <button class="btn palette-Green bg">Node List</button>
+                    </a>
+
+                    <a href="/aspire/node_edit/{{ node.pk }}">
+                        <button class="btn palette-Green bg">Edit Node</button>
+                    </a>
+
+                    <a href="/aspire/node_delete/{{ node.pk }}">
+                        <button class="btn palette-Green bg">Delete Node</button>
+                    </a>
+                    <br>
+                    <br>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+

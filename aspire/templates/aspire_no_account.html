@@ -1,0 +1,36 @@
+{% extends "mybook_theme.html" %}
+
+
+{% block libs %}
+{% endblock %}
+
+
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="card" brd-20>
+
+                    <div class="card-header ch-alt">
+                        <h1> {{ title }}</h1>
+                    </div>
+
+                    <div class="card-body card-padding">
+                        <p>You are NOT Logged In!</p>
+                        <p>
+                            It appears that your account has expired. Please contact technical support for additional
+                            information.
+                        </p>
+
+                        <p><a href="/aspire/login"> Login Now</a></p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

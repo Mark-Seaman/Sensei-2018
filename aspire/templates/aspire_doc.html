@@ -1,0 +1,92 @@
+{% extends "mybook_theme.html" %}
+
+
+{% block content %}
+
+    <div class="card" brd-20>
+
+        <div class="card-header ch-alt">
+            <a href="Index">Index</a>
+        </div>
+
+        <div class="card-body card-padding">
+
+            {% if text %}
+                {% autoescape off %}
+                    <p>{{ text }}</p>
+                {% endautoescape %}
+            {% else %}
+                <h2>No document found. {{ doc }}</h2>
+            {% endif %}
+
+            <p><a class="btn palette-Green bg" href="/aspire/doc_edit/{{ title }}">Edit</a></p>
+
+        </div>
+    </div>
+
+
+    {% if files %}
+        <div class="card" brd-20>
+
+            <div class="card-header ch-alt">
+                <h2>Related Topics</h2>
+            </div>
+
+            <div class="card-body card-padding">
+
+                <ul>
+                    <li><a href="/aspire/{{ pdir }}">/aspire/{{ pdir }}</a></li>
+                    {% for f in files %}
+                        <li><a href="/aspire/{% if dir %}{{ dir }}/{% endif %}{{ f }}">{{ f }}</a></li>
+                    {% endfor %}
+                </ul>
+
+                <div class="row p-20">
+                    <a class="btn palette-Green bg" href="/aspire/{% if dir %}{{ dir }}/{% endif %}NewTopic">
+                        New Topic
+                    </a>
+                    <a class="btn palette-Green bg" href="/aspire/dir/{% if dir %}{{ dir }}{% endif %}">
+                        Show Directory
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    {% if projects %}
+        <div class="card" brd-20>
+
+            <div class="card-header ch-alt">
+                <h2>Projects</h2>
+            </div>
+
+            <div class="card-body card-padding">
+
+                <ul>
+                    {% for r in projects %}
+                        <li>
+                            <a href="/aspire/{{ r.0.name }}">{{ r.0.name }}</a>
+                            <ul>
+                                {% for p in r.1 %}
+                                    <li>
+                                        <a href="/aspire/{{ p.name }}/Index">{{ p.name }}</a>, {{ p }}
+                                    </li>
+                                {% endfor %}
+
+                            </ul>
+                        </li>
+                        {#                                <li><a href="/aspire/{{ p.0.name }}/Index">{{ p.0.name }}</a>, {{ p.0.role }}</li>#}
+                    {% endfor %}
+                </ul>
+
+                <p>
+                    <a class="btn palette-Green bg" href="/aspire/project_add">
+                        New Project
+                    </a>
+                </p>
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock %}
+

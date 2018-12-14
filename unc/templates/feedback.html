@@ -1,0 +1,146 @@
+{% extends "guide_theme.html" %}
+
+{% block card %}
+
+    <div class="card">
+
+        <div class="card-header ch-alt">
+            <h1>Design Review Feedback</h1>
+            <h2>Designer: {{ designer.name }}</h2>
+        </div>
+
+        <div class="card-body card-padding">
+
+            <a href="/unc/reviews/{{ designer.id }}" class="btn">Do Reviews</a>
+            {#            <a href="/unc/review-scores" class="btn">Review Scores</a>#}
+
+            <h2>Project Quality Ratings</h2>
+            <h3>Reviewer: {{ designer.reviewer_score }} -- Designer: {{ designer.designer_score }}</h3>
+            <p>
+                All reviews are scored on a scale of 1 to 10 by the number of requirements that are met.
+            </p>
+
+            <p>
+                <b>Reviewer Score</b>
+            </p>
+
+            <ul>
+                <li>
+                    Reviews Assigned {{ completed.1 }}
+                </li>
+                <li>
+                    Reviews Completed {{ completed.0 }}
+                </li>
+                <li>
+                    Success Rate = {{ completed.0 }} / {{ completed.1 }}
+                </li>
+            </ul>
+
+            <hr>
+
+            <p>
+                <b>Designer Scores</b>
+            </p>
+
+            <table class="table table-hover">
+                <tr>
+                    <th>Page Reviewed</th>
+                    <th>Designer Score</th>
+                    <th>Review Scores</th>
+                </tr>
+                {% for a in scores %}
+                    <tr>
+                        <td>{{ a.0 }}</td>
+                        <td>{{ a.1 }}</td>
+                        <td>{{ a.2 }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+            <h2>My Feedback</h2>
+
+            <div role="tabpanel">
+
+                <ul class="tab-nav" role="tablist">
+                    {% for tab in projects %}
+                        <li class="{{ tab.active }}">
+                            <a href="#{{ tab.label }}" aria-controls="{{ tab.label }}" role="tab"
+                               data-toggle="tab">{{ tab.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                <div class="tab-content">
+
+                    {% for tab in projects %}
+
+                        <div role="tabpanel" class="tab-pane {{ tab.active }}" id="{{ tab.label }}">
+{#                            {% autoescape off %}#}
+
+                                {% for r in tab.reviews %}
+                                    <h3>{{ r.page }} -- Reviewer: {{ r.reviewer.email }}</h3>
+                                    <p>Designer: <b>{{ r.designer.email }}</b></p>
+                                    <p>Reviewed by: <b>{{ r.reviewer.email }}</b></p>
+                                    <p>Page Reviewed: <b>{{ r.designer.domain }}/{{ r.page }}</b></p>
+                                    <p><label>Date: </label><b>{{ r.date }}</b></p>
+{#                                    <p><a href="/unc/review-request/{{ r.pk }}" class="btn">Request Review</a></p>#}
+
+                                    <div class="page">
+                                        <b>Scorecard for {{ r.page }} </b>
+                                        <br>
+                                        <br>
+                                        {{ r.score }} / 10 Requirements met
+                                        <br>
+                                        <br>
+                                        {% if r.requirement_1 %}<b>X</b>{% else %}&nbsp;&nbsp;{% endif %} &nbsp;
+                                        <label>{{ requirements.0 }}</label>
+                                        <br>
+                                        {% if r.requirement_2 %}<b>X</b>{% else %}&nbsp;&nbsp;{% endif %} &nbsp;
+                                        <label>{{ requirements.1 }}</label>
+                                        <br>
+                                        {% if r.requirement_3 %}<b>X</b>{% else %}&nbsp;&nbsp;{% endif %} &nbsp;
+                                        <label>{{ requirements.2 }}</label>
+                                        <br>
+                                        {% if r.requirement_4 %}<b>X</b>{% else %}&nbsp;&nbsp;{% endif %} &nbsp;
+                                        <label>{{ requirements.3 }}</label>
+                                        <br>
+                                        {% if r.requirement_5 %}<b>X</b>{% else %}&nbsp;&nbsp;{% endif %} &nbsp;
+                                        <label>{{ requirements.4 }}</label>
+                                        <br>
+                                        {% if r.requirement_6 %}<b>X</b>{% else %}&nbsp;&nbsp;{% endif %} &nbsp;
+                                        <label>{{ requirements.5 }}</label>
+                                        <br>
+                                        {% if r.requirement_7 %}<b>X</b>{% else %}&nbsp;&nbsp;{% endif %} &nbsp;
+                                        <label>{{ requirements.6 }}</label>
+                                        <br>
+                                        {% if r.requirement_8 %}<b>X</b>{% else %}&nbsp;&nbsp;{% endif %} &nbsp;
+                                        <label>{{ requirements.7 }}</label>
+                                        <br>
+                                        {% if r.requirement_9 %}<b>X</b>{% else %}&nbsp;&nbsp;{% endif %} &nbsp;
+                                        <label>{{ requirements.8 }}</label>
+                                        <br>
+                                        {% if r.requirement_10 %}<b>X</b>{% else %}&nbsp;&nbsp;{% endif %} &nbsp;
+                                        <label>{{ requirements.9 }}</label>
+                                        <br>
+                                        <br><label><b>Summary of Problems</b></label>
+                                        <br>
+                                        {{ r.notes }}
+                                        <br>
+
+                                    </div>
+
+                                {% endfor %}
+
+{#                            {% endautoescape %}#}
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "admin_theme.html" %}
+
+
+{% block libs %}
+{% endblock %}
+
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="card" brd-20>
+
+                    <div class="card-header ch-alt">
+                        <h1>Users</h1>
+                    </div>
+
+                    <div class="card-body card-padding">
+
+                        {% if table %}
+
+                            <table class="table table-hover">
+                                {% for x in labels %}
+                                    <th>{{ x }}</th>
+                                {% endfor %}
+                            <th>Proxy</th>
+
+                                {% for row in table %}
+                                    <tr>
+                                        {% for x in row %}
+                                            <td>{{ x }}</td>
+                                        {% endfor %}
+                                        <td>
+                                            <a href="/superuser/surrogate/{{ row.0 }}">Set Proxy</a>
+                                        </td>
+
+                                    </tr>
+                                {% endfor %}
+                            </table>
+
+                        {% else %}
+                            <h2>No users found. </h2>
+                        {% endif %}
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block column1 %}
+
+
+
+{% endblock %}
+
+

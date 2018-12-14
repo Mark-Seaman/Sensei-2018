@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Title</title>
+</head>
+<body>
+
+<h1>{{ title }}</h1>
+
+<p>
+    {{ doc }}
+</p>
+
+<p>
+    <a href='https://shrinking-world.com'>Shrinking World</a>
+</p>
+<p>
+    <a href="https://shrinking-world.com/{{ doc }}">{{ doc }}</a>
+</p>
+
+<p>
+    {% autoescape off %}
+        {{ body }}
+    {% endautoescape %}
+</p>
+
+</body>
+</html>

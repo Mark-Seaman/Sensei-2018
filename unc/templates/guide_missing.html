@@ -1,0 +1,36 @@
+{% extends "guide_theme.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+
+{% block page %}
+
+    <h2>Missing File: {{ page }}</h2>
+
+
+    <p>The lesson plan that you are looking for cannot be found.</p>
+
+
+    {% if lesson %}
+
+        <h3>Lesson Info</h3>
+
+        {#    <pre>#}
+        {#    {{ lesson }}#}
+        {#    </pre>#}
+
+        <p><b>Date: </b>{{ lesson.1 }}, {{ lesson.2 }}</p>
+        <p><b>Topic: </b>{{ lesson.3 }}, {{ lesson.4 }}, {{ lesson.5 }}, {{ lesson.6 }}, {{ lesson.7 }}</p>
+        <h3>Create Lesson</h3>
+        <p>Create the lesson with the shell script.</p>
+        <pre>
+            $ lesson add {{ page }}
+        </pre>
+
+    {% endif %}
+
+    <a href="{{ home.1 }}">{{ home.0 }}</a>
+
+{% endblock %}

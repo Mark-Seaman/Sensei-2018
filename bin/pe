@@ -1,0 +1,10 @@
+#!/bin/bash
+# Run pycharm and edit a file
+
+echo "Running PyCharm $*"
+for f in $*
+do
+    echo `pwd`/$f >> /tmp/pe$$
+done
+cat /tmp/pe$$
+nohup /Applications/PyCharm.app/Contents/MacOS/pycharm `cat /tmp/pe$$`  1> /dev/null 2>&1 &

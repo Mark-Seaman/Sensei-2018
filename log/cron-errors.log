@@ -1,0 +1,13 @@
+cat: Documents/booknotes/*: No such file or directory
+Traceback (most recent call last):
+  File "bin/x.py", line 188, in <module>
+    execute_command(argv[1], argv[2:])
+  File "bin/x.py", line 57, in execute_command
+    days_command(args)
+  File "/Users/seaman/Projects/MyBook/bin/days.py", line 22, in days_command
+    days_weeks(args[0])
+  File "/Users/seaman/Projects/MyBook/bin/days.py", line 108, in days_weeks
+    weekly_schedule('Documents/unc/schedule.csv', int(num_weeks)*7)
+  File "/Users/seaman/Projects/MyBook/bin/days.py", line 102, in weekly_schedule
+    with open(filename, 'w') as f:
+IOError: [Errno 2] No such file or directory: 'Documents/unc/schedule.csv'

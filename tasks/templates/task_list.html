@@ -1,0 +1,74 @@
+{% extends "mybook_theme.html" %}
+
+
+{% block page %}
+
+    <a class="btn" href="import">Import</a>
+    <a class="btn" href="summary">Summary</a>
+    {% if bad_days %}
+        <a class="btn" href="bad">Missing</a>
+    {% endif %}
+
+    <div role="tabpanel">
+
+        <ul class="tab-nav" role="tablist">
+            {% for t in types %}
+                <li class="{{ t.2 }}">
+                    <a href="#{{ t.0 }}" aria-controls="{{ t.0 }}" role="tab"
+                       data-toggle="tab">{{ t.0 }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <div class="tab-content">
+
+
+            {% for t in types %}
+
+                <div role="tabpanel" class="tab-pane active" id="{{ t.0 }}">
+                    <p>Task details for {{ t.0 }}</p>
+
+                    <table class="table table-hover p-20">
+
+                        <tr>
+                            {% for label in labels %}
+                                <th>{{ label }}</th>
+                            {% endfor %}
+                        </tr>
+
+                        {% for object in t.1 %}
+                            <tr>
+                                <td>
+                                    <a href="/task/{{ object.0 }}">{{ object.2 }}</a>
+                                </td>
+                                <td>
+                                    {{ object.3 }} hours
+                                </td>
+                                <td>
+                                    <ul>
+                                        {% for d in object.4 %}
+                                            <li>
+                                                {{ d }}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td>
+                                    <b>No events in list</b>
+                                </td>
+                            </tr>
+                        {% endfor %}
+
+                    </table>
+
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+{% endblock %}

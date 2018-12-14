@@ -1,0 +1,83 @@
+{% extends "mybook_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+                    <div class="row">
+
+                        <ul>
+                            <li>
+                                <label>ID: </label> {{ object.pk }}
+                            </li>
+                            <li>
+                                <label>Name: </label> {{ object.name }}
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+
+                        <a href="../author_list">
+                            <button class="btn palette-Green bg">Author List</button>
+                        </a>
+
+                        <a href="../author_edit/{{ author.pk }}">
+                            <button class="btn palette-Green bg">Edit Author</button>
+                        </a>
+
+                        <a href="../author_delete/{{ author.pk }}">
+                            <button class="btn palette-Green bg">Delete Author</button>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h2>Books</h2>
+                </div>
+
+                <div class="card-body card-padding">
+                    <div class="row">
+
+                        <table class="table table-hover">
+
+                            <th>{{ labels.1 }}</th>
+                            <th>{{ labels.4 }}</th>
+                            <th>{{ labels.5 }}</th>
+
+                            {% for row in books %}
+                                <tr>
+                                    <td><a href="/book_detail/{{ row.0 }}">{{ row.1 }}</a></td>
+                                    <td>{{ row.4 }}</td>
+                                    <td>{{ row.5 }}</td>
+                                </tr>
+                            {% endfor %}
+
+                        </table>
+
+                    </div>
+                    <div class="row">
+
+                        <a href="../book_list">
+                            <button class="btn palette-Green bg">Edit Book List</button>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+

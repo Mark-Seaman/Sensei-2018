@@ -1,0 +1,132 @@
+{% extends "church.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1>{{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <p><label><b>Week Ending: </b></label> {{ date }}</p>
+                    <p><label><b>Weekly Connect Hours: </b></label> {{ connect_hours }} hours </p>
+                    <p><label><b>Weekly Connect Score: </b></label> {{ connect_score }} stars </p>
+                    <p><label><b>Weekly Leadership Hours: </b></label> {{ lead_hours }} hours </p>
+                    <p><label><b>Weekly Leadership Score: </b></label> {{ lead_score }} stars </p>
+                    <p>Meetings for week ending ...</p>
+                    <ul>
+                        {% for w in weeks %}
+                            <li><a href="/church/church_event_list/{{ w }}">{{ w }}</a></li>
+                        {% endfor %}
+                    </ul>
+
+                    {% if object_list %}
+                        <h2>Connection Events</h2>
+                        <p>
+                            Any time that people get together as part of a church event is good. There are a wide
+                            variety of situations that help to build the connections between church members.
+                        </p>
+                        <p>
+                            Connect is a lagging indicator that represents the number of hours that people
+                            are spending interacting with each other.
+                        </p>
+                        <table class="table">
+                            <tr>
+                                <th>Meeting</th>
+                                <th>Participants</th>
+                                <th>Hours</th>
+                                <th>Total Hours</th>
+                            </tr>
+                            {% for object in connect %}
+                                <tr>
+                                    <td>
+                                        <a href="/church/church_event_detail/{{ object.0 }}">{{ object.1 }}</a>
+                                    </td>
+                                    <td>
+                                        {{ object.3 }} people
+                                    </td>
+                                    <td>
+                                        {{ object.4 }} hours
+                                    </td>
+                                    <td>
+                                        {{ object.6 }} total hours
+                                    </td>
+                                </tr>
+                            {% empty %}
+                                <tr>
+                                    <td>
+                                        <b>No events in list</b>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+
+                        </table>
+                    {% endif %}
+
+                    <br>
+                    <br>
+
+                    <h2>Leadership Development Investment</h2>
+                    <p>
+                        This leading indicator counts the number of hours that are spent building the next
+                        generation of leadership. Every meeting that provides development time for leaders
+                        and time spend building leadership skills all count toward this metric.
+                    </p>
+                    <table class="table">
+                        {% if leadership %}
+                            <tr>
+                                <th>Event</th>
+                                <th>Participants</th>
+                                <th>Hours</th>
+                                <th>Total Hours</th>
+                            </tr>
+                        {% endif %}
+                        {% for object in leadership %}
+                            <tr>
+                                <td>
+                                    <a href="/church/church_event_detail/{{ object.0 }}">{{ object.1 }}</a>
+                                </td>
+                                <td>
+                                    {{ object.3 }} people
+                                </td>
+                                <td>
+                                    {{ object.4 }} hours
+                                </td>
+                                <td>
+                                    {{ object.6 }} total hours
+                                </td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td>
+                                    <b>No events in list</b>
+                                </td>
+                            </tr>
+                        {% endfor %}
+
+                    </table>
+
+                    <br>
+                    <br>
+
+                    {% if date %}
+                        <a href="/church/church_event_add/{{ date }}">
+                            <button class="btn palette-Teal bg">Add New Meeting</button>
+                        </a>
+                    {% endif %}
+                    <a href="/church/church_event_list">
+                        <button class="btn palette-Teal bg">Other Meetings</button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}
+
+

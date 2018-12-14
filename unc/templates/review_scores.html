@@ -1,0 +1,31 @@
+{% extends "guide_theme.html" %}
+
+{% block card %}
+
+    <div class="card">
+
+        <div class="card-header ch-alt">
+            <h1>Design Review Summary</h1>
+            <h2>Designer and Reviewer Scores</h2>
+        </div>
+
+        <div class="card-body card-padding">
+
+            {% for s in scores %}
+
+                <div class="page">
+                    <h3>{{ s.reviewer.name }} -- {{ s.points.total }} Points</h3>
+
+                    <p>email: {{ s.reviewer.email }}</p>
+                    <p>domain: {{ s.reviewer.domain }}</p>
+                    <p>Total Points: {{ s.points.total }}
+                        (Reviewer {{ s.points.review }},
+                        Designer: {{ s.points.design }})</p>
+                    <p><a href="/unc/reviews/{{ s.reviewer.id }}">Design Reviews</a></p>
+                </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

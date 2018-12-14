@@ -1,0 +1,89 @@
+upstream app_server {
+    server 127.0.0.1:9000 fail_timeout=0;
+}
+
+
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server ipv6only=on;
+
+    server_name the-very-idea.us;
+
+    root /usr/share/nginx/html;
+    index index.html index.htm;
+
+    client_max_body_size 4G;
+    server_name _;
+
+    keepalive_timeout 5;
+
+    # Your Django project's media files - amend as required
+    location /media  {
+        alias /home/django/MyBook/media;
+    }
+
+    # your Django project's static files - amend as required
+    location /static {
+        alias /home/django/MyBook/static; 
+    }
+
+    # Proxy the static assests for the Django Admin panel
+    location /static/admin {
+       alias /usr/lib/python2.7/dist-packages/django/contrib/admin/static/admin/;
+    }
+
+    location ~ /.well-known {
+       allow all;
+    }
+
+    location / {
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_redirect off;
+        proxy_pass http://app_server;
+    }
+}
+
+
+server {
+    listen 443 ssl;
+
+    server_name the-very-idea.us;
+
+    ssl_certificate /etc/letsencrypt/live/the-very-idea.us/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/the-very-idea.us/privkey.pem;
+
+    root /usr/share/nginx/html;
+    index index.html index.htm;
+
+    client_max_body_size 4G;
+    server_name _;
+
+    keepalive_timeout 5;
+
+    # Your Django project's media files - amend as required
+    location /media  {
+        alias /home/django/MyBook/media;
+    }
+
+    # your Django project's static files - amend as required
+    location /static {
+        alias /home/django/MyBook/static; 
+    }
+
+    # Proxy the static assests for the Django Admin panel
+    location /static/admin {
+       alias /usr/lib/python2.7/dist-packages/django/contrib/admin/static/admin/;
+    }
+
+    location ~ /.well-known {
+       allow all;
+    }
+
+    location / {
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_redirect off;
+        proxy_pass http://app_server;
+    }
+}

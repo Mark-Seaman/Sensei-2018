@@ -1,0 +1,37 @@
+
+header a h1 {
+    /*color: green;*/
+}
+
+.webapp_page-title {
+    /*color: blue;*/
+    font-size: larger;
+}
+
+.webapp_name {
+    color: red;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.webapp_docs {
+    border: solid 2px green;
+    border-radius: 20px;
+}
+
+.webapp_attribute {
+    /*color: blue;*/
+    text-align: left;
+    margin: 0 1em 0 1em;
+}
+
+.webapp_page{
+    text-align: left;
+}
+
+.webapp_item {
+    border: solid 2px green;
+    margin: 1em;
+    padding: 2em;
+    border-radius: 20px;
+}

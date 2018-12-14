@@ -1,0 +1,65 @@
+{% extends "workshop_theme.html" %}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+
+            <div class="card">
+
+                <div class="card-header ch-alt">
+                    <h1> {{ title }}</h1>
+                </div>
+
+                <div class="card-body card-padding">
+
+                    <form method="post">{% csrf_token %}
+
+                        <div class="form-group">
+
+                            <table class="table table-responsive">
+
+                                <tr>
+                                    <td><label>Name</label></td>
+                                    <td class="fg-line">
+                                        <strong>{{ form.name }}</strong>
+                                    </td>
+                                </tr>
+
+                                {#    <tr>#}
+                                {#        <td><label>Organization</label></td>#}
+                                {#        <td class="fg-line">#}
+                                {#            <strong>{{ form.organization }}</strong>#}
+                                {#        </td>#}
+                                {#    </tr>#}
+
+                            </table>
+
+                            <!--
+                                <table>
+                                    {% for x in fields %}
+                                        <div class="fg-line p-t-25">
+                                            <label>{{ x.0 }}:</label>
+                                            <input type="text" class="form-control input" name="{{ x.1 }}"
+                                                   value="{{ x.2 }}">
+                                        </div>
+                                    {% endfor %}
+                                </table>
+                            -->
+
+                        </div>
+
+                        <div class="row p-20">
+                            <button class="btn palette-Green bg">Save Money</button>
+                            <a class="btn palette-Green bg" href="/workshop/money_delete/{{ form.instance.pk }}">
+                                Delete Money
+                            </a>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+    </section>
+{% endblock %}
+

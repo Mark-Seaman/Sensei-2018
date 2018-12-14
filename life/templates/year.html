@@ -1,0 +1,36 @@
+{% extends "mybook_theme.html" %}
+
+
+{% block card %}
+
+    <div class="card">
+
+        <div class="card-header ch-alt">
+            <h1>My Life Story</h1>
+            <p>by Mark Seaman</p>
+            <a href="/life/experience" class="btn">All Years</a>
+            <a href="/life/year/{{ prev }}" class="btn">Previous Year</a>
+            <a href="/life/year/{{ next }}" class="btn">Next Year</a>
+        </div>
+
+        <div class="card-body card-padding">
+
+            <h3>{{ title }}</h3>
+            <p>Age: {{ age }}</p>
+            <p>Year: {{ year }}</p>
+
+            <ul>
+                {% autoescape off %}
+                    <li>Contribute - {{ table.0.2 }} <pre>{{ x.0 }}</pre></li>
+                    <li>Relate - {{ table.0.3 }} <pre>{{ x.1 }}</li>
+                    <li>Learn - {{ table.0.4 }}  <pre>{{ x.2 }}</li>
+                    <li>Enjoy - {{ table.0.5 }}  <pre>{{ x.3 }}</li>
+                {% endautoescape %}
+
+            </ul>
+
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,116 @@
+{#<table>#}
+{#    {% for a in object_list %}#}
+{#        <tr>#}
+{#            <td style="min-width: 200px">{{ a.0 }}</td>#}
+{#            <td><pre>{{ a.1 }}</pre></td>#}
+{#            <td><pre>{{ a.2 }}</pre></td>#}
+{#        </tr>#}
+{#    {% endfor %}#}
+{#</table>#}
+
+
+{% extends "admin_theme.html" %}
+
+
+{% block card %}
+    <div class="card">
+
+        <div class="card-header ch-alt">
+            <h2>{{ card_title }}</h2>
+        </div>
+
+        <div class="card-body card-padding">
+
+            <h2>Digital Ocean Servers</h2>
+            <ul>
+                <li>
+                    <a href="//who2hire.co/superuser/test">Who2Hire - production</a>
+                </li>
+                <li>
+                    <a href="//who2hire.biz/superuser/test">Who2Hire - staging</a>
+                </li>
+                <li>
+                    <a href="//mybookonline.org/superuser/test">MyBook - production</a>
+                </li>
+                <li>
+                    <a href="//the-very-idea.us/superuser/test">MyBook - staging</a>
+                </li>
+                <li>
+                    <a href="http://localhost:8001/superuser/test">Development Server</a>
+                </li>
+            </ul>
+
+            <h2>Other Views</h2>
+            <ul>
+                <li>
+
+                    <a href="/superuser">Super User Views</a>
+                </li>
+                <li>
+                    <a href="/aspire/Aspire/Admin">Building Admin Views</a>
+                </li>
+            </ul>
+            {% if object_list %}
+
+                <h2>Tests Failing</h2>
+
+                <table class="table table-hover">
+                    {% for x in labels %}
+                        <th>{{ x }}</th>
+                    {% endfor %}
+
+                    {% for row in object_list %}
+                        <tr>
+                            <td>
+                                {{ row.0 }}
+                            </td>
+                            <td>{% if row.1 %}
+                                <pre>{{ row.1 }}</pre>
+                            {% endif %}
+
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+
+            {% else %}
+                <h2>All Tests Are Passing. </h2>
+            {% endif %}
+
+
+            {#            {% if detail %}#}
+            {##}
+            {#                {% for x in detail %}#}
+            {##}
+            {#                    <div class="row">#}
+            {#                        <div class="col-sm-6 text-right">#}
+            {#                            <strong>{{ x.0 }}</strong>#}
+            {#                        </div>#}
+            {#                        <div class="col-sm-6">#}
+            {#                            <a href="/superuser/{{ x.1 }}">{{ x.2 }}</a>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {##}
+            {#                {% endfor %}#}
+            {##}
+            {#            {% else %}#}
+            {##}
+            {#                <h2>No users found. </h2>#}
+            {##}
+            {#            {% endif %}#}
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+
+{% block column1 %}
+{% endblock %}
+
+
+{% block column2 %}
+{% endblock %}
