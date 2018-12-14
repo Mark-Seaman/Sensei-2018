@@ -8,7 +8,6 @@ from django.views.generic.base import RedirectView
 
 import aspire.urls
 import guide.urls
-import wiki.urls
 import life.urls
 import mybook.urls
 import tasks.urls
@@ -29,9 +28,6 @@ urlpatterns = [
     # Aspire
     url(r'^aspire/',    include(aspire.urls)),
     url(r'^aspire',     include(aspire.urls)),
-
-    # Doc
-    url(r'^wiki/',       include(wiki.urls)),
 
     # Guide
     url(r'^guide/',    include(guide.urls)),

@@ -11,7 +11,7 @@ def app_classes_test():
 
 
 def app_functions_test():
-    return check_shell_lines('x app functions', 1200, 1300)
+    return check_shell_lines('x app functions', 1000, 1100)
 
 
 def app_html_files_test():

@@ -4,12 +4,12 @@ import traceback
 from aspire.node import node_command
 from bin.shell import banner
 from health.health import health_command
+from tasks.task import task_command
 from tool.email import email_command
 from tool.robot import robot_command
 from tool.log import log_exception, log
 from tool.page import page_command
 from tool.tst import tst_command
-from tasks.task import task_command
 from tool.user import user_command
 
 
