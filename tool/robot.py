@@ -7,7 +7,7 @@ from time import sleep
 from models import Page
 from log import log_exception
 from page import page_results
-from hammer.db import username, password
+from hammer.secret_settings import username, password
 
 
 # ------------------------------
