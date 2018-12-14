@@ -1,136 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b1c7c23-5c5a-4bc1-bbb1-8cdeb8f69710" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Documents/Test/Index" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/Test/Index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/budget.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/budget_views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/church.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/event.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/event_views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/hacks.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/leader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/leader_views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0002_budgetcategories.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0003_auto_20170726_1659.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0004_budget.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0005_auto_20170815_1128.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0006_money.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0007_money_mortgage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0008_money_other_revenue.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0009_auto_20171221_1222.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0010_auto_20171221_1224.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0011_auto_20171221_1226.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0012_auto_20171221_1323.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0013_remove_money_date.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0014_auto_20171228_1551.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0015_remove_money_mortgage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0016_auto_20180107_1715.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/0017_auto_20180107_1720.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/money.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/money_views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/score.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/score_views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/budget_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/budget_summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/budget_template.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_budget_add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_budget_delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_budget_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_budget_edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_budget_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_event_add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_event_delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_event_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_event_edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_event_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_score.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_score_add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_score_delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_score_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_score_edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_score_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/church_theme.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/email_budget.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/leader_add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/leader_delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/leader_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/leader_edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/leader_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/money.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/money_edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/templates/money_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/church/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hammer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/hammer/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hammer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hammer/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/hammer.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/hammer.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/migrations/0002_thotbook.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/migrations/0003_thot_thotbook.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/migrations/0004_thotbook_rootid.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/migrations/0005_auto_20170619_1152.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/migrations/0006_auto_20170619_1153.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/migrations/0007_remove_thotbook_rootid.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/migrations/0008_thotbook_rootid.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/migrations/0009_auto_20170630_1411.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/migrations/0010_auto_20170726_1402.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/bio_cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/bio_cmd_generator" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/material-form-components.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/material_content.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/material_theme.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/material_upload.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/money_add.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/money_delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/money_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/money_edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/money_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/template_base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/template_cards.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/template_columns.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/template_content.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/template_derived.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/thot.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/thot_edit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/thotbook.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_accordion.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_demo1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_demo2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_demo3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_demo4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_demo5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_demo6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_demo7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_div.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_doc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_email.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_file_upload.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_icon.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_menu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_tabs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_theme.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/templates/workshop_user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/thot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/thot_views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/workshop/views.py" beforeDir="false" />
-    </list>
+    <list default="true" id="8b1c7c23-5c5a-4bc1-bbb1-8cdeb8f69710" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +56,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hammer/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
+            <state relative-caret-position="573">
               <caret line="58" selection-start-line="58" selection-end-line="58" />
               <folding>
                 <element signature="e#28#69#0" expanded="true" />
@@ -198,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/Documents/Test/Index">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -245,7 +116,7 @@
       <path value="$PROJECT_DIR$/static/material/vendors/bower_components/typeahead.js/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="2560" />
     <option name="height" value="1440" />
   </component>
@@ -263,16 +134,6 @@
             <path>
               <item name="Sensei" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sensei" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sensei" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sensei" type="462c0819:PsiDirectoryNode" />
-              <item name="Documents" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sensei" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sensei" type="462c0819:PsiDirectoryNode" />
-              <item name="hammer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -313,21 +174,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="23" width="2480" height="1417" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24979492" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24185862" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32981133" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3189781" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32981133" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32981133" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -356,13 +216,13 @@
     <entry file="file://$PROJECT_DIR$/Documents/Test/Index">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hammer/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
+        <state relative-caret-position="573">
           <caret line="58" selection-start-line="58" selection-end-line="58" />
           <folding>
             <element signature="e#28#69#0" expanded="true" />
