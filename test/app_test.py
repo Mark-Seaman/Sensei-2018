@@ -36,7 +36,7 @@ def app_settings_test():
 
 
 def app_show_test():
-    return check_shell_lines('x app show', 16000, 18000)
+    return check_shell_lines('x app show', 13000, 15000)
 
 
 def app_signature_test():

@@ -21,13 +21,6 @@ from os.path import dirname, join
 BASE_DIR = dirname(dirname(__file__))
 DOC_ROOT = join(BASE_DIR, 'Documents')
 LOG_DIR = join(BASE_DIR, 'log')
-MEDIA_ROOT = join(BASE_DIR, 'client-files')
-
-#MEDIA_URL = 'http://shrinking-world.com/client-files/'
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -49,8 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'django_extensions',
-    # 'djrill',
     'doc',
     'guide',
     'health',
