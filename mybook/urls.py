@@ -1,8 +1,7 @@
 from django.conf.urls import url
 from django.contrib.auth.views import login, logout
 
-# InfoPageDisplay, InfoPageRedirect,
-from mybook_views import BookNotes, CardView, ContainerView, DailyTask, MissingDoc, MyBookDoc,  \
+from mybook_views import BookNotes, CardView, DailyTask, MissingDoc, MyBookDoc,  \
     MyBookPrivateDoc, OutlineView, SeamansLog, SpiritualSelect, Staff, TabsView, TestDoc, TodayView
 from author_views import AuthorAdd, AuthorDelete, AuthorDetail, AuthorEdit, AuthorList
 from book_views import BookAdd, BookDelete, BookDetail, BookEdit, BookList
@@ -12,11 +11,9 @@ from info import InfoRedirect, InfoView
 urlpatterns = [
     url(r'^test/(?P<title>[\w/\-_.]*)$', TestDoc.as_view()),
 
-    # url(r'^info-page/(?P<title>[\w/_\.\-]+)$', InfoPageDisplay.as_view()),
     url(r'^info/(?P<title>[\w/_\.\-]+)$',           InfoView.as_view()),
     url(r'^inforedir/(?P<title>[\w/_\.\-]+)$',      InfoRedirect.as_view()),
     url(r'^info/daily$',                            DailyTask.as_view()),
-    url(r'^container/(?P<title>[\w/\-_.]*)$',       ContainerView.as_view()),
     url(r'^card/(?P<title>[\w/\-_.]*)$',            CardView.as_view()),
     url(r'^outline/(?P<title>[\w/\-_.]*)',          OutlineView.as_view()),
     url(r'^tabs/(?P<title>[\w/\-_.]*)$',            TabsView.as_view()),

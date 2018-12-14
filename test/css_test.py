@@ -3,4 +3,4 @@ from hammer.settings import BASE_DIR
 
 
 def css_test():
-    return read_file(BASE_DIR+'/static/guide.css')
+    return read_file(BASE_DIR+'/static/mybook.css')
