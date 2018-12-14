@@ -22,7 +22,7 @@ def archive_files_test():
         path = join(environ['HOME'], 'Archive')
         return check_file_list(path, dirs)
     else:
-        return shell('x tst output archive-files')
+        return '\n'.join(shell('x tst output archive-files').split('\n')[4:])
     
 
 def archive_dirs_test():

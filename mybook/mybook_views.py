@@ -90,15 +90,15 @@ class CardView(MyBookDocDisplay):
         return super(CardView, self).get_context_data(**kwargs)
 
 
-class ContainerView(MyBookDocDisplay):
-    template_name = "mybook_containers.html"
-
-    def get_context_data(self, **kwargs):
-        doc = self.kwargs.get('title')
-        text = open(join('Documents', doc)).read()
-        cards = outline(text)[0][1]
-        kwargs = dict(title=cards[0][0], doc=doc, cards=cards)
-        return super(ContainerView, self).get_context_data(**kwargs)
+# class ContainerView(MyBookDocDisplay):
+#     template_name = "mybook_containers.html"
+#
+#     def get_context_data(self, **kwargs):
+#         doc = self.kwargs.get('title')
+#         text = open(join('Documents', doc)).read()
+#         cards = outline(text)[0][1]
+#         kwargs = dict(title=cards[0][0], doc=doc, cards=cards)
+#         return super(ContainerView, self).get_context_data(**kwargs)
 
 
 class OutlineView(MyBookDocDisplay):
