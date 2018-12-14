@@ -79,7 +79,7 @@ def data_load(host):
 
 
 def data_migrate():
-    modules = 'aspire church doc guide health life mybook superuser tool tasks unc workshop'
+    modules = 'aspire doc guide health life mybook superuser tool tasks unc'
     system ('''
         cd $p
         # rm */migrations/*

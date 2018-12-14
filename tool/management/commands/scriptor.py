@@ -8,11 +8,9 @@ from tool.email import email_command
 from tool.robot import robot_command
 from tool.log import log_exception, log
 from tool.page import page_command
-from tool.project import project_command
 from tool.tst import tst_command
 from tasks.task import task_command
 from tool.user import user_command
-from workshop.thot import thot_command
 
 
 class Command(BaseCommand):
@@ -42,17 +40,11 @@ class Command(BaseCommand):
             elif cmd == 'page':
                 page_command(self, args)
 
-            elif cmd == 'project':
-                project_command(self,args)
-
             elif cmd == 'robot':
                 robot_command(args)
 
             elif cmd == 'task':
                 task_command(self, args)
-
-            elif cmd == 'thot':
-                thot_command(args)
 
             elif cmd == 'tst':
                 tst_command(self, args)
@@ -80,10 +72,8 @@ class Command(BaseCommand):
                 help        - show scriptor commands
                 node        - build tree structure for doc nodes
                 page        - track page content for testing
-                project     - manage project content
                 robot       - get pages from web servers
                 task        - work with tasks for user
-                thot        - thot recorder system
                 tst         - perform diff testing
                 user        - login IDs for apps
         ''')
