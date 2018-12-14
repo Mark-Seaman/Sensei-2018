@@ -109,7 +109,7 @@ EMAIL_FROM = "mark.seaman@shrinking-world.com"
 
 
 # Secrets
-from db import DATABASES, SECRET_KEY, EMAIL_HOST, EMAIL_PORT, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_USE_TLS
+from secret_settings import DATABASES, SECRET_KEY, EMAIL_HOST, EMAIL_PORT, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_USE_TLS
 
 
 # Password validation
