@@ -6,11 +6,12 @@ Run all of the tests for the 'data' objects.  Output the test results.
 
 '''
 
+
 from bin.shell import shell, file_list, check_lines
 from bin.switches import TEST_DATA
 
 def data_files_test():
-    return check_lines('Data files', '\n'.join(file_list('data')), 20, 30)
+    return check_lines('Data files', '\n'.join(file_list('data')), 10, 20)
 
 
 def data_save_test():

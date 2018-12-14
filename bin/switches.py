@@ -25,6 +25,7 @@ TODO_FILES = [
 
 
 # Test Settings
+TEST_ARCHIVE = False
 TEST_DOC = join(BASE_DIR, 'Documents', 'info', 'history', 'Index')
 TEST_DOC_ENCODING = False
 TEST_DATA = False
