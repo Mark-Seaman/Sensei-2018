@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b1c7c23-5c5a-4bc1-bbb1-8cdeb8f69710" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8b1c7c23-5c5a-4bc1-bbb1-8cdeb8f69710" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,50 +10,6 @@
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1839854625">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="Index" value="1" />
-          <entry key="css" value="1" />
-          <entry key="gitignore" value="1" />
-          <entry key="html" value="12" />
-          <entry key="log" value="3" />
-          <entry key="py" value="27" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="1" />
-          <entry key="HTML" value="12" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="27" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="Index" value="11" />
-          <entry key="html" value="16" />
-          <entry key="py" value="258" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="16" />
-          <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Python" value="258" />
-        </counts>
-      </usages-collector>
-    </session>
   </component>
   <component name="FileEditorManager">
     <leaf />
@@ -88,34 +42,6 @@
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/static/material/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/Waves/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/animate.css/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/autosize/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/bootstrap-sweetalert/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/bootstrap/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/eonasdan-bootstrap-datetimepicker/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/farbtastic/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/flot/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/google-material-color/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/install/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/jquery.easy-pie-chart/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/lightgallery/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/salvattore/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/simpleWeather/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/summernote/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/sweetalert/package.json" />
-      <path value="$PROJECT_DIR$/static/material/vendors/bower_components/typeahead.js/package.json" />
-    </packageJsonPaths>
-  </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="2560" />
     <option name="height" value="1440" />
@@ -128,6 +54,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,7 +66,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -201,18 +127,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544813350958</updated>
+      <workItem from="1544899239662" duration="294000" />
     </task>
+    <task id="LOCAL-00001" summary="Add workspace after upgrade">
+      <created>1544899380760</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544899380760</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24384432" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24583003" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.329927" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32919708" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32919708" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -266,8 +205,9 @@
       </list>
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add workspace after upgrade" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add workspace after upgrade" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Documents/Test/Index">
