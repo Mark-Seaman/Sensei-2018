@@ -22,7 +22,7 @@ def web_command(args):
         web('https://github.com/Shrinking-World/MyBook.git')
 
     elif cmd=='mybook':
-        web('http://markseaman.org')
+        web('http://mybookonline.org')
 
     elif cmd=='test':
         web('http://localhost:%s/%s' % (APP_PORT, 'superuser/tests'))

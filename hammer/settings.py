@@ -181,7 +181,7 @@ if 'MyBook' in node():
         'shrinking-world.com',
         'markseaman.info',
         'markseaman.org',   
-        'markseaman.org',
+        'mybookonline.org',
         'shrinking-world.com',
         'seamanslog.com',
         'seamansguide.com',

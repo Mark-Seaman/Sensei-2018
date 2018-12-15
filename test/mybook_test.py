@@ -27,14 +27,14 @@ def mybook_redirect_test():
         return 'OK'
 
     cases = (
-        (('markseaman.org', '', ''), '/Index'),
-        (('markseaman.org', 'xxx', ''), '/mybook/xxx'),
-        (('markseaman.org', 'mybook/xxx', ''), '/missing/mybook/xxx'),
-        (('markseaman.org', 'mybook/Index', ''), 'None'),
+        (('mybookonline.org', '', ''), '/Index'),
+        (('mybookonline.org', 'xxx', ''), '/mybook/xxx'),
+        (('mybookonline.org', 'mybook/xxx', ''), '/missing/mybook/xxx'),
+        (('mybookonline.org', 'mybook/Index', ''), 'None'),
         (('myhost', 'xxx', ''), '/missing/xxx'),
         (('myhost', 'seamanslog', ''), '/seamanslog/random'),
         (('myhost', 'seamanslog/Index', ''), 'None'),
-        (('markseaman.org', 'brain', ''), '/mybook/brain'),
+        (('mybookonline.org', 'brain', ''), '/mybook/brain'),
         (('exteriorbrain.org', 'brain', ''), '/brain/Index'),
         (('seamansguide.com', 'guide', ''), '/guide/Index'),
         (('spiritualthings.org', 'spiritual/reflect', ''), '/spiritual/reflect/random'),

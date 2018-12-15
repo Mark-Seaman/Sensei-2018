@@ -2,7 +2,7 @@ from django.conf.urls import url
 
 from views import AspireAnonymous, AspireDoc, AspireDir, AspireDocEdit, AspireFolder, AspireDelete, AspireDocDelete, AspireError, AspireClient
 from advisor_views import Advisor
-from node_views import NodeAdd, NodeDelete, NodeDetail, NodeEdit, NodeList
+# from node_views import NodeAdd, NodeDelete, NodeDetail, NodeEdit, NodeList
 from client_views import ClientAdd, ClientDelete, ClientDetail, ClientEdit, ClientList
 from project_views import ProjectAdd, ProjectDelete, ProjectDetail, ProjectEdit, ProjectList
 from role_views import RoleAdd, RoleDelete, RoleDetail, RoleEdit, RoleList, RoleView
@@ -28,13 +28,13 @@ urlpatterns = (
     url(r'^goal_edit/(?P<pk>\d+)$',      GoalEdit.as_view(),   name='goal-edit'),
     url(r'^goal_list$',                  GoalList.as_view(),   name='goal_list'),
 
-    # Node
-    url(r'^node_add$',                  NodeAdd.as_view(),      name='node_add'),
-    url(r'^node_delete/(?P<pk>\d+)$',   NodeDelete.as_view(),   name='node-delete'),
-    url(r'^node_detail/(?P<pk>\d+)$',   NodeDetail.as_view(),   name='node-detail'),
-    url(r'^node_edit/(?P<pk>\d+)$',     NodeEdit.as_view(),     name='node-edit'),
-    url(r'^node_list$',                 NodeList.as_view(),     name='node_list'),
-
+    # # Node
+    # url(r'^node_add$',                  NodeAdd.as_view(),      name='node_add'),
+    # url(r'^node_delete/(?P<pk>\d+)$',   NodeDelete.as_view(),   name='node-delete'),
+    # url(r'^node_detail/(?P<pk>\d+)$',   NodeDetail.as_view(),   name='node-detail'),
+    # url(r'^node_edit/(?P<pk>\d+)$',     NodeEdit.as_view(),     name='node-edit'),
+    # url(r'^node_list$',                 NodeList.as_view(),     name='node_list'),
+    #
     # Project
     url(r'^project_add$',                ProjectAdd.as_view(),      name='project_add'),
     url(r'^project_delete/(?P<pk>\d+)$', ProjectDelete.as_view(),   name='project-delete'),

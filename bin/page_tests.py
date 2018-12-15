@@ -11,7 +11,7 @@ from doc import list_documents, doc_list
 RUN_WEB_BROWSER = True
 
 LOCAL_HOST = 'localhost:8000'
-REMOTE_HOST = 'markseaman.org' #environ['DJANGO_IP']
+REMOTE_HOST = 'mybookonline.org' #environ['DJANGO_IP']
 
 TEST_PAGES = '''
 tech/Index

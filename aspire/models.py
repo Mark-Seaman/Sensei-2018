@@ -144,26 +144,26 @@ class Goal(models.Model):
 #       parent *
 #       order
 
-class Node(models.Model):
-    title = models.CharField(max_length=100)
-    text = models.TextField()
-    parent = models.ForeignKey('self', editable=False, null=True)
-    order = models.IntegerField(default=0)
-
-    def __unicode__(self):
-        return '%d_%s' %(self.pk, self.title.replace(' ', '_'))
-
-    def get_absolute_url(self):
-        return reverse('node-detail', kwargs={'pk': self.pk})
-
-    def as_row(self):
-        return [self.pk, self.title, self.text, self.parent, self.order]
-
-    @staticmethod
-    def labels():
-        return ['ID', 'Title', 'Text', 'Parent', 'Order']
-
-    def values(self):
-        return zip(Node.labels(), self.as_row())
+# class Node(models.Model):
+#     title = models.CharField(max_length=100)
+#     text = models.TextField()
+#     parent = models.ForeignKey('self', editable=False, null=True)
+#     order = models.IntegerField(default=0)
+#
+#     def __unicode__(self):
+#         return '%d_%s' %(self.pk, self.title.replace(' ', '_'))
+#
+#     def get_absolute_url(self):
+#         return reverse('node-detail', kwargs={'pk': self.pk})
+#
+#     def as_row(self):
+#         return [self.pk, self.title, self.text, self.parent, self.order]
+#
+#     @staticmethod
+#     def labels():
+#         return ['ID', 'Title', 'Text', 'Parent', 'Order']
+#
+#     def values(self):
+#         return zip(Node.labels(), self.as_row())
 
 

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="8b1c7c23-5c5a-4bc1-bbb1-8cdeb8f69710" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Documents/MarkSeaman/Index" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/MarkSeaman/Index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documents/MarkSeaman/Menu" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/MarkSeaman/Menu" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documents/Test/Index" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/Test/Index" afterDir="false" />
     </list>
+=======
+    <list default="true" id="8b1c7c23-5c5a-4bc1-bbb1-8cdeb8f69710" name="Default Changelist" comment="" />
+>>>>>>> 98b801cb6ec93890894c704b1fc7ebea86a59a5d
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +20,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Documents/MarkSeaman/Index">
@@ -62,9 +67,12 @@
     <replaceStrings>
       <replace>markseaman.org</replace>
     </replaceStrings>
+=======
+    <leaf />
+>>>>>>> 98b801cb6ec93890894c704b1fc7ebea86a59a5d
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Documents" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -87,10 +95,13 @@
         <option value="$PROJECT_DIR$/tool/templates/tool_layout.html" />
         <option value="$PROJECT_DIR$/mybook/urls.py" />
         <option value="$PROJECT_DIR$/test/css_test.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/../Projects/MyBook/bin/booknotes.py" />
         <option value="$PROJECT_DIR$/Documents/MarkSeaman/Index" />
         <option value="$PROJECT_DIR$/Documents/Test/Index" />
         <option value="$PROJECT_DIR$/Documents/MarkSeaman/Menu" />
+=======
+>>>>>>> 98b801cb6ec93890894c704b1fc7ebea86a59a5d
       </list>
     </option>
   </component>
@@ -114,6 +125,7 @@
               <item name="Sensei" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sensei" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="Sensei" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sensei" type="462c0819:PsiDirectoryNode" />
@@ -131,6 +143,8 @@
               <item name="Documents" type="462c0819:PsiDirectoryNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+>>>>>>> 98b801cb6ec93890894c704b1fc7ebea86a59a5d
           </expand>
           <select />
         </subPane>
@@ -196,7 +210,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544813350958</updated>
+<<<<<<< HEAD
       <workItem from="1544899239662" duration="2850000" />
+=======
+      <workItem from="1544899239662" duration="294000" />
+>>>>>>> 98b801cb6ec93890894c704b1fc7ebea86a59a5d
     </task>
     <task id="LOCAL-00001" summary="Add workspace after upgrade">
       <created>1544899380760</created>
@@ -209,11 +227,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="2850000" />
+=======
+    <option name="totallyTimeSpent" value="294000" />
+>>>>>>> 98b801cb6ec93890894c704b1fc7ebea86a59a5d
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24583003" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -221,7 +242,7 @@
       <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.329927" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329927" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32919708" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32919708" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -235,7 +256,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32962668" />
+      <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -494,6 +515,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/../Projects/MyBook/bin/booknotes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -548,5 +570,7 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 98b801cb6ec93890894c704b1fc7ebea86a59a5d
   </component>
 </project>

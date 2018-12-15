@@ -12,13 +12,13 @@ def booknotes_command(options):
     if options:
         cmd = options[0]
         args = options[1:]
-        if cmd == 'content':
+        if cmd=='content':
             booknotes_content(args)
-        elif cmd == 'edit':
+        elif cmd=='edit':
             booknotes_edit(args)
-        elif cmd == 'excerpt':
+        elif cmd=='excerpt':
             booknotes_excerpt(args)
-        elif cmd == 'list':
+        elif cmd=='list':
             booknotes_list(args)
         else:
             booknotes_help(args)
@@ -47,7 +47,6 @@ def booknotes_help(args=None):
 def booknotes_content(args):
     system('cat Documents/MarkSeaman/booknotes/*')
 
-
 def booknotes_doc_path(doc=None):
     path = join(environ['p'], 'Documents', 'MarkSeaman', 'booknotes')
     if doc:
@@ -74,7 +73,7 @@ def booknotes_excerpt(args):
         excerpt = choice(excerpts).replace('\n',' ')
         log('Booknotes - %s: %s' % (path, excerpt))
         print(excerpt)
-        print('\n\nRead more at\nhttp://markseaman.org/booknotes/%s\n\n' % note)
+        print('\n\nRead more at\nhttp://mybookonline.org/booknotes/%s\n\n' % note)
 
     print(booknotes())
     if args:
@@ -90,3 +89,4 @@ def booknotes_list(args):
     for f in file_tree_list(path):
         print(f.replace(path+'/', ''))
 
+    

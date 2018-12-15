@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 import traceback
 
-from aspire.node import node_command
+# from aspire.node import node_command
 from bin.shell import banner
 from health.health import health_command
 from tasks.task import task_command
@@ -34,8 +34,8 @@ class Command(BaseCommand):
             elif cmd == 'health':
                 health_command(args)
 
-            elif cmd == 'node':
-                node_command(args)
+            # elif cmd == 'node':
+            #     node_command(args)
 
             elif cmd == 'page':
                 page_command(self, args)
