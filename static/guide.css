@@ -1,0 +1,243 @@
+/*  ------------------------------
+    Colors
+------------------------------
+
+Purple      -- #0E3D65
+Gold        -- #F6B018
+
+*/
+
+/* ------------------------------
+    Elements
+------------------------------*/
+
+body {
+    font-size: 18px;
+    color: #0E3D65;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    color: #0E3D65;
+}
+
+h1,
+h2,
+h3 {
+    margin: 10px 20px;
+    padding: 10px 20px;
+}
+
+h1 {
+    color: #F6B018;
+    font-size: 300%;
+    /*border: 2px solid  #F6B018;*/
+}
+
+h2 {
+    color: #0E3D65;
+    background-color: #F6B018;
+    border: 2px solid #0E3D65;
+    text-align: center;
+    font-size: 200%;
+}
+
+h3 {
+    font-size: 150%;
+}
+
+header {
+    border: 2px solid white;
+    background-color: #0E3D65;
+    color: #F6B018;
+}
+
+header a {
+    color: white;
+}
+
+header a:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+header h1 {
+    border: none;
+    margin-left: 50px;
+    font-size: 200%;
+}
+
+header h2 {
+    color: white;
+    background-color: #0E3D65;
+    border: none;
+    margin-left: 50px;
+    font-size: 120%;
+    text-align: left;
+    width: 100%;
+}
+
+header .logo {
+    /*
+    box-shadow: none;
+    border: white solid 2px;
+    border-radius: 20px;
+    padding: 5px;
+    width: 115px;
+    height: 140px;
+*/
+}
+
+header img.logo-image {
+    background: white url("/static/images/guide/HtmlApps/Bear3.100.png") no-repeat;
+    border: white solid 2px;
+    border-radius: 20px;
+    box-shadow: none;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    width: 100px;
+}
+
+header .logo-text {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #F6B018;
+    text-align: center;
+    box-shadow: none;
+}
+
+i {
+    padding: 0px;
+    margin: 10px;
+}
+
+li {
+    margin: 0px 20px;
+    padding: 0em 0px;
+}
+
+img {
+    max-width: 800px;
+    box-shadow: 2px 2px 5px gray;
+    border: 1px solid black;
+    margin: 2em;
+    padding: 2em;
+}
+
+main {
+    background-color: #0E3D65;
+    color: #F6B018;
+}
+
+p {
+    margin: 10px;
+    padding: 0em 30px;
+}
+
+pre {
+    background-color: #eee;
+    color: #444;
+    margin: 10px 100px;
+}
+
+span {
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    min-width: 5em;
+    margin: 20px;
+    padding: 0px 20px 10px 0px;
+}
+
+/* ------------------------------
+    Class
+------------------------------*/
+
+.box {
+    box-shadow: -2px -2px 5px gray;
+    background-color: white;
+    margin: 40px;
+    padding: 20px;
+}
+
+.btn {
+    color: white;
+    background-color: #0E3D65;
+    font-size: 120%;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.card {
+    border: 4px solid #F6B018;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-header {
+    border: 3px solid #F6B018;
+    background-color: #0E3D65;
+}
+
+.card-header a {
+    color: white;
+}
+
+.card-header a:hover {
+    color: yellow;
+}
+
+.card-header h2 {
+    font-size: 150%;
+    border: none;
+}
+
+.main-menu {
+    margin-top: 300px;
+}
+
+.lesson-title {
+    color: red;
+}
+
+.page {
+    box-shadow: 2px 2px 5px gray;
+    background-color: white;
+    border: 1px solid black;
+    margin: 40px;
+    padding: 50px;
+}
+
+.user-btn {
+    color: white;
+    background-color: #0E3D65;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.user-text * {
+    color: white;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* ------------------------------
+    ID
+------------------------------*/
