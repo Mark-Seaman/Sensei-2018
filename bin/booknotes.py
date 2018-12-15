@@ -73,7 +73,7 @@ def booknotes_excerpt(args):
         excerpt = choice(excerpts).replace('\n',' ')
         log('Booknotes - %s: %s' % (path, excerpt))
         print(excerpt)
-        print('\n\nRead more at\nhttp://mybookonline.org/booknotes/%s\n\n' % note)
+        print('\n\nRead more at\nhttp://markseaman.org/booknotes/%s\n\n' % note)
 
     print(booknotes())
     if args:

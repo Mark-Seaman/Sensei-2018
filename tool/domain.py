@@ -11,9 +11,9 @@ domain_info = {
         'directory': 'MarkSeaman',
         'title': 'Mark Seaman'
     },
-    'mybookonline.org': {
+    'markseaman.org': {
         'directory': '',
-        'title': 'mybookonline.org'
+        'title': 'markseaman.org'
     },
     'spiritual-things.org': {
         'directory': 'spiritual',

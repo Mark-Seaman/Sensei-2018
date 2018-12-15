@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b1c7c23-5c5a-4bc1-bbb1-8cdeb8f69710" name="Default Changelist" comment="" />
+    <list default="true" id="8b1c7c23-5c5a-4bc1-bbb1-8cdeb8f69710" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Documents/MarkSeaman/Index" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/MarkSeaman/Index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/aspire/clients/Mark-Seaman/Index" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/aspire/clients/Mark-Seaman/Index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/aspire/clients/Mark-Seaman/MyBook/Build/Data" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/aspire/clients/Mark-Seaman/MyBook/Build/Data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/aspire/clients/Mark-Seaman/MyBook/Build/Test/Defects" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/aspire/clients/Mark-Seaman/MyBook/Build/Test/Defects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/aspire/clients/Mark-Seaman/Tools" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/aspire/clients/Mark-Seaman/Tools" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/ideas" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/ideas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/info/Teach" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/info/Teach" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/info/months/2017-03" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/info/months/2017-03" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/booknotes.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/booknotes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/page_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/page_tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/switches.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/switches.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/imac-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/imac-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/imac-tool.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/imac-tool.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/macbook-tool.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/macbook-tool.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/production-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/production-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/production-data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/production-data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/production-tool.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/production-tool.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hammer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/hammer/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybook/mybook.py" beforeDir="false" afterPath="$PROJECT_DIR$/mybook/mybook.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybook/templates/mybook_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/mybook/templates/mybook_test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superuser/templates/tests.html" beforeDir="false" afterPath="$PROJECT_DIR$/superuser/templates/tests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mybook_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/mybook_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/robot_pages" beforeDir="false" afterPath="$PROJECT_DIR$/test/robot_pages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tool/domain.py" beforeDir="false" afterPath="$PROJECT_DIR$/tool/domain.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +38,25 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Projects/MyBook/bin/booknotes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-670">
+              <caret column="4" selection-start-column="4" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mybookonline.org</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>markseaman.org</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,6 +83,7 @@
         <option value="$PROJECT_DIR$/tool/templates/tool_layout.html" />
         <option value="$PROJECT_DIR$/mybook/urls.py" />
         <option value="$PROJECT_DIR$/test/css_test.py" />
+        <option value="$PROJECT_DIR$/../Projects/MyBook/bin/booknotes.py" />
       </list>
     </option>
   </component>
@@ -127,7 +172,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544813350958</updated>
-      <workItem from="1544899239662" duration="294000" />
+      <workItem from="1544899239662" duration="536000" />
     </task>
     <task id="LOCAL-00001" summary="Add workspace after upgrade">
       <created>1544899380760</created>
@@ -140,10 +185,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="294000" />
+    <option name="totallyTimeSpent" value="536000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24583003" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -428,6 +474,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Projects/MyBook/bin/booknotes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-670">
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>

@@ -42,7 +42,7 @@ ON_INTERNET = True
 # Servers
 WHO2HIRE_PRODUCTION  = 'app.who2hire.us'         # 138.68.46.197
 WHO2HIRE_STAGING     = 'who2hire.biz'        # 138.68.229.80
-MYBOOK_PRODUCTION    = 'mybookonline.org'    # 138.68.234.96  # old: 45.55.50.13
+MYBOOK_PRODUCTION    = 'markseaman.org'    # 138.68.234.96  # old: 45.55.50.13
 MYBOOK_STAGING       = 'the-very-idea.us'    # 162.243.52.136
 SERVER_DIR           = '/home/django/MyBook'
 
@@ -69,7 +69,7 @@ def server_type():
 def server_host(server):
     if   server == 'who2hire':             return 'who2hire.co'
     elif server == 'who2hire-staging':     return 'who2hire.biz'
-    elif server == 'MyBook':               return 'mybookonline.org'
+    elif server == 'MyBook':               return 'markseaman.org'
     elif server == 'MyBook-Staging':       return 'the-very-idea.us'
     elif server == 'Marks-iMac.local':     return 'iMac'
     elif server == 'seaman-macbook.local': return 'macbook'
