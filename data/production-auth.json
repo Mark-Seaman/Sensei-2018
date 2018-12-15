@@ -1196,7 +1196,7 @@
             "is_active": true,
             "is_staff": true,
             "is_superuser": false,
-            "last_login": "2018-12-12T22:39:46.972Z",
+            "last_login": "2018-12-14T17:53:55.147Z",
             "last_name": "Seaman",
             "password": "pbkdf2_sha256$36000$l3MBrZDF5pDf$d72tjaHBa6PeGcoUMkzwlu/oGKrvAWHn0cF18yBBiGc=",
             "user_permissions": [],
