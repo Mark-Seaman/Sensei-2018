@@ -22,8 +22,6 @@ def vc_command(options):
             vc_pull(args)
         elif cmd == 'push':
             vc_push(args)
-        elif cmd == 'replicate':
-            vc_replicate()
         elif cmd == 'status':
             vc_status(args)
         else:
@@ -45,7 +43,6 @@ def vc_help(args=None):
             log     - show the log on the production server
             pull    - pull all changes from repo
             push    - push all changes to repo
-            # replicate - commit changes to the extra repos
             status  - show git status
 
         ''')
@@ -82,9 +79,8 @@ def vc_dirs():
     home   = environ['p']
     doc    = join(environ['p'], 'Documents')
     guide  = join(environ['HOME'], 'Archive')
-    sensei = join(environ['HOME'], 'Sensei')
     unc    = join(environ['unc'])
-    dirs   = [home, doc, unc, sensei]
+    dirs   = [home, doc, unc]
     dirs   = [d for d in dirs if exists(d)]
     return dirs
 
@@ -105,16 +101,6 @@ def vc_push(args):
     for d in vc_dirs():
         cmd = 'echo push %s && cd %s && git pull %s; git push'
         git_cmd(cmd % (d, d, git_filter()))
-
-
-# def vc_replicate():
-#     repos = ['Teaching', 'PhpApps', 'HtmlApps', 'PythonApps']
-#     for repo in repos:
-#         src = join(environ['p'], 'Documents', 'guide', repo)
-#         dest = join(environ['HOME'], 'Archive', repo)
-#         cmd = 'cptree %s %s' % (src, dest)
-#         system(cmd)
-#     print('Commit repos if there are changes')
 
 
 def vc_status(args):
