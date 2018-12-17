@@ -73,6 +73,7 @@ alias host='hostname'
 alias hours='x hours'
 
 alias i='x i'
+alias imac='ssh $imac'
 alias interview='x hire interview'
 alias interviewer='x hire interviewer'
 alias ip='ifconfig|grep "inet "'
