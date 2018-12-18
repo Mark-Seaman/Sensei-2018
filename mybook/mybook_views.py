@@ -74,26 +74,26 @@ class SeamansLog(MyBookDocDisplay):
         return super(SeamansLog, self).get_context_data(**kwargs)
 
 
-class Staff(TemplateView):
-    template_name = 'shrinking_world_staff.html'
+# class Staff(TemplateView):
+#     template_name = 'shrinking_world_staff.html'
+#
+#     def get_context_data(self, **kwargs):
+#         return {
+#             'title': 'Shrinking World Staff',
+#             'menu': main_menu('shrinking-world', '/shrinking-world/Staff'),
+#             'site': mybook_site_title('shrinking-world')
+#         }
+#
 
-    def get_context_data(self, **kwargs):
-        return {
-            'title': 'Shrinking World Staff',
-            'menu': main_menu('shrinking-world', '/shrinking-world/Staff'),
-            'site': mybook_site_title('shrinking-world')
-        }
+# class SpiritualSelect(RedirectView):
+#     permanent = False
+#
+#     def get_redirect_url(self, *args, **kwargs):
+#         return '/spiritual'
 
 
-class SpiritualSelect(RedirectView):
-    permanent = False
-
-    def get_redirect_url(self, *args, **kwargs):
-        return '/spiritual'
-
-
-class TestDoc(TemplateView):
-    template_name = 'mybook_test.html'
+# class TestDoc(TemplateView):
+#     template_name = 'mybook_test.html'
 
 
 class TabsView(MyBookDocDisplay):
@@ -106,14 +106,14 @@ class TabsView(MyBookDocDisplay):
         return super(TabsView, self).get_context_data(**kwargs)
 
 
-class TodayView(LoginRequiredMixin, MyBookDocDisplay):
-
-    def get_context_data(self, **kwargs):
-        context = super(TodayView, self).get_context_data(**kwargs)
-        context.update({
-            'site': ('Today', 'Next Step'),
-            'title': 'Today Matters Most',
-            'text': doc_html_text('spiritual/Home'),
-            'menu': main_menu('brain', 'brain/Index'),
-        })
-        return context
+# class TodayView(LoginRequiredMixin, MyBookDocDisplay):
+#
+#     def get_context_data(self, **kwargs):
+#         context = super(TodayView, self).get_context_data(**kwargs)
+#         context.update({
+#             'site': ('Today', 'Next Step'),
+#             'title': 'Today Matters Most',
+#             'text': doc_html_text('spiritual/Home'),
+#             'menu': main_menu('brain', 'brain/Index'),
+#         })
+#         return context

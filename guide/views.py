@@ -32,15 +32,15 @@ class ClassLessonView(TemplateView):
         return view_info(dict(title= 'Lesson%s' % lesson, course=course, lesson=lesson))
 
 
-class ClassScheduleView(GuideDocDisplay):
-    template_name = 'guide_schedule.html'
-
-    def get_context_data(self, **kwargs):
-        course = kwargs.get('course')
-        table = guide_schedule(course)
-        title = 'Schedule for %s' % 'BACS 200' if course=='HtmlApps' else 'BACS 350'
-        return view_info(dict(title=title, course=course, data=schedule_data(course, table)))
-
+# class ClassScheduleView(GuideDocDisplay):
+#     template_name = 'guide_schedule.html'
+#
+#     def get_context_data(self, **kwargs):
+#         course = kwargs.get('course')
+#         table = guide_schedule(course)
+#         title = 'Schedule for %s' % 'BACS 200' if course=='HtmlApps' else 'BACS 350'
+#         return view_info(dict(title=title, course=course, data=schedule_data(course, table)))
+#
 
 class MissingDocView(TemplateView):
     template_name = 'guide_missing.html'
