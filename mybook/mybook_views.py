@@ -15,10 +15,9 @@ class MyBookDocDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
-        course = title.split('/')[0] if title.split('/')[:1] else ''
         domdoc = domain_doc(self.request.get_host(), title)
-        text = doc_html_text(title, '/static/images/' + course)
-        return dict(title=domdoc, course=course, text=text)
+        text = doc_html_text(domdoc, '/static/images')
+        return dict(title=domdoc, text=text)
 
 
 class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
