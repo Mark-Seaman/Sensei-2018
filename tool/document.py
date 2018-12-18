@@ -66,5 +66,5 @@ def domain_doc(domain, page):
         return join('MarkSeaman', page)
     if domain == 'markseaman.info':
         return join('info', page)
-    return join(domain, page)
+    return page
 
