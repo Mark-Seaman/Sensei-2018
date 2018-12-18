@@ -7,17 +7,18 @@ from random import choice
 from mybook import main_menu, mybook_site_title
 from mybook import booknotes_excerpt
 from outline import outline, read_cards, tabs_data
-from tool.document import doc_html_text
+from tool.document import doc_html_text,domain_doc
 
 
-class MyBookDocDisplay(TemplateView, RedirectView):
+class MyBookDocDisplay(TemplateView):
     template_name = 'mybook_public.html'
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
         course = title.split('/')[0] if title.split('/')[:1] else ''
+        domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(title, '/static/images/' + course)
-        return dict(title=title, course=course, text=text)
+        return dict(title=domdoc, course=course, text=text)
 
 
 class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):

@@ -59,3 +59,12 @@ def doc_path(page):
     return join(BASE_DIR, 'Documents', page)
 
 
+def domain_doc(domain, page):
+    if domain == 'spiritual-things.org':
+        return join('spiritual', page)
+    if domain == 'markseaman.org':
+        return join('MarkSeaman', page)
+    if domain == 'markseaman.info':
+        return join('info', page)
+    return join(domain, page)
+
