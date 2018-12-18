@@ -42,6 +42,8 @@ def doc_exists(title):
         return path+'.md'
     elif isdir(path) and exists(join(path, 'Index')):
         return join(path, 'Index')
+    elif isdir(path) and exists(join(path, 'Index.md')):
+        return join(path, 'Index.md')
 
 
 def doc_html_text(page, image_path=None):

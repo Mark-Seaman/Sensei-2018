@@ -17,7 +17,7 @@ class MyBookDocDisplay(TemplateView):
         title = self.kwargs.get('title', 'Index')
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
-        return dict(title=domdoc, text=text)
+        return dict(title=title, text=text)
 
 
 class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
