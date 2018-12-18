@@ -18,7 +18,6 @@ if 'MyBook' == node():
 else:
     DEBUG = True
     ALLOWED_HOSTS = ['*']
-DEBUG = False
 
 
 # Application definition
@@ -59,7 +58,6 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             join(BASE_DIR, "templates"),
-            join(BASE_DIR, 'contact', "templates"),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -108,13 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'US/Mountain'
-
-USE_I18N = True
-
-USE_L10N = True
-
+USE_I18N = False
+USE_L10N = False
 USE_TZ = True
 
 
@@ -127,12 +121,7 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
-        # 'django-file': {
-        #     'level': 'DEBUG',
-        #     'class': 'logging.FileHandler',
-        #     'filename': join(BASE_DIR, 'log', 'django.log'),
-        # },
-        'hammer-file': {
+         'hammer-file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'filename': join(BASE_DIR, 'log', 'hammer.log'),
@@ -143,12 +132,7 @@ LOGGING = {
         },
     },
     'loggers': {
-        # 'django': {
-        #     'handlers': ['django-file'],
-        #     'level': 'DEBUG',
-        #     'propagate': True,
-        # },
-        'tool': {
+         'tool': {
             'handlers': ['hammer-file'],
         },
     },
@@ -178,16 +162,13 @@ if 'MyBook' in node():
 
     # Discover our IP address
     domains = [
-        'shrinking-world.com',
         'markseaman.info',
         'markseaman.org',   
-        'mybookonline.org',
-        'shrinking-world.com',
         'seamanslog.com',
         'seamansguide.com',
         'shrinking-world.com',
+        'shrinking-world.org',
         'spiritual-things.org',
-        'shrinking-world.com',
     ]
     ALLOWED_HOSTS = domains + ip_addresses()
 

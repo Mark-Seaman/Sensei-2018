@@ -1,4 +1,5 @@
-from os.path import exists, isdir, join
+from django.http import Http404
+from os.path import exists, isdir, isfile, join
 
 from bin.pandoc import text_to_html, file_to_html
 from bin.shell import read_file
@@ -35,12 +36,19 @@ def doc_dir_exists(title):
 def doc_exists(title):
     log('doc_exists',title)
     path = doc_path(title)
-    if exists(path) or exists(path+'.md'):
-        return not isdir(path)
+    if exists(path) and isfile(path):
+        return path
+    elif exists(path+'.md'):
+        return path+'.md'
+    elif isdir(path) and exists(join(path, 'Index')):
+        return join(path, 'Index')
 
 
 def doc_html_text(page, image_path=None):
-    return file_to_html(doc_path(page), image_path)
+    doc = doc_exists(page)
+    if not doc:
+        raise Http404("DocDisplay - Document does not exist")
+    return file_to_html(doc, image_path)
 
 
 def doc_link(title):

@@ -1,71 +1,26 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import redirect
 from django.views.generic import RedirectView, TemplateView
 from os import listdir
 from os.path import join
 from random import choice
 
-from mybook import main_menu, mybook_redirect, mybook_site_title
+from mybook import main_menu, mybook_site_title
 from mybook import booknotes_excerpt
 from outline import outline, read_cards, tabs_data
 from tool.document import doc_html_text
-from tool.log import log_page
 
 
-class MissingDoc(TemplateView):
-    template_name = 'mybook_missing.html'
-
-
-class MyBookDocDisplay(TemplateView):
+class MyBookDocDisplay(TemplateView, RedirectView):
     template_name = 'mybook_public.html'
 
     def get_context_data(self, **kwargs):
-        log_page(self.request)
-        title = kwargs.get('title', 'Index')
-        site = mybook_site_title(title.replace('Index', ''))
-        page = title
-        text = kwargs.get('text')
-        if not text:
-            text = doc_html_text(title, '/static/images')
-        menu = main_menu(site, page)
-        settings = dict(title=title, site=site, menu=menu, text=text, page=page)
-        kwargs.update(settings)
-        return kwargs
-
-# TODO: replace with RedirectView
-class MyBookDoc(MyBookDocDisplay, TemplateView):
-
-    def get(self, args, **kwargs):
-        title = kwargs.get('title', '')
-        r = mybook_redirect(self.request.get_host(), title, self.request.user)
-        if r:
-            return redirect(r)
-        return super(MyBookDoc, self).get(self, args, **kwargs)
-
-# class MyBookDoc(MyBookDocDisplay, RedirectView):
-#     def get_redirect_url(self, *args, **kwargs):
-#         title = kwargs.get('title', '')
-#         r = mybook_redirect(self.request.get_host(), title, self.request.user)
-#         if r:
-#             return redirect(r)
-#         # if not guide_file(None, doc):
-#         #     return '/guide/%s/Missing' % doc
-#         # return '/guide/%s.md' % doc
-#
-
-# class InfoDocDisplay(LoginRequiredMixin, ContextMixin):
-#     def get_context_data(self, **kwargs):
-#         kwargs = super(TaskBase, self).get_context_data(**kwargs)
-#         kwargs.update({
-#             'site': mybook_site_title('info'),
-#             'title': "No title set",
-#             'menu': main_menu('info', 'info/Index'),
-#             'text': 'Task Base',
-#         })
-#         return kwargs
+        title = self.kwargs.get('title', 'Index')
+        course = title.split('/')[0] if title.split('/')[:1] else ''
+        text = doc_html_text(title, '/static/images/' + course)
+        return dict(title=title, course=course, text=text)
 
 
-class MyBookPrivateDoc(LoginRequiredMixin, MyBookDoc):
+class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
     pass
 
 
@@ -88,17 +43,6 @@ class CardView(MyBookDocDisplay):
         doc = self.kwargs.get('title')
         kwargs = dict(title="Card View", doc=doc, cards=read_cards(doc))
         return super(CardView, self).get_context_data(**kwargs)
-
-
-# class ContainerView(MyBookDocDisplay):
-#     template_name = "mybook_containers.html"
-#
-#     def get_context_data(self, **kwargs):
-#         doc = self.kwargs.get('title')
-#         text = open(join('Documents', doc)).read()
-#         cards = outline(text)[0][1]
-#         kwargs = dict(title=cards[0][0], doc=doc, cards=cards)
-#         return super(ContainerView, self).get_context_data(**kwargs)
 
 
 class OutlineView(MyBookDocDisplay):

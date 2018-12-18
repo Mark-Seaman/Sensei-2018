@@ -20,17 +20,17 @@ class DocDisplay(TemplateView, RedirectView):
         return dict(title=title, course=course, text=text)
 
 
-class UncHTML(TemplateView):
-    template_name = 'guide_doc.html'
-
-    def get_context_data(self, **kwargs):
-        title = self.kwargs.get('title', 'Index')
-        course = title.split('/')[0] if title.split('/')[:1] else ''
-        return view_info(dict(title=title, course=course))
-
-    def get_redirect_url(self, *args, **kwargs):
-        return super(GuideDocDisplay, self).get_redirect_url(**kwargs)
-
+# class UncHTML(TemplateView):
+#     template_name = 'guide_doc.html'
+#
+#     def get_context_data(self, **kwargs):
+#         title = self.kwargs.get('title', 'Index')
+#         course = title.split('/')[0] if title.split('/')[:1] else ''
+#         return view_info(dict(title=title, course=course))
+#
+#     def get_redirect_url(self, *args, **kwargs):
+#         return super(GuideDocDisplay, self).get_redirect_url(**kwargs)
+#
 
 # from django.views.generic import ListView, RedirectView, TemplateView, UpdateView
 # from unc.sensei import get_student, query_students, page_info, student_test_links, view_info
