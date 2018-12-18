@@ -1,13 +1,42 @@
 from __future__ import unicode_literals
 
 from django.views.generic import ListView, RedirectView, TemplateView, UpdateView
+from os.path import exists
+from django.http import Http404
 
 from unc.sensei import get_student, query_students, page_info, student_test_links, view_info
-from guide.views import GuideDocDisplay
-
 from models import Course, Review
 from unc.review import allow_review, create_review, designer_scores, gather_review_scores, review_tabs, reviews_to_do, \
     reviews_done, count_score, requirements, student_review_data
+from guide.views import GuideDocDisplay
+from tool.document import doc_html_text
+
+
+# class DocView(RedirectView):
+#     def get_redirect_url(self, *args, **kwargs):
+#         doc = self.kwargs.get('title')
+#         if exists('Documents/UNC/'+doc):
+#             return '/unc/doc-%s' % doc
+#         else:
+#             return '/Missing'
+
+
+class DocDisplay(TemplateView, RedirectView):
+    template_name = 'guide_doc.html'
+
+    def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title', 'Index')
+        course = title.split('/')[0] if title.split('/')[:1] else ''
+        if not exists('Documents/UNC/' + title):
+            raise Http404("Document does not exist")
+        text = doc_html_text('unc/'+title, '/static/images/guide/' + course)
+        return dict(title=title, course=course, text=text)
+
+    # def get_redirect_url(self, *args, **kwargs):
+    #     title = self.kwargs.get('title')
+    #     if not exists('Documents/UNC/' + title):
+    #         raise Http404("Poll does not exist")
+    #     return super(DocDisplay, self).get_redirect_url(*args, **kwarg)
 
 
 class ReviewRequest(RedirectView):
@@ -43,10 +72,15 @@ class ReviewFeedback(TemplateView):
 
 
 class UncHTML(TemplateView):
+    template_name = 'guide_doc.html'
 
-    def get_template_names(self):
-        template = self.kwargs['title']
-        return [template]
+    def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title', 'Index')
+        course = title.split('/')[0] if title.split('/')[:1] else ''
+        return view_info(dict(title=title, course=course))
+
+    def get_redirect_url(self, *args, **kwargs):
+        return super(GuideDocDisplay, self).get_redirect_url(**kwargs)
 
 
 class UncStudents(TemplateView):
