@@ -6,7 +6,13 @@ from random import choice
 
 from mybook import booknotes_excerpt, main_menu, mybook_site_title
 from outline import outline, read_cards, tabs_data
-from tool.document import doc_html_text,domain_doc
+from tool.document import doc_html_text, domain_doc
+
+
+def domain_menu(domain, page):
+    domdoc = domain_doc(domain, page)
+    site = mybook_site_title(domdoc)
+    return main_menu(site, domdoc)
 
 
 class MyBookDocDisplay(TemplateView):
@@ -16,8 +22,10 @@ class MyBookDocDisplay(TemplateView):
         title = self.kwargs.get('title', 'Index')
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
-        site = mybook_site_title(title)
-        menu = main_menu(site, title)
+        site = mybook_site_title(domdoc)
+        menu = main_menu(site, domdoc)
+        # site = mybook_site_title(title)
+        # menu = main_menu(site, title)
         return dict(site=site, title=title, text=text, menu=menu)
 
 

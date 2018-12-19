@@ -74,3 +74,4 @@ def domain_doc(domain, page):
         return join('guide', page)
     return page
 
+
