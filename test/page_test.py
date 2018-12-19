@@ -20,7 +20,7 @@ def page_diff_test():
 
 def page_sites_test():
     pages = [
-        check_page('https://markseaman.info',       196, 196),
+        check_page('https://markseaman.info',       195, 196),
         check_page('https://markseaman.org',        193, 193),
 
         check_page('https://seamansguide.com',      171, 171),
