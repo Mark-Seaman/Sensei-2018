@@ -63,7 +63,10 @@ def doc_path(page):
 
 def domain_doc(domain, page):
     if domain == 'spiritual-things.org':
-        return join('spiritual', page)
+        if not page.startswith('spiritual'):
+            return join('spiritual', page)
+        else:
+            return page
     if domain == 'markseaman.org':
         return join('MarkSeaman', page)
     if domain == 'markseaman.info':
