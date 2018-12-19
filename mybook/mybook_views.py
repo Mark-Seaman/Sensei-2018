@@ -92,7 +92,7 @@ class SpiritualSelect(RedirectView):
             title = choice(['reflect', 'teaching', 'prayers', 'bible'])
         files = listdir(join('Documents', 'spiritual', title))
         file = choice(files)
-        return 'https://spiritual-things.org/spiritual/%s/%s' % (title, file)
+        return '/spiritual/%s/%s' % (title, file)
 
 
 class TabsView(MyBookDocDisplay):
