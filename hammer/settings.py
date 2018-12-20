@@ -32,15 +32,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # MyBook
-    'aspire',
-    'guide',
     'health',
     'life',
     'mybook',
     'superuser',
     'tasks',
     'tool',
-    'unc',
 ]
 
 MIDDLEWARE_CLASSES = [

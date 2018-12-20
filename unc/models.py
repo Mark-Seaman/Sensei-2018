@@ -6,17 +6,6 @@ from django.utils.timezone import now
 from django.db import models
 
 
-students = '''
-Curly
-Larry
-Moe
-'''.split('\n')[1:-1]
-
-
-def student_choices():
-    return [(s, s) for s in students]
-
-
 class Course(models.Model):
     name = models.CharField(max_length=20)
     title = models.CharField(max_length=20)
@@ -58,16 +47,16 @@ class Review(models.Model):
 class ReviewScore(models.Model):
     date        = models.DateTimeField(default=now, editable=False)
     score       = models.IntegerField()
-    designer    = models.CharField(max_length=20, choices=student_choices())
-    reviewer    = models.CharField(max_length=20, choices=student_choices())
+    designer    = models.CharField(max_length=20)
+    reviewer    = models.CharField(max_length=20)
     notes       = models.TextField(validators=[MinLengthValidator(500)])
 
 
 class ReviewerScore(models.Model):
     date        = models.DateTimeField(default=now, editable=False)
     score       = models.IntegerField()
-    designer    = models.CharField(max_length=20, choices=student_choices())
-    reviewer    = models.CharField(max_length=20, choices=student_choices())
+    designer    = models.CharField(max_length=20)
+    reviewer    = models.CharField(max_length=20)
     notes       = models.TextField()
 
 
