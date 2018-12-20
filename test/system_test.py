@@ -20,7 +20,7 @@ def system_disk_free_test ():
 
 def system_files_count_test():
     files = file_tree_list(environ['p'])
-    return check_lines('File list', '\n'.join(files), 6000, 7000)
+    return check_lines('File list', '\n'.join(files), 5000, 6000)
 
 
 def system_host_test():

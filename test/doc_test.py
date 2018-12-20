@@ -9,7 +9,7 @@ from bin.files import encode_text, fix_chars, read_text
 
 
 def doc_test():
-    return check_shell_lines('x doc list', 1300, 1400)
+    return check_shell_lines('x doc list', 800, 900)
 
 
 def doc_help_test():
@@ -17,7 +17,7 @@ def doc_help_test():
 
 
 def doc_search_test():
-    return check_shell_lines('x doc search Hammer', 160, 170)
+    return check_shell_lines('x doc search Hammer', 80, 90)
 
 
 def doc_scan_test():
