@@ -25,13 +25,13 @@ urlpatterns = [
     # Admin
     url(r'^admin',      admin.site.urls),
 
-    # Aspire
-    url(r'^aspire/',    include(aspire.urls)),
-    url(r'^aspire',     include(aspire.urls)),
-
-    # Guide
-    url(r'^guide/',    include(guide.urls)),
-    url(r'^guide',     include(guide.urls)),
+    # # Aspire
+    # url(r'^aspire/',    include(aspire.urls)),
+    # url(r'^aspire',     include(aspire.urls)),
+    #
+    # # Guide
+    # url(r'^guide/',    include(guide.urls)),
+    # url(r'^guide',     include(guide.urls)),
 
     # Health
     url(r'^health/', include(health.urls)),
