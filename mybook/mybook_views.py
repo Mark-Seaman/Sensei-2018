@@ -24,8 +24,6 @@ class MyBookDocDisplay(TemplateView):
         text = doc_html_text(domdoc, '/static/images')
         site = mybook_site_title(domdoc)
         menu = main_menu(site, domdoc)
-        # site = mybook_site_title(title)
-        # menu = main_menu(site, title)
         return dict(site=site, title=title, text=text, menu=menu)
 
 
@@ -112,3 +110,14 @@ class TabsView(MyBookDocDisplay):
         kwargs = dict(title=tabs[0][1], doc=doc, tabs=tabs)
         return super(TabsView, self).get_context_data(**kwargs)
 
+
+class UncDocDisplay(TemplateView):
+    template_name = 'unc_doc.html'
+
+    def get_context_data(self, **kwargs):
+        title = 'unc/' + self.kwargs.get('title')
+        domdoc = domain_doc(self.request.get_host(), title)
+        text = doc_html_text(domdoc, '/static/images')
+        site = mybook_site_title(domdoc)
+        menu = main_menu(site, domdoc)
+        return dict(site=site, title=title, text=text, menu=menu)

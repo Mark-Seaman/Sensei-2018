@@ -1,69 +1,21 @@
 from __future__ import unicode_literals
 
-from django.views.generic import RedirectView, TemplateView
-from os.path import exists
-from django.http import Http404
-
-from guide.views import GuideDocDisplay
-from tool.document import doc_html_text
+from django.views.generic import TemplateView
+from tool.document import doc_html_text, domain_doc
+from mybook.mybook import mybook_site_title, main_menu
 
 
-class DocDisplay(TemplateView, RedirectView):
+class UncDocDisplay(TemplateView):
     template_name = 'guide_doc.html'
 
     def get_context_data(self, **kwargs):
-        title = self.kwargs.get('title', 'Index')
-        course = title.split('/')[0] if title.split('/')[:1] else ''
-        if not exists('Documents/UNC/' + title):
-            raise Http404("Document does not exist")
-        text = doc_html_text('unc/'+title, '/static/images/guide/' + course)
-        return dict(title=title, course=course, text=text)
+        title = 'unc' + self.kwargs.get('title')
+        domdoc = domain_doc(self.request.get_host(), title)
+        text = doc_html_text(domdoc, '/static/images')
+        site = mybook_site_title(domdoc)
+        menu = main_menu(site, domdoc)
+        return dict(site=site, title=title, text=text, menu=menu)
 
-
-# class UncHTML(TemplateView):
-#     template_name = 'guide_doc.html'
-#
-#     def get_context_data(self, **kwargs):
-#         title = self.kwargs.get('title', 'Index')
-#         course = title.split('/')[0] if title.split('/')[:1] else ''
-#         return view_info(dict(title=title, course=course))
-#
-#     def get_redirect_url(self, *args, **kwargs):
-#         return super(GuideDocDisplay, self).get_redirect_url(**kwargs)
-#
-
-# from django.views.generic import ListView, RedirectView, TemplateView, UpdateView
-# from unc.sensei import get_student, query_students, page_info, student_test_links, view_info
-# from models import Course, Review
-# from unc.review import allow_review, create_review, designer_scores, gather_review_scores, review_tabs, reviews_to_do, \
-#     reviews_done, count_score, requirements, student_review_data
-
-
-# class DocView(RedirectView):
-#     def get_redirect_url(self, *args, **kwargs):
-#         doc = self.kwargs.get('title')
-#         if exists('Documents/UNC/'+doc):
-#             return '/unc/doc-%s' % doc
-#         else:
-#             return '/Missing'
-
-
-# class DocDisplay(TemplateView, RedirectView):
-#     template_name = 'guide_doc.html'
-#
-#     def get_context_data(self, **kwargs):
-#         title = self.kwargs.get('title', 'Index')
-#         course = title.split('/')[0] if title.split('/')[:1] else ''
-#         if not exists('Documents/UNC/' + title):
-#             raise Http404("Document does not exist")
-#         text = doc_html_text('unc/'+title, '/static/images/guide/' + course)
-#         return dict(title=title, course=course, text=text)
-#
-#     # def get_redirect_url(self, *args, **kwargs):
-#     #     title = self.kwargs.get('title')
-#     #     if not exists('Documents/UNC/' + title):
-#     #         raise Http404("Poll does not exist")
-#     #     return super(DocDisplay, self).get_redirect_url(*args, **kwarg)
 
 
 # class ReviewRequest(RedirectView):
