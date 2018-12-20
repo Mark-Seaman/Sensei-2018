@@ -14,7 +14,7 @@ import tasks.urls
 import tool.urls
 import health.urls
 import superuser.urls
-import unc.urls
+# import unc.urls
 
 
 urlpatterns = [
@@ -49,8 +49,8 @@ urlpatterns = [
     url(r'^task/',      include(tasks.urls)),
     url(r'^task',       include(tasks.urls)),
 
-    url(r'^unc/',       include(unc.urls)),
-    url(r'^unc',        include(unc.urls)),
+    # url(r'^unc/',       include(unc.urls)),
+    # url(r'^unc',        include(unc.urls)),
 
     # Tool
     url(r'^',           include(tool.urls)),

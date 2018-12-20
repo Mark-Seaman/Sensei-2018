@@ -16,7 +16,7 @@ urlpatterns = (
     # url(r'^student/(?P<pk>\w+)$',           StudentTest.as_view()),
     # url(r'^feedback/(?P<pk>\w+)$',          ReviewFeedback.as_view()),
 
-    url(r'^(?P<title>[\w/\-_.]*)$',     DocDisplay.as_view()),
-    # url(r'^(?P<title>[\w/\-_.]*)$',         DocView.as_view()),
-    url(r'^$', DocDisplay.as_view()),
+    # url(r'^(?P<title>[\w/\-_.]*)$',     DocDisplay.as_view()),
+    # # url(r'^(?P<title>[\w/\-_.]*)$',         DocView.as_view()),
+    # url(r'^$', DocDisplay.as_view()),
 )
