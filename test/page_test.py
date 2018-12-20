@@ -20,14 +20,14 @@ def page_diff_test():
 
 def page_sites_test():
     pages = [
-        check_page('https://markseaman.info',       195, 220),
+        check_page('https://markseaman.info',       195, 230),
         check_page('https://markseaman.org',        193, 220),
 
         check_page('https://seamansguide.com',      171, 200),
         check_page('https://seamanslog.com',        160, 200),
 
         check_page('https://shrinking-world.com',   165, 200),
-        check_page('https://spiritual-things.org',  401, 200),
+        check_page('https://spiritual-things.org',  190, 400),
 
         check_page('https://who2hire.us',           338, 338),
         check_page('https://app.who2hire.us/admin', 324, 324),
