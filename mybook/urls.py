@@ -6,16 +6,17 @@ from mybook_views import BookNotes, MyBookDocDisplay, MyBookPrivateDoc, SeamansL
 urlpatterns = [
 
     # Authentication
-    url(r'^login',      login, {'template_name': 'mybook_login.html'}, name='login'),
-    url(r'^logout$',    logout, {'next_page': '/login'}),
+    url(r'^login',                              login, {'template_name': 'mybook_login.html'}, name='login'),
+    url(r'^logout$',                            logout, {'next_page': '/login'}),
 
     # Custom Pages
     url(r'^booknotes/(?P<title>[\w/\-.]*)$',    BookNotes.as_view()),
-    url(r'^seamanslog$',    SeamansLog.as_view()),
+    url(r'^info/(?P<title>[\w/\-_.]*)$',        MyBookPrivateDoc.as_view()),
+    url(r'^seamanslog$',                        SeamansLog.as_view()),
+    url(r'^spiritual/(?P<title>[\w\-_.]*)$',    SpiritualSelect.as_view()),
+    url(r'^unc/(?P<title>[\w/\-_.]*)$',         MyBookDocDisplay.as_view()),
 
     # Documents
-    url(r'^info/(?P<title>[\w/\-_.]*)$', MyBookPrivateDoc.as_view()),
-    url(r'^spiritual/(?P<title>[\w\-_.]*)$', SpiritualSelect.as_view()),
-    url(r'^(?P<title>[\w/\-_.]*)$', MyBookDocDisplay.as_view()),
+    url(r'^(?P<title>[\w/\-_.]*)$',             MyBookDocDisplay.as_view()),
 
 ]
