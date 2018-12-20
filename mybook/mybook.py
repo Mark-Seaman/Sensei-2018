@@ -7,64 +7,64 @@ from bin.shell import read_file
 from hammer.settings import BASE_DIR
 from tool.document import doc_html_text
 from tool.log import log
-from tool.domain import domain_directory
+# from tool.domain import domain_directory
 
 
 def mybook_path(page):
     return join(BASE_DIR, 'Documents', page)
 
 
-def mybook_random_select(directory):
-    path = mybook_path(directory)
-    log('doc_random_select -- dir', path)
-    select = choice(listdir(path))
-    log('doc_random_select',  select)
-    return select
+# def mybook_random_select(directory):
+#     path = mybook_path(directory)
+#     log('doc_random_select -- dir', path)
+#     select = choice(listdir(path))
+#     log('doc_random_select',  select)
+#     return select
+#
+
+# def mybook_redirect(host, page, user):
+#     if not page:
+#         return '/Index'
+#
+#     log('mybook_redirect (host=%s, page=%s)' % (host,page))
+#     path = mybook_path(page)
+#     index = path + '/Index'
+#     random = path + '/Random'
+#
+#     dom = domain_directory(host)
+#     log('domain directory', dom)
+#     if dom and not page.startswith(dom):
+#         if page:
+#             url = '/' + dom + '/' + page
+#         else:
+#             url = '/' + dom
+#         log('domain_redirect --> ', url)
+#         return url
+#
+#     if exists(path) and isdir(path) and exists(random+'Dir') and isfile(random+'Dir'):
+#
+#         return '/' + choice(open(random+'Dir').read().split('\n')[:-1])
+#
+#     if exists(path) and isdir(path) and exists(random) and isfile(random):
+#         if page:
+#             new_page = '/' + page + '/' + mybook_random_select(path)
+#         else:
+#             new_page = '/xxx'
+#         log('doc_redirect --> %s' % new_page)
+#         return new_page
+#     if exists(path) and isdir(path) and exists(index) and isfile(index):
+#         if page:
+#             new_page = '/'+ page + '/Index'
+#         else:
+#             new_page = '/Index'
+#         log('doc_redirect --> %s' % new_page)
+#         return new_page
+#     if not exists(path):
+#         return '/missing/' + page
 
 
-def mybook_redirect(host, page, user):
-    if not page:
-        return '/Index'
-
-    log('mybook_redirect (host=%s, page=%s)' % (host,page))
-    path = mybook_path(page)
-    index = path + '/Index'
-    random = path + '/Random'
-
-    dom = domain_directory(host)
-    log('domain directory', dom)
-    if dom and not page.startswith(dom):
-        if page:
-            url = '/' + dom + '/' + page
-        else:
-            url = '/' + dom
-        log('domain_redirect --> ', url)
-        return url
-
-    if exists(path) and isdir(path) and exists(random+'Dir') and isfile(random+'Dir'):
-
-        return '/' + choice(open(random+'Dir').read().split('\n')[:-1])
-
-    if exists(path) and isdir(path) and exists(random) and isfile(random):
-        if page:
-            new_page = '/' + page + '/' + mybook_random_select(path)
-        else:
-            new_page = '/xxx'
-        log('doc_redirect --> %s' % new_page)
-        return new_page
-    if exists(path) and isdir(path) and exists(index) and isfile(index):
-        if page:
-            new_page = '/'+ page + '/Index'
-        else:
-            new_page = '/Index'
-        log('doc_redirect --> %s' % new_page)
-        return new_page
-    if not exists(path):
-        return '/missing/' + page
-
-
-def mybook_site(title):
-    return title.split('/')[0]
+# def mybook_site(title):
+#     return title.split('/')[0]
 
 
 def mybook_site_title(title):
@@ -103,7 +103,7 @@ def mybook_content(author, title):
 def main_menu(menu, page=None):
 
     def menu_active(page, menu_item):
-        if page.startswith(menu_item):
+        if page and page.startswith(menu_item):
             return 'class=active'
 
     def menu_entry(page, x):

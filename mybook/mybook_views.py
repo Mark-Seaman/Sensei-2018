@@ -4,10 +4,15 @@ from os import listdir
 from os.path import join
 from random import choice
 
-from mybook import main_menu, mybook_site_title
-from mybook import booknotes_excerpt
+from mybook import booknotes_excerpt, main_menu, mybook_site_title
 from outline import outline, read_cards, tabs_data
-from tool.document import doc_html_text,domain_doc
+from tool.document import doc_html_text, domain_doc
+
+
+def domain_menu(domain, page):
+    domdoc = domain_doc(domain, page)
+    site = mybook_site_title(domdoc)
+    return main_menu(site, domdoc)
 
 
 class MyBookDocDisplay(TemplateView):
@@ -17,7 +22,11 @@ class MyBookDocDisplay(TemplateView):
         title = self.kwargs.get('title', 'Index')
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
-        return dict(title=title, text=text)
+        site = mybook_site_title(domdoc)
+        menu = main_menu(site, domdoc)
+        # site = mybook_site_title(title)
+        # menu = main_menu(site, title)
+        return dict(site=site, title=title, text=text, menu=menu)
 
 
 class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
@@ -63,37 +72,35 @@ class DailyTask(RedirectView):
         return '/info/daily/%s' % choice(listdir(path))
 
 
-class SeamansLog(MyBookDocDisplay):
-
-    def get_context_data(self, **kwargs):
-        title = join('seamanslog', self.kwargs['title'])
-        photo = 'MarkSeaman.100.png'
-        url = join('https://seamanslog.com', self.request.path[1:])
-        readmore = url, url
-        kwargs = dict(title=title, photo=photo, readmore=readmore)
-        return super(SeamansLog, self).get_context_data(**kwargs)
-
-
-# class Staff(TemplateView):
-#     template_name = 'shrinking_world_staff.html'
+# class SeamansLog(MyBookDocDisplay):
 #
 #     def get_context_data(self, **kwargs):
-#         return {
-#             'title': 'Shrinking World Staff',
-#             'menu': main_menu('shrinking-world', '/shrinking-world/Staff'),
-#             'site': mybook_site_title('shrinking-world')
-#         }
-#
-
-# class SpiritualSelect(RedirectView):
-#     permanent = False
-#
-#     def get_redirect_url(self, *args, **kwargs):
-#         return '/spiritual'
+#         title = join('seamanslog', self.kwargs['title'])
+#         photo = 'MarkSeaman.100.png'
+#         url = join('https://seamanslog.com', self.request.path[1:])
+#         readmore = url, url
+#         kwargs = dict(title=title, photo=photo, readmore=readmore)
+#         return super(SeamansLog, self).get_context_data(**kwargs)
 
 
-# class TestDoc(TemplateView):
-#     template_name = 'mybook_test.html'
+class SeamansLog(RedirectView):
+
+    def get_redirect_url(self, *args, **kwargs):
+        files = listdir(join('Documents', 'seamanslog'))
+        file = choice(files)
+        return '/seamanslog/%s' % (file)
+
+
+class SpiritualSelect(RedirectView):
+    permanent = False
+
+    def get_redirect_url(self, *args, **kwargs):
+        title = kwargs.get('title')
+        if not title:
+            title = choice(['reflect', 'teaching', 'prayers', 'bible'])
+        files = listdir(join('Documents', 'spiritual', title))
+        file = choice(files)
+        return '/spiritual/%s/%s' % (title, file)
 
 
 class TabsView(MyBookDocDisplay):
@@ -105,15 +112,3 @@ class TabsView(MyBookDocDisplay):
         kwargs = dict(title=tabs[0][1], doc=doc, tabs=tabs)
         return super(TabsView, self).get_context_data(**kwargs)
 
-
-# class TodayView(LoginRequiredMixin, MyBookDocDisplay):
-#
-#     def get_context_data(self, **kwargs):
-#         context = super(TodayView, self).get_context_data(**kwargs)
-#         context.update({
-#             'site': ('Today', 'Next Step'),
-#             'title': 'Today Matters Most',
-#             'text': doc_html_text('spiritual/Home'),
-#             'menu': main_menu('brain', 'brain/Index'),
-#         })
-#         return context
