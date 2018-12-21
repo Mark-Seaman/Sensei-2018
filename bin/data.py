@@ -46,7 +46,7 @@ def data_backup(host):
     print('Saving data on '+host)
     data_save(host)
     data_sql(host)
-    system('x vc Automatic data backup')
+    system('git add data && git commit -m "Automatic data backup" && git pull && git push')
 
 
 def data_count(host):

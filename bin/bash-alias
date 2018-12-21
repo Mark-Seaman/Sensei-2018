@@ -162,6 +162,7 @@ alias vc='x vc'
 alias w2w='. $HOME/Projects/w2w/bin/bashrc'
 alias wam='. $HOME/Projects/w2w/bin/bashrc'
 alias web='x web'
+alias wh='. /Users/seaman/Rest/bashrc'
 alias who2hire='. $HOME/Projects/Who2Hire/bin/bashrc'
 alias wp='x wordpress '
 

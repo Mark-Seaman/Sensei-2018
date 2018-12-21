@@ -30,6 +30,7 @@ export PATH=$p:\
 $p/bin:\
 /bin:\
 /sbin:\
+/usr/local/sbin:\
 /usr/local/bin:\
 /opt/local/bin:\
 /usr/bin:\
