@@ -746,9 +746,9 @@
     },
     {
         "fields": {
-            "expected": "Thu Dec 20 13:51:36 MST 2018\n",
+            "expected": "Fri Dec 21 15:49:37 MST 2018\n",
             "name": "tst-time",
-            "output": "Fri Dec 21 14:00:45 MST 2018\n"
+            "output": "Sat Dec 22 07:00:56 MST 2018\n"
         },
         "model": "tool.test",
         "pk": 58
@@ -1043,9 +1043,9 @@
     },
     {
         "fields": {
-            "expected": "Not your time 13:00",
+            "expected": "Not your time 15:00",
             "name": "doc-render",
-            "output": "Not your time 14:00"
+            "output": "Not your time 7:00"
         },
         "model": "tool.test",
         "pk": 91
@@ -1061,7 +1061,7 @@
     },
     {
         "fields": {
-            "expected": "shell(x doc search Hammer) --> 93 lines (should be between 160 and 170)",
+            "expected": "no output",
             "name": "doc-search",
             "output": "no output"
         },
