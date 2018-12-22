@@ -12,7 +12,6 @@ alias book='x book'
 alias booknotes='x booknotes'
 
 alias calendar='x web https://calendar.google.com/calendar/render?pli=1#main_7'
-alias ce='x cmd edit'
 alias chrome='open /Applications/Google\ Chrome.app/'
 alias cl='x cmd list'
 alias cmd='x cmd'
@@ -122,8 +121,13 @@ alias x=''; unalias x
 # ------------------------------
 # Functions
 
-function x {
-    sh -c "python $p/bin/x.py $*"
+function bup {
+    echo 'Commit and push code to Bluehost'
+    co "$*" && bluepull
+}
+
+function ce {
+    cd $p && e */$1.py
 }
 
 function d {
@@ -142,16 +146,15 @@ function d {
     echo $d; pushd $d; ls -al
 }
 
-function bup {
-    echo 'Commit and push code to Bluehost'
-    co "$*" && bluepull
+function show {
+    e `which $1`
 }
 
 function teach {
     x guide lesson Teaching/$1.md
 }
 
-function show {
-    e `which $1`
+function x {
+    sh -c "python $p/bin/x.py $*"
 }
 
