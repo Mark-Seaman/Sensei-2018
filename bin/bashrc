@@ -5,13 +5,14 @@ if [ `hostname` == 'MyBook' ]
 then
     export p=$HOME/MyBook
 else
+    # TODO:  replace with $HOME/Sensei
     export p=$HOME/Projects/MyBook
 fi
 echo "p = $p"
 # ls $p
 
 export PROJECT_BASE="$HOME/Projects/Hammer"
-export SERVER_DIR=/home/django/MyBook
+export SERVER_DIR="/home/django/MyBook"
 export imac='seaman@10.0.0.48'
 export macbook='markseaman@10.0.0.167'
 export hammer='seaman@172.16.0.2'
@@ -19,8 +20,6 @@ export blue='uncobacs@unco-bacs.org'
 export book="$HOME/Projects/Leverage"
 export mbw="$HOME/Archive/rcp/mbw"
 export CLICOLOR=true
-export u2="$HOME/Projects/UNC/BACS200/Notes"
-export u3="$HOME/Projects/UNC/BACS350/Notes"
 export s="$HOME/Sensei"
 
 cat $p/bin/welcome
@@ -36,13 +35,15 @@ $p/bin:\
 /usr/bin:\
 /usr/local/mysql/bin
 
- 
-echo 'PATH = ' $PATH
-export _OLD_VIRTUAL_PATH=$PATH
+
+# Replace with pipenv
+
+# echo 'PATH = ' $PATH
+# export _OLD_VIRTUAL_PATH=$PATH
 
 
-[ -f ~/Tools/env-python27/bin/activate ] &&
-. ~/Tools/env-python27/bin/activate
+# [ -f ~/Tools/env-python27/bin/activate ] &&
+# . ~/Tools/env-python27/bin/activate
 echo "Active python = `which python`"
 echo
 

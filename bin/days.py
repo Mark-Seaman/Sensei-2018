@@ -103,7 +103,7 @@ def days_weeks(num_weeks):
             start = '2018-08-20'
             for i, d in enumerate(enumerate_weeks(to_date(start), days)):
                 f.write('Week %s - %s\n' % (i, d))
-                print 'Week %s - %s\n' % (i+1, d)
+                print('Week %s - %s\n' % (i+1, d))
 
     weekly_schedule('Documents/unc/schedule.csv', int(num_weeks)*7)
 

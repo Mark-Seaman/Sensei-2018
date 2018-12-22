@@ -49,7 +49,7 @@ People 0
 
 
 def edit_task_file(date):
-    print date
+    print(date)
     f = 'Documents/info/days/%s' % date
     if not exists(f):
         open(f, 'w').write(task_default % datetime.now().strftime("%A"))

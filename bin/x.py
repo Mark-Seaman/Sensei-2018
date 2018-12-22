@@ -6,18 +6,13 @@ from book import book_command
 from booknotes import booknotes_command
 from cmd import cmd_command
 from data import data_command
-from datatype import datatype_command
-from days import days_command
 from doc import doc_command
-from faceblog import faceblog_command
-from guide import guide_command
 from hourly import hourly_command
 from i import i_command
 from log import log_command
 from music import music_command
 from ops import ops_command
 from seamanslog import seamanslog_command
-from src import src_command
 from text import text_command
 from todo import todo_command
 from tool import tool_command
@@ -37,10 +32,6 @@ def execute_command(cmd,args):
     elif cmd == 'booknotes':
         booknotes_command(args)
     
-    elif cmd == 'church':
-        command_scriptor(cmd, args)
-    
-
     elif cmd == 'email':
         command_scriptor(cmd, args)
     
@@ -50,17 +41,8 @@ def execute_command(cmd,args):
     elif cmd == 'data':
         data_command(args)
     
-    elif cmd == 'datatype':
-        datatype_command(args)
-    
-    elif cmd == 'days':
-        days_command(args)
-    
     elif cmd == 'doc':
         doc_command(args)
-    
-    elif cmd == 'faceblog':
-        faceblog_command(args)
     
     elif cmd == 'guide':
         guide_command(args)
@@ -98,18 +80,12 @@ def execute_command(cmd,args):
     elif cmd == 'seamanslog':
         seamanslog_command(args)
     
-    elif cmd == 'src':
-        src_command(args)
-    
     elif cmd == 'task':
         command_scriptor(cmd, args)
     
     elif cmd == 'text':
         text_command(args)
     
-    elif cmd == 'thot':
-        command_scriptor(cmd, args)
-
     elif cmd == 'todo':
         todo_command(args)
     

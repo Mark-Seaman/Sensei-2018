@@ -22,7 +22,7 @@ def app_command(options):
             app_classes(args)
 
         elif cmd == 'dirs':
-            print '\n'.join(app_directories())
+            print ('\n'.join(app_directories()))
 
         elif cmd == 'edit':
             shell('e %s' % app_path(APP_DIR + '/' + args[0] + '.py'))
@@ -197,13 +197,13 @@ def app_urls():
         url = url.replace('.as_view()', '')
         return url
 
-    print 'Find all the URLs for the app'
+    print('Find all the URLs for the app')
     for s in app_source():
         m = text_match('^ *url\(.*', s)
         if m:
             m = [simplify(url) for url in m]
-            print '\n' + s + '\n'
-            print '\n'.join(m)
+            print('\n' + s + '\n')
+            print('\n'.join(m))
 
 
 def run_server():
