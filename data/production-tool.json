@@ -1416,7 +1416,7 @@
         "fields": {
             "expected": "Thu Dec 20 14:03:08 MST 2018\n",
             "name": "tst-time",
-            "output": "Fri Dec 21 14:00:11 MST 2018\n"
+            "output": "Sat Dec 22 07:00:10 MST 2018\n"
         },
         "model": "tool.test",
         "pk": 158
@@ -1578,7 +1578,7 @@
         "fields": {
             "expected": "Not your time 14:00",
             "name": "doc-render",
-            "output": "Not your time 14:00"
+            "output": "Not your time 7:00"
         },
         "model": "tool.test",
         "pk": 176
