@@ -36,16 +36,8 @@ $p/bin:\
 /usr/bin:\
 /usr/local/mysql/bin
 
- 
-echo 'PATH = ' $PATH
-export _OLD_VIRTUAL_PATH=$PATH
-
-
-[ -f ~/Tools/env-python27/bin/activate ] &&
-. ~/Tools/env-python27/bin/activate
-echo "Active python = `which python`"
-echo
-
+echo Setup Virtual Environment for Python
+echo '. bin/venv'
 
 . $p/bin/bash-alias
 . $p/bin/bash-prompt

@@ -1,0 +1,13 @@
+#!/bin/bash
+# Setup Virtual Environment for Python
+
+echo Setup Virtual Environment for Python
+
+echo 'PATH = ' $PATH
+export _OLD_VIRTUAL_PATH=$PATH
+
+
+[ -f ~/Tools/env-python27/bin/activate ] &&
+. ~/Tools/env-python27/bin/activate
+echo "Active python = `which python`"
+echo
