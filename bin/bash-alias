@@ -103,7 +103,7 @@ alias tres='x tst results|less'
 alias trun='x tst run'
 alias tst='x tst'
 
-alias u='cd ..'
+alias u='cd ..; l'
 export unc="$HOME/Projects/UNC"
 alias unc=". $unc/bin/bashrc-mac"
 alias user='x user'
