@@ -10,6 +10,7 @@ fi
 echo "p = $p"
 # ls $p
 
+export PIPENV_IGNORE_VIRTUALENVS=1
 export PROJECT_BASE="$HOME/Projects/Hammer"
 export SERVER_DIR=/home/django/MyBook
 export imac='seaman@10.0.0.48'
