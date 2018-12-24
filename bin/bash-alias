@@ -83,7 +83,7 @@ alias question='x hire question'
 
 alias r=reset
 alias rc='. ~/Rest/bashrc'
-alias rest='cd /Users/seaman/Rest/library && echo ". ~/Rest/bashrc" && echo pipenv shell'
+alias rest='cd ~/Rest/library && echo pipenv shell'
 alias robot='x robot'
 
 alias s='x app search'
