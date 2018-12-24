@@ -16,7 +16,7 @@
 #
 #     def test_host(self):
 #         from platform import node
-#         self.assertIn('MyBookOnline.org', node())
+#         self.assertIn('markseaman.org', node())
 #
 #     # def test_version_control(self):
 #     #     expected = "On branch master\nYour branch is up-to-date with 'origin/master'.\n\nnothing to commit, working directory clean\n"
