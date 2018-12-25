@@ -103,9 +103,9 @@ alias tres='x tst results|less'
 alias trun='x tst run'
 alias tst='x tst'
 
-alias u='cd ..'
-export unc="$HOME/Projects/UNC"
-alias unc=". $unc/bin/bashrc-mac"
+alias u='cd ..; l'
+export unc="$HOME/UNC"
+alias unc=". $unc/bashrc"
 alias user='x user'
 alias update='x ops update'
 
@@ -132,18 +132,9 @@ function ce {
 
 function d {
     d=$1
-    [ "$1" == "html" ]  && d="$p/Documents/guide/HtmlApps"
-    [ "$1" == "ihtml" ] && d="$p/static/images/guide/HtmlApps"
-    [ "$1" == "chtml" ] && d="$p/Documents/guide/HtmlApps/web-root"
-    [ "$1" == "lhtml" ] && d="$p/Documents/guide/HtmlApps/lesson"
-    [ "$1" == "php" ]   && d="$p/Documents/guide/PhpApps"
-    [ "$1" == "cphp" ]  && d="$p/Documents/guide/PhpApps/web-root"
-    [ "$1" == "lphp" ]  && d="$p/Documents/guide/PhpApps/lesson"
-    [ "$1" == "iphp" ]  && d="$p/static/images/guide/PhpApps"
-    [ "$1" == "teach" ] && d="$p/Documents/guide/Teaching"
     [ "$1" == "books" ] && d="$p/Documents/booknotes"
     [ "$1" == "htdocs" ] && d="/Applications/XAMPP/xamppfiles/htdocs"
-    echo $d; pushd $d; ls -al
+    echo $d && cd $d && ls -al
 }
 
 function show {
