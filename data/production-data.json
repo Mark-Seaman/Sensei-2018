@@ -49603,7 +49603,7 @@
         "fields": {
             "expected": "shell(ifconfig) --> 23 lines (should be between 62 and 69)",
             "name": "system-ip",
-            "output": "shell(ifconfig) --> 23 lines (should be between 62 and 69)"
+            "output": "shell(ifconfig) --> 23 lines (should be between 51 and 69)"
         },
         "model": "tool.test",
         "pk": 41
@@ -50656,7 +50656,7 @@
         "fields": {
             "expected": "Sun Dec 23 06:56:29 MST 2018\n",
             "name": "tst-time",
-            "output": "Mon Dec 24 07:00:11 MST 2018\n"
+            "output": "Tue Dec 25 07:00:12 MST 2018\n"
         },
         "model": "tool.test",
         "pk": 158
