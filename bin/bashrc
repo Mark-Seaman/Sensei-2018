@@ -5,10 +5,10 @@ if [ `hostname` == 'MyBook' ]
 then
     export p=$HOME/MyBook
 else
-    export p=$HOME/Projects/MyBook
+    export p=$HOME/Sensei
 fi
 echo "p = $p"
-# ls $p
+
 
 export PIPENV_IGNORE_VIRTUALENVS=1
 export PROJECT_BASE="$HOME/Projects/Hammer"
@@ -37,11 +37,11 @@ $p/bin:\
 /usr/bin:\
 /usr/local/mysql/bin
 
-echo Setup Virtual Environment for Python
-echo '. bin/venv'
+echo 've - Virtual Environment for MyBook'
+echo 'rc - Virtual Environment for Rest'
 
 . $p/bin/bash-alias
 . $p/bin/bash-prompt
 
 cd $p
-
+ls -l $p
