@@ -14,15 +14,6 @@ def app_functions_test():
     return check_shell_lines('x app functions', 800, 1000)
 
 
-def app_html_files_test():
-    if 'MyBook' in environ['p']:
-        files = file_tree_list(join(environ['p'], 'tool', 'templates'), '.html')
-        return check_lines('HTML file list', '\n'.join(files), 11, 32)
-    else:
-        files = file_tree_list(join(environ['p'], 'templates'), '.html')
-        return check_lines('HTML file list', '\n'.join(files), 34, 34)
-
-
 def app_list_test():
     return shell('x app list')
 
