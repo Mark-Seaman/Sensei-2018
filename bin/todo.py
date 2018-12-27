@@ -20,7 +20,7 @@ def todo_command(options):
     else:
         for d in recent_dates():
             edit_task_file(d)
-        system('e Documents/ideas')
+        system('e Documents/info/ideas Documents/info/Index')
 
 
 def recent_dates(days=3):

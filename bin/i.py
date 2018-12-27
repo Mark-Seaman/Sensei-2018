@@ -38,7 +38,7 @@ def i_help(args=None):
 # Functions
 
 def doc_path():
-    return join(environ['p'], 'Documents', 'ideas')
+    return join(environ['p'], 'Documents', 'info', 'ideas')
 
 def i_add(args):
     if args:
