@@ -8,13 +8,10 @@ from sys import argv
 from switches import APP_PORT
 
 
-# ------------------------------
-# Command Interpreter
-
 def web_command(args):
     '''Execute all of the web specific webs'''
-    print('COMMAND web %s' % args)
     if args:
+        print('web %s' % args[0])
         web(args[0])
 
     else:
@@ -24,16 +21,7 @@ def web_command(args):
 def web_help():
     '''Show all the web webs and their usage.'''
     print('''
-    usage:  web cmd [args]
-
-    cmd:
-
-        dev         - Local website
-        github      - Go the Github site
-        mybook      - My Book Online website
-        test        - Show local test results
-        time        - Track time for project
-
+    usage:  web page
             ''')
 
 
