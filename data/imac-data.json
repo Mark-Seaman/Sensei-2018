@@ -244,7 +244,7 @@
         "fields": {
             "expected": "no output",
             "name": "vc-status",
-            "output": "no output"
+            "output": "shell(x vc status) --> 26 lines (should be between 1 and 22)"
         },
         "model": "tool.test",
         "pk": 2
@@ -748,7 +748,7 @@
         "fields": {
             "expected": "Tue Dec 25 09:02:33 MST 2018\n",
             "name": "tst-time",
-            "output": "Wed Dec 26 07:00:36 MST 2018\n"
+            "output": "Thu Dec 27 07:00:14 MST 2018\n"
         },
         "model": "tool.test",
         "pk": 58
@@ -1126,7 +1126,7 @@
         "fields": {
             "expected": "Ideas for Today\n-----------------\n\nupdate Django and Python\ncreate classroom for BACS 200\nstudent registration\nLearn about pipenv\ndaily ideation\nestablish new standard programming context\ngather work in progress\nlimit log file\nuse GTD\ncreate Writers Notebook\ncontinue life story\nbuild private notes and public notes\ntrust is confidence in character, competence, and compassion\ncodecademy\ncodec MS1959-camdseaman\nexplore Codecademy\ntake Python3 codecademy course\ndebug workflow for Rest, MyBook, UNC\n\n",
             "name": "i-list",
-            "output": "Ideas for Today\n-----------------\n\nPlan\ndaily ideation\ngather work in progress\nuse GTD\n\nBuild\nupdate Django and Python\nLearn about pipenv\nestablish new standard programming context\ndebug workflow for Rest, MyBook, UNC\nlimit log file\ntest private notes \n\nLearn\ncreate Writers Notebook\ncontinue life story\ntrust is confidence in character, competence, and compassion\nexplore Codecademy\n\nTeach\ncreate classroom for BACS 200\nstudent registration\n\n\n"
+            "output": "Ideas for Today\n-----------------\n\nWork\n    Plan\n        monthly objectives\n        daily ideation\n        gather work in progress\n        use GTD\n        1000 goals\n        activate debit card\n\n    Build\n        update Django and Python libraries\n        establish new standard programming context\n        debug workflow for Rest, MyBook, UNC\n        limit log file\n        test private notes \n        letsencrypt\n        create pycharm project for Rest\n        optimize ideas script\n\n    Learn\n        create Writers Notebook\n        continue life story\n        trust is confidence in character, competence, and compassion\n        Organize evernotes\n\n    Teach\n        create classroom for BACS 200\n        student registration\n        Select notes for writing topics\n        perfectionism\n        thoughts on humility\n        Seamans Guide to Python Apps\n\nPeople\n\nFun\n    vinyl records\n\nGrow\n    prayer time\n    organize brain notes\n    think about emotional development\n    establish writing habit\n\n\n"
         },
         "model": "tool.test",
         "pk": 100
