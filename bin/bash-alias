@@ -22,7 +22,7 @@ alias console='x ops console'
 
 alias data='x data'
 alias de='x doc edit'
-alias deploy='x ops deploy; x web'
+alias deploy='x ops deploy; x web https://shrinking-world.com/unc/bacs200'
 alias dj='cd $p && python ./manage.py'
 alias dl='x doc list'
 alias doc='cd $p/Documents; cd'
