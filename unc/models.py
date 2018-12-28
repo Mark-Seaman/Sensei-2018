@@ -12,7 +12,7 @@ class Course(models.Model):
 
 
 class Student(models.Model):
-    course = models.ForeignKey(Course, default=1)
+    course  = models.ForeignKey(Course, default=1)
     name    = models.CharField(max_length=100)
     email   = models.CharField(max_length=40)
     domain  = models.CharField(max_length=100)
