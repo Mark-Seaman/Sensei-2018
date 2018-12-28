@@ -1416,7 +1416,7 @@
         "fields": {
             "expected": "Tue Dec 25 09:00:11 MST 2018\n",
             "name": "tst-time",
-            "output": "Thu Dec 27 07:00:11 MST 2018\n"
+            "output": "Fri Dec 28 07:00:12 MST 2018\n"
         },
         "model": "tool.test",
         "pk": 158
@@ -1470,7 +1470,7 @@
         "fields": {
             "expected": "Ideas for Today\n-----------------\n\nupdate Django and Python\ncreate classroom for BACS 200\nstudent registration\nLearn about pipenv\ndaily ideation\nestablish new standard programming context\ngather work in progress\nlimit log file\nuse GTD\ncreate Writers Notebook\ncontinue life story\nbuild private notes and public notes\ntrust is confidence in character, competence, and compassion\ncodecademy\ncodec MS1959-camdseaman\nexplore Codecademy\ntake Python3 codecademy course\ndebug workflow for Rest, MyBook, UNC\n\n",
             "name": "i-list",
-            "output": "Ideas for Today\n-----------------\n\nupdate Django and Python\ncreate classroom for BACS 200\nstudent registration\nLearn about pipenv\ndaily ideation\nestablish new standard programming context\ngather work in progress\nlimit log file\nuse GTD\ncreate Writers Notebook\ncontinue life story\nbuild private notes and public notes\ntrust is confidence in character, competence, and compassion\ncodecademy\ncodec MS1959-camdseaman\nexplore Codecademy\ntake Python3 codecademy course\ndebug workflow for Rest, MyBook, UNC\n\n"
+            "output": "no output"
         },
         "model": "tool.test",
         "pk": 164
