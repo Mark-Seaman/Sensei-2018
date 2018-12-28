@@ -13,22 +13,9 @@ from switches import APP_PORT
 
 def web_command(args):
     '''Execute all of the web specific webs'''
-    cmd = args[0] if args else 'mybook'
-
-    if cmd=='dev':
-        web('http://localhost:%s/%s' % (APP_PORT, '/'.join(args[1:])))
-
-    elif cmd=='github':
-        web('https://github.com/Shrinking-World/MyBook.git')
-
-    elif cmd=='mybook':
-        web('http://markseaman.org')
-
-    elif cmd=='test':
-        web('http://localhost:%s/%s' % (APP_PORT, 'superuser/tests'))
-
-    elif cmd=='time':
-        web('http://markseaman.info')
+    print('COMMAND web %s' % args)
+    if args:
+        web(args[0])
 
     else:
         web_help()
