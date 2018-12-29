@@ -21,4 +21,5 @@ def list_students():
     '''
 
     print('list_students')
-    print ('\n'.join(Student.objects.all()))
+    for s in Student.objects.all():
+        print(str(s))
