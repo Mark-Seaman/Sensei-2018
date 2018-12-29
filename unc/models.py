@@ -16,8 +16,6 @@ class Student(models.Model):
     name    = models.CharField(max_length=100)
     email   = models.CharField(max_length=40)
     domain  = models.CharField(max_length=100)
-    reviewer_score = models.IntegerField(default=100)
-    designer_score = models.IntegerField(default=100)
 
     def __unicode__(self):
         return '%s, %s, %s' % (self.email, self.name, self.domain)
@@ -30,37 +28,7 @@ class Review(models.Model):
     score       = models.IntegerField(default=-1)
     date        = models.DateTimeField(default=now, editable=False)
     due         = models.DateTimeField(default='2018-09-01', editable=False)
-    requirement_1 = models.BooleanField(default=False)
-    requirement_2 = models.BooleanField(default=False)
-    requirement_3 = models.BooleanField(default=False)
-    requirement_4 = models.BooleanField(default=False)
-    requirement_5 = models.BooleanField(default=False)
-    requirement_6 = models.BooleanField(default=False)
-    requirement_7 = models.BooleanField(default=False)
-    requirement_8 = models.BooleanField(default=False)
-    requirement_9 = models.BooleanField(default=False)
-    requirement_10 = models.BooleanField(default=False)
-    notes       = models.TextField(default='You must type a summary of problems.')
-    # , validators=[MinLengthValidator(100)])
+    requirements = models.TextField(default='NONE')
+    notes       = models.TextField(default='You must type a summary of problems.', validators=[MinLengthValidator(100)])
 
 
-class ReviewScore(models.Model):
-    date        = models.DateTimeField(default=now, editable=False)
-    score       = models.IntegerField()
-    designer    = models.CharField(max_length=20)
-    reviewer    = models.CharField(max_length=20)
-    notes       = models.TextField(validators=[MinLengthValidator(500)])
-
-
-class ReviewerScore(models.Model):
-    date        = models.DateTimeField(default=now, editable=False)
-    score       = models.IntegerField()
-    designer    = models.CharField(max_length=20)
-    reviewer    = models.CharField(max_length=20)
-    notes       = models.TextField()
-
-
-
-# Test Cases
-
-# score_add(50, 'seam1870', 'seam1870', 'some notes')
