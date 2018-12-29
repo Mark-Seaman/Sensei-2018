@@ -2,9 +2,10 @@
 
 
 def import_students():
-    ```
-        usage:   dj shell
+    '''
+    usage:   dj shell
          $ from unc.student import *
          $ import_students()
-    ```
+    '''
+
     print('import_students')
