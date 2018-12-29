@@ -1,5 +1,9 @@
-# Import list of students
+from csv import reader
+from traceback import format_exc
+
 from unc.models import Student
+from tool.log import log_exception
+from tool.user import user_add
 
 
 def import_students():
@@ -8,9 +12,18 @@ def import_students():
          $ from unc.student import *
          $ import_students()
     '''
-
-    print('import_students')
-    print(open('data/students.csv').read())
+    data_file = 'data/students.csv'
+    print('Import students from %s')
+    with open(data_file) as f:
+        for row in reader(f):
+            try:
+                print("Import user %s " % row)
+                user_add(row[0], row[1], row[2])
+            except:
+                print("*** %s ***" % row)
+                log_exception()
+                print(format_exc())
+    list_students()
 
 
 def list_students():

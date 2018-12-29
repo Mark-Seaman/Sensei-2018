@@ -55,7 +55,6 @@ def user_add(name, email, password='test'):
     first = name.split()[0]
     last = name.split()[-1]
     username = name.replace(' ', '')
-    # print(name, first, last, username, email)
     u = User.objects.get_or_create(username=username)[0]
     u.first_name = first
     u.last_name = last
