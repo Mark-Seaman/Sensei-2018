@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'superuser',
     'tasks',
     'tool',
+    'unc',
 ]
 
 MIDDLEWARE_CLASSES = [

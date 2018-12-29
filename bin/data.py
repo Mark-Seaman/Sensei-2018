@@ -79,7 +79,7 @@ def data_load(host):
 
 
 def data_migrate():
-    modules = 'aspire doc guide health life mybook superuser tool tasks unc'
+    modules = 'health life superuser tool tasks unc'
     system ('''
         cd $p
         # rm */migrations/*
@@ -88,56 +88,22 @@ def data_migrate():
         ''' % modules)
 
 data_table_list = '''
-aspire_client
-aspire_node
 auth_group
 auth_group_permissions
 auth_permission
 auth_user
 auth_user_groups
 auth_user_user_permissions
-church_church            
-church_churchbudget      
-church_churchbudgettarget
-church_churchevent       
-church_churchscore       
-church_leader            
-contact_contact          
 django_admin_log
 django_content_type
 django_migrations
 django_session
 health_healthscore       
-mybook_author
-mybook_book
 superuser_administrator
 tasks_client 
 tasks_project 
 tasks_task 
-thot_thot 
-tool_page
-tool_project
-tool_test
-webapp_webapp 
 '''
-
-data_table_extras = '''
-hire_candidate 
-hire_company 
-hire_interview 
-hire_interviewer 
-hire_interviewer_sessions
-hire_interviewer_skills  
-hire_interviewresponse 
-hire_manager 
-hire_opening 
-hire_question 
-hire_session             
-hire_skill 
-w2w_person               
-w2w_case_voter           
-'''
-
 
 def data_reset():
     if SERVER_TYPE == 'dev':
