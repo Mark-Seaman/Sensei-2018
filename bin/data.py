@@ -1,5 +1,8 @@
 from os import system
+from subprocess import PIPE, Popen
 
+
+from shell import shell
 from log import log
 from switches import SERVER_TYPE
 
@@ -98,12 +101,20 @@ django_admin_log
 django_content_type
 django_migrations
 django_session
-health_healthscore       
+health_healthscore
+life_aspect
+life_experience
+life_year
 superuser_administrator
-tasks_client 
-tasks_project 
-tasks_task 
+tasks_task
+tool_page
+tool_project
+tool_test
+tasks_client
+tasks_project
+tasks_task
 '''
+
 
 def data_reset():
     if SERVER_TYPE == 'dev':
@@ -153,6 +164,20 @@ def data_sql(host):
 
 def data_tables():
     if SERVER_TYPE != 'dev':
-        system('echo "\dt" | psql')
+        p = Popen('psql', stdin=PIPE, stdout=PIPE)
+        tables = p.communicate('\dt')[0]
+        print (tables)
     else:
         print('This server does not support Postgres')
+
+
+def data_prune_tables():
+    p = Popen('psql', stdin=PIPE, stdout=PIPE)
+    tables = p.communicate('\dt')[0].split('\n')
+    sql = ''
+    for t in tables[3:-1]:
+        t = t[10:37].strip()
+        if not t in data_table_list.split('\n'):
+            sql += 'drop table %s;' % t
+    print ('SQL '+sql)
+

@@ -23,3 +23,14 @@ def list_students():
     print('list_students')
     for s in Student.objects.all():
         print(str(s))
+
+
+def delete_students():
+    '''
+    usage:   dj shell
+         $ from unc.student import *
+         $ delete_students()
+    '''
+
+    print('delete_students')
+    Student.objects.all().delete()
