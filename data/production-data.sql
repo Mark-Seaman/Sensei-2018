@@ -33,179 +33,6 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: aspire_client; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.aspire_client (
-    id integer NOT NULL,
-    organization character varying(100) NOT NULL,
-    user_id integer NOT NULL
-);
-
-
-ALTER TABLE public.aspire_client OWNER TO django;
-
---
--- Name: aspire_client_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.aspire_client_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.aspire_client_id_seq OWNER TO django;
-
---
--- Name: aspire_client_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.aspire_client_id_seq OWNED BY public.aspire_client.id;
-
-
---
--- Name: aspire_goal; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.aspire_goal (
-    id integer NOT NULL,
-    name character varying(100) NOT NULL,
-    parent_id integer
-);
-
-
-ALTER TABLE public.aspire_goal OWNER TO django;
-
---
--- Name: aspire_goal_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.aspire_goal_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.aspire_goal_id_seq OWNER TO django;
-
---
--- Name: aspire_goal_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.aspire_goal_id_seq OWNED BY public.aspire_goal.id;
-
-
---
--- Name: aspire_node; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.aspire_node (
-    id integer NOT NULL,
-    title character varying(100) NOT NULL,
-    text text NOT NULL,
-    "order" integer NOT NULL,
-    parent_id integer
-);
-
-
-ALTER TABLE public.aspire_node OWNER TO django;
-
---
--- Name: aspire_node_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.aspire_node_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.aspire_node_id_seq OWNER TO django;
-
---
--- Name: aspire_node_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.aspire_node_id_seq OWNED BY public.aspire_node.id;
-
-
---
--- Name: aspire_project; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.aspire_project (
-    id integer NOT NULL,
-    name character varying(100) NOT NULL,
-    hours integer NOT NULL,
-    role_id integer
-);
-
-
-ALTER TABLE public.aspire_project OWNER TO django;
-
---
--- Name: aspire_project_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.aspire_project_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.aspire_project_id_seq OWNER TO django;
-
---
--- Name: aspire_project_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.aspire_project_id_seq OWNED BY public.aspire_project.id;
-
-
---
--- Name: aspire_role; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.aspire_role (
-    id integer NOT NULL,
-    name character varying(100) NOT NULL,
-    client_id integer NOT NULL
-);
-
-
-ALTER TABLE public.aspire_role OWNER TO django;
-
---
--- Name: aspire_role_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.aspire_role_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.aspire_role_id_seq OWNER TO django;
-
---
--- Name: aspire_role_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.aspire_role_id_seq OWNED BY public.aspire_role.id;
-
-
---
 -- Name: auth_group; Type: TABLE; Schema: public; Owner: django
 --
 
@@ -418,118 +245,6 @@ ALTER SEQUENCE public.auth_user_user_permissions_id_seq OWNED BY public.auth_use
 
 
 --
--- Name: church_budget; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.church_budget (
-    id integer NOT NULL,
-    dollars integer NOT NULL,
-    date date NOT NULL,
-    category_id integer NOT NULL
-);
-
-
-ALTER TABLE public.church_budget OWNER TO django;
-
---
--- Name: church_budget_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.church_budget_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.church_budget_id_seq OWNER TO django;
-
---
--- Name: church_budget_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.church_budget_id_seq OWNED BY public.church_budget.id;
-
-
---
--- Name: church_budgetcategory; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.church_budgetcategory (
-    id integer NOT NULL,
-    name character varying(100) NOT NULL,
-    is_cumulative boolean NOT NULL,
-    is_expense boolean NOT NULL,
-    church_id integer NOT NULL
-);
-
-
-ALTER TABLE public.church_budgetcategory OWNER TO django;
-
---
--- Name: church_budgetcategory_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.church_budgetcategory_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.church_budgetcategory_id_seq OWNER TO django;
-
---
--- Name: church_budgetcategory_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.church_budgetcategory_id_seq OWNED BY public.church_budgetcategory.id;
-
-
---
--- Name: church_money; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.church_money (
-    id integer NOT NULL,
-    giving integer NOT NULL,
-    staff integer NOT NULL,
-    operations integer NOT NULL,
-    ministry integer NOT NULL,
-    rent integer NOT NULL,
-    building integer NOT NULL,
-    other_revenue integer NOT NULL,
-    month character varying(10) NOT NULL,
-    designated integer NOT NULL
-);
-
-
-ALTER TABLE public.church_money OWNER TO django;
-
---
--- Name: church_money_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.church_money_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.church_money_id_seq OWNER TO django;
-
---
--- Name: church_money_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.church_money_id_seq OWNED BY public.church_money.id;
-
-
---
 -- Name: django_admin_log; Type: TABLE; Schema: public; Owner: django
 --
 
@@ -650,111 +365,6 @@ CREATE TABLE public.django_session (
 
 
 ALTER TABLE public.django_session OWNER TO django;
-
---
--- Name: doc_doc; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.doc_doc (
-    id integer NOT NULL,
-    title character varying(100) NOT NULL,
-    path character varying(100) NOT NULL,
-    user_id integer NOT NULL
-);
-
-
-ALTER TABLE public.doc_doc OWNER TO django;
-
---
--- Name: doc_doc_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.doc_doc_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.doc_doc_id_seq OWNER TO django;
-
---
--- Name: doc_doc_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.doc_doc_id_seq OWNED BY public.doc_doc.id;
-
-
---
--- Name: guide_course; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.guide_course (
-    id integer NOT NULL,
-    title character varying(100) NOT NULL,
-    course character varying(20) NOT NULL,
-    teacher character varying(100) NOT NULL
-);
-
-
-ALTER TABLE public.guide_course OWNER TO django;
-
---
--- Name: guide_course_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.guide_course_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.guide_course_id_seq OWNER TO django;
-
---
--- Name: guide_course_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.guide_course_id_seq OWNED BY public.guide_course.id;
-
-
---
--- Name: guide_student; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.guide_student (
-    id integer NOT NULL,
-    name character varying(100) NOT NULL,
-    email character varying(40) NOT NULL,
-    domain character varying(100) NOT NULL
-);
-
-
-ALTER TABLE public.guide_student OWNER TO django;
-
---
--- Name: guide_student_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.guide_student_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.guide_student_id_seq OWNER TO django;
-
---
--- Name: guide_student_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.guide_student_id_seq OWNED BY public.guide_student.id;
-
 
 --
 -- Name: health_healthscore; Type: TABLE; Schema: public; Owner: django
@@ -897,77 +507,6 @@ ALTER TABLE public.life_year_id_seq OWNER TO django;
 --
 
 ALTER SEQUENCE public.life_year_id_seq OWNED BY public.life_year.id;
-
-
---
--- Name: mybook_author; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.mybook_author (
-    id integer NOT NULL,
-    organization character varying(100) NOT NULL,
-    user_id integer NOT NULL
-);
-
-
-ALTER TABLE public.mybook_author OWNER TO django;
-
---
--- Name: mybook_author_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.mybook_author_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.mybook_author_id_seq OWNER TO django;
-
---
--- Name: mybook_author_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.mybook_author_id_seq OWNED BY public.mybook_author.id;
-
-
---
--- Name: mybook_book; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.mybook_book (
-    id integer NOT NULL,
-    title character varying(100) NOT NULL,
-    doc character varying(300) NOT NULL,
-    hours integer NOT NULL,
-    author_id integer NOT NULL,
-    published character varying(300)
-);
-
-
-ALTER TABLE public.mybook_book OWNER TO django;
-
---
--- Name: mybook_book_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.mybook_book_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.mybook_book_id_seq OWNER TO django;
-
---
--- Name: mybook_book_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.mybook_book_id_seq OWNED BY public.mybook_book.id;
 
 
 --
@@ -1148,446 +687,6 @@ ALTER SEQUENCE public.tool_test_id_seq OWNED BY public.tool_test.id;
 
 
 --
--- Name: unc_course; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.unc_course (
-    id integer NOT NULL,
-    name character varying(20) NOT NULL,
-    title character varying(20) NOT NULL
-);
-
-
-ALTER TABLE public.unc_course OWNER TO django;
-
---
--- Name: unc_course_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.unc_course_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.unc_course_id_seq OWNER TO django;
-
---
--- Name: unc_course_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.unc_course_id_seq OWNED BY public.unc_course.id;
-
-
---
--- Name: unc_review; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.unc_review (
-    id integer NOT NULL,
-    page character varying(100) NOT NULL,
-    score integer NOT NULL,
-    date timestamp with time zone NOT NULL,
-    requirement_1 boolean NOT NULL,
-    requirement_2 boolean NOT NULL,
-    requirement_3 boolean NOT NULL,
-    requirement_4 boolean NOT NULL,
-    requirement_5 boolean NOT NULL,
-    requirement_6 boolean NOT NULL,
-    requirement_7 boolean NOT NULL,
-    requirement_8 boolean NOT NULL,
-    requirement_9 boolean NOT NULL,
-    requirement_10 boolean NOT NULL,
-    designer_id integer NOT NULL,
-    reviewer_id integer NOT NULL,
-    notes text NOT NULL,
-    due timestamp with time zone NOT NULL
-);
-
-
-ALTER TABLE public.unc_review OWNER TO django;
-
---
--- Name: unc_review_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.unc_review_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.unc_review_id_seq OWNER TO django;
-
---
--- Name: unc_review_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.unc_review_id_seq OWNED BY public.unc_review.id;
-
-
---
--- Name: unc_reviewerscore; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.unc_reviewerscore (
-    id integer NOT NULL,
-    date timestamp with time zone NOT NULL,
-    score integer NOT NULL,
-    designer character varying(20) NOT NULL,
-    reviewer character varying(20) NOT NULL,
-    notes text NOT NULL
-);
-
-
-ALTER TABLE public.unc_reviewerscore OWNER TO django;
-
---
--- Name: unc_reviewerscore_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.unc_reviewerscore_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.unc_reviewerscore_id_seq OWNER TO django;
-
---
--- Name: unc_reviewerscore_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.unc_reviewerscore_id_seq OWNED BY public.unc_reviewerscore.id;
-
-
---
--- Name: unc_reviewscore; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.unc_reviewscore (
-    id integer NOT NULL,
-    date timestamp with time zone NOT NULL,
-    score integer NOT NULL,
-    designer character varying(20) NOT NULL,
-    reviewer character varying(20) NOT NULL,
-    notes text NOT NULL
-);
-
-
-ALTER TABLE public.unc_reviewscore OWNER TO django;
-
---
--- Name: unc_reviewscore_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.unc_reviewscore_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.unc_reviewscore_id_seq OWNER TO django;
-
---
--- Name: unc_reviewscore_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.unc_reviewscore_id_seq OWNED BY public.unc_reviewscore.id;
-
-
---
--- Name: unc_student; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.unc_student (
-    id integer NOT NULL,
-    name character varying(100) NOT NULL,
-    email character varying(40) NOT NULL,
-    domain character varying(100) NOT NULL,
-    course_id integer NOT NULL,
-    designer_score integer NOT NULL,
-    reviewer_score integer NOT NULL
-);
-
-
-ALTER TABLE public.unc_student OWNER TO django;
-
---
--- Name: unc_student_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.unc_student_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.unc_student_id_seq OWNER TO django;
-
---
--- Name: unc_student_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.unc_student_id_seq OWNED BY public.unc_student.id;
-
-
---
--- Name: wiki_wikidoc; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.wiki_wikidoc (
-    id integer NOT NULL,
-    title character varying(100) NOT NULL,
-    path character varying(100) NOT NULL,
-    body text NOT NULL,
-    user_id integer NOT NULL,
-    slug character varying(100)
-);
-
-
-ALTER TABLE public.wiki_wikidoc OWNER TO django;
-
---
--- Name: wiki_wikidoc_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.wiki_wikidoc_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.wiki_wikidoc_id_seq OWNER TO django;
-
---
--- Name: wiki_wikidoc_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.wiki_wikidoc_id_seq OWNED BY public.wiki_wikidoc.id;
-
-
---
--- Name: workshop_category; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.workshop_category (
-    id integer NOT NULL,
-    name character varying(100) NOT NULL,
-    cumulative boolean NOT NULL,
-    client_id integer NOT NULL
-);
-
-
-ALTER TABLE public.workshop_category OWNER TO django;
-
---
--- Name: workshop_category_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.workshop_category_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.workshop_category_id_seq OWNER TO django;
-
---
--- Name: workshop_category_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.workshop_category_id_seq OWNED BY public.workshop_category.id;
-
-
---
--- Name: workshop_money; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.workshop_money (
-    id integer NOT NULL,
-    dollars integer NOT NULL,
-    date date NOT NULL,
-    category_id integer NOT NULL
-);
-
-
-ALTER TABLE public.workshop_money OWNER TO django;
-
---
--- Name: workshop_money_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.workshop_money_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.workshop_money_id_seq OWNER TO django;
-
---
--- Name: workshop_money_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.workshop_money_id_seq OWNED BY public.workshop_money.id;
-
-
---
--- Name: workshop_moneyclient; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.workshop_moneyclient (
-    id integer NOT NULL,
-    organization character varying(100) NOT NULL,
-    user_id integer NOT NULL
-);
-
-
-ALTER TABLE public.workshop_moneyclient OWNER TO django;
-
---
--- Name: workshop_moneyclient_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.workshop_moneyclient_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.workshop_moneyclient_id_seq OWNER TO django;
-
---
--- Name: workshop_moneyclient_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.workshop_moneyclient_id_seq OWNED BY public.workshop_moneyclient.id;
-
-
---
--- Name: workshop_thot; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.workshop_thot (
-    id integer NOT NULL,
-    title character varying(100) NOT NULL,
-    parent_id integer,
-    thotbook_id integer
-);
-
-
-ALTER TABLE public.workshop_thot OWNER TO django;
-
---
--- Name: workshop_thot_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.workshop_thot_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.workshop_thot_id_seq OWNER TO django;
-
---
--- Name: workshop_thot_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.workshop_thot_id_seq OWNED BY public.workshop_thot.id;
-
-
---
--- Name: workshop_thotbook; Type: TABLE; Schema: public; Owner: django
---
-
-CREATE TABLE public.workshop_thotbook (
-    id integer NOT NULL,
-    title character varying(100) NOT NULL,
-    rootid integer
-);
-
-
-ALTER TABLE public.workshop_thotbook OWNER TO django;
-
---
--- Name: workshop_thotbook_id_seq; Type: SEQUENCE; Schema: public; Owner: django
---
-
-CREATE SEQUENCE public.workshop_thotbook_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
-ALTER TABLE public.workshop_thotbook_id_seq OWNER TO django;
-
---
--- Name: workshop_thotbook_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: django
---
-
-ALTER SEQUENCE public.workshop_thotbook_id_seq OWNED BY public.workshop_thotbook.id;
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_client ALTER COLUMN id SET DEFAULT nextval('public.aspire_client_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_goal ALTER COLUMN id SET DEFAULT nextval('public.aspire_goal_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_node ALTER COLUMN id SET DEFAULT nextval('public.aspire_node_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_project ALTER COLUMN id SET DEFAULT nextval('public.aspire_project_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_role ALTER COLUMN id SET DEFAULT nextval('public.aspire_role_id_seq'::regclass);
-
-
---
 -- Name: id; Type: DEFAULT; Schema: public; Owner: django
 --
 
@@ -1633,27 +732,6 @@ ALTER TABLE ONLY public.auth_user_user_permissions ALTER COLUMN id SET DEFAULT n
 -- Name: id; Type: DEFAULT; Schema: public; Owner: django
 --
 
-ALTER TABLE ONLY public.church_budget ALTER COLUMN id SET DEFAULT nextval('public.church_budget_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.church_budgetcategory ALTER COLUMN id SET DEFAULT nextval('public.church_budgetcategory_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.church_money ALTER COLUMN id SET DEFAULT nextval('public.church_money_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
 ALTER TABLE ONLY public.django_admin_log ALTER COLUMN id SET DEFAULT nextval('public.django_admin_log_id_seq'::regclass);
 
 
@@ -1669,27 +747,6 @@ ALTER TABLE ONLY public.django_content_type ALTER COLUMN id SET DEFAULT nextval(
 --
 
 ALTER TABLE ONLY public.django_migrations ALTER COLUMN id SET DEFAULT nextval('public.django_migrations_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.doc_doc ALTER COLUMN id SET DEFAULT nextval('public.doc_doc_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.guide_course ALTER COLUMN id SET DEFAULT nextval('public.guide_course_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.guide_student ALTER COLUMN id SET DEFAULT nextval('public.guide_student_id_seq'::regclass);
 
 
 --
@@ -1718,20 +775,6 @@ ALTER TABLE ONLY public.life_experience ALTER COLUMN id SET DEFAULT nextval('pub
 --
 
 ALTER TABLE ONLY public.life_year ALTER COLUMN id SET DEFAULT nextval('public.life_year_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.mybook_author ALTER COLUMN id SET DEFAULT nextval('public.mybook_author_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.mybook_book ALTER COLUMN id SET DEFAULT nextval('public.mybook_book_id_seq'::regclass);
 
 
 --
@@ -1767,175 +810,6 @@ ALTER TABLE ONLY public.tool_project ALTER COLUMN id SET DEFAULT nextval('public
 --
 
 ALTER TABLE ONLY public.tool_test ALTER COLUMN id SET DEFAULT nextval('public.tool_test_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.unc_course ALTER COLUMN id SET DEFAULT nextval('public.unc_course_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.unc_review ALTER COLUMN id SET DEFAULT nextval('public.unc_review_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.unc_reviewerscore ALTER COLUMN id SET DEFAULT nextval('public.unc_reviewerscore_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.unc_reviewscore ALTER COLUMN id SET DEFAULT nextval('public.unc_reviewscore_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.unc_student ALTER COLUMN id SET DEFAULT nextval('public.unc_student_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.wiki_wikidoc ALTER COLUMN id SET DEFAULT nextval('public.wiki_wikidoc_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_category ALTER COLUMN id SET DEFAULT nextval('public.workshop_category_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_money ALTER COLUMN id SET DEFAULT nextval('public.workshop_money_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_moneyclient ALTER COLUMN id SET DEFAULT nextval('public.workshop_moneyclient_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_thot ALTER COLUMN id SET DEFAULT nextval('public.workshop_thot_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_thotbook ALTER COLUMN id SET DEFAULT nextval('public.workshop_thotbook_id_seq'::regclass);
-
-
---
--- Data for Name: aspire_client; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.aspire_client (id, organization, user_id) FROM stdin;
-1	Human Race	1
-\.
-
-
---
--- Name: aspire_client_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.aspire_client_id_seq', 1, true);
-
-
---
--- Data for Name: aspire_goal; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.aspire_goal (id, name, parent_id) FROM stdin;
-1	First Paying Customer	\N
-\.
-
-
---
--- Name: aspire_goal_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.aspire_goal_id_seq', 1, true);
-
-
---
--- Data for Name: aspire_node; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.aspire_node (id, title, text, "order", parent_id) FROM stdin;
-\.
-
-
---
--- Name: aspire_node_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.aspire_node_id_seq', 1, false);
-
-
---
--- Data for Name: aspire_project; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.aspire_project (id, name, hours, role_id) FROM stdin;
-1	Aspire	10	1
-2	Hire	20	1
-3	Church	10	6
-4	MyBook	10	1
-5	Write	5	1
-6	Family	5	6
-7	Growth	10	5
-8	Music	3	7
-9	Read	5	7
-10	Entertainment	20	7
-11	Software	0	1
-\.
-
-
---
--- Name: aspire_project_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.aspire_project_id_seq', 11, true);
-
-
---
--- Data for Name: aspire_role; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.aspire_role (id, name, client_id) FROM stdin;
-1	Work	1
-5	Grow	1
-6	People	1
-7	Fun	1
-\.
-
-
---
--- Name: aspire_role_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.aspire_role_id_seq', 7, true);
 
 
 --
@@ -2163,222 +1037,6 @@ COPY public.auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
 --
 
 SELECT pg_catalog.setval('public.auth_user_user_permissions_id_seq', 1, false);
-
-
---
--- Data for Name: church_budget; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.church_budget (id, dollars, date, category_id) FROM stdin;
-242	6800	2017-04-01	24
-243	4607	2017-04-01	25
-244	2031	2017-04-01	26
-245	1220	2017-04-01	27
-260	9696	2017-06-01	20
-294	170	2017-09-01	21
-295	0	2017-09-01	22
-302	28	2017-09-01	29
-303	0	2017-09-01	30
-293	11955	2017-09-01	20
-296	865	2017-09-01	23
-297	6748	2017-09-01	24
-298	3465	2017-09-01	25
-299	2059	2017-09-01	26
-300	1220	2017-09-01	27
-301	868	2017-09-01	28
-213	0	2017-01-01	28
-214	0	2017-01-01	29
-215	0	2017-01-01	30
-194	12819	2016-12-01	20
-195	375	2016-12-01	21
-196	0	2016-12-01	22
-197	564	2016-12-01	23
-198	4868	2016-12-01	24
-261	350	2017-06-01	21
-262	1154	2017-06-01	22
-199	2835	2016-12-01	25
-200	4541	2016-12-01	26
-263	815	2017-06-01	23
-201	1220	2016-12-01	27
-202	0	2016-12-01	28
-264	6800	2017-06-01	24
-203	0	2016-12-01	29
-204	0	2016-12-01	30
-265	4039	2017-06-01	25
-183	11905	2016-11-01	20
-184	263	2016-11-01	21
-266	4818	2017-06-01	26
-185	1810	2016-11-01	22
-186	265	2016-11-01	23
-187	4868	2016-11-01	24
-188	2252	2016-11-01	25
-189	1338	2016-11-01	26
-190	1220	2016-11-01	27
-271	13376	2017-07-01	20
-272	-650	2017-07-01	21
-191	0	2016-11-01	28
-273	347	2017-07-01	22
-267	1220	2017-06-01	27
-192	0	2016-11-01	29
-274	1565	2017-07-01	23
-275	5448	2017-07-01	24
-193	0	2016-11-01	30
-276	3738	2017-07-01	25
-277	1238	2017-07-01	26
-172	17592	2016-10-01	20
-278	1220	2017-07-01	27
-279	0	2017-07-01	28
-173	301	2016-10-01	21
-280	-9	2017-07-01	29
-281	0	2017-07-01	30
-174	202	2016-10-01	22
-246	0	2017-04-01	28
-247	0	2017-04-01	29
-175	1065	2016-10-01	23
-248	0	2017-04-01	30
-227	11887	2017-03-01	20
-176	5312	2016-10-01	24
-228	80	2017-03-01	21
-229	-2055	2017-03-01	22
-230	826	2017-03-01	23
-231	6800	2017-03-01	24
-232	4497	2017-03-01	25
-233	3994	2017-03-01	26
-234	1220	2017-03-01	27
-235	0	2017-03-01	28
-236	7	2017-03-01	29
-237	0	2017-03-01	30
-216	11519	2017-02-01	20
-217	-530	2017-02-01	21
-218	0	2017-02-01	22
-219	60	2017-02-01	23
-177	2868	2016-10-01	25
-249	11576	2017-05-01	20
-250	50	2017-05-01	21
-178	2868	2016-10-01	26
-251	-175	2017-05-01	22
-252	1165	2017-05-01	23
-179	1220	2016-10-01	27
-253	6800	2017-05-01	24
-254	3843	2017-05-01	25
-180	0	2016-10-01	28
-255	3150	2017-05-01	26
-256	1220	2017-05-01	27
-181	1000	2016-10-01	29
-257	0	2017-05-01	28
-258	0	2017-05-01	29
-182	0	2016-10-01	30
-259	0	2017-05-01	30
-238	14450	2017-04-01	20
-239	95	2017-04-01	21
-240	1186	2017-04-01	22
-220	6800	2017-02-01	24
-241	665	2017-04-01	23
-221	4512	2017-02-01	25
-222	2802	2017-02-01	26
-223	1220	2017-02-01	27
-224	0	2017-02-01	28
-225	0	2017-02-01	29
-226	0	2017-02-01	30
-205	10464	2017-01-01	20
-206	905	2017-01-01	21
-207	0	2017-01-01	22
-208	1310	2017-01-01	23
-209	6800	2017-01-01	24
-210	5157	2017-01-01	25
-211	1883	2017-01-01	26
-212	1220	2017-01-01	27
-304	12351	2017-10-01	20
-307	750	2017-10-01	23
-308	6148	2017-10-01	24
-282	11115	2017-08-01	20
-283	0	2017-08-01	21
-284	85	2017-08-01	22
-285	65	2017-08-01	23
-286	6448	2017-08-01	24
-287	3482	2017-08-01	25
-288	2699	2017-08-01	26
-289	1220	2017-08-01	27
-290	823	2017-08-01	28
-291	110	2017-08-01	29
-292	0	2017-08-01	30
-309	3139	2017-10-01	25
-268	0	2017-06-01	28
-269	0	2017-06-01	29
-270	0	2017-06-01	30
-310	1754	2017-10-01	26
-311	1220	2017-10-01	27
-312	2225	2017-10-01	28
-305	133	2017-10-01	21
-306	0	2017-10-01	22
-313	0	2017-10-01	29
-314	0	2017-10-01	30
-\.
-
-
---
--- Name: church_budget_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.church_budget_id_seq', 314, true);
-
-
---
--- Data for Name: church_budgetcategory; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.church_budgetcategory (id, name, is_cumulative, is_expense, church_id) FROM stdin;
-20	Giving	f	f	1
-21	Designated	f	f	1
-22	PassThrough	f	f	1
-23	Earned	f	f	1
-24	Staff	f	t	1
-25	Operations	f	t	1
-26	Ministry	f	t	1
-27	Debt	f	t	1
-28	Capital	f	t	1
-29	PassThroughExpense	f	t	1
-30	DesignatedGifts	f	t	1
-\.
-
-
---
--- Name: church_budgetcategory_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.church_budgetcategory_id_seq', 30, true);
-
-
---
--- Data for Name: church_money; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.church_money (id, giving, staff, operations, ministry, rent, building, other_revenue, month, designated) FROM stdin;
-15	16844	6448	4829	3635	815	271	0	2017-12	2957
-14	19740	6448	6764	1889	2017	887	0	2017-11	950
-13	12912	6148	4417	2828	750	2660	0	2017-10	0
-12	11955	6748	4686	1949	865	868	0	2017-09	50
-11	11115	6448	3482	2699	65	823	0	2017-08	0
-10	13376	5448	3739	1238	1565	0	0	2017-07	0
-9	9696	6800	4040	4818	815	0	0	2017-06	350
-8	11576	6800	3845	3150	1165	0	0	2017-05	0
-7	14450	6800	4608	2031	665	0	0	2017-04	0
-6	11857	6800	4497	3994	826	0	0	2017-03	80
-5	11519	6800	4512	2802	60	0	0	2017-02	0
-4	10464	6800	5157	1883	1310	0	0	2017-01	905
-3	12819	4868	2835	4541	564	0	0	2016-12	375
-2	11905	4868	2252	1338	265	0	0	2016-11	263
-1	17592	5312	3225	2868	1065	0	0	2016-10	301
-16	12562	6648	3657	3238	0	0	905	2018-01	3722
-17	11085	600	2137	2723	750	0	0	2018-02	2000
-\.
-
-
---
--- Name: church_money_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.church_money_id_seq', 17, true);
 
 
 --
@@ -2728,53 +1386,6 @@ y8ebs6jycwzbkus7bucnusmkf9mrxpxw	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZ
 
 
 --
--- Data for Name: doc_doc; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.doc_doc (id, title, path, user_id) FROM stdin;
-1	My Story	storybook	1
-2	The Leverage Principle	software/Leverage	1
-\.
-
-
---
--- Name: doc_doc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.doc_doc_id_seq', 2, true);
-
-
---
--- Data for Name: guide_course; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.guide_course (id, title, course, teacher) FROM stdin;
-\.
-
-
---
--- Name: guide_course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.guide_course_id_seq', 1, false);
-
-
---
--- Data for Name: guide_student; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.guide_student (id, name, email, domain) FROM stdin;
-\.
-
-
---
--- Name: guide_student_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.guide_student_id_seq', 1, false);
-
-
---
 -- Data for Name: health_healthscore; Type: TABLE DATA; Schema: public; Owner: django
 --
 
@@ -2905,43 +1516,6 @@ COPY public.life_year (id, age, contribute, relate, learn, enjoy) FROM stdin;
 --
 
 SELECT pg_catalog.setval('public.life_year_id_seq', 1, false);
-
-
---
--- Data for Name: mybook_author; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.mybook_author (id, organization, user_id) FROM stdin;
-1	Shrinking World	1
-\.
-
-
---
--- Name: mybook_author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.mybook_author_id_seq', 1, true);
-
-
---
--- Data for Name: mybook_book; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.mybook_book (id, title, doc, hours, author_id, published) FROM stdin;
-2	Search for Freedom	aspire/clients/Mark-Seaman/Write/drafts/Liberty	1	1	\N
-1	The Leverage Principle	Leverage	3	1	software/Leverage
-3	Seaman's Log	seamanslog	2	1	seamanslog
-5	Building Reusable Apps	ReusableApps	0	1	guide/ReusableApps
-4	Spiritual Things	spiritual	0	1	spiritual
-6	Bookstraps & Blessings	Bootstraps	0	1	\N
-\.
-
-
---
--- Name: mybook_book_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.mybook_book_id_seq', 6, true);
 
 
 --
@@ -3787,13 +2361,13 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2054	Fun	\n        Return of the King \n        Niki Heat\n	2017-06-04	4	f
 2056	Tools	\n        fix tests	2017-06-05	2	f
 2165	Fun	\n        Aeon Flux	2017-06-30	2	f
-4382	Teach	    explore Repl.it\n    write draft of first lessons\n    build embedded Repl\n    create Repl: Simple Page, HTML and CSS\n    	2018-12-17	5	f
-4384	Fun	    download Pentomino puzzles\n    GoT\n    	2018-12-17	3	f
 4385	People	    Lucy arrives\n    dinner with Lucy & Stacie\n    setup CPAP machine	2018-12-17	2	f
 4388	People	    dinner at home\n    time with Stacie\n    	2018-12-16	2	f
 4389	Church	    Ruby's first church service	2018-12-16	4	f
 4390	Fun	    Stargate: Continuum, Resident\n    	2018-12-16	4	f
 4381	Grow	    5, 3, 3, 2\n    weight: 207.4\n    Man's Search for Meaning	2018-12-17	2	f
+4382	Teach	    explore Repl.it\n    write draft of first lessons\n    build embedded Repl\n    create Repl: Simple Page, HTML and CSS\n    	2018-12-17	5	f
+4384	Fun	    download Pentomino puzzles\n    GoT\n    	2018-12-17	3	f
 2169	Fun	\n        Regarding Henry\n        Timeless, Legends\n	2017-07-01	5	f
 2170	Grow	\n        3, 3, 3, 2\n        nap	2017-07-02	2	f
 2171	Church	\n        church service	2017-07-02	4	f
@@ -3887,10 +2461,10 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1130	Business	\n        develop Household Economics\n        create general spreadsheet for Budget, Investment, House\n        create simplified budget review process\n        discuss family finance with Stacie\n        resolve gross/net budget\n        build spreadsheet for tracking investments	2016-12-02	5	f
 2435	People	\n        Stacie returns home	2017-09-11	2	f
 2436	Fun	\n        TV\n	2017-09-11	1	f
-4400	People	    visit Rachel\n    Ruby now weighs 8 lb 2 oz	2018-12-19	2	f
 4396	Grow	    4, 1, 2, 2\n    weight: 209.4\n    reflection and prayer\n    Christmas Story	2018-12-19	3	f
 4397	Business	    finish up on Agent Match project\n    	2018-12-19	1	f
 4399	Fun	    British Baking, Profit\n    	2018-12-19	2	f
+4400	People	    visit Rachel\n    Ruby now weighs 8 lb 2 oz	2018-12-19	2	f
 156	Church	\N	2016-02-21	4	f
 3321	People	    discuss strategy for deeper connections\n    interact with Lynn on teaching\n    dinner with Stacie	2018-04-19	3	f
 3322	Fun	    Legends, Supergirl	2018-04-19	2	f
@@ -3943,11 +2517,14 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 853	Grow	\n        take magazines to library\n        Mega Trends 2010\n        Impact\n        organize brain\n        post on facebook\n        sleep: 0, weight: 208.2, cal: -, exercise: 1 mile	2016-09-17	5	f
 859	Hire	\n        fix problem with cut and paste of questions\n        deploy code for Stacie to test\n        changes from Stacie's review\n        add http://hire/score page\n        design for scoring\n        create screen shots for presentation\n        improve look & feel\n        debug and test all features in app	2016-09-19	8	f
 2756	Hammer	\n        time management scripts	2016-09-24	2	f
-4403	Fun	    GoT\n    	2018-12-21	2	f
 2180	Tools	\n        create thot/App_Design\n        fix issues with new features\n        refactor tst_results code\n        clean up old WAM domain\n        implement doc sender\n        remove old email code\n        simplify old doc code\n        clean up advisor	2017-07-04	6	f
 2179	Grow	\n        3, 2, 2, 2	2017-07-04	0	f
+4403	Fun	    GoT\n    	2018-12-21	2	f
 4198	Grow	    5, 1, 3, 5\n    weight: 209.2	2018-11-17	0	f
-4401	Grow	    4, 2, 1, 1\n    weight: 208.4\n    Stacie gets a cold, sleep on couch 	2018-12-21	0	f
+4434	Tools	    implement Rest Framework\n    install React\n    build React UI	2018-12-26	3	f
+4436	People	    Garcias over to watch Muppets	2018-12-26	2	f
+4370	People	    neighborhood party at Faye's\n    get Christmas tree\n    buy concrete for household project	2018-12-14	5	f
+4435	Fun	    Muppets Christmas Carol\n    	2018-12-26	4	f
 2181	Fun	\n        Read\n	2017-07-04	2	f
 2183	People	\n        Stacie's computer fails to upgrade drivers\n        meet Larry Chapman for lunch	2017-07-05	4	f
 2185	Grow	\n        5, 2, 1, 1	2017-07-06	0	f
@@ -6660,17 +5237,17 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1865	Fun	\n        Comics: X-force\n        TV\n	2016-01-28	4	f
 1923	Grow	\n        5, 3, 2, 2\n	2016-11-29	0	f
 1856	Tools	\n        Build form input for 4 thot app (rename, move, add node)\n        Debug thot app\n        Build content for Thots	2016-01-25	4	f
-4406	Teach	    plan out teaching prep\n    build unc classroom site\n    Classroom UX - style and navigation\n    shrinking-world.com/unc/bacs200\n    shrinking-world.com/unc/bacs350\n    rebuild seamansguide.com\n    	2018-12-20	4	f
+4408	Fun	    Last Kingdom, GoT\n    	2018-12-20	2	f
 3112	People	\n        Mehrgan Mostowfi over for dinner	2018-02-26	4	f
 1827	People	\n        Time with Stacie	2016-01-15	2	f
 1840	Business	\n        Invoice WAM	2016-01-19	0	f
 1924	People	\n        dinner with Courtney Peters	2016-12-01	0	f
 2908	Teach	\n        update lesson 1\n        teach lesson 1\n        request name tents\n        office hours\n        internet outage\n        investigate FTP permissions	2018-01-08	7	f
 1819	Fun	\n        Enterprise, Last Man\n	2016-01-12	3	f
-4407	Tools	    remove old code: guide, unc, aspire\n    prune old docs\n    fix tests	2018-12-20	2	f
-4408	Fun	    Last Kingdom, GoT\n    	2018-12-20	2	f
 4409	People	    visit with Stacie and Lucy\n    Stacie gets sick\n    attempt concrete project	2018-12-20	6	f
 4405	Grow	    5, 1, 3, 2\n    weight: 210	2018-12-20	0	f
+4406	Teach	    plan out teaching prep\n    build unc classroom site\n    Classroom UX - style and navigation\n    shrinking-world.com/unc/bacs200\n    shrinking-world.com/unc/bacs350\n    rebuild seamansguide.com\n    	2018-12-20	4	f
+4407	Tools	    remove old code: guide, unc, aspire\n    prune old docs\n    fix tests	2018-12-20	2	f
 1878	Business	\n        meeting with Mike Hefty\n        discuss money management with Stacie\n        long-term care meeting	2016-04-28	3	f
 1880	Grow	\n\n    \n## Accomplishments\n	2016-04-30	0	f
 1897	Grow	\n        5, 1, 3, 2\n	2016-10-17	0	f
@@ -6970,8 +5547,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4264	Fun	    Silicon Valley (finish season 4)\n    nts 2\n    ER, Goldbergs\n    	2018-11-21	10	f
 1540	Tools	\n        set up seamanslog and spiritual websites\n        set up navigation between sites	2017-04-01	4	f
 4315	Fun	    shopping for Christmas\n    book browsing\n    Mr Robot, GoT\n    Deathly Hallows\n    	2018-11-24	6	f
-4322	People	    Rachel in labor\n    discuss household projects\n    vigil at hospital	2018-12-04	5	f
-4317	Grow	    4, 2, 1, 1\n    weight: 208.8	2018-12-04	0	f
+4415	Grow	    5, 3, 2, 2\n    weight: 208.4	2018-12-22	0	f
 4323	Grow	    4, 3, 2, 3\n    weight: 208	2018-11-26	0	f
 4286	Teach	    Last day of class\n    Scheduled alternate final\n    share memory extra credit\n    talk with students\n    give early final	2018-11-30	8	f
 4324	Teach	    debug system for Design Review\n    teach Learning in 200\n    	2018-11-26	8	f
@@ -6988,51 +5564,52 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4300	Teach	    build design review sys for 350\n    prep lesson for design reviews\n    	2018-11-25	4	f
 4302	Fun	    Deathly Hallows\n    GoT\n    	2018-11-25	4	f
 4288	People	    Rachel's due date\n    Greeley Chop House - last class celebration	2018-11-30	3	f
-4291	Fun	    Crazy Rich Asians\n    ER\n    	2018-12-02	4	f
-4289	Grow	    5, 2, 2, 3\n    weight: 208.6\n    nap	2018-12-02	2	f
-4321	Fun	    \n    	2018-12-04	0	f
 4290	Church	    Church service	2018-12-02	4	f
 4292	People	    lunch with Potters\n    Rachel in waiting\n    time with Stacie	2018-12-02	4	f
+4321	Fun	    \n    	2018-12-04	0	f
+4294	WAM	    build plan for WAM transition	2018-12-03	2	f
 4295	Teach	    create syllabus for BACS 200 - Spring 2019\n    schedule final review assignments\n    read "most import learning" feedback\n    grade final review in 350\n    	2018-12-03	5	f
-4297	Church	    UNC Outreach	2018-12-03	3	f
 4298	People	    Pie at Fat Alberts	2018-12-03	2	f
 4296	Business	    schedule meeting with Matt\n    driveway repair	2018-12-03	1	f
 4293	Grow	    5, 1, 2, 4\n    weight: 209.6\n    planning	2018-12-03	1	f
+4306	Teach	    Planning on Sensei Workshop project\n    	2018-12-01	2	f
+4307	Fun	    GoT\n    Mr Robot\n    IMDB Trailers\n    	2018-12-01	4	f
 4303	People	    Doug's Diner with Garcias and Potters\n    time with Stacie\n    	2018-11-25	2	f
 4304	Church	    talk with Matt at church	2018-11-25	3	f
 4301	Business	    write to Greg McCutchan	2018-11-25	1	f
 4312	People	    driveway project\n    repair toilet	2018-11-29	1	f
 4316	People	    La Creperie with Stacie	2018-11-24	3	f
-4306	Teach	    Planning on Sensei Workshop project\n    	2018-12-01	2	f
-2025	Tools	\n        refactor menu and site titles on several websites\n        make list of web services to develop\n	2017-05-28	2	f
 4308	People	    breakfast at Warren's\n    Andrew and Rachel\n    discuss healthcare options with Stacie\n    sign up for Primary Care	2018-12-01	6	f
-4305	Grow	    5, 1, 3, 1\n    weight: 209.2\n    nap	2018-12-01	2	f
+2025	Tools	\n        refactor menu and site titles on several websites\n        make list of web services to develop\n	2017-05-28	2	f
 4410	Grow	    5, 2, 2, 2\n    weight: 208.4	2018-12-23	0	f
 4412	Tools	    build custom views\n    build doc display	2018-12-23	2	f
+4413	Fun	    Last Kingdom\n    	2018-12-23	1	f
+4414	People	    Christmas dinner\n    Ruby feedings\n    	2018-12-23	8	f
 4313	Grow	    5, 3, 1, 1\n    weight: 207.6\n    bed at 8:30	2018-11-24	1	f
 4314	Teach	    grading in 200	2018-11-24	4	f
-4307	Fun	    GoT\n    Mr Robot\n    IMDB Trailers\n    	2018-12-01	4	f
+4305	Grow	    5, 1, 3, 1\n    weight: 209.2\n    nap	2018-12-01	2	f
 1548	Hire	\n        learn how to create PDF file\n        install Latex on ubuntu servers\n        attempt to setup Latex on Macs\n        build Markdown file for report (title only)\n        convert Markdown to PDF\n        display PDF file in Who2Hire application\n        manage who2hire branch merges	2017-04-03	8	f
-4318	Teach	    350 grades\n    explore Code Mentor, CodePen, React\n    invite Ben to FCIP\n    attend FCIP with Ben\n    	2018-12-04	5	f
+4320	Business	    Isborn Security prep for meeting 12-6	2018-12-04	2	f
 4325	Fun	    ER, GoT, Fraiser\n    	2018-11-26	4	f
 4327	Grow	    4, 1, 3, 4\n    weight: 209.2	2018-11-28	0	f
 4285	Grow	    5, 2, 2, 4\n    weight: 208.2	2018-11-30	0	f
-4415	Grow	    5, 3, 2, 2\n    weight: 208.4	2018-12-22	0	f
-4294	WAM	    build plan for WAM transition	2018-12-03	2	f
-4319	Tools	    fix Menu on MyBook server\n    login for Meetup	2018-12-04	2	f
+4291	Fun	    Crazy Rich Asians\n    ER\n    	2018-12-02	4	f
+4297	Church	    UNC Outreach	2018-12-03	3	f
+4322	People	    Rachel in labor\n    discuss household projects\n    vigil at hospital	2018-12-04	5	f
+4289	Grow	    5, 2, 2, 3\n    weight: 208.6\n    nap	2018-12-02	2	f
 2019	Grow	\n        jetlag at sleeping patterns\n        think about non-sleeping activities\n        write about emotional triggers (5x5)\n        capture list of core emotions\n        plan most important activities\n        walk along river\n        brain purge\n        action priorities LPBT (7 each)	2017-05-27	8	f
 2026	Tools	\n        build basic thot view\n        refactor workshop demo views\n        refactor Menu & SiteTitle\n        create /thot/42 view\n        think about booknotes design\n        create new WordPress site with template	2017-05-29	0	f
 1587	Hire	\n        repair send mechanism\n        remove extra app code and scripts from Who2Hire\n        simplify bashrc-django \n        Issue 119. Disable notifications from staging\n        Issue 120. Landing page background color and other improvements\n        discuss User Guide with Stacie	2017-04-12	6	f
-4320	Business	    Isborn Security prep for meeting 12-6	2018-12-04	2	f
+4317	Grow	    4, 2, 1, 1\n    weight: 208.8	2018-12-04	0	f
 4326	People	    Sol de Jalisco   	2018-11-26	2	f
 4281	Teach	    grading and student interaction\n    plan out finals	2018-11-27	3	f
 4299	Grow	    5, 2, 3, 1\n    weight: 208.6	2018-11-25	0	f
 4411	Teach	    \n    	2018-12-23	0	f
-4414	People	    Christmas dinner\n    Ruby feedings\n    	2018-12-23	8	f
+4319	Tools	    fix Menu on MyBook server\n    login for Meetup	2018-12-04	2	f
 4309	Grow	    5, 3, 3, 2\n    weight: 208	2018-11-29	0	f
 4311	Fun	    Resident, Madam Sec, This is Us\n    	2018-11-29	5	f
 4279	People	    Christmas shopping	2018-11-23	2	f
-4413	Fun	    Last Kingdom\n    	2018-12-23	1	f
+4318	Teach	    350 grades\n    explore Code Mentor, CodePen, React\n    invite Ben to FCIP\n    attend FCIP with Ben\n    	2018-12-04	5	f
 2268	Fun	\n        Dunkirk\n        Barnes & Noble\n        John Adams\n        So You Think You Can Dance\n	2017-08-02	8	f
 112	WAM	\n        Setup email at greeleyW2w.org\n        Setup Mandrill account\n        Debug email sending\n        Setup wam.w2Wgreeley.org domain\n        Hook up notifications to email sending	2016-02-08	4	f
 2280	People	\n        clean up garage with Stacie\n        meet with Jayden\n        try to setup computer for Jayden\n        try to meet with Kole Curtis\n        figure out video problem with computer for Hangouts	2017-08-05	8	f
@@ -7053,12 +5630,12 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1968	Tools	\n        update aspire/MyBook documents\n        setup Bootstraps and Blessings in MyBook\n        setup Leverage in MyBook\n        build author page and book page	2017-05-03	3	f
 2148	Tools	\n        remove extra CSS template libraries from MyBook\n        explore UI elements and techniques in Material\n        workshop views\n            template_derived\n            template_columns\n            template_content\n        create view to load custom templates\n        write ThotBook on Creativity\n        simplify plan.py and todo.py\n        plan new features for Time views\n        consolidate 1000Goals and ThotBook: Goals	2017-06-26	7	f
 2270	Tools	\n        create workshop/views.py code\n        support request for PipeScan\n        time tabs: Week, Month, Year\n        workshop tricks: DjangoApps, DjangoCommand, DjangoSettings, SecretSettings,\n             Parameters, QueryParameters, SimpleMatch, Accordion, Tabs, Icon\n        create new improved time summaries	2017-08-03	8	f
-4419	People	    grocery and Christmas shopping\n    visit with Lucy and Stacie	2018-12-22	2	f
 4373	Tools	    rebuild web pages with Senei/Documents\n    create new repos for Sensei and Documents-2019\n    Debug MyBook server with Documents-2019	2018-12-13	4	f
-4310	Teach	    planning\n    email\n    grade 350 final project\n    rebuild design review reporting\n    	2018-11-29	8	f
-4418	Fun	    Last Kingdom, GoT\n    	2018-12-22	2	f
 4431	Church	    Lucy stays home from church with cold	2018-12-23	3	f
 4416	Teach	    meet with Ben Flebbe to discuss software tools\n    	2018-12-22	2	f
+4310	Teach	    planning\n    email\n    grade 350 final project\n    rebuild design review reporting\n    	2018-11-29	8	f
+4418	Fun	    Last Kingdom, GoT\n    	2018-12-22	2	f
+4419	People	    grocery and Christmas shopping\n    visit with Lucy and Stacie	2018-12-22	2	f
 2594	Fun	\n        Orville, Poldark	2017-10-24	3	f
 2598	People	\n        Stacie	2017-10-25	2	f
 2599	Fun	\n        TV	2017-10-25	4	f
@@ -7086,7 +5663,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 209	Sign	\n        investigate activation URL\n        meeting with Hamed to learn about SignSpan DevOps\n        meeting with Thomas about testing\n        meeting with Tom about design and integration	2016-03-05	4	f
 216	WAM	\n        setup redirect from greeleywAm.org to wam.weldwAm.org\n        delete unwanted database records from testing\n        turn on email test mode to allow real email logic\n        solve bug preventing email\n        reword notification for profile change\n        create initial superuser records\n        work with Stacie on testing	2016-03-07	6	f
 257	WAM	\n        create process for resetting database contents\n        reset staging server database\n        test application on staging\n        update production server with WAM 2.0.2 (a)	2016-03-21	4	f
-4334	People	    visit Rachel in hospital	2018-12-06	4	f
+4432	Grow	    3, 1, 1, 1\n    weight: 209.4\n    prayer during night\n    top fears\n    monthly objectives & personal review\n    nap	2018-12-26	4	f
 3624	WAM	    Digital Ocean Women2Women account\n    Setup new WAM Droplet\n    Configure server scripts and testing\n    Solve problem with weldw2w.org being used by Shrinking World DO account\n    Setup domain routing\n    SSL certificate	2018-06-26	10	f
 2590	Fun	\n        Circle. Flash, Madam Sec	2017-10-23	4	f
 2591	Grow	\n        5,5,4,5\n        walk around golf course	2017-10-23	0	f
@@ -7098,10 +5675,10 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2601	Teach	\n        350: prep #29 write exam\n        200: prep #29 final project plan\n        Restructure doc management repos\n        Work on Github processes\n        work out pull request with multiple repos\n        move Jupyter notes	2017-10-26	10	f
 4277	Business	    meet with Matt Isborn\n    investigate solutions to personnel matching\n    	2018-11-23	3	f
 4203	Grow	    5, 3, 3, 4\n    weight: 207.6	2018-11-12	0	f
-4332	Teach	    ideas for Seaman's Guides\n    think about app architecture\n    plan first four weeks - BACS 200\n    	2018-12-06	1	f
+4334	People	    visit Rachel in hospital	2018-12-06	4	f
+4420	Teach	    build plan for class prep\n    update notes for Sensei and BACS 200 sites	2018-12-21	3	f
 4333	Business	    prep for Isborn meeting\n    meet with Matt\n    research notes apps	2018-12-06	6	f
 4335	Grow	    1, 1, 1, 4\n    read Django and Rest\n    nap 	2018-12-05	4	f
-4420	Teach	    build plan for class prep\n    update notes for Sensei and BACS 200 sites	2018-12-21	3	f
 369	Sign	\n        interactive debug with \n        echo subscription code in status\n        invoke chargify api to get all subscriptions\n        use the auth key withing the Chargify API call\n        return the active status code\n        set the UNVERIFIED status for new users\n        pass through customer reference value\n        improve logging\n        write initial request user function\n        debugging on user auth	2016-04-23	8	f
 408	Sign	\n        Cancel subscription from UI (first draft)\n        debugging on user registration workflow\n        build user.py script\n        build charify.py script\n        move code from registration.py to chargify.py\n        debug API for cancel subscription\n        debug API for update plan\n        work around for venue type setup bug	2016-05-06	8	f
 455	WAM	\n        Deployment on Staging Server\n        Test deployment to staging server\n        Consolidate docs on configuration\n        Automate web page loading\n        Rebuild PyCharm project\n        Revamped processing of switches of test acceleration\n        Create qt for export\n        Build an export script for cases to CSV\n        Create import of cases from CSV\n        Test round trip of data\n        Refactor case.py and case_script.py\n        Automated test of case logic	2016-05-19	8	f
@@ -7149,13 +5726,13 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1874	Sign	\n        setup iMac email to point to mark@signspan.com\n        organize documents for Confluence\n        process email\n        update JIRA issues status\n        MVP-352 - Fix issue with activate URL\n        setup iMac on VPN\n        write Payment System definition doc\n        write Payment System design doc\n        write User Administration requirements doc\n        update Subscriber Status doc with state machine\n        update Notification messages doc\n        learn about Mandrill templates\n        Scrum meeting	2016-02-18	8	f
 1083	Grow	\n        review time summary for last quarter\n        make decisions about current time investments\n        nap\n        4, 3, 3, 1	2016-11-20	2	f
 1089	Church	\n        church board meeting\n            demo of Church Dashboard\n            discuss Todd full time\n        create main menu\n        build Dashboard view\n        build Overview view\n        build Meetings and Meetings detail view\n        build Budget and Budget detail view\n        create automatic scoring\n        debug editing of records\n        data backup\n        create budget import mechanism	2016-11-22	11	f
-4366	WAM	    follow up with remaining issues for transition	2018-12-14	2	f
-4367	Teach	    \n    	2018-12-14	0	f
-4369	Fun	    browse Bernard Cornwell books\n    	2018-12-14	1	f
-4370	People	    neighborhood party at Faye's\n    get Christmas tree\n    buy concrete for household project	2018-12-14	5	f
 4371	Grow	    5, 3, 3, 3\n    weight: 208	2018-12-13	0	f
+4367	Teach	    \n    	2018-12-14	0	f
 4372	WAM	    work with Nathan and Troy to hand off WAM\n    	2018-12-13	3	f
+4433	Teach	    review UNC email\n    	2018-12-26	1	f
 4365	Grow	    3, 3, 2, 4\n    weight: 208	2018-12-14	0	f
+4369	Fun	    browse Bernard Cornwell books\n    	2018-12-14	1	f
+4366	WAM	    follow up with remaining issues for transition	2018-12-14	2	f
 3747	Fun	    Travel Log: Day 2\n    Welcome to Vienna, time with Stacie!\n    Breakfast at hotel\n    Wonderful buffet at Hilton\n    Visit with couple from Munich\n    Taxi to Cruise Hotel\n    Hang out and write\n    Meet cruise directors\n    Bus to city center\n    Baklava at grocery store\n    Walk downtown\n    Meet Valerie and Brenda\n    Nap\n    Welcome instructions\n    Worst drought since 1973\n    6,000 steps	2018-07-09	7	f
 507	WAM	\n        solve issue with database incrementing of case records\n        redact sensitive data from casevote view\n        improve data reset process\n        reset database on staging server\n        rebuild users and cases from scratch\n        clean up migrations\n        move database data intact	2016-06-09	6	f
 606	Sign	\n        investigate immediate vs. delayed cancel\n        setup meeting with Thomas\n        test chargify script\n        build document to show how to use chargify.py\n        setup meeting with Brandon\n        implement immediate cancel for non-production hosts\n        research Discount codes\n        implement ALWAYSFREE and 99PERCENTOFF coupons on sandbox\n        wrote Tom about production login	2016-07-08	8	f
@@ -7164,71 +5741,88 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2258	Church	\n        build new church dashboard with two separate reports (Regular, Special)\n        create general infrastructure for multiple reports\n        build report with three levels of entries\n        show totals, monthly, percentages\n        send report via email to board members	2017-07-31	8	f
 357	Sign	\n        Test add user scenario\n        Investigate return URL from Chargify\n        Query Chargify for list of active customers\n        Work with Tom to debug code deployment problem\n        Verify that new users are properly added to Chargify\n        Resolve issue with credit card acceptance on Chargify\n        Implement query of Chargify API to get subscription info\n        Implement status route which always returns active\n        Simplified control and data flow in setup of payments\n        Convert all payment plans to pass out subscription_id	2016-04-20	8	f
 1030	Hire	\n        debug setup of users on server\n        move production data to dev server\n        baseline testing and review\n        document user stories\n        document test progress\n        refactor views in view types\n        tie openings to companies\n        require passwords to see views\n        review progress with Stacie\n        create test page for access to all views	2016-11-07	8	f
-4404	People	    tried to work on concrete project\n    visit Rachel\n    dinner at Dickie's BBQ\n    Ruby weighs 8lb 5oz	2018-12-21	4	f
+4422	Tools	    Explore Codecademy\n    Try lessons for HTML, Git, Coding, Python, Git\n    debug pipenv context\n    	2018-12-24	4	f
 239	WAM	\n        promote code to production server\n        investigate emails that are not delivered\n        sign up for paid Mandrill account\n        build staging server\n        create process for acceptance testing\n        log all outstanding issues\n        prioritize remaining work\n        add case number links to all notifications\n        make all Status fields optional when editing\n        voting view - Display users who voted	2016-03-14	8	f
 1820	WAM	\n        Debug form to add new users\n        Clean up code\n        Build script to send 5 types of notifications\n        Query for proper recipients for each notification\n        Build notification log\n        Refine logic for sending notifications\n        Add new capabilities for user roles\n        Debug voting logic and display rules\n        Update logic for handling new cases\n        Update CSS and HTML layout code	2016-01-13	10	f
 392	Sign	\n        investigate new organization failure\n        restore code to reuse \n        debug the organization lookup\n        fix up exception handling\n        simplify update_java_user\n        debug update_java_user\n        fix problems caused by instrumentation\n        return better responses for errors\n        investigate setting the email address during update\n        create local script to invoke UserAPI\n        debug update_java_user with qt.py\n        integrate code changes into restration.py\n        verify old password during change\n        debug reset password	2016-04-30	11	f
 116	WAM	\n        Stacie meets to review code with WAM \n        Stacie delivers code with WAM \n        Stacie's demo to project team\n        Create importer for both types of legacy data\n        Reset all case data on production server\n        Fix button issue with Safari\n        Fix issue with form submittal\n        Create email forwarding addresses at w2wweld.org\n        Setup new w2wweld.org domain\n        Convert Mandrill account to use wam@w2wweld.org\n        Create subdomain wam.w2wweld.org for hosting of app at Digital Ocean\n        Setup domain to work with Mandrill\n        Setup proper details of email text attributes\n        Test notification system	2016-02-09	10	f
-4375	People	    visit with Rachel and Andrew and Ruby\n    repair fireplace\n    celebrate with Stacie at Romas\n    Stacie - first shift with Ruby	2018-12-13	3	f
-4422	Tools	    Explore Codecademy\n    Try lessons for HTML, Git, Coding, Python, Git\n    debug pipenv context\n    	2018-12-24	4	f
-4423	Fun	    Last Kingdom\n    	2018-12-24	1	f
-4424	People	    open presents after church	2018-12-24	5	f
-4425	Church	    Christmas Eve service	2018-12-24	4	f
-4426	Grow	    3, 3, 1, 1\n    weight: 209.8	2018-12-25	0	f
-4427	Teach	    \n    	2018-12-25	0	f
-4428	Tools	    	2018-12-25	0	f
-4429	Fun	    \n    	2018-12-25	0	f
-4430	People	    	2018-12-25	0	f
-4398	Tools	    move Projects into Archive\n    fix tests for Archive\n    build page tester\n    site title from domdoc\n    menu from domdoc\n    random selector in Spiritual Things\n    random selector in Seamans Log	2018-12-19	6	f
+4404	People	    tried to work on concrete project\n    visit Rachel\n    dinner at Dickie's BBQ\n    Ruby weighs 8lb 5oz	2018-12-21	4	f
 4421	Grow	    5, 1, 1, 2\n    weight: 209.4	2018-12-24	0	f
+4424	People	    open presents after church\n    meet with Josiah family\n    Garcia's out house	2018-12-24	5	f
+4425	Church	    Christmas Eve service\n    	2018-12-24	4	f
+4426	Grow	    4, 1, 1, 1\n    weight: 209.8\n    start getting cold\n    nap\n    prayer 	2018-12-25	2	f
+4428	Tools	    learn about Codecademy	2018-12-25	2	f
+4430	People	    hot cinnamon rolls\n    Christmas morning\n    Julio & Jackie's Christmas\n    conversation with Wade and Anna\n    time with Stacie\n    video with Josiah family\n    phone call with Dad\n    visit with Lucy	2018-12-25	10	f
+4427	Teach	    \n    	2018-12-25	0	f
 4336	People	    Ruby is born at 6:30am\n    night at hospital\n    time with Jackie & Christine during Rachel's labor	2018-12-05	10	f
+4429	Fun	    \n    	2018-12-25	0	f
 4374	Fun	    Last Kingdom\n    ER, Profit\n    	2018-12-13	4	f
-4352	Grow	    5, 1, 2, 3\n    weight: 210	2018-12-08	0	f
+4375	People	    visit with Rachel and Andrew and Ruby\n    repair fireplace\n    celebrate with Stacie at Romas\n    Stacie - first shift with Ruby	2018-12-13	3	f
+4423	Fun	    Last Kingdom\n    	2018-12-24	1	f
+4378	People	    work on concrete for driveway\n    learn about concrete for project\n    prep project with Jayden Howell\n    Christmas decorations\n    Stacie to Ruby's\n    Ruby's family visit\n    Pizza from Pelican Joe's\n    hang lights outside	2018-12-15	8	f
 1467	Hire	\n        Issue 49. Multiple managers\n        Issue 70. Superuser access pages\n        Issue 79. Remove scorecard view\n        Issue 75. Constrain score\n        my_company needs spoofing\n        debug interview record\n        Issue 53. Terms of Usage\n        Issue 53. Privacy policy\n        Issue 63. Add candidate score\n        Issue 73. Delete button for candidates\n        reroute Who2Hire.US url\n        Test Customer Release 1	2017-03-09	9	f
-4346	WAM	    prep for meeting with Nathan	2018-12-10	1	f
-4353	Teach	    Investigate teaching tools\n        - Repl.it, CodePen, TiddlyWiki\n    	2018-12-08	6	f
-4359	Business	    Follow up on project plan\n    Investigate notes tools for Agent Match	2018-12-07	2	f
+4352	Grow	    5, 1, 2, 3\n    weight: 210	2018-12-08	0	f
+4379	Fun	    Fraiser, Bean Holiday\n    nts 2\n    	2018-12-15	3	f
 4393	Tools	    build test pages for MyBook server\n    debug static server\n    debug page loading and redirect\n    simplify production code\n    build common test page format\n    rebuild lessons in HTML apps\n    remove images from HTML apps	2018-12-18	6	f
-4394	Fun	    finish Lady Elizabeth audiobook\n    GoT	2018-12-18	2	f
-4337	Grow	    3, 3, 4, 2\n    weight: 209.4	2018-12-12	0	f
-4360	Fun	    Electric Dreams\n    	2018-12-07	3	f
 4363	Business	    start writing user guide for Agent Match app\n    working session with Heidi\n    create initial tag list\n    setup Evernote account for Heidi\n    process to create Agent Profiles\n    process to search using tags and text\n    process to create index of matching agents\n    follow up after working session\n    	2018-12-11	6	f
-4338	Teach	    write proposal for Independent Study\n    	2018-12-12	2	f
+4364	People	    write Greg McCutchen\n    write my dream phobias\n    contact Ben Flebbe - postpone working together\n    dinner at Pelican Lakes\n    time with Stacie\n    Stacie to Ruby's til 2am	2018-12-11	4	f
 4340	Tools	    fix problems with websites	2018-12-12	2	f
 4344	Tools	    rebuild website content for exteriorbrain, shrinking-world, seaman-tech\n    world-class-software etc.\n    fix domain router\n    experiment with character encoding\n    update pandoc char encoding \n    build project pages on shrinking-world	2018-12-10	7	f
+4394	Fun	    finish Lady Elizabeth audiobook\n    GoT	2018-12-18	2	f
 4345	Church	    party at Beilman's new house\n    	2018-12-10	4	f
-4383	Tools	    create pages for UNC classes\n    work on 404 error handling	2018-12-17	2	f
+4346	WAM	    prep for meeting with Nathan	2018-12-10	1	f
 4349	Fun	    Last Kingdom, Good Place\n    	2018-12-09	2	f
+4350	People	    Right Coast Pizza\n    Visit Ruby	2018-12-09	4	f
+4353	Teach	    Investigate teaching tools\n        - Repl.it, CodePen, TiddlyWiki\n    	2018-12-08	6	f
 4355	Fun	    Electric Dreams\n    	2018-12-08	2	f
-4356	People	    visit Garcias\n    Stacie stayed till 2am\n    Christine drove me home	2018-12-08	2	f
-4378	People	    work on concrete for driveway\n    learn about concrete for project\n    prep project with Jayden Howell\n    Christmas decorations\n    Stacie to Ruby's\n    Ruby's family visit\n    Pizza from Pelican Joe's\n    hang lights outside	2018-12-15	8	f
-4379	Fun	    Fraiser, Bean Holiday\n    nts 2\n    	2018-12-15	3	f
 4380	Teach	    build ideas for teaching\n    	2018-12-15	2	f
+4357	Grow	    5, 1, 2, 2\n    weight: 210.2\n    write New Reformation\n    enter notes	2018-12-07	2	f
+4359	Business	    Follow up on project plan\n    Investigate notes tools for Agent Match	2018-12-07	2	f
+4360	Fun	    Electric Dreams\n    	2018-12-07	3	f
 4386	Grow	    3, 1, 4, 3\n    weight: 209.4\n    write project goals\n    nap\n    build planning system\n    prayer	2018-12-16	3	f
-4387	Teach	    capture ideas for teaching tools - submitting assignments\n    	2018-12-16	1	f
 4395	People	    dinner with Beilmans at Pelegrini's\n    visit Ruby's house\n    discuss writing Life App notes\n    cleaning crew	2018-12-18	4	f
 4362	Grow	    3, 1, 1, 5\n    Dr Visit intro visit to direct primary care\n    weight: 209.4\n    embrace personal brokenness (Narcissism)\n    Daily Examen app on phone	2018-12-11	4	f
-4364	People	    write Greg McCutchen\n    write my dream phobias\n    contact Ben Flebbe - postpone working together\n    dinner at Pelican Lakes\n    time with Stacie\n    Stacie to Ruby's til 2am	2018-12-11	4	f
 4331	Grow	    3, 1, 1, 2\n    weight: 211.4\n    wake at 4:00\n    think about the New Reformation\n    write about life motivation\n    write about Creativity and Commitments\n    record activities\n    talk with Stacie about work fulfillment	2018-12-06	3	f
-4339	Business	    Isborn\n        Build shared folders\n        Work with Heidi to get first three profiles\n        Reviewed solution with Matt\n        create consulting contract + send to Matt\n    	2018-12-12	5	f
-4376	Grow	    5, 2, 2, 4\n    weight: 208.4	2018-12-15	0	f
-4357	Grow	    5, 1, 2, 2\n    weight: 210.2\n    write New Reformation\n    enter notes	2018-12-07	2	f
-4358	Teach	    gave last final exam\n    grade both classes\n    submit final grades\n    started work on idea of independent study\n    	2018-12-07	4	f
-4361	People	    Rachel & Andrew leave the hospital with Ruby\n    Stacie helps with Ruby (home at 3:00)\n    Lets Andrew & Rachel both sleep	2018-12-07	3	f
-4391	Grow	    4, 3, 1, 2\n    weight: 207.4\n    haircut\n    	2018-12-18	2	f
+4337	Grow	    3, 3, 4, 2\n    weight: 209.4	2018-12-12	0	f
+4338	Teach	    write proposal for Independent Study\n    	2018-12-12	2	f
 4341	Fun	    Star Trek Beyond\n    Madam Sec\n    	2018-12-12	4	f
 4342	People	    discuss Greg with Stacie	2018-12-12	1	f
+4383	Tools	    create pages for UNC classes\n    work on 404 error handling	2018-12-17	2	f
+4361	People	    Rachel & Andrew leave the hospital with Ruby\n    Stacie helps with Ruby (home at 3:00)\n    Lets Andrew & Rachel both sleep	2018-12-07	3	f
+4387	Teach	    capture ideas for teaching tools - submitting assignments\n    	2018-12-16	1	f
+4391	Grow	    4, 3, 1, 2\n    weight: 207.4\n    haircut\n    	2018-12-18	2	f
+4339	Business	    Isborn\n        Build shared folders\n        Work with Heidi to get first three profiles\n        Reviewed solution with Matt\n        create consulting contract + send to Matt\n    	2018-12-12	5	f
 4347	Grow	    3, 1, 3, 2\n    weight: 209.6	2018-12-09	0	f
-4392	Teach	    \n    	2018-12-18	0	f
 4348	Tools	    create plan for repos and apps\n    cancel 7 unused registered domains\n    resurrect page testing robot\n    remove old code	2018-12-09	4	f
-4350	People	    Right Coast Pizza\n    Visit Ruby	2018-12-09	4	f
 4351	Church	    advent	2018-12-09	4	f
-4368	Tools	    Rename Sensei\n    Improve and test repos\n    Debug Sensei & Sensei/Document repos\n    Fix problems on existing websites\n    Simplify websites and app code (eliminate %50 of content)	2018-12-14	6	f
 4354	Business	    Isborn Security\n        Research tools for Agent Match platform (based on design requirements)\n        Build and share notes for project collaboration\n        Create Design Plan for initial implementation\n        Draft template for Agent Profiles	2018-12-08	4	f
-4343	Grow	    5, 2, 1, 2\n    weight: 208.4\n    Dentist visit	2018-12-10	2	f
+4392	Teach	    \n    	2018-12-18	0	f
+4356	People	    visit Garcias\n    Stacie stayed till 2am\n    Christine drove me home	2018-12-08	2	f
+4376	Grow	    5, 2, 2, 4\n    weight: 208.4	2018-12-15	0	f
 4377	Tools	    update PyCharm on iMac\n    debug new repos on macbook	2018-12-15	1	f
+4358	Teach	    gave last final exam\n    grade both classes\n    submit final grades\n    started work on idea of independent study\n    	2018-12-07	4	f
+4368	Tools	    Rename Sensei\n    Improve and test repos\n    Debug Sensei & Sensei/Document repos\n    Fix problems on existing websites\n    Simplify websites and app code (eliminate %50 of content)	2018-12-14	6	f
+4343	Grow	    5, 2, 1, 2\n    weight: 208.4\n    Dentist visit	2018-12-10	2	f
 4402	Tools	    learn about pipenv\n    setup development for Rest\n    build Github repo for Rest API\n    learn about Django Rest API\n    record steps to build Rest API\n    update data models for Sensei Review App\n    update project planning notes for Sensei	2018-12-21	5	f
 4417	Tools	    learn about pipenv\n    setup Python3 with Django\n    create data models for Course, Lesson, Student\n    write docs for building Sensei app\n    debug context loading for pipenv on Rest and MyBook projects\n    pruned MyBook - aspire, cmd, doc	2018-12-22	8	f
+4332	Teach	    ideas for Seaman's Guides\n    think about app architecture\n    plan first four weeks - BACS 200\n    	2018-12-06	1	f
+4401	Grow	    4, 2, 1, 1\n    weight: 208.4\n    Stacie gets a cold, sleep on couch 	2018-12-21	0	f
+4398	Tools	    move Projects into Archive\n    fix tests for Archive\n    build page tester\n    site title from domdoc\n    menu from domdoc\n    random selector in Spiritual Things\n    random selector in Seamans Log	2018-12-19	6	f
+4437	Grow	    4, 1, 1, 1\n    weight: 209.8\n    nap	2018-12-27	2	f
+4438	Teach	    build Canvas content\n    refine lesson 1\n    	2018-12-27	2	f
+4439	Tools	    work with Simple Mind app\n    optimize repo sync	2018-12-27	2	f
+4440	Fun	    Aquaman\n    GoT\n    Madam Sec, Goldbergs\n    	2018-12-27	6	f
+4441	People	    visit with Lucy	2018-12-27	2	f
+4442	Grow	    5, 1, 1, 1\n    weight: 209.8\n    personal planning\n    injure back moving couch\n    nap\n    Food:\n        coffee - 3 cups\n        toast with peanut butter\n        reuben \n        chips and salsa\n        cherry juice - 16 oz\n        stew - 1 bowl\n        pumpkin pie\n        english toffee	2018-12-28	2	f
+4443	Teach	    class prep (Lessons 1-3)\n    create reading assignments\n    create list of students for BACS200\n    create process for adding students\n    	2018-12-28	5	f
+4444	Tools	    manage length of hammer.log\n    improve web command\n    create class command	2018-12-28	1	f
+4445	Fun	    GoT\n    British baking, Yoyager\n    	2018-12-28	4	f
+4446	People	    take down tree\n    discuss trip arrangements with Stacie	2018-12-28	2	f
+4447	Grow	    3, 1, 1, 1\n    weight: 209.6	2018-12-29	0	f
+4448	Teach	    \n    	2018-12-29	0	f
+4449	Tools	    remove old database tables	2018-12-29	2	f
+4450	Fun	    \n    	2018-12-29	0	f
+4451	People	    pack for trip	2018-12-29	1	f
 \.
 
 
@@ -7236,7 +5830,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 -- Name: tasks_task_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
 --
 
-SELECT pg_catalog.setval('public.tasks_task_id_seq', 4431, true);
+SELECT pg_catalog.setval('public.tasks_task_id_seq', 4451, true);
 
 
 --
@@ -7277,7 +5871,6 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 153	archive-content	No directory exists\nNo directory exists	No directory exists\nNo directory exists
 19	app-summary	\nCode Summary            Files     Lines\n\n    App                   218     16287\n    bin                    45      5981\n    test                   45       965\n	\nCode Summary            Files     Lines\n\n    App                   218     16287\n    bin                    45      5981\n    test                   45       965\n
 34	staging-ip	\n        Command not found, staging ['ip']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n	\n        Command not found, staging ['ip']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n
-131	app-url	Find all the URLs for the app\n\nhammer/urls.py\n\n    robots.txt$, RedirectView.as_view(url=staticfiles_storage.url('robots.txt'),  permanent=True)\n    favicon.ico$, RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'), permanent=True)\n    admin, admin.site.urls\n    health/, include(health.urls)\n    health, include(health.urls)\n    life/, include(life.urls)\n    life, include(life.urls)\n    superuser/, include(superuser.urls)\n    superuser, include(superuser.urls)\n    task/, include(tasks.urls)\n    task, include(tasks.urls)\n    , include(tool.urls)\n    , include(mybook.urls)\n\nhealth/urls.py\n\n    $, HealthView\n    history$, HealthList\n    url(r'(?P<pk>\\d+)$, HealthEdit)\n\nlife/urls.py\n\n    $, LifeView\n    experience$, ExperienceView\n    year/(?P<age>[-\\d]+)$, YearView\n    (?P<age>[-\\d]+)/(?P<aspect>[\\W\\w]+)/add$, LifeAdd\n    (?P<pk>\\d+)/edit$, LifeEdit\n\nmybook/urls.py\n\n    login, login, {'template_name': 'mybook_login.html'}\n    logout$, logout, {'next_page': '/login'}\n    booknotes/(?P<title>[\\w/\\-.]*)$, BookNotes\n    info/(?P<title>[\\w/\\-_.]*)$, MyBookPrivateDoc\n    seamanslog$, SeamansLog\n    spiritual/(?P<title>[\\w\\-_.]*)$, SpiritualSelect\n    unc/(?P<title>[\\w/\\-_.]*)$, UncDocDisplay\n    (?P<title>[\\w/\\-_.]*)$, MyBookDocDisplay\n\nsuperuser/urls.py\n\n    $, AdminView\n    log, LogView\n    doc/(?P<doc>[\\w/\\-_.]+)$, DocView\n    material, MaterialView\n    test, TestView\n    users$, UsersView\n    surrogate/(?P<pk>\\d+)$, SurrogateView\n    database$, DatabaseView\n\ntasks/urls.py\n\n    add$, TaskCreate\n    url(r'(?P<pk>\\d+)/edit$, TaskUpdate\n    url(r'(?P<pk>\\d+)/delete$, TaskDelete\n    (?P<pk>\\d+)$, TaskDetail\n    import$, TaskImport\n    export$, TaskExport\n    $, TaskHome\n    summary$, TimeSummary\n    time$, MyTime\n    bad$, MissingDays\n    (?P<activity>[\\w\\d\\-\\.]*)$, TaskList\n\ntool/urls.py\n\n    project/$, ProjectList\n    project/(?P<pk>\\d+)$, ProjectDetail\n    project/add$, ProjectCreate\n    project/(?P<pk>\\d+)/edit$, ProjectUpdate\n    project/(?P<pk>\\d+)/delete$, ProjectDelete\n    user_add$, UserCreate\n    user_delete/(?P<pk>\\d+)$, UserDelete\n    user_detail/(?P<pk>\\d+)$, UserDetail\n    user_edit/(?P<pk>\\d+)$, UserEdit\n    user_list$, UserList\n	Find all the URLs for the app\n\nhammer/urls.py\n\n    robots.txt$, RedirectView.as_view(url=staticfiles_storage.url('robots.txt'),  permanent=True)\n    favicon.ico$, RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'), permanent=True)\n    admin, admin.site.urls\n    health/, include(health.urls)\n    health, include(health.urls)\n    life/, include(life.urls)\n    life, include(life.urls)\n    superuser/, include(superuser.urls)\n    superuser, include(superuser.urls)\n    task/, include(tasks.urls)\n    task, include(tasks.urls)\n    , include(tool.urls)\n    , include(mybook.urls)\n\nhealth/urls.py\n\n    $, HealthView\n    history$, HealthList\n    url(r'(?P<pk>\\d+)$, HealthEdit)\n\nlife/urls.py\n\n    $, LifeView\n    experience$, ExperienceView\n    year/(?P<age>[-\\d]+)$, YearView\n    (?P<age>[-\\d]+)/(?P<aspect>[\\W\\w]+)/add$, LifeAdd\n    (?P<pk>\\d+)/edit$, LifeEdit\n\nmybook/urls.py\n\n    login, login, {'template_name': 'mybook_login.html'}\n    logout$, logout, {'next_page': '/login'}\n    booknotes/(?P<title>[\\w/\\-.]*)$, BookNotes\n    info/(?P<title>[\\w/\\-_.]*)$, MyBookPrivateDoc\n    seamanslog$, SeamansLog\n    spiritual/(?P<title>[\\w\\-_.]*)$, SpiritualSelect\n    unc/(?P<title>[\\w/\\-_.]*)$, UncDocDisplay\n    (?P<title>[\\w/\\-_.]*)$, MyBookDocDisplay\n\nsuperuser/urls.py\n\n    $, AdminView\n    log, LogView\n    doc/(?P<doc>[\\w/\\-_.]+)$, DocView\n    material, MaterialView\n    test, TestView\n    users$, UsersView\n    surrogate/(?P<pk>\\d+)$, SurrogateView\n    database$, DatabaseView\n\ntasks/urls.py\n\n    add$, TaskCreate\n    url(r'(?P<pk>\\d+)/edit$, TaskUpdate\n    url(r'(?P<pk>\\d+)/delete$, TaskDelete\n    (?P<pk>\\d+)$, TaskDetail\n    import$, TaskImport\n    export$, TaskExport\n    $, TaskHome\n    summary$, TimeSummary\n    time$, MyTime\n    bad$, MissingDays\n    (?P<activity>[\\w\\d\\-\\.]*)$, TaskList\n\ntool/urls.py\n\n    project/$, ProjectList\n    project/(?P<pk>\\d+)$, ProjectDetail\n    project/add$, ProjectCreate\n    project/(?P<pk>\\d+)/edit$, ProjectUpdate\n    project/(?P<pk>\\d+)/delete$, ProjectDelete\n    user_add$, UserCreate\n    user_delete/(?P<pk>\\d+)$, UserDelete\n    user_detail/(?P<pk>\\d+)$, UserDetail\n    user_edit/(?P<pk>\\d+)$, UserEdit\n    user_list$, UserList\n
 155	archive-nts	no output	no output
 156	archive-repo	No archive home directory on this computer	No archive home directory on this computer
 159	doc-file-missing	No file, Test/Missing	No file, Test/Missing
@@ -7289,38 +5882,38 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 150	church-export	**Scriptor Error**: unknown command ['church', 'export', 'data/church.csv']\n\n\n            usage: x command \n            \n            command:\n                email       - send integrated email\n                health      - track health metrics\n                help        - show scriptor commands\n                node        - build tree structure for doc nodes\n                page        - track page content for testing\n                project     - manage project content\n                robot       - get pages from web servers\n                task        - work with tasks for user\n                thot        - thot recorder system\n                tst         - perform diff testing\n                user        - login IDs for apps\n        \n	**Scriptor Error**: unknown command ['church', 'export', 'data/church.csv']\n\n\n            usage: x command \n            \n            command:\n                email       - send integrated email\n                health      - track health metrics\n                help        - show scriptor commands\n                node        - build tree structure for doc nodes\n                page        - track page content for testing\n                project     - manage project content\n                robot       - get pages from web servers\n                task        - work with tasks for user\n                thot        - thot recorder system\n                tst         - perform diff testing\n                user        - login IDs for apps\n        \n
 23	church-list	28, Greeley Vineyard, 2017-01-28, 2, 2, 4, 1\n29, Greeley Vineyard, 2017-02-04, 5, 2, 2, 1\n30, Greeley Vineyard, 2017-02-11, 4, 1, 4, 2\n31, Greeley Vineyard, 2017-02-18, 2, 1, 4, 1\n32, Greeley Vineyard, 2017-02-25, 1, 1, 5, 1\n33, Greeley Vineyard, 2017-03-04, 1, 1, 5, 1\n34, Greeley Vineyard, 2017-03-11, 1, 1, 5, 1\n35, Greeley Vineyard, 2017-03-18, 1, 1, 5, 1\n36, Greeley Vineyard, 2017-03-25, 1, 1, 5, 1\n37, Greeley Vineyard, 2017-04-01, 1, 1, 2, 1\n38, Greeley Vineyard, 2017-04-08, 1, 1, 5, 1\n39, Greeley Vineyard, 2017-04-15, 0, 0, 0, 0\n40, Greeley Vineyard, 2017-04-22, 0, 0, 0, 0\n41, Greeley Vineyard, 2017-04-29, 0, 0, 0, 0\n42, Greeley Vineyard, 2017-05-06, 0, 0, 0, 0\n43, Greeley Vineyard, 2017-05-13, 0, 0, 0, 0\n44, Greeley Vineyard, 2017-05-20, 0, 0, 0, 0\n45, Greeley Vineyard, 2017-05-27, 0, 0, 0, 0\n7, Greeley Vineyard, 2016-10-08, 2, 1, 3, 5\n8, Greeley Vineyard, 2016-10-15, 2, 5, 3, 5\n9, Greeley Vineyard, 2016-10-22, 2, 1, 3, 5\n10, Greeley Vineyard, 2016-10-29, 2, 1, 1, 1\n11, Greeley Vineyard, 2016-11-05, 5, 1, 2, 1\n12, Greeley Vineyard, 2016-11-12, 5, 1, 3, 1\n13, Greeley Vineyard, 2016-11-19, 3, 5, 3, 4\n15, Greeley Vineyard, 2016-11-26, 3, 5, 4, 1\n16, Greeley Vineyard, 2016-12-03, 2, 1, 4, 4\n21, Greeley Vineyard, 2016-12-10, 4, 1, 4, 3\n22, Greeley Vineyard, 2016-12-17, 1, 5, 4, 5\n23, Greeley Vineyard, 2016-12-24, 5, 5, 4, 3\n24, Greeley Vineyard, 2016-12-31, 4, 5, 4, 2\n25, Greeley Vineyard, 2017-01-07, 4, 5, 3, 1\n26, Greeley Vineyard, 2017-01-14, 3, 5, 5, 2\n27, Greeley Vineyard, 2017-01-21, 4, 1, 5, 2\n	28, Greeley Vineyard, 2017-01-28, 2, 2, 4, 1\n29, Greeley Vineyard, 2017-02-04, 5, 2, 2, 1\n30, Greeley Vineyard, 2017-02-11, 4, 1, 4, 2\n31, Greeley Vineyard, 2017-02-18, 2, 1, 4, 1\n32, Greeley Vineyard, 2017-02-25, 1, 1, 5, 1\n33, Greeley Vineyard, 2017-03-04, 1, 1, 5, 1\n34, Greeley Vineyard, 2017-03-11, 1, 1, 5, 1\n35, Greeley Vineyard, 2017-03-18, 1, 1, 5, 1\n36, Greeley Vineyard, 2017-03-25, 1, 1, 5, 1\n37, Greeley Vineyard, 2017-04-01, 1, 1, 2, 1\n38, Greeley Vineyard, 2017-04-08, 1, 1, 5, 1\n39, Greeley Vineyard, 2017-04-15, 0, 0, 0, 0\n40, Greeley Vineyard, 2017-04-22, 0, 0, 0, 0\n41, Greeley Vineyard, 2017-04-29, 0, 0, 0, 0\n42, Greeley Vineyard, 2017-05-06, 0, 0, 0, 0\n43, Greeley Vineyard, 2017-05-13, 0, 0, 0, 0\n44, Greeley Vineyard, 2017-05-20, 0, 0, 0, 0\n45, Greeley Vineyard, 2017-05-27, 0, 0, 0, 0\n7, Greeley Vineyard, 2016-10-08, 2, 1, 3, 5\n8, Greeley Vineyard, 2016-10-15, 2, 5, 3, 5\n9, Greeley Vineyard, 2016-10-22, 2, 1, 3, 5\n10, Greeley Vineyard, 2016-10-29, 2, 1, 1, 1\n11, Greeley Vineyard, 2016-11-05, 5, 1, 2, 1\n12, Greeley Vineyard, 2016-11-12, 5, 1, 3, 1\n13, Greeley Vineyard, 2016-11-19, 3, 5, 3, 4\n15, Greeley Vineyard, 2016-11-26, 3, 5, 4, 1\n16, Greeley Vineyard, 2016-12-03, 2, 1, 4, 4\n21, Greeley Vineyard, 2016-12-10, 4, 1, 4, 3\n22, Greeley Vineyard, 2016-12-17, 1, 5, 4, 5\n23, Greeley Vineyard, 2016-12-24, 5, 5, 4, 3\n24, Greeley Vineyard, 2016-12-31, 4, 5, 4, 2\n25, Greeley Vineyard, 2017-01-07, 4, 5, 3, 1\n26, Greeley Vineyard, 2017-01-14, 3, 5, 5, 2\n27, Greeley Vineyard, 2017-01-21, 4, 1, 5, 2\n
 94	doc-status	On branch master\nYour branch is up-to-date with 'origin/master'.\nnothing to commit, working directory clean\n	On branch master\nYour branch is up-to-date with 'origin/master'.\nnothing to commit, working directory clean\n
+88	doc-encoding	Ignore bad chars\n\na "\nb "\nc -\nd '\n\n\nProjects/\n├── BACS200\n├── Index\n\n\nConvert UTF8\n\na "\nb "\nc -\nd '\n\n\nProjects/\n BACS200\n Index\n\n\nConvert UTF16\n\na \nb \nc \nd \n\n\nProjects/\n BACS200\n Index\n\n	Ignore bad chars\n\na "\nb "\nc -\nd '\n\n\nProjects/\n├── BACS200\n├── Index\n\n\nConvert UTF8\n\na "\nb "\nc -\nd '\n\n\nProjects/\n BACS200\n Index\n\n\nConvert UTF16\n\na \nb \nc \nd \n\n\nProjects/\n BACS200\n Index\n\n
 135	booknotes-show	shell(x booknotes show) --> 12 lines (should be between 20 and 30)	shell(x booknotes show) --> 12 lines (should be between 20 and 30)
 61	reuse-list	Tester\nNotes\nBook\nTechnology\nFrontEnd\nTest\nIndex\nPlanner\nApp\nHammerPrinciple\nScript\nContents\nBackEnd\nArchitecture\nPhotos\nTricks\n	Tester\nNotes\nBook\nTechnology\nFrontEnd\nTest\nIndex\nPlanner\nApp\nHammerPrinciple\nScript\nContents\nBackEnd\nArchitecture\nPhotos\nTricks\n
 139	thot-show	no output	no output
-88	doc-encoding	Ignore bad chars\n\na "\nb "\nc -\nd '\n\n\nProjects/\n├── BACS200\n├── Index\n\n\nConvert UTF8\n\na "\nb "\nc -\nd '\n\n\nProjects/\n BACS200\n Index\n\n\nConvert UTF16\n\na \nb \nc \nd \n\n\nProjects/\n BACS200\n Index\n\n	Ignore bad chars\n\na "\nb "\nc -\nd '\n\n\nProjects/\n├── BACS200\n├── Index\n\n\nConvert UTF8\n\na "\nb "\nc -\nd '\n\n\nProjects/\n BACS200\n Index\n\n\nConvert UTF16\n\na \nb \nc \nd \n\n\nProjects/\n BACS200\n Index\n\n
 168	text-links	[('http://example.com', 'More Examples'), ('http://example2.com', 'Even More Examples')]	[('http://example.com', 'More Examples'), ('http://example2.com', 'Even More Examples')]
+6	text-markdown	# Work Activities\n\nThese activities are critical to successful work.\nBalance the four activities for the best outcomes.\n\nThis is a second paragraph\nof text.\n\n## Learn\n\ncreate deeper understanding of problem\nevaluate solution\n\n## Plan\n\npast history\npresent tasks\nfuture priorities\n\n## Build\n\n### fix\n\n#### list of known problems\n\n#### issue tracking\n\n### test\n\n#### test inventory\n\n#### tests needed\n\n### extend\n\n### improve\n\n## Teach\n\nshare what you know\ninvite review\n	# Work Activities\n\nThese activities are critical to successful work.\nBalance the four activities for the best outcomes.\n\nThis is a second paragraph\nof text.\n\n## Learn\n\ncreate deeper understanding of problem\nevaluate solution\n\n## Plan\n\npast history\npresent tasks\nfuture priorities\n\n## Build\n\n### fix\n\n#### list of known problems\n\n#### issue tracking\n\n### test\n\n#### test inventory\n\n#### tests needed\n\n### extend\n\n### improve\n\n## Teach\n\nshare what you know\ninvite review\n
 115	page-list	shell(x page list) --> 2 lines (should be between 18 and 30)	shell(x page list) --> 2 lines (should be between 18 and 30)
 173	text-anchors	[('http://example.com', 'More Examples'), ('http://example2.com', 'Even More Examples')]	[('http://example.com', 'More Examples'), ('http://example2.com', 'Even More Examples')]
 91	doc-score	\nDoc Summary                       Files       Lines        Words\n\n    Documents                      1333       90603        477 K\n	\nDoc Summary                       Files       Lines        Words\n\n    Documents                      1333       90603        477 K\n
-11	app-classes	bin/__init__.py\n    \nbin/app.py\n    \nbin/aspire.py\n    \nbin/book.py\n    \nbin/booknotes.py\n    \nbin/data.py\n    \nbin/datatype.py\n    \nbin/days.py\n    \nbin/diagrams.py\n    \nbin/doc.py\n    \nbin/faceblog.py\n    \nbin/files.py\n    \nbin/grades.py\n    \nbin/guide.py\n    \nbin/hourly.py\n    \nbin/hours.py\n    \nbin/i.py\n    \nbin/life.py\n    \nbin/log.py\n    \nbin/music.py\n    \nbin/n.py\n    \nbin/ntsh.py\n    \nbin/ops.py\n    \nbin/page_tests.py\n    # class PagesTest(TestCase):\n    class RemoteTest(TestCase):\n    # class RemoteTest(TestCase):\nbin/pandoc.py\n    \nbin/remote_tests.py\n    # class RemoteTest(FunctionalTestCase):\n    # class PythonTest(FunctionalTestCase):\nbin/resize.py\n    \nbin/score.py\n    \nbin/seamanslog.py\n    \nbin/shell.py\n    \nbin/spiritual.py\n    \nbin/src.py\n    \nbin/switches.py\n    \nbin/text.py\n        pattern = r'class (.*)\\(.*\\)'\nbin/todo.py\n    \nbin/tool.py\n    \nbin/user.py\n    \nbin/vc.py\n    \nbin/web.py\n    \nbin/wordpress.py\n    \nbin/x.py\n    \nhammer/__init__.py\n    \nhammer/secret_settings.py\n    \nhammer/settings.py\n    \nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    class HealthConfig(AppConfig):\nhealth/health.py\n    \nhealth/models.py\n    class HealthScore(models.Model):\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    class HealthView(TemplateView):\n    class HealthList(ListView):\n    class HealthEdit(UpdateView):\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    class LifeConfig(AppConfig):\nlife/life.py\n    \nlife/models.py\n    class Year(models.Model):\n    class Aspect(models.Model):\n    class Experience(models.Model):\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n    class LifeView(TemplateView):\n    class ExperienceView(ListView):\n    class YearView(ListView):\n    class LifeAdd(LoginRequiredMixin, RedirectView):\n    class LifeEdit(UpdateView):\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    class MybookConfig(AppConfig):\nmybook/models.py\n    class Author(models.Model):\n    class Book(models.Model):\nmybook/mybook.py\n    \nmybook/mybook_views.py\n    class MyBookDocDisplay(TemplateView):\n    class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):\n    class BookNotes(MyBookDocDisplay):\n    class CardView(MyBookDocDisplay):\n    class OutlineView(MyBookDocDisplay):\n    class DailyTask(RedirectView):\n    # class SeamansLog(MyBookDocDisplay):\n    class SeamansLog(RedirectView):\n    class SpiritualSelect(RedirectView):\n    class TabsView(MyBookDocDisplay):\n    class UncDocDisplay(TemplateView):\nmybook/outline.py\n    \nmybook/task.py\n    \nmybook/tests.py\n    \nmybook/urls.py\n    \nsuperuser/__init__.py\n    \nsuperuser/admin.py\n    \nsuperuser/admin_views.py\n    class AdminView(UserPassesTestMixin, TemplateView):\n    class DatabaseView(UserPassesTestMixin, TemplateView):\n    class DocView(UserPassesTestMixin, TemplateView):\n    class LogView(UserPassesTestMixin, TemplateView):\n    class MaterialView(TemplateView):\n    class SurrogateView(UserPassesTestMixin, TemplateView):\n    class TestView(UserPassesTestMixin, ListView):\n    class UsersView(UserPassesTestMixin, ListView):\nsuperuser/apps.py\n    class AdminConfig(AppConfig):\nsuperuser/initialize.py\n    \nsuperuser/models.py\n    class Administrator(models.Model):\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n    class Task (models.Model):\ntasks/summary.py\n    \ntasks/task.py\n    \ntasks/urls.py\n    \ntasks/views.py\n    class TaskBase(LoginRequiredMixin, ContextMixin):\n    class TaskDelete(DeleteView):\n    class TaskDetail(DetailView):\n    class TaskCreate(CreateView):\n    class TaskUpdate(TaskBase, UpdateView):\n    class TaskHome(TaskBase, TemplateView):\n    class TaskList(TaskBase, ListView):\n    class MyTime(TaskBase, TemplateView):\n    class TimeSummary(TaskBase, TemplateView):\n    class MissingDays(TaskBase, TemplateView):\n    class TaskImport(RedirectView):\n    class TaskExport(TaskBase, TemplateView):\ntest/__init__.py\n    \ntest/app_test.py\n    \ntest/archive_test.py\n    \ntest/aspire_test.py\n    \ntest/booknotes_test.py\n    \ntest/css_test.py\n    \ntest/data_test.py\n    \ntest/doc_test.py\n    \ntest/health_test.py\n    \ntest/hourly_test.py\n    \ntest/i_test.py\n    \ntest/log_test.py\n    \ntest/ops_test.py\n    \ntest/page_test.py\n    \ntest/robot_test.py\n    \ntest/seamanslog_test.py\n    \ntest/system_test.py\n    \ntest/text_test.py\n    \ntest/tst_test.py\n    \ntest/unc_test.py\n    \ntest/user_test.py\n    \ntest/vc_test.py\n    \ntest/wordpress_test.py\n    \ntool/__init__.py\n    \ntool/document.py\n    \ntool/domain.py\n    \ntool/email.py\n    \ntool/log.py\n    \ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n    class Command(BaseCommand):\ntool/models.py\n    class Test(models.Model):\n    class Page(models.Model):\n    class Project(models.Model):\ntool/notify.py\n    \ntool/page.py\n    \ntool/project.py\n    class ProjectList(ListView):\n    class ProjectDetail(DetailView):\n    class ProjectCreate(CreateView):\n    class ProjectUpdate(UpdateView):\n    class ProjectDelete(DeleteView):\ntool/robot.py\n    \ntool/tst.py\n    \ntool/urls.py\n    \ntool/user.py\n    \ntool/user_views.py\n    class UserList(ListView):\n    class UserCreate(CreateView):\n    class UserDetail(DetailView):\n    class UserEdit(UpdateView):\n    class UserDelete(DeleteView):\ntool/xxx.py\n    # class Xxx(models.Model):\ntool/xxx_script.py\n    \ntool/xxx_views.py\n    class yyyBase(ContextMixin):\n    class XxxAdd(yyyBase, CreateView):\n    class XxxDelete(yyyBase, DeleteView):\n    class XxxDetail(yyyBase, DetailView):\n    class XxxEdit(yyyBase, UpdateView):\n    class XxxList(yyyBase, ListView):\nunc/__init__.py\n    \nunc/admin.py\n    \nunc/apps.py\n    class UncConfig(AppConfig):\nunc/models.py\n    class Course(models.Model):\n    class Student(models.Model):\n    class Review(models.Model):\n    class ReviewScore(models.Model):\n    class ReviewerScore(models.Model):\nunc/review.py\n    \nunc/sensei.py\n    \nunc/tests.py\n    \n	bin/__init__.py\n    \nbin/app.py\n    \nbin/aspire.py\n    \nbin/book.py\n    \nbin/booknotes.py\n    \nbin/data.py\n    \nbin/datatype.py\n    \nbin/days.py\n    \nbin/diagrams.py\n    \nbin/doc.py\n    \nbin/faceblog.py\n    \nbin/files.py\n    \nbin/grades.py\n    \nbin/guide.py\n    \nbin/hourly.py\n    \nbin/hours.py\n    \nbin/i.py\n    \nbin/life.py\n    \nbin/log.py\n    \nbin/music.py\n    \nbin/n.py\n    \nbin/ntsh.py\n    \nbin/ops.py\n    \nbin/page_tests.py\n    # class PagesTest(TestCase):\n    class RemoteTest(TestCase):\n    # class RemoteTest(TestCase):\nbin/pandoc.py\n    \nbin/remote_tests.py\n    # class RemoteTest(FunctionalTestCase):\n    # class PythonTest(FunctionalTestCase):\nbin/resize.py\n    \nbin/score.py\n    \nbin/seamanslog.py\n    \nbin/shell.py\n    \nbin/spiritual.py\n    \nbin/src.py\n    \nbin/switches.py\n    \nbin/text.py\n        pattern = r'class (.*)\\(.*\\)'\nbin/todo.py\n    \nbin/tool.py\n    \nbin/user.py\n    \nbin/vc.py\n    \nbin/web.py\n    \nbin/wordpress.py\n    \nbin/x.py\n    \nhammer/__init__.py\n    \nhammer/secret_settings.py\n    \nhammer/settings.py\n    \nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    class HealthConfig(AppConfig):\nhealth/health.py\n    \nhealth/models.py\n    class HealthScore(models.Model):\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    class HealthView(TemplateView):\n    class HealthList(ListView):\n    class HealthEdit(UpdateView):\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    class LifeConfig(AppConfig):\nlife/life.py\n    \nlife/models.py\n    class Year(models.Model):\n    class Aspect(models.Model):\n    class Experience(models.Model):\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n    class LifeView(TemplateView):\n    class ExperienceView(ListView):\n    class YearView(ListView):\n    class LifeAdd(LoginRequiredMixin, RedirectView):\n    class LifeEdit(UpdateView):\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    class MybookConfig(AppConfig):\nmybook/models.py\n    class Author(models.Model):\n    class Book(models.Model):\nmybook/mybook.py\n    \nmybook/mybook_views.py\n    class MyBookDocDisplay(TemplateView):\n    class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):\n    class BookNotes(MyBookDocDisplay):\n    class CardView(MyBookDocDisplay):\n    class OutlineView(MyBookDocDisplay):\n    class DailyTask(RedirectView):\n    # class SeamansLog(MyBookDocDisplay):\n    class SeamansLog(RedirectView):\n    class SpiritualSelect(RedirectView):\n    class TabsView(MyBookDocDisplay):\n    class UncDocDisplay(TemplateView):\nmybook/outline.py\n    \nmybook/task.py\n    \nmybook/tests.py\n    \nmybook/urls.py\n    \nsuperuser/__init__.py\n    \nsuperuser/admin.py\n    \nsuperuser/admin_views.py\n    class AdminView(UserPassesTestMixin, TemplateView):\n    class DatabaseView(UserPassesTestMixin, TemplateView):\n    class DocView(UserPassesTestMixin, TemplateView):\n    class LogView(UserPassesTestMixin, TemplateView):\n    class MaterialView(TemplateView):\n    class SurrogateView(UserPassesTestMixin, TemplateView):\n    class TestView(UserPassesTestMixin, ListView):\n    class UsersView(UserPassesTestMixin, ListView):\nsuperuser/apps.py\n    class AdminConfig(AppConfig):\nsuperuser/initialize.py\n    \nsuperuser/models.py\n    class Administrator(models.Model):\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n    class Task (models.Model):\ntasks/summary.py\n    \ntasks/task.py\n    \ntasks/urls.py\n    \ntasks/views.py\n    class TaskBase(LoginRequiredMixin, ContextMixin):\n    class TaskDelete(DeleteView):\n    class TaskDetail(DetailView):\n    class TaskCreate(CreateView):\n    class TaskUpdate(TaskBase, UpdateView):\n    class TaskHome(TaskBase, TemplateView):\n    class TaskList(TaskBase, ListView):\n    class MyTime(TaskBase, TemplateView):\n    class TimeSummary(TaskBase, TemplateView):\n    class MissingDays(TaskBase, TemplateView):\n    class TaskImport(RedirectView):\n    class TaskExport(TaskBase, TemplateView):\ntest/__init__.py\n    \ntest/app_test.py\n    \ntest/archive_test.py\n    \ntest/aspire_test.py\n    \ntest/booknotes_test.py\n    \ntest/css_test.py\n    \ntest/data_test.py\n    \ntest/doc_test.py\n    \ntest/health_test.py\n    \ntest/hourly_test.py\n    \ntest/i_test.py\n    \ntest/log_test.py\n    \ntest/ops_test.py\n    \ntest/page_test.py\n    \ntest/robot_test.py\n    \ntest/seamanslog_test.py\n    \ntest/system_test.py\n    \ntest/text_test.py\n    \ntest/tst_test.py\n    \ntest/unc_test.py\n    \ntest/user_test.py\n    \ntest/vc_test.py\n    \ntest/wordpress_test.py\n    \ntool/__init__.py\n    \ntool/document.py\n    \ntool/domain.py\n    \ntool/email.py\n    \ntool/log.py\n    \ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n    class Command(BaseCommand):\ntool/models.py\n    class Test(models.Model):\n    class Page(models.Model):\n    class Project(models.Model):\ntool/notify.py\n    \ntool/page.py\n    \ntool/project.py\n    class ProjectList(ListView):\n    class ProjectDetail(DetailView):\n    class ProjectCreate(CreateView):\n    class ProjectUpdate(UpdateView):\n    class ProjectDelete(DeleteView):\ntool/robot.py\n    \ntool/tst.py\n    \ntool/urls.py\n    \ntool/user.py\n    \ntool/user_views.py\n    class UserList(ListView):\n    class UserCreate(CreateView):\n    class UserDetail(DetailView):\n    class UserEdit(UpdateView):\n    class UserDelete(DeleteView):\ntool/xxx.py\n    # class Xxx(models.Model):\ntool/xxx_script.py\n    \ntool/xxx_views.py\n    class yyyBase(ContextMixin):\n    class XxxAdd(yyyBase, CreateView):\n    class XxxDelete(yyyBase, DeleteView):\n    class XxxDetail(yyyBase, DetailView):\n    class XxxEdit(yyyBase, UpdateView):\n    class XxxList(yyyBase, ListView):\nunc/__init__.py\n    \nunc/admin.py\n    \nunc/apps.py\n    class UncConfig(AppConfig):\nunc/models.py\n    class Course(models.Model):\n    class Student(models.Model):\n    class Review(models.Model):\n    class ReviewScore(models.Model):\n    class ReviewerScore(models.Model):\nunc/review.py\n    \nunc/sensei.py\n    \nunc/tests.py\n    \n
-136	booknotes-lines	shell(x booknotes content) --> 2711 lines (should be between 1500 and 1600)	shell(x booknotes content) --> 2711 lines (should be between 1500 and 1600)
+131	app-url	Find all the URLs for the app\n\nhammer/urls.py\n\n    robots.txt$, RedirectView.as_view(url=staticfiles_storage.url('robots.txt'),  permanent=True)\n    favicon.ico$, RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'), permanent=True)\n    admin, admin.site.urls\n    health/, include(health.urls)\n    health, include(health.urls)\n    life/, include(life.urls)\n    life, include(life.urls)\n    superuser/, include(superuser.urls)\n    superuser, include(superuser.urls)\n    task/, include(tasks.urls)\n    task, include(tasks.urls)\n    , include(tool.urls)\n    , include(mybook.urls)\n\nhealth/urls.py\n\n    $, HealthView\n    history$, HealthList\n    url(r'(?P<pk>\\d+)$, HealthEdit)\n\nlife/urls.py\n\n    $, LifeView\n    experience$, ExperienceView\n    year/(?P<age>[-\\d]+)$, YearView\n    (?P<age>[-\\d]+)/(?P<aspect>[\\W\\w]+)/add$, LifeAdd\n    (?P<pk>\\d+)/edit$, LifeEdit\n\nmybook/urls.py\n\n    login, login, {'template_name': 'mybook_login.html'}\n    logout$, logout, {'next_page': '/login'}\n    booknotes/(?P<title>[\\w/\\-.]*)$, BookNotes\n    info/(?P<title>[\\w/\\-_.]*)$, MyBookPrivateDoc\n    seamanslog$, SeamansLog\n    spiritual/(?P<title>[\\w\\-_.]*)$, SpiritualSelect\n    unc/(?P<title>[\\w/\\-_.]*)$, UncDocDisplay\n    (?P<title>[\\w/\\-_.]*)$, MyBookDocDisplay\n\nsuperuser/urls.py\n\n    $, AdminView\n    log, LogView\n    doc/(?P<doc>[\\w/\\-_.]+)$, DocView\n    material, MaterialView\n    test, TestView\n    users$, UsersView\n    surrogate/(?P<pk>\\d+)$, SurrogateView\n    database$, DatabaseView\n\ntasks/urls.py\n\n    add$, TaskCreate\n    url(r'(?P<pk>\\d+)/edit$, TaskUpdate\n    url(r'(?P<pk>\\d+)/delete$, TaskDelete\n    (?P<pk>\\d+)$, TaskDetail\n    import$, TaskImport\n    export$, TaskExport\n    $, TaskHome\n    summary$, TimeSummary\n    time$, MyTime\n    bad$, MissingDays\n    (?P<activity>[\\w\\d\\-\\.]*)$, TaskList\n\ntool/urls.py\n\n    project/$, ProjectList\n    project/(?P<pk>\\d+)$, ProjectDetail\n    project/add$, ProjectCreate\n    project/(?P<pk>\\d+)/edit$, ProjectUpdate\n    project/(?P<pk>\\d+)/delete$, ProjectDelete\n    user_add$, UserCreate\n    user_delete/(?P<pk>\\d+)$, UserDelete\n    user_detail/(?P<pk>\\d+)$, UserDetail\n    user_edit/(?P<pk>\\d+)$, UserEdit\n    user_list$, UserList\n	Find all the URLs for the app\n\nhammer/urls.py\n\n    robots.txt$, RedirectView.as_view(url=staticfiles_storage.url('robots.txt'),  permanent=True)\n    favicon.ico$, RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'), permanent=True)\n    admin, admin.site.urls\n    health/, include(health.urls)\n    health, include(health.urls)\n    life/, include(life.urls)\n    life, include(life.urls)\n    superuser/, include(superuser.urls)\n    superuser, include(superuser.urls)\n    task/, include(tasks.urls)\n    task, include(tasks.urls)\n    , include(tool.urls)\n    , include(mybook.urls)\n\nhealth/urls.py\n\n    $, HealthView\n    history$, HealthList\n    url(r'(?P<pk>\\d+)$, HealthEdit)\n\nlife/urls.py\n\n    $, LifeView\n    experience$, ExperienceView\n    year/(?P<age>[-\\d]+)$, YearView\n    (?P<age>[-\\d]+)/(?P<aspect>[\\W\\w]+)/add$, LifeAdd\n    (?P<pk>\\d+)/edit$, LifeEdit\n\nmybook/urls.py\n\n    login, login, {'template_name': 'mybook_login.html'}\n    logout$, logout, {'next_page': '/login'}\n    booknotes/(?P<title>[\\w/\\-.]*)$, BookNotes\n    info/(?P<title>[\\w/\\-_.]*)$, MyBookPrivateDoc\n    seamanslog$, SeamansLog\n    spiritual/(?P<title>[\\w\\-_.]*)$, SpiritualSelect\n    unc/(?P<title>[\\w/\\-_.]*)$, UncDocDisplay\n    (?P<title>[\\w/\\-_.]*)$, MyBookDocDisplay\n\nsuperuser/urls.py\n\n    $, AdminView\n    log, LogView\n    doc/(?P<doc>[\\w/\\-_.]+)$, DocView\n    material, MaterialView\n    test, TestView\n    users$, UsersView\n    surrogate/(?P<pk>\\d+)$, SurrogateView\n    database$, DatabaseView\n\ntasks/urls.py\n\n    add$, TaskCreate\n    url(r'(?P<pk>\\d+)/edit$, TaskUpdate\n    url(r'(?P<pk>\\d+)/delete$, TaskDelete\n    (?P<pk>\\d+)$, TaskDetail\n    import$, TaskImport\n    export$, TaskExport\n    $, TaskHome\n    summary$, TimeSummary\n    time$, MyTime\n    bad$, MissingDays\n    (?P<activity>[\\w\\d\\-\\.]*)$, TaskList\n\ntool/urls.py\n\n    project/$, ProjectList\n    project/(?P<pk>\\d+)$, ProjectDetail\n    project/add$, ProjectCreate\n    project/(?P<pk>\\d+)/edit$, ProjectUpdate\n    project/(?P<pk>\\d+)/delete$, ProjectDelete\n    user_add$, UserCreate\n    user_delete/(?P<pk>\\d+)$, UserDelete\n    user_detail/(?P<pk>\\d+)$, UserDetail\n    user_edit/(?P<pk>\\d+)$, UserEdit\n    user_list$, UserList\n
 141	mybook-menu-booknotes	('/brain', 'zmdi-library', 'Exterior Brain', None)\n('/booknotes', 'zmdi-home', 'Book Notes', 'class=active')	('/brain', 'zmdi-library', 'Exterior Brain', None)\n('/booknotes', 'zmdi-home', 'Book Notes', 'class=active')
-31	hourly-list	\nHourly Tasks\n\n\n          echo "PATH=" `path`\n          echo "env=" `env`\n          echo Python: `which python`\n          # git status\n          x tst\n          x tst list\n          x tst send\n      \n\nDaily Tasks\n\n\n          # x spiritual article\n          # x seamanslog article\n          x data backup\n          rm $p/log/django.log\n      \n	\nHourly Tasks\n\n\n          echo "PATH=" `path`\n          echo "env=" `env`\n          echo Python: `which python`\n          # git status\n          x tst\n          x tst list\n          x tst send\n      \n\nDaily Tasks\n\n\n          # x spiritual article\n          # x seamanslog article\n          x data backup\n          rm $p/log/django.log\n      \n
+136	booknotes-lines	shell(x booknotes content) --> 2711 lines (should be between 1500 and 1600)	shell(x booknotes content) --> 2711 lines (should be between 1500 and 1600)
 174	text-div	<p></p>	<p></p>
 166	text-findall	### fix\n### test\n### extend\n### improve	### fix\n### test\n### extend\n### improve
 36	author-score	  10 - capture\n  40 - draft\n  90 - refine\n 160 - share\n 300 Total\n	  10 - capture\n  40 - draft\n  90 - refine\n 160 - share\n 300 Total\n
 146	mybook-menu-software	('/software', 'zmdi-home', 'World Class Software', 'class=active')\n('/software/Leverage', 'zmdi-key', 'Leverage Principle', None)\n('/software/BestPractice', 'zmdi-face', 'Best Practice', None)	('/software', 'zmdi-home', 'World Class Software', 'class=active')\n('/software/Leverage', 'zmdi-key', 'Leverage Principle', None)\n('/software/BestPractice', 'zmdi-face', 'Best Practice', None)
 75	opc-show	shell(x opc show) --> 42 lines (should be between 2200 and 2500)	shell(x opc show) --> 42 lines (should be between 2200 and 2500)
+31	hourly-list	\nHourly Tasks\n\n\n          echo "PATH=" `path`\n          echo "env=" `env`\n          echo Python: `which python`\n          # git status\n          x tst\n          x tst list\n          x tst send\n      \n\nDaily Tasks\n\n\n          # x spiritual article\n          # x seamanslog article\n          x data backup\n          rm $p/log/django.log\n      \n	\nHourly Tasks\n\n\n          echo "PATH=" `path`\n          echo "env=" `env`\n          echo Python: `which python`\n          # git status\n          x tst\n          x tst list\n          x tst send\n      \n\nDaily Tasks\n\n\n          # x spiritual article\n          # x seamanslog article\n          x data backup\n          rm $p/log/django.log\n      \n
+179	log-length	Log Length OK - /home/django/MyBook/log/hammer.log, 1610 lines	Log Length OK - /home/django/MyBook/log/hammer.log, 1547 lines
 120	software-summary	    software                         68        5366         35 K\n	    software                         68        5366         35 K\n
 163	mybook-redirect	OK\nRedirect ('mybookonline.org', 'xxx', ''):  Expected: /mybook/xxx, Got: /missing/xxx\nOK\nRedirect ('mybookonline.org', 'mybook/Index', ''):  Expected: None, Got: /missing/mybook/Index\nOK\nOK\nOK\nRedirect ('mybookonline.org', 'brain', ''):  Expected: /mybook/brain, Got: /missing/brain\nRedirect ('exteriorbrain.org', 'brain', ''):  Expected: /brain/Index, Got: /missing/brain\nRedirect ('seamansguide.com', 'guide', ''):  Expected: /guide/Index, Got: None\nOK\nOK\nOK	OK\nRedirect ('mybookonline.org', 'xxx', ''):  Expected: /mybook/xxx, Got: /missing/xxx\nOK\nRedirect ('mybookonline.org', 'mybook/Index', ''):  Expected: None, Got: /missing/mybook/Index\nOK\nOK\nOK\nRedirect ('mybookonline.org', 'brain', ''):  Expected: /mybook/brain, Got: /missing/brain\nRedirect ('exteriorbrain.org', 'brain', ''):  Expected: /brain/Index, Got: /missing/brain\nRedirect ('seamansguide.com', 'guide', ''):  Expected: /guide/Index, Got: None\nOK\nOK\nOK
 105	project-template	{% extends "tool_theme.html" %}\n\n{% block page_content %}\n\n    <div class="card">\n        <div class="card-header">\n            <a href="/project/">\n                <h2>Project Demo\n                    <small>Showcase for Projects</small>\n                </h2>\n            </a>\n\n            <p class="actions"> PROJECT DEMO </p>\n        </div>\n        <div class="card-body card-padding">\n\n            <div class="card" style="border: 2px solid teal; border-radius: 20px">\n\n                {% block topic_content %}\n                {% endblock %}\n\n            </div>\n\n        </div>\n    </div>\n\n{% endblock %}	{% extends "tool_theme.html" %}\n\n{% block page_content %}\n\n    <div class="card">\n        <div class="card-header">\n            <a href="/project/">\n                <h2>Project Demo\n                    <small>Showcase for Projects</small>\n                </h2>\n            </a>\n\n            <p class="actions"> PROJECT DEMO </p>\n        </div>\n        <div class="card-body card-padding">\n\n            <div class="card" style="border: 2px solid teal; border-radius: 20px">\n\n                {% block topic_content %}\n                {% endblock %}\n\n            </div>\n\n        </div>\n    </div>\n\n{% endblock %}
+49	seamanslog-summary	    seamanslog                       51        1897         17 K\n\n	    seamanslog                       51        1897         17 K\n\n
 84	task-week	no output	no output
 85	task-work	no output	no output
-134	booknotes-list	booknotes list\nExecution-quotes.html\nSiteTitle\nNext100Years\nThinking-quotes.html\nEssentialism\nOriginals-quotes.html\nPresentOverPerfect\nPrinciples-quotes.html\nActivateYourBrain-quotes.html\nEssentialism-quote.html\nIndex\nExecution\nIntegrity-quotes.html\nGoodIdeas-quotes.html\nIntegrity\nEQ\nTribeOfMentors-quotes.html\n	booknotes list\nExecution-quotes.html\nSiteTitle\nNext100Years\nThinking-quotes.html\nEssentialism\nOriginals-quotes.html\nPresentOverPerfect\nPrinciples-quotes.html\nActivateYourBrain-quotes.html\nEssentialism-quote.html\nIndex\nExecution\nIntegrity-quotes.html\nGoodIdeas-quotes.html\nIntegrity\nEQ\nTribeOfMentors-quotes.html\n
-179	log-length	Log Length OK - /home/django/MyBook/log/hammer.log, 1228 lines	Log Length OK - /home/django/MyBook/log/hammer.log, 1049 lines
-49	seamanslog-summary	    seamanslog                       51        1897         17 K\n\n	    seamanslog                       51        1897         17 K\n\n
+20	app-switches	from os import environ\nfrom os.path import join\nfrom platform import node\n\n# Project\nHOME = environ.get('HOME', '/home/django')\nPROJECT_BASE = join(HOME, 'Projects', 'hammer')\n\n\n# Application Config\nBASE_DIR = environ.get('p', '/home/django/MyBook')\n\nAPP_PORT = '8001'\nAPP_DIRS = ['bin', 'hammer', 'test', 'tool', 'spiritual']\nAPP_DIR = 'tool'\n\n\n# Documents\nDOC_DIRS = ['tech', 'spiritual', 'software', 'seamanslog', 'brain', 'MarkSeaman']\nTODO_DIR  = join(BASE_DIR, 'Documents', 'info', 'days')\nTHOT_DIR = join(BASE_DIR, 'Documents', 'thot')\nTODO_FILES = [\n    join(TODO_DIR, '2018-05-08'),\n]\n\n\n# Test Settings\nTEST_ARCHIVE = False\nTEST_DOC = join(BASE_DIR, 'Documents', 'info', 'history', 'Index')\nTEST_DOC_ENCODING = False\nTEST_DATA = False\nTEST_SELENIUM = True\nTEST_EMAIL = False\nTEST_PAGES = join(BASE_DIR, 'Documents', 'tech', 'test', 'pages')\nTEST_HOSTS = ['localhost:8001', environ.get('DROPLET_IP','localhost')]\nIMPORT_RECORDS = True\nEXPORT_RECORDS = True\nSHOW_WEB_PAGE = False\nON_INTERNET = True\n\n\n# Servers\nWHO2HIRE_PRODUCTION  = 'app.who2hire.us'         # 138.68.46.197\nMYBOOK_PRODUCTION    = 'markseaman.org'    # 138.68.234.96  # old: 45.55.50.13\nSERVER_DIR           = '/home/django/MyBook'\n\n\n# Server Types\nif node()   == 'MyBook':           \n    SERVER_TYPE = 'production'\nelif node() == 'MyBook-Staging':   \n    SERVER_TYPE = 'staging'\nelif node() == 'Marks-iMac.local':\n    SERVER_TYPE = 'imac'\nelif node() == 'seaman-macbook.local':\n    SERVER_TYPE = 'macbook'\nelse:  \n    SERVER_TYPE = 'dev'\n\n\n# Type of server for this machine\ndef server_type():\n    return SERVER_TYPE\n\n\n# Select Domain that matches Hostname\ndef server_host(server):\n    if   server == 'who2hire':             return 'who2hire.co'\n    elif server == 'MyBook':               return 'markseaman.org'\n    elif server == 'Marks-iMac.local':     return 'iMac'\n    elif server == 'seaman-macbook.local': return 'macbook'\n\n	from os import environ\nfrom os.path import join\nfrom platform import node\n\n# Project\nHOME = environ.get('HOME', '/home/django')\nPROJECT_BASE = join(HOME, 'Projects', 'hammer')\n\n\n# Application Config\nBASE_DIR = environ.get('p', '/home/django/MyBook')\n\nAPP_PORT = '8001'\nAPP_DIRS = ['bin', 'hammer', 'test', 'tool', 'spiritual']\nAPP_DIR = 'tool'\n\n\n# Documents\nDOC_DIRS = ['tech', 'spiritual', 'software', 'seamanslog', 'brain', 'MarkSeaman']\nTODO_DIR  = join(BASE_DIR, 'Documents', 'info', 'days')\nTHOT_DIR = join(BASE_DIR, 'Documents', 'thot')\nTODO_FILES = [\n    join(TODO_DIR, '2018-05-08'),\n]\n\n\n# Test Settings\nTEST_ARCHIVE = False\nTEST_DOC = join(BASE_DIR, 'Documents', 'info', 'history', 'Index')\nTEST_DOC_ENCODING = False\nTEST_DATA = False\nTEST_SELENIUM = True\nTEST_EMAIL = False\nTEST_PAGES = join(BASE_DIR, 'Documents', 'tech', 'test', 'pages')\nTEST_HOSTS = ['localhost:8001', environ.get('DROPLET_IP','localhost')]\nIMPORT_RECORDS = True\nEXPORT_RECORDS = True\nSHOW_WEB_PAGE = False\nON_INTERNET = True\n\n\n# Servers\nWHO2HIRE_PRODUCTION  = 'app.who2hire.us'         # 138.68.46.197\nMYBOOK_PRODUCTION    = 'markseaman.org'    # 138.68.234.96  # old: 45.55.50.13\nSERVER_DIR           = '/home/django/MyBook'\n\n\n# Server Types\nif node()   == 'MyBook':           \n    SERVER_TYPE = 'production'\nelif node() == 'MyBook-Staging':   \n    SERVER_TYPE = 'staging'\nelif node() == 'Marks-iMac.local':\n    SERVER_TYPE = 'imac'\nelif node() == 'seaman-macbook.local':\n    SERVER_TYPE = 'macbook'\nelse:  \n    SERVER_TYPE = 'dev'\n\n\n# Type of server for this machine\ndef server_type():\n    return SERVER_TYPE\n\n\n# Select Domain that matches Hostname\ndef server_host(server):\n    if   server == 'who2hire':             return 'who2hire.co'\n    elif server == 'MyBook':               return 'markseaman.org'\n    elif server == 'Marks-iMac.local':     return 'iMac'\n    elif server == 'seaman-macbook.local': return 'macbook'\n\n
 40	system-host	Hostname: MyBook	Hostname: MyBook
 169	text-select-lines	<h3>fix</h3>\n<h3>test</h3>\n<h3>extend</h3>\n<h3>improve</h3>	<h3>fix</h3>\n<h3>test</h3>\n<h3>extend</h3>\n<h3>improve</h3>
 132	wordpress-host	shell(x wordpress host) --> 13 lines (should be between 20 and 30)	shell(x wordpress host) --> 13 lines (should be between 20 and 30)
-20	app-switches	from os import environ\nfrom os.path import join\nfrom platform import node\n\n# Project\nHOME = environ.get('HOME', '/home/django')\nPROJECT_BASE = join(HOME, 'Projects', 'hammer')\n\n\n# Application Config\nBASE_DIR = environ.get('p', '/home/django/MyBook')\n\nAPP_PORT = '8001'\nAPP_DIRS = ['bin', 'hammer', 'test', 'tool', 'spiritual']\nAPP_DIR = 'tool'\n\n\n# Documents\nDOC_DIRS = ['tech', 'spiritual', 'software', 'seamanslog', 'brain', 'MarkSeaman']\nTODO_DIR  = join(BASE_DIR, 'Documents', 'info', 'days')\nTHOT_DIR = join(BASE_DIR, 'Documents', 'thot')\nTODO_FILES = [\n    join(TODO_DIR, '2018-05-08'),\n]\n\n\n# Test Settings\nTEST_ARCHIVE = False\nTEST_DOC = join(BASE_DIR, 'Documents', 'info', 'history', 'Index')\nTEST_DOC_ENCODING = False\nTEST_DATA = False\nTEST_SELENIUM = True\nTEST_EMAIL = False\nTEST_PAGES = join(BASE_DIR, 'Documents', 'tech', 'test', 'pages')\nTEST_HOSTS = ['localhost:8001', environ.get('DROPLET_IP','localhost')]\nIMPORT_RECORDS = True\nEXPORT_RECORDS = True\nSHOW_WEB_PAGE = False\nON_INTERNET = True\n\n\n# Servers\nWHO2HIRE_PRODUCTION  = 'app.who2hire.us'         # 138.68.46.197\nMYBOOK_PRODUCTION    = 'markseaman.org'    # 138.68.234.96  # old: 45.55.50.13\nSERVER_DIR           = '/home/django/MyBook'\n\n\n# Server Types\nif node()   == 'MyBook':           \n    SERVER_TYPE = 'production'\nelif node() == 'MyBook-Staging':   \n    SERVER_TYPE = 'staging'\nelif node() == 'Marks-iMac.local':\n    SERVER_TYPE = 'imac'\nelif node() == 'seaman-macbook.local':\n    SERVER_TYPE = 'macbook'\nelse:  \n    SERVER_TYPE = 'dev'\n\n\n# Type of server for this machine\ndef server_type():\n    return SERVER_TYPE\n\n\n# Select Domain that matches Hostname\ndef server_host(server):\n    if   server == 'who2hire':             return 'who2hire.co'\n    elif server == 'MyBook':               return 'markseaman.org'\n    elif server == 'Marks-iMac.local':     return 'iMac'\n    elif server == 'seaman-macbook.local': return 'macbook'\n\n	from os import environ\nfrom os.path import join\nfrom platform import node\n\n# Project\nHOME = environ.get('HOME', '/home/django')\nPROJECT_BASE = join(HOME, 'Projects', 'hammer')\n\n\n# Application Config\nBASE_DIR = environ.get('p', '/home/django/MyBook')\n\nAPP_PORT = '8001'\nAPP_DIRS = ['bin', 'hammer', 'test', 'tool', 'spiritual']\nAPP_DIR = 'tool'\n\n\n# Documents\nDOC_DIRS = ['tech', 'spiritual', 'software', 'seamanslog', 'brain', 'MarkSeaman']\nTODO_DIR  = join(BASE_DIR, 'Documents', 'info', 'days')\nTHOT_DIR = join(BASE_DIR, 'Documents', 'thot')\nTODO_FILES = [\n    join(TODO_DIR, '2018-05-08'),\n]\n\n\n# Test Settings\nTEST_ARCHIVE = False\nTEST_DOC = join(BASE_DIR, 'Documents', 'info', 'history', 'Index')\nTEST_DOC_ENCODING = False\nTEST_DATA = False\nTEST_SELENIUM = True\nTEST_EMAIL = False\nTEST_PAGES = join(BASE_DIR, 'Documents', 'tech', 'test', 'pages')\nTEST_HOSTS = ['localhost:8001', environ.get('DROPLET_IP','localhost')]\nIMPORT_RECORDS = True\nEXPORT_RECORDS = True\nSHOW_WEB_PAGE = False\nON_INTERNET = True\n\n\n# Servers\nWHO2HIRE_PRODUCTION  = 'app.who2hire.us'         # 138.68.46.197\nMYBOOK_PRODUCTION    = 'markseaman.org'    # 138.68.234.96  # old: 45.55.50.13\nSERVER_DIR           = '/home/django/MyBook'\n\n\n# Server Types\nif node()   == 'MyBook':           \n    SERVER_TYPE = 'production'\nelif node() == 'MyBook-Staging':   \n    SERVER_TYPE = 'staging'\nelif node() == 'Marks-iMac.local':\n    SERVER_TYPE = 'imac'\nelif node() == 'seaman-macbook.local':\n    SERVER_TYPE = 'macbook'\nelse:  \n    SERVER_TYPE = 'dev'\n\n\n# Type of server for this machine\ndef server_type():\n    return SERVER_TYPE\n\n\n# Select Domain that matches Hostname\ndef server_host(server):\n    if   server == 'who2hire':             return 'who2hire.co'\n    elif server == 'MyBook':               return 'markseaman.org'\n    elif server == 'Marks-iMac.local':     return 'iMac'\n    elif server == 'seaman-macbook.local': return 'macbook'\n\n
+134	booknotes-list	booknotes list\nExecution-quotes.html\nSiteTitle\nNext100Years\nThinking-quotes.html\nEssentialism\nOriginals-quotes.html\nPresentOverPerfect\nPrinciples-quotes.html\nActivateYourBrain-quotes.html\nEssentialism-quote.html\nIndex\nExecution\nIntegrity-quotes.html\nGoodIdeas-quotes.html\nIntegrity\nEQ\nTribeOfMentors-quotes.html\n	booknotes list\nExecution-quotes.html\nSiteTitle\nNext100Years\nThinking-quotes.html\nEssentialism\nOriginals-quotes.html\nPresentOverPerfect\nPrinciples-quotes.html\nActivateYourBrain-quotes.html\nEssentialism-quote.html\nIndex\nExecution\nIntegrity-quotes.html\nGoodIdeas-quotes.html\nIntegrity\nEQ\nTribeOfMentors-quotes.html\n
 103	project-import	\n\n        script to manage projects on servers\n\n        usage: x project command\n\n        command\n\n        List:\n            list                - list the configured project\n            get   name          - get a project by name lookup\n\n        Modify:\n            add     name user   - add a new project record\n            delete  name        - remove this project\n            edit    name value  - rename the project\n\n        I/O \n            import              - import all records from a file \n            export              - export all records to a file \n\n        \n	\n\n        script to manage projects on servers\n\n        usage: x project command\n\n        command\n\n        List:\n            list                - list the configured project\n            get   name          - get a project by name lookup\n\n        Modify:\n            add     name user   - add a new project record\n            delete  name        - remove this project\n            edit    name value  - rename the project\n\n        I/O \n            import              - import all records from a file \n            export              - export all records to a file \n\n        \n
-154	archive-dirs	dirs(/home/django/Archive/MyBook-2017) --> 1 dirs (should be between 504 and 507)\ndirs(/home/django/Archive/Documents-2017) --> 1 dirs (should be between 108 and 108)\ndirs(/home/django/Archive/Documents-2016) --> 1 dirs (should be between 88 and 88)\ndirs(/home/django/Archive/Documents-2015) --> 1 dirs (should be between 250 and 250)\ndirs(/home/django/Archive/Documents-2014) --> 1 dirs (should be between 947 and 947)\ndirs(/home/django/Archive/UNC-2017) --> 1 dirs (should be between 3643 and 3645)\ndirs(/home/django/Archive/rcp) --> 1 dirs (should be between 800 and 960)\n	dirs(/home/django/Archive/MyBook-2017) --> 1 dirs (should be between 504 and 507)\ndirs(/home/django/Archive/Documents-2017) --> 1 dirs (should be between 108 and 108)\ndirs(/home/django/Archive/Documents-2016) --> 1 dirs (should be between 88 and 88)\ndirs(/home/django/Archive/Documents-2015) --> 1 dirs (should be between 250 and 250)\ndirs(/home/django/Archive/Documents-2014) --> 1 dirs (should be between 947 and 947)\ndirs(/home/django/Archive/UNC-2017) --> 1 dirs (should be between 3643 and 3645)\ndirs(/home/django/Archive/rcp) --> 1 dirs (should be between 800 and 960)\n
-158	tst-time	Sat Dec 29 07:00:12 MST 2018\n	Fri Dec 28 18:31:24 MST 2018\n
+158	tst-time	Sun Dec 30 07:00:11 MST 2018\n	Sat Dec 29 09:42:14 MST 2018\n
 144	mybook-menu-list	Documents/Menu\nDocuments/info/Menu\nDocuments/aspire/Menu\nDocuments/seamanslog/Menu\nDocuments/Leverage/Menu\nDocuments/spiritual/Menu\nDocuments/MarkSeaman/Menu\nDocuments/guide/Teaching/Menu\nDocuments/guide/Menu\nDocuments/guide/HtmlApps/Menu\nDocuments/guide/PhpApps/Menu	Documents/Menu\nDocuments/info/Menu\nDocuments/aspire/Menu\nDocuments/seamanslog/Menu\nDocuments/Leverage/Menu\nDocuments/spiritual/Menu\nDocuments/MarkSeaman/Menu\nDocuments/guide/Teaching/Menu\nDocuments/guide/Menu\nDocuments/guide/HtmlApps/Menu\nDocuments/guide/PhpApps/Menu
 145	mybook-menu-mybook	('http://seaman-tech.com', 'zmdi-accounts-list', 'Shrinking World', None)\n('/mybook/Index', 'zmdi-home', 'Home', None)\n('/mybook/book_list', 'zmdi-local-library', 'Books', None)\n('/mybook/author_list', 'zmdi-face', 'Authors', None)	('http://seaman-tech.com', 'zmdi-accounts-list', 'Shrinking World', None)\n('/mybook/Index', 'zmdi-home', 'Home', None)\n('/mybook/book_list', 'zmdi-local-library', 'Books', None)\n('/mybook/author_list', 'zmdi-face', 'Authors', None)
 148	mybook-menu-swo	('/shrinking-world/Index', 'zmdi-home', 'Shrinking World', 'class=active')\n('/shrinking-world/Blog/Index', 'zmdi-library', 'Blog', None)\n('/shrinking-world/Staff', 'zmdi-accounts', 'Staff', None)\n('https://world-class-software.com/software/Index', 'zmdi-book', 'Training', None)	('/shrinking-world/Index', 'zmdi-home', 'Shrinking World', 'class=active')\n('/shrinking-world/Blog/Index', 'zmdi-library', 'Blog', None)\n('/shrinking-world/Staff', 'zmdi-accounts', 'Staff', None)\n('https://world-class-software.com/software/Index', 'zmdi-book', 'Training', None)
@@ -7332,53 +5925,54 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 142	mybook-menu-brain	('/brain/Index', 'zmdi-home', 'Home', 'class=active')\n('/brain/Learn', 'zmdi-storage', 'Learn', None)\n('/brain/Plan', 'zmdi-accounts-alt', 'Plan', None)\n('/brain/Build', 'zmdi-comment-text-alt', 'Build', None)\n('/brain/Teach', 'zmdi-assignment-account', 'Teach', None)	('/brain/Index', 'zmdi-home', 'Home', 'class=active')\n('/brain/Learn', 'zmdi-storage', 'Learn', None)\n('/brain/Plan', 'zmdi-accounts-alt', 'Plan', None)\n('/brain/Build', 'zmdi-comment-text-alt', 'Build', None)\n('/brain/Teach', 'zmdi-assignment-account', 'Teach', None)
 100	days-month	no output	no output
 162	days-schedule	Week 0 - Mon, 08-20\nWeek 1 - Mon, 08-27\nWeek 2 - Mon, 09-03\nWeek 3 - Mon, 09-10\nWeek 4 - Mon, 09-17\nWeek 5 - Mon, 09-24\nWeek 6 - Mon, 10-01\nWeek 7 - Mon, 10-08\nWeek 8 - Mon, 10-15\nWeek 9 - Mon, 10-22\nWeek 10 - Mon, 10-29\nWeek 11 - Mon, 11-05\nWeek 12 - Mon, 11-12\nWeek 13 - Mon, 11-19\nWeek 14 - Mon, 11-26\nWeek 15 - Mon, 12-03\n	Week 0 - Mon, 08-20\nWeek 1 - Mon, 08-27\nWeek 2 - Mon, 09-03\nWeek 3 - Mon, 09-10\nWeek 4 - Mon, 09-17\nWeek 5 - Mon, 09-24\nWeek 6 - Mon, 10-01\nWeek 7 - Mon, 10-08\nWeek 8 - Mon, 10-15\nWeek 9 - Mon, 10-22\nWeek 10 - Mon, 10-29\nWeek 11 - Mon, 11-05\nWeek 12 - Mon, 11-12\nWeek 13 - Mon, 11-19\nWeek 14 - Mon, 11-26\nWeek 15 - Mon, 12-03\n
+11	app-classes	bin/__init__.py\n    \nbin/app.py\n    \nbin/aspire.py\n    \nbin/book.py\n    \nbin/booknotes.py\n    \nbin/data.py\n    \nbin/datatype.py\n    \nbin/days.py\n    \nbin/diagrams.py\n    \nbin/doc.py\n    \nbin/faceblog.py\n    \nbin/files.py\n    \nbin/grades.py\n    \nbin/guide.py\n    \nbin/hourly.py\n    \nbin/hours.py\n    \nbin/i.py\n    \nbin/life.py\n    \nbin/log.py\n    \nbin/music.py\n    \nbin/n.py\n    \nbin/ntsh.py\n    \nbin/ops.py\n    \nbin/page_tests.py\n    # class PagesTest(TestCase):\n    class RemoteTest(TestCase):\n    # class RemoteTest(TestCase):\nbin/pandoc.py\n    \nbin/remote_tests.py\n    # class RemoteTest(FunctionalTestCase):\n    # class PythonTest(FunctionalTestCase):\nbin/resize.py\n    \nbin/score.py\n    \nbin/seamanslog.py\n    \nbin/shell.py\n    \nbin/spiritual.py\n    \nbin/src.py\n    \nbin/switches.py\n    \nbin/text.py\n        pattern = r'class (.*)\\(.*\\)'\nbin/todo.py\n    \nbin/tool.py\n    \nbin/user.py\n    \nbin/vc.py\n    \nbin/web.py\n    \nbin/wordpress.py\n    \nbin/x.py\n    \nhammer/__init__.py\n    \nhammer/secret_settings.py\n    \nhammer/settings.py\n    \nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    class HealthConfig(AppConfig):\nhealth/health.py\n    \nhealth/models.py\n    class HealthScore(models.Model):\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    class HealthView(TemplateView):\n    class HealthList(ListView):\n    class HealthEdit(UpdateView):\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    class LifeConfig(AppConfig):\nlife/life.py\n    \nlife/models.py\n    class Year(models.Model):\n    class Aspect(models.Model):\n    class Experience(models.Model):\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n    class LifeView(TemplateView):\n    class ExperienceView(ListView):\n    class YearView(ListView):\n    class LifeAdd(LoginRequiredMixin, RedirectView):\n    class LifeEdit(UpdateView):\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    class MybookConfig(AppConfig):\nmybook/models.py\n    class Author(models.Model):\n    class Book(models.Model):\nmybook/mybook.py\n    \nmybook/mybook_views.py\n    class MyBookDocDisplay(TemplateView):\n    class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):\n    class BookNotes(MyBookDocDisplay):\n    class CardView(MyBookDocDisplay):\n    class OutlineView(MyBookDocDisplay):\n    class DailyTask(RedirectView):\n    # class SeamansLog(MyBookDocDisplay):\n    class SeamansLog(RedirectView):\n    class SpiritualSelect(RedirectView):\n    class TabsView(MyBookDocDisplay):\n    class UncDocDisplay(TemplateView):\nmybook/outline.py\n    \nmybook/task.py\n    \nmybook/tests.py\n    \nmybook/urls.py\n    \nsuperuser/__init__.py\n    \nsuperuser/admin.py\n    \nsuperuser/admin_views.py\n    class AdminView(UserPassesTestMixin, TemplateView):\n    class DatabaseView(UserPassesTestMixin, TemplateView):\n    class DocView(UserPassesTestMixin, TemplateView):\n    class LogView(UserPassesTestMixin, TemplateView):\n    class MaterialView(TemplateView):\n    class SurrogateView(UserPassesTestMixin, TemplateView):\n    class TestView(UserPassesTestMixin, ListView):\n    class UsersView(UserPassesTestMixin, ListView):\nsuperuser/apps.py\n    class AdminConfig(AppConfig):\nsuperuser/initialize.py\n    \nsuperuser/models.py\n    class Administrator(models.Model):\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n    class Task (models.Model):\ntasks/summary.py\n    \ntasks/task.py\n    \ntasks/urls.py\n    \ntasks/views.py\n    class TaskBase(LoginRequiredMixin, ContextMixin):\n    class TaskDelete(DeleteView):\n    class TaskDetail(DetailView):\n    class TaskCreate(CreateView):\n    class TaskUpdate(TaskBase, UpdateView):\n    class TaskHome(TaskBase, TemplateView):\n    class TaskList(TaskBase, ListView):\n    class MyTime(TaskBase, TemplateView):\n    class TimeSummary(TaskBase, TemplateView):\n    class MissingDays(TaskBase, TemplateView):\n    class TaskImport(RedirectView):\n    class TaskExport(TaskBase, TemplateView):\ntest/__init__.py\n    \ntest/app_test.py\n    \ntest/archive_test.py\n    \ntest/aspire_test.py\n    \ntest/booknotes_test.py\n    \ntest/css_test.py\n    \ntest/data_test.py\n    \ntest/doc_test.py\n    \ntest/health_test.py\n    \ntest/hourly_test.py\n    \ntest/i_test.py\n    \ntest/log_test.py\n    \ntest/ops_test.py\n    \ntest/page_test.py\n    \ntest/robot_test.py\n    \ntest/seamanslog_test.py\n    \ntest/system_test.py\n    \ntest/text_test.py\n    \ntest/tst_test.py\n    \ntest/unc_test.py\n    \ntest/user_test.py\n    \ntest/vc_test.py\n    \ntest/wordpress_test.py\n    \ntool/__init__.py\n    \ntool/document.py\n    \ntool/domain.py\n    \ntool/email.py\n    \ntool/log.py\n    \ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n    class Command(BaseCommand):\ntool/models.py\n    class Test(models.Model):\n    class Page(models.Model):\n    class Project(models.Model):\ntool/notify.py\n    \ntool/page.py\n    \ntool/project.py\n    class ProjectList(ListView):\n    class ProjectDetail(DetailView):\n    class ProjectCreate(CreateView):\n    class ProjectUpdate(UpdateView):\n    class ProjectDelete(DeleteView):\ntool/robot.py\n    \ntool/tst.py\n    \ntool/urls.py\n    \ntool/user.py\n    \ntool/user_views.py\n    class UserList(ListView):\n    class UserCreate(CreateView):\n    class UserDetail(DetailView):\n    class UserEdit(UpdateView):\n    class UserDelete(DeleteView):\ntool/xxx.py\n    # class Xxx(models.Model):\ntool/xxx_script.py\n    \ntool/xxx_views.py\n    class yyyBase(ContextMixin):\n    class XxxAdd(yyyBase, CreateView):\n    class XxxDelete(yyyBase, DeleteView):\n    class XxxDetail(yyyBase, DetailView):\n    class XxxEdit(yyyBase, UpdateView):\n    class XxxList(yyyBase, ListView):\nunc/__init__.py\n    \nunc/admin.py\n    \nunc/apps.py\n    class UncConfig(AppConfig):\nunc/models.py\n    class Course(models.Model):\n    class Student(models.Model):\n    class Review(models.Model):\nunc/review.py\n    \nunc/sensei.py\n    \nunc/student.py\n    \nunc/tests.py\n    \n	bin/__init__.py\n    \nbin/app.py\n    \nbin/aspire.py\n    \nbin/book.py\n    \nbin/booknotes.py\n    \nbin/data.py\n    \nbin/datatype.py\n    \nbin/days.py\n    \nbin/diagrams.py\n    \nbin/doc.py\n    \nbin/faceblog.py\n    \nbin/files.py\n    \nbin/grades.py\n    \nbin/guide.py\n    \nbin/hourly.py\n    \nbin/hours.py\n    \nbin/i.py\n    \nbin/life.py\n    \nbin/log.py\n    \nbin/music.py\n    \nbin/n.py\n    \nbin/ntsh.py\n    \nbin/ops.py\n    \nbin/page_tests.py\n    # class PagesTest(TestCase):\n    class RemoteTest(TestCase):\n    # class RemoteTest(TestCase):\nbin/pandoc.py\n    \nbin/remote_tests.py\n    # class RemoteTest(FunctionalTestCase):\n    # class PythonTest(FunctionalTestCase):\nbin/resize.py\n    \nbin/score.py\n    \nbin/seamanslog.py\n    \nbin/shell.py\n    \nbin/spiritual.py\n    \nbin/src.py\n    \nbin/switches.py\n    \nbin/text.py\n        pattern = r'class (.*)\\(.*\\)'\nbin/todo.py\n    \nbin/tool.py\n    \nbin/user.py\n    \nbin/vc.py\n    \nbin/web.py\n    \nbin/wordpress.py\n    \nbin/x.py\n    \nhammer/__init__.py\n    \nhammer/secret_settings.py\n    \nhammer/settings.py\n    \nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    class HealthConfig(AppConfig):\nhealth/health.py\n    \nhealth/models.py\n    class HealthScore(models.Model):\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    class HealthView(TemplateView):\n    class HealthList(ListView):\n    class HealthEdit(UpdateView):\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    class LifeConfig(AppConfig):\nlife/life.py\n    \nlife/models.py\n    class Year(models.Model):\n    class Aspect(models.Model):\n    class Experience(models.Model):\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n    class LifeView(TemplateView):\n    class ExperienceView(ListView):\n    class YearView(ListView):\n    class LifeAdd(LoginRequiredMixin, RedirectView):\n    class LifeEdit(UpdateView):\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    class MybookConfig(AppConfig):\nmybook/models.py\n    class Author(models.Model):\n    class Book(models.Model):\nmybook/mybook.py\n    \nmybook/mybook_views.py\n    class MyBookDocDisplay(TemplateView):\n    class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):\n    class BookNotes(MyBookDocDisplay):\n    class CardView(MyBookDocDisplay):\n    class OutlineView(MyBookDocDisplay):\n    class DailyTask(RedirectView):\n    # class SeamansLog(MyBookDocDisplay):\n    class SeamansLog(RedirectView):\n    class SpiritualSelect(RedirectView):\n    class TabsView(MyBookDocDisplay):\n    class UncDocDisplay(TemplateView):\nmybook/outline.py\n    \nmybook/task.py\n    \nmybook/tests.py\n    \nmybook/urls.py\n    \nsuperuser/__init__.py\n    \nsuperuser/admin.py\n    \nsuperuser/admin_views.py\n    class AdminView(UserPassesTestMixin, TemplateView):\n    class DatabaseView(UserPassesTestMixin, TemplateView):\n    class DocView(UserPassesTestMixin, TemplateView):\n    class LogView(UserPassesTestMixin, TemplateView):\n    class MaterialView(TemplateView):\n    class SurrogateView(UserPassesTestMixin, TemplateView):\n    class TestView(UserPassesTestMixin, ListView):\n    class UsersView(UserPassesTestMixin, ListView):\nsuperuser/apps.py\n    class AdminConfig(AppConfig):\nsuperuser/initialize.py\n    \nsuperuser/models.py\n    class Administrator(models.Model):\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n    class Task (models.Model):\ntasks/summary.py\n    \ntasks/task.py\n    \ntasks/urls.py\n    \ntasks/views.py\n    class TaskBase(LoginRequiredMixin, ContextMixin):\n    class TaskDelete(DeleteView):\n    class TaskDetail(DetailView):\n    class TaskCreate(CreateView):\n    class TaskUpdate(TaskBase, UpdateView):\n    class TaskHome(TaskBase, TemplateView):\n    class TaskList(TaskBase, ListView):\n    class MyTime(TaskBase, TemplateView):\n    class TimeSummary(TaskBase, TemplateView):\n    class MissingDays(TaskBase, TemplateView):\n    class TaskImport(RedirectView):\n    class TaskExport(TaskBase, TemplateView):\ntest/__init__.py\n    \ntest/app_test.py\n    \ntest/archive_test.py\n    \ntest/aspire_test.py\n    \ntest/booknotes_test.py\n    \ntest/css_test.py\n    \ntest/data_test.py\n    \ntest/doc_test.py\n    \ntest/health_test.py\n    \ntest/hourly_test.py\n    \ntest/i_test.py\n    \ntest/log_test.py\n    \ntest/ops_test.py\n    \ntest/page_test.py\n    \ntest/robot_test.py\n    \ntest/seamanslog_test.py\n    \ntest/system_test.py\n    \ntest/text_test.py\n    \ntest/tst_test.py\n    \ntest/unc_test.py\n    \ntest/user_test.py\n    \ntest/vc_test.py\n    \ntest/wordpress_test.py\n    \ntool/__init__.py\n    \ntool/document.py\n    \ntool/domain.py\n    \ntool/email.py\n    \ntool/log.py\n    \ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n    class Command(BaseCommand):\ntool/models.py\n    class Test(models.Model):\n    class Page(models.Model):\n    class Project(models.Model):\ntool/notify.py\n    \ntool/page.py\n    \ntool/project.py\n    class ProjectList(ListView):\n    class ProjectDetail(DetailView):\n    class ProjectCreate(CreateView):\n    class ProjectUpdate(UpdateView):\n    class ProjectDelete(DeleteView):\ntool/robot.py\n    \ntool/tst.py\n    \ntool/urls.py\n    \ntool/user.py\n    \ntool/user_views.py\n    class UserList(ListView):\n    class UserCreate(CreateView):\n    class UserDetail(DetailView):\n    class UserEdit(UpdateView):\n    class UserDelete(DeleteView):\ntool/xxx.py\n    # class Xxx(models.Model):\ntool/xxx_script.py\n    \ntool/xxx_views.py\n    class yyyBase(ContextMixin):\n    class XxxAdd(yyyBase, CreateView):\n    class XxxDelete(yyyBase, DeleteView):\n    class XxxDetail(yyyBase, DetailView):\n    class XxxEdit(yyyBase, UpdateView):\n    class XxxList(yyyBase, ListView):\nunc/__init__.py\n    \nunc/admin.py\n    \nunc/apps.py\n    class UncConfig(AppConfig):\nunc/models.py\n    class Course(models.Model):\n    class Student(models.Model):\n    class Review(models.Model):\n    class ReviewScore(models.Model):\n    class ReviewerScore(models.Model):\nunc/review.py\n    \nunc/sensei.py\n    \nunc/student.py\n    \nunc/tests.py\n    \n
 41	system-ip	shell(ifconfig) --> 23 lines (should be between 51 and 69)	shell(ifconfig) --> 23 lines (should be between 51 and 69)
 143	mybook-menu-leverage	('/software/Leverage/Index', 'zmdi-home', 'Home', 'class=active')\n('/software/Leverage/Part1', 'zmdi-storage', 'Leverage', None)\n('/software/Leverage/Part2', 'zmdi-accounts-alt', 'Development', None)\n('/software/Leverage/Part3', 'zmdi-assignment-account', 'Operations', None)\n('/software/Leverage/Part4', 'zmdi-comment-text-alt', 'People', None)	('/software/Leverage/Index', 'zmdi-home', 'Home', 'class=active')\n('/software/Leverage/Part1', 'zmdi-storage', 'Leverage', None)\n('/software/Leverage/Part2', 'zmdi-accounts-alt', 'Development', None)\n('/software/Leverage/Part3', 'zmdi-assignment-account', 'Operations', None)\n('/software/Leverage/Part4', 'zmdi-comment-text-alt', 'People', None)
 147	mybook-menu-spiritual	('/spiritual/Home', 'zmdi-home', 'Home', 'class=active')\n('/spiritual/inspire', 'zmdi-cloud-outline', 'Inspire', None)\n('/spiritual/prayers', 'zmdi-comment-outline', 'Pray', None)\n('/spiritual/bible', 'zmdi-local-library', 'Meditate', None)\n('/spiritual/reflect', 'zmdi-key', 'Reflect', None)\n('/spiritual/teaching', 'zmdi-face', 'Learn', None)	('/spiritual/Home', 'zmdi-home', 'Home', 'class=active')\n('/spiritual/inspire', 'zmdi-cloud-outline', 'Inspire', None)\n('/spiritual/prayers', 'zmdi-comment-outline', 'Pray', None)\n('/spiritual/bible', 'zmdi-local-library', 'Meditate', None)\n('/spiritual/reflect', 'zmdi-key', 'Reflect', None)\n('/spiritual/teaching', 'zmdi-face', 'Learn', None)
 175	text-signatures	 text_command(options)\n text_help(args=None)\n find_agents(text)\n find_anchors(text)\n find_classes(text)\n find_functions(text)\n find_links(text)\n     link(anchor)\n find_quotes(text)\n find_signatures(text)\n    pattern = r'(.*\\(.*\\))'\n find_urls(text)\n markdown_list_links(host, lines)\n markdown_list_string(mylist)\n text_join(text)\n text_lines(text)\n text_match(match_pattern, doc)\n text_no_match(match_pattern, doc)\n text_outline(text)\n text_outline_string(outline, depth=0)\n text_markdown(outline, depth=1)\n     text_body(lines)\n text_replace(doc, match_pattern, replace_pattern)\n text_title(text)\n text_body(text)\n match_lines(text, pattern)\n match_pattern(text, pattern)\n transform_matches(text, match_pattern, select_pattern)	 text_command(options)\n text_help(args=None)\n find_agents(text)\n find_anchors(text)\n find_classes(text)\n find_functions(text)\n find_links(text)\n     link(anchor)\n find_quotes(text)\n find_signatures(text)\n    pattern = r'(.*\\(.*\\))'\n find_urls(text)\n markdown_list_links(host, lines)\n markdown_list_string(mylist)\n text_join(text)\n text_lines(text)\n text_match(match_pattern, doc)\n text_no_match(match_pattern, doc)\n text_outline(text)\n text_outline_string(outline, depth=0)\n text_markdown(outline, depth=1)\n     text_body(lines)\n text_replace(doc, match_pattern, replace_pattern)\n text_title(text)\n text_body(text)\n match_lines(text, pattern)\n match_pattern(text, pattern)\n transform_matches(text, match_pattern, select_pattern)
 82	task-month	   Total      420\nChurch        110\nFun            82\nPeople         58\nHire           47\nGrow           41\nWrite          33\nBusiness       18\nTools          17\nWAM             8\nSign            6\n	   Total      420\nChurch        110\nFun            82\nPeople         58\nHire           47\nGrow           41\nWrite          33\nBusiness       18\nTools          17\nWAM             8\nSign            6\n
 28	table-to-text	    a          b          c         \n    1          2          3         \n    4          5          6         \n    7          8          9         	    a          b          c         \n    1          2          3         \n    4          5          6         \n    7          8          9         
+8	text-no-match	no output	no output
 15	app-score	\nCode Summary            Files     Lines\n\n    App                   218     16287\n	\nCode Summary            Files     Lines\n\n    App                   218     16287\n
+2	vc-status	no output	no output
 13	app-html-files	no output	no output
-12	app-functions	no output	no output
+53	health-list	                                    Sleep   Weight      Eat  Exercise \nMarkSeaman           2017-04-28         5        2        2        2       \nMarkSeaman           2017-04-27         3        2        3        3       \nMarkSeaman           2017-04-26         3        2        3        3       \nMarkSeaman           2017-04-25         5        2        3        3       \nMarkSeaman           2017-04-24         3        3        2        3       \nMarkSeaman           2017-04-23         5        4        3        3       \nMarkSeaman           2017-04-22         3        4        3        3       \nMarkSeaman           2017-04-21         3        3        4        1       \nMarkSeaman           2017-04-20         3        2        2        2       \nMarkSeaman           2017-04-19         2        1        3        2       \nMarkSeaman           2017-04-18         3        1        2        1       \nMarkSeaman           2017-04-17         5        2        2        1       \nMarkSeaman           2017-04-16         3        4        1        3       \nMarkSeaman           2017-04-15         5        3        3        4       \nMarkSeaman           2017-04-13         5        3        4        4       \nMarkSeaman           2017-04-12         5        3        3        3       \nMarkSeaman           2017-04-11         5        3        3        3       \nMarkSeaman           2017-04-10         5        4        2        4       \nMarkSeaman           2017-04-09         5        2        3        3       \nMarkSeaman           2017-04-08         3        1        4        1       \nMarkSeaman           2017-04-07         5        2        1        4       \nMarkSeaman           2017-04-05         5        3        2        2       \nMarkSeaman           2017-04-04         4        3        2        2       \nMarkSeaman           2017-04-03         4        3        3        4       \nMarkSeaman           2017-04-02         4        3        3        4       \nMarkSeaman           2017-04-01         4        3        3        2       \n	                                    Sleep   Weight      Eat  Exercise \nMarkSeaman           2017-04-28         5        2        2        2       \nMarkSeaman           2017-04-27         3        2        3        3       \nMarkSeaman           2017-04-26         3        2        3        3       \nMarkSeaman           2017-04-25         5        2        3        3       \nMarkSeaman           2017-04-24         3        3        2        3       \nMarkSeaman           2017-04-23         5        4        3        3       \nMarkSeaman           2017-04-22         3        4        3        3       \nMarkSeaman           2017-04-21         3        3        4        1       \nMarkSeaman           2017-04-20         3        2        2        2       \nMarkSeaman           2017-04-19         2        1        3        2       \nMarkSeaman           2017-04-18         3        1        2        1       \nMarkSeaman           2017-04-17         5        2        2        1       \nMarkSeaman           2017-04-16         3        4        1        3       \nMarkSeaman           2017-04-15         5        3        3        4       \nMarkSeaman           2017-04-13         5        3        4        4       \nMarkSeaman           2017-04-12         5        3        3        3       \nMarkSeaman           2017-04-11         5        3        3        3       \nMarkSeaman           2017-04-10         5        4        2        4       \nMarkSeaman           2017-04-09         5        2        3        3       \nMarkSeaman           2017-04-08         3        1        4        1       \nMarkSeaman           2017-04-07         5        2        1        4       \nMarkSeaman           2017-04-05         5        3        2        2       \nMarkSeaman           2017-04-04         4        3        2        2       \nMarkSeaman           2017-04-03         4        3        3        4       \nMarkSeaman           2017-04-02         4        3        3        4       \nMarkSeaman           2017-04-01         4        3        3        2       \n
 24	church-show	no output	no output
+32	hourly-show	no output	no output
+38	system-disk-free	no output	no output
+52	score-show	shell(x score show) --> 15 lines (should be between 30 and 35)	shell(x score show) --> 15 lines (should be between 30 and 35)
+39	system-files-count	no output	no output
+37	author-summary	no output	no output
+22	faceblog-show	no output	no output
+30	plan-show	no output	no output
+12	app-functions	no output	no output
 16	app-settings	"""\nDjango settings for Hammer project.\n\n"""\n\nfrom platform import node\nfrom os.path import dirname, join\n\n\nBASE_DIR = dirname(dirname(__file__))\nDOC_ROOT = join(BASE_DIR, 'Documents')\nLOG_DIR = join(BASE_DIR, 'log')\n\n\n# SECURITY WARNING: don't run with debug turned on in production!\nif 'MyBook' == node():\n    DEBUG = False\nelse:\n    DEBUG = True\n    ALLOWED_HOSTS = ['*']\n\n\n# Application definition\nINSTALLED_APPS = [\n    # Django System\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.humanize',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n\n    # MyBook\n    'health',\n    'life',\n    'mybook',\n    'superuser',\n    'tasks',\n    'tool',\n    'unc',\n]\n\nMIDDLEWARE_CLASSES = [\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\n\n# Loading templates\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [\n            join(BASE_DIR, "templates"),\n        ],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this\n                # list if you haven't customized them:\n                'django.contrib.auth.context_processors.auth',\n                'django.template.context_processors.debug',\n                'django.template.context_processors.i18n',\n                'django.template.context_processors.media',\n                'django.template.context_processors.static',\n                'django.template.context_processors.tz',\n                'django.contrib.messages.context_processors.messages',\n            ],\n        },\n    },\n]\n\nROOT_URLCONF = 'hammer.urls'\nLOGIN_URL='/login/'\nLOGIN_REDIRECT_URL = '/'\n\nWSGI_APPLICATION = 'hammer.wsgi.application'\n\nEMAIL_FROM = "mark.seaman@shrinking-world.com"\n\n\n# Secrets\nfrom .secret_settings import DATABASES, SECRET_KEY, EMAIL_HOST, EMAIL_PORT, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_USE_TLS\n\n\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',\n    },\n]\n\n\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'US/Mountain'\nUSE_I18N = False\nUSE_L10N = False\nUSE_TZ = True\n\n\n# Static server\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = (BASE_DIR + '/static', BASE_DIR + '/docs',)\n\nLOGGING = {\n\n    'version': 1,\n    'disable_existing_loggers': False,\n    'handlers': {\n         'hammer-file': {\n            'level': 'DEBUG',\n            'class': 'logging.FileHandler',\n            'filename': join(BASE_DIR, 'log', 'hammer.log'),\n        },\n        'console': {\n            'level': 'DEBUG',\n            'class': 'logging.StreamHandler',\n        },\n    },\n    'loggers': {\n         'tool': {\n            'handlers': ['hammer-file'],\n        },\n    },\n    'root': {'level': 'INFO'},\n}\n\n\n\nif 'MyBook' in node():\n\n    # Allow Django from all hosts. This snippet is installed from\n    # /var/lib/digitalocean/allow_hosts.py\n\n    import os\n    import netifaces\n\n    # Find out what the IP addresses are at run time\n    # This is necessary because otherwise Gunicorn will reject the connections\n    def ip_addresses():\n        ip_list = []\n        for interface in netifaces.interfaces():\n            addrs = netifaces.ifaddresses(interface)\n            for x in (netifaces.AF_INET, netifaces.AF_INET6):\n                if x in addrs:\n                    ip_list.append(addrs[x][0]['addr'])\n        return ip_list\n\n    # Discover our IP address\n    domains = [\n        'markseaman.info',\n        'markseaman.org',   \n        'seamanslog.com',\n        'seamansguide.com',\n        'shrinking-world.com',\n        'shrinking-world.org',\n        'spiritual-things.org',\n    ]\n    ALLOWED_HOSTS = domains + ip_addresses()\n\n\n	"""\nDjango settings for Hammer project.\n\n"""\n\nfrom platform import node\nfrom os.path import dirname, join\n\n\nBASE_DIR = dirname(dirname(__file__))\nDOC_ROOT = join(BASE_DIR, 'Documents')\nLOG_DIR = join(BASE_DIR, 'log')\n\n\n# SECURITY WARNING: don't run with debug turned on in production!\nif 'MyBook' == node():\n    DEBUG = False\nelse:\n    DEBUG = True\n    ALLOWED_HOSTS = ['*']\n\n\n# Application definition\nINSTALLED_APPS = [\n    # Django System\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.humanize',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n\n    # MyBook\n    'health',\n    'life',\n    'mybook',\n    'superuser',\n    'tasks',\n    'tool',\n    'unc',\n]\n\nMIDDLEWARE_CLASSES = [\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\n\n# Loading templates\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [\n            join(BASE_DIR, "templates"),\n        ],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this\n                # list if you haven't customized them:\n                'django.contrib.auth.context_processors.auth',\n                'django.template.context_processors.debug',\n                'django.template.context_processors.i18n',\n                'django.template.context_processors.media',\n                'django.template.context_processors.static',\n                'django.template.context_processors.tz',\n                'django.contrib.messages.context_processors.messages',\n            ],\n        },\n    },\n]\n\nROOT_URLCONF = 'hammer.urls'\nLOGIN_URL='/login/'\nLOGIN_REDIRECT_URL = '/'\n\nWSGI_APPLICATION = 'hammer.wsgi.application'\n\nEMAIL_FROM = "mark.seaman@shrinking-world.com"\n\n\n# Secrets\nfrom .secret_settings import DATABASES, SECRET_KEY, EMAIL_HOST, EMAIL_PORT, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_USE_TLS\n\n\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',\n    },\n]\n\n\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'US/Mountain'\nUSE_I18N = False\nUSE_L10N = False\nUSE_TZ = True\n\n\n# Static server\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = (BASE_DIR + '/static', BASE_DIR + '/docs',)\n\nLOGGING = {\n\n    'version': 1,\n    'disable_existing_loggers': False,\n    'handlers': {\n         'hammer-file': {\n            'level': 'DEBUG',\n            'class': 'logging.FileHandler',\n            'filename': join(BASE_DIR, 'log', 'hammer.log'),\n        },\n        'console': {\n            'level': 'DEBUG',\n            'class': 'logging.StreamHandler',\n        },\n    },\n    'loggers': {\n         'tool': {\n            'handlers': ['hammer-file'],\n        },\n    },\n    'root': {'level': 'INFO'},\n}\n\n\n\nif 'MyBook' in node():\n\n    # Allow Django from all hosts. This snippet is installed from\n    # /var/lib/digitalocean/allow_hosts.py\n\n    import os\n    import netifaces\n\n    # Find out what the IP addresses are at run time\n    # This is necessary because otherwise Gunicorn will reject the connections\n    def ip_addresses():\n        ip_list = []\n        for interface in netifaces.interfaces():\n            addrs = netifaces.ifaddresses(interface)\n            for x in (netifaces.AF_INET, netifaces.AF_INET6):\n                if x in addrs:\n                    ip_list.append(addrs[x][0]['addr'])\n        return ip_list\n\n    # Discover our IP address\n    domains = [\n        'markseaman.info',\n        'markseaman.org',   \n        'seamanslog.com',\n        'seamansguide.com',\n        'shrinking-world.com',\n        'shrinking-world.org',\n        'spiritual-things.org',\n    ]\n    ALLOWED_HOSTS = domains + ip_addresses()\n\n\n
 17	app-show	no output	no output
-52	score-show	shell(x score show) --> 15 lines (should be between 30 and 35)	shell(x score show) --> 15 lines (should be between 30 and 35)
-18	app-signature	bin/__init__.py\n    \nbin/app.py\n     app_command(options)\n     app_help()\n     app_functions(args)\n     app_classes(args)\n     app_signature(args)\n     app_search_code(files, search_function)\n         print_indented(outline)\n             app_print(filename, children)\n     app_directories()\n     app_path(topic=None)\n     app_score()\n     app_search(args)\n     app_show(args=None)\n     app_source(args=None)\n     app_summary(args=None)\n     kill_server()\n     app_urls()\n         simplify(url)\n     run_server()\nbin/aspire.py\n     aspire_command(options)\n     aspire_help(args=None)\n     aspire_clone(args)\n     aspire_doc_path(doc=None)\n     aspire_docs()\n         count_docs(project)\n     aspire_edit(doc)\n    #  aspire_guide()\n    #     #  article_text(path)\n     text_tail(text)\n    #  aspire_history(args)\n     aspire_hours(args=None)\n     aspire_list(args=None)\n     aspire_local(args)\n     aspire_priority()\n     aspire_progress()\n         text_string(title, body)\n     aspire_projects(args=None)\n     aspire_report(args)\n         report_data(date, path)\n         report_text(data)\n         report_save()\n     aspire_reports()\n     aspire_score(args=None)\n    #  aspire_send()\n    #      article_text(path)\n     aspire_show(args)\n     aspire_todo(args)\n     aspire_web(server, page=None)\n    #  aspire_week()\n    #      project_week_string(project, hours, total)\n    #      weekly_summary()\n    #      weekly_totals()\n    #          summarize(label, times, activities, total)\n    #          gather_data(shell_cmd)\n    #  aspire_week_print()\nbin/book.py\n     book_command(argv)\n     book_build()\n         image_list()\n         book_html()\n         book_epub()\n         book_pdf()\n         book_mobi()\n         book_assemble()\n         book_copy()\n     book_changes()\n     book_commit(argv)\n     book_edit(argv)\n     book_find(words)\n     book_headings(topic=None)\n         find_headings(text, pattern='##')\n         print_headings(topic)\n     book_headlines()\n     book_index()\n         print_index_entry(category, path, title)\n     book_help()\n     nested_list(name, children)\n     book_list()\n     book_outline(topic)\n     book_plan()\n     book_read()\n     book_read_index(part=None)\n     book_status()\n     book_text(chapter=None)\n     chapter_words(chapter)\n     book_calculate_words(label,files)\n     book_word_count(part)\n     book_words()\n     web(page)\nbin/booknotes.py\n     booknotes_command(options)\n     booknotes_help(args=None)\n     booknotes_content(args)\n     booknotes_doc_path(doc=None)\n     booknotes_edit(args)\n     booknotes_excerpt(args)\n         booknotes()\n         excerpt(note)\n     booknotes_list(args)\nbin/data.py\n     data_command(options)\n     data_backup(host)\n     data_count(host)\n     data_help()\n     data_load(host)\n     data_migrate()\n     data_reset()\n     data_save(host)\n         save(server, app=None)\n     data_server()\n     data_sql(host)\n     data_tables()\nbin/datatype.py\n     name_replacement(text, directory, datatype)\n     source_code(prototype)\n     convert_code(prototype, code, directory, datatype)\n     datatype_add(args)\n     datatype_command(options)\n     datatype_path(directory, doc=None)\n     datatype_edit(doc)\n     datatype_help(args=None)\nbin/days.py\n     days_command(options)\n     days_help(args=None)\n     date_str(t)\n     day_str(t)\n     days_ago(date,days)\n     days_list(args)\n     days_month(args)\n     days_weeks(num_weeks)\n         days_ahead(date, days)\n         enumerate_weeks(today, days)\n         weekly_schedule(filename, days)\n     enumerate_days(today, days)\n     to_date(s)\n     to_day(s)\n     today()\nbin/diagrams.py\n    \nbin/doc.py\n     doc_command(options)\n     doc_help()\n     doc_content(args)\n     doc_count(dir)\n     doc_directories()\n     doc_edit(args)\n     doc_fix()\n     doc_length(args=None)\n     doc_list(args=None)\n     doc_path(doc=None)\n     doc_pick(args)\n     doc_random_select(directory)\n     doc_redirect(page)\n     doc_score(args)\n     doc_search(args)\n     doc_send(args)\n     doc_send_text(args)\n     doc_show(args=None)\n     doc_show_directory(dir=None)\n     doc_stats(args)\n     doc_summary(args=None)\n     fix_chars(text)\n     doc_test(args)\n     doc_word_count(directory)\n     doc_words(args=None)\n     list_documents(dir=None)\nbin/faceblog.py\n     faceblog_command(options)\n     faceblog_doc_path(doc=None)\n     faceblog_edit(doc=None)\n     faceblog_help(args=None)\n     faceblog_list(args)\n     faceblog_send(doc)\n     faceblog_show(args)\nbin/files.py\n     accumulate_new_lines(accumulator, f2)\n     count_files(directory)\n     create_directory(path)\n     delete_file(filename)\n     do_command(cmd, input=None)\n     encode_text(text, encoding='utf-8')\n     fix_chars(text)\n     grep(pattern,file)\n     is_writable(path)\n     list_files(directory)\n     list_dirs(directory)\n     path_name (relative_filename)\n     print_list(lst)\n     print_list2(lst)\n     read_input()\n     read_json(filename)\n     read_file(filename)\n     read_text(f)\n     recursive_list(d)\n     time_sort_file(d)\n     write_text(filename, text, append=None)\n     write_file(filename, lines, append=None)\nbin/grades.py\n     student_emails()\n    #  student_info(email)\n    #  list_student_info()\nbin/guide.py\n     guide_command(options)\n     guide_help(args=None)\n     guide_add(args)\n     guide_doc_path(course=None, doc=None)\n     guide_create_lesson(course, lesson)\n     lesson_text(outline)\n     guide_edit(course, lesson)\n     guide_list(args)\n     guide_outline(course, lesson)\n         build_outline(text)\n     read_lesson(course, lesson)\n     lesson_parts(course,lesson)\n     read_lines(course, f)\nbin/hourly.py\n     hourly_command(options)\n     hourly_help(args=None)\n     hourly_doc_path(doc=None)\n     hourly_edit()\n     hourly_list()\n     hourly_run()\n         execute(cmd)\n     hourly_show()\nbin/hours.py\n    #  hours_command(options)\n    #  hours_help(args=None)\n    #  activities_work()\n    #  activities_work_client()\n    #  activities_work_nonpaid()\n    #  activities_play()\n    #  activities_public()\n    #  activities_private()\n    #  activities()\n    #  hours_activity(args)\n    #  hours_add(args)\n    #      enumerate_days(today, days)\n    #      to_date(s)\n    #      date_str(t)\n    #      day_str(t)\n    #      days_ago(date,days)\n    #      month_of_days(start)\n    #  hours_days(args)\n    #  hours_doc_path(args)\n    #  hours_edit(args)\n    #  hours_list(args)\n    #  hours_tasks(args)\n    #  append_tasks(events, lines)\n    #      task_text(lines, start, end)\n    #  hours_show(args)\n    #  hours_summary(args)\n    #  hours_work(args)\n    #  is_day(line)\n    #  is_activity(line)\n    #  is_task(line)\n    #  list_events(args)\n    #  list_tasks(text)\n    #  months()\n    #  print_activities(label, times)\n    #  print_days(times, num_days)\n    #  print_score(times)\n    #      show_score(label, activities, ideal_hours)\n    #  print_table(labels, table)\n    #  print_tasks(results, activity=None)\n    #  print_total_hours(results, activity=None)\n    #      select_activity(record, activity)\n    #  print_total(label, times, activities=None, grand_total=None)\n    #  print_totals(label, times, activities=None, grand_total=None)\n    #  print_work(times, num_days)\n    #  total_activity(filename, times={})\n    #  total_columns(table)\n    #  activity_list(filename)\n    #  total_work_days(filename)\n    #  total_days(filename)\n    #  total_time(times, activities=None)\nbin/i.py\n     i_command(options)\n     i_help(args=None)\n     doc_path()\n     i_add(args)\n     i_edit(args)\n     i_list(args)\nbin/life.py\n     life_command(options)\n     life_doc_path(doc=None)\n     life_edit(doc)\n     life_help(args=None)\n     life_list(args)\n     life_publish(args)\n     life_show(args)\n     life_todo(args)\n     life_web(args)\n     life_words(args)\nbin/log.py\n     log_path()\n     log_command(options)\n     log(label,value=None)\n     log_exception()\n     log_clear()\n     log_read()\nbin/music.py\n     music_command(options)\n     music_help(args=None)\n     list_albums(args)\n     list_collections(args)\n     list_du(args)\n     list_tracks(args)\n     music_copy()\n     music_doc_path(doc=None)\n     music_edit(doc)\n     music_collection(name)\n     music_load(args)\n     music_list(args)\n     music_show(args)\n     music_sync(args)\nbin/n.py\n    \nbin/ntsh.py\n     ntsh_command(argv)\n     commit()\n     clean()\n     convert(f1,f2)\n     convert_png(f1,f2)\n     help()\n     hide()\n     list_files(dirs)\n     new_name(name)\n     name(args)\n     notes()\n     reorder(name)\n     status()\n     view()\n     web(page='%s/notes/fav_list' % archive)\n     zip_open()\n     zip_close()\nbin/ops.py\n     ops_command(options)\n     ops_help(cmd=None, args=None)\n     ops_cmd(args)\n     ops_console()\n     ops_deploy()\n     ops_log()\n     ops_restart()\n     ops_root(server=host, cmd='')\n     ops_update(args)\n     remote_command(server, cmd, user='django')\nbin/page_tests.py\n     run_server()\n     webpage_text(browser,url)\n    #      setUp(self)\n    #      tearDown(self)\n    #      assertBetween(self, num, min, max)\n    #      assertLineCount(self, text, min=1, max=10)\n    #      test_pages(self)\n         setUp(self)\n         tearDown(self)\n         test_pages(self)\n        #  test_visit_google(self)\nbin/pandoc.py\n     file_to_html(path, image_path=None)\n         fix_images(text)\n     markdown_to_html(markdown_path, html_path)\n     read_markdown(path)\n     text_to_html(text)\n     title(p1)\n     write_html_file(path, html)\nbin/remote_tests.py\n    #      test_remote_server(self)\n    #      test_host(self)\n    #     #  test_version_control(self)\n    #     #  test_python_version(self)\n    #      test_virtual_env(self)\n    #      test_pip_list(self)\nbin/resize.py\n     save_image_file(filename, image, width, height, imtype)\n     resize_jpeg(filename)\n     resize_png(filename)\n    #  create_thumbnails(infile, photo)\n    #  resize_test()\nbin/score.py\n    #  score_command(options)\n    #  score_doc_path(doc=None)\n    #  score_edit()\n    #  score_help(args=None)\n    #  score_show()\n    #  score_update()\n    #  score_web()\nbin/seamanslog.py\n     seamanslog_command(options)\n     seamanslog_help(args=None)\n     seamanslog_article(args)\n         article_text(path)\n     seamanslog_doc_path(doc=None)\n     seamanslog_edit(doc)\n     seamanslog_list(args)\n     seamanslog_pick()\n     seamanslog_show(args)\n     seamanslog_summary()\n     seamanslog_view(args)\n     seamanslog_web(args)\n     seamanslog_words(args)\nbin/shell.py\n     banner(name)\n     check_dirs(path, min=0, max=0)\n     check_dir_list(path, dir_list)\n     check_files(path, min=0, max=0)\n     check_file_list(path, dir_list)\n     check_lines(label, lines, min=0, max=10)\n     check_shell_lines(cmd, min=0, max=10)\n     differences(answer, correct)\n     dir_list(path)\n     dir_tree_list(path)\n     file_tree_list(path, filetype=None)\n     file_list(path, filetype=None)\n     file_path(d='', f='')\n     filter_types(files, filetype=None)\n     hostname()\n     line_match(word, text)\n     line_exclude(word, text)\n     line_count(path)\n     limit_lines(shell_command, min=None, max=None)\n     read_file(path)\n     shell(cmd)\n         command_line(cmd)\n     word_count(text)\n     write_file(path, text)\nbin/spiritual.py\n     spiritual_command(args)\n     spiritual_help()\n     spiritual_article(args)\n         article_text(path)\n     spiritual_doc_path(doc)\n     spiritual_edit(args)\n     spiritual_list()\n     spiritual_list_files(dir=None)\n     spiritual_pick(args)\n     spiritual_send(args)\n     spiritual_search(args)\n     spiritual_show(args)\n     spiritual_summary()\n     spiritual_test()\n     spiritual_web()\nbin/src.py\n     src_command(options)\n     src_help()\n     differences(f1,f2)\n     list_source_files(d)\n     show_differences(f1,f2)\n     src_base()\n     src_changed()\n     src_common()\n     src_diff(args)\n     src_dir()\n     src_edit(args)\n     src_list()\n     src_missing()\n     src_pull(args)\n     src_push(args)\n     src_same()\n     src_unique()\n     src_update()\nbin/switches.py\n     server_type()\n     server_host(server)\nbin/text.py\n     text_command(options)\n     text_help(args=None)\n     find_agents(text)\n     find_anchors(text)\n     find_classes(text)\n     find_functions(text)\n     find_links(text)\n         link(anchor)\n     find_quotes(text)\n     find_signatures(text)\n        pattern = r'(.*\\(.*\\))'\n     find_urls(text)\n     markdown_list_links(host, lines)\n     markdown_list_string(mylist)\n     text_join(text)\n     text_lines(text)\n     text_match(match_pattern, doc)\n     text_no_match(match_pattern, doc)\n     text_outline(text)\n     text_outline_string(outline, depth=0)\n     text_markdown(outline, depth=1)\n         text_body(lines)\n     text_replace(doc, match_pattern, replace_pattern)\n     text_title(text)\n     text_body(text)\n     match_lines(text, pattern)\n     match_pattern(text, pattern)\n     transform_matches(text, match_pattern, select_pattern)\nbin/todo.py\n     todo_command(options)\n     recent_dates(days=3)\n     edit_task_file(date)\nbin/tool.py\n     tool_command(options)\n     tool_edit(args)\n     tool_help(self)\n     tool_list()\n     tool_length()\n     tool_read(args)\nbin/user.py\n    \nbin/vc.py\n     vc_command(options)\n     vc_help(args=None)\n     git_cmd(cmd)\n     git_filter()\n     vc_commit(args)\n     vc_diff(args)\n     vc_dirs()\n     vc_log(args)\n     vc_pull(args)\n     vc_push(args)\n     vc_status(args)\nbin/web.py\n     web_command(args)\n     web_help()\n     web(page)\n     web_path(topic=None)\nbin/wordpress.py\n     wordpress_command(options)\n     wordpress_help(args=None)\n     wordpress_doc_path(doc=None)\n     wordpress_edit(doc)\n     wordpress_list(args)\n     wordpress_host(args)\n     wordpress_ssh(args)\nbin/x.py\n     execute_command(cmd,args)\n     command_help(cmd,args)\n     command_scriptor(cmd, args)\nhammer/__init__.py\n    \nhammer/secret_settings.py\n    #  database_init()\nhammer/settings.py\n         ip_addresses()\nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    \nhealth/health.py\n     health_command(options)\n     health_doc_path(doc=None)\n     health_edit(args)\n     health_help(args=None)\n     health_list(args)\n     health_score()\n        #  total(row)\n        #  print_bar(lag,lead,average)\n        #  print_score(row, score)\n     average (num_list)\n     health_import(args)\n     health_web()\nhealth/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    #  health_menu(page)\n     health_settings(page='home')\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n     health_scores(objects)\n         average(num_list)\n         five_star(rating)\n         scores(row)\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    \nlife/life.py\n     query_labels()\n     query_get(pk)\n     query_year(age)\n     query_experiences(age=None)\n     experiences_lookup_table(age=None)\nlife/models.py\n         __unicode__(self)\n         __unicode__(self)\n         __unicode__(self)\n         get_absolute_url(self)\n     initialize()\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    \nmybook/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         name(self)\n         fields(self)\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         fields(self)\nmybook/mybook.py\n     mybook_path(page)\n    #  mybook_random_select(directory)\n    #  mybook_redirect(host, page, user)\n    #  mybook_site(title)\n     mybook_site_title(title)\n         site_title_text(page)\n     mybook_content(author, title)\n     main_menu(menu, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu, page)\n         menu_text(page)\n     booknotes_excerpt(doc)\n         booknotes_doc_path(doc=None)\n         booknotes(doc)\n         excerpt(note)\nmybook/mybook_views.py\n     domain_menu(domain, page)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n    #      get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/outline.py\n     has_kids(text, depth)\n     outline(text)\n     parse_outline(text, tree, depth)\n     print_node(name, depth=1, char='    ')\n     seperator(depth)\n     split_text(text, sep)\n     title(text, depth)\n     read_cards(doc)\n     tabs_data(doc)\n         tab_choice(i,tab)\nmybook/task.py\n     tasks_monthly(year, month)\n     recent_months()\n     months_data_table()\n     tasks_data_table(days)\n     days_data_table(days)\n    #  task_list(task)\n    #  task_list(date)\nmybook/tests.py\n    \nmybook/urls.py\n    \nsuperuser/__init__.py\n    \nsuperuser/admin.py\n     admin_print_list()\n     admin_list()\n     admin_table()\n     admin_detail(a)\n     admin_get(pk)\n     database_info()\n     get_detail_data()\n     is_superuser(user)\n     log_text()\n     requesting_user(user)\n     test_list()\n     test_labels()\n     test_results()\n     test_table()\n     test_text(t)\n     text_head(text, lines=3)\n     text_lines(lines, columns=30)\n     user_detail(user)\n     user_labels()\n     user_table(users)\nsuperuser/admin_views.py\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\nsuperuser/apps.py\n    \nsuperuser/initialize.py\n    \nsuperuser/models.py\n         __unicode__(self)\n         as_row(self)\n         labels()\n         values(self)\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n         __unicode__(self)\n        #  get_absolute_url(self)\n         as_row(self)\n         labels()\ntasks/summary.py\n     activity_summary(activity)\n         active_tab(a, t)\n     activities_work()\n     sort_activity(data)\n     bad_days()\n     bad_days_data(days)\n     combine_work_tasks(table, total)\n     tasks_activity(activity)\n     task_activity_details(activity)\n     task_detail(task)\n     query_hours(task, days)\n     task_filter(tasks, activity)\n     time_data()\n     time_totals(totals)\n         time_total(totals, time)\n     percent(actual, total)\n     percent_totals(totals, subtotals)\n     review_totals(totals, subtotals)\n         percent_difference(actual, total, ideal)\n         task_percents(totals, task, index, ideals)\n     time_filter(tasks, days)\n     task_text_list(tasks)\n         format(t)\n     task_list(days=8)\n     time_summary(days)\n     work_types()\n     write_task_files(tlist)\n     task_import_files()\n         task_details(f)\n         read_task_file(f)\n         new_task(date, name, hours, notes)\ntasks/task.py\n     task_command(self, args)\n     task_help(self)\n     days_ago(days)\n     hourly_total(tasks)\n     monthly_hours_invested(task_type, year, month)\n     last_month_hours_invested(task_type)\n     tasks_last_month()\n     task_data_table()\n     monthly_totals(year, month)\n     full_totals()\n     print_summary(summary, start=None, end=None)\n     recent_weeks()\n     recent_months()\n     sort_totals(categories)\n     task_add(self, args)\n     task_delete(self, args)\n     task_details(query, hours)\n         record(name, hours, total)\n     task_doc_path(args)\n     task_edit(self, args)\n     task_get(self, args)\n     task_import(args)\n     task_history(args)\n         print_task_history(tasks)\n     task_list(self, args)\n     task_month(args)\n    #  task_read_events(args)\n     task_read_health(args)\n     task_rename(args)\n     task_set_name(args, task)\n     task_select(task_type=None, date=None, days=None)\n     task_summary(args)\n     task_totals()\n     task_types()\n     task_print_types()\n     task_web()\n     task_week(args)\n     task_work()\n     tasks_monthly(year, month)\n     tasks_weekly(year, month, day)\n     total_hours_invested(task_type)\n     weekly_hours_invested(task_type, year, month, day)\n     weekly_totals(year, month, day)\n     task_report(year, month)\n         query_month_tasks(year, month)\n         task_entry(task)\n     save_monthly_reports(year)\n         save_report(report, month)\n     fix_tasks()\n     test_tasks()\ntasks/urls.py\n    \ntasks/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\ntest/__init__.py\n    \ntest/app_test.py\n     app_classes_test()\n     app_functions_test()\n     app_list_test()\n     app_switches_test()\n     app_settings_test()\n     app_show_test()\n     app_signature_test()\n     app_url_test()\ntest/archive_test.py\n     archive_files_test()\n     archive_dirs_test()\n     archive_nts_test()\n     archive_repo_test()\n         list_archives()\ntest/aspire_test.py\n     aspire_list_test()\n     aspire_show_test()\n    #  aspire_score_test()\n     aspire_report_test()\n     aspire_week_test()\ntest/booknotes_test.py\n     booknotes_list_test()\n     booknotes_lines_test()\ntest/css_test.py\n     css_test()\ntest/data_test.py\n     data_files_test()\n     data_save_test()\n     data_tables_test()\n     data_migrate_test()\ntest/doc_test.py\n     doc_test()\n     doc_help_test()\n     doc_search_test()\n     doc_scan_test()\n     doc_file_test()\n     doc_file_missing_test()\n     doc_consolidate()\n     doc_render_test()\n     doc_encoding_test()\ntest/health_test.py\n     health_list_test()\n     health_score_test()\ntest/hourly_test.py\n     hourly_list_test()\n     hourly_show_test()\ntest/i_test.py\n     i_list_test()\ntest/log_test.py\n     log_length_test()\ntest/ops_test.py\n    #  ops_git_pull_test()\n     ops_help_test()\n     ops_server_test()\n     ops_server_type_test()\n     ops_status_test()\ntest/page_test.py\n     check_page(url, min=1, max=1)\n     page_list_test()\n     page_text_test()\n     page_diff_test()\n     page_sites_test()\ntest/robot_test.py\n     robot_list_test()\n     robot_results_test()\n    #  robot_show_test()\ntest/seamanslog_test.py\n     seamanslog_list_test()\n     seamanslog_show_test()\n     seamanslog_summary_test()\n     seamanslog_words_test()\ntest/system_test.py\n     system_cron_test()\n     system_disk_free_test ()\n     system_files_count_test()\n     system_host_test()\n     system_ip_test()\n     system_pandoc_test()\n     system_python_files_test()\n     system_python_version_test()\n     system_python_virtualenv_test()\ntest/text_test.py\n     text_help_test()\n     text_match_test()\n     text_no_match_test()\n     text_agents_test()\n     text_outline_test()\n     text_markdown_test()\n     text_format_test()\n     text_round_trip_test()\n     text_grep_test()\n     text_findall_test()\n     text_functions_test()\n     text_select_lines_test()\n     text_url_test()\n     text_links_test()\n    #  text_transforms_test()\n    #      transform(test_case)\n     text_signatures_test()\n     text_anchors_test()\n     text_div_test()\ntest/tst_test.py\n     tst_test()\n     tst_time_test()\n    #  remote_server_test()\ntest/unc_test.py\n     unc_files_test()\ntest/user_test.py\n    #  user_import_test()\n    #  user_export_test()\n     user_list_test()\ntest/vc_test.py\n     vc_status_test()\n     vc_pull_test()\ntest/wordpress_test.py\n     wordpress_list_test()\n     wordpress_host_test()\ntool/__init__.py\n    \ntool/document.py\n     doc_cards(page)\n     doc_content(page)\n     doc_dir_exists(title)\n     doc_exists(title)\n     doc_html_text(page, image_path=None)\n     doc_link(title)\n     doc_path(page)\n     domain_doc(domain, page)\ntool/domain.py\n     domain_title(domain)\n     domain_directory(domain)\ntool/email.py\n     email_command(options)\n     email_help()\n     email_args(args, use_html=True)\n     send_support_request(title, text)\n     send_file_email(args)\n     send_doc_email(args)\n     send_text_email(args)\n     send_html_email(args)\n     send_template_message(emailTo, title, template, data={})\ntool/log.py\n     log(text, value=None)\n     log_exception()\n     log_json(text, data)\n     log_file()\n     show_log()\n     log_notifications(title, recipients)\n     log_page(request, parms='')\ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n         add_arguments(self, parser)\n         handle(self, *args, **options)\n         help(self)\ntool/models.py\n         __unicode__(self)\n         get_absolute_url(self)\ntool/notify.py\n     notify_test_results()\n     notify_test_email()\ntool/page.py\n     page_command(self, options)\n     page_help(self)\n     page_add(self, args)\n     page_delete(self, args)\n     page_diff(self, args)\n         show_diff(page)\n     page_expect(self, args)\n     page_html(self, args)\n         show_output(page)\n     page_like(self, args)\n         like_page(page)\n     page_list(self)\n     page_lookup(url)\n     page_reset(self)\n     page_results()\n     page_text(self, args)\n         show_output(page)            \ntool/project.py\n     project_add(self, args)\n     project_command(self, options)\n     project_delete(self, args)\n     project_get(self, args)\n     project_help(self)\n     project_list(self)\n     project_lookup(name)\ntool/robot.py\n     robot_command(options)\n     robot_help(args=None)\n     robot_doc_path(doc=None)\n     robot_fetch_page(url)\n     robot_get_page(browser, page)\n     robot_list()\n     robot_login(browser,page)\n     robot_results()\n     robot_run()\ntool/tst.py\n     tst_find()\n     get_module(modulename)\n     test_map(modulename)\n         test_entry(entry)\n         tests(module)\n     tst_command(self, args)\n     test_dictionary()\n         module_list(directory)\n         test_name(module)\n     tst_diff(test_name)\n     tst_edit(self, args)\n     tst_help(self)\n     tst_like(self,args)\n     tst_list(self,args)\n     tst_output(self,args)\n     tst_register(tests)\n     tst_quick_test()\n     tst_results()\n         show_differences(t)\n     tst_run(self,args)\n         run_test(self,test_entry)\n     tst_send(self,args)\ntool/urls.py\n    \ntool/user.py\n     user_command(self, options)\n     user_help()\n     user_add(name, email, password='test')\n     user_delete(args)\n     user_export(self, args)\n     user_get(pk)\n     user_import(self, args)\n     user_list()\n     user_reset(self)\n     add_super_user(name, email, password)\n     user_password(username, password)\n     user_lookup(name, email=None)\n     user_file_path(args)\n     user_fix_name(args)\n     show_users()\n     reset_passwords()\ntool/user_views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\ntool/xxx.py\n    #      __unicode__(self)\n    #      get_absolute_url(self)\n    #      as_row(self)\n    #      labels()\n    #      values(self)\n    #     #  fields(self)\n     xxx_add(name)\n     xxx_delete(pk)\n     xxx_edit(pk, name)\n     xxx_lookup(pk)\n     xxx_get(client, name)\n     xxx_print(objects)\n     xxx_query(select=None)\n     xxx_table(select=None)\ntool/xxx_script.py\n     xxx_command(args)\n     xxx_help(args=None)\n     xxx_list(args=None)\ntool/xxx_views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\nunc/__init__.py\n    \nunc/admin.py\n    \nunc/apps.py\n    \nunc/models.py\n         __unicode__(self)\nunc/review.py\n     allow_review(reviewer, designer, page)\n     calculate_points(student)\n     course_list()\n     create_review(reviewer, designer, page)\n     create_reviews(page, groups)\n     create_sample_courses()\n     requirements(course)\n     requirements_bacs200()\n     requirements_bacs350()\n     count_score(r)\n     review_groups()\n     review_pairs(groups)\n     reviewer_query(reviewer_id)\n     designer_query(designer_id)\n     designer_score(designer_id)\n     designer_scores(designer_id, assignments=None)\n     avg(s)\n     projects(course)\n     reviews_completed(student_id)\n     reviews_done(student_id)\n     reviews_feedback(student_id, page)\n     review_tabs(student_id)\n     reviews_to_do(student_id)\n     reviewer_score(reviewer_id)\n     assignment_page(course, page)\n     reviewer_scores(reviewer_id, assignments)\n     gather_review_scores(course, student=None)\n     student_review_data(student_id)\n     update_review_scores(course)\nunc/sensei.py\n     content_lessons(course)\n     guide_doc_path(doc=None)\n     guide_file(course, doc)\n     guide_schedule(lesson)\n     register_students()\n     add_student(course, name, email, domain)\n     query_students(course, student=None)\n     get_student(id)\n     get_student_email(email)\n     domain_data(course)\n         domains(course)\n     read_student_list()\n     student_test_links(student)\n         url(student, page='')\n     home_link(title)\n     lesson_cards(course, lesson)\n         fix_images(text)\n         lesson_markdown(path)\n         card_text(tab_title, tab_text)\n         card_title(tab_text)\n     lesson_data(course, lesson, text)\n         tab_choice(i, tab)\n         lesson_tabs_data(course, lesson)\n     lesson_info(lesson)\n     link(url, title=None)\n     make_link(href, text=None)\n     main_menu(course, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu_file)\n     missing_page_info(title)\n     page_info(course, title)\n     read_file(course, doc)\n         no_blank_lines(text)\n     schedule_data(course, table)\n         course_part_data(title, table, first, last)\n         lesson_link(lesson)\n         set_links(table)\n         course_parts(table, course)\n     site_titles(course)\n     slide_content_data(course, lesson)\n         adjust_markdown_headings(markdown)\n         format_slides(course, lesson)\n     test_links(course)\n     view_info(kwargs)\n         view_data(course, title, lesson)\nunc/tests.py\n    \n	bin/__init__.py\n    \nbin/app.py\n     app_command(options)\n     app_help()\n     app_functions(args)\n     app_classes(args)\n     app_signature(args)\n     app_search_code(files, search_function)\n         print_indented(outline)\n             app_print(filename, children)\n     app_directories()\n     app_path(topic=None)\n     app_score()\n     app_search(args)\n     app_show(args=None)\n     app_source(args=None)\n     app_summary(args=None)\n     kill_server()\n     app_urls()\n         simplify(url)\n     run_server()\nbin/aspire.py\n     aspire_command(options)\n     aspire_help(args=None)\n     aspire_clone(args)\n     aspire_doc_path(doc=None)\n     aspire_docs()\n         count_docs(project)\n     aspire_edit(doc)\n    #  aspire_guide()\n    #     #  article_text(path)\n     text_tail(text)\n    #  aspire_history(args)\n     aspire_hours(args=None)\n     aspire_list(args=None)\n     aspire_local(args)\n     aspire_priority()\n     aspire_progress()\n         text_string(title, body)\n     aspire_projects(args=None)\n     aspire_report(args)\n         report_data(date, path)\n         report_text(data)\n         report_save()\n     aspire_reports()\n     aspire_score(args=None)\n    #  aspire_send()\n    #      article_text(path)\n     aspire_show(args)\n     aspire_todo(args)\n     aspire_web(server, page=None)\n    #  aspire_week()\n    #      project_week_string(project, hours, total)\n    #      weekly_summary()\n    #      weekly_totals()\n    #          summarize(label, times, activities, total)\n    #          gather_data(shell_cmd)\n    #  aspire_week_print()\nbin/book.py\n     book_command(argv)\n     book_build()\n         image_list()\n         book_html()\n         book_epub()\n         book_pdf()\n         book_mobi()\n         book_assemble()\n         book_copy()\n     book_changes()\n     book_commit(argv)\n     book_edit(argv)\n     book_find(words)\n     book_headings(topic=None)\n         find_headings(text, pattern='##')\n         print_headings(topic)\n     book_headlines()\n     book_index()\n         print_index_entry(category, path, title)\n     book_help()\n     nested_list(name, children)\n     book_list()\n     book_outline(topic)\n     book_plan()\n     book_read()\n     book_read_index(part=None)\n     book_status()\n     book_text(chapter=None)\n     chapter_words(chapter)\n     book_calculate_words(label,files)\n     book_word_count(part)\n     book_words()\n     web(page)\nbin/booknotes.py\n     booknotes_command(options)\n     booknotes_help(args=None)\n     booknotes_content(args)\n     booknotes_doc_path(doc=None)\n     booknotes_edit(args)\n     booknotes_excerpt(args)\n         booknotes()\n         excerpt(note)\n     booknotes_list(args)\nbin/data.py\n     data_command(options)\n     data_backup(host)\n     data_count(host)\n     data_help()\n     data_load(host)\n     data_migrate()\n     data_reset()\n     data_save(host)\n         save(server, app=None)\n     data_server()\n     data_sql(host)\n     data_tables()\nbin/datatype.py\n     name_replacement(text, directory, datatype)\n     source_code(prototype)\n     convert_code(prototype, code, directory, datatype)\n     datatype_add(args)\n     datatype_command(options)\n     datatype_path(directory, doc=None)\n     datatype_edit(doc)\n     datatype_help(args=None)\nbin/days.py\n     days_command(options)\n     days_help(args=None)\n     date_str(t)\n     day_str(t)\n     days_ago(date,days)\n     days_list(args)\n     days_month(args)\n     days_weeks(num_weeks)\n         days_ahead(date, days)\n         enumerate_weeks(today, days)\n         weekly_schedule(filename, days)\n     enumerate_days(today, days)\n     to_date(s)\n     to_day(s)\n     today()\nbin/diagrams.py\n    \nbin/doc.py\n     doc_command(options)\n     doc_help()\n     doc_content(args)\n     doc_count(dir)\n     doc_directories()\n     doc_edit(args)\n     doc_fix()\n     doc_length(args=None)\n     doc_list(args=None)\n     doc_path(doc=None)\n     doc_pick(args)\n     doc_random_select(directory)\n     doc_redirect(page)\n     doc_score(args)\n     doc_search(args)\n     doc_send(args)\n     doc_send_text(args)\n     doc_show(args=None)\n     doc_show_directory(dir=None)\n     doc_stats(args)\n     doc_summary(args=None)\n     fix_chars(text)\n     doc_test(args)\n     doc_word_count(directory)\n     doc_words(args=None)\n     list_documents(dir=None)\nbin/faceblog.py\n     faceblog_command(options)\n     faceblog_doc_path(doc=None)\n     faceblog_edit(doc=None)\n     faceblog_help(args=None)\n     faceblog_list(args)\n     faceblog_send(doc)\n     faceblog_show(args)\nbin/files.py\n     accumulate_new_lines(accumulator, f2)\n     count_files(directory)\n     create_directory(path)\n     delete_file(filename)\n     do_command(cmd, input=None)\n     encode_text(text, encoding='utf-8')\n     fix_chars(text)\n     grep(pattern,file)\n     is_writable(path)\n     list_files(directory)\n     list_dirs(directory)\n     path_name (relative_filename)\n     print_list(lst)\n     print_list2(lst)\n     read_input()\n     read_json(filename)\n     read_file(filename)\n     read_text(f)\n     recursive_list(d)\n     time_sort_file(d)\n     write_text(filename, text, append=None)\n     write_file(filename, lines, append=None)\nbin/grades.py\n     student_emails()\n    #  student_info(email)\n    #  list_student_info()\nbin/guide.py\n     guide_command(options)\n     guide_help(args=None)\n     guide_add(args)\n     guide_doc_path(course=None, doc=None)\n     guide_create_lesson(course, lesson)\n     lesson_text(outline)\n     guide_edit(course, lesson)\n     guide_list(args)\n     guide_outline(course, lesson)\n         build_outline(text)\n     read_lesson(course, lesson)\n     lesson_parts(course,lesson)\n     read_lines(course, f)\nbin/hourly.py\n     hourly_command(options)\n     hourly_help(args=None)\n     hourly_doc_path(doc=None)\n     hourly_edit()\n     hourly_list()\n     hourly_run()\n         execute(cmd)\n     hourly_show()\nbin/hours.py\n    #  hours_command(options)\n    #  hours_help(args=None)\n    #  activities_work()\n    #  activities_work_client()\n    #  activities_work_nonpaid()\n    #  activities_play()\n    #  activities_public()\n    #  activities_private()\n    #  activities()\n    #  hours_activity(args)\n    #  hours_add(args)\n    #      enumerate_days(today, days)\n    #      to_date(s)\n    #      date_str(t)\n    #      day_str(t)\n    #      days_ago(date,days)\n    #      month_of_days(start)\n    #  hours_days(args)\n    #  hours_doc_path(args)\n    #  hours_edit(args)\n    #  hours_list(args)\n    #  hours_tasks(args)\n    #  append_tasks(events, lines)\n    #      task_text(lines, start, end)\n    #  hours_show(args)\n    #  hours_summary(args)\n    #  hours_work(args)\n    #  is_day(line)\n    #  is_activity(line)\n    #  is_task(line)\n    #  list_events(args)\n    #  list_tasks(text)\n    #  months()\n    #  print_activities(label, times)\n    #  print_days(times, num_days)\n    #  print_score(times)\n    #      show_score(label, activities, ideal_hours)\n    #  print_table(labels, table)\n    #  print_tasks(results, activity=None)\n    #  print_total_hours(results, activity=None)\n    #      select_activity(record, activity)\n    #  print_total(label, times, activities=None, grand_total=None)\n    #  print_totals(label, times, activities=None, grand_total=None)\n    #  print_work(times, num_days)\n    #  total_activity(filename, times={})\n    #  total_columns(table)\n    #  activity_list(filename)\n    #  total_work_days(filename)\n    #  total_days(filename)\n    #  total_time(times, activities=None)\nbin/i.py\n     i_command(options)\n     i_help(args=None)\n     doc_path()\n     i_add(args)\n     i_edit(args)\n     i_list(args)\nbin/life.py\n     life_command(options)\n     life_doc_path(doc=None)\n     life_edit(doc)\n     life_help(args=None)\n     life_list(args)\n     life_publish(args)\n     life_show(args)\n     life_todo(args)\n     life_web(args)\n     life_words(args)\nbin/log.py\n     log_path()\n     log_command(options)\n     log(label,value=None)\n     log_exception()\n     log_clear()\n     log_read()\nbin/music.py\n     music_command(options)\n     music_help(args=None)\n     list_albums(args)\n     list_collections(args)\n     list_du(args)\n     list_tracks(args)\n     music_copy()\n     music_doc_path(doc=None)\n     music_edit(doc)\n     music_collection(name)\n     music_load(args)\n     music_list(args)\n     music_show(args)\n     music_sync(args)\nbin/n.py\n    \nbin/ntsh.py\n     ntsh_command(argv)\n     commit()\n     clean()\n     convert(f1,f2)\n     convert_png(f1,f2)\n     help()\n     hide()\n     list_files(dirs)\n     new_name(name)\n     name(args)\n     notes()\n     reorder(name)\n     status()\n     view()\n     web(page='%s/notes/fav_list' % archive)\n     zip_open()\n     zip_close()\nbin/ops.py\n     ops_command(options)\n     ops_help(cmd=None, args=None)\n     ops_cmd(args)\n     ops_console()\n     ops_deploy()\n     ops_log()\n     ops_restart()\n     ops_root(server=host, cmd='')\n     ops_update(args)\n     remote_command(server, cmd, user='django')\nbin/page_tests.py\n     run_server()\n     webpage_text(browser,url)\n    #      setUp(self)\n    #      tearDown(self)\n    #      assertBetween(self, num, min, max)\n    #      assertLineCount(self, text, min=1, max=10)\n    #      test_pages(self)\n         setUp(self)\n         tearDown(self)\n         test_pages(self)\n        #  test_visit_google(self)\nbin/pandoc.py\n     file_to_html(path, image_path=None)\n         fix_images(text)\n     markdown_to_html(markdown_path, html_path)\n     read_markdown(path)\n     text_to_html(text)\n     title(p1)\n     write_html_file(path, html)\nbin/remote_tests.py\n    #      test_remote_server(self)\n    #      test_host(self)\n    #     #  test_version_control(self)\n    #     #  test_python_version(self)\n    #      test_virtual_env(self)\n    #      test_pip_list(self)\nbin/resize.py\n     save_image_file(filename, image, width, height, imtype)\n     resize_jpeg(filename)\n     resize_png(filename)\n    #  create_thumbnails(infile, photo)\n    #  resize_test()\nbin/score.py\n    #  score_command(options)\n    #  score_doc_path(doc=None)\n    #  score_edit()\n    #  score_help(args=None)\n    #  score_show()\n    #  score_update()\n    #  score_web()\nbin/seamanslog.py\n     seamanslog_command(options)\n     seamanslog_help(args=None)\n     seamanslog_article(args)\n         article_text(path)\n     seamanslog_doc_path(doc=None)\n     seamanslog_edit(doc)\n     seamanslog_list(args)\n     seamanslog_pick()\n     seamanslog_show(args)\n     seamanslog_summary()\n     seamanslog_view(args)\n     seamanslog_web(args)\n     seamanslog_words(args)\nbin/shell.py\n     banner(name)\n     check_dirs(path, min=0, max=0)\n     check_dir_list(path, dir_list)\n     check_files(path, min=0, max=0)\n     check_file_list(path, dir_list)\n     check_lines(label, lines, min=0, max=10)\n     check_shell_lines(cmd, min=0, max=10)\n     differences(answer, correct)\n     dir_list(path)\n     dir_tree_list(path)\n     file_tree_list(path, filetype=None)\n     file_list(path, filetype=None)\n     file_path(d='', f='')\n     filter_types(files, filetype=None)\n     hostname()\n     line_match(word, text)\n     line_exclude(word, text)\n     line_count(path)\n     limit_lines(shell_command, min=None, max=None)\n     read_file(path)\n     shell(cmd)\n         command_line(cmd)\n     word_count(text)\n     write_file(path, text)\nbin/spiritual.py\n     spiritual_command(args)\n     spiritual_help()\n     spiritual_article(args)\n         article_text(path)\n     spiritual_doc_path(doc)\n     spiritual_edit(args)\n     spiritual_list()\n     spiritual_list_files(dir=None)\n     spiritual_pick(args)\n     spiritual_send(args)\n     spiritual_search(args)\n     spiritual_show(args)\n     spiritual_summary()\n     spiritual_test()\n     spiritual_web()\nbin/src.py\n     src_command(options)\n     src_help()\n     differences(f1,f2)\n     list_source_files(d)\n     show_differences(f1,f2)\n     src_base()\n     src_changed()\n     src_common()\n     src_diff(args)\n     src_dir()\n     src_edit(args)\n     src_list()\n     src_missing()\n     src_pull(args)\n     src_push(args)\n     src_same()\n     src_unique()\n     src_update()\nbin/switches.py\n     server_type()\n     server_host(server)\nbin/text.py\n     text_command(options)\n     text_help(args=None)\n     find_agents(text)\n     find_anchors(text)\n     find_classes(text)\n     find_functions(text)\n     find_links(text)\n         link(anchor)\n     find_quotes(text)\n     find_signatures(text)\n        pattern = r'(.*\\(.*\\))'\n     find_urls(text)\n     markdown_list_links(host, lines)\n     markdown_list_string(mylist)\n     text_join(text)\n     text_lines(text)\n     text_match(match_pattern, doc)\n     text_no_match(match_pattern, doc)\n     text_outline(text)\n     text_outline_string(outline, depth=0)\n     text_markdown(outline, depth=1)\n         text_body(lines)\n     text_replace(doc, match_pattern, replace_pattern)\n     text_title(text)\n     text_body(text)\n     match_lines(text, pattern)\n     match_pattern(text, pattern)\n     transform_matches(text, match_pattern, select_pattern)\nbin/todo.py\n     todo_command(options)\n     recent_dates(days=3)\n     edit_task_file(date)\nbin/tool.py\n     tool_command(options)\n     tool_edit(args)\n     tool_help(self)\n     tool_list()\n     tool_length()\n     tool_read(args)\nbin/user.py\n    \nbin/vc.py\n     vc_command(options)\n     vc_help(args=None)\n     git_cmd(cmd)\n     git_filter()\n     vc_commit(args)\n     vc_diff(args)\n     vc_dirs()\n     vc_log(args)\n     vc_pull(args)\n     vc_push(args)\n     vc_status(args)\nbin/web.py\n     web_command(args)\n     web_help()\n     web(page)\n     web_path(topic=None)\nbin/wordpress.py\n     wordpress_command(options)\n     wordpress_help(args=None)\n     wordpress_doc_path(doc=None)\n     wordpress_edit(doc)\n     wordpress_list(args)\n     wordpress_host(args)\n     wordpress_ssh(args)\nbin/x.py\n     execute_command(cmd,args)\n     command_help(cmd,args)\n     command_scriptor(cmd, args)\nhammer/__init__.py\n    \nhammer/secret_settings.py\n    #  database_init()\nhammer/settings.py\n         ip_addresses()\nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    \nhealth/health.py\n     health_command(options)\n     health_doc_path(doc=None)\n     health_edit(args)\n     health_help(args=None)\n     health_list(args)\n     health_score()\n        #  total(row)\n        #  print_bar(lag,lead,average)\n        #  print_score(row, score)\n     average (num_list)\n     health_import(args)\n     health_web()\nhealth/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    #  health_menu(page)\n     health_settings(page='home')\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n     health_scores(objects)\n         average(num_list)\n         five_star(rating)\n         scores(row)\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    \nlife/life.py\n     query_labels()\n     query_get(pk)\n     query_year(age)\n     query_experiences(age=None)\n     experiences_lookup_table(age=None)\nlife/models.py\n         __unicode__(self)\n         __unicode__(self)\n         __unicode__(self)\n         get_absolute_url(self)\n     initialize()\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    \nmybook/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         name(self)\n         fields(self)\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         fields(self)\nmybook/mybook.py\n     mybook_path(page)\n    #  mybook_random_select(directory)\n    #  mybook_redirect(host, page, user)\n    #  mybook_site(title)\n     mybook_site_title(title)\n         site_title_text(page)\n     mybook_content(author, title)\n     main_menu(menu, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu, page)\n         menu_text(page)\n     booknotes_excerpt(doc)\n         booknotes_doc_path(doc=None)\n         booknotes(doc)\n         excerpt(note)\nmybook/mybook_views.py\n     domain_menu(domain, page)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n    #      get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/outline.py\n     has_kids(text, depth)\n     outline(text)\n     parse_outline(text, tree, depth)\n     print_node(name, depth=1, char='    ')\n     seperator(depth)\n     split_text(text, sep)\n     title(text, depth)\n     read_cards(doc)\n     tabs_data(doc)\n         tab_choice(i,tab)\nmybook/task.py\n     tasks_monthly(year, month)\n     recent_months()\n     months_data_table()\n     tasks_data_table(days)\n     days_data_table(days)\n    #  task_list(task)\n    #  task_list(date)\nmybook/tests.py\n    \nmybook/urls.py\n    \nsuperuser/__init__.py\n    \nsuperuser/admin.py\n     admin_print_list()\n     admin_list()\n     admin_table()\n     admin_detail(a)\n     admin_get(pk)\n     database_info()\n     get_detail_data()\n     is_superuser(user)\n     log_text()\n     requesting_user(user)\n     test_list()\n     test_labels()\n     test_results()\n     test_table()\n     test_text(t)\n     text_head(text, lines=3)\n     text_lines(lines, columns=30)\n     user_detail(user)\n     user_labels()\n     user_table(users)\nsuperuser/admin_views.py\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\nsuperuser/apps.py\n    \nsuperuser/initialize.py\n    \nsuperuser/models.py\n         __unicode__(self)\n         as_row(self)\n         labels()\n         values(self)\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n         __unicode__(self)\n        #  get_absolute_url(self)\n         as_row(self)\n         labels()\ntasks/summary.py\n     activity_summary(activity)\n         active_tab(a, t)\n     activities_work()\n     sort_activity(data)\n     bad_days()\n     bad_days_data(days)\n     combine_work_tasks(table, total)\n     tasks_activity(activity)\n     task_activity_details(activity)\n     task_detail(task)\n     query_hours(task, days)\n     task_filter(tasks, activity)\n     time_data()\n     time_totals(totals)\n         time_total(totals, time)\n     percent(actual, total)\n     percent_totals(totals, subtotals)\n     review_totals(totals, subtotals)\n         percent_difference(actual, total, ideal)\n         task_percents(totals, task, index, ideals)\n     time_filter(tasks, days)\n     task_text_list(tasks)\n         format(t)\n     task_list(days=8)\n     time_summary(days)\n     work_types()\n     write_task_files(tlist)\n     task_import_files()\n         task_details(f)\n         read_task_file(f)\n         new_task(date, name, hours, notes)\ntasks/task.py\n     task_command(self, args)\n     task_help(self)\n     days_ago(days)\n     hourly_total(tasks)\n     monthly_hours_invested(task_type, year, month)\n     last_month_hours_invested(task_type)\n     tasks_last_month()\n     task_data_table()\n     monthly_totals(year, month)\n     full_totals()\n     print_summary(summary, start=None, end=None)\n     recent_weeks()\n     recent_months()\n     sort_totals(categories)\n     task_add(self, args)\n     task_delete(self, args)\n     task_details(query, hours)\n         record(name, hours, total)\n     task_doc_path(args)\n     task_edit(self, args)\n     task_get(self, args)\n     task_import(args)\n     task_history(args)\n         print_task_history(tasks)\n     task_list(self, args)\n     task_month(args)\n    #  task_read_events(args)\n     task_read_health(args)\n     task_rename(args)\n     task_set_name(args, task)\n     task_select(task_type=None, date=None, days=None)\n     task_summary(args)\n     task_totals()\n     task_types()\n     task_print_types()\n     task_web()\n     task_week(args)\n     task_work()\n     tasks_monthly(year, month)\n     tasks_weekly(year, month, day)\n     total_hours_invested(task_type)\n     weekly_hours_invested(task_type, year, month, day)\n     weekly_totals(year, month, day)\n     task_report(year, month)\n         query_month_tasks(year, month)\n         task_entry(task)\n     save_monthly_reports(year)\n         save_report(report, month)\n     fix_tasks()\n     test_tasks()\ntasks/urls.py\n    \ntasks/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\ntest/__init__.py\n    \ntest/app_test.py\n     app_classes_test()\n     app_functions_test()\n     app_list_test()\n     app_switches_test()\n     app_settings_test()\n     app_show_test()\n     app_signature_test()\n     app_url_test()\ntest/archive_test.py\n     archive_files_test()\n     archive_dirs_test()\n     archive_nts_test()\n     archive_repo_test()\n         list_archives()\ntest/aspire_test.py\n     aspire_list_test()\n     aspire_show_test()\n    #  aspire_score_test()\n     aspire_report_test()\n     aspire_week_test()\ntest/booknotes_test.py\n     booknotes_list_test()\n     booknotes_lines_test()\ntest/css_test.py\n     css_test()\ntest/data_test.py\n     data_files_test()\n     data_save_test()\n     data_tables_test()\n     data_migrate_test()\ntest/doc_test.py\n     doc_test()\n     doc_help_test()\n     doc_search_test()\n     doc_scan_test()\n     doc_file_test()\n     doc_file_missing_test()\n     doc_consolidate()\n     doc_render_test()\n     doc_encoding_test()\ntest/health_test.py\n     health_list_test()\n     health_score_test()\ntest/hourly_test.py\n     hourly_list_test()\n     hourly_show_test()\ntest/i_test.py\n     i_list_test()\ntest/log_test.py\n     log_length_test()\ntest/ops_test.py\n    #  ops_git_pull_test()\n     ops_help_test()\n     ops_server_test()\n     ops_server_type_test()\n     ops_status_test()\ntest/page_test.py\n     check_page(url, min=1, max=1)\n     page_list_test()\n     page_text_test()\n     page_diff_test()\n     page_sites_test()\ntest/robot_test.py\n     robot_list_test()\n     robot_results_test()\n    #  robot_show_test()\ntest/seamanslog_test.py\n     seamanslog_list_test()\n     seamanslog_show_test()\n     seamanslog_summary_test()\n     seamanslog_words_test()\ntest/system_test.py\n     system_cron_test()\n     system_disk_free_test ()\n     system_files_count_test()\n     system_host_test()\n     system_ip_test()\n     system_pandoc_test()\n     system_python_files_test()\n     system_python_version_test()\n     system_python_virtualenv_test()\ntest/text_test.py\n     text_help_test()\n     text_match_test()\n     text_no_match_test()\n     text_agents_test()\n     text_outline_test()\n     text_markdown_test()\n     text_format_test()\n     text_round_trip_test()\n     text_grep_test()\n     text_findall_test()\n     text_functions_test()\n     text_select_lines_test()\n     text_url_test()\n     text_links_test()\n    #  text_transforms_test()\n    #      transform(test_case)\n     text_signatures_test()\n     text_anchors_test()\n     text_div_test()\ntest/tst_test.py\n     tst_test()\n     tst_time_test()\n    #  remote_server_test()\ntest/unc_test.py\n     unc_files_test()\ntest/user_test.py\n    #  user_import_test()\n    #  user_export_test()\n     user_list_test()\ntest/vc_test.py\n     vc_status_test()\n     vc_pull_test()\ntest/wordpress_test.py\n     wordpress_list_test()\n     wordpress_host_test()\ntool/__init__.py\n    \ntool/document.py\n     doc_cards(page)\n     doc_content(page)\n     doc_dir_exists(title)\n     doc_exists(title)\n     doc_html_text(page, image_path=None)\n     doc_link(title)\n     doc_path(page)\n     domain_doc(domain, page)\ntool/domain.py\n     domain_title(domain)\n     domain_directory(domain)\ntool/email.py\n     email_command(options)\n     email_help()\n     email_args(args, use_html=True)\n     send_support_request(title, text)\n     send_file_email(args)\n     send_doc_email(args)\n     send_text_email(args)\n     send_html_email(args)\n     send_template_message(emailTo, title, template, data={})\ntool/log.py\n     log(text, value=None)\n     log_exception()\n     log_json(text, data)\n     log_file()\n     show_log()\n     log_notifications(title, recipients)\n     log_page(request, parms='')\ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n         add_arguments(self, parser)\n         handle(self, *args, **options)\n         help(self)\ntool/models.py\n         __unicode__(self)\n         get_absolute_url(self)\ntool/notify.py\n     notify_test_results()\n     notify_test_email()\ntool/page.py\n     page_command(self, options)\n     page_help(self)\n     page_add(self, args)\n     page_delete(self, args)\n     page_diff(self, args)\n         show_diff(page)\n     page_expect(self, args)\n     page_html(self, args)\n         show_output(page)\n     page_like(self, args)\n         like_page(page)\n     page_list(self)\n     page_lookup(url)\n     page_reset(self)\n     page_results()\n     page_text(self, args)\n         show_output(page)            \ntool/project.py\n     project_add(self, args)\n     project_command(self, options)\n     project_delete(self, args)\n     project_get(self, args)\n     project_help(self)\n     project_list(self)\n     project_lookup(name)\ntool/robot.py\n     robot_command(options)\n     robot_help(args=None)\n     robot_doc_path(doc=None)\n     robot_fetch_page(url)\n     robot_get_page(browser, page)\n     robot_list()\n     robot_login(browser,page)\n     robot_results()\n     robot_run()\ntool/tst.py\n     tst_find()\n     get_module(modulename)\n     test_map(modulename)\n         test_entry(entry)\n         tests(module)\n     tst_command(self, args)\n     test_dictionary()\n         module_list(directory)\n         test_name(module)\n     tst_diff(test_name)\n     tst_edit(self, args)\n     tst_help(self)\n     tst_like(self,args)\n     tst_list(self,args)\n     tst_output(self,args)\n     tst_register(tests)\n     tst_quick_test()\n     tst_results()\n         show_differences(t)\n     tst_run(self,args)\n         run_test(self,test_entry)\n     tst_send(self,args)\ntool/urls.py\n    \ntool/user.py\n     user_command(self, options)\n     user_help()\n     user_add(name, email, password='test')\n     user_delete(args)\n     user_export(self, args)\n     user_get(pk)\n     user_import(self, args)\n     user_list()\n     user_reset(self)\n     add_super_user(name, email, password)\n     user_password(username, password)\n     user_lookup(name, email=None)\n     user_file_path(args)\n     user_fix_name(args)\n     show_users()\n     reset_passwords()\ntool/user_views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\ntool/xxx.py\n    #      __unicode__(self)\n    #      get_absolute_url(self)\n    #      as_row(self)\n    #      labels()\n    #      values(self)\n    #     #  fields(self)\n     xxx_add(name)\n     xxx_delete(pk)\n     xxx_edit(pk, name)\n     xxx_lookup(pk)\n     xxx_get(client, name)\n     xxx_print(objects)\n     xxx_query(select=None)\n     xxx_table(select=None)\ntool/xxx_script.py\n     xxx_command(args)\n     xxx_help(args=None)\n     xxx_list(args=None)\ntool/xxx_views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\nunc/__init__.py\n    \nunc/admin.py\n    \nunc/apps.py\n    \nunc/models.py\n         __unicode__(self)\nunc/review.py\n     allow_review(reviewer, designer, page)\n     calculate_points(student)\n     course_list()\n     create_review(reviewer, designer, page)\n     create_reviews(page, groups)\n     create_sample_courses()\n     requirements(course)\n     requirements_bacs200()\n     requirements_bacs350()\n     count_score(r)\n     review_groups()\n     review_pairs(groups)\n     reviewer_query(reviewer_id)\n     designer_query(designer_id)\n     designer_score(designer_id)\n     designer_scores(designer_id, assignments=None)\n     avg(s)\n     projects(course)\n     reviews_completed(student_id)\n     reviews_done(student_id)\n     reviews_feedback(student_id, page)\n     review_tabs(student_id)\n     reviews_to_do(student_id)\n     reviewer_score(reviewer_id)\n     assignment_page(course, page)\n     reviewer_scores(reviewer_id, assignments)\n     gather_review_scores(course, student=None)\n     student_review_data(student_id)\n     update_review_scores(course)\nunc/sensei.py\n     content_lessons(course)\n     guide_doc_path(doc=None)\n     guide_file(course, doc)\n     guide_schedule(lesson)\n     register_students()\n     add_student(course, name, email, domain)\n     query_students(course, student=None)\n     get_student(id)\n     get_student_email(email)\n     domain_data(course)\n         domains(course)\n     read_student_list()\n     student_test_links(student)\n         url(student, page='')\n     home_link(title)\n     lesson_cards(course, lesson)\n         fix_images(text)\n         lesson_markdown(path)\n         card_text(tab_title, tab_text)\n         card_title(tab_text)\n     lesson_data(course, lesson, text)\n         tab_choice(i, tab)\n         lesson_tabs_data(course, lesson)\n     lesson_info(lesson)\n     link(url, title=None)\n     make_link(href, text=None)\n     main_menu(course, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu_file)\n     missing_page_info(title)\n     page_info(course, title)\n     read_file(course, doc)\n         no_blank_lines(text)\n     schedule_data(course, table)\n         course_part_data(title, table, first, last)\n         lesson_link(lesson)\n         set_links(table)\n         course_parts(table, course)\n     site_titles(course)\n     slide_content_data(course, lesson)\n         adjust_markdown_headings(markdown)\n         format_slides(course, lesson)\n     test_links(course)\n     view_info(kwargs)\n         view_data(course, title, lesson)\nunc/tests.py\n    \n
-53	health-list	                                    Sleep   Weight      Eat  Exercise \nMarkSeaman           2017-04-28         5        2        2        2       \nMarkSeaman           2017-04-27         3        2        3        3       \nMarkSeaman           2017-04-26         3        2        3        3       \nMarkSeaman           2017-04-25         5        2        3        3       \nMarkSeaman           2017-04-24         3        3        2        3       \nMarkSeaman           2017-04-23         5        4        3        3       \nMarkSeaman           2017-04-22         3        4        3        3       \nMarkSeaman           2017-04-21         3        3        4        1       \nMarkSeaman           2017-04-20         3        2        2        2       \nMarkSeaman           2017-04-19         2        1        3        2       \nMarkSeaman           2017-04-18         3        1        2        1       \nMarkSeaman           2017-04-17         5        2        2        1       \nMarkSeaman           2017-04-16         3        4        1        3       \nMarkSeaman           2017-04-15         5        3        3        4       \nMarkSeaman           2017-04-13         5        3        4        4       \nMarkSeaman           2017-04-12         5        3        3        3       \nMarkSeaman           2017-04-11         5        3        3        3       \nMarkSeaman           2017-04-10         5        4        2        4       \nMarkSeaman           2017-04-09         5        2        3        3       \nMarkSeaman           2017-04-08         3        1        4        1       \nMarkSeaman           2017-04-07         5        2        1        4       \nMarkSeaman           2017-04-05         5        3        2        2       \nMarkSeaman           2017-04-04         4        3        2        2       \nMarkSeaman           2017-04-03         4        3        3        4       \nMarkSeaman           2017-04-02         4        3        3        4       \nMarkSeaman           2017-04-01         4        3        3        2       \n	                                    Sleep   Weight      Eat  Exercise \nMarkSeaman           2017-04-28         5        2        2        2       \nMarkSeaman           2017-04-27         3        2        3        3       \nMarkSeaman           2017-04-26         3        2        3        3       \nMarkSeaman           2017-04-25         5        2        3        3       \nMarkSeaman           2017-04-24         3        3        2        3       \nMarkSeaman           2017-04-23         5        4        3        3       \nMarkSeaman           2017-04-22         3        4        3        3       \nMarkSeaman           2017-04-21         3        3        4        1       \nMarkSeaman           2017-04-20         3        2        2        2       \nMarkSeaman           2017-04-19         2        1        3        2       \nMarkSeaman           2017-04-18         3        1        2        1       \nMarkSeaman           2017-04-17         5        2        2        1       \nMarkSeaman           2017-04-16         3        4        1        3       \nMarkSeaman           2017-04-15         5        3        3        4       \nMarkSeaman           2017-04-13         5        3        4        4       \nMarkSeaman           2017-04-12         5        3        3        3       \nMarkSeaman           2017-04-11         5        3        3        3       \nMarkSeaman           2017-04-10         5        4        2        4       \nMarkSeaman           2017-04-09         5        2        3        3       \nMarkSeaman           2017-04-08         3        1        4        1       \nMarkSeaman           2017-04-07         5        2        1        4       \nMarkSeaman           2017-04-05         5        3        2        2       \nMarkSeaman           2017-04-04         4        3        2        2       \nMarkSeaman           2017-04-03         4        3        3        4       \nMarkSeaman           2017-04-02         4        3        3        4       \nMarkSeaman           2017-04-01         4        3        3        2       \n
-37	author-summary	no output	no output
-32	hourly-show	no output	no output
-22	faceblog-show	no output	no output
-38	system-disk-free	no output	no output
-30	plan-show	no output	no output
-39	system-files-count	no output	no output
 44	system-python-files	no output	no output
 46	system-python-virtualenv	/usr/bin/python\n	/usr/bin/python\n
 172	text-agents	email: mark@shrinking-world.com, company: Shrinking World, user: Mark Seaman    \nemail: stacie@shrinking-world.com, company: Shrinking World, user: Stacie Seaman  	email: mark@shrinking-world.com, company: Shrinking World, user: Mark Seaman    \nemail: stacie@shrinking-world.com, company: Shrinking World, user: Stacie Seaman  
-6	text-markdown	# Work Activities\n\nThese activities are critical to successful work.\nBalance the four activities for the best outcomes.\n\nThis is a second paragraph\nof text.\n\n## Learn\n\ncreate deeper understanding of problem\nevaluate solution\n\n## Plan\n\npast history\npresent tasks\nfuture priorities\n\n## Build\n\n### fix\n\n#### list of known problems\n\n#### issue tracking\n\n### test\n\n#### test inventory\n\n#### tests needed\n\n### extend\n\n### improve\n\n## Teach\n\nshare what you know\ninvite review\n	# Work Activities\n\nThese activities are critical to successful work.\nBalance the four activities for the best outcomes.\n\nThis is a second paragraph\nof text.\n\n## Learn\n\ncreate deeper understanding of problem\nevaluate solution\n\n## Plan\n\npast history\npresent tasks\nfuture priorities\n\n## Build\n\n### fix\n\n#### list of known problems\n\n#### issue tracking\n\n### test\n\n#### test inventory\n\n#### tests needed\n\n### extend\n\n### improve\n\n## Teach\n\nshare what you know\ninvite review\n
-8	text-no-match	no output	no output
-2	vc-status	no output	no output
+18	app-signature	bin/__init__.py\n    \nbin/app.py\n     app_command(options)\n     app_help()\n     app_functions(args)\n     app_classes(args)\n     app_signature(args)\n     app_search_code(files, search_function)\n         print_indented(outline)\n             app_print(filename, children)\n     app_directories()\n     app_path(topic=None)\n     app_score()\n     app_search(args)\n     app_show(args=None)\n     app_source(args=None)\n     app_summary(args=None)\n     kill_server()\n     app_urls()\n         simplify(url)\n     run_server()\nbin/aspire.py\n     aspire_command(options)\n     aspire_help(args=None)\n     aspire_clone(args)\n     aspire_doc_path(doc=None)\n     aspire_docs()\n         count_docs(project)\n     aspire_edit(doc)\n    #  aspire_guide()\n    #     #  article_text(path)\n     text_tail(text)\n    #  aspire_history(args)\n     aspire_hours(args=None)\n     aspire_list(args=None)\n     aspire_local(args)\n     aspire_priority()\n     aspire_progress()\n         text_string(title, body)\n     aspire_projects(args=None)\n     aspire_report(args)\n         report_data(date, path)\n         report_text(data)\n         report_save()\n     aspire_reports()\n     aspire_score(args=None)\n    #  aspire_send()\n    #      article_text(path)\n     aspire_show(args)\n     aspire_todo(args)\n     aspire_web(server, page=None)\n    #  aspire_week()\n    #      project_week_string(project, hours, total)\n    #      weekly_summary()\n    #      weekly_totals()\n    #          summarize(label, times, activities, total)\n    #          gather_data(shell_cmd)\n    #  aspire_week_print()\nbin/book.py\n     book_command(argv)\n     book_build()\n         image_list()\n         book_html()\n         book_epub()\n         book_pdf()\n         book_mobi()\n         book_assemble()\n         book_copy()\n     book_changes()\n     book_commit(argv)\n     book_edit(argv)\n     book_find(words)\n     book_headings(topic=None)\n         find_headings(text, pattern='##')\n         print_headings(topic)\n     book_headlines()\n     book_index()\n         print_index_entry(category, path, title)\n     book_help()\n     nested_list(name, children)\n     book_list()\n     book_outline(topic)\n     book_plan()\n     book_read()\n     book_read_index(part=None)\n     book_status()\n     book_text(chapter=None)\n     chapter_words(chapter)\n     book_calculate_words(label,files)\n     book_word_count(part)\n     book_words()\n     web(page)\nbin/booknotes.py\n     booknotes_command(options)\n     booknotes_help(args=None)\n     booknotes_content(args)\n     booknotes_doc_path(doc=None)\n     booknotes_edit(args)\n     booknotes_excerpt(args)\n         booknotes()\n         excerpt(note)\n     booknotes_list(args)\nbin/data.py\n     data_command(options)\n     data_backup(host)\n     data_count(host)\n     data_help()\n     data_load(host)\n     data_migrate()\n     data_reset()\n     data_save(host)\n         save(server, app=None)\n     data_server()\n     data_sql(host)\n     data_tables()\n     data_prune_tables()\nbin/datatype.py\n     name_replacement(text, directory, datatype)\n     source_code(prototype)\n     convert_code(prototype, code, directory, datatype)\n     datatype_add(args)\n     datatype_command(options)\n     datatype_path(directory, doc=None)\n     datatype_edit(doc)\n     datatype_help(args=None)\nbin/days.py\n     days_command(options)\n     days_help(args=None)\n     date_str(t)\n     day_str(t)\n     days_ago(date,days)\n     days_list(args)\n     days_month(args)\n     days_weeks(num_weeks)\n         days_ahead(date, days)\n         enumerate_weeks(today, days)\n         weekly_schedule(filename, days)\n     enumerate_days(today, days)\n     to_date(s)\n     to_day(s)\n     today()\nbin/diagrams.py\n    \nbin/doc.py\n     doc_command(options)\n     doc_help()\n     doc_content(args)\n     doc_count(dir)\n     doc_directories()\n     doc_edit(args)\n     doc_fix()\n     doc_length(args=None)\n     doc_list(args=None)\n     doc_path(doc=None)\n     doc_pick(args)\n     doc_random_select(directory)\n     doc_redirect(page)\n     doc_score(args)\n     doc_search(args)\n     doc_send(args)\n     doc_send_text(args)\n     doc_show(args=None)\n     doc_show_directory(dir=None)\n     doc_stats(args)\n     doc_summary(args=None)\n     fix_chars(text)\n     doc_test(args)\n     doc_word_count(directory)\n     doc_words(args=None)\n     list_documents(dir=None)\nbin/faceblog.py\n     faceblog_command(options)\n     faceblog_doc_path(doc=None)\n     faceblog_edit(doc=None)\n     faceblog_help(args=None)\n     faceblog_list(args)\n     faceblog_send(doc)\n     faceblog_show(args)\nbin/files.py\n     accumulate_new_lines(accumulator, f2)\n     count_files(directory)\n     create_directory(path)\n     delete_file(filename)\n     do_command(cmd, input=None)\n     encode_text(text, encoding='utf-8')\n     fix_chars(text)\n     grep(pattern,file)\n     is_writable(path)\n     list_files(directory)\n     list_dirs(directory)\n     path_name (relative_filename)\n     print_list(lst)\n     print_list2(lst)\n     read_input()\n     read_json(filename)\n     read_file(filename)\n     read_text(f)\n     recursive_list(d)\n     time_sort_file(d)\n     write_text(filename, text, append=None)\n     write_file(filename, lines, append=None)\nbin/grades.py\n     student_emails()\n    #  student_info(email)\n    #  list_student_info()\nbin/guide.py\n     guide_command(options)\n     guide_help(args=None)\n     guide_add(args)\n     guide_doc_path(course=None, doc=None)\n     guide_create_lesson(course, lesson)\n     lesson_text(outline)\n     guide_edit(course, lesson)\n     guide_list(args)\n     guide_outline(course, lesson)\n         build_outline(text)\n     read_lesson(course, lesson)\n     lesson_parts(course,lesson)\n     read_lines(course, f)\nbin/hourly.py\n     hourly_command(options)\n     hourly_help(args=None)\n     hourly_doc_path(doc=None)\n     hourly_edit()\n     hourly_list()\n     hourly_run()\n         execute(cmd)\n     hourly_show()\nbin/hours.py\n    #  hours_command(options)\n    #  hours_help(args=None)\n    #  activities_work()\n    #  activities_work_client()\n    #  activities_work_nonpaid()\n    #  activities_play()\n    #  activities_public()\n    #  activities_private()\n    #  activities()\n    #  hours_activity(args)\n    #  hours_add(args)\n    #      enumerate_days(today, days)\n    #      to_date(s)\n    #      date_str(t)\n    #      day_str(t)\n    #      days_ago(date,days)\n    #      month_of_days(start)\n    #  hours_days(args)\n    #  hours_doc_path(args)\n    #  hours_edit(args)\n    #  hours_list(args)\n    #  hours_tasks(args)\n    #  append_tasks(events, lines)\n    #      task_text(lines, start, end)\n    #  hours_show(args)\n    #  hours_summary(args)\n    #  hours_work(args)\n    #  is_day(line)\n    #  is_activity(line)\n    #  is_task(line)\n    #  list_events(args)\n    #  list_tasks(text)\n    #  months()\n    #  print_activities(label, times)\n    #  print_days(times, num_days)\n    #  print_score(times)\n    #      show_score(label, activities, ideal_hours)\n    #  print_table(labels, table)\n    #  print_tasks(results, activity=None)\n    #  print_total_hours(results, activity=None)\n    #      select_activity(record, activity)\n    #  print_total(label, times, activities=None, grand_total=None)\n    #  print_totals(label, times, activities=None, grand_total=None)\n    #  print_work(times, num_days)\n    #  total_activity(filename, times={})\n    #  total_columns(table)\n    #  activity_list(filename)\n    #  total_work_days(filename)\n    #  total_days(filename)\n    #  total_time(times, activities=None)\nbin/i.py\n     i_command(options)\n     i_help(args=None)\n     doc_path()\n     i_add(args)\n     i_edit(args)\n     i_list(args)\nbin/life.py\n     life_command(options)\n     life_doc_path(doc=None)\n     life_edit(doc)\n     life_help(args=None)\n     life_list(args)\n     life_publish(args)\n     life_show(args)\n     life_todo(args)\n     life_web(args)\n     life_words(args)\nbin/log.py\n     log_path()\n     log_command(options)\n     log(label,value=None)\n     log_exception()\n     log_clear()\n     log_read()\nbin/music.py\n     music_command(options)\n     music_help(args=None)\n     list_albums(args)\n     list_collections(args)\n     list_du(args)\n     list_tracks(args)\n     music_copy()\n     music_doc_path(doc=None)\n     music_edit(doc)\n     music_collection(name)\n     music_load(args)\n     music_list(args)\n     music_show(args)\n     music_sync(args)\nbin/n.py\n    \nbin/ntsh.py\n     ntsh_command(argv)\n     commit()\n     clean()\n     convert(f1,f2)\n     convert_png(f1,f2)\n     help()\n     hide()\n     list_files(dirs)\n     new_name(name)\n     name(args)\n     notes()\n     reorder(name)\n     status()\n     view()\n     web(page='%s/notes/fav_list' % archive)\n     zip_open()\n     zip_close()\nbin/ops.py\n     ops_command(options)\n     ops_help(cmd=None, args=None)\n     ops_cmd(args)\n     ops_console()\n     ops_deploy()\n     ops_log()\n     ops_restart()\n     ops_root(server=host, cmd='')\n     ops_update(args)\n     remote_command(server, cmd, user='django')\nbin/page_tests.py\n     run_server()\n     webpage_text(browser,url)\n    #      setUp(self)\n    #      tearDown(self)\n    #      assertBetween(self, num, min, max)\n    #      assertLineCount(self, text, min=1, max=10)\n    #      test_pages(self)\n         setUp(self)\n         tearDown(self)\n         test_pages(self)\n        #  test_visit_google(self)\nbin/pandoc.py\n     file_to_html(path, image_path=None)\n         fix_images(text)\n     markdown_to_html(markdown_path, html_path)\n     read_markdown(path)\n     text_to_html(text)\n     title(p1)\n     write_html_file(path, html)\nbin/remote_tests.py\n    #      test_remote_server(self)\n    #      test_host(self)\n    #     #  test_version_control(self)\n    #     #  test_python_version(self)\n    #      test_virtual_env(self)\n    #      test_pip_list(self)\nbin/resize.py\n     save_image_file(filename, image, width, height, imtype)\n     resize_jpeg(filename)\n     resize_png(filename)\n    #  create_thumbnails(infile, photo)\n    #  resize_test()\nbin/score.py\n    #  score_command(options)\n    #  score_doc_path(doc=None)\n    #  score_edit()\n    #  score_help(args=None)\n    #  score_show()\n    #  score_update()\n    #  score_web()\nbin/seamanslog.py\n     seamanslog_command(options)\n     seamanslog_help(args=None)\n     seamanslog_article(args)\n         article_text(path)\n     seamanslog_doc_path(doc=None)\n     seamanslog_edit(doc)\n     seamanslog_list(args)\n     seamanslog_pick()\n     seamanslog_show(args)\n     seamanslog_summary()\n     seamanslog_view(args)\n     seamanslog_web(args)\n     seamanslog_words(args)\nbin/shell.py\n     banner(name)\n     check_dirs(path, min=0, max=0)\n     check_dir_list(path, dir_list)\n     check_files(path, min=0, max=0)\n     check_file_list(path, dir_list)\n     check_lines(label, lines, min=0, max=10)\n     check_shell_lines(cmd, min=0, max=10)\n     differences(answer, correct)\n     dir_list(path)\n     dir_tree_list(path)\n     file_tree_list(path, filetype=None)\n     file_list(path, filetype=None)\n     file_path(d='', f='')\n     filter_types(files, filetype=None)\n     hostname()\n     line_match(word, text)\n     line_exclude(word, text)\n     line_count(path)\n     limit_lines(shell_command, min=None, max=None)\n     read_file(path)\n     shell(cmd)\n         command_line(cmd)\n     word_count(text)\n     write_file(path, text)\nbin/spiritual.py\n     spiritual_command(args)\n     spiritual_help()\n     spiritual_article(args)\n         article_text(path)\n     spiritual_doc_path(doc)\n     spiritual_edit(args)\n     spiritual_list()\n     spiritual_list_files(dir=None)\n     spiritual_pick(args)\n     spiritual_send(args)\n     spiritual_search(args)\n     spiritual_show(args)\n     spiritual_summary()\n     spiritual_test()\n     spiritual_web()\nbin/src.py\n     src_command(options)\n     src_help()\n     differences(f1,f2)\n     list_source_files(d)\n     show_differences(f1,f2)\n     src_base()\n     src_changed()\n     src_common()\n     src_diff(args)\n     src_dir()\n     src_edit(args)\n     src_list()\n     src_missing()\n     src_pull(args)\n     src_push(args)\n     src_same()\n     src_unique()\n     src_update()\nbin/switches.py\n     server_type()\n     server_host(server)\nbin/text.py\n     text_command(options)\n     text_help(args=None)\n     find_agents(text)\n     find_anchors(text)\n     find_classes(text)\n     find_functions(text)\n     find_links(text)\n         link(anchor)\n     find_quotes(text)\n     find_signatures(text)\n        pattern = r'(.*\\(.*\\))'\n     find_urls(text)\n     markdown_list_links(host, lines)\n     markdown_list_string(mylist)\n     text_join(text)\n     text_lines(text)\n     text_match(match_pattern, doc)\n     text_no_match(match_pattern, doc)\n     text_outline(text)\n     text_outline_string(outline, depth=0)\n     text_markdown(outline, depth=1)\n         text_body(lines)\n     text_replace(doc, match_pattern, replace_pattern)\n     text_title(text)\n     text_body(text)\n     match_lines(text, pattern)\n     match_pattern(text, pattern)\n     transform_matches(text, match_pattern, select_pattern)\nbin/todo.py\n     todo_command(options)\n     recent_dates(days=3)\n     edit_task_file(date)\nbin/tool.py\n     tool_command(options)\n     tool_edit(args)\n     tool_help(self)\n     tool_list()\n     tool_length()\n     tool_read(args)\nbin/user.py\n    \nbin/vc.py\n     vc_command(options)\n     vc_help(args=None)\n     git_cmd(cmd)\n     git_filter()\n     vc_commit(args)\n     vc_diff(args)\n     vc_dirs()\n     vc_log(args)\n     vc_pull(args)\n     vc_push(args)\n     vc_status(args)\nbin/web.py\n     web_command(args)\n     web_help()\n     web(page)\n     web_path(topic=None)\nbin/wordpress.py\n     wordpress_command(options)\n     wordpress_help(args=None)\n     wordpress_doc_path(doc=None)\n     wordpress_edit(doc)\n     wordpress_list(args)\n     wordpress_host(args)\n     wordpress_ssh(args)\nbin/x.py\n     execute_command(cmd,args)\n     command_help(cmd,args)\n     command_scriptor(cmd, args)\nhammer/__init__.py\n    \nhammer/secret_settings.py\n    #  database_init()\nhammer/settings.py\n         ip_addresses()\nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    \nhealth/health.py\n     health_command(options)\n     health_doc_path(doc=None)\n     health_edit(args)\n     health_help(args=None)\n     health_list(args)\n     health_score()\n        #  total(row)\n        #  print_bar(lag,lead,average)\n        #  print_score(row, score)\n     average (num_list)\n     health_import(args)\n     health_web()\nhealth/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    #  health_menu(page)\n     health_settings(page='home')\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n     health_scores(objects)\n         average(num_list)\n         five_star(rating)\n         scores(row)\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    \nlife/life.py\n     query_labels()\n     query_get(pk)\n     query_year(age)\n     query_experiences(age=None)\n     experiences_lookup_table(age=None)\nlife/models.py\n         __unicode__(self)\n         __unicode__(self)\n         __unicode__(self)\n         get_absolute_url(self)\n     initialize()\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    \nmybook/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         name(self)\n         fields(self)\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         fields(self)\nmybook/mybook.py\n     mybook_path(page)\n    #  mybook_random_select(directory)\n    #  mybook_redirect(host, page, user)\n    #  mybook_site(title)\n     mybook_site_title(title)\n         site_title_text(page)\n     mybook_content(author, title)\n     main_menu(menu, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu, page)\n         menu_text(page)\n     booknotes_excerpt(doc)\n         booknotes_doc_path(doc=None)\n         booknotes(doc)\n         excerpt(note)\nmybook/mybook_views.py\n     domain_menu(domain, page)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n    #      get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/outline.py\n     has_kids(text, depth)\n     outline(text)\n     parse_outline(text, tree, depth)\n     print_node(name, depth=1, char='    ')\n     seperator(depth)\n     split_text(text, sep)\n     title(text, depth)\n     read_cards(doc)\n     tabs_data(doc)\n         tab_choice(i,tab)\nmybook/task.py\n     tasks_monthly(year, month)\n     recent_months()\n     months_data_table()\n     tasks_data_table(days)\n     days_data_table(days)\n    #  task_list(task)\n    #  task_list(date)\nmybook/tests.py\n    \nmybook/urls.py\n    \nsuperuser/__init__.py\n    \nsuperuser/admin.py\n     admin_print_list()\n     admin_list()\n     admin_table()\n     admin_detail(a)\n     admin_get(pk)\n     database_info()\n     get_detail_data()\n     is_superuser(user)\n     log_text()\n     requesting_user(user)\n     test_list()\n     test_labels()\n     test_results()\n     test_table()\n     test_text(t)\n     text_head(text, lines=3)\n     text_lines(lines, columns=30)\n     user_detail(user)\n     user_labels()\n     user_table(users)\nsuperuser/admin_views.py\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\nsuperuser/apps.py\n    \nsuperuser/initialize.py\n    \nsuperuser/models.py\n         __unicode__(self)\n         as_row(self)\n         labels()\n         values(self)\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n         __unicode__(self)\n        #  get_absolute_url(self)\n         as_row(self)\n         labels()\ntasks/summary.py\n     activity_summary(activity)\n         active_tab(a, t)\n     activities_work()\n     sort_activity(data)\n     bad_days()\n     bad_days_data(days)\n     combine_work_tasks(table, total)\n     tasks_activity(activity)\n     task_activity_details(activity)\n     task_detail(task)\n     query_hours(task, days)\n     task_filter(tasks, activity)\n     time_data()\n     time_totals(totals)\n         time_total(totals, time)\n     percent(actual, total)\n     percent_totals(totals, subtotals)\n     review_totals(totals, subtotals)\n         percent_difference(actual, total, ideal)\n         task_percents(totals, task, index, ideals)\n     time_filter(tasks, days)\n     task_text_list(tasks)\n         format(t)\n     task_list(days=8)\n     time_summary(days)\n     work_types()\n     write_task_files(tlist)\n     task_import_files()\n         task_details(f)\n         read_task_file(f)\n         new_task(date, name, hours, notes)\ntasks/task.py\n     task_command(self, args)\n     task_help(self)\n     days_ago(days)\n     hourly_total(tasks)\n     monthly_hours_invested(task_type, year, month)\n     last_month_hours_invested(task_type)\n     tasks_last_month()\n     task_data_table()\n     monthly_totals(year, month)\n     full_totals()\n     print_summary(summary, start=None, end=None)\n     recent_weeks()\n     recent_months()\n     sort_totals(categories)\n     task_add(self, args)\n     task_delete(self, args)\n     task_details(query, hours)\n         record(name, hours, total)\n     task_doc_path(args)\n     task_edit(self, args)\n     task_get(self, args)\n     task_import(args)\n     task_history(args)\n         print_task_history(tasks)\n     task_list(self, args)\n     task_month(args)\n    #  task_read_events(args)\n     task_read_health(args)\n     task_rename(args)\n     task_set_name(args, task)\n     task_select(task_type=None, date=None, days=None)\n     task_summary(args)\n     task_totals()\n     task_types()\n     task_print_types()\n     task_web()\n     task_week(args)\n     task_work()\n     tasks_monthly(year, month)\n     tasks_weekly(year, month, day)\n     total_hours_invested(task_type)\n     weekly_hours_invested(task_type, year, month, day)\n     weekly_totals(year, month, day)\n     task_report(year, month)\n         query_month_tasks(year, month)\n         task_entry(task)\n     save_monthly_reports(year)\n         save_report(report, month)\n     fix_tasks()\n     test_tasks()\ntasks/urls.py\n    \ntasks/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\ntest/__init__.py\n    \ntest/app_test.py\n     app_classes_test()\n     app_functions_test()\n     app_list_test()\n     app_switches_test()\n     app_settings_test()\n     app_show_test()\n     app_signature_test()\n     app_url_test()\ntest/archive_test.py\n     archive_files_test()\n     archive_dirs_test()\n     archive_nts_test()\n     archive_repo_test()\n         list_archives()\ntest/aspire_test.py\n     aspire_list_test()\n     aspire_show_test()\n    #  aspire_score_test()\n     aspire_report_test()\n     aspire_week_test()\ntest/booknotes_test.py\n     booknotes_list_test()\n     booknotes_lines_test()\ntest/css_test.py\n     css_test()\ntest/data_test.py\n     data_files_test()\n     data_save_test()\n     data_tables_test()\n     data_migrate_test()\ntest/doc_test.py\n     doc_test()\n     doc_help_test()\n     doc_search_test()\n     doc_scan_test()\n     doc_file_test()\n     doc_file_missing_test()\n     doc_consolidate()\n     doc_render_test()\n     doc_encoding_test()\ntest/health_test.py\n     health_list_test()\n     health_score_test()\ntest/hourly_test.py\n     hourly_list_test()\n     hourly_show_test()\ntest/i_test.py\n     i_list_test()\ntest/log_test.py\n     log_length_test()\ntest/ops_test.py\n    #  ops_git_pull_test()\n     ops_help_test()\n     ops_server_test()\n     ops_server_type_test()\n     ops_status_test()\ntest/page_test.py\n     check_page(url, min=1, max=1)\n     page_list_test()\n     page_text_test()\n     page_diff_test()\n     page_sites_test()\ntest/robot_test.py\n     robot_list_test()\n     robot_results_test()\n    #  robot_show_test()\ntest/seamanslog_test.py\n     seamanslog_list_test()\n     seamanslog_show_test()\n     seamanslog_summary_test()\n     seamanslog_words_test()\ntest/system_test.py\n     system_cron_test()\n     system_disk_free_test ()\n     system_files_count_test()\n     system_host_test()\n     system_ip_test()\n     system_pandoc_test()\n     system_python_files_test()\n     system_python_version_test()\n     system_python_virtualenv_test()\ntest/text_test.py\n     text_help_test()\n     text_match_test()\n     text_no_match_test()\n     text_agents_test()\n     text_outline_test()\n     text_markdown_test()\n     text_format_test()\n     text_round_trip_test()\n     text_grep_test()\n     text_findall_test()\n     text_functions_test()\n     text_select_lines_test()\n     text_url_test()\n     text_links_test()\n    #  text_transforms_test()\n    #      transform(test_case)\n     text_signatures_test()\n     text_anchors_test()\n     text_div_test()\ntest/tst_test.py\n     tst_test()\n     tst_time_test()\n    #  remote_server_test()\ntest/unc_test.py\n     unc_files_test()\ntest/user_test.py\n    #  user_import_test()\n    #  user_export_test()\n     user_list_test()\ntest/vc_test.py\n     vc_status_test()\n     vc_pull_test()\ntest/wordpress_test.py\n     wordpress_list_test()\n     wordpress_host_test()\ntool/__init__.py\n    \ntool/document.py\n     doc_cards(page)\n     doc_content(page)\n     doc_dir_exists(title)\n     doc_exists(title)\n     doc_html_text(page, image_path=None)\n     doc_link(title)\n     doc_path(page)\n     domain_doc(domain, page)\ntool/domain.py\n     domain_title(domain)\n     domain_directory(domain)\ntool/email.py\n     email_command(options)\n     email_help()\n     email_args(args, use_html=True)\n     send_support_request(title, text)\n     send_file_email(args)\n     send_doc_email(args)\n     send_text_email(args)\n     send_html_email(args)\n     send_template_message(emailTo, title, template, data={})\ntool/log.py\n     log(text, value=None)\n     log_exception()\n     log_json(text, data)\n     log_file()\n     show_log()\n     log_notifications(title, recipients)\n     log_page(request, parms='')\ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n         add_arguments(self, parser)\n         handle(self, *args, **options)\n         help(self)\ntool/models.py\n         __unicode__(self)\n         get_absolute_url(self)\ntool/notify.py\n     notify_test_results()\n     notify_test_email()\ntool/page.py\n     page_command(self, options)\n     page_help(self)\n     page_add(self, args)\n     page_delete(self, args)\n     page_diff(self, args)\n         show_diff(page)\n     page_expect(self, args)\n     page_html(self, args)\n         show_output(page)\n     page_like(self, args)\n         like_page(page)\n     page_list(self)\n     page_lookup(url)\n     page_reset(self)\n     page_results()\n     page_text(self, args)\n         show_output(page)            \ntool/project.py\n     project_add(self, args)\n     project_command(self, options)\n     project_delete(self, args)\n     project_get(self, args)\n     project_help(self)\n     project_list(self)\n     project_lookup(name)\ntool/robot.py\n     robot_command(options)\n     robot_help(args=None)\n     robot_doc_path(doc=None)\n     robot_fetch_page(url)\n     robot_get_page(browser, page)\n     robot_list()\n     robot_login(browser,page)\n     robot_results()\n     robot_run()\ntool/tst.py\n     tst_find()\n     get_module(modulename)\n     test_map(modulename)\n         test_entry(entry)\n         tests(module)\n     tst_command(self, args)\n     test_dictionary()\n         module_list(directory)\n         test_name(module)\n     tst_diff(test_name)\n     tst_edit(self, args)\n     tst_help(self)\n     tst_like(self,args)\n     tst_list(self,args)\n     tst_output(self,args)\n     tst_register(tests)\n     tst_quick_test()\n     tst_results()\n         show_differences(t)\n     tst_run(self,args)\n         run_test(self,test_entry)\n     tst_send(self,args)\ntool/urls.py\n    \ntool/user.py\n     user_command(self, options)\n     user_help()\n     user_add(name, email, password='test')\n     user_delete(args)\n     user_export(self, args)\n     user_get(pk)\n     user_import(self, args)\n     user_list()\n     user_reset(self)\n     add_super_user(name, email, password)\n     user_password(username, password)\n     user_lookup(name, email=None)\n     user_file_path(args)\n     user_fix_name(args)\n     show_users()\n     reset_passwords()\ntool/user_views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\ntool/xxx.py\n    #      __unicode__(self)\n    #      get_absolute_url(self)\n    #      as_row(self)\n    #      labels()\n    #      values(self)\n    #     #  fields(self)\n     xxx_add(name)\n     xxx_delete(pk)\n     xxx_edit(pk, name)\n     xxx_lookup(pk)\n     xxx_get(client, name)\n     xxx_print(objects)\n     xxx_query(select=None)\n     xxx_table(select=None)\ntool/xxx_script.py\n     xxx_command(args)\n     xxx_help(args=None)\n     xxx_list(args=None)\ntool/xxx_views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\nunc/__init__.py\n    \nunc/admin.py\n    \nunc/apps.py\n    \nunc/models.py\n         __unicode__(self)\nunc/review.py\n     allow_review(reviewer, designer, page)\n     calculate_points(student)\n     course_list()\n     create_review(reviewer, designer, page)\n     create_reviews(page, groups)\n     create_sample_courses()\n     requirements(course)\n     requirements_bacs200()\n     requirements_bacs350()\n     count_score(r)\n     review_groups()\n     review_pairs(groups)\n     reviewer_query(reviewer_id)\n     designer_query(designer_id)\n     designer_score(designer_id)\n     designer_scores(designer_id, assignments=None)\n     avg(s)\n     projects(course)\n     reviews_completed(student_id)\n     reviews_done(student_id)\n     reviews_feedback(student_id, page)\n     review_tabs(student_id)\n     reviews_to_do(student_id)\n     reviewer_score(reviewer_id)\n     assignment_page(course, page)\n     reviewer_scores(reviewer_id, assignments)\n     gather_review_scores(course, student=None)\n     student_review_data(student_id)\n     update_review_scores(course)\nunc/sensei.py\n     content_lessons(course)\n     guide_doc_path(doc=None)\n     guide_file(course, doc)\n     guide_schedule(lesson)\n     register_students()\n     add_student(course, name, email, domain)\n     query_students(course, student=None)\n     get_student(id)\n     get_student_email(email)\n     domain_data(course)\n         domains(course)\n     read_student_list()\n     student_test_links(student)\n         url(student, page='')\n     home_link(title)\n     lesson_cards(course, lesson)\n         fix_images(text)\n         lesson_markdown(path)\n         card_text(tab_title, tab_text)\n         card_title(tab_text)\n     lesson_data(course, lesson, text)\n         tab_choice(i, tab)\n         lesson_tabs_data(course, lesson)\n     lesson_info(lesson)\n     link(url, title=None)\n     make_link(href, text=None)\n     main_menu(course, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu_file)\n     missing_page_info(title)\n     page_info(course, title)\n     read_file(course, doc)\n         no_blank_lines(text)\n     schedule_data(course, table)\n         course_part_data(title, table, first, last)\n         lesson_link(lesson)\n         set_links(table)\n         course_parts(table, course)\n     site_titles(course)\n     slide_content_data(course, lesson)\n         adjust_markdown_headings(markdown)\n         format_slides(course, lesson)\n     test_links(course)\n     view_info(kwargs)\n         view_data(course, title, lesson)\nunc/student.py\n     import_students()\n     list_students()\n     delete_students()\nunc/tests.py\n    \n	bin/__init__.py\n    \nbin/app.py\n     app_command(options)\n     app_help()\n     app_functions(args)\n     app_classes(args)\n     app_signature(args)\n     app_search_code(files, search_function)\n         print_indented(outline)\n             app_print(filename, children)\n     app_directories()\n     app_path(topic=None)\n     app_score()\n     app_search(args)\n     app_show(args=None)\n     app_source(args=None)\n     app_summary(args=None)\n     kill_server()\n     app_urls()\n         simplify(url)\n     run_server()\nbin/aspire.py\n     aspire_command(options)\n     aspire_help(args=None)\n     aspire_clone(args)\n     aspire_doc_path(doc=None)\n     aspire_docs()\n         count_docs(project)\n     aspire_edit(doc)\n    #  aspire_guide()\n    #     #  article_text(path)\n     text_tail(text)\n    #  aspire_history(args)\n     aspire_hours(args=None)\n     aspire_list(args=None)\n     aspire_local(args)\n     aspire_priority()\n     aspire_progress()\n         text_string(title, body)\n     aspire_projects(args=None)\n     aspire_report(args)\n         report_data(date, path)\n         report_text(data)\n         report_save()\n     aspire_reports()\n     aspire_score(args=None)\n    #  aspire_send()\n    #      article_text(path)\n     aspire_show(args)\n     aspire_todo(args)\n     aspire_web(server, page=None)\n    #  aspire_week()\n    #      project_week_string(project, hours, total)\n    #      weekly_summary()\n    #      weekly_totals()\n    #          summarize(label, times, activities, total)\n    #          gather_data(shell_cmd)\n    #  aspire_week_print()\nbin/book.py\n     book_command(argv)\n     book_build()\n         image_list()\n         book_html()\n         book_epub()\n         book_pdf()\n         book_mobi()\n         book_assemble()\n         book_copy()\n     book_changes()\n     book_commit(argv)\n     book_edit(argv)\n     book_find(words)\n     book_headings(topic=None)\n         find_headings(text, pattern='##')\n         print_headings(topic)\n     book_headlines()\n     book_index()\n         print_index_entry(category, path, title)\n     book_help()\n     nested_list(name, children)\n     book_list()\n     book_outline(topic)\n     book_plan()\n     book_read()\n     book_read_index(part=None)\n     book_status()\n     book_text(chapter=None)\n     chapter_words(chapter)\n     book_calculate_words(label,files)\n     book_word_count(part)\n     book_words()\n     web(page)\nbin/booknotes.py\n     booknotes_command(options)\n     booknotes_help(args=None)\n     booknotes_content(args)\n     booknotes_doc_path(doc=None)\n     booknotes_edit(args)\n     booknotes_excerpt(args)\n         booknotes()\n         excerpt(note)\n     booknotes_list(args)\nbin/data.py\n     data_command(options)\n     data_backup(host)\n     data_count(host)\n     data_help()\n     data_load(host)\n     data_migrate()\n     data_reset()\n     data_save(host)\n         save(server, app=None)\n     data_server()\n     data_sql(host)\n     data_tables()\n     data_prune_tables()\nbin/datatype.py\n     name_replacement(text, directory, datatype)\n     source_code(prototype)\n     convert_code(prototype, code, directory, datatype)\n     datatype_add(args)\n     datatype_command(options)\n     datatype_path(directory, doc=None)\n     datatype_edit(doc)\n     datatype_help(args=None)\nbin/days.py\n     days_command(options)\n     days_help(args=None)\n     date_str(t)\n     day_str(t)\n     days_ago(date,days)\n     days_list(args)\n     days_month(args)\n     days_weeks(num_weeks)\n         days_ahead(date, days)\n         enumerate_weeks(today, days)\n         weekly_schedule(filename, days)\n     enumerate_days(today, days)\n     to_date(s)\n     to_day(s)\n     today()\nbin/diagrams.py\n    \nbin/doc.py\n     doc_command(options)\n     doc_help()\n     doc_content(args)\n     doc_count(dir)\n     doc_directories()\n     doc_edit(args)\n     doc_fix()\n     doc_length(args=None)\n     doc_list(args=None)\n     doc_path(doc=None)\n     doc_pick(args)\n     doc_random_select(directory)\n     doc_redirect(page)\n     doc_score(args)\n     doc_search(args)\n     doc_send(args)\n     doc_send_text(args)\n     doc_show(args=None)\n     doc_show_directory(dir=None)\n     doc_stats(args)\n     doc_summary(args=None)\n     fix_chars(text)\n     doc_test(args)\n     doc_word_count(directory)\n     doc_words(args=None)\n     list_documents(dir=None)\nbin/faceblog.py\n     faceblog_command(options)\n     faceblog_doc_path(doc=None)\n     faceblog_edit(doc=None)\n     faceblog_help(args=None)\n     faceblog_list(args)\n     faceblog_send(doc)\n     faceblog_show(args)\nbin/files.py\n     accumulate_new_lines(accumulator, f2)\n     count_files(directory)\n     create_directory(path)\n     delete_file(filename)\n     do_command(cmd, input=None)\n     encode_text(text, encoding='utf-8')\n     fix_chars(text)\n     grep(pattern,file)\n     is_writable(path)\n     list_files(directory)\n     list_dirs(directory)\n     path_name (relative_filename)\n     print_list(lst)\n     print_list2(lst)\n     read_input()\n     read_json(filename)\n     read_file(filename)\n     read_text(f)\n     recursive_list(d)\n     time_sort_file(d)\n     write_text(filename, text, append=None)\n     write_file(filename, lines, append=None)\nbin/grades.py\n     student_emails()\n    #  student_info(email)\n    #  list_student_info()\nbin/guide.py\n     guide_command(options)\n     guide_help(args=None)\n     guide_add(args)\n     guide_doc_path(course=None, doc=None)\n     guide_create_lesson(course, lesson)\n     lesson_text(outline)\n     guide_edit(course, lesson)\n     guide_list(args)\n     guide_outline(course, lesson)\n         build_outline(text)\n     read_lesson(course, lesson)\n     lesson_parts(course,lesson)\n     read_lines(course, f)\nbin/hourly.py\n     hourly_command(options)\n     hourly_help(args=None)\n     hourly_doc_path(doc=None)\n     hourly_edit()\n     hourly_list()\n     hourly_run()\n         execute(cmd)\n     hourly_show()\nbin/hours.py\n    #  hours_command(options)\n    #  hours_help(args=None)\n    #  activities_work()\n    #  activities_work_client()\n    #  activities_work_nonpaid()\n    #  activities_play()\n    #  activities_public()\n    #  activities_private()\n    #  activities()\n    #  hours_activity(args)\n    #  hours_add(args)\n    #      enumerate_days(today, days)\n    #      to_date(s)\n    #      date_str(t)\n    #      day_str(t)\n    #      days_ago(date,days)\n    #      month_of_days(start)\n    #  hours_days(args)\n    #  hours_doc_path(args)\n    #  hours_edit(args)\n    #  hours_list(args)\n    #  hours_tasks(args)\n    #  append_tasks(events, lines)\n    #      task_text(lines, start, end)\n    #  hours_show(args)\n    #  hours_summary(args)\n    #  hours_work(args)\n    #  is_day(line)\n    #  is_activity(line)\n    #  is_task(line)\n    #  list_events(args)\n    #  list_tasks(text)\n    #  months()\n    #  print_activities(label, times)\n    #  print_days(times, num_days)\n    #  print_score(times)\n    #      show_score(label, activities, ideal_hours)\n    #  print_table(labels, table)\n    #  print_tasks(results, activity=None)\n    #  print_total_hours(results, activity=None)\n    #      select_activity(record, activity)\n    #  print_total(label, times, activities=None, grand_total=None)\n    #  print_totals(label, times, activities=None, grand_total=None)\n    #  print_work(times, num_days)\n    #  total_activity(filename, times={})\n    #  total_columns(table)\n    #  activity_list(filename)\n    #  total_work_days(filename)\n    #  total_days(filename)\n    #  total_time(times, activities=None)\nbin/i.py\n     i_command(options)\n     i_help(args=None)\n     doc_path()\n     i_add(args)\n     i_edit(args)\n     i_list(args)\nbin/life.py\n     life_command(options)\n     life_doc_path(doc=None)\n     life_edit(doc)\n     life_help(args=None)\n     life_list(args)\n     life_publish(args)\n     life_show(args)\n     life_todo(args)\n     life_web(args)\n     life_words(args)\nbin/log.py\n     log_path()\n     log_command(options)\n     log(label,value=None)\n     log_exception()\n     log_clear()\n     log_read()\nbin/music.py\n     music_command(options)\n     music_help(args=None)\n     list_albums(args)\n     list_collections(args)\n     list_du(args)\n     list_tracks(args)\n     music_copy()\n     music_doc_path(doc=None)\n     music_edit(doc)\n     music_collection(name)\n     music_load(args)\n     music_list(args)\n     music_show(args)\n     music_sync(args)\nbin/n.py\n    \nbin/ntsh.py\n     ntsh_command(argv)\n     commit()\n     clean()\n     convert(f1,f2)\n     convert_png(f1,f2)\n     help()\n     hide()\n     list_files(dirs)\n     new_name(name)\n     name(args)\n     notes()\n     reorder(name)\n     status()\n     view()\n     web(page='%s/notes/fav_list' % archive)\n     zip_open()\n     zip_close()\nbin/ops.py\n     ops_command(options)\n     ops_help(cmd=None, args=None)\n     ops_cmd(args)\n     ops_console()\n     ops_deploy()\n     ops_log()\n     ops_restart()\n     ops_root(server=host, cmd='')\n     ops_update(args)\n     remote_command(server, cmd, user='django')\nbin/page_tests.py\n     run_server()\n     webpage_text(browser,url)\n    #      setUp(self)\n    #      tearDown(self)\n    #      assertBetween(self, num, min, max)\n    #      assertLineCount(self, text, min=1, max=10)\n    #      test_pages(self)\n         setUp(self)\n         tearDown(self)\n         test_pages(self)\n        #  test_visit_google(self)\nbin/pandoc.py\n     file_to_html(path, image_path=None)\n         fix_images(text)\n     markdown_to_html(markdown_path, html_path)\n     read_markdown(path)\n     text_to_html(text)\n     title(p1)\n     write_html_file(path, html)\nbin/remote_tests.py\n    #      test_remote_server(self)\n    #      test_host(self)\n    #     #  test_version_control(self)\n    #     #  test_python_version(self)\n    #      test_virtual_env(self)\n    #      test_pip_list(self)\nbin/resize.py\n     save_image_file(filename, image, width, height, imtype)\n     resize_jpeg(filename)\n     resize_png(filename)\n    #  create_thumbnails(infile, photo)\n    #  resize_test()\nbin/score.py\n    #  score_command(options)\n    #  score_doc_path(doc=None)\n    #  score_edit()\n    #  score_help(args=None)\n    #  score_show()\n    #  score_update()\n    #  score_web()\nbin/seamanslog.py\n     seamanslog_command(options)\n     seamanslog_help(args=None)\n     seamanslog_article(args)\n         article_text(path)\n     seamanslog_doc_path(doc=None)\n     seamanslog_edit(doc)\n     seamanslog_list(args)\n     seamanslog_pick()\n     seamanslog_show(args)\n     seamanslog_summary()\n     seamanslog_view(args)\n     seamanslog_web(args)\n     seamanslog_words(args)\nbin/shell.py\n     banner(name)\n     check_dirs(path, min=0, max=0)\n     check_dir_list(path, dir_list)\n     check_files(path, min=0, max=0)\n     check_file_list(path, dir_list)\n     check_lines(label, lines, min=0, max=10)\n     check_shell_lines(cmd, min=0, max=10)\n     differences(answer, correct)\n     dir_list(path)\n     dir_tree_list(path)\n     file_tree_list(path, filetype=None)\n     file_list(path, filetype=None)\n     file_path(d='', f='')\n     filter_types(files, filetype=None)\n     hostname()\n     line_match(word, text)\n     line_exclude(word, text)\n     line_count(path)\n     limit_lines(shell_command, min=None, max=None)\n     read_file(path)\n     shell(cmd)\n         command_line(cmd)\n     word_count(text)\n     write_file(path, text)\nbin/spiritual.py\n     spiritual_command(args)\n     spiritual_help()\n     spiritual_article(args)\n         article_text(path)\n     spiritual_doc_path(doc)\n     spiritual_edit(args)\n     spiritual_list()\n     spiritual_list_files(dir=None)\n     spiritual_pick(args)\n     spiritual_send(args)\n     spiritual_search(args)\n     spiritual_show(args)\n     spiritual_summary()\n     spiritual_test()\n     spiritual_web()\nbin/src.py\n     src_command(options)\n     src_help()\n     differences(f1,f2)\n     list_source_files(d)\n     show_differences(f1,f2)\n     src_base()\n     src_changed()\n     src_common()\n     src_diff(args)\n     src_dir()\n     src_edit(args)\n     src_list()\n     src_missing()\n     src_pull(args)\n     src_push(args)\n     src_same()\n     src_unique()\n     src_update()\nbin/switches.py\n     server_type()\n     server_host(server)\nbin/text.py\n     text_command(options)\n     text_help(args=None)\n     find_agents(text)\n     find_anchors(text)\n     find_classes(text)\n     find_functions(text)\n     find_links(text)\n         link(anchor)\n     find_quotes(text)\n     find_signatures(text)\n        pattern = r'(.*\\(.*\\))'\n     find_urls(text)\n     markdown_list_links(host, lines)\n     markdown_list_string(mylist)\n     text_join(text)\n     text_lines(text)\n     text_match(match_pattern, doc)\n     text_no_match(match_pattern, doc)\n     text_outline(text)\n     text_outline_string(outline, depth=0)\n     text_markdown(outline, depth=1)\n         text_body(lines)\n     text_replace(doc, match_pattern, replace_pattern)\n     text_title(text)\n     text_body(text)\n     match_lines(text, pattern)\n     match_pattern(text, pattern)\n     transform_matches(text, match_pattern, select_pattern)\nbin/todo.py\n     todo_command(options)\n     recent_dates(days=3)\n     edit_task_file(date)\nbin/tool.py\n     tool_command(options)\n     tool_edit(args)\n     tool_help(self)\n     tool_list()\n     tool_length()\n     tool_read(args)\nbin/user.py\n    \nbin/vc.py\n     vc_command(options)\n     vc_help(args=None)\n     git_cmd(cmd)\n     git_filter()\n     vc_commit(args)\n     vc_diff(args)\n     vc_dirs()\n     vc_log(args)\n     vc_pull(args)\n     vc_push(args)\n     vc_status(args)\nbin/web.py\n     web_command(args)\n     web_help()\n     web(page)\n     web_path(topic=None)\nbin/wordpress.py\n     wordpress_command(options)\n     wordpress_help(args=None)\n     wordpress_doc_path(doc=None)\n     wordpress_edit(doc)\n     wordpress_list(args)\n     wordpress_host(args)\n     wordpress_ssh(args)\nbin/x.py\n     execute_command(cmd,args)\n     command_help(cmd,args)\n     command_scriptor(cmd, args)\nhammer/__init__.py\n    \nhammer/secret_settings.py\n    #  database_init()\nhammer/settings.py\n         ip_addresses()\nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    \nhealth/health.py\n     health_command(options)\n     health_doc_path(doc=None)\n     health_edit(args)\n     health_help(args=None)\n     health_list(args)\n     health_score()\n        #  total(row)\n        #  print_bar(lag,lead,average)\n        #  print_score(row, score)\n     average (num_list)\n     health_import(args)\n     health_web()\nhealth/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    #  health_menu(page)\n     health_settings(page='home')\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n     health_scores(objects)\n         average(num_list)\n         five_star(rating)\n         scores(row)\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    \nlife/life.py\n     query_labels()\n     query_get(pk)\n     query_year(age)\n     query_experiences(age=None)\n     experiences_lookup_table(age=None)\nlife/models.py\n         __unicode__(self)\n         __unicode__(self)\n         __unicode__(self)\n         get_absolute_url(self)\n     initialize()\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    \nmybook/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         name(self)\n         fields(self)\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         fields(self)\nmybook/mybook.py\n     mybook_path(page)\n    #  mybook_random_select(directory)\n    #  mybook_redirect(host, page, user)\n    #  mybook_site(title)\n     mybook_site_title(title)\n         site_title_text(page)\n     mybook_content(author, title)\n     main_menu(menu, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu, page)\n         menu_text(page)\n     booknotes_excerpt(doc)\n         booknotes_doc_path(doc=None)\n         booknotes(doc)\n         excerpt(note)\nmybook/mybook_views.py\n     domain_menu(domain, page)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n    #      get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/outline.py\n     has_kids(text, depth)\n     outline(text)\n     parse_outline(text, tree, depth)\n     print_node(name, depth=1, char='    ')\n     seperator(depth)\n     split_text(text, sep)\n     title(text, depth)\n     read_cards(doc)\n     tabs_data(doc)\n         tab_choice(i,tab)\nmybook/task.py\n     tasks_monthly(year, month)\n     recent_months()\n     months_data_table()\n     tasks_data_table(days)\n     days_data_table(days)\n    #  task_list(task)\n    #  task_list(date)\nmybook/tests.py\n    \nmybook/urls.py\n    \nsuperuser/__init__.py\n    \nsuperuser/admin.py\n     admin_print_list()\n     admin_list()\n     admin_table()\n     admin_detail(a)\n     admin_get(pk)\n     database_info()\n     get_detail_data()\n     is_superuser(user)\n     log_text()\n     requesting_user(user)\n     test_list()\n     test_labels()\n     test_results()\n     test_table()\n     test_text(t)\n     text_head(text, lines=3)\n     text_lines(lines, columns=30)\n     user_detail(user)\n     user_labels()\n     user_table(users)\nsuperuser/admin_views.py\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\nsuperuser/apps.py\n    \nsuperuser/initialize.py\n    \nsuperuser/models.py\n         __unicode__(self)\n         as_row(self)\n         labels()\n         values(self)\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n         __unicode__(self)\n        #  get_absolute_url(self)\n         as_row(self)\n         labels()\ntasks/summary.py\n     activity_summary(activity)\n         active_tab(a, t)\n     activities_work()\n     sort_activity(data)\n     bad_days()\n     bad_days_data(days)\n     combine_work_tasks(table, total)\n     tasks_activity(activity)\n     task_activity_details(activity)\n     task_detail(task)\n     query_hours(task, days)\n     task_filter(tasks, activity)\n     time_data()\n     time_totals(totals)\n         time_total(totals, time)\n     percent(actual, total)\n     percent_totals(totals, subtotals)\n     review_totals(totals, subtotals)\n         percent_difference(actual, total, ideal)\n         task_percents(totals, task, index, ideals)\n     time_filter(tasks, days)\n     task_text_list(tasks)\n         format(t)\n     task_list(days=8)\n     time_summary(days)\n     work_types()\n     write_task_files(tlist)\n     task_import_files()\n         task_details(f)\n         read_task_file(f)\n         new_task(date, name, hours, notes)\ntasks/task.py\n     task_command(self, args)\n     task_help(self)\n     days_ago(days)\n     hourly_total(tasks)\n     monthly_hours_invested(task_type, year, month)\n     last_month_hours_invested(task_type)\n     tasks_last_month()\n     task_data_table()\n     monthly_totals(year, month)\n     full_totals()\n     print_summary(summary, start=None, end=None)\n     recent_weeks()\n     recent_months()\n     sort_totals(categories)\n     task_add(self, args)\n     task_delete(self, args)\n     task_details(query, hours)\n         record(name, hours, total)\n     task_doc_path(args)\n     task_edit(self, args)\n     task_get(self, args)\n     task_import(args)\n     task_history(args)\n         print_task_history(tasks)\n     task_list(self, args)\n     task_month(args)\n    #  task_read_events(args)\n     task_read_health(args)\n     task_rename(args)\n     task_set_name(args, task)\n     task_select(task_type=None, date=None, days=None)\n     task_summary(args)\n     task_totals()\n     task_types()\n     task_print_types()\n     task_web()\n     task_week(args)\n     task_work()\n     tasks_monthly(year, month)\n     tasks_weekly(year, month, day)\n     total_hours_invested(task_type)\n     weekly_hours_invested(task_type, year, month, day)\n     weekly_totals(year, month, day)\n     task_report(year, month)\n         query_month_tasks(year, month)\n         task_entry(task)\n     save_monthly_reports(year)\n         save_report(report, month)\n     fix_tasks()\n     test_tasks()\ntasks/urls.py\n    \ntasks/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\ntest/__init__.py\n    \ntest/app_test.py\n     app_classes_test()\n     app_functions_test()\n     app_list_test()\n     app_switches_test()\n     app_settings_test()\n     app_show_test()\n     app_signature_test()\n     app_url_test()\ntest/archive_test.py\n     archive_files_test()\n     archive_dirs_test()\n     archive_nts_test()\n     archive_repo_test()\n         list_archives()\ntest/aspire_test.py\n     aspire_list_test()\n     aspire_show_test()\n    #  aspire_score_test()\n     aspire_report_test()\n     aspire_week_test()\ntest/booknotes_test.py\n     booknotes_list_test()\n     booknotes_lines_test()\ntest/css_test.py\n     css_test()\ntest/data_test.py\n     data_files_test()\n     data_save_test()\n     data_tables_test()\n     data_migrate_test()\ntest/doc_test.py\n     doc_test()\n     doc_help_test()\n     doc_search_test()\n     doc_scan_test()\n     doc_file_test()\n     doc_file_missing_test()\n     doc_consolidate()\n     doc_render_test()\n     doc_encoding_test()\ntest/health_test.py\n     health_list_test()\n     health_score_test()\ntest/hourly_test.py\n     hourly_list_test()\n     hourly_show_test()\ntest/i_test.py\n     i_list_test()\ntest/log_test.py\n     log_length_test()\ntest/ops_test.py\n    #  ops_git_pull_test()\n     ops_help_test()\n     ops_server_test()\n     ops_server_type_test()\n     ops_status_test()\ntest/page_test.py\n     check_page(url, min=1, max=1)\n     page_list_test()\n     page_text_test()\n     page_diff_test()\n     page_sites_test()\ntest/robot_test.py\n     robot_list_test()\n     robot_results_test()\n    #  robot_show_test()\ntest/seamanslog_test.py\n     seamanslog_list_test()\n     seamanslog_show_test()\n     seamanslog_summary_test()\n     seamanslog_words_test()\ntest/system_test.py\n     system_cron_test()\n     system_disk_free_test ()\n     system_files_count_test()\n     system_host_test()\n     system_ip_test()\n     system_pandoc_test()\n     system_python_files_test()\n     system_python_version_test()\n     system_python_virtualenv_test()\ntest/text_test.py\n     text_help_test()\n     text_match_test()\n     text_no_match_test()\n     text_agents_test()\n     text_outline_test()\n     text_markdown_test()\n     text_format_test()\n     text_round_trip_test()\n     text_grep_test()\n     text_findall_test()\n     text_functions_test()\n     text_select_lines_test()\n     text_url_test()\n     text_links_test()\n    #  text_transforms_test()\n    #      transform(test_case)\n     text_signatures_test()\n     text_anchors_test()\n     text_div_test()\ntest/tst_test.py\n     tst_test()\n     tst_time_test()\n    #  remote_server_test()\ntest/unc_test.py\n     unc_files_test()\ntest/user_test.py\n    #  user_import_test()\n    #  user_export_test()\n     user_list_test()\ntest/vc_test.py\n     vc_status_test()\n     vc_pull_test()\ntest/wordpress_test.py\n     wordpress_list_test()\n     wordpress_host_test()\ntool/__init__.py\n    \ntool/document.py\n     doc_cards(page)\n     doc_content(page)\n     doc_dir_exists(title)\n     doc_exists(title)\n     doc_html_text(page, image_path=None)\n     doc_link(title)\n     doc_path(page)\n     domain_doc(domain, page)\ntool/domain.py\n     domain_title(domain)\n     domain_directory(domain)\ntool/email.py\n     email_command(options)\n     email_help()\n     email_args(args, use_html=True)\n     send_support_request(title, text)\n     send_file_email(args)\n     send_doc_email(args)\n     send_text_email(args)\n     send_html_email(args)\n     send_template_message(emailTo, title, template, data={})\ntool/log.py\n     log(text, value=None)\n     log_exception()\n     log_json(text, data)\n     log_file()\n     show_log()\n     log_notifications(title, recipients)\n     log_page(request, parms='')\ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n         add_arguments(self, parser)\n         handle(self, *args, **options)\n         help(self)\ntool/models.py\n         __unicode__(self)\n         get_absolute_url(self)\ntool/notify.py\n     notify_test_results()\n     notify_test_email()\ntool/page.py\n     page_command(self, options)\n     page_help(self)\n     page_add(self, args)\n     page_delete(self, args)\n     page_diff(self, args)\n         show_diff(page)\n     page_expect(self, args)\n     page_html(self, args)\n         show_output(page)\n     page_like(self, args)\n         like_page(page)\n     page_list(self)\n     page_lookup(url)\n     page_reset(self)\n     page_results()\n     page_text(self, args)\n         show_output(page)            \ntool/project.py\n     project_add(self, args)\n     project_command(self, options)\n     project_delete(self, args)\n     project_get(self, args)\n     project_help(self)\n     project_list(self)\n     project_lookup(name)\ntool/robot.py\n     robot_command(options)\n     robot_help(args=None)\n     robot_doc_path(doc=None)\n     robot_fetch_page(url)\n     robot_get_page(browser, page)\n     robot_list()\n     robot_login(browser,page)\n     robot_results()\n     robot_run()\ntool/tst.py\n     tst_find()\n     get_module(modulename)\n     test_map(modulename)\n         test_entry(entry)\n         tests(module)\n     tst_command(self, args)\n     test_dictionary()\n         module_list(directory)\n         test_name(module)\n     tst_diff(test_name)\n     tst_edit(self, args)\n     tst_help(self)\n     tst_like(self,args)\n     tst_list(self,args)\n     tst_output(self,args)\n     tst_register(tests)\n     tst_quick_test()\n     tst_results()\n         show_differences(t)\n     tst_run(self,args)\n         run_test(self,test_entry)\n     tst_send(self,args)\ntool/urls.py\n    \ntool/user.py\n     user_command(self, options)\n     user_help()\n     user_add(name, email, password='test')\n     user_delete(args)\n     user_export(self, args)\n     user_get(pk)\n     user_import(self, args)\n     user_list()\n     user_reset(self)\n     add_super_user(name, email, password)\n     user_password(username, password)\n     user_lookup(name, email=None)\n     user_file_path(args)\n     user_fix_name(args)\n     show_users()\n     reset_passwords()\ntool/user_views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\ntool/xxx.py\n    #      __unicode__(self)\n    #      get_absolute_url(self)\n    #      as_row(self)\n    #      labels()\n    #      values(self)\n    #     #  fields(self)\n     xxx_add(name)\n     xxx_delete(pk)\n     xxx_edit(pk, name)\n     xxx_lookup(pk)\n     xxx_get(client, name)\n     xxx_print(objects)\n     xxx_query(select=None)\n     xxx_table(select=None)\ntool/xxx_script.py\n     xxx_command(args)\n     xxx_help(args=None)\n     xxx_list(args=None)\ntool/xxx_views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\nunc/__init__.py\n    \nunc/admin.py\n    \nunc/apps.py\n    \nunc/models.py\n         __unicode__(self)\nunc/review.py\n     allow_review(reviewer, designer, page)\n     calculate_points(student)\n     course_list()\n     create_review(reviewer, designer, page)\n     create_reviews(page, groups)\n     create_sample_courses()\n     requirements(course)\n     requirements_bacs200()\n     requirements_bacs350()\n     count_score(r)\n     review_groups()\n     review_pairs(groups)\n     reviewer_query(reviewer_id)\n     designer_query(designer_id)\n     designer_score(designer_id)\n     designer_scores(designer_id, assignments=None)\n     avg(s)\n     projects(course)\n     reviews_completed(student_id)\n     reviews_done(student_id)\n     reviews_feedback(student_id, page)\n     review_tabs(student_id)\n     reviews_to_do(student_id)\n     reviewer_score(reviewer_id)\n     assignment_page(course, page)\n     reviewer_scores(reviewer_id, assignments)\n     gather_review_scores(course, student=None)\n     student_review_data(student_id)\n     update_review_scores(course)\nunc/sensei.py\n     content_lessons(course)\n     guide_doc_path(doc=None)\n     guide_file(course, doc)\n     guide_schedule(lesson)\n     register_students()\n     add_student(course, name, email, domain)\n     query_students(course, student=None)\n     get_student(id)\n     get_student_email(email)\n     domain_data(course)\n         domains(course)\n     read_student_list()\n     student_test_links(student)\n         url(student, page='')\n     home_link(title)\n     lesson_cards(course, lesson)\n         fix_images(text)\n         lesson_markdown(path)\n         card_text(tab_title, tab_text)\n         card_title(tab_text)\n     lesson_data(course, lesson, text)\n         tab_choice(i, tab)\n         lesson_tabs_data(course, lesson)\n     lesson_info(lesson)\n     link(url, title=None)\n     make_link(href, text=None)\n     main_menu(course, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu_file)\n     missing_page_info(title)\n     page_info(course, title)\n     read_file(course, doc)\n         no_blank_lines(text)\n     schedule_data(course, table)\n         course_part_data(title, table, first, last)\n         lesson_link(lesson)\n         set_links(table)\n         course_parts(table, course)\n     site_titles(course)\n     slide_content_data(course, lesson)\n         adjust_markdown_headings(markdown)\n         format_slides(course, lesson)\n     test_links(course)\n     view_info(kwargs)\n         view_data(course, title, lesson)\nunc/student.py\n     import_students()\n     list_students()\n     delete_students()\nunc/tests.py\n    \n
 74	opc-list	\n        Command not found, opc ['list']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            book        # Work with book contents\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n	\n        Command not found, opc ['list']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            book        # Work with book contents\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n
+154	archive-dirs	dirs(/home/django/Archive/MyBook-2017) --> 1 dirs (should be between 504 and 507)\ndirs(/home/django/Archive/Documents-2017) --> 1 dirs (should be between 108 and 108)\ndirs(/home/django/Archive/Documents-2016) --> 1 dirs (should be between 88 and 88)\ndirs(/home/django/Archive/Documents-2015) --> 1 dirs (should be between 250 and 250)\ndirs(/home/django/Archive/Documents-2014) --> 1 dirs (should be between 947 and 947)\ndirs(/home/django/Archive/UNC-2017) --> 1 dirs (should be between 3643 and 3645)\ndirs(/home/django/Archive/rcp) --> 1 dirs (should be between 800 and 960)\n	dirs(/home/django/Archive/MyBook-2017) --> 1 dirs (should be between 504 and 507)\ndirs(/home/django/Archive/Documents-2017) --> 1 dirs (should be between 108 and 108)\ndirs(/home/django/Archive/Documents-2016) --> 1 dirs (should be between 88 and 88)\ndirs(/home/django/Archive/Documents-2015) --> 1 dirs (should be between 250 and 250)\ndirs(/home/django/Archive/Documents-2014) --> 1 dirs (should be between 947 and 947)\ndirs(/home/django/Archive/UNC-2017) --> 1 dirs (should be between 3643 and 3645)\ndirs(/home/django/Archive/rcp) --> 1 dirs (should be between 800 and 960)\n
 26	table-from-text	[['a', 'b', 'c'], ['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9']]	[['a', 'b', 'c'], ['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9']]
 27	table-sort	    b          92         3         \n    a          25         c         \n    c          8          9         \n    d          5          6         	    b          92         3         \n    a          25         c         \n    c          8          9         \n    d          5          6         
 35	author-drafts	no output	no output
 21	faceblog-list	faceblog command ['list']\nfaceblog list\nTimeBudget\nRandom\nOpportunity\n10000Days\nToolsSaveTime\nLearningCurve\nImportantWork\nUnfinishedBook\nLifeWork\nReadToLearn\nSiteTitle\nDailyHabits\nCommitments\nExpandContract\nMenu\nHabitualChange\nWorkMindset\nWritingWorkflow\nWhyWork\nMultitasking\nHitler\nLowCostMyth\nBusinessInvestment\nActToLearn\nScaledCommit\nStrengths\nCollaboration\nWritingStages\nPragmaticThinking\nOneImprovement\nSearch\nCareer\nProcessingIdeas\nYourBlogTopic\nIndex\nLifeFun\nLifeThatMatters\nBiggestIdea\nLifePeople\nLifeGrow\nNewYearsResolutions\nGenetics\nInvest20Percent\nCreativeScore\nRuthlessWithWaste\nFoodAndSex\nPessimism\nComputerComplexity\nIdeology\nMaunaKea\nWorkforce\nMyStory\n	faceblog command ['list']\nfaceblog list\nTimeBudget\nRandom\nOpportunity\n10000Days\nToolsSaveTime\nLearningCurve\nImportantWork\nUnfinishedBook\nLifeWork\nReadToLearn\nSiteTitle\nDailyHabits\nCommitments\nExpandContract\nMenu\nHabitualChange\nWorkMindset\nWritingWorkflow\nWhyWork\nMultitasking\nHitler\nLowCostMyth\nBusinessInvestment\nActToLearn\nScaledCommit\nStrengths\nCollaboration\nWritingStages\nPragmaticThinking\nOneImprovement\nSearch\nCareer\nProcessingIdeas\nYourBlogTopic\nIndex\nLifeFun\nLifeThatMatters\nBiggestIdea\nLifePeople\nLifeGrow\nNewYearsResolutions\nGenetics\nInvest20Percent\nCreativeScore\nRuthlessWithWaste\nFoodAndSex\nPessimism\nComputerComplexity\nIdeology\nMaunaKea\nWorkforce\nMyStory\n
+178	page-sites	shell(curl -s https://markseaman.info) --> 256 lines (should be between 195 and 230)\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nshell(curl -s https://app.who2hire.us/admin) --> 1 lines (should be between 324 and 324)	shell(curl -s https://markseaman.info) --> 256 lines (should be between 195 and 230)\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nshell(curl -s https://app.who2hire.us/admin) --> 1 lines (should be between 324 and 324)
 170	text-transforms	text_command\ntext_help\nfind_functions\n(.*)\\\nfind_links\nlink\nfind_urls\nmarkdown_list_links\nmarkdown_list_string\ntext_join\ntext_lines\ntext_match\ntext_no_match\ntext_outline\ntext_outline_string\ntext_markdown\ntext_body\ntext_replace\ntext_select\ntext_title\ntext_body\nmatch_lines\nmatch_pattern\ntransform_matches\ntext_command (options)\ntext_help (args=None)\nfind_functions (text)\n(.*)\\ (.*\\)\nfind_links (text)\nlink (anchor)\nfind_urls (text)\nmarkdown_list_links (host, lines)\nmarkdown_list_string (mylist)\ntext_join (text)\ntext_lines (text)\ntext_match (match_pattern, doc)\ntext_no_match (match_pattern, doc)\ntext_outline (text)\ntext_outline_string (outline, depth=0)\ntext_markdown (outline, depth=1)\ntext_body (lines)\ntext_replace (match_pattern, replace_pattern, doc)\ntext_select (selector, doc)\ntext_title (text)\ntext_body (text)\nmatch_lines (text, pattern)\nmatch_pattern (text, pattern)\ntransform_matches (text, match_pattern, select_pattern)	text_command\ntext_help\nfind_functions\n(.*)\\\nfind_links\nlink\nfind_urls\nmarkdown_list_links\nmarkdown_list_string\ntext_join\ntext_lines\ntext_match\ntext_no_match\ntext_outline\ntext_outline_string\ntext_markdown\ntext_body\ntext_replace\ntext_select\ntext_title\ntext_body\nmatch_lines\nmatch_pattern\ntransform_matches\ntext_command (options)\ntext_help (args=None)\nfind_functions (text)\n(.*)\\ (.*\\)\nfind_links (text)\nlink (anchor)\nfind_urls (text)\nmarkdown_list_links (host, lines)\nmarkdown_list_string (mylist)\ntext_join (text)\ntext_lines (text)\ntext_match (match_pattern, doc)\ntext_no_match (match_pattern, doc)\ntext_outline (text)\ntext_outline_string (outline, depth=0)\ntext_markdown (outline, depth=1)\ntext_body (lines)\ntext_replace (match_pattern, replace_pattern, doc)\ntext_select (selector, doc)\ntext_title (text)\ntext_body (text)\nmatch_lines (text, pattern)\nmatch_pattern (text, pattern)\ntransform_matches (text, match_pattern, select_pattern)
-178	page-sites	shell(curl -s https://markseaman.info) --> 256 lines (should be between 195 and 230)\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nshell(curl -s https://app.who2hire.us/admin) --> 1 lines (should be between 324 and 324)	shell(curl -s https://markseaman.info) --> 256 lines (should be between 195 and 230)\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nOK - https://app.who2hire.us/admin
 48	seamanslog-show	no output	no output
+10	text-round-trip	0a1\n> \n10d10\n< \n15d14\n< \n21d19\n< \n23d20\n< \n25d21\n< \n27d22\n< \n29d23\n< \n31d24\n< \n33d25\n< \n35d26\n< \n39d29\n< \n42a33\n>     \n	0a1\n> \n10d10\n< \n15d14\n< \n21d19\n< \n23d20\n< \n25d21\n< \n27d22\n< \n29d23\n< \n31d24\n< \n33d25\n< \n35d26\n< \n39d29\n< \n42a33\n>     \n
 121	src-base	/home/django/Projects/Who2Hire\n	/home/django/Projects/Who2Hire\n
 122	src-changed	no output	no output
-10	text-round-trip	0a1\n> \n10d10\n< \n15d14\n< \n21d19\n< \n23d20\n< \n25d21\n< \n27d22\n< \n29d23\n< \n31d24\n< \n33d25\n< \n35d26\n< \n39d29\n< \n42a33\n>     \n	0a1\n> \n10d10\n< \n15d14\n< \n21d19\n< \n23d20\n< \n25d21\n< \n27d22\n< \n29d23\n< \n31d24\n< \n33d25\n< \n35d26\n< \n39d29\n< \n42a33\n>     \n
 123	src-common	no output	no output
 124	src-diff	shell(x src diff) --> 1 lines (should be between 3000 and 4000)	shell(x src diff) --> 1 lines (should be between 3000 and 4000)
 125	src-missing	No directory exists\n	No directory exists\n
 126	src-same	no output	no output
 67	hours-activity	Activity for 2016-08\n\nTotal                       0   100%\n	Activity for 2016-08\n\nTotal                       0   100%\n
 33	staging-host	\n        Command not found, staging ['command', 'hostname']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n	\n        Command not found, staging ['command', 'hostname']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n
+45	system-python-version	sys.version_info(major=2, minor=7, micro=12, releaselevel='final', serial=0)	sys.version_info(major=2, minor=7, micro=12, releaselevel='final', serial=0)
 99	days-list	Days: 15, To: Wed, 03-01\nWed, 02-15\nThu, 02-16\nFri, 02-17\nSat, 02-18\nSun, 02-19\nMon, 02-20\nTue, 02-21\nWed, 02-22\nThu, 02-23\nFri, 02-24\nSat, 02-25\nSun, 02-26\nMon, 02-27\nTue, 02-28\nWed, 03-01\n	Days: 15, To: Wed, 03-01\nWed, 02-15\nThu, 02-16\nFri, 02-17\nSat, 02-18\nSun, 02-19\nMon, 02-20\nTue, 02-21\nWed, 02-22\nThu, 02-23\nFri, 02-24\nSat, 02-25\nSun, 02-26\nMon, 02-27\nTue, 02-28\nWed, 03-01\n
 165	css	/*  ------------------------------\n    Colors\n------------------------------\n\nBlue            -- #2196F3\nGreen           -- #4caf50\nLight Green     -- #f0fff0\n\n*/\n\n/* ------------------------\n    Elements\n */\n\na {\n    color: green;\n    font-weight: bold;\n}\n\na:hover {\n    font-weight: bolder;\n    text-decoration: underline;\n}\n\nbody {\n    font-size: 18px;\n    color: black;\n}\n\nh1, h2, h3 {\n    margin: 20px 0px;\n    padding: 10px 0px;\n}\n\nh1 {\n    font-size: 32px;\n    color: #2196F3;\n}\n\nh2 {\n    color: green;\n    background-color: white;\n    border: 2px solid green;\n    text-align: center;\n    font-size: 24px;\n    margin-bottom: 20px;\n}\n\nh3 {\n    font-size: 20px;\n}\n\nheader {\n    color: white;\n    background-color: #0a0a0a;\n    padding: 0px;\n    margin: 0px;\n}\n\nheader a {\n    color: white;\n}\n\nheader a:hover {\n    font-weight: 900;\n}\n\nheader h1 {\n    color: yellow;\n    border: none;\n    font-size: 300%;\n    text-shadow: 2px 2px 5px black;\n    padding: 0px;\n    margin: 0px;\n}\n\nheader h2 {\n    color: white;\n    background-color: inherit;\n    border: none;\n    font-size: 150%;\n    text-align: left;\n    width: 100%;\n    text-shadow: 2px 2px 5px grey;\n}\n\nhr {\n    border: solid 1px green;\n}\n\ni {\n    padding: 0px;\n    margin: 10px;\n}\n\nimg {\n    max-width: 800px;\n    box-shadow: 2px 2px 5px gray;\n    border: 1px solid white;\n    margin: 2em;\n    padding: 2em;\n}\n\npre {\n    background-color: #f0fff0;\n    color: #444;\n}\n\ntextarea {\n    min-width: 80%;\n    width: 100%;\n    margin: 0em;\n    height: 20em;\n}\n\ntd {\n    min-width: 8em;\n    margin: 10px;\n}\n\nul {\n    margin-bottom: 1em;\n}\n\nul ul {\n    margin-bottom: 1em;\n}\n\n/* -----------------------------\n    Class\n*/\n\n.btn {\n    background-color: green;\n    /*border: 2px solid white;*/\n    border-radius: 5px;\n    box-shadow: 2px 2px 5px gray;\n    color: white;\n    font-size: 18px;\n    font-weight: bolder;\n    margin: 5px;\n    padding: 5px;\n    text-align: center;\n    width: 150px;\n}\n\n.card {\n    border-radius: 10px;\n    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);\n    padding: 20px;\n    /*max-width: 1000px;*/\n}\n\n.card-header h2 {\n    margin-bottom: 20px;\n}\n\n.footer {\n    margin: auto;\n    /*width: 50%;*/\n}\n\n.inset {\n    background-color: white;\n    box-shadow: -2px -2px 5px grey;\n    padding: 1em;\n    margin: 1em;\n}\n\n.logo {\n    background-color: white;\n    border-radius: 10px;\n    width: 240px;\n    height: 150px;\n    box-shadow: 2px 2px 5px gray;\n    margin: 0px 40px 0px 0px;\n}\n\n.logo-image {\n    box-shadow: none;\n    border: none;\n    width: 220px;\n    height: 100px;\n    margin: 10px;\n    padding: 0px;\n    background: white url("/static/SWS_Globe_small.jpg") no-repeat;\n    text-align: center;\n}\n\n.logo-text {\n    font-size: 18px;\n    font-weight: bolder;\n    color: black;\n    text-align: center;\n}\n\n.main-menu {\n    margin-top: 50px;\n}\n\n.panel {\n    background-color: #eeeeee;\n    box-shadow: 2px 2px 5px grey;\n    padding: 2em;\n}\n\n.show {\n    border: solid 1px yellow;\n    padding: 5px;\n}\n\n.task-notes {\n    background-color: #eeeeee;\n    box-shadow: 2px 2px 5px gray;\n}\n\n.user-btn {\n    background-color: inherit;\n    border: 2px solid white;\n    border-radius: 5px;\n    box-shadow: 2px 2px 5px gray;\n    color: white;\n    /*margin: 5px;*/\n    /*padding: 5px;*/\n    text-align: center;\n    width: 150px;\n}\n\n.user-text * {\n    color: white;\n    padding: 5px;\n    margin: 5px;\n    font-size: 12px;\n}\n\n.user-text a {\n    color: white;\n    font-size: 18px;\n}\n\n.user-text a:hover {\n    color: yellow;\n    font-weight: bolder;\n}\n	/*  ------------------------------\n    Colors\n------------------------------\n\nBlue            -- #2196F3\nGreen           -- #4caf50\nLight Green     -- #f0fff0\n\n*/\n\n/* ------------------------\n    Elements\n */\n\na {\n    color: green;\n    font-weight: bold;\n}\n\na:hover {\n    font-weight: bolder;\n    text-decoration: underline;\n}\n\nbody {\n    font-size: 18px;\n    color: black;\n}\n\nh1, h2, h3 {\n    margin: 20px 0px;\n    padding: 10px 0px;\n}\n\nh1 {\n    font-size: 32px;\n    color: #2196F3;\n}\n\nh2 {\n    color: green;\n    background-color: white;\n    border: 2px solid green;\n    text-align: center;\n    font-size: 24px;\n    margin-bottom: 20px;\n}\n\nh3 {\n    font-size: 20px;\n}\n\nheader {\n    color: white;\n    background-color: #0a0a0a;\n    padding: 0px;\n    margin: 0px;\n}\n\nheader a {\n    color: white;\n}\n\nheader a:hover {\n    font-weight: 900;\n}\n\nheader h1 {\n    color: yellow;\n    border: none;\n    font-size: 300%;\n    text-shadow: 2px 2px 5px black;\n    padding: 0px;\n    margin: 0px;\n}\n\nheader h2 {\n    color: white;\n    background-color: inherit;\n    border: none;\n    font-size: 150%;\n    text-align: left;\n    width: 100%;\n    text-shadow: 2px 2px 5px grey;\n}\n\nhr {\n    border: solid 1px green;\n}\n\ni {\n    padding: 0px;\n    margin: 10px;\n}\n\nimg {\n    max-width: 800px;\n    box-shadow: 2px 2px 5px gray;\n    border: 1px solid white;\n    margin: 2em;\n    padding: 2em;\n}\n\npre {\n    background-color: #f0fff0;\n    color: #444;\n}\n\ntextarea {\n    min-width: 80%;\n    width: 100%;\n    margin: 0em;\n    height: 20em;\n}\n\ntd {\n    min-width: 8em;\n    margin: 10px;\n}\n\nul {\n    margin-bottom: 1em;\n}\n\nul ul {\n    margin-bottom: 1em;\n}\n\n/* -----------------------------\n    Class\n*/\n\n.btn {\n    background-color: green;\n    /*border: 2px solid white;*/\n    border-radius: 5px;\n    box-shadow: 2px 2px 5px gray;\n    color: white;\n    font-size: 18px;\n    font-weight: bolder;\n    margin: 5px;\n    padding: 5px;\n    text-align: center;\n    width: 150px;\n}\n\n.card {\n    border-radius: 10px;\n    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);\n    padding: 20px;\n    /*max-width: 1000px;*/\n}\n\n.card-header h2 {\n    margin-bottom: 20px;\n}\n\n.footer {\n    margin: auto;\n    /*width: 50%;*/\n}\n\n.inset {\n    background-color: white;\n    box-shadow: -2px -2px 5px grey;\n    padding: 1em;\n    margin: 1em;\n}\n\n.logo {\n    background-color: white;\n    border-radius: 10px;\n    width: 240px;\n    height: 150px;\n    box-shadow: 2px 2px 5px gray;\n    margin: 0px 40px 0px 0px;\n}\n\n.logo-image {\n    box-shadow: none;\n    border: none;\n    width: 220px;\n    height: 100px;\n    margin: 10px;\n    padding: 0px;\n    background: white url("/static/SWS_Globe_small.jpg") no-repeat;\n    text-align: center;\n}\n\n.logo-text {\n    font-size: 18px;\n    font-weight: bolder;\n    color: black;\n    text-align: center;\n}\n\n.main-menu {\n    margin-top: 50px;\n}\n\n.panel {\n    background-color: #eeeeee;\n    box-shadow: 2px 2px 5px grey;\n    padding: 2em;\n}\n\n.show {\n    border: solid 1px yellow;\n    padding: 5px;\n}\n\n.task-notes {\n    background-color: #eeeeee;\n    box-shadow: 2px 2px 5px gray;\n}\n\n.user-btn {\n    background-color: inherit;\n    border: 2px solid white;\n    border-radius: 5px;\n    box-shadow: 2px 2px 5px gray;\n    color: white;\n    /*margin: 5px;*/\n    /*padding: 5px;*/\n    text-align: center;\n    width: 150px;\n}\n\n.user-text * {\n    color: white;\n    padding: 5px;\n    margin: 5px;\n    font-size: 12px;\n}\n\n.user-text a {\n    color: white;\n    font-size: 18px;\n}\n\n.user-text a:hover {\n    color: yellow;\n    font-weight: bolder;\n}\n
-45	system-python-version	sys.version_info(major=2, minor=7, micro=12, releaselevel='final', serial=0)	sys.version_info(major=2, minor=7, micro=12, releaselevel='final', serial=0)
 107	budget-show	budget Show\nCategory           Ideal   Actual     Diff\n\nWork                  33       40        7\n\nGrow                  14       10        4\n\nPeople                21       20        1\n\nChurch                14       10        4\n\nFun                   16       20        4\n\n   Variance                             20\n	budget Show\nCategory           Ideal   Actual     Diff\n\nWork                  33       40        7\n\nGrow                  14       10        4\n\nPeople                21       20        1\n\nChurch                14       10        4\n\nFun                   16       20        4\n\n   Variance                             20\n
 86	datatype-list	\n        Command not found, datatype ['list']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            book        # Work with book contents\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n	\n        Command not found, datatype ['list']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            book        # Work with book contents\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n
 54	health-score	no output	no output
@@ -7393,60 +5987,60 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 62	reuse-show	no output	no output
 70	hours-show	Error:  File not found /home/django/MyBook/Documents/info/days/2016-08\n	Error:  File not found /home/django/MyBook/Documents/info/days/2016-08\n
 81	task-import	shell(x task import) --> 1 lines (should be between 10 and 800)	shell(x task import) --> 1 lines (should be between 10 and 800)
+5	text-help	\n        text Command\n\n        usage: x text COMMAND\n\n        COMMAND:\n\n            match - show lines that match\n            no_match - show lines that don't match\n            replace - replace lines\n            select - pattern matching in doc\n\n        \n	\n        text Command\n\n        usage: x text COMMAND\n\n        COMMAND:\n\n            match - show lines that match\n            no_match - show lines that don't match\n            replace - replace lines\n            select - pattern matching in doc\n\n        \n
 87	datatype-show	shell(x datatype show) --> 42 lines (should be between 2200 and 2500)	shell(x datatype show) --> 42 lines (should be between 2200 and 2500)
+73	user-list	no output	no output
 97	cmd-list	cmd.py\nbook.py\nuser.py\nswitches.py\nweb.py\nbooknotes.py\ndays.py\nfaceblog.py\nguide.py\nsrc.py\nvc.py\nhours.py\ntext.py\nshell.py\nlog.py\nresize.py\ndatatype.py\ndata.py\npage_tests.py\nfiles.py\ntool.py\nremote_tests.py\nntsh.py\nlife.py\nscore.py\naspire.py\ndoc.py\nhourly.py\ntodo.py\napp.py\nspiritual.py\nx.py\nn.py\narchive.py\ni.py\nmusic.py\npandoc.py\nops.py\nseamanslog.py\nwordpress.py\n	cmd.py\nbook.py\nuser.py\nswitches.py\nweb.py\nbooknotes.py\ndays.py\nfaceblog.py\nguide.py\nsrc.py\nvc.py\nhours.py\ntext.py\nshell.py\nlog.py\nresize.py\ndatatype.py\ndata.py\npage_tests.py\nfiles.py\ntool.py\nremote_tests.py\nntsh.py\nlife.py\nscore.py\naspire.py\ndoc.py\nhourly.py\ntodo.py\napp.py\nspiritual.py\nx.py\nn.py\narchive.py\ni.py\nmusic.py\npandoc.py\nops.py\nseamanslog.py\nwordpress.py\n
 98	cmd-show	no output	no output
+101	days-show	no output	no output
+138	thot-list	Work_Modes: 54 Lines, Root: 0\nthots: 1 Lines, Root: 0\nBuilding_Software: 154 Lines, Root: 499\nThot_Recorder: 35 Lines, Root: 631\nAdvisor: 4 Lines, Root: 0\nJournal: 2 Lines, Root: 0\nCreativity: 31 Lines, Root: 1527\nWho2Hire: 130 Lines, Root: 2090\nToDo: 93 Lines, Root: 3666\nApp_Design: 157 Lines, Root: 3682\nBio_Hammer: 173 Lines, Root: 3764\nGoals: 621 Lines, Root: 3892\n	Work_Modes: 54 Lines, Root: 0\nthots: 1 Lines, Root: 0\nBuilding_Software: 154 Lines, Root: 499\nThot_Recorder: 35 Lines, Root: 631\nAdvisor: 4 Lines, Root: 0\nJournal: 2 Lines, Root: 0\nCreativity: 31 Lines, Root: 1527\nWho2Hire: 130 Lines, Root: 2090\nToDo: 93 Lines, Root: 3666\nApp_Design: 157 Lines, Root: 3682\nBio_Hammer: 173 Lines, Root: 3764\nGoals: 621 Lines, Root: 3892\n
+93	doc-show	no output	no output
+95	doc-summary	no output	no output
+68	hours-add	usage: hours add 2017-01\n	usage: hours add 2017-01\n
 77	data-migrate	Test is DISABLED	Test is DISABLED
 78	data-save	Test is DISABLED	Test is DISABLED
 79	data-tables	Test is DISABLED	Test is DISABLED
-101	days-show	no output	no output
 89	doc-help	no output	no output
-138	thot-list	Work_Modes: 54 Lines, Root: 0\nthots: 1 Lines, Root: 0\nBuilding_Software: 154 Lines, Root: 499\nThot_Recorder: 35 Lines, Root: 631\nAdvisor: 4 Lines, Root: 0\nJournal: 2 Lines, Root: 0\nCreativity: 31 Lines, Root: 1527\nWho2Hire: 130 Lines, Root: 2090\nToDo: 93 Lines, Root: 3666\nApp_Design: 157 Lines, Root: 3682\nBio_Hammer: 173 Lines, Root: 3764\nGoals: 621 Lines, Root: 3892\n	Work_Modes: 54 Lines, Root: 0\nthots: 1 Lines, Root: 0\nBuilding_Software: 154 Lines, Root: 499\nThot_Recorder: 35 Lines, Root: 631\nAdvisor: 4 Lines, Root: 0\nJournal: 2 Lines, Root: 0\nCreativity: 31 Lines, Root: 1527\nWho2Hire: 130 Lines, Root: 2090\nToDo: 93 Lines, Root: 3666\nApp_Design: 157 Lines, Root: 3682\nBio_Hammer: 173 Lines, Root: 3764\nGoals: 621 Lines, Root: 3892\n
 92	doc-search	no output	no output
-93	doc-show	no output	no output
-95	doc-summary	no output	no output
 96	doc	no output	no output
 167	text-grep	### fix\n#### list of known problems\n#### issue tracking\n### test\n#### test inventory\n#### tests needed\n### extend\n### improve	### fix\n#### list of known problems\n#### issue tracking\n### test\n#### test inventory\n#### tests needed\n### extend\n### improve
-5	text-help	\n        text Command\n\n        usage: x text COMMAND\n\n        COMMAND:\n\n            match - show lines that match\n            no_match - show lines that don't match\n            replace - replace lines\n            select - pattern matching in doc\n\n        \n	\n        text Command\n\n        usage: x text COMMAND\n\n        COMMAND:\n\n            match - show lines that match\n            no_match - show lines that don't match\n            replace - replace lines\n            select - pattern matching in doc\n\n        \n
-68	hours-add	usage: hours add 2017-01\n	usage: hours add 2017-01\n
-73	user-list	no output	no output
 90	doc-html	no output	no output
 72	hours-work	Date       WAM      Sign     Teach    Business Tools    Hammer   Hire     Write    Aspire  \n	Date       WAM      Sign     Teach    Business Tools    Hammer   Hire     Write    Aspire  \n
-76	data-files	no output	no output
-83	task-totals	shell(x task totals) --> 16 lines (should be between 10 and 14)	shell(x task totals) --> 16 lines (should be between 10 and 14)
-14	app-list	bin/__init__.py\nbin/app.py\nbin/aspire.py\nbin/book.py\nbin/booknotes.py\nbin/data.py\nbin/datatype.py\nbin/days.py\nbin/diagrams.py\nbin/doc.py\nbin/faceblog.py\nbin/files.py\nbin/grades.py\nbin/guide.py\nbin/hourly.py\nbin/hours.py\nbin/i.py\nbin/life.py\nbin/log.py\nbin/music.py\nbin/n.py\nbin/ntsh.py\nbin/ops.py\nbin/page_tests.py\nbin/pandoc.py\nbin/remote_tests.py\nbin/resize.py\nbin/score.py\nbin/seamanslog.py\nbin/shell.py\nbin/spiritual.py\nbin/src.py\nbin/switches.py\nbin/text.py\nbin/todo.py\nbin/tool.py\nbin/user.py\nbin/vc.py\nbin/web.py\nbin/wordpress.py\nbin/x.py\nhammer/__init__.py\nhammer/secret_settings.py\nhammer/settings.py\nhammer/urls.py\nhammer/wsgi.py\nhealth/__init__.py\nhealth/admin.py\nhealth/apps.py\nhealth/health.py\nhealth/models.py\nhealth/tests.py\nhealth/urls.py\nhealth/views.py\nlife/__init__.py\nlife/admin.py\nlife/apps.py\nlife/life.py\nlife/models.py\nlife/tests.py\nlife/urls.py\nlife/views.py\nmybook/__init__.py\nmybook/admin.py\nmybook/apps.py\nmybook/models.py\nmybook/mybook.py\nmybook/mybook_views.py\nmybook/outline.py\nmybook/task.py\nmybook/tests.py\nmybook/urls.py\nsuperuser/__init__.py\nsuperuser/admin.py\nsuperuser/admin_views.py\nsuperuser/apps.py\nsuperuser/initialize.py\nsuperuser/models.py\nsuperuser/tests.py\nsuperuser/urls.py\ntasks/__init__.py\ntasks/models.py\ntasks/summary.py\ntasks/task.py\ntasks/urls.py\ntasks/views.py\ntest/__init__.py\ntest/app_test.py\ntest/archive_test.py\ntest/aspire_test.py\ntest/booknotes_test.py\ntest/css_test.py\ntest/data_test.py\ntest/doc_test.py\ntest/health_test.py\ntest/hourly_test.py\ntest/i_test.py\ntest/log_test.py\ntest/ops_test.py\ntest/page_test.py\ntest/robot_test.py\ntest/seamanslog_test.py\ntest/system_test.py\ntest/text_test.py\ntest/tst_test.py\ntest/unc_test.py\ntest/user_test.py\ntest/vc_test.py\ntest/wordpress_test.py\ntool/__init__.py\ntool/document.py\ntool/domain.py\ntool/email.py\ntool/log.py\ntool/management/__init__.py\ntool/management/commands/__init__.py\ntool/management/commands/scriptor.py\ntool/models.py\ntool/notify.py\ntool/page.py\ntool/project.py\ntool/robot.py\ntool/tst.py\ntool/urls.py\ntool/user.py\ntool/user_views.py\ntool/xxx.py\ntool/xxx_script.py\ntool/xxx_views.py\nunc/__init__.py\nunc/admin.py\nunc/apps.py\nunc/models.py\nunc/review.py\nunc/sensei.py\nunc/tests.py\n	bin/__init__.py\nbin/app.py\nbin/aspire.py\nbin/book.py\nbin/booknotes.py\nbin/data.py\nbin/datatype.py\nbin/days.py\nbin/diagrams.py\nbin/doc.py\nbin/faceblog.py\nbin/files.py\nbin/grades.py\nbin/guide.py\nbin/hourly.py\nbin/hours.py\nbin/i.py\nbin/life.py\nbin/log.py\nbin/music.py\nbin/n.py\nbin/ntsh.py\nbin/ops.py\nbin/page_tests.py\nbin/pandoc.py\nbin/remote_tests.py\nbin/resize.py\nbin/score.py\nbin/seamanslog.py\nbin/shell.py\nbin/spiritual.py\nbin/src.py\nbin/switches.py\nbin/text.py\nbin/todo.py\nbin/tool.py\nbin/user.py\nbin/vc.py\nbin/web.py\nbin/wordpress.py\nbin/x.py\nhammer/__init__.py\nhammer/secret_settings.py\nhammer/settings.py\nhammer/urls.py\nhammer/wsgi.py\nhealth/__init__.py\nhealth/admin.py\nhealth/apps.py\nhealth/health.py\nhealth/models.py\nhealth/tests.py\nhealth/urls.py\nhealth/views.py\nlife/__init__.py\nlife/admin.py\nlife/apps.py\nlife/life.py\nlife/models.py\nlife/tests.py\nlife/urls.py\nlife/views.py\nmybook/__init__.py\nmybook/admin.py\nmybook/apps.py\nmybook/models.py\nmybook/mybook.py\nmybook/mybook_views.py\nmybook/outline.py\nmybook/task.py\nmybook/tests.py\nmybook/urls.py\nsuperuser/__init__.py\nsuperuser/admin.py\nsuperuser/admin_views.py\nsuperuser/apps.py\nsuperuser/initialize.py\nsuperuser/models.py\nsuperuser/tests.py\nsuperuser/urls.py\ntasks/__init__.py\ntasks/models.py\ntasks/summary.py\ntasks/task.py\ntasks/urls.py\ntasks/views.py\ntest/__init__.py\ntest/app_test.py\ntest/archive_test.py\ntest/aspire_test.py\ntest/booknotes_test.py\ntest/css_test.py\ntest/data_test.py\ntest/doc_test.py\ntest/health_test.py\ntest/hourly_test.py\ntest/i_test.py\ntest/log_test.py\ntest/ops_test.py\ntest/page_test.py\ntest/robot_test.py\ntest/seamanslog_test.py\ntest/system_test.py\ntest/text_test.py\ntest/tst_test.py\ntest/unc_test.py\ntest/user_test.py\ntest/vc_test.py\ntest/wordpress_test.py\ntool/__init__.py\ntool/document.py\ntool/domain.py\ntool/email.py\ntool/log.py\ntool/management/__init__.py\ntool/management/commands/__init__.py\ntool/management/commands/scriptor.py\ntool/models.py\ntool/notify.py\ntool/page.py\ntool/project.py\ntool/robot.py\ntool/tst.py\ntool/urls.py\ntool/user.py\ntool/user_views.py\ntool/xxx.py\ntool/xxx_script.py\ntool/xxx_views.py\nunc/__init__.py\nunc/admin.py\nunc/apps.py\nunc/models.py\nunc/review.py\nunc/sensei.py\nunc/tests.py\n
-71	hours-summary	\n\nTime:  2016-08, 2016-09, 2016-10, 2016-11, 2017-01\n\nActivity                Hours   Percent     Ideal   Diff\n\n	\n\nTime:  2016-08, 2016-09, 2016-10, 2016-11, 2017-01\n\nActivity                Hours   Percent     Ideal   Diff\n\n
-176	doc-render	Not your time 7:00	Not your time 18:00
 7	text-match	shell(x text match def mybook/mybook_views.py) --> 2 lines (should be between 12 and 15)	shell(x text match def mybook/mybook_views.py) --> 2 lines (should be between 12 and 15)
+83	task-totals	shell(x task totals) --> 16 lines (should be between 10 and 14)	shell(x task totals) --> 16 lines (should be between 10 and 14)
+76	data-files	no output	no output
+71	hours-summary	\n\nTime:  2016-08, 2016-09, 2016-10, 2016-11, 2017-01\n\nActivity                Hours   Percent     Ideal   Diff\n\n	\n\nTime:  2016-08, 2016-09, 2016-10, 2016-11, 2017-01\n\nActivity                Hours   Percent     Ideal   Diff\n\n
+176	doc-render	Not your time 7:00	Not your time 9:00
+14	app-list	bin/__init__.py\nbin/app.py\nbin/aspire.py\nbin/book.py\nbin/booknotes.py\nbin/data.py\nbin/datatype.py\nbin/days.py\nbin/diagrams.py\nbin/doc.py\nbin/faceblog.py\nbin/files.py\nbin/grades.py\nbin/guide.py\nbin/hourly.py\nbin/hours.py\nbin/i.py\nbin/life.py\nbin/log.py\nbin/music.py\nbin/n.py\nbin/ntsh.py\nbin/ops.py\nbin/page_tests.py\nbin/pandoc.py\nbin/remote_tests.py\nbin/resize.py\nbin/score.py\nbin/seamanslog.py\nbin/shell.py\nbin/spiritual.py\nbin/src.py\nbin/switches.py\nbin/text.py\nbin/todo.py\nbin/tool.py\nbin/user.py\nbin/vc.py\nbin/web.py\nbin/wordpress.py\nbin/x.py\nhammer/__init__.py\nhammer/secret_settings.py\nhammer/settings.py\nhammer/urls.py\nhammer/wsgi.py\nhealth/__init__.py\nhealth/admin.py\nhealth/apps.py\nhealth/health.py\nhealth/models.py\nhealth/tests.py\nhealth/urls.py\nhealth/views.py\nlife/__init__.py\nlife/admin.py\nlife/apps.py\nlife/life.py\nlife/models.py\nlife/tests.py\nlife/urls.py\nlife/views.py\nmybook/__init__.py\nmybook/admin.py\nmybook/apps.py\nmybook/models.py\nmybook/mybook.py\nmybook/mybook_views.py\nmybook/outline.py\nmybook/task.py\nmybook/tests.py\nmybook/urls.py\nsuperuser/__init__.py\nsuperuser/admin.py\nsuperuser/admin_views.py\nsuperuser/apps.py\nsuperuser/initialize.py\nsuperuser/models.py\nsuperuser/tests.py\nsuperuser/urls.py\ntasks/__init__.py\ntasks/models.py\ntasks/summary.py\ntasks/task.py\ntasks/urls.py\ntasks/views.py\ntest/__init__.py\ntest/app_test.py\ntest/archive_test.py\ntest/aspire_test.py\ntest/booknotes_test.py\ntest/css_test.py\ntest/data_test.py\ntest/doc_test.py\ntest/health_test.py\ntest/hourly_test.py\ntest/i_test.py\ntest/log_test.py\ntest/ops_test.py\ntest/page_test.py\ntest/robot_test.py\ntest/seamanslog_test.py\ntest/system_test.py\ntest/text_test.py\ntest/tst_test.py\ntest/unc_test.py\ntest/user_test.py\ntest/vc_test.py\ntest/wordpress_test.py\ntool/__init__.py\ntool/document.py\ntool/domain.py\ntool/email.py\ntool/log.py\ntool/management/__init__.py\ntool/management/commands/__init__.py\ntool/management/commands/scriptor.py\ntool/models.py\ntool/notify.py\ntool/page.py\ntool/project.py\ntool/robot.py\ntool/tst.py\ntool/urls.py\ntool/user.py\ntool/user_views.py\ntool/xxx.py\ntool/xxx_script.py\ntool/xxx_views.py\nunc/__init__.py\nunc/admin.py\nunc/apps.py\nunc/models.py\nunc/review.py\nunc/sensei.py\nunc/student.py\nunc/tests.py\n	bin/__init__.py\nbin/app.py\nbin/aspire.py\nbin/book.py\nbin/booknotes.py\nbin/data.py\nbin/datatype.py\nbin/days.py\nbin/diagrams.py\nbin/doc.py\nbin/faceblog.py\nbin/files.py\nbin/grades.py\nbin/guide.py\nbin/hourly.py\nbin/hours.py\nbin/i.py\nbin/life.py\nbin/log.py\nbin/music.py\nbin/n.py\nbin/ntsh.py\nbin/ops.py\nbin/page_tests.py\nbin/pandoc.py\nbin/remote_tests.py\nbin/resize.py\nbin/score.py\nbin/seamanslog.py\nbin/shell.py\nbin/spiritual.py\nbin/src.py\nbin/switches.py\nbin/text.py\nbin/todo.py\nbin/tool.py\nbin/user.py\nbin/vc.py\nbin/web.py\nbin/wordpress.py\nbin/x.py\nhammer/__init__.py\nhammer/secret_settings.py\nhammer/settings.py\nhammer/urls.py\nhammer/wsgi.py\nhealth/__init__.py\nhealth/admin.py\nhealth/apps.py\nhealth/health.py\nhealth/models.py\nhealth/tests.py\nhealth/urls.py\nhealth/views.py\nlife/__init__.py\nlife/admin.py\nlife/apps.py\nlife/life.py\nlife/models.py\nlife/tests.py\nlife/urls.py\nlife/views.py\nmybook/__init__.py\nmybook/admin.py\nmybook/apps.py\nmybook/models.py\nmybook/mybook.py\nmybook/mybook_views.py\nmybook/outline.py\nmybook/task.py\nmybook/tests.py\nmybook/urls.py\nsuperuser/__init__.py\nsuperuser/admin.py\nsuperuser/admin_views.py\nsuperuser/apps.py\nsuperuser/initialize.py\nsuperuser/models.py\nsuperuser/tests.py\nsuperuser/urls.py\ntasks/__init__.py\ntasks/models.py\ntasks/summary.py\ntasks/task.py\ntasks/urls.py\ntasks/views.py\ntest/__init__.py\ntest/app_test.py\ntest/archive_test.py\ntest/aspire_test.py\ntest/booknotes_test.py\ntest/css_test.py\ntest/data_test.py\ntest/doc_test.py\ntest/health_test.py\ntest/hourly_test.py\ntest/i_test.py\ntest/log_test.py\ntest/ops_test.py\ntest/page_test.py\ntest/robot_test.py\ntest/seamanslog_test.py\ntest/system_test.py\ntest/text_test.py\ntest/tst_test.py\ntest/unc_test.py\ntest/user_test.py\ntest/vc_test.py\ntest/wordpress_test.py\ntool/__init__.py\ntool/document.py\ntool/domain.py\ntool/email.py\ntool/log.py\ntool/management/__init__.py\ntool/management/commands/__init__.py\ntool/management/commands/scriptor.py\ntool/models.py\ntool/notify.py\ntool/page.py\ntool/project.py\ntool/robot.py\ntool/tst.py\ntool/urls.py\ntool/user.py\ntool/user_views.py\ntool/xxx.py\ntool/xxx_script.py\ntool/xxx_views.py\nunc/__init__.py\nunc/admin.py\nunc/apps.py\nunc/models.py\nunc/review.py\nunc/sensei.py\nunc/student.py\nunc/tests.py\n
 164	i-list	Ideas for Today (brainstorm --> actions)\n\n-----------------------------------------\n\nWork\n\n    Plan\n        gather work in progress\n        use GTD\n        1000 goals\n        \n    Build\n        update Django and Python libraries\n        establish new standard programming context\n        limit log file\n        test private notes \n        create pycharm project for Rest\n        optimize ideas script\n\n    Learn\n        create Writers Notebook\n        continue life story\n        Organize evernotes\n\n    Teach\n        create classroom for BACS 200\n        student registration\n        Select notes for writing topics\n        Seamans Guide to Python Apps\n\nPeople\n\n    follow up\n        Greg Brake\n        Chris Newby\n        Moe, Mehrgan\n\n    Church\n        application notes - thoughts on humility\n        perfectionism\n        overcoming negative feelings\n            turning on the light\n            receiving grace\n            Fear, Anger, Sadness, Shame\n        trust is confidence in character, competence, and compassion\n\nFun\n\n    capture regular TV series to watch\n    vinyl records\n\nGrow\n\n    prayer time\n    organize brain notes\n    think about emotional development\n    establish writing habit\n    analyze finances 2014-2018\n\n\n	Ideas for Today (brainstorm --> actions)\n\n-----------------------------------------\n\nWork\n\n    Plan\n        gather work in progress\n        use GTD\n        1000 goals\n        \n    Build\n        update Django and Python libraries\n        establish new standard programming context\n        limit log file\n        test private notes \n        create pycharm project for Rest\n        optimize ideas script\n\n    Learn\n        create Writers Notebook\n        continue life story\n        Organize evernotes\n\n    Teach\n        create classroom for BACS 200\n        student registration\n        Select notes for writing topics\n        Seamans Guide to Python Apps\n\nPeople\n\n    follow up\n        Greg Brake\n        Chris Newby\n        Moe, Mehrgan\n\n    Church\n        application notes - thoughts on humility\n        perfectionism\n        overcoming negative feelings\n            turning on the light\n            receiving grace\n            Fear, Anger, Sadness, Shame\n        trust is confidence in character, competence, and compassion\n\nFun\n\n    capture regular TV series to watch\n    vinyl records\n\nGrow\n\n    prayer time\n    organize brain notes\n    think about emotional development\n    establish writing habit\n    analyze finances 2014-2018\n\n\n
 80	src-list	/home/django/MyBook/manage.py\n/home/django/MyBook/__init__.py\n/home/django/MyBook/mybook/book.py\n/home/django/MyBook/mybook/book_views.py\n/home/django/MyBook/mybook/admin.py\n/home/django/MyBook/mybook/models.py\n/home/django/MyBook/mybook/urls.py\n/home/django/MyBook/mybook/task.py\n/home/django/MyBook/mybook/author.py\n/home/django/MyBook/mybook/mybook.py\n/home/django/MyBook/mybook/__init__.py\n/home/django/MyBook/mybook/info.py\n/home/django/MyBook/mybook/author_views.py\n/home/django/MyBook/mybook/outline.py\n/home/django/MyBook/mybook/tests.py\n/home/django/MyBook/mybook/mybook_views.py\n/home/django/MyBook/mybook/apps.py\n/home/django/MyBook/mybook/chapter.py\n/home/django/MyBook/config/x.py\n/home/django/MyBook/test/mybook_test.py\n/home/django/MyBook/test/seamanslog_test.py\n/home/django/MyBook/test/text_test.py\n/home/django/MyBook/test/doc_test.py\n/home/django/MyBook/test/days_test.py\n/home/django/MyBook/test/tst_test.py\n/home/django/MyBook/test/user_test.py\n/home/django/MyBook/test/ops_test.py\n/home/django/MyBook/test/health_test.py\n/home/django/MyBook/test/src_test.py\n/home/django/MyBook/test/archive_test.py\n/home/django/MyBook/test/cmd_test.py\n/home/django/MyBook/test/page_test.py\n/home/django/MyBook/test/node_test.py\n/home/django/MyBook/test/email_test.py\n/home/django/MyBook/test/system_test.py\n/home/django/MyBook/test/booknotes_test.py\n/home/django/MyBook/test/wordpress_test.py\n/home/django/MyBook/test/unc_test.py\n/home/django/MyBook/test/vc_test.py\n/home/django/MyBook/test/i_test.py\n/home/django/MyBook/test/app_test.py\n/home/django/MyBook/test/music_test.py\n/home/django/MyBook/test/robot_test.py\n/home/django/MyBook/test/css_test.py\n/home/django/MyBook/test/data_test.py\n/home/django/MyBook/test/datatype_test.py\n/home/django/MyBook/test/hourly_test.py\n/home/django/MyBook/test/__init__.py\n/home/django/MyBook/test/aspire_test.py\n/home/django/MyBook/tool/user.py\n/home/django/MyBook/tool/document.py\n/home/django/MyBook/tool/user_views.py\n/home/django/MyBook/tool/robot.py\n/home/django/MyBook/tool/models.py\n/home/django/MyBook/tool/urls.py\n/home/django/MyBook/tool/xxx_script.py\n/home/django/MyBook/tool/log.py\n/home/django/MyBook/tool/project.py\n/home/django/MyBook/tool/email.py\n/home/django/MyBook/tool/domain.py\n/home/django/MyBook/tool/notify.py\n/home/django/MyBook/tool/page.py\n/home/django/MyBook/tool/tst.py\n/home/django/MyBook/tool/__init__.py\n/home/django/MyBook/tool/xxx_views.py\n/home/django/MyBook/tool/xxx.py\n/home/django/MyBook/tool/management/__init__.py\n/home/django/MyBook/tool/management/commands/scriptor.py\n/home/django/MyBook/tool/management/commands/__init__.py\n/home/django/MyBook/hammer/urls.py\n/home/django/MyBook/hammer/settings.py\n/home/django/MyBook/hammer/__init__.py\n/home/django/MyBook/hammer/wsgi.py\n/home/django/MyBook/hammer/secret_settings.py\n/home/django/MyBook/aspire/goal_views.py\n/home/django/MyBook/aspire/project_views.py\n/home/django/MyBook/aspire/client.py\n/home/django/MyBook/aspire/admin.py\n/home/django/MyBook/aspire/models.py\n/home/django/MyBook/aspire/node.py\n/home/django/MyBook/aspire/node_views.py\n/home/django/MyBook/aspire/urls.py\n/home/django/MyBook/aspire/project.py\n/home/django/MyBook/aspire/role_views.py\n/home/django/MyBook/aspire/role.py\n/home/django/MyBook/aspire/aspire.py\n/home/django/MyBook/aspire/client_views.py\n/home/django/MyBook/aspire/doc.py\n/home/django/MyBook/aspire/__init__.py\n/home/django/MyBook/aspire/advisor_views.py\n/home/django/MyBook/aspire/tests.py\n/home/django/MyBook/aspire/apps.py\n/home/django/MyBook/aspire/goal.py\n/home/django/MyBook/aspire/views.py\n/home/django/MyBook/bin/cmd.py\n/home/django/MyBook/bin/book.py\n/home/django/MyBook/bin/user.py\n/home/django/MyBook/bin/switches.py\n/home/django/MyBook/bin/web.py\n/home/django/MyBook/bin/booknotes.py\n/home/django/MyBook/bin/days.py\n/home/django/MyBook/bin/faceblog.py\n/home/django/MyBook/bin/guide.py\n/home/django/MyBook/bin/src.py\n/home/django/MyBook/bin/vc.py\n/home/django/MyBook/bin/hours.py\n/home/django/MyBook/bin/text.py\n/home/django/MyBook/bin/shell.py\n/home/django/MyBook/bin/log.py\n/home/django/MyBook/bin/resize.py\n/home/django/MyBook/bin/datatype.py\n/home/django/MyBook/bin/data.py\n/home/django/MyBook/bin/page_tests.py\n/home/django/MyBook/bin/files.py\n/home/django/MyBook/bin/tool.py\n/home/django/MyBook/bin/remote_tests.py\n/home/django/MyBook/bin/ntsh.py\n/home/django/MyBook/bin/life.py\n/home/django/MyBook/bin/score.py\n/home/django/MyBook/bin/aspire.py\n/home/django/MyBook/bin/doc.py\n/home/django/MyBook/bin/hourly.py\n/home/django/MyBook/bin/todo.py\n/home/django/MyBook/bin/app.py\n/home/django/MyBook/bin/spiritual.py\n/home/django/MyBook/bin/x.py\n/home/django/MyBook/bin/n.py\n/home/django/MyBook/bin/__init__.py\n/home/django/MyBook/bin/archive.py\n/home/django/MyBook/bin/i.py\n/home/django/MyBook/bin/music.py\n/home/django/MyBook/bin/pandoc.py\n/home/django/MyBook/bin/ops.py\n/home/django/MyBook/bin/seamanslog.py\n/home/django/MyBook/bin/wordpress.py\n/home/django/MyBook/sensei/admin.py\n/home/django/MyBook/sensei/models.py\n/home/django/MyBook/sensei/__init__.py\n/home/django/MyBook/sensei/tests.py\n/home/django/MyBook/sensei/apps.py\n/home/django/MyBook/sensei/views.py\n/home/django/MyBook/unc/admin.py\n/home/django/MyBook/unc/review.py\n/home/django/MyBook/unc/models.py\n/home/django/MyBook/unc/sensei.py\n/home/django/MyBook/unc/urls.py\n/home/django/MyBook/unc/__init__.py\n/home/django/MyBook/unc/tests.py\n/home/django/MyBook/unc/apps.py\n/home/django/MyBook/unc/views.py\n/home/django/MyBook/life/admin.py\n/home/django/MyBook/life/models.py\n/home/django/MyBook/life/urls.py\n/home/django/MyBook/life/life.py\n/home/django/MyBook/life/__init__.py\n/home/django/MyBook/life/tests.py\n/home/django/MyBook/life/apps.py\n/home/django/MyBook/life/views.py\n/home/django/MyBook/health/health.py\n/home/django/MyBook/health/admin.py\n/home/django/MyBook/health/models.py\n/home/django/MyBook/health/urls.py\n/home/django/MyBook/health/__init__.py\n/home/django/MyBook/health/tests.py\n/home/django/MyBook/health/apps.py\n/home/django/MyBook/health/views.py\n/home/django/MyBook/superuser/admin.py\n/home/django/MyBook/superuser/models.py\n/home/django/MyBook/superuser/urls.py\n/home/django/MyBook/superuser/initialize.py\n/home/django/MyBook/superuser/admin_views.py\n/home/django/MyBook/superuser/__init__.py\n/home/django/MyBook/superuser/tests.py\n/home/django/MyBook/superuser/apps.py\n/home/django/MyBook/tasks/models.py\n/home/django/MyBook/tasks/urls.py\n/home/django/MyBook/tasks/task.py\n/home/django/MyBook/tasks/summary.py\n/home/django/MyBook/tasks/__init__.py\n/home/django/MyBook/tasks/views.py\n/home/django/MyBook/guide/urls.py\n/home/django/MyBook/guide/__init__.py\n/home/django/MyBook/guide/views.py\n	/home/django/MyBook/manage.py\n/home/django/MyBook/__init__.py\n/home/django/MyBook/mybook/book.py\n/home/django/MyBook/mybook/book_views.py\n/home/django/MyBook/mybook/admin.py\n/home/django/MyBook/mybook/models.py\n/home/django/MyBook/mybook/urls.py\n/home/django/MyBook/mybook/task.py\n/home/django/MyBook/mybook/author.py\n/home/django/MyBook/mybook/mybook.py\n/home/django/MyBook/mybook/__init__.py\n/home/django/MyBook/mybook/info.py\n/home/django/MyBook/mybook/author_views.py\n/home/django/MyBook/mybook/outline.py\n/home/django/MyBook/mybook/tests.py\n/home/django/MyBook/mybook/mybook_views.py\n/home/django/MyBook/mybook/apps.py\n/home/django/MyBook/mybook/chapter.py\n/home/django/MyBook/config/x.py\n/home/django/MyBook/test/mybook_test.py\n/home/django/MyBook/test/seamanslog_test.py\n/home/django/MyBook/test/text_test.py\n/home/django/MyBook/test/doc_test.py\n/home/django/MyBook/test/days_test.py\n/home/django/MyBook/test/tst_test.py\n/home/django/MyBook/test/user_test.py\n/home/django/MyBook/test/ops_test.py\n/home/django/MyBook/test/health_test.py\n/home/django/MyBook/test/src_test.py\n/home/django/MyBook/test/archive_test.py\n/home/django/MyBook/test/cmd_test.py\n/home/django/MyBook/test/page_test.py\n/home/django/MyBook/test/node_test.py\n/home/django/MyBook/test/email_test.py\n/home/django/MyBook/test/system_test.py\n/home/django/MyBook/test/booknotes_test.py\n/home/django/MyBook/test/wordpress_test.py\n/home/django/MyBook/test/unc_test.py\n/home/django/MyBook/test/vc_test.py\n/home/django/MyBook/test/i_test.py\n/home/django/MyBook/test/app_test.py\n/home/django/MyBook/test/music_test.py\n/home/django/MyBook/test/robot_test.py\n/home/django/MyBook/test/css_test.py\n/home/django/MyBook/test/data_test.py\n/home/django/MyBook/test/datatype_test.py\n/home/django/MyBook/test/hourly_test.py\n/home/django/MyBook/test/__init__.py\n/home/django/MyBook/test/aspire_test.py\n/home/django/MyBook/tool/user.py\n/home/django/MyBook/tool/document.py\n/home/django/MyBook/tool/user_views.py\n/home/django/MyBook/tool/robot.py\n/home/django/MyBook/tool/models.py\n/home/django/MyBook/tool/urls.py\n/home/django/MyBook/tool/xxx_script.py\n/home/django/MyBook/tool/log.py\n/home/django/MyBook/tool/project.py\n/home/django/MyBook/tool/email.py\n/home/django/MyBook/tool/domain.py\n/home/django/MyBook/tool/notify.py\n/home/django/MyBook/tool/page.py\n/home/django/MyBook/tool/tst.py\n/home/django/MyBook/tool/__init__.py\n/home/django/MyBook/tool/xxx_views.py\n/home/django/MyBook/tool/xxx.py\n/home/django/MyBook/tool/management/__init__.py\n/home/django/MyBook/tool/management/commands/scriptor.py\n/home/django/MyBook/tool/management/commands/__init__.py\n/home/django/MyBook/hammer/urls.py\n/home/django/MyBook/hammer/settings.py\n/home/django/MyBook/hammer/__init__.py\n/home/django/MyBook/hammer/wsgi.py\n/home/django/MyBook/hammer/secret_settings.py\n/home/django/MyBook/aspire/goal_views.py\n/home/django/MyBook/aspire/project_views.py\n/home/django/MyBook/aspire/client.py\n/home/django/MyBook/aspire/admin.py\n/home/django/MyBook/aspire/models.py\n/home/django/MyBook/aspire/node.py\n/home/django/MyBook/aspire/node_views.py\n/home/django/MyBook/aspire/urls.py\n/home/django/MyBook/aspire/project.py\n/home/django/MyBook/aspire/role_views.py\n/home/django/MyBook/aspire/role.py\n/home/django/MyBook/aspire/aspire.py\n/home/django/MyBook/aspire/client_views.py\n/home/django/MyBook/aspire/doc.py\n/home/django/MyBook/aspire/__init__.py\n/home/django/MyBook/aspire/advisor_views.py\n/home/django/MyBook/aspire/tests.py\n/home/django/MyBook/aspire/apps.py\n/home/django/MyBook/aspire/goal.py\n/home/django/MyBook/aspire/views.py\n/home/django/MyBook/bin/cmd.py\n/home/django/MyBook/bin/book.py\n/home/django/MyBook/bin/user.py\n/home/django/MyBook/bin/switches.py\n/home/django/MyBook/bin/web.py\n/home/django/MyBook/bin/booknotes.py\n/home/django/MyBook/bin/days.py\n/home/django/MyBook/bin/faceblog.py\n/home/django/MyBook/bin/guide.py\n/home/django/MyBook/bin/src.py\n/home/django/MyBook/bin/vc.py\n/home/django/MyBook/bin/hours.py\n/home/django/MyBook/bin/text.py\n/home/django/MyBook/bin/shell.py\n/home/django/MyBook/bin/log.py\n/home/django/MyBook/bin/resize.py\n/home/django/MyBook/bin/datatype.py\n/home/django/MyBook/bin/data.py\n/home/django/MyBook/bin/page_tests.py\n/home/django/MyBook/bin/files.py\n/home/django/MyBook/bin/tool.py\n/home/django/MyBook/bin/remote_tests.py\n/home/django/MyBook/bin/ntsh.py\n/home/django/MyBook/bin/life.py\n/home/django/MyBook/bin/score.py\n/home/django/MyBook/bin/aspire.py\n/home/django/MyBook/bin/doc.py\n/home/django/MyBook/bin/hourly.py\n/home/django/MyBook/bin/todo.py\n/home/django/MyBook/bin/app.py\n/home/django/MyBook/bin/spiritual.py\n/home/django/MyBook/bin/x.py\n/home/django/MyBook/bin/n.py\n/home/django/MyBook/bin/__init__.py\n/home/django/MyBook/bin/archive.py\n/home/django/MyBook/bin/i.py\n/home/django/MyBook/bin/music.py\n/home/django/MyBook/bin/pandoc.py\n/home/django/MyBook/bin/ops.py\n/home/django/MyBook/bin/seamanslog.py\n/home/django/MyBook/bin/wordpress.py\n/home/django/MyBook/sensei/admin.py\n/home/django/MyBook/sensei/models.py\n/home/django/MyBook/sensei/__init__.py\n/home/django/MyBook/sensei/tests.py\n/home/django/MyBook/sensei/apps.py\n/home/django/MyBook/sensei/views.py\n/home/django/MyBook/unc/admin.py\n/home/django/MyBook/unc/review.py\n/home/django/MyBook/unc/models.py\n/home/django/MyBook/unc/sensei.py\n/home/django/MyBook/unc/urls.py\n/home/django/MyBook/unc/__init__.py\n/home/django/MyBook/unc/tests.py\n/home/django/MyBook/unc/apps.py\n/home/django/MyBook/unc/views.py\n/home/django/MyBook/life/admin.py\n/home/django/MyBook/life/models.py\n/home/django/MyBook/life/urls.py\n/home/django/MyBook/life/life.py\n/home/django/MyBook/life/__init__.py\n/home/django/MyBook/life/tests.py\n/home/django/MyBook/life/apps.py\n/home/django/MyBook/life/views.py\n/home/django/MyBook/health/health.py\n/home/django/MyBook/health/admin.py\n/home/django/MyBook/health/models.py\n/home/django/MyBook/health/urls.py\n/home/django/MyBook/health/__init__.py\n/home/django/MyBook/health/tests.py\n/home/django/MyBook/health/apps.py\n/home/django/MyBook/health/views.py\n/home/django/MyBook/superuser/admin.py\n/home/django/MyBook/superuser/models.py\n/home/django/MyBook/superuser/urls.py\n/home/django/MyBook/superuser/initialize.py\n/home/django/MyBook/superuser/admin_views.py\n/home/django/MyBook/superuser/__init__.py\n/home/django/MyBook/superuser/tests.py\n/home/django/MyBook/superuser/apps.py\n/home/django/MyBook/tasks/models.py\n/home/django/MyBook/tasks/urls.py\n/home/django/MyBook/tasks/task.py\n/home/django/MyBook/tasks/summary.py\n/home/django/MyBook/tasks/__init__.py\n/home/django/MyBook/tasks/views.py\n/home/django/MyBook/guide/urls.py\n/home/django/MyBook/guide/__init__.py\n/home/django/MyBook/guide/views.py\n
 114	page-diff	no output	no output
 4	text-functions	text_command\ntext_help\nfind_agents\nfind_anchors\nfind_classes\nfind_functions\nfind_links\nfind_quotes\nfind_signatures\nfind_urls\nmarkdown_list_links\nmarkdown_list_string\ntext_join\ntext_lines\ntext_match\ntext_no_match\ntext_outline\ntext_outline_string\ntext_markdown\ntext_replace\ntext_title\ntext_body\nmatch_lines\nmatch_pattern\ntransform_matches	text_command\ntext_help\nfind_agents\nfind_anchors\nfind_classes\nfind_functions\nfind_links\nfind_quotes\nfind_signatures\nfind_urls\nmarkdown_list_links\nmarkdown_list_string\ntext_join\ntext_lines\ntext_match\ntext_no_match\ntext_outline\ntext_outline_string\ntext_markdown\ntext_replace\ntext_title\ntext_body\nmatch_lines\nmatch_pattern\ntransform_matches
-109	aspire-list	shell(x aspire list) --> 42 lines (should be between 250 and 500)	shell(x aspire list) --> 42 lines (should be between 250 and 500)
 104	project-list	project list\n	project list\n
-110	aspire-report	shell(x aspire report) --> 42 lines (should be between 2 and 2)	shell(x aspire report) --> 42 lines (should be between 2 and 2)
+109	aspire-list	shell(x aspire list) --> 42 lines (should be between 250 and 500)	shell(x aspire list) --> 42 lines (should be between 250 and 500)
 106	budget-list	shell(x budget list) --> 121 lines (should be between 120 and 120)	shell(x budget list) --> 121 lines (should be between 120 and 120)
 108	budget-total	budget total\nCategory           Total\n\nWork                 139\nGrow                  59\nPeople                89\nChurch                60\nFun                   69\n	budget total\nCategory           Total\n\nWork                 139\nGrow                  59\nPeople                89\nChurch                60\nFun                   69\n
+110	aspire-report	shell(x aspire report) --> 42 lines (should be between 2 and 2)	shell(x aspire report) --> 42 lines (should be between 2 and 2)
 112	aspire-show	shell(x aspire show) --> 42 lines (should be between 10 and 20)	shell(x aspire show) --> 42 lines (should be between 10 and 20)
 113	aspire-week	shell(x aspire week) --> 42 lines (should be between 15 and 21)	shell(x aspire week) --> 42 lines (should be between 15 and 21)
 111	aspire-score	*                   Docs  Words\n* MyBook              23   2074\n* Aspire              27   7812\n* Software            14   2143\n* role                 4     61\n* Life                 3    514\n* Report             193  38194\n* Hire                15   4676\n* Write               34  10278\n* Fun                  3     70\n* Church               8   1630\n* Grow                10    596\n*   Total            334  68048\n	*                   Docs  Words\n* MyBook              23   2074\n* Aspire              27   7812\n* Software            14   2143\n* role                 4     61\n* Life                 3    514\n* Report             193  38194\n* Hire                15   4676\n* Write               34  10278\n* Fun                  3     70\n* Church               8   1630\n* Grow                10    596\n*   Total            334  68048\n
 117	software-list	Software list\nMenu\nIndex\nBestPractice/Management\nBestPractice/DevelopmentGoals\nBestPractice/RemainingTasks\nBestPractice/Guarantee\nBestPractice/Process\nBestPractice/FutureTasks\nBestPractice/Payment\nBestPractice/Assessment\nBestPractice/Technology\nBestPractice/Commitment\nBestPractice/EstimatingProjects\nBestPractice/Issues\nBestPractice/Clients\nBestPractice/People\nBestPractice/ReleaseChecklist\nBestPractice/BudgetHours\nBestPractice/Planning\nBestPractice/Engineering\nBestPractice/Productivity\nBestPractice/UserStories\nBestPractice/Index\nBestPractice/Contract\nBestPractice/Risk\nBestPractice/Views\nBestPractice/Experience\nBestPractice/Principles\nBestPractice/Tasks\nBestPractice/DataType\nBestPractice/EngineeringServices\nBestPractice/Proposal\nLeverage/Debt\nLeverage/Part3\nLeverage/Services\nLeverage/Deployment\nLeverage/AppendixC\nLeverage/Menu\nLeverage/Code\nLeverage/Monitoring\nLeverage/Technology\nLeverage/Learning\nLeverage/Knowledge\nLeverage/Part1\nLeverage/Planning\nLeverage/Part2\nLeverage/Part4\nLeverage/Test\nLeverage/Leverage\nLeverage/Preface\nLeverage/Cover\nLeverage/Release\nLeverage/Practices\nLeverage/Index\nLeverage/StartReading\nLeverage/AppendixB\nLeverage/Design\nLeverage/Teamwork\nLeverage/FrontMatter\nLeverage/ApplyingLeverage\nLeverage/Author\nLeverage/AppendixA\nLeverage/Proposal\nLeverage/Chapters\nClient/Today\nClient/Hire-ToDo\nClient/2016-10\nClient/Hire-Done\n	Software list\nMenu\nIndex\nBestPractice/Management\nBestPractice/DevelopmentGoals\nBestPractice/RemainingTasks\nBestPractice/Guarantee\nBestPractice/Process\nBestPractice/FutureTasks\nBestPractice/Payment\nBestPractice/Assessment\nBestPractice/Technology\nBestPractice/Commitment\nBestPractice/EstimatingProjects\nBestPractice/Issues\nBestPractice/Clients\nBestPractice/People\nBestPractice/ReleaseChecklist\nBestPractice/BudgetHours\nBestPractice/Planning\nBestPractice/Engineering\nBestPractice/Productivity\nBestPractice/UserStories\nBestPractice/Index\nBestPractice/Contract\nBestPractice/Risk\nBestPractice/Views\nBestPractice/Experience\nBestPractice/Principles\nBestPractice/Tasks\nBestPractice/DataType\nBestPractice/EngineeringServices\nBestPractice/Proposal\nLeverage/Debt\nLeverage/Part3\nLeverage/Services\nLeverage/Deployment\nLeverage/AppendixC\nLeverage/Menu\nLeverage/Code\nLeverage/Monitoring\nLeverage/Technology\nLeverage/Learning\nLeverage/Knowledge\nLeverage/Part1\nLeverage/Planning\nLeverage/Part2\nLeverage/Part4\nLeverage/Test\nLeverage/Leverage\nLeverage/Preface\nLeverage/Cover\nLeverage/Release\nLeverage/Practices\nLeverage/Index\nLeverage/StartReading\nLeverage/AppendixB\nLeverage/Design\nLeverage/Teamwork\nLeverage/FrontMatter\nLeverage/ApplyingLeverage\nLeverage/Author\nLeverage/AppendixA\nLeverage/Proposal\nLeverage/Chapters\nClient/Today\nClient/Hire-ToDo\nClient/2016-10\nClient/Hire-Done\n
 66	ops-status	Ops Command - production status\n\n        ops production ['status']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n	Ops Command - production status\n\n        ops production ['status']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n
-65	ops-server-type	Ops Command - production type\n\n        ops production ['type']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n	Ops Command - production type\n\n        ops production ['type']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n
 29	plan-list	plan list\nSiteTitle\nTo_Do_List\nMenu\nBio_Hammer/Index\nAdvisor/A_Better_Life\nAdvisor/Index\nGoals/Aspirations_(100%)\nGoals/Index\nGoals/Work_(40%)\nJournal/My_Future_Life\nJournal/Index\nWho2Hire/Index\nBuilding_Software/Django_templates\nBuilding_Software/Markdown_Formatter\nBuilding_Software/Database_initialization\nBuilding_Software/Code_generators\nBuilding_Software/Canonical_views\nBuilding_Software/Standard_Theme\nBuilding_Software/User_Registration\nBuilding_Software/Database_Migration\nBuilding_Software/Simple_Application\nBuilding_Software/JavaScript\nBuilding_Software/Command_scripts\nBuilding_Software/Index\nBuilding_Software/Material_Theme\nBuilding_Software/Standard_queries\nBuilding_Software/Django_App_Structure\nBuilding_Software/Database_connection\nBuilding_Software/Views\nBuilding_Software/CSS\nBuilding_Software/URLs\nBuilding_Software/Data_Models\nBuilding_Software/Import/Export\nThot_Recorder/Thot_System_Design_Notes\nThot_Recorder/Index\nCreativity/Creativity_Journal\nCreativity/Index\nApp_Design/Index\nApp_Design/Project_Milestones\nApp_Design/Money_App_Design\nWork_Modes/Index\nToDo/To_Do_List\nToDo/Urgent\nToDo/Index\n	plan list\nSiteTitle\nTo_Do_List\nMenu\nBio_Hammer/Index\nAdvisor/A_Better_Life\nAdvisor/Index\nGoals/Aspirations_(100%)\nGoals/Index\nGoals/Work_(40%)\nJournal/My_Future_Life\nJournal/Index\nWho2Hire/Index\nBuilding_Software/Django_templates\nBuilding_Software/Markdown_Formatter\nBuilding_Software/Database_initialization\nBuilding_Software/Code_generators\nBuilding_Software/Canonical_views\nBuilding_Software/Standard_Theme\nBuilding_Software/User_Registration\nBuilding_Software/Database_Migration\nBuilding_Software/Simple_Application\nBuilding_Software/JavaScript\nBuilding_Software/Command_scripts\nBuilding_Software/Index\nBuilding_Software/Material_Theme\nBuilding_Software/Standard_queries\nBuilding_Software/Django_App_Structure\nBuilding_Software/Database_connection\nBuilding_Software/Views\nBuilding_Software/CSS\nBuilding_Software/URLs\nBuilding_Software/Data_Models\nBuilding_Software/Import/Export\nThot_Recorder/Thot_System_Design_Notes\nThot_Recorder/Index\nCreativity/Creativity_Journal\nCreativity/Index\nApp_Design/Index\nApp_Design/Project_Milestones\nApp_Design/Money_App_Design\nWork_Modes/Index\nToDo/To_Do_List\nToDo/Urgent\nToDo/Index\n
+65	ops-server-type	Ops Command - production type\n\n        ops production ['type']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n	Ops Command - production type\n\n        ops production ['type']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n
 116	page-text	shell(x page text all) --> 1 lines (should be between 400 and 1000)	shell(x page text all) --> 1 lines (should be between 400 and 1000)
 129	robot-show	shell(x robot show) --> 2 lines (should be between 20 and 30)	shell(x robot show) --> 2 lines (should be between 20 and 30)
-130	robot-results	\n	\n
 149	mybook-menu	[('/aspire/', 'zmdi-home', 'Home', 'class=active'), ('/aspire/Work', 'zmdi-storage', 'Work', None), ('/aspire/Grow', 'zmdi-accounts-alt', 'Grow', None), ('/aspire/People', 'zmdi-comment-text-alt', 'People', None), ('/aspire/Fun', 'zmdi-assignment-account', 'Fun', None), ('/task/time', 'zmdi-time', 'Time', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('/guide/Index', 'zmdi-home', "Seaman's Guide", 'class=active'), ('/guide/HtmlApps/Index.md', 'zmdi-cloud-outline', 'HTML Apps', None), ('/guide/PhpApps/Index.md', 'zmdi-comment-outline', 'PHP Apps', None), ('/guide/Teaching/Index.md', 'zmdi-local-library', 'Teaching Tech', None), ('/Leverage', 'zmdi-assignment-account', 'Software Leverage', None)]\n[('/mybook/info', 'zmdi-home', 'Home', None), ('/info/Work', 'zmdi-storage', 'Work', None), ('/info/Grow', 'zmdi-accounts-alt', 'Grow', None), ('/info/People', 'zmdi-comment-text-alt', 'People', None), ('/info/Fun', 'zmdi-assignment-account', 'Fun', None), ('/task/time', 'zmdi-time', 'Time', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://seamanslog.com/seamanslog/Index', 'zmdi-trending-up', "Seaman's Log", None), ('https://seamanslog.com/seamanslog', 'zmdi-local-library', 'Select Topic', None), ('https://MarkSeaman.org', 'zmdi-face', 'Mark Seaman', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('/spiritual/Home', 'zmdi-home', 'Home', None), ('/spiritual/inspire', 'zmdi-cloud-outline', 'Inspire', None), ('/spiritual/prayers', 'zmdi-comment-outline', 'Pray', None), ('/spiritual/bible', 'zmdi-local-library', 'Meditate', None), ('/spiritual/reflect', 'zmdi-key', 'Reflect', None), ('/spiritual/teaching', 'zmdi-face', 'Learn', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]	[('/aspire/', 'zmdi-home', 'Home', 'class=active'), ('/aspire/Work', 'zmdi-storage', 'Work', None), ('/aspire/Grow', 'zmdi-accounts-alt', 'Grow', None), ('/aspire/People', 'zmdi-comment-text-alt', 'People', None), ('/aspire/Fun', 'zmdi-assignment-account', 'Fun', None), ('/task/time', 'zmdi-time', 'Time', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('/guide/Index', 'zmdi-home', "Seaman's Guide", 'class=active'), ('/guide/HtmlApps/Index.md', 'zmdi-cloud-outline', 'HTML Apps', None), ('/guide/PhpApps/Index.md', 'zmdi-comment-outline', 'PHP Apps', None), ('/guide/Teaching/Index.md', 'zmdi-local-library', 'Teaching Tech', None), ('/Leverage', 'zmdi-assignment-account', 'Software Leverage', None)]\n[('/mybook/info', 'zmdi-home', 'Home', None), ('/info/Work', 'zmdi-storage', 'Work', None), ('/info/Grow', 'zmdi-accounts-alt', 'Grow', None), ('/info/People', 'zmdi-comment-text-alt', 'People', None), ('/info/Fun', 'zmdi-assignment-account', 'Fun', None), ('/task/time', 'zmdi-time', 'Time', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://seamanslog.com/seamanslog/Index', 'zmdi-trending-up', "Seaman's Log", None), ('https://seamanslog.com/seamanslog', 'zmdi-local-library', 'Select Topic', None), ('https://MarkSeaman.org', 'zmdi-face', 'Mark Seaman', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('/spiritual/Home', 'zmdi-home', 'Home', None), ('/spiritual/inspire', 'zmdi-cloud-outline', 'Inspire', None), ('/spiritual/prayers', 'zmdi-comment-outline', 'Pray', None), ('/spiritual/bible', 'zmdi-local-library', 'Meditate', None), ('/spiritual/reflect', 'zmdi-key', 'Reflect', None), ('/spiritual/teaching', 'zmdi-face', 'Learn', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]\n[('https://shrinking-world.com', 'zmdi-home', 'Shrinking World', None), ('https://seamansguide.com', 'zmdi-storage', "Seaman's Guide", None), ('https://MarkSeaman.org', 'zmdi-accounts-alt', 'Mark Seaman', None), ('https://seamanslog.com', 'zmdi-accounts-list', "Seaman's Log", None), ('https://spiritual-things.org', 'zmdi-cloud-outline', 'Spiritual Things', None)]
+130	robot-results	\n	\n
 161	mybook-site-title	['Aspire', 'From Dreams to Reality']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n["Seaman's Guide", 'Learn New Skills']\n['Private Notes', 'Thinking Patterns and Best Practice']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n["Seaman's Log", 'Big Ideas & Deep Thoughts']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n['Spiritual Things', 'Daily Inspiration']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']	['Aspire', 'From Dreams to Reality']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n["Seaman's Guide", 'Learn New Skills']\n['Private Notes', 'Thinking Patterns and Best Practice']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n["Seaman's Log", 'Big Ideas & Deep Thoughts']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n['Spiritual Things', 'Daily Inspiration']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']
 102	project-export	\n\n        script to manage projects on servers\n\n        usage: x project command\n\n        command\n\n        List:\n            list                - list the configured project\n            get   name          - get a project by name lookup\n\n        Modify:\n            add     name user   - add a new project record\n            delete  name        - remove this project\n            edit    name value  - rename the project\n\n        I/O \n            import              - import all records from a file \n            export              - export all records to a file \n\n        \n	\n\n        script to manage projects on servers\n\n        usage: x project command\n\n        command\n\n        List:\n            list                - list the configured project\n            get   name          - get a project by name lookup\n\n        Modify:\n            add     name user   - add a new project record\n            delete  name        - remove this project\n            edit    name value  - rename the project\n\n        I/O \n            import              - import all records from a file \n            export              - export all records to a file \n\n        \n
 151	archive-files	\n--------------------------------------------------------------------------------\n                              archive-files\n--------------------------------------------------------------------------------\nfiles(/home/django/Archive/MyBook-2017) --> 1 files (should be between 5657 and 5660)\nfiles(/home/django/Archive/Documents-2017) --> 1 files (should be between 1293 and 1300)\nfiles(/home/django/Archive/Documents-2016) --> 1 files (should be between 1364 and 1370)\nfiles(/home/django/Archive/Documents-2015) --> 1 files (should be between 3326 and 3326)\nfiles(/home/django/Archive/Documents-2014) --> 1 files (should be between 6095 and 6095)\nfiles(/home/django/Archive/UNC-2017) --> 1 files (should be between 14678 and 14780)\nfiles(/home/django/Archive/rcp) --> 1 files (should be between 39700 and 41000)\n	\n--------------------------------------------------------------------------------\n                              archive-files\n--------------------------------------------------------------------------------\nfiles(/home/django/Archive/MyBook-2017) --> 1 files (should be between 5657 and 5660)\nfiles(/home/django/Archive/Documents-2017) --> 1 files (should be between 1293 and 1300)\nfiles(/home/django/Archive/Documents-2016) --> 1 files (should be between 1364 and 1370)\nfiles(/home/django/Archive/Documents-2015) --> 1 files (should be between 3326 and 3326)\nfiles(/home/django/Archive/Documents-2014) --> 1 files (should be between 6095 and 6095)\nfiles(/home/django/Archive/UNC-2017) --> 1 files (should be between 14678 and 14780)\nfiles(/home/django/Archive/rcp) --> 1 files (should be between 39700 and 41000)\n
 47	seamanslog-list	TimeBudget\nOpportunity\n10000Days\nToolsSaveTime\nLearningCurve\nImportantWork\nUnfinishedBook\nLifeWork\nReadToLearn\nSiteTitle\nDailyHabits\nCommitments\nExpandContract\nMenu\nHabitualChange\nWorkMindset\nWritingWorkflow\nWhyWork\nMultitasking\nHitler\nLowCostMyth\nBusinessInvestment\nActToLearn\nScaledCommit\nStrengths\nCollaboration\nWritingStages\nPragmaticThinking\nOneImprovement\nSearch\nCareer\nProcessingIdeas\nYourBlogTopic\nIndex\nLifeFun\nLifeThatMatters\nBiggestIdea\nLifePeople\nLifeGrow\nNewYearsResolutions\nGenetics\nInvest20Percent\nCreativeScore\nRuthlessWithWaste\nFoodAndSex\nPessimism\nComputerComplexity\nIdeology\nMaunaKea\nWorkforce\nMyStory\n	TimeBudget\nOpportunity\n10000Days\nToolsSaveTime\nLearningCurve\nImportantWork\nUnfinishedBook\nLifeWork\nReadToLearn\nSiteTitle\nDailyHabits\nCommitments\nExpandContract\nMenu\nHabitualChange\nWorkMindset\nWritingWorkflow\nWhyWork\nMultitasking\nHitler\nLowCostMyth\nBusinessInvestment\nActToLearn\nScaledCommit\nStrengths\nCollaboration\nWritingStages\nPragmaticThinking\nOneImprovement\nSearch\nCareer\nProcessingIdeas\nYourBlogTopic\nIndex\nLifeFun\nLifeThatMatters\nBiggestIdea\nLifePeople\nLifeGrow\nNewYearsResolutions\nGenetics\nInvest20Percent\nCreativeScore\nRuthlessWithWaste\nFoodAndSex\nPessimism\nComputerComplexity\nIdeology\nMaunaKea\nWorkforce\nMyStory\n
 118	software-show	no output	no output
 119	software-stats	no output	no output
-42	system-pandoc	<h1 id="history-of-activity">History of Activity</h1>\n<p><a href="Today" class="uri">Today</a></p>\n<h2 id="section">2015</h2>\n<ul>\n<li><a href="2015-09">September</a></li>\n<li><a href="2015-10">October</a></li>\n<li><a href="2015-11">November</a></li>\n<li><a href="2015-12">December</a></li>\n</ul>\n<h2 id="section-1">2016</h2>\n<ul>\n<li><a href="2016-01">January</a></li>\n<li><a href="2016-02">February</a></li>\n<li><a href="2016-03">March</a></li>\n<li><a href="2016-04">April</a></li>\n<li><a href="2016-05">May</a></li>\n<li><a href="2016-06">June</a></li>\n<li><a href="2016-07">July</a></li>\n<li><a href="2016-08">August</a></li>\n<li><a href="2016-09">September</a></li>\n<li><a href="2016-10">October</a></li>\n<li><a href="2016-11">November</a></li>\n</ul>\n	<h1 id="history-of-activity">History of Activity</h1>\n<p><a href="Today" class="uri">Today</a></p>\n<h2 id="section">2015</h2>\n<ul>\n<li><a href="2015-09">September</a></li>\n<li><a href="2015-10">October</a></li>\n<li><a href="2015-11">November</a></li>\n<li><a href="2015-12">December</a></li>\n</ul>\n<h2 id="section-1">2016</h2>\n<ul>\n<li><a href="2016-01">January</a></li>\n<li><a href="2016-02">February</a></li>\n<li><a href="2016-03">March</a></li>\n<li><a href="2016-04">April</a></li>\n<li><a href="2016-05">May</a></li>\n<li><a href="2016-06">June</a></li>\n<li><a href="2016-07">July</a></li>\n<li><a href="2016-08">August</a></li>\n<li><a href="2016-09">September</a></li>\n<li><a href="2016-10">October</a></li>\n<li><a href="2016-11">November</a></li>\n</ul>\n
-25	table-format	<table class="table table-hover">\n  <th class="palette-Teal-100 bg">X</th>\n  <th class="palette-Teal-100 bg">Y</th>\n  <th class="palette-Teal-100 bg">Z</th>\n  <tr>\n    <td>a</td>\n    <td>b</td>\n    <td>c</td>\n  </tr>\n  <tr>\n    <td>1</td>\n    <td>2</td>\n    <td>3</td>\n  </tr>\n  <tr>\n    <td>4</td>\n    <td>5</td>\n    <td>6</td>\n  </tr>\n  <tr>\n    <td>7</td>\n    <td>8</td>\n    <td>9</td>\n  </tr>\n</table>	<table class="table table-hover">\n  <th class="palette-Teal-100 bg">X</th>\n  <th class="palette-Teal-100 bg">Y</th>\n  <th class="palette-Teal-100 bg">Z</th>\n  <tr>\n    <td>a</td>\n    <td>b</td>\n    <td>c</td>\n  </tr>\n  <tr>\n    <td>1</td>\n    <td>2</td>\n    <td>3</td>\n  </tr>\n  <tr>\n    <td>4</td>\n    <td>5</td>\n    <td>6</td>\n  </tr>\n  <tr>\n    <td>7</td>\n    <td>8</td>\n    <td>9</td>\n  </tr>\n</table>
 50	seamanslog-words	   439 seamanslog/TimeBudget\n   203 seamanslog/Opportunity\n   573 seamanslog/10000Days\n   411 seamanslog/ToolsSaveTime\n   547 seamanslog/LearningCurve\n   186 seamanslog/ImportantWork\n   439 seamanslog/UnfinishedBook\n   249 seamanslog/LifeWork\n   502 seamanslog/ReadToLearn\n     8 seamanslog/SiteTitle\n   409 seamanslog/DailyHabits\n   263 seamanslog/Commitments\n   246 seamanslog/ExpandContract\n     7 seamanslog/Menu\n   440 seamanslog/HabitualChange\n   605 seamanslog/WorkMindset\n   340 seamanslog/WritingWorkflow\n   307 seamanslog/WhyWork\n   487 seamanslog/Multitasking\n   324 seamanslog/Hitler\n   211 seamanslog/LowCostMyth\n   541 seamanslog/BusinessInvestment\n   341 seamanslog/ActToLearn\n   439 seamanslog/ScaledCommit\n   454 seamanslog/Strengths\n   356 seamanslog/Collaboration\n   614 seamanslog/WritingStages\n   490 seamanslog/PragmaticThinking\n   354 seamanslog/OneImprovement\n   420 seamanslog/Search\n   478 seamanslog/Career\n   344 seamanslog/ProcessingIdeas\n   284 seamanslog/YourBlogTopic\n    43 seamanslog/Index\n   223 seamanslog/LifeFun\n   109 seamanslog/LifeThatMatters\n    84 seamanslog/BiggestIdea\n   206 seamanslog/LifePeople\n   205 seamanslog/LifeGrow\n   332 seamanslog/NewYearsResolutions\n   262 seamanslog/Genetics\n   642 seamanslog/Invest20Percent\n   137 seamanslog/CreativeScore\n   326 seamanslog/RuthlessWithWaste\n   507 seamanslog/FoodAndSex\n   118 seamanslog/Pessimism\n   497 seamanslog/ComputerComplexity\n   360 seamanslog/Ideology\n   388 seamanslog/MaunaKea\n   192 seamanslog/Workforce\n   183 seamanslog/MyStory\n 17125\n	   439 seamanslog/TimeBudget\n   203 seamanslog/Opportunity\n   573 seamanslog/10000Days\n   411 seamanslog/ToolsSaveTime\n   547 seamanslog/LearningCurve\n   186 seamanslog/ImportantWork\n   439 seamanslog/UnfinishedBook\n   249 seamanslog/LifeWork\n   502 seamanslog/ReadToLearn\n     8 seamanslog/SiteTitle\n   409 seamanslog/DailyHabits\n   263 seamanslog/Commitments\n   246 seamanslog/ExpandContract\n     7 seamanslog/Menu\n   440 seamanslog/HabitualChange\n   605 seamanslog/WorkMindset\n   340 seamanslog/WritingWorkflow\n   307 seamanslog/WhyWork\n   487 seamanslog/Multitasking\n   324 seamanslog/Hitler\n   211 seamanslog/LowCostMyth\n   541 seamanslog/BusinessInvestment\n   341 seamanslog/ActToLearn\n   439 seamanslog/ScaledCommit\n   454 seamanslog/Strengths\n   356 seamanslog/Collaboration\n   614 seamanslog/WritingStages\n   490 seamanslog/PragmaticThinking\n   354 seamanslog/OneImprovement\n   420 seamanslog/Search\n   478 seamanslog/Career\n   344 seamanslog/ProcessingIdeas\n   284 seamanslog/YourBlogTopic\n    43 seamanslog/Index\n   223 seamanslog/LifeFun\n   109 seamanslog/LifeThatMatters\n    84 seamanslog/BiggestIdea\n   206 seamanslog/LifePeople\n   205 seamanslog/LifeGrow\n   332 seamanslog/NewYearsResolutions\n   262 seamanslog/Genetics\n   642 seamanslog/Invest20Percent\n   137 seamanslog/CreativeScore\n   326 seamanslog/RuthlessWithWaste\n   507 seamanslog/FoodAndSex\n   118 seamanslog/Pessimism\n   497 seamanslog/ComputerComplexity\n   360 seamanslog/Ideology\n   388 seamanslog/MaunaKea\n   192 seamanslog/Workforce\n   183 seamanslog/MyStory\n 17125\n
+25	table-format	<table class="table table-hover">\n  <th class="palette-Teal-100 bg">X</th>\n  <th class="palette-Teal-100 bg">Y</th>\n  <th class="palette-Teal-100 bg">Z</th>\n  <tr>\n    <td>a</td>\n    <td>b</td>\n    <td>c</td>\n  </tr>\n  <tr>\n    <td>1</td>\n    <td>2</td>\n    <td>3</td>\n  </tr>\n  <tr>\n    <td>4</td>\n    <td>5</td>\n    <td>6</td>\n  </tr>\n  <tr>\n    <td>7</td>\n    <td>8</td>\n    <td>9</td>\n  </tr>\n</table>	<table class="table table-hover">\n  <th class="palette-Teal-100 bg">X</th>\n  <th class="palette-Teal-100 bg">Y</th>\n  <th class="palette-Teal-100 bg">Z</th>\n  <tr>\n    <td>a</td>\n    <td>b</td>\n    <td>c</td>\n  </tr>\n  <tr>\n    <td>1</td>\n    <td>2</td>\n    <td>3</td>\n  </tr>\n  <tr>\n    <td>4</td>\n    <td>5</td>\n    <td>6</td>\n  </tr>\n  <tr>\n    <td>7</td>\n    <td>8</td>\n    <td>9</td>\n  </tr>\n</table>
+42	system-pandoc	<h1 id="history-of-activity">History of Activity</h1>\n<p><a href="Today" class="uri">Today</a></p>\n<h2 id="section">2015</h2>\n<ul>\n<li><a href="2015-09">September</a></li>\n<li><a href="2015-10">October</a></li>\n<li><a href="2015-11">November</a></li>\n<li><a href="2015-12">December</a></li>\n</ul>\n<h2 id="section-1">2016</h2>\n<ul>\n<li><a href="2016-01">January</a></li>\n<li><a href="2016-02">February</a></li>\n<li><a href="2016-03">March</a></li>\n<li><a href="2016-04">April</a></li>\n<li><a href="2016-05">May</a></li>\n<li><a href="2016-06">June</a></li>\n<li><a href="2016-07">July</a></li>\n<li><a href="2016-08">August</a></li>\n<li><a href="2016-09">September</a></li>\n<li><a href="2016-10">October</a></li>\n<li><a href="2016-11">November</a></li>\n</ul>\n	<h1 id="history-of-activity">History of Activity</h1>\n<p><a href="Today" class="uri">Today</a></p>\n<h2 id="section">2015</h2>\n<ul>\n<li><a href="2015-09">September</a></li>\n<li><a href="2015-10">October</a></li>\n<li><a href="2015-11">November</a></li>\n<li><a href="2015-12">December</a></li>\n</ul>\n<h2 id="section-1">2016</h2>\n<ul>\n<li><a href="2016-01">January</a></li>\n<li><a href="2016-02">February</a></li>\n<li><a href="2016-03">March</a></li>\n<li><a href="2016-04">April</a></li>\n<li><a href="2016-05">May</a></li>\n<li><a href="2016-06">June</a></li>\n<li><a href="2016-07">July</a></li>\n<li><a href="2016-08">August</a></li>\n<li><a href="2016-09">September</a></li>\n<li><a href="2016-10">October</a></li>\n<li><a href="2016-11">November</a></li>\n</ul>\n
 157	system-cron	# Edit this file to introduce tasks to be run by cron.\n# \n# Each task to run has to be defined through a single line\n# indicating with different fields when the task will be run\n# and what command to run for the task\n# \n# To define the time you can provide concrete values for\n# minute (m), hour (h), day of month (dom), month (mon),\n# and day of week (dow) or use '*' in these fields (for 'any').# \n# Notice that tasks will be started based on the cron's system\n# daemon's notion of time and timezones.\n# \n# Output of the crontab jobs (including errors) is sent through\n# email to the user the crontab file belongs to (unless redirected).\n# \n# For example, you can run a backup of all your user accounts\n# at 5 a.m every week with:\n# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/\n# \n# For more information see the manual pages of crontab(5) and cron(8)\n# \n# Crontab\n# m h  dom mon dow   command\n\n0  *  *  * * ~/MyBook/bin/hourly\n	# Edit this file to introduce tasks to be run by cron.\n# \n# Each task to run has to be defined through a single line\n# indicating with different fields when the task will be run\n# and what command to run for the task\n# \n# To define the time you can provide concrete values for\n# minute (m), hour (h), day of month (dom), month (mon),\n# and day of week (dow) or use '*' in these fields (for 'any').# \n# Notice that tasks will be started based on the cron's system\n# daemon's notion of time and timezones.\n# \n# Output of the crontab jobs (including errors) is sent through\n# email to the user the crontab file belongs to (unless redirected).\n# \n# For example, you can run a backup of all your user accounts\n# at 5 a.m every week with:\n# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/\n# \n# For more information see the manual pages of crontab(5) and cron(8)\n# \n# Crontab\n# m h  dom mon dow   command\n\n0  *  *  * * ~/MyBook/bin/hourly\n
 3	text-format	Work Activities\n    * These activities are critical to successful work.\n    * Balance the four activities for the best outcomes.\n    * This is a second paragraph\n    * of text.\n    Learn\n        * create deeper understanding of problem\n        * evaluate solution\n\n    Plan\n        * past history\n        * present tasks\n        * future priorities\n\n    Build\n        fix\n            list of known problems\n\n            issue tracking\n\n        test\n            test inventory\n\n            tests needed\n\n        extend\n\n        improve\n\n    Teach\n        * share what you know\n        * invite review\n	Work Activities\n    * These activities are critical to successful work.\n    * Balance the four activities for the best outcomes.\n    * This is a second paragraph\n    * of text.\n    Learn\n        * create deeper understanding of problem\n        * evaluate solution\n\n    Plan\n        * past history\n        * present tasks\n        * future priorities\n\n    Build\n        fix\n            list of known problems\n\n            issue tracking\n\n        test\n            test inventory\n\n            tests needed\n\n        extend\n\n        improve\n\n    Teach\n        * share what you know\n        * invite review\n
 9	text-outline	[['Work Activities', [['Learn', [], ['create deeper understanding of problem', 'evaluate solution', '']], ['Plan', [], ['past history', 'present tasks', 'future priorities', '']], ['Build', [['fix', [['list of known problems', [], []], ['issue tracking', [], []]], []], ['test', [['test inventory', [], []], ['tests needed', [], []]], []], ['extend', [], []], ['improve', [], ['']]], []], ['Teach', [], ['share what you know', 'invite review', '', '    ']]], ['', 'These activities are critical to successful work.', 'Balance the four activities for the best outcomes.', '', 'This is a second paragraph', 'of text.', '']]]	[['Work Activities', [['Learn', [], ['create deeper understanding of problem', 'evaluate solution', '']], ['Plan', [], ['past history', 'present tasks', 'future priorities', '']], ['Build', [['fix', [['list of known problems', [], []], ['issue tracking', [], []]], []], ['test', [['test inventory', [], []], ['tests needed', [], []]], []], ['extend', [], []], ['improve', [], ['']]], []], ['Teach', [], ['share what you know', 'invite review', '', '    ']]], ['', 'These activities are critical to successful work.', 'Balance the four activities for the best outcomes.', '', 'This is a second paragraph', 'of text.', '']]]
@@ -7461,2806 +6055,6 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 --
 
 SELECT pg_catalog.setval('public.tool_test_id_seq', 179, true);
-
-
---
--- Data for Name: unc_course; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.unc_course (id, name, title) FROM stdin;
-1	bacs200	HtmlApps
-2	bacs350	PhpApps
-\.
-
-
---
--- Name: unc_course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.unc_course_id_seq', 2, true);
-
-
---
--- Data for Name: unc_review; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.unc_review (id, page, score, date, requirement_1, requirement_2, requirement_3, requirement_4, requirement_5, requirement_6, requirement_7, requirement_8, requirement_9, requirement_10, designer_id, reviewer_id, notes, due) FROM stdin;
-40	blog/2.html	0	2018-10-10 13:21:18.269523+00	f	f	f	f	f	f	f	f	f	f	14	13	It says the page is not found.	2018-09-01 06:00:00+00
-43	blog/2.html	10	2018-10-10 13:21:18.27371+00	t	t	t	t	t	t	t	t	t	t	15	13	Great looking page. The css is very nice. From my evaluation I did not see a banner but everything else is there and good.	2018-09-01 06:00:00+00
-61	blog/2.html	1	2018-10-10 13:21:18.299245+00	t	f	f	f	f	f	f	f	f	f	21	22	The page has a 404 error which means it cannot be found. I think the issue might be that you don't have the correct directories and folders set up on bluehost, because you have the correct URL.	2018-09-01 06:00:00+00
-46	blog/2.html	10	2018-10-10 13:21:18.277948+00	t	t	t	t	t	t	t	t	t	t	16	13	no problems	2018-09-01 06:00:00+00
-30	blog/2.html	7	2018-10-10 13:21:18.255361+00	t	t	t	t	t	t	f	f	f	t	10	12	I think the teacher wanted us to add in a main menu as well so that you can navigate to other pages besides the home page.	2018-09-01 06:00:00+00
-42	blog/2.html	0	2018-10-10 13:21:18.272266+00	f	f	f	f	f	f	f	f	f	f	14	16	Blog not found	2018-09-01 06:00:00+00
-45	blog/2.html	10	2018-10-10 13:21:18.276567+00	t	t	t	t	t	t	t	t	t	t	15	16	You have all the requirements! I liked that you had the links of your sources included in your content! Nice work!	2018-09-01 06:00:00+00
-65	blog/2.html	10	2018-10-10 13:21:18.304954+00	t	t	t	t	t	t	t	t	t	t	22	23	No problems found, all requirements were met	2018-09-01 06:00:00+00
-39	blog/2.html	7	2018-10-10 13:21:18.26817+00	t	t	t	f	f	f	t	t	t	t	13	16	Good read! All you need to do is add some color and a picture!	2018-09-01 06:00:00+00
-50	blog/2.html	9	2018-10-10 13:21:18.283633+00	t	t	t	t	t	t	t	t	f	t	17	19	I did not see a button to direct the user to the main menu.	2018-09-01 06:00:00+00
-55	blog/2.html	9	2018-10-10 13:21:18.290514+00	t	t	f	t	t	t	t	t	t	t	19	17	Your blog was well published, the only problem was that the title of blog 2 was named blog 1	2018-09-01 06:00:00+00
-9	blog/2.html	10	2018-10-10 13:21:18.223829+00	t	t	t	t	t	t	t	t	t	t	3	4	This page looks good . Its visual appealing and has Valid HTML. Good work. If i have to improve it some way maybe a footer with your name	2018-09-01 06:00:00+00
-14	blog/2.html	10	2018-10-10 13:21:18.231335+00	t	t	t	t	t	t	t	t	t	t	5	7	I did not find any problems. It works as it should.\r\nOne improvement may be making the background for the text in your blog lighter in color so it would be easier to read.	2018-09-01 06:00:00+00
-11	blog/2.html	9	2018-10-10 13:21:18.227118+00	t	f	t	t	t	t	t	t	t	t	4	2	There are a couple of HTML issues, along with not all links provided work properly. Could clean up the look of the overall page to make it cleaner, however most requirements are present.	2018-09-01 06:00:00+00
-1	blog/2.html	0	2018-10-10 13:21:18.208104+00	f	f	f	f	f	f	f	f	f	f	1	2	404 Not found	2018-09-01 06:00:00+00
-63	blog/2.html	0	2018-10-10 13:21:18.302088+00	f	f	f	f	f	f	f	f	f	f	21	24	In the summary of problems, there is no web page. Either the URL is faulty or you haven't made the site.	2018-09-01 06:00:00+00
-66	blog/2.html	10	2018-10-10 13:21:18.306313+00	t	t	t	t	t	t	t	t	t	t	22	24	Looks good, not a flaw at all.	2018-09-01 06:00:00+00
-22	blog/2.html	0	2018-10-10 13:21:18.242783+00	f	f	f	f	f	f	f	f	f	f	8	5	The website was not located at the correct URL. Therefore, it was impossible to review or award any points.	2018-09-01 06:00:00+00
-38	blog/2.html	5	2018-10-10 13:21:18.26675+00	t	t	t	f	f	f	f	f	t	t	13	15	When looking through the page, I couldn't find any images or css styling (both integrated and linked) anywhere on the page. Since it had no styling, it didn't appeal visually to the user. Main is missing.	2018-09-01 06:00:00+00
-49	blog/2.html	8	2018-10-10 13:21:18.282171+00	t	f	t	t	t	t	t	t	f	t	17	18	There is not a footer nor a link back to the homepage. I like to banner at the top, the crowns are cool. Validator has error.	2018-09-01 06:00:00+00
-48	blog/2.html	9	2018-10-10 13:21:18.280654+00	t	t	t	t	t	t	f	t	t	t	16	15	I don't see any .js controls. The page is well styled; images and prompt is displayed in a visually pleasing manner.	2018-09-01 06:00:00+00
-24	blog/2.html	2	2018-10-10 13:21:18.245601+00	f	f	f	f	f	f	t	f	t	f	8	7	I can not say to much because there is no page to review. Although, it may just be a URL problem.	2018-09-01 06:00:00+00
-18	blog/2.html	7	2018-10-10 13:21:18.23714+00	t	t	t	t	f	f	f	t	t	t	6	8	Within the given HTML, java script controls, images, and the visual appeal do not show on the website.  Everything else that is shown on the website is spot on.	2018-09-01 06:00:00+00
-15	blog/2.html	10	2018-10-10 13:21:18.232704+00	t	t	t	t	t	t	t	t	t	t	5	8	Everything shown is exactly what needed to be done.  Perfection.	2018-09-01 06:00:00+00
-52	blog/2.html	10	2018-10-10 13:21:18.286389+00	t	t	t	t	t	t	t	t	t	t	18	17	I enjoyed your page, it was different from alot of peoples blogs and I liked how you had live videos	2018-09-01 06:00:00+00
-58	blog/2.html	0	2018-10-10 13:21:18.295069+00	f	f	f	f	f	f	f	f	f	f	20	17	There was an error with your website, i was not able to view it.	2018-09-01 06:00:00+00
-37	blog/2.html	6	2018-10-10 13:21:18.265243+00	t	t	t	f	t	f	f	f	t	t	13	14	There isn't an image and you could maybe mix up the header color but other than that I think it looks pretty clean!	2018-09-01 06:00:00+00
-47	blog/2.html	10	2018-10-10 13:21:18.279286+00	t	t	t	t	t	t	t	t	t	t	16	14	This looks so good!!! I love the organization and the visual appeal, really made me want to read it!	2018-09-01 06:00:00+00
-44	blog/2.html	10	2018-10-10 13:21:18.275193+00	t	t	t	t	t	t	t	t	t	t	15	14	I might just add a subtitle or a catchy title but this looks very professional!	2018-09-01 06:00:00+00
-23	blog/2.html	0	2018-10-10 13:21:18.244156+00	f	f	f	f	f	f	f	f	f	f	8	6	When attempting to view the page I received a 404 page not found error.	2018-09-01 06:00:00+00
-4	blog/2.html	0	2018-10-10 13:21:18.21571+00	f	f	f	f	f	f	f	f	f	f	2	1	The link is not found!!	2018-09-01 06:00:00+00
-10	blog/2.html	8	2018-10-10 13:21:18.22546+00	t	t	t	f	t	t	f	t	t	t	4	1	your page is beautiful,  I like how you design the banner and  also the main menu is well organized but I recommend you to put more styling with css so it looks perfect.	2018-09-01 06:00:00+00
-64	blog/2.html	10	2018-10-10 13:21:18.303546+00	t	t	t	t	t	t	t	t	t	t	22	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-67	blog/2.html	10	2018-10-10 13:21:18.307789+00	t	t	t	t	t	t	t	t	t	t	23	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-51	blog/2.html	9	2018-10-10 13:21:18.285032+00	t	t	t	t	t	t	f	t	t	t	17	20	looks good	2018-09-01 06:00:00+00
-54	blog/2.html	10	2018-10-10 13:21:18.289142+00	t	t	t	t	t	t	t	t	t	t	18	20	like the videos	2018-09-01 06:00:00+00
-57	blog/2.html	8	2018-10-10 13:21:18.293601+00	t	t	t	f	t	t	f	t	t	t	19	20	good ethical reasoning	2018-09-01 06:00:00+00
-27	blog/2.html	9	2018-10-10 13:21:18.25118+00	t	t	t	t	t	t	f	t	t	t	9	12	Looks like you fixed the issues. Nice!	2018-09-01 06:00:00+00
-6	blog/2.html	8	2018-10-10 13:21:18.219311+00	t	f	f	t	t	t	t	t	t	t	2	4	Still need to give Valid HTML and the page	2018-09-01 06:00:00+00
-1084	blog/4.html	10	2018-11-07 20:01:30.329774+00	t	t	t	t	t	t	t	t	t	t	41	18	Looks great, cool tabs	2018-09-01 06:00:00+00
-1266	blog/6.html	0	2018-11-09 16:45:56.428904+00	f	f	f	f	f	f	f	f	f	f	25	32	404 error	2018-09-01 06:00:00+00
-1067	index.html	10	2018-11-06 16:08:06.920922+00	t	t	t	t	t	t	t	t	t	t	23	25	You must type a summary of problems.	2018-09-01 06:00:00+00
-33	blog/2.html	10	2018-10-10 13:21:18.259662+00	t	t	t	t	t	t	t	t	t	t	11	12	fulfills assignment requirements	2018-09-01 06:00:00+00
-1090	blog/4.html	10	2018-11-08 19:58:13.451765+00	t	t	t	t	t	t	t	t	t	t	9	20	Good choice with martin luther king speech choose him too	2018-09-01 06:00:00+00
-59	blog/2.html	10	2018-10-10 13:21:18.296501+00	t	t	t	t	t	t	t	t	t	t	20	18	Fixed the link, looks great	2018-09-01 06:00:00+00
-32	blog/2.html	9	2018-10-10 13:21:18.25819+00	t	f	t	t	t	t	t	t	t	t	11	10	all here but a validator issue for html	2018-09-01 06:00:00+00
-62	blog/2.html	3	2018-10-10 13:21:18.300699+00	t	f	f	t	f	f	t	f	f	f	21	23	;	2018-09-01 06:00:00+00
-7	blog/2.html	10	2018-10-10 13:21:18.220847+00	t	t	t	t	t	t	t	t	t	t	3	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-988	blog/5.html	9	2018-11-05 16:01:58.09327+00	t	f	t	t	t	t	t	t	t	t	2	25	There were 15 errors with the html validation. \r\n\r\nThe css styling used is very clean looking and minimal	2018-09-01 06:00:00+00
-8	blog/2.html	10	2018-10-10 13:21:18.222307+00	t	t	t	t	t	t	t	t	t	t	3	2	NO  problems.	2018-09-01 06:00:00+00
-26	blog/2.html	9	2018-10-10 13:21:18.24979+00	t	t	t	t	t	t	t	t	f	t	9	11	The only issue that I currently see with your page is that there is no direct way to get back to the main menu. Otherwise, the page looks great! I would just add that route into your html!	2018-09-01 06:00:00+00
-29	blog/2.html	9	2018-10-10 13:21:18.254024+00	t	f	t	t	t	t	t	t	t	t	10	11	The only issue that I'm getting with your page, is that the html validator is saying there are some issues with it. I would just go through the validator and try to fix whatever is coming up!	2018-09-01 06:00:00+00
-36	blog/2.html	9	2018-10-10 13:21:18.263788+00	t	f	t	t	t	t	t	t	t	t	12	11	I see that your blog looks great. However, it is having some serious issues going through the validator. The main thing I would focus on is going through that validator and fixing those issues.	2018-09-01 06:00:00+00
-85	blog/2.html	9	2018-10-10 13:21:18.333236+00	t	t	f	t	t	t	t	t	t	t	29	30	minor issue only: The requirement asked for a catchy title for your blog website "UNCO BACS200 Blog" (also should link from the home page directly but that is less important in my opinion, especially as you write many more blogs in the near future).	2018-09-01 06:00:00+00
-116	blog/2.html	10	2018-10-10 13:21:18.377888+00	t	t	t	t	t	t	t	t	t	t	40	42	Overall, I thought the page was well designed. I think the only issues were the spacing of the sections (self image included) and the colors. Perhaps the navigation could be aligned to the left of the page rather than the middle.	2018-09-01 06:00:00+00
-90	blog/2.html	10	2018-10-10 13:21:18.340191+00	t	t	t	t	t	t	t	t	t	t	30	32	No problems! Very nice page!	2018-09-01 06:00:00+00
-93	blog/2.html	10	2018-10-10 13:21:18.344352+00	t	t	t	t	t	t	t	t	t	t	31	32	No problems! Nice page!	2018-09-01 06:00:00+00
-87	blog/2.html	10	2018-10-10 13:21:18.336076+00	t	t	t	t	t	t	t	t	t	t	29	32	One error that says bad value in your link to you style sheet. Other than that everything looks good!	2018-09-01 06:00:00+00
-89	blog/2.html	10	2018-10-10 13:21:18.338834+00	t	t	t	t	t	t	t	t	t	t	30	31	It all looks good.	2018-09-01 06:00:00+00
-73	blog/2.html	10	2018-10-10 13:21:18.316285+00	t	t	t	t	t	t	t	t	t	t	25	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-80	blog/2.html	10	2018-10-10 13:21:18.326094+00	t	t	t	t	t	t	t	t	t	t	27	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-83	blog/2.html	10	2018-10-10 13:21:18.330258+00	t	t	t	t	t	t	t	t	t	t	28	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-96	blog/2.html	8	2018-10-10 13:21:18.348693+00	t	f	t	t	f	t	t	t	t	t	32	31	Some of the HTML isn't valid. Try deleting the fullscreen=yes attribute on the video.\r\n\r\nThere isn't much visual appeal to the page. Try adding a background color and a border to the main article.	2018-09-01 06:00:00+00
-78	blog/2.html	2	2018-10-10 13:21:18.323247+00	f	f	t	f	f	f	t	f	f	f	26	28	Link was not correct, it is at irb.wpr.mybluehost.me/blog/blog/2.html\r\nHTML is not valid.\r\nThere is no CSS.\r\nNo images.\r\nStill, the content is nice.	2018-09-01 06:00:00+00
-118	blog/2.html	10	2018-10-10 13:21:18.380859+00	t	t	t	t	t	t	t	t	t	t	41	42	Overall, the page looks good. Maybe you could try to adjust the location of the photo that you used. Also, I think you need to add a photo of yourself somewhere on the page.	2018-09-01 06:00:00+00
-111	blog/2.html	10	2018-10-10 13:21:18.370749+00	t	t	t	t	t	t	t	t	t	t	38	37	Looked good	2018-09-01 06:00:00+00
-69	blog/2.html	10	2018-10-10 13:21:18.310541+00	t	t	t	t	t	t	t	t	t	t	23	24	Looks great, seems you have went above and beyond. You have social media links which is great. Keep it up.	2018-09-01 06:00:00+00
-76	blog/2.html	0	2018-10-10 13:21:18.320323+00	f	f	f	f	f	f	f	f	f	f	26	25	The page was not found on the server. I got a 404 error.	2018-09-01 06:00:00+00
-113	blog/2.html	8	2018-10-10 13:21:18.373633+00	t	f	t	t	t	t	t	f	t	t	39	37	Had some errors in the validator also missing a copyright.	2018-09-01 06:00:00+00
-94	blog/2.html	8	2018-10-10 13:21:18.345855+00	t	f	t	t	t	t	t	t	f	t	32	29	The text is great and I like the business approach and the video referenced.\r\n\r\nThe HTML has several errors marked in the validator. In fact I tried to open the link in Firefox and Edge browsers and got redirected to the Ted Talk url, I looked at your source code and it seems the i-frame you're using is not well implemented. It works well in Chrome, but yea, Google fixes everything that's wrong.\r\n\r\nThere's also an error in the img tag, please check that out.	2018-09-01 06:00:00+00
-82	blog/2.html	10	2018-10-10 13:21:18.328885+00	t	t	t	t	t	t	t	t	t	t	28	25	I thought the page was well done. The content about ethics was well written. The styling of the header is a bit distracting with its size and color, however those are things that can be modified later.	2018-09-01 06:00:00+00
-81	blog/2.html	9	2018-10-10 13:21:18.327534+00	t	t	t	t	t	t	t	t	t	f	27	28	The blog is not business related.	2018-09-01 06:00:00+00
-75	blog/2.html	8	2018-10-10 13:21:18.319026+00	t	f	t	t	f	t	t	t	t	t	25	28	Very nice content! HTML seems well structured. I would only suggest to have a little bit more of CSS, like colors, borders or shadows.	2018-09-01 06:00:00+00
-84	blog/2.html	10	2018-10-10 13:21:18.33177+00	t	t	t	t	t	t	t	t	t	t	28	27	Heading 1 is too big, but structure of CSS is very good.	2018-09-01 06:00:00+00
-102	blog/2.html	9	2018-10-10 13:21:18.35752+00	t	t	t	t	f	t	t	t	t	t	34	36	The content of the page was very good. the css page was a bit bare and could use a few more elements to make it more interesting. links go the right directions and overall great page!	2018-09-01 06:00:00+00
-98	blog/2.html	9	2018-10-10 13:21:18.35158+00	t	t	t	t	t	t	t	f	t	t	33	35	Banner missing	2018-09-01 06:00:00+00
-101	blog/2.html	10	2018-10-10 13:21:18.355981+00	t	t	t	t	t	t	t	t	t	t	34	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-108	blog/2.html	10	2018-10-10 13:21:18.366358+00	t	t	t	t	t	t	t	t	t	t	36	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-97	blog/2.html	8	2018-10-10 13:21:18.350148+00	t	t	t	t	t	t	f	f	t	t	33	34	No javascript in Blog 2. No banner included, also no header.	2018-09-01 06:00:00+00
-71	blog/2.html	9	2018-10-10 13:21:18.313421+00	t	t	t	t	t	f	t	t	t	t	24	22	I looks like you have been working on your page since last time I visited. Fix you image and menu bars. and fix the errors on the the validator page.	2018-09-01 06:00:00+00
-70	blog/2.html	6	2018-10-10 13:21:18.311975+00	t	t	f	t	f	f	t	t	f	t	24	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-107	blog/2.html	8	2018-10-10 13:21:18.364453+00	t	t	t	t	f	t	f	t	t	t	36	34	Bright blue background with white text is difficult to read. No JavaScript controls.	2018-09-01 06:00:00+00
-1069	blog/4.html	10	2018-11-06 16:17:48.101565+00	t	t	t	t	t	t	t	t	t	t	23	2	Perfect	2018-09-01 06:00:00+00
-1091	blog/6.html	10	2018-11-09 16:45:56.127556+00	t	t	t	t	t	t	t	t	t	t	30	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-1447	blog/7.html	9	2018-11-19 16:56:43.564517+00	t	f	t	t	t	t	t	t	t	t	25	40	Good job	2018-09-01 06:00:00+00
-1599	brain/review.php	7	2018-11-28 16:29:45.736363+00	f	t	t	t	f	t	f	t	t	t	47	54	Auth isnt there\r\nviews dont catch what the action is\r\nnot at the right link	2018-09-01 06:00:00+00
-72	blog/2.html	6	2018-10-10 13:21:18.314903+00	t	f	t	t	f	f	t	f	t	t	24	23	Does not validate\r\nVisual Appeal\r\nNo image\r\nNo footer	2018-09-01 06:00:00+00
-114	blog/2.html	8	2018-10-10 13:21:18.375052+00	t	f	t	t	t	t	t	t	f	t	39	38	I love the look of your page! The only thing that was missing was a link to go back to your home page. I checked the HTML and it wasn't entirely valid. It says there is a fatal error from line 8, column 6; to line 8, column 12 where there shouldn't be a "style" element in between head and body.	2018-09-01 06:00:00+00
-109	blog/2.html	8	2018-10-10 13:21:18.367845+00	t	f	t	t	t	t	t	t	f	t	37	38	Looks really good! The only thing that was missing from the page was a button to go back to your main page. There were also a few problems with the HTML when I validated the page (add <!DOCTYPE html> to the beginning of your code, delete stray img start tag, and it says 100px was a bad value for your image).	2018-09-01 06:00:00+00
-115	blog/2.html	8	2018-10-10 13:21:18.376412+00	t	t	t	t	t	f	t	f	t	t	40	41	The validator says, for your header, to try and use specifics: h2, h3, ect. The only other concern validator is saying it sees is that your image width is 500px. I would suggest deleting the px in the width and see if the validator still finds it as a problem. As for the heading there are two h2 headings, so maybe change the second one into a <h3>. Then possibly make the <section> into a header or get rid of it because the validator is unable to read it.	2018-09-01 06:00:00+00
-120	blog/2.html	9	2018-10-10 13:21:18.383823+00	t	t	t	t	t	f	t	t	t	t	42	41	This all looks good, just an issue with the width of your image 250px. I would suggest taking away the px in the width tag and see if the validator still sees it as an issue.	2018-09-01 06:00:00+00
-86	blog/2.html	9	2018-10-10 13:21:18.33467+00	t	f	t	t	t	t	t	t	t	t	29	31	The validator doesn't like a character in one of the links. Other than that it looks great!	2018-09-01 06:00:00+00
-68	blog/2.html	10	2018-10-10 13:21:18.309146+00	t	t	t	t	t	t	t	t	t	t	23	22	You have one issue according to the validator page, that has to do the picture i believe. you are trying to get the float function, but the entry is incorrect. Beside  that great job.	2018-09-01 06:00:00+00
-35	blog/2.html	9	2018-10-10 13:21:18.262381+00	t	f	t	t	t	t	t	t	t	t	12	10	A couple of issues with the validator but the page looks amazing! Everything else looks clean and well done.	2018-09-01 06:00:00+00
-31	blog/2.html	0	2018-10-10 13:21:18.256736+00	f	f	f	f	f	f	f	f	f	f	11	9	The page wasn't valid and came up with the Error because the site was not found. Your URL isn't registering to your blog2 and this could be a problem from the directory of your bluehost that links your <a href to your project list. I would check the links to this project and make sure everything is spelled right. Even if you didn't do the project, at least give it a try and if you have any questions you can feel free to ask me.	2018-09-01 06:00:00+00
-103	blog/2.html	6	2018-10-10 13:21:18.358895+00	f	f	t	t	f	t	t	t	f	t	35	33	Change your "blogs" folder to "blog" in order to achieve the correct file path! The validator came up with a few errors, so make sure to check on that as well. Make sure to proofread your blog because I found a few errors. You h1 should be "1 is Bigger Than 2". Include the link to your homepage, bacs200 page, etc... Change the title from "blog" to something that gives the reader a preview of your topic. Consider "Multi-Tasking: is it Useful or Ultimately Hurtful". I would consider uncentering your picture so it isn't front and center of your blog, using float : right, or float : left. You do have a CSS stylesheet, but I would personalize it for what you want. Maybe add a body{ background-color : ____; or a border:____;} (____ is the place for the color code, font, etc...). Overall, I think you did a great job. I really like your input on ethics and I totally agree with you. I am more of a mono-task kind of person. Since your picture is of you in the Avs jersey it might be fun just to personalize it a little and add some Avs colors! I would take out the comments on the CSS sheet, just to make it cleaner but not required (EX: /*).	2018-09-01 06:00:00+00
-119	blog/2.html	9	2018-10-10 13:21:18.382304+00	t	f	t	t	t	t	t	t	t	t	42	40	There was no javascript.\r\nThe HTML did not return as valid because of the following error "Error: Bad value 250px for attribute width on element img: Expected a digit but saw p instead."\r\n\r\nI liked the content and the CSS styling on the page. I thought your writing was very persuasive and business oriented. Good job!	2018-09-01 06:00:00+00
-53	blog/2.html	10	2018-10-10 13:21:18.287766+00	t	t	t	t	t	t	t	t	t	t	18	19	Blog 2 did not have enough words to meet the requirement.	2018-09-01 06:00:00+00
-117	blog/2.html	9	2018-10-10 13:21:18.379394+00	t	t	t	t	t	f	t	t	t	t	41	40	There was no profile picture included (in the instructions it requested a small profile picture). I liked that you included CSS styling and that you included a picture that related to the topic. The page navigation was good and the links worked. The page was located at the correct URL. Good job!	2018-09-01 06:00:00+00
-25	blog/2.html	9	2018-10-10 13:21:18.247069+00	t	f	t	t	t	t	t	t	t	t	9	10	Just a small amount of errors for the html validator \r\nOther than that it looks great!	2018-09-01 06:00:00+00
-106	blog/2.html	10	2018-10-10 13:21:18.363073+00	t	t	t	t	t	t	t	t	t	t	36	33	I like your page. I think your colors might clash a little bit for most people's eyes because your h1 and background are both elaborately bright. I would change the h1 color because I think that might help. Choose a lighter color like "Salmon" or "LightCoral". I really like the background color with the white text.  I would swap your copyright and your links that way your copyright comes very last for logical order. I really like your title, I think it gets the readers attention. I would also consider taking your image and putting it in its own h1 tag so it stays within the border, that is how I fixed mine. I'm not sure how it will affect your personal page, but I would definitely recommend trying it.	2018-09-01 06:00:00+00
-60	blog/2.html	0	2018-10-10 13:21:18.297887+00	f	f	f	f	f	f	f	f	f	f	20	19	Link did not properly send the user to their webpage. Could not view content.	2018-09-01 06:00:00+00
-19	blog/2.html	10	2018-10-10 13:21:18.238565+00	t	t	t	t	t	t	t	t	t	t	7	5	There are no problems. While there are no Java Script controls, they were not necessary for this assignment. There is one warning on the validator website, but the page still counts as valid HTML.	2018-09-01 06:00:00+00
-16	blog/2.html	5	2018-10-10 13:21:18.234156+00	t	f	t	f	f	f	t	f	t	t	6	5	The validator returns errors, so the page does not have valid HTML. There is no CSS styling used, therefore it appears as bland and basic HTML. The image on the page did not load meaning it is not properly connected to the page. There is also no banner, main, or footer regions in the HTML source code.	2018-09-01 06:00:00+00
-3	blog/2.html	9	2018-10-10 13:21:18.213879+00	t	f	t	t	t	t	t	t	t	t	1	4	Looks good runs good . Maybe a bit more color. Good work. Also the vaildator says you have one thing wrong but its all good	2018-09-01 06:00:00+00
-1060	index.html	4	2018-11-05 20:34:20.593624+00	t	f	f	f	f	t	f	t	t	f	8	15	Didn't know if it was a home page or project #10. The html has a fatal error according to the validator. No CSS styling seen integrated or linked, therefore no visual appeal. No js controls and unsure about is the page has a business purpose or not.	2018-09-01 06:00:00+00
-1093	blog/6.html	10	2018-11-09 16:45:56.154215+00	t	t	t	t	t	t	t	t	t	t	30	28	Very good tool!	2018-09-01 06:00:00+00
-1094	blog/6.html	8	2018-11-09 16:45:56.155843+00	t	t	t	t	t	t	f	f	t	t	30	15	No Js controls, no main tag.	2018-09-01 06:00:00+00
-1095	blog/6.html	10	2018-11-09 16:45:56.157521+00	t	t	t	t	t	t	t	t	t	t	30	9	Great website. I saw no problems in your html code, the website looked great and your live demo made me create my own. Good job	2018-09-01 06:00:00+00
-1092	blog/6.html	10	2018-11-09 16:45:56.152286+00	t	t	t	t	t	t	t	t	t	t	30	10	Pulled up and everything looks good, sorry for the late response!	2018-09-01 06:00:00+00
-28	blog/2.html	9	2018-10-10 13:21:18.252597+00	t	f	t	t	t	t	t	t	t	t	10	9	At the h2 stylesheet, your "border:solide 3px black;" is an error and does not register even thought the h2 is formatted with the styling. I think you just misspelled solid so it's a pretty easy fix.\r\n\r\nSame problem with your img { stylesheet and your p {\r\n- You should've put "solid" instead of "solide" Easy fix!\r\n\r\nIn your <img src, the width that you put was 200px when you should've just put 200. the validator doesn't like the p and comes up with a bad value for it	2018-09-01 06:00:00+00
-34	blog/2.html	9	2018-10-10 13:21:18.261068+00	t	f	t	t	t	t	t	t	t	t	12	9	Your img element must have an alt attribute, most likely to your server since that's were your jpg will be. \r\n\r\nYour line 13-15 html comes up as a lot of duplicates of the limenu and a menua, I would consider just specifically inserting a stylesheet <style> and editing your visuals from the main document to make things less confusing. Everything looks great on your website but there are some small stuff that isn't quite right in your html. \r\n\r\n\r\nThis page does not pass the requirement of valid html since your html page does start with <!DOCTYPE html> but then you should add the lang="en" to the html tag to specify the language. Also you need to add the <meta charset="UTF-8"> so windows can be the declared unit that it was on.	2018-09-01 06:00:00+00
-56	blog/2.html	9	2018-10-10 13:21:18.292173+00	t	t	t	t	t	t	t	f	t	t	19	18	The only thing I saw missing was a footer. Looks great!	2018-09-01 06:00:00+00
-91	blog/2.html	8	2018-10-10 13:21:18.341578+00	t	t	t	t	f	t	t	f	t	t	31	29	The text is good.\r\nI think it need more CSS styling, there are lots of properties that can help the page look a lot better, like padding and margin.\r\nThe page doesn't have semantic elements, I mean, the header, main, footer tags.\r\nI'm not a fan of the colors used here because it look a little too old style, so I recommend using colors in hexadecimal instead of color names. You can use any color pallet tool online like adobe color, or any other.	2018-09-01 06:00:00+00
-79	blog/2.html	7	2018-10-10 13:21:18.324674+00	t	f	f	t	t	t	t	t	t	f	27	25	1. The content of blog 2 was not about business ethics, it was a video game review.\r\n\r\n2. Some of the html was not valid (listed below)\r\nError: Bad value 800px for attribute width on element iframe: Expected a digit but saw p instead.\r\n\r\nFrom line 12, column 30; to line 12, column 238\r\n\r\nth:854px"><iframe frameborder="0" height="450" scrolling="no" src="http://widgets.ign.com/video/embed/content.…https://www.ign.com/videos/2018/08/13/marvels-spider-man-ps4-gameplay-launch-trailer" width="800px"></ifra\r\n\r\nError: The frameborder attribute on the iframe element is obsolete. Use CSS instead.\r\n\r\nFrom line 12, column 30; to line 12, column 238\r\n\r\nth:854px"><iframe frameborder="0" height="450" scrolling="no" src="http://widgets.ign.com/video/embed/content.…https://www.ign.com/videos/2018/08/13/marvels-spider-man-ps4-gameplay-launch-trailer" width="800px"></ifra\r\n\r\nError: The scrolling attribute on the iframe element is obsolete. Use CSS instead.\r\n\r\nFrom line 12, column 30; to line 12, column 238\r\n\r\nth:854px"><iframe frameborder="0" height="450" scrolling="no" src="http://widgets.ign.com/video/embed/content.…https://www.ign.com/videos/2018/08/13/marvels-spider-man-ps4-gameplay-launch-trailer" width="800px"></ifra\r\n\r\nError: The element footer must not appear as a descendant of the header element.\r\n\r\nFrom line 84, column 1; to line 84, column 8\r\n\r\n***</h2>↩↩<footer>&copy;	2018-09-01 06:00:00+00
-17	blog/2.html	7	2018-10-10 13:21:18.235599+00	t	f	t	f	f	t	t	t	t	t	6	7	Missing valid HTML. Your HTML is missing the proper language tag of en. It is also missing the <!DOCTYPE html> tag which declulars the type of document for the browser.\r\nMissing CSS styling.\r\nVisual appeal is lacking because of the missing CSS.\r\nAn image was required for this assignment. You did include one but it failed to load.\r\nAlso, you might consider using more paragraphs to make it easier to read and maybe a link to your home page. \r\nOther than that, it looks solid.	2018-09-01 06:00:00+00
-110	blog/2.html	7	2018-10-10 13:21:18.369278+00	t	f	t	t	f	t	f	t	t	t	37	39	Overall the blog #2 requirements seemed to have been met. The only notes I have as far as visual appeal goes, concerns color choice. I think the harsh colors took away from the content. The page seems to be mostly valid. The may issue the validator found concerned the image lines of code. I've encountered the same problem with my page and getting rid of the "px" text after the width description will solve the error.	2018-09-01 06:00:00+00
-112	blog/2.html	10	2018-10-10 13:21:18.372144+00	t	t	t	t	t	t	t	t	t	t	38	39	I have very few notes for this page. It looks as though she fulfilled all the requirements for this assignment. The colors are appealing and the overall composition of the page is done well. The only criticism I have for this page concerns the image chosen. Its a little clunky and distracting. I would recommend an image that flows better with the overall theme of the page for future blogs.	2018-09-01 06:00:00+00
-21	blog/2.html	10	2018-10-10 13:21:18.241397+00	t	t	t	t	t	t	t	t	t	t	7	8	Everything shown is correct and has no problems with the page.	2018-09-01 06:00:00+00
-994	blog/5.html	4	2018-11-05 16:01:58.10346+00	t	f	f	t	t	t	f	f	f	f	14	2	Great start, but need to add y more pictures, fix the html, add the correct page content, main menu, header, footer, and finish the business purpose	2018-09-01 06:00:00+00
-20	blog/2.html	9	2018-10-10 13:21:18.240061+00	t	t	t	t	t	f	t	t	t	t	7	6	Overall you did a great job on the second blog, the only thing that you had missing was the image with regards to the topic. Beyond that, you did a great job with CSS styling and the blog itself is relevant. The only other issue that I noticed was that one singular piece of code did not validate, beyond that, outstanding work!	2018-09-01 06:00:00+00
-92	blog/2.html	7	2018-10-10 13:21:18.342987+00	t	t	f	t	t	t	t	f	f	t	31	30	Minor issues: missing banner (with catchy title for blog website), footer, also a link on the home page (though I think that will be much less important in the near future when you write many more blogs).  Otherwise, very nice.	2018-09-01 06:00:00+00
-77	blog/2.html	0	2018-10-10 13:21:18.321776+00	f	f	f	f	f	f	f	f	f	f	26	27	Not Found\r\nThe requested URL /~irbwprmy/index.php was not found on this server.\r\n\r\nAdditionally, a 404 Not Found error was encountered while trying to use an ErrorDocument to handle the request.	2018-09-01 06:00:00+00
-74	blog/2.html	9	2018-10-10 13:21:18.317657+00	t	f	t	t	t	t	t	t	t	t	25	27	CSS: Parse Error.\r\nFrom line 12, column 36; to line 13, column 8\r\nError: Bad value 100px for attribute width on element img: Expected a digit but saw p instead.\r\nFrom line 19, column 9; to line 20, column 39\r\n>↩        <img src= "../images/selfie.jpg"↩             alt="Photo" width="100px">↩     \r\n\r\nIn footer should not be the main menu	2018-09-01 06:00:00+00
-105	blog/2.html	8	2018-10-10 13:21:18.361691+00	t	f	t	t	t	t	t	t	f	t	35	36	Page was good but missing links to other parts of the site. the css sheet was well organized and contained many elements which were nice to see. Nice work!	2018-09-01 06:00:00+00
-88	blog/2.html	10	2018-10-10 13:21:18.337416+00	t	t	t	t	t	t	t	t	t	t	30	29	Great content, I like the business approach. In my opinion the combination of color can be better, since this look a little bit old style. Great job! :)\r\n\r\nCan't mark the JavaScript control because there is no JavaScript in the page, but that wasn't a requirement, so...	2018-09-01 06:00:00+00
-99	blog/2.html	10	2018-10-10 13:21:18.353174+00	t	t	t	t	t	t	t	t	t	t	33	36	The page was good and the color scheme was very visually appealing. the content was nice and links all went to the correct location!	2018-09-01 06:00:00+00
-2	blog/2.html	8	2018-10-10 13:21:18.211841+00	t	t	t	t	f	f	t	t	t	t	1	3	could add more color an appeal to the page to make it more appealing	2018-09-01 06:00:00+00
-5	blog/2.html	7	2018-10-10 13:21:18.21749+00	f	f	t	t	t	t	t	t	f	t	2	3	not right url\r\ncould add more css styling for more appeal	2018-09-01 06:00:00+00
-1015	blog/5.html	8	2018-11-05 16:01:58.139229+00	t	f	f	t	t	t	t	t	t	t	33	32	You have a few errors and there are supposed to be captions on the images. Nice looking page though!	2018-09-01 06:00:00+00
-152	blog/2.html	9	2018-10-15 16:02:30.547763+00	t	f	t	t	t	t	t	t	t	t	11	10	all here but a validator issue for html	2018-09-01 06:00:00+00
-126	blog/2.html	8	2018-10-15 16:02:30.502078+00	t	f	t	t	t	t	t	t	f	t	2	4	Missing your main menu and have 4 HTML errors.	2018-09-01 06:00:00+00
-129	blog/2.html	10	2018-10-15 16:02:30.507105+00	t	t	t	t	t	t	t	t	t	t	3	4	Looks good Keep up the good work	2018-09-01 06:00:00+00
-144	blog/2.html	9	2018-10-15 16:02:30.534483+00	f	t	t	t	t	t	t	t	t	t	8	7	Non working url.	2018-09-01 06:00:00+00
-122	blog/2.html	9	2018-10-15 16:02:30.494904+00	t	t	t	t	f	t	t	t	t	t	1	3	add more css for more appeal like color	2018-09-01 06:00:00+00
-170	blog/2.html	10	2018-10-15 16:02:30.577716+00	t	t	t	t	t	t	t	t	t	t	17	19	Looks good!	2018-09-01 06:00:00+00
-173	blog/2.html	10	2018-10-15 16:02:30.582952+00	t	t	t	t	t	t	t	t	t	t	18	19	No issues.	2018-09-01 06:00:00+00
-124	blog/2.html	8	2018-10-15 16:02:30.498646+00	t	f	t	t	t	t	f	t	t	t	2	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-125	blog/2.html	8	2018-10-15 16:02:30.50031+00	t	f	t	t	t	t	t	t	f	t	2	3	could add more css for more appeal\r\nadd homepage link for easy navigation\r\nchange text css for your writing to make it easier to read	2018-09-01 06:00:00+00
-150	blog/2.html	6	2018-10-15 16:02:30.544471+00	t	t	t	t	t	t	f	f	f	f	10	12	The comments from my last review on this page still stand. In addition, I noticed that "business's" should be spelled "businesses". Also, check the errors listed in the validator.	2018-09-01 06:00:00+00
-171	blog/2.html	9	2018-10-15 16:02:30.579428+00	t	t	t	t	t	t	f	t	t	t	17	20	Good job looks like no problems seen	2018-09-01 06:00:00+00
-132	blog/2.html	9	2018-10-15 16:02:30.512389+00	t	f	t	t	t	t	t	t	t	t	4	3	fix validator problems\r\ncould add more css but overall very good in my opinion	2018-09-01 06:00:00+00
-174	blog/2.html	10	2018-10-15 16:02:30.584684+00	t	t	t	t	t	t	t	t	t	t	18	20	Blog looks really good and I like the gifs	2018-09-01 06:00:00+00
-121	blog/2.html	8	2018-10-15 16:02:30.473677+00	t	t	t	t	f	f	t	t	t	t	1	2	No visuals inluded	2018-09-01 06:00:00+00
-128	blog/2.html	10	2018-10-15 16:02:30.505485+00	t	t	t	t	t	t	t	t	t	t	3	2	You must type a summary of problems.	2018-09-01 06:00:00+00
-131	blog/2.html	10	2018-10-15 16:02:30.510783+00	t	t	t	t	t	t	t	t	t	t	4	2	You must type a summary of problems.	2018-09-01 06:00:00+00
-177	blog/2.html	9	2018-10-15 16:02:30.58957+00	t	t	t	t	t	t	f	t	t	t	19	20	Good page has complete requirements	2018-09-01 06:00:00+00
-160	blog/2.html	10	2018-10-15 16:02:30.561077+00	t	t	t	t	t	t	t	t	t	t	14	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-163	blog/2.html	10	2018-10-15 16:02:30.565942+00	t	t	t	t	t	t	t	t	t	t	15	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-166	blog/2.html	10	2018-10-15 16:02:30.570909+00	t	t	t	t	t	t	t	t	t	t	16	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-164	blog/2.html	10	2018-10-15 16:02:30.567621+00	t	t	t	t	t	t	t	t	t	t	15	14	Still looks really good!	2018-09-01 06:00:00+00
-167	blog/2.html	10	2018-10-15 16:02:30.572631+00	t	t	t	t	t	t	t	t	t	t	16	14	Still looks really good! I love the ethics logo in the corner!	2018-09-01 06:00:00+00
-139	blog/2.html	10	2018-10-15 16:02:30.526372+00	t	t	t	t	t	t	t	t	t	t	7	5	There are no problems. While there are no Java Script controls, they were not necessary for this assignment. There is one warning on the validator website, but the page still counts as valid HTML.	2018-09-01 06:00:00+00
-142	blog/2.html	0	2018-10-15 16:02:30.531257+00	f	f	f	f	f	f	f	f	f	f	8	5	The website was not located at the correct URL. Therefore, it was impossible to review or award any points.	2018-09-01 06:00:00+00
-148	blog/2.html	10	2018-10-15 16:02:30.541042+00	t	t	t	t	t	t	t	t	t	t	10	9	Look's good man! I am still getting 3 error's in the validator that I told you on the last review so fix those and you should be good!	2018-09-01 06:00:00+00
-154	blog/2.html	9	2018-10-15 16:02:30.551009+00	t	f	t	t	t	t	t	t	t	t	12	9	I still see some of the error's I talked about last time but other than that everything looks good! Fix those errors and I like the layout of your blog, looks very neat	2018-09-01 06:00:00+00
-146	blog/2.html	10	2018-10-15 16:02:30.537796+00	t	t	t	t	t	t	t	t	t	t	9	11	This blog is well put together!	2018-09-01 06:00:00+00
-149	blog/2.html	10	2018-10-15 16:02:30.542684+00	t	t	t	t	t	t	t	t	t	t	10	11	This looks really great! Well put together.	2018-09-01 06:00:00+00
-140	blog/2.html	9	2018-10-15 16:02:30.528087+00	t	t	t	t	t	f	t	t	t	t	7	6	Overall you did a great job on the second blog, the only thing that you had missing was the image with regards to the topic. Beyond that, you did a great job with CSS styling and the blog itself is relevant. The only other issue that I noticed was that one singular piece of code did not validate, beyond that, outstanding work!y of problems.	2018-09-01 06:00:00+00
-155	blog/2.html	9	2018-10-15 16:02:30.552597+00	t	f	t	t	t	t	t	t	t	t	12	10	Html error	2018-09-01 06:00:00+00
-145	blog/2.html	9	2018-10-15 16:02:30.536053+00	t	f	t	t	t	t	t	t	t	t	9	10	just an html error	2018-09-01 06:00:00+00
-143	blog/2.html	0	2018-10-15 16:02:30.532775+00	f	f	f	f	f	f	f	f	f	f	8	6	404 page not found.	2018-09-01 06:00:00+00
-135	blog/2.html	10	2018-10-15 16:02:30.518782+00	t	t	t	t	t	t	t	t	t	t	5	8	Everything is how it should be. No problems with this blog.	2018-09-01 06:00:00+00
-138	blog/2.html	8	2018-10-15 16:02:30.524763+00	t	t	t	t	f	f	t	t	t	t	6	8	The image does not show and also background seems to be plain. Other than that, spot on.	2018-09-01 06:00:00+00
-141	blog/2.html	10	2018-10-15 16:02:30.529716+00	t	t	t	t	t	t	t	t	t	t	7	8	Everything looks great, met all of the requirements.	2018-09-01 06:00:00+00
-158	blog/2.html	5	2018-10-15 16:02:30.557857+00	t	t	t	f	f	f	f	f	t	t	13	15	No CSS, visual appeal, images, jscontrols, or a header, main, and footer.	2018-09-01 06:00:00+00
-168	blog/2.html	9	2018-10-15 16:02:30.574304+00	t	t	t	t	t	t	f	t	t	t	16	15	No Java Script Controls.	2018-09-01 06:00:00+00
-169	blog/2.html	9	2018-10-15 16:02:30.575869+00	t	t	t	t	t	t	t	f	t	t	17	18	There isn't a footer or a link back to your main page.	2018-09-01 06:00:00+00
-176	blog/2.html	9	2018-10-15 16:02:30.587886+00	t	t	t	t	t	t	t	f	t	t	19	18	looks great, no footer or main menu	2018-09-01 06:00:00+00
-172	blog/2.html	10	2018-10-15 16:02:30.581125+00	t	t	t	t	t	t	t	t	t	t	18	17	You blog 2 is nice.	2018-09-01 06:00:00+00
-175	blog/2.html	10	2018-10-15 16:02:30.586338+00	t	t	t	t	t	t	t	t	t	t	19	17	I enjoyed your blog 2	2018-09-01 06:00:00+00
-178	blog/2.html	0	2018-10-15 16:02:30.591208+00	f	f	f	f	f	f	f	f	f	f	20	17	I cant find anything.	2018-09-01 06:00:00+00
-147	blog/2.html	9	2018-10-15 16:02:30.539394+00	t	t	t	t	t	t	f	t	t	t	9	12	Updated review: Looks like you fixed up most of the problems. Nice!	2018-09-01 06:00:00+00
-127	blog/2.html	8	2018-10-15 16:02:30.503813+00	t	t	t	t	t	t	f	f	t	t	3	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-159	blog/2.html	8	2018-10-15 16:02:30.559439+00	t	t	t	t	f	f	t	t	t	t	13	16	Looks good! Add some css styling and an image!	2018-09-01 06:00:00+00
-130	blog/2.html	9	2018-10-15 16:02:30.508772+00	t	t	t	t	t	t	f	t	t	t	4	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-162	blog/2.html	10	2018-10-15 16:02:30.564268+00	t	t	t	t	t	t	t	t	t	t	14	16	Great Job! I like the image lol	2018-09-01 06:00:00+00
-165	blog/2.html	9	2018-10-15 16:02:30.569252+00	t	f	t	t	t	t	t	t	t	t	15	16	Looks great! There were a view errors with you HTML	2018-09-01 06:00:00+00
-1042	blog/5.html	0	2018-11-05 16:01:58.184966+00	f	f	f	f	f	f	f	f	f	f	1	5	The webpage was not located at the url. It is therefore impossible to review or award points.	2018-09-01 06:00:00+00
-1098	blog/6.html	10	2018-11-09 16:45:56.162573+00	t	t	t	t	t	t	t	t	t	t	35	28	The tabbed view was a good idea!	2018-09-01 06:00:00+00
-1099	blog/6.html	0	2018-11-09 16:45:56.164196+00	f	f	f	f	f	f	f	f	f	f	35	15	404 not found.	2018-09-01 06:00:00+00
-1097	blog/6.html	9	2018-11-09 16:45:56.160955+00	t	f	t	t	t	t	t	t	t	t	35	10	minor html issue	2018-09-01 06:00:00+00
-215	blog/2.html	10	2018-10-15 16:02:30.652511+00	t	t	t	t	t	t	t	t	t	t	32	30	Html not validated.\r\n\r\nNo banner, or catchy page title.	2018-09-01 06:00:00+00
-182	blog/2.html	4	2018-10-15 16:02:30.597728+00	t	f	f	t	f	f	t	f	f	t	21	23	Does not validate\r\nincorrect page content	2018-09-01 06:00:00+00
-185	blog/2.html	10	2018-10-15 16:02:30.60264+00	t	t	t	t	t	t	t	t	t	t	22	23	You must type a summary of problems.	2018-09-01 06:00:00+00
-206	blog/2.html	10	2018-10-15 16:02:30.637816+00	t	t	t	t	t	t	t	t	t	t	29	31	Looks good.	2018-09-01 06:00:00+00
-209	blog/2.html	10	2018-10-15 16:02:30.642818+00	t	t	t	t	t	t	t	t	t	t	30	31	Looks good.	2018-09-01 06:00:00+00
-192	blog/2.html	8	2018-10-15 16:02:30.614386+00	t	f	t	t	t	f	t	t	t	t	24	23	Does not validate\r\nImage not loading\r\nLink from homepage to Blog 2 doesn't work	2018-09-01 06:00:00+00
-235	blog/2.html	8	2018-10-15 16:02:30.684186+00	t	t	t	t	t	f	t	f	t	t	40	41	There are still the same issues with the width for your pictures and headings.	2018-09-01 06:00:00+00
-240	blog/2.html	9	2018-10-15 16:02:30.69201+00	t	t	t	t	t	f	t	t	t	t	42	41	Everything looked good just maybe take out the px in your image width and see if that is still an issue.	2018-09-01 06:00:00+00
-239	blog/2.html	9	2018-10-15 16:02:30.690458+00	t	f	t	t	t	t	t	t	t	t	42	40	page looks great but the html validator returned a bad value for the picture as follows:\r\nError: Bad value 250px for attribute width on element img: Expected a digit but saw p instead.	2018-09-01 06:00:00+00
-238	blog/2.html	10	2018-10-15 16:02:30.688864+00	t	t	t	t	t	t	t	t	t	t	41	42	Overall, the page looks good. Maybe you could try to adjust the location of the photo that you used. Also, I think you need to add a photo of yourself somewhere on the page.	2018-09-01 06:00:00+00
-200	blog/2.html	10	2018-10-15 16:02:30.627823+00	t	t	t	t	t	t	t	t	t	t	27	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-203	blog/2.html	10	2018-10-15 16:02:30.632905+00	t	t	t	t	t	t	t	t	t	t	28	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-226	blog/2.html	10	2018-10-15 16:02:30.6699+00	t	t	t	t	t	t	t	t	t	t	36	33	I would still change the coloring of your page, but other than that great job!	2018-09-01 06:00:00+00
-241	blog/3.html	0	2018-10-15 16:06:44.314255+00	f	f	f	f	f	f	f	f	f	f	1	2	404 Not found	2018-09-01 06:00:00+00
-183	blog/2.html	0	2018-10-15 16:02:30.599384+00	f	f	f	f	f	f	f	f	f	f	21	24	Still no URL at all. Need to get that fixed.	2018-09-01 06:00:00+00
-231	blog/2.html	10	2018-10-15 16:02:30.6778+00	t	t	t	t	t	t	t	t	t	t	38	37	Looked good.	2018-09-01 06:00:00+00
-233	blog/2.html	8	2018-10-15 16:02:30.680888+00	t	f	t	t	t	t	t	f	t	t	39	37	Same thing as before. I don't know why it gave me same thing to review.	2018-09-01 06:00:00+00
-229	blog/2.html	8	2018-10-15 16:02:30.674634+00	t	f	t	t	t	t	t	t	f	t	37	38	Looks great still! Just has the same couple issues to fix. The HTML has a few issues and there is no main menu.	2018-09-01 06:00:00+00
-199	blog/2.html	9	2018-10-15 16:02:30.626195+00	t	t	f	t	t	t	t	t	t	t	27	25	The only thing missing is the correct content about business ethics. The page looks awesome otherwise.	2018-09-01 06:00:00+00
-181	blog/2.html	1	2018-10-15 16:02:30.595943+00	t	f	f	f	f	f	f	f	f	f	21	22	You have a 404 error, and I am not able to view your page.	2018-09-01 06:00:00+00
-188	blog/2.html	10	2018-10-15 16:02:30.607813+00	t	t	t	t	t	t	t	t	t	t	23	22	Looks pretty good, I only see one error when I go to the validator testing site. It has to do with you floating image.	2018-09-01 06:00:00+00
-202	blog/2.html	10	2018-10-15 16:02:30.631204+00	t	t	t	t	t	t	t	t	t	t	28	25	You must type a summary of problems.	2018-09-01 06:00:00+00
-186	blog/2.html	10	2018-10-15 16:02:30.604377+00	t	t	t	t	t	t	t	t	t	t	22	24	Still everything is perfect. Keep it up.	2018-09-01 06:00:00+00
-189	blog/2.html	10	2018-10-15 16:02:30.609373+00	t	t	t	t	t	t	t	t	t	t	23	24	Everything is up t standard. Good job!	2018-09-01 06:00:00+00
-194	blog/2.html	9	2018-10-15 16:02:30.617845+00	t	f	t	t	t	t	t	t	t	t	25	27	Error: CSS: Parse Error.\r\n\r\nFrom line 12, column 36; to line 13, column 8\r\n\r\nght: 10px;↩        </styl\r\n\r\nError: Bad value 100px for attribute width on element img: Expected a digit but saw p instead.\r\n\r\nFrom line 19, column 9; to line 20, column 39\r\n\r\n>↩        <img src= "../images/selfie.jpg"↩             alt="Photo" width="100px">↩	2018-09-01 06:00:00+00
-204	blog/2.html	10	2018-10-15 16:02:30.634545+00	t	t	t	t	t	t	t	t	t	t	28	27	Perfect!	2018-09-01 06:00:00+00
-205	blog/2.html	9	2018-10-15 16:02:30.636184+00	t	t	f	t	t	t	t	t	t	t	29	30	Still missing a catchy title and home page does not link directly to blog/2.html	2018-09-01 06:00:00+00
-212	blog/2.html	8	2018-10-15 16:02:30.647759+00	t	t	f	t	f	t	t	t	t	t	31	30	Missing Catchy page title and footer	2018-09-01 06:00:00+00
-207	blog/2.html	10	2018-10-15 16:02:30.63949+00	t	t	t	t	t	t	t	t	t	t	29	32	No errors! Nice page!	2018-09-01 06:00:00+00
-210	blog/2.html	10	2018-10-15 16:02:30.644451+00	t	t	t	t	t	t	t	t	t	t	30	32	Still no problems! Very nice page!	2018-09-01 06:00:00+00
-213	blog/2.html	10	2018-10-15 16:02:30.649349+00	t	t	t	t	t	t	t	t	t	t	31	32	Still no problems! Nice page!	2018-09-01 06:00:00+00
-219	blog/2.html	10	2018-10-15 16:02:30.658863+00	t	t	t	t	t	t	t	t	t	t	33	36	content is very good colors go together well and really draw the eye. very good css super appealing page	2018-09-01 06:00:00+00
-225	blog/2.html	9	2018-10-15 16:02:30.668329+00	t	t	t	t	f	t	t	t	t	t	35	36	page and content are good the spacing is nice the page could use some color though	2018-09-01 06:00:00+00
-223	blog/2.html	8	2018-10-15 16:02:30.665202+00	t	f	t	t	f	t	t	t	t	t	35	33	I would consider customizing it a bit! Add some color, font and maybe border!	2018-09-01 06:00:00+00
-195	blog/2.html	10	2018-10-15 16:02:30.619508+00	t	t	t	t	t	t	t	t	t	t	25	28	Nice!	2018-09-01 06:00:00+00
-198	blog/2.html	6	2018-10-15 16:02:30.624508+00	t	f	t	f	f	f	t	t	t	t	26	28	Needs CSS and images	2018-09-01 06:00:00+00
-201	blog/2.html	10	2018-10-15 16:02:30.629479+00	t	t	t	t	t	t	t	t	t	t	27	28	Nice page!	2018-09-01 06:00:00+00
-217	blog/2.html	9	2018-10-15 16:02:30.65569+00	t	t	t	t	t	t	f	t	t	t	33	34	No JavaScript controls.	2018-09-01 06:00:00+00
-224	blog/2.html	6	2018-10-15 16:02:30.66677+00	t	f	t	t	f	t	f	t	f	t	35	34	On the validator, the HTML for the image was incorrect. Very bland and white - uninteresting. No JavaScript. No link to main menu.	2018-09-01 06:00:00+00
-227	blog/2.html	8	2018-10-15 16:02:30.671496+00	t	t	t	t	f	t	f	t	t	t	36	34	The white text on the bright blue is difficult to read. No javascript.	2018-09-01 06:00:00+00
-218	blog/2.html	10	2018-10-15 16:02:30.657299+00	t	t	t	t	t	t	t	t	t	t	33	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-221	blog/2.html	10	2018-10-15 16:02:30.662082+00	t	t	t	t	t	t	t	t	t	t	34	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-228	blog/2.html	10	2018-10-15 16:02:30.673014+00	t	t	t	t	t	t	t	t	t	t	36	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-208	blog/2.html	10	2018-10-15 16:02:30.641204+00	t	t	t	t	t	t	t	t	t	t	30	29	I thought I had reviewed  this already, but it still appears in my to do.\r\nGreat job.	2018-09-01 06:00:00+00
-211	blog/2.html	8	2018-10-15 16:02:30.646155+00	t	t	t	f	f	t	t	t	t	t	31	29	I thought I had reviewed this already, but it still appears in my to do.\r\n\r\nI just think the style can be way better. Everything else good.	2018-09-01 06:00:00+00
-1073	blog/2.html	10	2018-11-06 21:15:54.275852+00	t	t	t	t	t	t	t	t	t	t	23	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-272	blog/3.html	10	2018-10-15 16:06:44.384215+00	t	t	t	t	t	t	t	t	t	t	11	10	a couple of html issues	2018-09-01 06:00:00+00
-302	blog/3.html	3	2018-10-15 16:06:44.433028+00	t	f	f	t	f	f	t	f	f	f	21	23	Does not validate\r\nincorrect page content	2018-09-01 06:00:00+00
-247	blog/3.html	9	2018-10-15 16:06:44.343617+00	t	t	t	t	t	t	t	f	t	t	3	1	the page looks perfect especially the colorful content but it is missing the banner.	2018-09-01 06:00:00+00
-246	blog/3.html	9	2018-10-15 16:06:44.341881+00	t	f	t	t	t	t	t	t	t	t	2	4	The page looks like it could be real fix the html for 100%	2018-09-01 06:00:00+00
-254	blog/3.html	10	2018-10-15 16:06:44.354909+00	t	t	t	t	t	t	t	t	t	t	5	7	Looks great. No problems.	2018-09-01 06:00:00+00
-257	blog/3.html	10	2018-10-15 16:06:44.359787+00	t	t	t	t	t	t	t	t	t	t	6	7	No problems. Looks good.\r\nI like how you added a small pic to each of the travel options.	2018-09-01 06:00:00+00
-281	blog/3.html	8	2018-10-15 16:06:44.398795+00	t	t	t	t	t	t	f	f	t	t	14	15	No JavaScript. Banner and Main are missing.	2018-09-01 06:00:00+00
-290	blog/3.html	10	2018-10-15 16:06:44.413416+00	t	t	t	t	t	t	t	t	t	t	17	19	No issues.	2018-09-01 06:00:00+00
-293	blog/3.html	0	2018-10-15 16:06:44.418301+00	f	f	f	f	f	f	f	f	f	f	18	19	Link did not work.	2018-09-01 06:00:00+00
-300	blog/3.html	6	2018-10-15 16:06:44.429759+00	t	t	t	f	f	f	f	t	t	t	20	19	CSS styling sheet and javascript not working.	2018-09-01 06:00:00+00
-251	blog/3.html	10	2018-10-15 16:06:44.350112+00	t	t	t	t	t	t	t	t	t	t	4	2	Could be a little better visually organized, however everything is there and look good	2018-09-01 06:00:00+00
-248	blog/3.html	10	2018-10-15 16:06:44.345279+00	t	t	t	t	t	t	t	t	t	t	3	2	Alot of blank space on the page however everything is included and organized. Couple of spelling and grammer issues but other than that it looks good.	2018-09-01 06:00:00+00
-267	blog/3.html	10	2018-10-15 16:06:44.376095+00	t	t	t	t	t	t	t	t	t	t	9	12	Fantastic! No problems to report.	2018-09-01 06:00:00+00
-242	blog/3.html	0	2018-10-15 16:06:44.334471+00	f	f	f	f	f	f	f	f	f	f	1	3	not right url so i can't see what you did right or wrong	2018-09-01 06:00:00+00
-273	blog/3.html	0	2018-10-15 16:06:44.385845+00	f	f	f	f	f	f	f	f	f	f	11	12	Page is either non-existent or exists in the wrong place. This page should be in the blog folder and it should have the name 3.html .	2018-09-01 06:00:00+00
-291	blog/3.html	10	2018-10-15 16:06:44.41501+00	t	t	t	t	t	t	t	t	t	t	17	20	Looks really appealing like the palms in the background	2018-09-01 06:00:00+00
-294	blog/3.html	10	2018-10-15 16:06:44.419854+00	t	t	t	t	t	t	t	t	t	t	18	20	Looks really good almost professionally done	2018-09-01 06:00:00+00
-279	blog/3.html	2	2018-10-15 16:06:44.395636+00	t	f	f	f	f	f	f	t	f	f	13	16	Your URL was correct! I only see a heading for Barcelona and a company name. Add some images, color, and a description of your pricing!	2018-09-01 06:00:00+00
-297	blog/3.html	10	2018-10-15 16:06:44.424868+00	t	t	t	t	t	t	t	t	t	t	19	20	good job looks good like the networking picture	2018-09-01 06:00:00+00
-252	blog/3.html	9	2018-10-15 16:06:44.351678+00	t	f	t	t	t	t	t	t	t	t	4	3	fix validator problems\r\nbesides that very good	2018-09-01 06:00:00+00
-282	blog/3.html	9	2018-10-15 16:06:44.400361+00	t	f	t	t	t	t	t	t	t	t	14	16	Awesome job! There was only one error on your HTML	2018-09-01 06:00:00+00
-271	blog/3.html	0	2018-10-15 16:06:44.382613+00	f	f	f	f	f	f	f	f	f	f	11	9	Your URL isn't working, let me know when you have it done and I'll edit my review!	2018-09-01 06:00:00+00
-280	blog/3.html	10	2018-10-15 16:06:44.397196+00	t	t	t	t	t	t	t	t	t	t	14	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-283	blog/3.html	10	2018-10-15 16:06:44.401954+00	t	t	t	t	t	t	t	t	t	t	15	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-286	blog/3.html	10	2018-10-15 16:06:44.406805+00	t	t	t	t	t	t	t	t	t	t	16	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-298	blog/3.html	10	2018-10-15 16:06:44.426566+00	t	t	t	t	t	t	t	t	t	t	20	17	I enjoyed viewed your blog 3.	2018-09-01 06:00:00+00
-277	blog/3.html	6	2018-10-15 16:06:44.392354+00	t	t	t	f	f	f	f	t	t	t	13	14	Your content is really good and fits everything that we need for the assignment, my only suggestion would be to add some color and pictures to make it more exciting to look at!	2018-09-01 06:00:00+00
-287	blog/3.html	10	2018-10-15 16:06:44.408495+00	t	t	t	t	t	t	t	t	t	t	16	14	Your brochure looks really good! I love the pictures and the different packages, it is very effective and exciting to look at!	2018-09-01 06:00:00+00
-292	blog/3.html	10	2018-10-15 16:06:44.416627+00	t	t	t	t	t	t	t	t	t	t	18	17	Your blog 3 is amazing!	2018-09-01 06:00:00+00
-289	blog/3.html	10	2018-10-15 16:06:44.411738+00	t	t	t	t	t	t	t	t	t	t	17	18	Looks great. The yellow/gold text is kinda hard to read.	2018-09-01 06:00:00+00
-296	blog/3.html	9	2018-10-15 16:06:44.423238+00	t	t	f	t	t	t	t	t	t	t	19	18	This has internet packages and is supposed to have travel packages.	2018-09-01 06:00:00+00
-295	blog/3.html	4	2018-10-15 16:06:44.421511+00	f	f	f	t	f	t	t	t	f	f	19	17	I think you have the wrong template for blog 3.	2018-09-01 06:00:00+00
-299	blog/3.html	9	2018-10-15 16:06:44.428176+00	t	t	f	t	t	t	t	t	t	t	20	18	This page is about cars but should be about travel packages.	2018-09-01 06:00:00+00
-266	blog/3.html	9	2018-10-15 16:06:44.374491+00	t	t	t	t	t	t	t	t	f	t	9	11	I don't see a part where I can successfully return to the home page!	2018-09-01 06:00:00+00
-262	blog/3.html	0	2018-10-15 16:06:44.367811+00	f	f	f	f	f	f	f	f	f	f	8	5	The page is not located at the appropriate URL. Therefore it is impossible to grade and award points.	2018-09-01 06:00:00+00
-269	blog/3.html	8	2018-10-15 16:06:44.379331+00	t	f	t	t	t	t	t	t	f	t	10	11	Your blog is very good. However, the validation needs to be fixed and I don't see where I can return to the main menu.	2018-09-01 06:00:00+00
-276	blog/3.html	9	2018-10-15 16:06:44.390731+00	t	t	t	t	t	f	t	t	t	t	12	11	I would upload some images but other than that it looks great!	2018-09-01 06:00:00+00
-265	blog/3.html	10	2018-10-15 16:06:44.372804+00	t	t	t	t	t	t	t	t	t	t	9	10	You must type a summary of problems.	2018-09-01 06:00:00+00
-263	blog/3.html	0	2018-10-15 16:06:44.369455+00	f	f	f	f	f	f	f	f	f	f	8	6	404 page not found.	2018-09-01 06:00:00+00
-275	blog/3.html	6	2018-10-15 16:06:44.389128+00	t	t	f	t	t	t	f	t	f	f	12	10	the page is just the base layout.	2018-09-01 06:00:00+00
-253	blog/3.html	10	2018-10-15 16:06:44.353222+00	t	t	t	t	t	t	t	t	t	t	5	6	Overall you did a good job, looks visually appealing and meets the requirements.	2018-09-01 06:00:00+00
-260	blog/3.html	10	2018-10-15 16:06:44.364549+00	t	t	t	t	t	t	t	t	t	t	7	6	Overall looks good, some of your images may have gotten messed up, they are there just formatted kind of odd, never the less well done!	2018-09-01 06:00:00+00
-255	blog/3.html	10	2018-10-15 16:06:44.356555+00	t	t	t	t	t	t	t	t	t	t	5	8	Everything shown is spot on. It looks neat and well said. No problems with it.	2018-09-01 06:00:00+00
-258	blog/3.html	10	2018-10-15 16:06:44.361407+00	t	t	t	t	t	t	t	t	t	t	6	8	Everything was great. Needed to correct spelling on a couple of words but other than that it looked really good.	2018-09-01 06:00:00+00
-261	blog/3.html	10	2018-10-15 16:06:44.366189+00	t	t	t	t	t	t	t	t	t	t	7	8	Everything was in a different style. It looked great.	2018-09-01 06:00:00+00
-264	blog/3.html	3	2018-10-15 16:06:44.371057+00	f	f	f	t	f	f	t	f	f	t	8	7	Non-working url	2018-09-01 06:00:00+00
-288	blog/3.html	9	2018-10-15 16:06:44.410109+00	t	t	t	t	t	t	t	f	t	t	16	15	No Banner or Main in the <body></body>.	2018-09-01 06:00:00+00
-243	blog/3.html	10	2018-10-15 16:06:44.33645+00	t	t	t	t	t	t	t	t	t	t	1	4	It is up and running so good work	2018-09-01 06:00:00+00
-250	blog/3.html	9	2018-10-15 16:06:44.3485+00	t	t	t	t	t	t	f	t	t	t	4	1	your page is looking perfect and I like the company brand name and idea.	2018-09-01 06:00:00+00
-1045	blog/5.html	7	2018-11-05 16:01:58.190033+00	t	t	f	t	t	t	t	f	f	t	39	5	The webpage is missing captions on the photos, an intriguing introduction, and a description of why the story was told. There is also no header of footer, and there are not menu buttons to get back to the home page or any other pages on the website.	2018-09-01 06:00:00+00
-335	blog/3.html	10	2018-10-15 16:06:44.488363+00	t	t	t	t	t	t	t	t	t	t	32	30	Small errors on validator\r\nTravel packages don't indicate destination	2018-09-01 06:00:00+00
-312	blog/3.html	0	2018-10-15 16:06:44.449558+00	f	f	f	f	f	f	f	f	f	f	24	23	Page not found	2018-09-01 06:00:00+00
-123	blog/2.html	9	2018-10-15 16:02:30.496848+00	t	f	t	t	t	t	t	t	t	t	1	4	There is only one thing wrong with the HTML	2018-09-01 06:00:00+00
-326	blog/3.html	6	2018-10-15 16:06:44.473753+00	t	f	f	t	t	f	t	t	t	f	29	31	The html isn't valid. Try adding lang="en" to the head. \r\nThe web page doesn't have a travel agency or three different packages as per the assignment. \r\nAll of the images have broken links. Make sure the links point to where the image files are located.	2018-09-01 06:00:00+00
-329	blog/3.html	10	2018-10-15 16:06:44.478657+00	t	t	t	t	t	t	t	t	t	t	30	31	It all looks good.	2018-09-01 06:00:00+00
-352	blog/3.html	10	2018-10-15 16:06:44.516294+00	t	t	t	t	t	t	t	t	t	t	38	39	This blog accomplished all the requirements for the assignment. The only notes I have are purely based off personal preference. I think the page looks very clean but a little more color would've added some dimension to the page.	2018-09-01 06:00:00+00
-355	blog/3.html	9	2018-10-15 16:06:44.521217+00	t	f	t	t	t	t	t	t	t	t	40	41	The validator is saying that href for your buttons are "not allowed".	2018-09-01 06:00:00+00
-354	blog/3.html	10	2018-10-15 16:06:44.5195+00	t	t	t	t	t	t	t	t	t	t	39	38	This page looks great! No changes are needed.	2018-09-01 06:00:00+00
-353	blog/3.html	9	2018-10-15 16:06:44.51791+00	t	t	t	t	t	f	t	t	t	t	39	37	Forgot to put images	2018-09-01 06:00:00+00
-358	blog/3.html	10	2018-10-15 16:06:44.526003+00	t	t	t	t	t	t	t	t	t	t	41	42	No issues from what I can see. Page looks nice!	2018-09-01 06:00:00+00
-308	blog/3.html	10	2018-10-15 16:06:44.442904+00	t	t	t	t	t	t	t	t	t	t	23	22	No issues! Great job, it looks amazing and very advanced!	2018-09-01 06:00:00+00
-351	blog/3.html	9	2018-10-15 16:06:44.514744+00	t	t	t	t	f	t	t	t	t	t	38	37	Everything looked good maybe add some color to background.	2018-09-01 06:00:00+00
-313	blog/3.html	10	2018-10-15 16:06:44.451258+00	t	t	t	t	t	t	t	t	t	t	25	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-320	blog/3.html	10	2018-10-15 16:06:44.462702+00	t	t	t	t	t	t	t	t	t	t	27	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-323	blog/3.html	9	2018-10-15 16:06:44.467568+00	t	t	t	t	t	t	f	t	t	t	28	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-346	blog/3.html	10	2018-10-15 16:06:44.506486+00	t	t	t	t	t	t	t	t	t	t	36	33	I think this looks really good! I think your image is a tad bit too big, but other than that I think it is perfect	2018-09-01 06:00:00+00
-356	blog/3.html	9	2018-10-15 16:06:44.522845+00	t	f	t	t	t	t	t	t	t	t	40	42	No issues from what I can see. However, there's just some problems that came up with the validator. Lines 52, 68 and 85 had some issues with the buttons but I wouldn't worry about it too much since it's just upset about the href tags.	2018-09-01 06:00:00+00
-311	blog/3.html	0	2018-10-15 16:06:44.447821+00	f	f	f	f	f	f	f	f	f	f	24	22	you have a 404 error, so I am not able to access your page.	2018-09-01 06:00:00+00
-316	blog/3.html	9	2018-10-15 16:06:44.456095+00	t	t	t	t	t	f	t	t	t	t	26	25	No photos\r\nThe marketing pitch was weak\r\nTypos	2018-09-01 06:00:00+00
-322	blog/3.html	9	2018-10-15 16:06:44.465975+00	t	f	t	t	t	t	t	t	t	t	28	25	You probably have the best visual appeal I've seen!\r\n The only issue was with validating the images.	2018-09-01 06:00:00+00
-315	blog/3.html	10	2018-10-15 16:06:44.454471+00	t	t	t	t	t	t	t	t	t	t	25	28	Everything looks fine! I would just suggest using paddings on the images to separate them from the buttons.	2018-09-01 06:00:00+00
-318	blog/3.html	9	2018-10-15 16:06:44.459355+00	t	t	t	t	t	f	t	t	t	t	26	28	Nice page! Just the images were missing.	2018-09-01 06:00:00+00
-321	blog/3.html	10	2018-10-15 16:06:44.464328+00	t	t	t	t	t	t	t	t	t	t	27	28	Eveything was fine!	2018-09-01 06:00:00+00
-303	blog/3.html	0	2018-10-15 16:06:44.434714+00	f	f	f	f	f	f	f	f	f	f	21	24	Nothing is available. 404 code is found.	2018-09-01 06:00:00+00
-306	blog/3.html	10	2018-10-15 16:06:44.439688+00	t	t	t	t	t	t	t	t	t	t	22	24	Looks great.	2018-09-01 06:00:00+00
-309	blog/3.html	10	2018-10-15 16:06:44.444502+00	t	t	t	t	t	t	t	t	t	t	23	24	I wanna travel with you bro. Let me book a trip!	2018-09-01 06:00:00+00
-317	blog/3.html	8	2018-10-15 16:06:44.457737+00	t	t	t	t	t	f	t	t	t	f	26	27	No images	2018-09-01 06:00:00+00
-325	blog/3.html	6	2018-10-15 16:06:44.471923+00	t	f	f	t	t	f	t	f	t	t	29	30	Two small tag errors in validator\r\nMissing images of destination\r\nMissing header\r\nMissing descriptions of destinations and option packages	2018-09-01 06:00:00+00
-332	blog/3.html	8	2018-10-15 16:06:44.483518+00	t	t	f	t	t	t	t	f	t	t	31	30	Missing jumbotrons\r\nMissing header/banner	2018-09-01 06:00:00+00
-338	blog/3.html	10	2018-10-15 16:06:44.493301+00	t	t	t	t	t	t	t	t	t	t	33	35	Perfect. Although I would find it more appealing if the box content aligned.	2018-09-01 06:00:00+00
-341	blog/3.html	0	2018-10-15 16:06:44.498352+00	f	f	f	f	f	f	f	f	f	f	34	35	The page is not displaying. 0/10	2018-09-01 06:00:00+00
-348	blog/3.html	10	2018-10-15 16:06:44.509632+00	t	t	t	t	t	t	t	t	t	t	36	35	Great work!	2018-09-01 06:00:00+00
-327	blog/3.html	9	2018-10-15 16:06:44.47533+00	t	f	t	t	t	t	t	t	t	t	29	32	There is a warning that u might want to add lang attribute. And an error about line 187	2018-09-01 06:00:00+00
-330	blog/3.html	10	2018-10-15 16:06:44.480293+00	t	t	t	t	t	t	t	t	t	t	30	32	No errors, very cool and unique page!	2018-09-01 06:00:00+00
-333	blog/3.html	10	2018-10-15 16:06:44.485142+00	t	t	t	t	t	t	t	t	t	t	31	32	No errors, very cool page!	2018-09-01 06:00:00+00
-339	blog/3.html	10	2018-10-15 16:06:44.49492+00	t	t	t	t	t	t	t	t	t	t	33	36	page looks professional and very visually appealing I'm not sure I would have chosen those pictures but they work also check spelling on B.E S.P.O.N.T.A.N.E.O.U.S	2018-09-01 06:00:00+00
-342	blog/3.html	0	2018-10-15 16:06:44.499935+00	f	f	f	f	f	f	f	f	f	f	34	36	the page doesn't exist but other than that free of problems	2018-09-01 06:00:00+00
-340	blog/3.html	0	2018-10-15 16:06:44.49659+00	f	f	f	f	f	f	f	f	f	f	34	33	No blog	2018-09-01 06:00:00+00
-343	blog/3.html	9	2018-10-15 16:06:44.501543+00	t	t	t	t	t	f	t	t	t	t	35	33	Looks great! I would use your company! I like the size of your picture! You just need to add 3 pictures to preview the place we would be traveling to!	2018-09-01 06:00:00+00
-337	blog/3.html	8	2018-10-15 16:06:44.491688+00	t	t	t	t	t	t	f	t	f	t	33	34	Overall, great! Just no link to the main menu and no JavaScript controls.	2018-09-01 06:00:00+00
-347	blog/3.html	8	2018-10-15 16:06:44.508067+00	t	f	t	t	t	t	f	t	t	t	36	34	4 errors listed on validator.org. No JavaScript controls.	2018-09-01 06:00:00+00
-334	blog/3.html	10	2018-10-15 16:06:44.486746+00	t	t	t	t	t	t	t	t	t	t	32	29	Great page, I really liked this one.\r\n\r\nJust check the validator. It says there's an issue with a <small> tag being used inside a <img> tag. This is a minor issue since it can't be identified by looking at the page, but you still might be interested in fixing it.	2018-09-01 06:00:00+00
-405	index.html	0	2018-10-19 13:52:52.453938+00	f	f	f	f	f	f	f	f	f	f	42	19	Link did not work.	2018-09-01 06:00:00+00
-305	blog/3.html	5	2018-10-15 16:06:44.438013+00	t	f	f	t	f	f	t	t	t	f	22	23	HTML does not validate\r\nMissing images/photos\r\nLacks visual appeal\r\nNo call to action or sales pitch	2018-09-01 06:00:00+00
-249	blog/3.html	10	2018-10-15 16:06:44.346873+00	t	t	t	t	t	t	t	t	t	t	3	4	Everything looks great you have a warning in valid HTML but it's not an error.	2018-09-01 06:00:00+00
-216	blog/2.html	9	2018-10-15 16:02:30.654104+00	t	f	t	t	t	t	t	t	t	t	32	31	The validator doesn't like the allowfullscreen="yes" attribute. Otherwise looks good.	2018-09-01 06:00:00+00
-350	blog/3.html	9	2018-10-15 16:06:44.513096+00	t	t	t	t	f	t	t	t	t	t	37	39	This blog accomplished everything listed on the assignment requirements. The only issue I found personally was the color choice for the background. I find this color to be a little too bright, I would go for a light, neutral tones in the future.	2018-09-01 06:00:00+00
-134	blog/2.html	10	2018-10-15 16:02:30.516462+00	t	t	t	t	t	t	t	t	t	t	5	7	I did not find any problems. It works as it should.\r\nOne improvement may be making the background for the text in your blog lighter in color so it would be easier to read.	2018-09-01 06:00:00+00
-349	blog/3.html	10	2018-10-15 16:06:44.511273+00	t	t	t	t	t	t	t	t	t	t	37	38	I love the way this page looks! The colors go together so well. No changes are needed.	2018-09-01 06:00:00+00
-137	blog/2.html	8	2018-10-15 16:02:30.523127+00	t	f	t	f	t	t	t	t	t	t	6	7	Missing valid HTML. Your HTML is missing the proper language tag of en. It is also missing the <!DOCTYPE html> tag which declulars the type of document for the browser.\r\nMissing CSS styling.\r\nVisual appeal is lacking because of the missing CSS.\r\nAn image was required for this assignment. You did include one but it failed to load.\r\nAlso, you might consider using more paragraphs to make it easier to read and maybe a link to your home page. \r\nOther than that, it looks solid.	2018-09-01 06:00:00+00
-237	blog/2.html	9	2018-10-15 16:02:30.68735+00	t	t	t	t	t	f	t	t	t	t	41	40	Page looks good,\r\nonly apparent issue is that there is no profile picture present	2018-09-01 06:00:00+00
-236	blog/2.html	10	2018-10-15 16:02:30.685812+00	t	t	t	t	t	t	t	t	t	t	40	42	Overall, I thought the page was well designed. I think the only issues were the spacing of the sections (self image included) and the colors. Perhaps the navigation could be aligned to the left of the page rather than the middle.	2018-09-01 06:00:00+00
-193	blog/2.html	10	2018-10-15 16:02:30.616135+00	t	t	t	t	t	t	t	t	t	t	25	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-180	blog/2.html	0	2018-10-15 16:02:30.594313+00	f	f	f	f	f	f	f	f	f	f	20	19	Link did not work.	2018-09-01 06:00:00+00
-357	blog/3.html	8	2018-10-15 16:06:44.524419+00	t	f	t	t	t	t	t	f	t	t	41	40	Page was good but validator returned two errors for the footer and the div sections\r\nError: End tag footer seen, but there were open elements.\r\n\r\nFrom line 95, column 7; to line 95, column 15\r\n\r\niv>↩      </footer>↩    <\r\n\r\nError: Unclosed element div.\r\n\r\nFrom line 90, column 9; to line 90, column 25\r\n\r\n>↩        <div class="row">↩	2018-09-01 06:00:00+00
-285	blog/3.html	8	2018-10-15 16:06:44.4052+00	t	f	f	t	t	t	t	t	t	t	15	16	The page is appealing! Your HTML was not valid. There were 6 errors and 1 warning that need to be fixed. I noticed that you did not have a name for your company on the page content. Otherwise great job!!	2018-09-01 06:00:00+00
-359	blog/3.html	9	2018-10-15 16:06:44.527637+00	t	f	t	t	t	t	t	t	t	t	42	40	I thought your page was excellent and very well designed! Good job on that front, only issue is with the HTML validator. Be sure to check it because it returned quite a few errors with your page. Good job	2018-09-01 06:00:00+00
-153	blog/2.html	0	2018-10-15 16:02:30.549253+00	f	f	f	f	f	f	f	f	f	f	11	12	Your page is still either nonexistent or exists at the wrong URL. Your page should be in a folder titled "blog" and the page should be named "2.html".	2018-09-01 06:00:00+00
-270	blog/3.html	9	2018-10-15 16:06:44.38093+00	t	t	t	t	t	t	t	t	f	t	10	12	I love this! Overall great job! This made me grin.\r\n\r\nSome minor issues:\r\n- Your large image seems to be stretched too wide so that the proportions are messed up.\r\n- The links a the top of your site are incomplete.\r\n- There is no main menu on this page.	2018-09-01 06:00:00+00
-245	blog/3.html	8	2018-10-15 16:06:44.340124+00	t	f	t	t	t	t	t	t	f	t	2	3	fix validator problems\r\ncould add home page hyperlink\r\ncould add more info like about the company and so forth to look more official but good overall	2018-09-01 06:00:00+00
-284	blog/3.html	10	2018-10-15 16:06:44.403597+00	t	t	t	t	t	t	t	t	t	t	15	14	Your page is very physically appealing! I think the different colors are very effective and draw in the audience. I think this is a very good webpage!	2018-09-01 06:00:00+00
-234	blog/2.html	8	2018-10-15 16:02:30.682543+00	t	f	t	t	t	t	t	t	f	t	39	38	Looks good, but still has the same errors. There are just a few HTML issues to fix and there is no main menu.	2018-09-01 06:00:00+00
-268	blog/3.html	9	2018-10-15 16:06:44.377688+00	t	t	t	t	t	t	f	t	t	t	10	9	Darn! I love the page man hahahha south park reference is awesome. The only thing that came up for me on the validator is your line 47 where the main role is unnecessary for element main. \r\nI had this problem and I fixed it by putting main under the right descendent but I'm not to sure if that is the problem you are facing. Other than than I love the site and keep it up! Also Could you re update your review on my blog 2? I fixed all HTML valdiators	2018-09-01 06:00:00+00
-157	blog/2.html	6	2018-10-15 16:02:30.556013+00	t	t	t	f	f	f	f	t	t	t	13	14	It looks very neat and professional, but maybe you could mix it up and add some color and photos! Your content is good but I think you could make the page pop a little more!	2018-09-01 06:00:00+00
-136	blog/2.html	5	2018-10-15 16:02:30.521123+00	t	f	t	f	f	f	t	f	t	t	6	5	The validator returns errors, so the page does not have valid HTML. There is no CSS styling used, therefore it appears as bland and basic HTML. The image on the page did not load meaning it is not properly connected to the page. There is also no banner, main, or footer regions in the HTML source code.	2018-09-01 06:00:00+00
-104	blog/2.html	5	2018-10-10 13:21:18.360271+00	t	f	t	f	t	f	f	t	f	t	35	34	Two HTML errors, both relating to the image. Stylesheet is included in the head of the HTML, but little to no styling has been done. Image HTML is incorrect (bad value for width, no alt text). No JavaScript included. No links to main menu, home, etc.	2018-09-01 06:00:00+00
-151	blog/2.html	0	2018-10-15 16:02:30.546078+00	f	f	f	f	f	f	f	f	f	f	11	9	no url\r\n\r\ncould you edit your review of my blog 2? I made a menu so now you can visit my homepage, thank you!	2018-09-01 06:00:00+00
-411	index.html	8	2018-10-19 13:52:52.463958+00	t	f	t	t	f	t	t	t	t	t	2	23	<title>Cover Template for Bootstrap</title>\r\n\r\nDoes not validate:\r\nFatal Error: Cannot recover after last error. Any further errors will be ignored.\r\n\r\nMight want to consider resizing image,	2018-09-01 06:00:00+00
-409	index.html	9	2018-10-19 13:52:52.460663+00	t	f	t	t	t	t	t	t	t	t	2	25	Just two invalid pieces of code.\r\nError: style element between head and body.\r\n\r\nFrom line 24, column 3; to line 24, column 9\r\n\r\n</head>↩  <style> ↩    \r\n\r\nFatal Error: Cannot recover after last error. Any further errors will be ignored.\r\n\r\nFrom line 24, column 3; to line 24, column 9\r\n\r\n</head>↩  <style> ↩	2018-09-01 06:00:00+00
-410	index.html	10	2018-10-19 13:52:52.462354+00	t	t	t	t	t	t	t	t	t	t	2	14	You must type a summary of problems.	2018-09-01 06:00:00+00
-408	index.html	10	2018-10-19 13:52:52.458983+00	t	t	t	t	t	t	t	t	t	t	19	42	No problems here.	2018-09-01 06:00:00+00
-407	index.html	8	2018-10-19 13:52:52.45724+00	t	t	f	t	f	t	t	t	t	t	19	37	The quizzes page doesn't work and just maybe add some more color	2018-09-01 06:00:00+00
-406	index.html	10	2018-10-19 13:52:52.455562+00	t	t	t	t	t	t	t	t	t	t	19	16	Great Job!	2018-09-01 06:00:00+00
-274	blog/3.html	8	2018-10-15 16:06:44.38749+00	t	t	t	t	t	f	t	t	t	f	12	9	Hey Russ, I just finished up re-editing my blog 2, I'd appreciate it if you went back to your review and updated it because I made sure everything was right. Let me know what you think.\r\n\r\nFor you blog 3 I found nothing wrong with your html validator and the only thing I would have to say is to fix the layout of your page. It looks good but you need to make the pricing centered and also make sure to add 3 pictures. Also add more about your business and you should be good	2018-09-01 06:00:00+00
-196	blog/2.html	5	2018-10-15 16:02:30.62117+00	t	f	t	f	f	f	f	t	t	t	26	25	There were a few issues with validating the html.\r\n1.This document appears to be written in English. Consider adding lang="en" (or variant) to the html start tag.\r\n2.The paragraph elements should not be nested within the h1 element. You should close the h1 element before beginning paragraphs. That should help making the page a little easier to read.	2018-09-01 06:00:00+00
-256	blog/3.html	9	2018-10-15 16:06:44.35824+00	t	t	f	t	t	t	t	t	t	t	6	5	There does not appear to be a logo for the company. Also, there are several spelling errors. Otherwise, the page is good. You may want to consider adding your own additional styling to make your page more unique.	2018-09-01 06:00:00+00
-259	blog/3.html	9	2018-10-15 16:06:44.362965+00	t	t	t	t	f	t	t	t	t	t	7	5	This page is very close to correct. However, the changes made to the bootstrap template make the page appear more like basic html. Specifically the top half of the page looks like it was made with hardly any CSS styling. Using bootstrap templates can help to build visually appealing websites with minimal effort.	2018-09-01 06:00:00+00
-156	blog/2.html	9	2018-10-15 16:02:30.554425+00	t	f	t	t	t	t	t	t	t	t	12	11	The only thing I would go about fixing is validating your html!	2018-09-01 06:00:00+00
-191	blog/2.html	9	2018-10-15 16:02:30.612704+00	t	t	t	t	t	f	t	t	t	t	24	22	Looks good, you might just want to correct the 8 errors that show when you go to the validating testing site. That might resolve the issue with your image.	2018-09-01 06:00:00+00
-301	blog/3.html	0	2018-10-15 16:06:44.431471+00	f	f	f	f	f	f	f	f	f	f	21	22	You have a 404 error and I am not able to view you page. please resolve this issue so you can get the points. Make sure you understand where you are putting the files and what folders you are using on your cpanel.	2018-09-01 06:00:00+00
-319	blog/3.html	9	2018-10-15 16:06:44.461033+00	t	f	t	t	t	t	t	t	t	t	27	25	The only problem was validating the html on one of the images\r\n\r\nError: Bad value /Ayia Napa .jpg for attribute src on element img: Illegal character in path segment: space is not allowed.\r\n\r\nFrom line 49, column 4; to line 49, column 76\r\n\r\ns</p>↩↩<p><img alt="" src="/Ayia Napa .jpg" style="width: 200px; height: 200px;" /></p>↩<	2018-09-01 06:00:00+00
-220	blog/2.html	8	2018-10-15 16:02:30.660425+00	t	t	t	t	t	t	f	f	t	t	34	33	No javascript controls, no banner. I think that your blog was great! Maybe add a background color, a fun font or color to make your blog more personable! I would edit your copyright to display your name instead of your bear #. I would also consider moving your links to the bottom of the page, so your page is in logical order (title, content, links, and footer). I would also remove the word count! Overall, I really liked your argument and the size of your picture. I thought your example rounded out everything perfectly!	2018-09-01 06:00:00+00
-100	blog/2.html	8	2018-10-10 13:21:18.354496+00	t	t	t	t	t	t	f	f	t	t	34	33	I think that your blog was great! Maybe add a background color, a fun font or color to make your blog more personable! I would edit your copyright to display your name instead of your bear #. I would also consider moving your links to the bottom of the page, so your page is in logical order (title, content, links, and footer). I would also remove the word count! Overall, I really liked your argument and the size of your picture. I thought your example rounded out everything perfectly!	2018-09-01 06:00:00+00
-197	blog/2.html	9	2018-10-15 16:02:30.622847+00	t	f	t	t	t	t	t	t	t	t	26	27	Warning: This document appears to be written in English. Consider adding lang="en" (or variant) to the html start tag.\r\n\r\nFrom line 1, column 20; to line 2, column 10\r\n\r\ntype html>↩    <html>↩     \r\n\r\nFor further guidance, consult Declaring the overall language of a page and Choosing language tags.\r\n\r\nIf the HTML checker has misidentified the language of this document, please file an issue report or send e-mail to report the problem.\r\n\r\nError: The character encoding was not declared. Proceeding using windows-1252.\r\n\r\nhttp://irb.wpr.mybluehost.me/blog/2.html\r\n\r\nError: Element p1 not allowed as child of element h1 in this context. (Suppressing further errors from this subtree.)\r\n\r\nFrom line 8, column 13; to line 8, column 16\r\n\r\n          <p1>Ethics\r\n\r\nError: Element p2 not allowed as child of element h1 in this context. (Suppressing further errors from this subtree.)\r\n\r\nFrom line 10, column 13; to line 10, column 16\r\n\r\n          <p2>At the\r\n\r\nError: Element p3 not allowed as child of element h1 in this context. (Suppressing further errors from this subtree.)\r\n\r\nFrom line 12, column 13; to line 12, column 16\r\n\r\n          <p3>The mo	2018-09-01 06:00:00+00
-314	blog/3.html	9	2018-10-15 16:06:44.452779+00	t	t	t	t	t	f	t	t	t	t	25	27	Error: Bad value 70px for attribute width on element img: Expected a digit but saw p instead.\r\n\r\nFrom line 22, column 7; to line 22, column 69\r\n\r\ndy>↩      <img src="logo.png" alt="logo" width="70px" style="float:left">↩    <	2018-09-01 06:00:00+00
-324	blog/3.html	9	2018-10-15 16:06:44.469192+00	t	t	t	t	t	f	t	t	t	t	28	27	Bad value 300px for attribute width on element img: Expected a digit but saw p instead.\r\n\r\nFrom line 22, column 54; to line 22, column 100\r\n\r\nt-normal"><img src="3/logo.png" width="300px" alt="Logo"></h5>↩\r\n\r\nError: Bad value 100% for attribute width on element img: Expected a digit but saw % instead.\r\n\r\nFrom line 40, column 13; to line 40, column 60\r\n\r\n          <img src="3/c1.png" width="100%" alt="Cancun 1">↩     \r\n\r\nError: Bad value 100% for attribute width on element img: Expected a digit but saw % instead.\r\n\r\nFrom line 43, column 13; to line 43, column 60\r\n\r\n          <img src="3/c2.jpg" width="100%" alt="Cancun 2">↩     \r\n\r\nError: Bad value 100% for attribute width on element img: Expected a digit but saw % instead.\r\n\r\nFrom line 46, column 13; to line 46, column 60\r\n\r\n          <img src="3/c3.jpg" width="100%" alt="Cancun 3">↩     \r\n\r\nError: Stray end tag small.\r\n\r\nFrom line 88, column 59; to line 88, column 66\r\n\r\nitle">$500</small></h1>↩	2018-09-01 06:00:00+00
-13	blog/2.html	9	2018-10-10 13:21:18.229849+00	t	t	t	t	t	f	t	t	t	t	5	6	Overall this page and blog are very well done, you have fantastic CSS styling and the page as a whole is very nice looking. You met all the requirements and the page validates beautifully, the only thing that you were missing is the image for the blog its self, beyond that awesome job! keep it up, man.	2018-09-01 06:00:00+00
-133	blog/2.html	10	2018-10-15 16:02:30.514217+00	t	t	t	t	t	t	t	t	t	t	5	6	You must type a summaOverall this page and blog are very well done, you have fantastic CSS styling and the page as a whole is very nice looking. You met all the requirements and the page validates beautifully, the only thing that you were missing is the image for the blog its self, beyond that awesome job! keep it up, man.	2018-09-01 06:00:00+00
-161	blog/2.html	9	2018-10-15 16:02:30.56268+00	t	t	t	t	t	t	f	t	t	t	14	15	I don't see any java script controls. There is an image on the website but I don't quite see the connection with business ethics. I am unsure on whether I should grade on the purpose of that image or that the image is there.	2018-09-01 06:00:00+00
-244	blog/3.html	10	2018-10-15 16:06:44.338333+00	t	t	t	t	t	t	t	t	t	t	2	1	I loved the pictures. And presenting the three packages is creative.	2018-09-01 06:00:00+00
-278	blog/3.html	5	2018-10-15 16:06:44.393969+00	t	t	t	f	f	f	f	f	t	t	13	15	No CSS Styling, or Visual Appeal. The images were on the html but didn't have good links or alts, so it didn't show on the website. Java Script Controls were not apparent in the code. There was a footer but no main or banner (header).	2018-09-01 06:00:00+00
-41	blog/2.html	9	2018-10-10 13:21:18.270933+00	t	t	t	t	t	t	f	t	t	t	14	15	I don't see any java script controls. There is an image on the website but I don't quite see the connection with business ethics. I am unsure on whether I should grade on the purpose of that image or that the image is there.	2018-09-01 06:00:00+00
-222	blog/2.html	9	2018-10-15 16:02:30.663666+00	t	t	t	t	f	t	t	t	t	t	34	36	good content page looks good with pictures but some of the elements look squeezed could use some color and padding on the page	2018-09-01 06:00:00+00
-345	blog/3.html	10	2018-10-15 16:06:44.504854+00	t	t	t	t	t	t	t	t	t	t	35	36	page looks very good Impressed with the improvement looks good still could use a hint of color	2018-09-01 06:00:00+00
-230	blog/2.html	6	2018-10-15 16:02:30.676198+00	t	f	t	t	f	f	f	t	t	t	37	39	Overall the blog #2 requirements seemed to have been met. The only notes I have as far as visual appeal goes, concerns color choice. I think the harsh colors took away from the content. The page seems to be mostly valid. The may issue the validator found concerned the image lines of code. I've encountered the same problem with my page and getting rid of the "px" text after the width description will solve the error.	2018-09-01 06:00:00+00
-232	blog/2.html	10	2018-10-15 16:02:30.679351+00	t	t	t	t	t	t	t	t	t	t	38	39	I have very few notes for this page. It looks as though she fulfilled all the requirements for this assignment. The colors are appealing and the overall composition of the page is done well. The only criticism I have for this page concerns the image chosen. Its a little clunky and distracting. I would recommend an image that flows better with the overall theme of the page for future blogs.	2018-09-01 06:00:00+00
-344	blog/3.html	7	2018-10-15 16:06:44.503297+00	t	f	t	t	t	t	f	t	f	t	35	34	Looks great. 9 problems/warning listed on validator.org. No JavaScript controls. No link to main menu.	2018-09-01 06:00:00+00
-959	blog/5.html	10	2018-11-05 16:01:58.043698+00	t	t	t	t	t	t	t	t	t	t	27	9	Great job, I don't see any problems with your HTML code. I like how you incorporated pictures of you and your friends on trips around the world. Great views and it was probably even better in person	2018-09-01 06:00:00+00
-402	index.html	0	2018-10-19 13:52:52.448867+00	f	f	f	f	f	f	f	f	f	f	37	19	Link does not work.	2018-09-01 06:00:00+00
-400	index.html	8	2018-10-19 13:52:52.4456+00	t	t	t	f	f	t	t	t	t	t	37	16	Add some visual appeal and CSS Styling!	2018-09-01 06:00:00+00
-381	index.html	10	2018-10-19 13:52:52.41498+00	t	t	t	t	t	t	t	t	t	t	27	38	This looks great! Nice job!	2018-09-01 06:00:00+00
-403	index.html	0	2018-10-19 13:52:52.450733+00	f	f	f	f	f	f	f	f	f	f	42	16	Not found	2018-09-01 06:00:00+00
-388	index.html	10	2018-10-19 13:52:52.426265+00	t	t	t	t	t	t	t	t	t	t	35	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-391	index.html	8	2018-10-19 13:52:52.431035+00	t	t	t	f	f	t	t	t	t	t	22	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-394	index.html	10	2018-10-19 13:52:52.435862+00	t	t	t	t	t	t	t	t	t	t	30	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-363	index.html	10	2018-10-19 13:52:52.384429+00	t	t	t	t	t	t	t	t	t	t	7	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-368	index.html	9	2018-10-19 13:52:52.393535+00	t	t	t	t	f	t	t	t	t	t	10	29	Your home page looks a bit too simple, I think you can  work on it a bit more.\r\n\r\nStill it might be enough for the assignment.	2018-09-01 06:00:00+00
-382	index.html	10	2018-10-19 13:52:52.416485+00	t	t	t	t	t	t	t	t	t	t	38	20	bora bora looks amazing	2018-09-01 06:00:00+00
-370	index.html	9	2018-10-19 13:52:52.396833+00	t	f	t	t	t	t	t	t	t	t	13	7	Very clean looking home page. \r\nYour picture should be rotated and it also needs an alt attribute added so it will validate\r\nMissing a CSS styling page, but you have substantial in-sheet styling.\r\nOtherwise it looks great!\r\nOct-19-18	2018-09-01 06:00:00+00
-364	index.html	9	2018-10-19 13:52:52.38622+00	t	t	t	f	t	t	t	t	t	t	29	7	Very clean looking home page. Only missing a css styling page.\r\nOct-19-18	2018-09-01 06:00:00+00
-372	index.html	9	2018-10-19 13:52:52.400262+00	t	f	t	t	t	t	t	t	t	t	13	10	Says there is an issue with the logo	2018-09-01 06:00:00+00
-369	index.html	10	2018-10-19 13:52:52.395215+00	t	t	t	t	t	t	t	t	t	t	10	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-380	index.html	4	2018-10-19 13:52:52.413273+00	f	t	f	f	f	t	f	t	t	f	27	9	I don't see a new design for your website and I couldn't find any html errors. Website looks good I would try to update the user interface for your website and Ill re-edit my post when you do!	2018-09-01 06:00:00+00
-398	index.html	10	2018-10-19 13:52:52.442254+00	t	t	t	t	t	t	t	t	t	t	16	42	No problems here.	2018-09-01 06:00:00+00
-397	index.html	9	2018-10-19 13:52:52.440715+00	t	f	t	t	t	t	t	t	t	t	16	37	Some errors in the validator but otherwise good.	2018-09-01 06:00:00+00
-390	index.html	9	2018-10-19 13:52:52.429413+00	t	f	t	t	t	t	t	t	t	t	35	30	The validator shows a spacing error on line 9 between width and style.	2018-09-01 06:00:00+00
-401	index.html	10	2018-10-19 13:52:52.447218+00	t	t	t	t	t	t	t	t	t	t	37	42	No issues here.	2018-09-01 06:00:00+00
-386	index.html	10	2018-10-19 13:52:52.422973+00	t	t	t	t	t	t	t	t	t	t	26	22	You have the right page set up and everything looks good, but on element that seems to be unnecessary according to the validator.	2018-09-01 06:00:00+00
-393	index.html	8	2018-10-19 13:52:52.434281+00	t	t	t	f	t	t	t	f	t	t	22	30	Missing banner, missing style sheets.  Was semantic html in h1 part of a template?  I don't remember it being part of the home page.	2018-09-01 06:00:00+00
-377	index.html	10	2018-10-19 13:52:52.408365+00	t	t	t	t	t	t	t	t	t	t	9	27	perfect.	2018-09-01 06:00:00+00
-379	index.html	10	2018-10-19 13:52:52.411642+00	t	t	t	t	t	t	t	t	t	t	27	20	visual appeal is really good	2018-09-01 06:00:00+00
-384	index.html	10	2018-10-19 13:52:52.419778+00	t	t	t	t	t	t	t	t	t	t	38	27	awesome.	2018-09-01 06:00:00+00
-362	index.html	9	2018-10-19 13:52:52.38242+00	t	f	t	t	t	t	t	t	t	t	7	10	It says there is a problem with the background	2018-09-01 06:00:00+00
-385	index.html	10	2018-10-19 13:52:52.421277+00	t	t	t	t	t	t	t	t	t	t	26	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-365	index.html	10	2018-10-19 13:52:52.38804+00	t	t	t	t	t	t	t	t	t	t	29	10	Great work	2018-09-01 06:00:00+00
-392	index.html	0	2018-10-19 13:52:52.43258+00	f	f	f	f	f	f	f	f	f	f	22	35	Not yet updated css 0/10	2018-09-01 06:00:00+00
-395	index.html	10	2018-10-19 13:52:52.437487+00	t	t	t	t	t	t	t	t	t	t	30	35	great work	2018-09-01 06:00:00+00
-389	index.html	10	2018-10-19 13:52:52.427826+00	t	t	t	t	t	t	t	t	t	t	35	22	Your page looks good, but you have 3 different errors on the validator page. you might want to check those out. Its you doc type and image.	2018-09-01 06:00:00+00
-366	index.html	7	2018-10-19 13:52:52.389938+00	t	t	t	f	f	t	f	t	t	t	29	13	No CSS, also I do not see a link to your blogs	2018-09-01 06:00:00+00
-396	index.html	10	2018-10-19 13:52:52.439129+00	t	t	t	t	t	t	t	t	t	t	30	22	Looks great, seem that you page is good on the validator page as well. Only recommendation is that you should change the hard to see font colors.	2018-09-01 06:00:00+00
-404	index.html	0	2018-10-19 13:52:52.452321+00	f	f	f	f	f	f	f	f	f	f	42	37	Doesn't work	2018-09-01 06:00:00+00
-376	index.html	10	2018-10-19 13:52:52.406812+00	t	t	t	t	t	t	t	t	t	t	9	20	everything looks good	2018-09-01 06:00:00+00
-399	index.html	0	2018-10-19 13:52:52.443843+00	f	f	f	f	f	f	f	f	f	f	16	19	Link did not work.	2018-09-01 06:00:00+00
-956	blog/5.html	9	2018-11-05 16:01:58.038614+00	t	f	t	t	t	t	t	t	t	t	9	27	Error: Bad value main menu for attribute id on element nav: An ID must not contain whitespace.\r\n\r\nFrom line 109, column 13; to line 109, column 32\r\n\r\n          <nav id="main menu">↩     \r\n\r\n\r\nnice pictures.	2018-09-01 06:00:00+00
-1102	blog/6.html	10	2018-11-09 16:45:56.169042+00	t	t	t	t	t	t	t	t	t	t	10	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-1103	blog/6.html	10	2018-11-09 16:45:56.170655+00	t	t	t	t	t	t	t	t	t	t	10	28	Interesting! Next time try to write the code instead of uploading pictures of it	2018-09-01 06:00:00+00
-454	index.html	0	2018-10-19 13:52:52.533441+00	f	f	f	f	f	f	f	f	f	f	12	3	not right url so can't tell what you did or did not do corectly	2018-09-01 06:00:00+00
-434	index.html	9	2018-10-19 13:52:52.501277+00	t	t	t	t	t	t	t	f	t	t	32	40	pretty good you might consider including a banner and some footer content	2018-09-01 06:00:00+00
-437	index.html	9	2018-10-19 13:52:52.506085+00	t	t	t	t	t	t	t	f	t	t	33	40	Good job you might consider adding a footer and a banner with some content	2018-09-01 06:00:00+00
-436	index.html	10	2018-10-19 13:52:52.504494+00	t	t	t	t	t	t	t	t	t	t	33	32	No errors, nice page!	2018-09-01 06:00:00+00
-443	index.html	7	2018-10-19 13:52:52.515873+00	t	t	t	f	f	t	f	t	t	t	6	33	I think you can consider adding either CSS styling or some of the stuff we learned in the last few projects. Let me know when you make some changes, and personalize your page and I'll be happy to review it again! :)	2018-09-01 06:00:00+00
-442	index.html	7	2018-10-19 13:52:52.514305+00	t	t	t	f	t	t	t	f	f	t	6	32	No css styling or banner, main, and footer, but no errors	2018-09-01 06:00:00+00
-457	index.html	10	2018-10-19 13:52:52.538301+00	t	t	t	t	t	t	t	t	t	t	5	4	I really like the back ground in your home page. Could add it to your Projects Page.	2018-09-01 06:00:00+00
-464	index.html	8	2018-10-19 13:52:52.5498+00	t	t	t	t	f	t	t	f	t	t	1	4	You might want to add a Nav bar.	2018-09-01 06:00:00+00
-423	index.html	10	2018-10-19 13:52:52.483616+00	t	t	t	t	t	t	t	t	t	t	34	28	Nice job! Good page	2018-09-01 06:00:00+00
-417	index.html	6	2018-10-19 13:52:52.473978+00	t	t	t	f	f	t	t	f	f	t	14	23	No Style Sheets\r\nNo Visual Appeal\r\nNo Banner\r\nNo Main Menu	2018-09-01 06:00:00+00
-418	index.html	9	2018-10-19 13:52:52.475582+00	t	f	t	t	t	t	t	t	t	t	23	2	Fix HTML for full credit	2018-09-01 06:00:00+00
-458	index.html	10	2018-10-19 13:52:52.539846+00	t	t	t	t	t	t	t	t	t	t	5	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-471	index.html	10	2018-10-19 13:52:52.561177+00	t	t	t	t	t	t	t	t	t	t	31	18	I am not sure if we are supposed to be reviewing the homepage but that is where the link took me. I like the blue color used in the header.	2018-09-01 06:00:00+00
-445	index.html	10	2018-10-19 13:52:52.519099+00	t	t	t	t	t	t	t	t	t	t	3	17	I enjoyed your blog 4	2018-09-01 06:00:00+00
-420	index.html	9	2018-10-19 13:52:52.478766+00	t	t	t	t	f	t	t	t	t	t	23	14	Visual appeal could be improved	2018-09-01 06:00:00+00
-428	index.html	9	2018-10-19 13:52:52.491607+00	t	t	t	t	f	t	t	t	t	t	36	24	Looks good Weston! I would probably tone down the background image size. It is kind of intimidating.	2018-09-01 06:00:00+00
-425	index.html	7	2018-10-19 13:52:52.486871+00	f	f	t	f	t	t	t	t	t	t	24	36	link doesnt look like its going to the right page image is a bit out of proportion and page could use some color	2018-09-01 06:00:00+00
-426	index.html	9	2018-10-19 13:52:52.488518+00	t	t	t	f	t	t	t	t	t	t	24	28	Nice page! Just add some CSS	2018-09-01 06:00:00+00
-427	index.html	9	2018-10-19 13:52:52.490033+00	t	f	t	t	t	t	t	t	t	t	36	34	Very few issues with the images' HTML on validator.org. I think that there is JavaScript? The images rotate on a carousel.	2018-09-01 06:00:00+00
-432	index.html	10	2018-10-19 13:52:52.49814+00	t	t	t	t	t	t	t	t	t	t	28	36	page is beautiful love the colors and the responsive love it	2018-09-01 06:00:00+00
-429	index.html	10	2018-10-19 13:52:52.493244+00	t	t	t	t	t	t	t	t	t	t	36	28	Awesome page! I loved the tabbed view!	2018-09-01 06:00:00+00
-430	index.html	10	2018-10-19 13:52:52.494882+00	t	t	t	t	t	t	t	t	t	t	28	34	No comments. Beautiful page.	2018-09-01 06:00:00+00
-431	index.html	8	2018-10-19 13:52:52.49651+00	t	t	t	t	f	f	t	t	t	t	28	24	Looks good, right content, get a selfie image up there.	2018-09-01 06:00:00+00
-422	index.html	9	2018-10-19 13:52:52.481995+00	t	t	t	t	f	t	t	t	t	t	34	36	page could use some color but other than that good	2018-09-01 06:00:00+00
-465	index.html	6	2018-10-19 13:52:52.551434+00	t	t	t	f	t	t	f	f	t	f	1	39	This student hasn't yet applied the templates from bootstrap but it has the basic  requirements filled. The content of the page and the html are all valid. The page is just lacking the CSS styling and java script controls that would make the page appear more legit.	2018-09-01 06:00:00+00
-435	index.html	10	2018-10-19 13:52:52.502879+00	t	t	t	t	t	t	t	t	t	t	32	6	The homepage looks nice! well done, the only thing I had an issue with was one of the buttons did not want to work at first.	2018-09-01 06:00:00+00
-413	index.html	10	2018-10-19 13:52:52.467324+00	t	t	t	t	t	t	t	t	t	t	25	14	You must type a summary of problems.	2018-09-01 06:00:00+00
-441	index.html	10	2018-10-19 13:52:52.512645+00	t	t	t	t	t	t	t	t	t	t	40	6	Nicely done! your webpage looks great and its easy to follow/navigate!	2018-09-01 06:00:00+00
-455	index.html	10	2018-10-19 13:52:52.535214+00	t	t	t	t	t	t	t	t	t	t	12	17	your blog 4 is really nice and well established.	2018-09-01 06:00:00+00
-453	index.html	5	2018-10-19 13:52:52.531821+00	t	t	t	f	f	t	f	f	t	f	21	12	All the required info is there, but this page could use some color and CSS formatting.	2018-09-01 06:00:00+00
-419	index.html	9	2018-10-19 13:52:52.477169+00	t	f	t	t	t	t	t	t	t	t	23	25	Just one issue with the Validator\r\nError: CSS: float: both is not a float value.\r\n\r\nFrom line 15, column 9; to line 15, column 32\r\n\r\n>↩        <h2 style="float: both">Ben</h	2018-09-01 06:00:00+00
-415	index.html	7	2018-10-19 13:52:52.470869+00	t	t	t	f	f	t	t	f	t	t	14	2	Could be more visually appealing	2018-09-01 06:00:00+00
-452	index.html	0	2018-10-19 13:52:52.53028+00	f	f	f	f	f	f	f	f	f	f	21	17	I dont see anything.	2018-09-01 06:00:00+00
-439	index.html	9	2018-10-19 13:52:52.509456+00	t	f	t	t	t	t	t	t	t	t	40	32	1 error look at line 65	2018-09-01 06:00:00+00
-467	index.html	9	2018-10-19 13:52:52.554822+00	t	t	t	t	t	t	t	t	f	t	39	4	I saw that your blog 3 has a Nav Bar. Might want to add it to your home page.	2018-09-01 06:00:00+00
-461	index.html	9	2018-10-19 13:52:52.545032+00	t	t	t	t	t	t	f	t	t	t	4	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-468	index.html	9	2018-10-19 13:52:52.556375+00	t	t	t	t	t	t	f	t	t	t	39	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-466	index.html	8	2018-10-19 13:52:52.553102+00	t	t	t	f	f	t	t	t	t	t	39	5	This page does not have any CSS styling and therefore lacks visual appeal. It is just basic html.	2018-09-01 06:00:00+00
-447	index.html	6	2018-10-19 13:52:52.522292+00	t	t	t	t	f	t	f	f	t	f	3	12	This is a great start but I think you could do a bit more with fonts, color, and format to really make it your own.	2018-09-01 06:00:00+00
-421	index.html	10	2018-10-19 13:52:52.480329+00	t	t	t	t	t	t	t	t	t	t	34	24	Bingo.	2018-09-01 06:00:00+00
-460	index.html	9	2018-10-19 13:52:52.543169+00	t	f	t	t	t	t	t	t	t	t	4	5	There is a large number of issues that come up when you put the website through the html validator.	2018-09-01 06:00:00+00
-469	index.html	9	2018-10-19 13:52:52.558+00	t	f	t	t	t	t	t	t	t	t	18	31	Html isn't valid. Just get rid of the "role="main"" thing and it should be good.	2018-09-01 06:00:00+00
-451	index.html	1	2018-10-19 13:52:52.528599+00	f	f	f	f	f	f	t	f	f	f	21	3	not right URL so i can't tell what you did right or wrong	2018-09-01 06:00:00+00
-957	blog/5.html	9	2018-11-05 16:01:58.040329+00	t	f	t	t	t	t	t	t	t	t	9	38	Looks great! Very creative! There is only one HTML issue to fix (bad value main menu for attribute id on element nav on line 109). Besides this, the page was perfect!	2018-09-01 06:00:00+00
-1079	blog/3.html	10	2018-11-07 06:19:19.655408+00	t	t	t	t	t	t	t	t	t	t	28	27	You must type a summary of problems.	2018-09-01 06:00:00+00
-481	blog/3.html	8	2018-10-19 16:37:36.705604+00	t	f	t	t	t	t	t	t	f	t	1	3	fix validation problems\r\ncould add more to it css and images wise but very good	2018-09-01 06:00:00+00
-360	blog/3.html	8	2018-10-15 16:06:44.529322+00	t	t	t	t	t	f	t	f	t	t	42	41	Looks good really like the layout of the brochure. For your images take out the px on your width, the spaces between " and image in line 37, and take out the 2nd img in your img class line because it doesn't need to be repeated. In your img cover there is a period that make it look like: img. cover, therefore just take out the period in between. On your <div class> at the end of the tag, there is a stray div (it is after background) so just delete it. At the end there is a stray footer.	2018-09-01 06:00:00+00
-463	index.html	7	2018-10-19 13:52:52.548238+00	t	t	f	f	f	t	t	t	t	t	1	5	The page is missing links to all of the blogs. The page is missing CSS styling and as a result is missing visual appeal. It is just plain html.	2018-09-01 06:00:00+00
-474	index.html	10	2018-10-19 13:52:52.565979+00	t	t	t	t	t	t	t	t	t	t	41	31	It all looks good.	2018-09-01 06:00:00+00
-367	index.html	8	2018-10-19 13:52:52.391776+00	t	f	t	f	t	t	t	t	t	t	10	7	Very clean looking home page. \r\nThere is one error in the validator. It is with the image you have. The width is a plane number when used as in-sheet styling. When it is in the CSS page it will have the px attribute added to it\r\nAnd missing a CSS styling page.\r\nOtherwise it looks great!\r\nOct-19-18	2018-09-01 06:00:00+00
-373	index.html	3	2018-10-19 13:52:52.401908+00	t	f	t	f	f	f	f	f	t	f	20	9	I don't see your img of the bear logo on your home page. You should try to add a CSS sytle to your homepage from the brackets website! They have examples that allow you to view their code (CTRL U) and edit their code to your liking. You have some errors in your html validator so I would start with those then Check out brackets or the Home Page guideline in Seamansguide	2018-09-01 06:00:00+00
-472	index.html	10	2018-10-19 13:52:52.562791+00	t	t	t	t	t	t	t	t	t	t	31	41	All looks good from the vaildator point of view. Maybe update your home page so that is uses css stuff we have been learning about.	2018-09-01 06:00:00+00
-480	index.html	6	2018-10-19 13:52:52.57607+00	t	f	t	f	f	t	f	t	t	t	8	15	Validator for the html had a fatal error when referring to the subscribe.php action. No styling present, visual appeal lacking. No .js controls.	2018-09-01 06:00:00+00
-1107	blog/6.html	10	2018-11-09 16:45:56.177094+00	t	t	t	t	t	t	t	t	t	t	28	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-1108	blog/6.html	9	2018-11-09 16:45:56.17866+00	t	f	t	t	t	t	t	t	t	t	28	10	a couple of html issues	2018-09-01 06:00:00+00
-544	blog/4.html	10	2018-10-22 16:07:31.484139+00	t	t	t	t	t	t	t	t	t	t	38	27	Good.	2018-09-01 06:00:00+00
-448	index.html	0	2018-10-19 13:52:52.52382+00	f	f	f	f	f	f	f	f	f	f	17	3	not right URL so i can't tell what you did right or wrong	2018-09-01 06:00:00+00
-470	index.html	9	2018-10-19 13:52:52.559566+00	t	t	t	t	t	t	t	f	t	t	18	41	This all looks good, in the <main role=main> it says that there's an error. Try taking out role=main so that all that's left is <main>.	2018-09-01 06:00:00+00
-387	index.html	9	2018-10-19 13:52:52.424579+00	t	f	t	t	t	t	t	t	t	t	26	30	The validator says the <main role="main"> is redundant.  This is better: <div role="main">\r\n  <h1>This is the main content of the page</h1>\r\n  <p>Here is some content that is the primary purpose of this web page.</p>\r\n</div>\r\n\r\nOtherwise very good!	2018-09-01 06:00:00+00
-375	index.html	5	2018-10-19 13:52:52.405193+00	t	f	f	f	f	f	t	t	t	t	20	38	You did a nice job on the links! I checked this on the validator and there were a few issues that need to be fixed (stray tags, take the px off of the "width" image attribute, etc.). The page is missing a profile picture, and some CSS styling (which in turn results in low visual appeal).	2018-09-01 06:00:00+00
-444	index.html	9	2018-10-19 13:52:52.517431+00	t	t	t	t	t	t	t	f	t	t	6	40	I thought you did a good job and your page was neat and presented well. You might consider adding some visual styling and a banner to your page	2018-09-01 06:00:00+00
-378	index.html	10	2018-10-19 13:52:52.41005+00	t	t	t	t	t	t	t	t	t	t	9	38	Looks pretty good! The validatior said there was a warning, but everything else was valid. I like the CSS styling you added!	2018-09-01 06:00:00+00
-383	index.html	10	2018-10-19 13:52:52.418211+00	t	t	t	t	t	t	t	t	t	t	38	9	Best website I've seen so far! Nice ob, I didn't find any html errors and your homepage has a easy to use interface that looks really good. Keep up the good work and hopefully I can pick up some tricks from ya	2018-09-01 06:00:00+00
-459	index.html	10	2018-10-19 13:52:52.541429+00	t	t	t	t	t	t	t	t	t	t	5	39	This home page looks nice and themed well. The only issue I ran into involved the validator. There was one small error that popped but I didnt deduct any points seeing as it was a small error.	2018-09-01 06:00:00+00
-462	index.html	8	2018-10-19 13:52:52.546576+00	t	f	t	t	f	t	t	t	t	t	4	39	It appears that when I began this review the builder of this page was working on it and perhaps had left off at a semi- finished spot when I viewed it. There seems to be several validator errors but if the student is still constructing the page theres still time for those to be addressed. Some blanks in the template still need to be filled but otherwise its a good start!	2018-09-01 06:00:00+00
-414	index.html	4	2018-10-19 13:52:52.469204+00	t	f	f	f	f	t	t	f	f	t	25	23	Does not validate:\r\nError: No space between attributes.\r\n\r\nPage Content incorrect:\r\nLink to validator is wrong\r\nLinks to blogs should be from blog page.\r\nNo Link to blogs page\r\nNo Styling/ visual appeal\r\nNo Banner\r\nNo Man Menu	2018-09-01 06:00:00+00
-450	index.html	7	2018-10-19 13:52:52.527038+00	t	t	t	t	t	t	f	f	t	f	17	12	This is a great start but I think you could do a bit more with fonts, color, and format to really make it your own. I like the photo you picked! It's even better than the selfie you used before.	2018-09-01 06:00:00+00
-214	blog/2.html	9	2018-10-15 16:02:30.65091+00	t	f	t	t	t	t	t	t	t	t	32	29	I thought I had reviewed this already, but it still appears in my to do.\r\n\r\nJust fix the HTML errors for the embedded video, and an image not being closed. Everything else great.	2018-09-01 06:00:00+00
-328	blog/3.html	10	2018-10-15 16:06:44.47702+00	t	t	t	t	t	t	t	t	t	t	30	29	Great job!\r\nI think some small things can be improved in the color usage, but still a great work for the assignment.	2018-09-01 06:00:00+00
-482	blog/3.html	10	2018-10-19 18:42:39.884013+00	t	t	t	t	t	t	t	t	t	t	18	19	Looks really good!	2018-09-01 06:00:00+00
-484	index.html	10	2018-10-20 05:14:25.478079+00	t	t	t	t	t	t	t	t	t	t	37	19	Looks really good!	2018-09-01 06:00:00+00
-412	index.html	9	2018-10-19 13:52:52.465521+00	t	t	t	t	t	t	t	t	t	f	25	2	Could be more visually appealing	2018-09-01 06:00:00+00
-486	blog/3.html	9	2018-10-20 16:33:30.785416+00	t	f	t	t	t	t	t	t	t	t	12	10	Says there is an issue with the font. But WOW is this a unique travel setup. Love it	2018-09-01 06:00:00+00
-489	blog/3.html	10	2018-10-20 18:36:31.079663+00	t	t	t	t	t	t	t	t	t	t	27	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-543	blog/4.html	10	2018-10-22 16:07:31.482572+00	t	t	t	t	t	t	t	t	t	t	38	9	Perfect! No problems at all, CSS looks good and I like the design of your div class's in your tabs! great content and good job	2018-09-01 06:00:00+00
-331	blog/3.html	9	2018-10-15 16:06:44.481915+00	t	t	t	t	f	t	t	t	t	t	31	29	Really good content.\r\nI think the page does the job for the assignment but the styles are a little bit to simple. You could try centering the images and using different color for the titles, instead of black. Still good job.	2018-09-01 06:00:00+00
-361	index.html	8	2018-10-19 13:52:52.361494+00	t	t	t	f	f	t	t	t	t	t	7	29	You still have to work on your index page. Looks to simple.\r\n\r\nI also saw you want a picture as the background. You should do this inside the css instead of the html.\r\nI should look something like this:\r\nbody{\r\n    background-image: url("imageName");\r\n}	2018-09-01 06:00:00+00
-371	index.html	9	2018-10-19 13:52:52.39858+00	t	t	t	t	f	t	t	t	t	t	13	29	You should try to turn your image, I think this should be easier to do by modifying the file.\r\n\r\nI personally don't like the bright yellow with deep black combination that you're using since it kinda hurt the eyes, but I think you should try a lighter yellow with a dark grey (almost black, but not quite).	2018-09-01 06:00:00+00
-1061	blog/4.html	0	2018-11-06 02:06:33.770446+00	f	f	f	f	f	f	f	f	f	f	8	15	404 not found	2018-09-01 06:00:00+00
-532	blog/4.html	10	2018-10-22 16:07:31.463743+00	t	t	t	t	t	t	t	t	t	t	13	10	Updated and well done	2018-09-01 06:00:00+00
-495	blog/3.html	9	2018-10-21 15:08:00.997751+00	t	f	t	t	t	t	t	t	t	t	11	10	a couple of html errors	2018-09-01 06:00:00+00
-502	index.html	9	2018-10-21 16:09:00.893576+00	t	f	t	t	t	t	t	t	t	t	18	31	Looks good but the validator doesn't like something about role="main" on line 46. Maybe try deleting that part.	2018-09-01 06:00:00+00
-501	index.html	9	2018-10-21 15:56:36.226659+00	t	t	t	t	t	t	t	f	t	t	18	41	All looks good. For the main role=main to still take out the role=main part and there shouldn't be an issue.	2018-09-01 06:00:00+00
-490	index.html	10	2018-10-21 05:26:04.709607+00	t	t	t	t	t	t	t	t	t	t	31	41	Your home page checks out good no problems were seen. Good use of the css I really like it.	2018-09-01 06:00:00+00
-536	blog/4.html	10	2018-10-22 16:07:31.470836+00	t	t	t	t	t	t	t	t	t	t	9	20	very professional set up	2018-09-01 06:00:00+00
-539	blog/4.html	10	2018-10-22 16:07:31.475834+00	t	t	t	t	t	t	t	t	t	t	27	20	very good did 3 speeches instead of just one	2018-09-01 06:00:00+00
-541	blog/4.html	8	2018-10-22 16:07:31.479178+00	t	f	t	t	t	t	t	t	f	t	27	38	Very creative! There were a few HTML errors (Attribute "href" not allowed on element div and a warning for an unnecessary "main" element"). Just remove those and you will be set! You could also add a link to your main menu to the page. Awesome job!	2018-09-01 06:00:00+00
-513	blog/3.html	10	2018-10-22 10:56:52.018145+00	t	t	t	t	t	t	t	t	t	t	2	3	very good could add a little more info	2018-09-01 06:00:00+00
-542	blog/4.html	10	2018-10-22 16:07:31.480892+00	t	t	t	t	t	t	t	t	t	t	38	20	good speeches with JFK, MLK, and susan	2018-09-01 06:00:00+00
-499	blog/3.html	10	2018-10-21 15:46:19.251815+00	t	t	t	t	t	t	t	t	t	t	38	37	Looks great	2018-09-01 06:00:00+00
-522	blog/4.html	10	2018-10-22 16:07:31.445552+00	t	t	t	t	t	t	t	t	t	t	7	10	Well done	2018-09-01 06:00:00+00
-510	blog/3.html	9	2018-10-22 07:49:39.043614+00	t	t	t	t	t	t	f	t	t	t	2	1	your pictures are great and well organized	2018-09-01 06:00:00+00
-525	blog/4.html	9	2018-10-22 16:07:31.451048+00	t	f	t	t	t	t	t	t	t	t	29	10	Says issue with en	2018-09-01 06:00:00+00
-507	index.html	10	2018-10-22 03:32:13.041658+00	t	t	t	t	t	t	t	t	t	t	32	40	I like the improvements you made and thought the styling changes were good, and the page was valid html	2018-09-01 06:00:00+00
-497	blog/3.html	9	2018-10-21 15:19:16.211504+00	t	t	t	t	t	f	t	t	t	t	9	12	One of your images is broken, but the rest seems great!	2018-09-01 06:00:00+00
-494	index.html	10	2018-10-21 14:54:17.148361+00	t	t	t	t	t	t	t	t	t	t	37	16	Looks great!	2018-09-01 06:00:00+00
-496	blog/3.html	10	2018-10-21 15:11:21.741198+00	t	t	t	t	t	t	t	t	t	t	14	16	Looks great!	2018-09-01 06:00:00+00
-520	blog/3.html	10	2018-10-22 14:02:04.363517+00	t	t	t	t	t	t	t	t	t	t	6	7	No problems. Good visual appeal.\r\nI like how you added a small pic to each of the travel options.	2018-09-01 06:00:00+00
-492	blog/3.html	1	2018-10-21 13:50:25.577295+00	t	f	f	f	f	f	f	f	f	f	21	22	Your page is still running a 404 error, I cannot see the page.	2018-09-01 06:00:00+00
-503	blog/3.html	10	2018-10-21 16:59:32.556224+00	t	t	t	t	t	t	t	t	t	t	23	22	Looks great and its awesome that you made your logo direct you to the home page.	2018-09-01 06:00:00+00
-514	index.html	10	2018-10-22 13:05:41.080168+00	t	t	t	t	t	t	t	t	t	t	4	5	There are no problems on this page. You might want to make the profile picture larger and change the font color of the text in the header. Blue and green on light blue is a little difficult to read. Otherwise, great page.	2018-09-01 06:00:00+00
-530	blog/4.html	2	2018-10-22 16:07:31.460134+00	f	f	f	f	f	f	t	f	f	t	13	7	I was unable to view the webpage due to a broken URL.	2018-09-01 06:00:00+00
-518	blog/3.html	10	2018-10-22 13:47:48.232583+00	t	t	t	t	t	t	t	t	t	t	25	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-519	blog/3.html	0	2018-10-22 13:53:00.690883+00	f	f	f	f	f	f	f	f	f	f	11	9	Still no page! URL not found	2018-09-01 06:00:00+00
-516	blog/3.html	10	2018-10-22 13:30:09.005561+00	t	t	t	t	t	t	t	t	t	t	18	17	You had an amazing blog 3.	2018-09-01 06:00:00+00
-509	index.html	10	2018-10-22 04:01:30.810564+00	t	t	t	t	t	t	t	t	t	t	26	30	There was a redundant role of main in the main element but it's not a problem for the page.	2018-09-01 06:00:00+00
-498	blog/3.html	10	2018-10-21 15:20:11.4916+00	t	t	t	t	t	t	t	t	t	t	25	28	Very nice page!	2018-09-01 06:00:00+00
-508	blog/3.html	8	2018-10-22 04:01:29.235461+00	f	t	t	t	t	f	t	t	t	t	26	28	Missing images and URL is not correct	2018-09-01 06:00:00+00
-493	blog/3.html	9	2018-10-21 14:47:09.485853+00	t	t	t	t	f	t	t	t	t	t	37	39	This blog meets almost all the requirements for this assignment except the visual appeal requirement. The choice of color is a bit overwhelming. The color scheme could be nice if it was little toned down.	2018-09-01 06:00:00+00
-512	index.html	10	2018-10-22 10:11:59.265722+00	t	t	t	t	t	t	t	t	t	t	26	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-521	blog/4.html	8	2018-10-22 16:07:31.426116+00	t	t	t	f	f	t	t	t	t	t	7	29	I think the page really needs more css styling. Try centering the headers and applying padding to your information cards, also some colors would help.	2018-09-01 06:00:00+00
-531	blog/4.html	7	2018-10-22 16:07:31.462029+00	t	t	f	f	f	t	t	t	t	t	13	29	You did the research for the speeches, which is good, but I believe the assignment was to implement accordions or tabs, and you are not using any of this.\r\n\r\nI also think you can work more in the styling of the page, because this looks almost as plain HTML.	2018-09-01 06:00:00+00
-523	blog/4.html	10	2018-10-22 16:07:31.447478+00	t	t	t	t	t	t	t	t	t	t	7	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-526	blog/4.html	10	2018-10-22 16:07:31.452722+00	t	t	t	t	t	t	t	t	t	t	29	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-529	blog/4.html	10	2018-10-22 16:07:31.457749+00	t	t	t	t	t	t	t	t	t	t	10	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-534	blog/4.html	7	2018-10-22 16:07:31.467303+00	t	f	t	t	t	f	t	t	t	f	20	27	Error: An img element must have an alt attribute, except under certain conditions. For details, consult guidance on providing text alternatives for images.\r\n\r\nFrom line 33, column 10; to line 33, column 40\r\n\r\n↩      <p><img src="mlk.jpg" width="250"></p>↩	2018-09-01 06:00:00+00
-537	blog/4.html	9	2018-10-22 16:07:31.472507+00	t	t	t	t	f	t	t	t	t	t	9	27	Images, Design could be better	2018-09-01 06:00:00+00
-511	blog/3.html	10	2018-10-22 09:26:11.228041+00	t	t	t	t	t	t	t	t	t	t	23	24	Looks good.	2018-09-01 06:00:00+00
-505	blog/3.html	8	2018-10-22 03:22:27.123462+00	t	f	t	t	t	t	f	t	t	t	36	34	Some issues with the images HTML. No JavaScript controls.	2018-09-01 06:00:00+00
-969	blog/5.html	5	2018-11-05 16:01:58.060565+00	t	f	f	t	f	t	t	f	f	t	35	30	I like the water cycle story.\r\n\r\nBad html: The height on all images has an open quotation.\r\n\r\nMissing introduction section.\r\n\r\nThe entire page is the default bootstrap demo code with only trivial mods for image url.  Even the page tabs says 'Bootstrap Example.'  Don't forget to customize your code with header, footer, title etc.\r\n\r\nNo custom CSS?\r\n\r\nThe images are stored in the web-root image folder.  They should be in the blog/images folder.	2018-09-01 06:00:00+00
-550	blog/4.html	0	2018-10-22 16:07:31.493771+00	f	f	f	f	f	f	f	f	f	f	35	30	Error 404 (no blog 4.html found via link or from home page).	2018-09-01 06:00:00+00
-571	blog/4.html	9	2018-10-22 16:07:31.528458+00	t	f	t	t	t	t	t	t	t	t	2	23	Does not validate 6 errors	2018-09-01 06:00:00+00
-577	blog/4.html	5	2018-10-22 16:07:31.538182+00	t	f	f	f	t	t	t	f	f	t	14	23	Dos not validate\r\nNo tabbed navigation\r\nNo linked css \r\nNo header or footer\r\nNo Main Menu	2018-09-01 06:00:00+00
-560	blog/4.html	10	2018-10-22 16:07:31.510146+00	t	t	t	t	t	t	t	t	t	t	37	16	Great Job!	2018-09-01 06:00:00+00
-563	blog/4.html	9	2018-10-22 16:07:31.514875+00	t	f	t	t	t	t	t	t	t	t	42	16	Looks great! You only had 2 errors with your html	2018-09-01 06:00:00+00
-558	blog/4.html	9	2018-10-22 16:07:31.506762+00	t	f	t	t	t	t	t	t	t	t	16	42	Just a few problems with the html coding. Everything else looks fine.	2018-09-01 06:00:00+00
-561	blog/4.html	8	2018-10-22 16:07:31.511751+00	t	t	f	t	t	t	t	t	f	t	37	42	Just need to paste the speeches into the code. Everything else is fine.	2018-09-01 06:00:00+00
-596	blog/4.html	10	2018-10-22 16:07:31.570556+00	t	t	t	t	t	t	t	t	t	t	33	32	I thought your page was good and had good styling! Good job	2018-09-01 06:00:00+00
-557	blog/4.html	8	2018-10-22 16:07:31.505018+00	t	f	t	t	t	f	t	t	t	t	16	37	Missing a slash in the validator and just the image on the last one doesn't work.	2018-09-01 06:00:00+00
-568	blog/4.html	4	2018-10-22 16:07:31.523431+00	t	f	f	t	t	f	t	f	f	f	19	42	I liked the idea of using the accordions but I believe we had to use tabs for this one. Missing the content for this page.	2018-09-01 06:00:00+00
-594	blog/4.html	10	2018-10-22 16:07:31.567334+00	t	t	t	t	t	t	t	t	t	t	32	40	Page met all requirements. I enjoyed the speeches	2018-09-01 06:00:00+00
-597	blog/4.html	10	2018-10-22 16:07:31.572167+00	t	t	t	t	t	t	t	t	t	t	33	40	The page met the requirements of the assignments and I thought the speeches you chose were quality and your summary was good	2018-09-01 06:00:00+00
-546	blog/4.html	1	2018-10-22 16:07:31.487479+00	t	f	f	f	f	f	f	f	f	f	26	22	your page is running a 404 error. I cannot see your page.	2018-09-01 06:00:00+00
-549	blog/4.html	1	2018-10-22 16:07:31.492204+00	t	f	f	f	f	f	f	f	f	f	35	22	Your page is running a 404 error. I cannot see your page.	2018-09-01 06:00:00+00
-567	blog/4.html	7	2018-10-22 16:07:31.521758+00	t	f	f	t	t	f	t	t	t	t	19	37	Missing two speeches, there are a few errors in the validator that should be addressed and missing the a couple images.	2018-09-01 06:00:00+00
-548	blog/4.html	9	2018-10-22 16:07:31.490634+00	t	t	t	t	t	f	t	t	t	t	35	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-551	blog/4.html	10	2018-10-22 16:07:31.495329+00	t	t	t	t	t	t	t	t	t	t	22	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-554	blog/4.html	10	2018-10-22 16:07:31.499942+00	t	t	t	t	t	t	t	t	t	t	30	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-572	blog/4.html	8	2018-10-22 16:07:31.530179+00	t	f	t	t	t	t	t	t	f	t	25	2	Add a main menu and fix HTML for full credit	2018-09-01 06:00:00+00
-575	blog/4.html	7	2018-10-22 16:07:31.534939+00	t	f	t	t	f	t	t	t	f	t	14	2	Fix HTML for full credit, visual appeal is there however could be cleaned up, need to add main menu to blog page.	2018-09-01 06:00:00+00
-578	blog/4.html	10	2018-10-22 16:07:31.539796+00	t	t	t	t	t	t	t	t	t	t	23	2	Writing gets hard to read when background page breaks however it looks good.	2018-09-01 06:00:00+00
-602	blog/4.html	10	2018-10-22 16:07:31.580429+00	t	t	t	t	t	t	t	t	t	t	6	32	Nice page!	2018-09-01 06:00:00+00
-599	blog/4.html	10	2018-10-22 16:07:31.575325+00	t	t	t	t	t	t	t	t	t	t	40	32	Nice page!	2018-09-01 06:00:00+00
-605	blog/4.html	10	2018-10-22 16:07:31.585406+00	t	t	t	t	t	t	t	t	t	t	3	17	Your blog 4 was neat and well structured.	2018-09-01 06:00:00+00
-603	blog/4.html	9	2018-10-22 16:07:31.582123+00	t	f	t	t	t	t	t	t	t	t	6	33	You did a good job. Go through your validator because you have a few stray tags. Make sure to put quotes around where the speech starts. We all still have  a few validator errors, but once you get rid of the few stray tags let me know so I can adjust your grade:)	2018-09-01 06:00:00+00
-559	blog/4.html	10	2018-10-22 16:07:31.50849+00	t	t	t	t	t	t	t	t	t	t	16	19	Looks good!	2018-09-01 06:00:00+00
-573	blog/4.html	10	2018-10-22 16:07:31.531786+00	t	t	t	t	t	t	t	t	t	t	25	14	You must type a summary of problems.	2018-09-01 06:00:00+00
-570	blog/4.html	10	2018-10-22 16:07:31.526784+00	t	t	t	t	t	t	t	t	t	t	2	14	You must type a summary of problems.	2018-09-01 06:00:00+00
-584	blog/4.html	0	2018-10-22 16:07:31.550279+00	f	f	f	f	f	f	f	f	f	f	24	34	Error 404 - page does not exist	2018-09-01 06:00:00+00
-562	blog/4.html	9	2018-10-22 16:07:31.513319+00	t	t	f	t	t	t	t	t	t	t	37	19	Looks good! I didn't see the speech that they all gave though.	2018-09-01 06:00:00+00
-565	blog/4.html	10	2018-10-22 16:07:31.518439+00	t	t	t	t	t	t	t	t	t	t	42	19	Looks good!	2018-09-01 06:00:00+00
-553	blog/4.html	8	2018-10-22 16:07:31.498421+00	t	f	f	t	t	t	t	t	t	t	22	30	This appears to be a blog 1-3 menu page, and not the actual blog 4 as requested in the assignment.  There are many validation errors, but as a menu page it does look nice.	2018-09-01 06:00:00+00
-583	blog/4.html	0	2018-10-22 16:07:31.548566+00	f	f	f	f	f	f	f	f	f	f	34	28	Could not access to the page :(	2018-09-01 06:00:00+00
-586	blog/4.html	0	2018-10-22 16:07:31.553627+00	f	f	f	f	f	f	f	f	f	f	24	28	Could not access to the page :(	2018-09-01 06:00:00+00
-589	blog/4.html	10	2018-10-22 16:07:31.558635+00	t	t	t	t	t	t	t	t	t	t	36	28	I liked it!	2018-09-01 06:00:00+00
-545	blog/4.html	0	2018-10-22 16:07:31.485768+00	f	f	f	f	f	f	f	f	f	f	26	35	0/10 404	2018-09-01 06:00:00+00
-552	blog/4.html	10	2018-10-22 16:07:31.496884+00	t	t	t	t	t	t	t	t	t	t	22	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-555	blog/4.html	10	2018-10-22 16:07:31.501704+00	t	t	t	t	t	t	t	t	t	t	30	35	Great work!	2018-09-01 06:00:00+00
-582	blog/4.html	0	2018-10-22 16:07:31.546855+00	f	f	f	f	f	f	f	f	f	f	34	36	still not getting a page	2018-09-01 06:00:00+00
-585	blog/4.html	0	2018-10-22 16:07:31.551935+00	f	f	f	f	f	f	f	f	f	f	24	36	page doesn't exist	2018-09-01 06:00:00+00
-592	blog/4.html	10	2018-10-22 16:07:31.563758+00	t	t	t	t	t	t	t	t	t	t	28	36	wonderful page love the backgrounds and page response	2018-09-01 06:00:00+00
-601	blog/4.html	10	2018-10-22 16:07:31.578763+00	t	t	t	t	t	t	t	t	t	t	40	6	Overall It looks good! nicely done.	2018-09-01 06:00:00+00
-598	blog/4.html	9	2018-10-22 16:07:31.573757+00	t	f	t	t	t	t	t	t	t	t	33	6	Overall it looks good, the only thing you had that was an issue was there were a few HTML errors, never the less well done.	2018-09-01 06:00:00+00
-595	blog/4.html	9	2018-10-22 16:07:31.568942+00	t	f	t	t	t	t	t	t	t	t	32	6	Overall it looks nice, the only thing that I found were a few HTML errors, other than that nicely done.	2018-09-01 06:00:00+00
-588	blog/4.html	10	2018-10-22 16:07:31.556848+00	t	t	t	t	t	t	t	t	t	t	36	24	Nice interface. Maybe add some more color to it.	2018-09-01 06:00:00+00
-591	blog/4.html	10	2018-10-22 16:07:31.562125+00	t	t	t	t	t	t	t	t	t	t	28	24	Better than mine.	2018-09-01 06:00:00+00
-580	blog/4.html	9	2018-10-22 16:07:31.543169+00	t	t	t	t	f	t	t	t	t	t	23	14	The background is very busy and makes this hard to read	2018-09-01 06:00:00+00
-590	blog/4.html	8	2018-10-22 16:07:31.560414+00	t	t	t	t	t	t	f	t	f	t	28	34	I do not think JavaScript controls are included. No link to main page.	2018-09-01 06:00:00+00
-972	blog/5.html	5	2018-11-05 16:01:58.065895+00	t	f	f	t	f	t	t	f	f	t	22	30	Validator doesn't like px tags for sizes.  Otherwise the code is good.  The images are in the correct location on the server.\r\n\r\nMissing Introduction, header, footer, menu, captions, etc.\r\n\r\nThe code is almost exactly the bootstrap example code.  Don't forget to modify things with your own CSS and to add the other standard sections to the page.  All the things that make the blog undeniably yours are missing.	2018-09-01 06:00:00+00
-1082	index.html	10	2018-11-07 14:55:58.622529+00	t	t	t	t	t	t	t	t	t	t	9	27	nice.	2018-09-01 06:00:00+00
-1109	blog/6.html	7	2018-11-09 16:45:56.180239+00	t	f	t	t	t	t	t	f	f	t	28	15	Head is missing title, with other errors listed in the validator.  No main or footer. No main menu to be seen.	2018-09-01 06:00:00+00
-517	blog/3.html	10	2018-10-22 13:34:37.060445+00	t	t	t	t	t	t	t	t	t	t	32	31	add > to the end of line 93 to make the HTML valid. Otherwise looks good.	2018-09-01 06:00:00+00
-473	index.html	10	2018-10-19 13:52:52.56438+00	t	t	t	t	t	t	t	t	t	t	41	18	Your homepage looks great, we have very similar 'hero' images! Just a little thing I noticed, marshmallow was spelled 'marshmellow' on your blog #1.	2018-09-01 06:00:00+00
-631	blog/4.html	10	2018-10-22 16:07:31.627441+00	t	t	t	t	t	t	t	t	t	t	31	18	I like the speeches you chose. The different background colors are a nice touch.	2018-09-01 06:00:00+00
-504	index.html	9	2018-10-22 02:59:22.842679+00	t	f	t	t	t	t	t	t	t	t	9	38	Looks really good! The HTML validator said that you need to change "height=100px" for your picture because the "px" part is a bad value. I've found that it works if you just take off the "px" entirely so it would be "height=100".  Everything else looks perfect! It is very easy to navigate around your website. One small suggestion I would have would be to change the title element in your head to "davecoin.net" or something similar so it will appear on the tab. Right now it just says "cover template for bootstrap." If you change it, it will give a more custom look! Great work on this, though!	2018-09-01 06:00:00+00
-633	blog/4.html	9	2018-10-22 16:07:31.630697+00	t	t	t	t	t	t	t	f	t	t	41	18	It was a good idea to move the long speeches to a new page. Just missing a footer. The title of the page is a little funny. It says, "jQuery UI Tabs - Default..."	2018-09-01 06:00:00+00
-574	blog/4.html	8	2018-10-22 16:07:31.533318+00	t	t	t	t	f	t	t	t	f	t	25	23	Not visually appealing, there is little discernible styling.\r\n\r\nNo main Menu	2018-09-01 06:00:00+00
-629	blog/4.html	8	2018-10-22 16:07:31.624137+00	t	f	t	t	t	t	t	t	t	f	18	31	To make the html valid try using css to change how a picture looks instead of using in-line styling.\r\nIt looks like the articles are missing a summary of the impact of the speech. Ask yourself "How did this speech change the world or people's perceptions?"	2018-09-01 06:00:00+00
-634	blog/4.html	9	2018-10-22 16:07:31.632258+00	t	t	f	t	t	t	t	t	t	t	41	31	This blog was supposed to use tabs instead of an accordion collapse. Otherwise looks great.	2018-09-01 06:00:00+00
-632	blog/4.html	10	2018-10-22 16:07:31.629028+00	t	t	t	t	t	t	t	t	t	t	31	41	This looks really good, everything works and no issues from validator.	2018-09-01 06:00:00+00
-535	blog/4.html	7	2018-10-22 16:07:31.468912+00	t	f	f	t	t	t	t	t	f	t	20	38	Looks very cool! One of the requirements was to have 3 speeches in a tabbed view and you only had one. There was one validator issue (you just had to put an "alt" attribute in the image element. Something you could add would be a button to your main menu. Besides that, I really liked the style of your page.	2018-09-01 06:00:00+00
-630	blog/4.html	7	2018-10-22 16:07:31.625871+00	t	f	t	t	t	f	f	t	t	t	18	41	Your page looks really good and tidy. There are a bunch of validator issues. Some that are easy to fix are your img scr width by removing the px.	2018-09-01 06:00:00+00
-538	blog/4.html	8	2018-10-22 16:07:31.474248+00	t	f	t	t	t	t	t	t	f	t	9	38	I love the clean design of this page! There were a few validator issues such as needing an "alt" attribute to your image element and some missing attribute names. Something you could add would be a link to your main menu. Good job!	2018-09-01 06:00:00+00
-483	blog/3.html	10	2018-10-19 18:42:50.913762+00	t	t	t	t	t	t	t	t	t	t	18	20	very good, nice places to travel to	2018-09-01 06:00:00+00
-485	index.html	10	2018-10-20 16:31:58.397448+00	t	t	t	t	t	t	t	t	t	t	12	3	very good only one line of validator problem	2018-09-01 06:00:00+00
-566	blog/4.html	7	2018-10-22 16:07:31.520033+00	t	f	f	t	t	t	t	t	t	f	19	16	Looks good on your first speech. Add two more! There were multiple errors with your HTML. Maybe take off the example template content!	2018-09-01 06:00:00+00
-608	blog/4.html	7	2018-10-22 16:07:31.590368+00	t	f	t	t	t	f	t	t	f	t	17	3	fix validator problems\r\nadd some pictures or visuals to have more appeal	2018-09-01 06:00:00+00
-611	blog/4.html	0	2018-10-22 16:07:31.595191+00	f	f	f	f	f	f	f	f	f	f	21	3	not right URL so i can't tell you what you did right or wrong	2018-09-01 06:00:00+00
-617	blog/4.html	10	2018-10-22 16:07:31.604706+00	t	t	t	t	t	t	t	t	t	t	5	4	This looks super good! Your Nav Bar doesn't work with blogs	2018-09-01 06:00:00+00
-618	blog/4.html	9	2018-10-22 16:07:31.606407+00	t	t	t	t	t	t	f	t	t	t	5	1	your banner is good and simple, the article bar work well and easy to use.	2018-09-01 06:00:00+00
-628	blog/4.html	8	2018-10-22 16:07:31.622467+00	t	t	t	t	t	t	t	f	f	t	39	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-624	blog/4.html	6	2018-10-22 16:07:31.615956+00	t	f	f	t	f	t	f	t	t	t	1	4	You need a Tabbed view of some sort . Get that rolling and you will get full credit	2018-09-01 06:00:00+00
-613	blog/4.html	0	2018-10-22 16:07:31.598457+00	f	f	f	f	f	f	f	f	f	f	21	12	invalid url or nonexistant page	2018-09-01 06:00:00+00
-627	blog/4.html	8	2018-10-22 16:07:31.620909+00	t	t	t	t	t	t	t	f	f	t	39	4	The Nav Bar isn't on the page add it for full credit. But it looks cool. Also the last accordion doesnt close automatic	2018-09-01 06:00:00+00
-607	blog/4.html	9	2018-10-22 16:07:31.588717+00	t	t	t	t	t	f	t	t	t	t	3	12	Looks good! The teacher said that the text has to wrap around the image though. Use the float option to do so.	2018-09-01 06:00:00+00
-642	blog/3.html	2	2018-10-22 19:22:37.597444+00	f	f	f	f	f	f	t	f	f	t	8	7	I was unable to view the webpage due to a broken URL	2018-09-01 06:00:00+00
-623	blog/4.html	8	2018-10-22 16:07:31.614386+00	t	f	f	t	t	t	t	t	t	t	1	5	The assignment asked for three speeches and this page only includes one. There are also some errors in the html code.	2018-09-01 06:00:00+00
-612	blog/4.html	0	2018-10-22 16:07:31.596802+00	f	f	f	f	f	f	f	f	f	f	21	17	Nothing showed for your blog 4.	2018-09-01 06:00:00+00
-615	blog/4.html	10	2018-10-22 16:07:31.601656+00	t	t	t	t	t	t	t	t	t	t	12	17	Your blog 4 was nicely put together	2018-09-01 06:00:00+00
-619	blog/4.html	10	2018-10-22 16:07:31.607964+00	t	t	t	t	t	t	t	t	t	t	5	39	It looks like this individual completed all the requirements of this assignment.	2018-09-01 06:00:00+00
-622	blog/4.html	10	2018-10-22 16:07:31.612805+00	t	t	t	t	t	t	t	t	t	t	4	39	All the requirements for this assignment were fulfilled.	2018-09-01 06:00:00+00
-625	blog/4.html	4	2018-10-22 16:07:31.617658+00	t	f	f	t	f	f	t	f	t	f	1	39	This page looks half finished to me. There is a couple errors popping up with the validator. There is an image but it is not text-wrapped which is what the assignment calls for. Visual appeal is lacking. This page needs a little more polishing.	2018-09-01 06:00:00+00
-635	blog/4.html	0	2018-10-22 16:07:31.633879+00	f	f	f	f	f	f	f	f	f	f	11	15	404 not found.	2018-09-01 06:00:00+00
-640	blog/4.html	0	2018-10-22 16:07:31.64176+00	f	f	f	f	f	f	f	f	f	f	8	15	404 not found	2018-09-01 06:00:00+00
-641	blog/3.html	10	2018-10-22 19:22:35.348671+00	t	t	t	t	t	t	t	t	t	t	7	6	You must type a summary of problems.	2018-09-01 06:00:00+00
-614	blog/4.html	10	2018-10-22 16:07:31.600008+00	t	t	t	t	t	t	t	t	t	t	12	3	some validator problems besides that everything else looks very good	2018-09-01 06:00:00+00
-564	blog/4.html	9	2018-10-22 16:07:31.516591+00	t	f	t	t	t	t	t	t	t	t	42	37	Missing alt for one of the images in validator	2018-09-01 06:00:00+00
-604	blog/4.html	10	2018-10-22 16:07:31.58374+00	t	t	t	t	t	t	t	t	t	t	6	40	The speeches you chose were quality, the page met all the requirements and I enjoyed your styling and the summary you provided	2018-09-01 06:00:00+00
-610	blog/4.html	7	2018-10-22 16:07:31.593634+00	t	t	t	t	t	f	t	f	f	t	17	12	Looks good so far! Needs images, a menu, and a footer in order to meet the teacher's requirements.	2018-09-01 06:00:00+00
-524	blog/4.html	10	2018-10-22 16:07:31.449266+00	t	t	t	t	t	t	t	t	t	t	29	7	It looks good. It has a good visual appeal. However, the language call out is missing so the browser dose not know what language the document is written. Otherwise it was done well.	2018-09-01 06:00:00+00
-645	index.html	9	2018-10-22 19:40:44.360879+00	t	t	t	t	f	t	t	t	t	t	19	37	Looks good just a little to plain.	2018-09-01 06:00:00+00
-527	blog/4.html	9	2018-10-22 16:07:31.454497+00	t	t	f	t	t	t	t	t	t	t	10	7	The page looks good and is presented well. The links for the "view" option does not work on any of the influential leaders. It also has a few validation errors that need to be fixed. Otherwise it was well done	2018-09-01 06:00:00+00
-621	blog/4.html	10	2018-10-22 16:07:31.611197+00	t	t	t	t	t	t	t	t	t	t	4	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-556	blog/4.html	10	2018-10-22 16:07:31.503315+00	t	t	t	t	t	t	t	t	t	t	30	22	You did an awesome job! And there are no errors according to the validator.	2018-09-01 06:00:00+00
-620	blog/4.html	9	2018-10-22 16:07:31.609544+00	t	t	f	t	t	t	t	t	t	t	4	5	This page is visually very good. The assignment called for both a description of the context of each speech as well as a description of the significance of the speech. These aspects are missing from some of the speeches. There are also some spelling errors.	2018-09-01 06:00:00+00
-487	blog/3.html	10	2018-10-20 16:34:09.213639+00	t	t	t	t	t	t	t	t	t	t	12	9	Great job! There was one problem in your html validator for the <h1 class where your style is ="don't: serif"> which I think you have to do is font-family: serif, then you can pick a specific font style after that	2018-09-01 06:00:00+00
-626	blog/4.html	8	2018-10-22 16:07:31.619263+00	t	t	t	t	t	t	t	f	f	t	39	5	There is no header or footer for this page. There is also no menu linking to other pages on the website. You might also want to increase the left margin on some of the headlines. They are really close to edge which makes them a little difficult to read.	2018-09-01 06:00:00+00
-648	index.html	9	2018-10-22 19:57:31.381813+00	t	t	t	t	f	t	t	t	t	t	42	37	Looks good maybe add some things to make it look more appealing.	2018-09-01 06:00:00+00
-533	blog/4.html	6	2018-10-22 16:07:31.465606+00	t	t	f	t	t	t	t	f	f	f	20	9	The only problem I found is that you have an error at your img element in line 33 where you must have an ALT attribute. You can fix this by putting your mlk.jpg in the alt element like this- alt="lmk.jpg"> Other than that I only see you have 1 tab and 1 article when we needed 3, so request a review from me when you are done fixing up your site!	2018-09-01 06:00:00+00
-540	blog/4.html	9	2018-10-22 16:07:31.477602+00	t	f	t	t	t	t	t	t	t	t	27	9	There are 2 errors in your html with both of them being an href attribute where it is not allowed on element div, specifically on your line 35 and 65. I would try to fix this but other than that maybe try to spice up your CSS but you should be good.	2018-09-01 06:00:00+00
-646	blog/3.html	6	2018-10-22 19:41:27.634646+00	t	f	f	t	t	t	t	t	f	f	19	17	You have the wrong content on your blog page.	2018-09-01 06:00:00+00
-440	index.html	10	2018-10-19 13:52:52.511059+00	t	t	t	t	t	t	t	t	t	t	40	33	Awesome job. I think this site looks really cool! I would take out the search bar at the top right because it doesn't search anything. I would also consider adding " target="_blank" " in your link to the validator ex: <a "validator" target ="_blank"/a> because this will open the validator in a new tab instead of leaving your website. Also, consider changing the name of your buttons "view details" to maybe where the buttons are leading you to. Not a problem just some suggestions :) Wonderful job!	2018-09-01 06:00:00+00
-600	blog/4.html	10	2018-10-22 16:07:31.577054+00	t	t	t	t	t	t	t	t	t	t	40	33	You're missing a footer which is really quick to add, but you know how to do it (as seen on previous pages) and it wasn't in requirements in the assignments page so I think that if you just make that change you'll be good. I would recommend putting quotations around the transcript so we know when your words stop, and the speech begins. All together I think you did a great job! :)	2018-09-01 06:00:00+00
-1112	blog/6.html	10	2018-11-09 16:45:56.184964+00	t	t	t	t	t	t	t	t	t	t	15	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-643	index.html	9	2018-10-22 19:28:11.464393+00	t	f	t	t	t	t	t	t	t	t	16	19	The validator showed some errors. Otherwise it looks good.	2018-09-01 06:00:00+00
-644	index.html	9	2018-10-22 19:39:53.26671+00	t	f	t	t	t	t	t	t	t	t	42	19	Validator showed some errors. Otherwise it looked good.	2018-09-01 06:00:00+00
-651	index.html	10	2018-10-22 22:12:37.459908+00	t	t	t	t	t	t	t	t	t	t	22	30	Nice home page!	2018-09-01 06:00:00+00
-653	blog/3.html	9	2018-10-22 22:23:33.000275+00	t	t	t	t	t	t	f	t	t	t	14	15	Bootstrap css controls are used but js controls don't seem to be present.	2018-09-01 06:00:00+00
-652	blog/3.html	10	2018-10-22 22:12:46.722663+00	t	t	t	t	t	t	t	t	t	t	36	33	I really enjoy your use of color. I think your site is neat, and everything looks great! Wonderful job.	2018-09-01 06:00:00+00
-700	blog/3.html	8	2018-10-23 22:53:03.753878+00	t	f	f	t	t	t	t	t	t	t	29	30	One validator error.\r\nMissing jumbotron.\r\nDescriptions are pseudo latin auto generated text from the template.	2018-09-01 06:00:00+00
-647	blog/4.html	10	2018-10-22 19:44:07.76839+00	t	t	t	t	t	t	t	t	t	t	9	38	Everything looks great! I like how you added a link to your home page. Awesome job!	2018-09-01 06:00:00+00
-649	blog/3.html	6	2018-10-22 20:08:15.896239+00	t	f	t	f	f	f	t	t	t	t	13	16	Add some color and images to your page for visual appeal! CSS styling is missing. Still some errors on your HTML	2018-09-01 06:00:00+00
-650	index.html	10	2018-10-22 21:45:08.957738+00	t	t	t	t	t	t	t	t	t	t	28	24	Best page I have seen yet, Edgar.	2018-09-01 06:00:00+00
-547	blog/4.html	2	2018-10-22 16:07:31.489033+00	t	f	f	f	f	f	f	f	f	t	26	30	The page is there but there is little to no content.  I don't know what to say about this.\r\n\r\nLots of validator errors, no images.	2018-09-01 06:00:00+00
-515	blog/3.html	9	2018-10-22 13:25:55.974772+00	t	t	t	t	f	t	t	t	t	t	38	39	The only note I have for this page concerns visual appeal. I find the background color on the title part of the blog is a bit abrupt and perhaps needs a border. Other then that the page is meeting the requirements of the assignment.	2018-09-01 06:00:00+00
-1022	blog/5.html	9	2018-11-05 16:01:58.151423+00	t	t	t	t	t	f	t	t	t	t	6	33	Your image carousel doesn't seem to be working properly. I would check one of the other pages and compare your code to see what is wrong. I had a similar problem with mine and it ended up being a </div> tag that was ruining everything. Maybe look at my source code and see if it is the same. However everything looks great, and I enjoy the design of your page.	2018-09-01 06:00:00+00
-475	index.html	5	2018-10-19 13:52:52.567667+00	t	f	t	f	f	t	f	f	t	t	11	15	Validator had html errors. CSS Styling is non existant on this page, therefore the visual appeal is lacking. No .js controls, or and <main> or <banner> in the html.	2018-09-01 06:00:00+00
-656	blog/3.html	4	2018-10-22 23:15:39.635912+00	t	f	t	f	f	f	f	f	t	t	13	15	HTML is not valid due to the lack of alts in the images. No css styling, therefore lacks visual appeal. Images couldn't correctly load on the screen which is probably due to the HTML. No js controls; banner and main are missing from the code.	2018-09-01 06:00:00+00
-1123	blog/6.html	-1	2018-11-09 16:45:56.202421+00	f	f	f	f	f	f	f	f	f	f	39	8	You must type a summary of problems.	2018-09-01 06:00:00+00
-1128	blog/6.html	-1	2018-11-09 16:45:56.210428+00	f	f	f	f	f	f	f	f	f	f	23	8	You must type a summary of problems.	2018-09-01 06:00:00+00
-661	blog/3.html	10	2018-10-23 07:49:22.174666+00	t	t	t	t	t	t	t	t	t	t	5	6	You must type a summary of problems.	2018-09-01 06:00:00+00
-683	blog/3.html	0	2018-10-23 10:57:38.422218+00	f	f	f	f	f	f	f	f	f	f	34	33	No page.	2018-09-01 06:00:00+00
-438	index.html	10	2018-10-19 13:52:52.507777+00	t	t	t	t	t	t	t	t	t	t	33	6	Very well done! your homepage looks great! it's easy to navigate and all the links worked!	2018-09-01 06:00:00+00
-1125	blog/6.html	8	2018-11-09 16:45:56.205684+00	t	t	t	t	t	f	t	f	t	t	39	19	No images and no footer.	2018-09-01 06:00:00+00
-528	blog/4.html	8	2018-10-22 16:07:31.456108+00	t	f	f	t	t	t	t	t	t	t	10	29	The page looks really good when you first open it, i believe you used a template which is nice.\r\n\r\nBut, the actual HTML is not well implemented, you are missing a lot of closing tags and the validator is marking that. Also, I believe the assignment was to implement accordions or tabs (the code for these can be found in the bootstrap page), and it seems you are using info cards instead.	2018-09-01 06:00:00+00
-664	blog/3.html	10	2018-10-23 08:01:30.108819+00	t	t	t	t	t	t	t	t	t	t	31	29	Good.	2018-09-01 06:00:00+00
-1130	blog/6.html	10	2018-11-09 16:45:56.213666+00	t	t	t	t	t	t	t	t	t	t	23	19	Looks good!	2018-09-01 06:00:00+00
-1121	blog/6.html	9	2018-11-09 16:45:56.199261+00	t	f	t	t	t	t	t	t	t	t	39	23	You must type a summary of problems.	2018-09-01 06:00:00+00
-677	blog/3.html	10	2018-10-23 09:39:15.597886+00	t	t	t	t	t	t	t	t	t	t	14	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-702	index.html	10	2018-10-23 22:54:23.41156+00	t	t	t	t	t	t	t	t	t	t	29	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-663	blog/3.html	9	2018-10-23 07:54:16.029929+00	t	t	f	t	t	t	t	t	t	t	32	30	Missing jumbotron.	2018-09-01 06:00:00+00
-680	blog/3.html	9	2018-10-23 10:03:08.518518+00	t	t	f	t	t	t	t	t	t	t	31	30	Missing jumbotron.	2018-09-01 06:00:00+00
-1124	blog/6.html	10	2018-11-09 16:45:56.204037+00	t	t	t	t	t	t	t	t	t	t	39	36	well done nice page.	2018-09-01 06:00:00+00
-699	index.html	10	2018-10-23 22:38:25.991799+00	t	t	t	t	t	t	t	t	t	t	41	31	No problems. Styling looks good	2018-09-01 06:00:00+00
-701	blog/3.html	9	2018-10-23 22:53:30.204293+00	t	f	t	t	t	t	t	t	t	t	29	31	delete </section> on line 197 to make it valid. Otherwise good work.	2018-09-01 06:00:00+00
-691	blog/4.html	10	2018-10-23 19:19:54.608949+00	t	t	t	t	t	t	t	t	t	t	19	42	No issues here.	2018-09-01 06:00:00+00
-684	index.html	5	2018-10-23 10:57:40.289996+00	t	f	f	f	f	f	t	t	t	t	20	38	There are still a few HTML issues that need to be fixed. It would be cool if you could add some CSS styling and an image as well.	2018-09-01 06:00:00+00
-695	index.html	10	2018-10-23 21:05:50.921749+00	t	t	t	t	t	t	t	t	t	t	27	38	I really love the design of your page! Everything looks great. Nice job!	2018-09-01 06:00:00+00
-696	blog/3.html	10	2018-10-23 21:33:13.556637+00	t	t	t	t	t	t	t	t	t	t	37	38	This is one of my most favorite pages I've seen so far! The colors work together very well to make an attractive page. Great job!	2018-09-01 06:00:00+00
-692	blog/4.html	10	2018-10-23 19:20:37.390413+00	t	t	t	t	t	t	t	t	t	t	19	37	Great work	2018-09-01 06:00:00+00
-687	blog/3.html	10	2018-10-23 14:48:49.880354+00	t	t	t	t	t	t	t	t	t	t	17	19	Looks good!	2018-09-01 06:00:00+00
-679	index.html	9	2018-10-23 09:46:46.927431+00	t	t	t	f	t	t	t	t	t	t	6	40	Nice home page, meets most of the requirements but you might want to add some CSS styling to make it more visually appealing. Good job	2018-09-01 06:00:00+00
-705	index.html	9	2018-10-24 00:58:47.998459+00	t	f	t	t	t	t	t	t	t	t	2	23	Does not validate	2018-09-01 06:00:00+00
-662	blog/3.html	9	2018-10-23 07:53:46.209598+00	t	f	t	t	t	t	t	t	t	t	22	23	Does not validate	2018-09-01 06:00:00+00
-659	blog/3.html	0	2018-10-23 05:30:45.059839+00	f	f	f	f	f	f	f	f	f	f	21	24	Need to do the work.	2018-09-01 06:00:00+00
-694	blog/3.html	0	2018-10-23 21:03:41.803392+00	f	f	f	f	f	f	f	f	f	f	11	12	The page does not exist or is at the wrong url.	2018-09-01 06:00:00+00
-685	blog/3.html	10	2018-10-23 12:34:37.230652+00	t	t	t	t	t	t	t	t	t	t	17	20	everything looks good like the background picture	2018-09-01 06:00:00+00
-1129	blog/6.html	10	2018-11-09 16:45:56.212054+00	t	t	t	t	t	t	t	t	t	t	23	36	works great i love it!	2018-09-01 06:00:00+00
-720	blog/3.html	10	2018-10-24 13:54:14.855157+00	t	t	t	t	t	t	t	t	t	t	5	7	Looks great!	2018-09-01 06:00:00+00
-660	index.html	10	2018-10-23 06:17:54.704134+00	t	t	t	t	t	t	t	t	t	t	29	7	Look great! I like how you have everything centered. It give it a streamlined look.	2018-09-01 06:00:00+00
-693	blog/3.html	10	2018-10-23 19:29:21.031404+00	t	t	t	t	t	t	t	t	t	t	31	32	Nice page, no errors!	2018-09-01 06:00:00+00
-678	index.html	10	2018-10-23 09:41:54.776652+00	t	t	t	t	t	t	t	t	t	t	22	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-1116	blog/6.html	9	2018-11-09 16:45:56.191479+00	t	f	t	t	t	t	t	t	t	t	9	30	Lots of validator errors, most are related to the in text html though.	2018-09-01 06:00:00+00
-1117	blog/6.html	10	2018-11-09 16:45:56.193051+00	t	t	t	t	t	t	t	t	t	t	9	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-1114	blog/6.html	10	2018-11-09 16:45:56.188292+00	t	t	t	t	t	t	t	t	t	t	15	28	Useful and simple, very good!	2018-09-01 06:00:00+00
-1119	blog/6.html	10	2018-11-09 16:45:56.196156+00	t	t	t	t	t	t	t	t	t	t	9	28	Good!	2018-09-01 06:00:00+00
-1122	blog/6.html	10	2018-11-09 16:45:56.200877+00	t	t	t	t	t	t	t	t	t	t	39	24	This website could help me out haha.	2018-09-01 06:00:00+00
-1127	blog/6.html	10	2018-11-09 16:45:56.208832+00	t	t	t	t	t	t	t	t	t	t	23	24	Proud to say it taught me something.	2018-09-01 06:00:00+00
-1118	blog/6.html	10	2018-11-09 16:45:56.194572+00	t	t	t	t	t	t	t	t	t	t	9	10	looks good and functions	2018-09-01 06:00:00+00
-1113	blog/6.html	10	2018-11-09 16:45:56.186651+00	t	t	t	t	t	t	t	t	t	t	15	10	informative but there was one html issue. Only seemed minor	2018-09-01 06:00:00+00
-1120	blog/6.html	9	2018-11-09 16:45:56.197713+00	t	t	t	t	t	t	t	f	t	t	9	15	No main.	2018-09-01 06:00:00+00
-698	blog/3.html	3	2018-10-23 21:50:11.942453+00	t	f	f	f	f	f	t	f	t	f	21	23	Does not validate\r\nincorrect page content	2018-09-01 06:00:00+00
-374	index.html	8	2018-10-19 13:52:52.403589+00	t	f	t	t	t	t	t	t	t	f	20	27	Error: Bad value 200px for attribute width on element img: Expected a digit but saw p instead.\r\n\r\nFrom line 9, column 13; to line 10, column 68\r\n\r\n          <img src="Bear.png"↩                 alt="Bear Logo" style="float:right" width="200px"/>↩     \r\n\r\nError: Element a not allowed as child of element ul in this context. (Suppressing further errors from this subtree.)\r\n\r\nFrom line 29, column 25; to line 29, column 70\r\n\r\n          <a href="https://validator.w3.org/index.html">↩     \r\n\r\nContexts in which element a may be used:\r\nWhere phrasing content is expected.\r\nContent model for element ul:\r\nZero or more li and script-supporting elements.\r\nError: No li element in scope but a li end tag seen.\r\n\r\nFrom line 31, column 21; to line 31, column 25\r\n\r\n          </li>↩     \r\n\r\nError: Non-space character in page trailer.\r\n\r\nFrom line 39, column 1; to line 39, column 12\r\n\r\n  </body>↩</html>ject/0\r\n\r\nError: Stray end tag a.\r\n\r\nFrom line 39, column 31; to line 39, column 34\r\n\r\n>project 9</a>↩	2018-09-01 06:00:00+00
-500	blog/3.html	0	2018-10-21 15:52:41.146993+00	f	f	f	f	f	f	f	f	f	f	26	27	HTTP resource not retrievable. The HTTP status from the remote server was: 404.\r\n\r\nhttp://irb.wpr.mybluehost.me/blog/3.html	2018-09-01 06:00:00+00
-506	blog/3.html	9	2018-10-22 03:25:25.190303+00	t	t	t	t	t	f	t	t	t	t	25	27	Error: Bad value 70px for attribute width on element img: Expected a digit but saw p instead.\r\n\r\nFrom line 22, column 7; to line 22, column 69\r\n\r\ndy>↩      <img src="logo.png" alt="logo" width="70px" style="float:left">↩    <	2018-09-01 06:00:00+00
-1062	blog/4.html	10	2018-11-06 07:06:01.430889+00	t	t	t	t	t	t	t	t	t	t	9	27	Very nice visual.	2018-09-01 06:00:00+00
-1133	blog/6.html	-1	2018-11-09 16:45:56.218653+00	f	f	f	f	f	f	f	f	f	f	24	8	You must type a summary of problems.	2018-09-01 06:00:00+00
-654	blog/3.html	9	2018-10-22 22:28:56.55486+00	t	f	t	t	t	t	t	t	t	t	40	42	Lines 52 and 68 have some issues with the button type tag.	2018-09-01 06:00:00+00
-669	blog/3.html	9	2018-10-23 08:39:04.257268+00	t	f	t	t	t	t	t	t	t	t	40	41	The only thing that its saying that is problematic is any of your code that has a button. For example, <button type="button" href="silver.html" class="btn btn-lg btn-block btn-outline-primary">, is saying that the href is invalid and on some others there is no <a> element.	2018-09-01 06:00:00+00
-723	index.html	9	2018-10-24 16:18:56.415094+00	t	t	t	f	t	t	t	t	t	t	7	13	I see a link for blogs and projects, seeing this to me means that the three blog links are not necessary	2018-09-01 06:00:00+00
-708	blog/3.html	8	2018-10-24 05:34:13.130195+00	t	t	t	t	f	f	t	t	t	t	20	19	Images are not loading.	2018-09-01 06:00:00+00
-657	blog/3.html	10	2018-10-23 02:18:17.306291+00	t	t	t	t	t	t	t	t	t	t	41	40	Page meets all requirements and the issues with the validator were fixed, good job	2018-09-01 06:00:00+00
-706	index.html	8	2018-10-24 01:44:48.439586+00	t	f	t	t	t	t	t	f	t	t	25	23	Does not validate\r\n\r\nNo Main Section	2018-09-01 06:00:00+00
-581	blog/4.html	0	2018-10-22 16:07:31.544834+00	f	f	f	f	f	f	f	f	f	f	34	24	Looks like you haven't done the project yet.	2018-09-01 06:00:00+00
-714	index.html	9	2018-10-24 12:16:56.868814+00	t	t	t	t	f	t	t	t	t	t	34	24	Perhaps just make the face of the page looks better.	2018-09-01 06:00:00+00
-724	blog/3.html	10	2018-10-24 17:59:12.626105+00	t	t	t	t	t	t	t	t	t	t	22	24	I'll book two vacations. Good job.	2018-09-01 06:00:00+00
-1144	blog/6.html	-1	2018-11-09 16:45:56.236512+00	f	f	f	f	f	f	f	f	f	f	36	8	You must type a summary of problems.	2018-09-01 06:00:00+00
-734	index.html	9	2018-10-25 06:42:54.647146+00	t	f	t	t	t	t	t	t	t	t	35	30	The validator found a host of problems. \r\n Don't forget to start with <!DOCTYPE html>\r\nThe charset="UTF-8"<-- capital letters on utf\r\n<main role="main" class="inner cover">  if the attribute is already main, you don't need to say role = "main".  This is more for assigning roles to divisions or containers try <div role="main">\r\n\r\nOtherwise very nice layout.	2018-09-01 06:00:00+00
-1149	blog/6.html	-1	2018-11-09 16:45:56.244377+00	f	f	f	f	f	f	f	f	f	f	19	8	You must type a summary of problems.	2018-09-01 06:00:00+00
-733	blog/3.html	10	2018-10-25 05:57:52.197926+00	t	t	t	t	t	t	t	t	t	t	41	42	No issues here. Good job.	2018-09-01 06:00:00+00
-728	blog/3.html	10	2018-10-24 20:12:27.194909+00	t	t	t	t	t	t	t	t	t	t	29	32	One error but great page!	2018-09-01 06:00:00+00
-715	index.html	9	2018-10-24 12:34:15.820235+00	t	t	t	f	t	t	t	t	t	t	6	32	Nice page!	2018-09-01 06:00:00+00
-712	index.html	10	2018-10-24 10:10:00.329615+00	t	t	t	t	t	t	t	t	t	t	40	32	Nice page! Only one error!	2018-09-01 06:00:00+00
-1151	blog/6.html	10	2018-11-09 16:45:56.247518+00	t	t	t	t	t	t	t	t	t	t	5	3	very good don't see any problems	2018-09-01 06:00:00+00
-738	blog/3.html	7	2018-10-25 14:15:29.582317+00	t	f	t	t	t	t	f	t	f	t	35	34	9 problems listed on the validator. No JavaScript controls or link to main page.	2018-09-01 06:00:00+00
-1135	blog/6.html	0	2018-11-09 16:45:56.221838+00	f	f	f	f	f	f	f	f	f	f	24	19	Link did not work.	2018-09-01 06:00:00+00
-742	index.html	9	2018-10-26 12:22:07.823246+00	t	f	t	t	t	t	t	t	t	t	19	16	Looks good. You still have one error for your html!	2018-09-01 06:00:00+00
-729	blog/3.html	10	2018-10-24 22:20:18.912944+00	t	t	t	t	t	t	t	t	t	t	28	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-740	index.html	10	2018-10-26 07:12:51.245859+00	t	t	t	t	t	t	t	t	t	t	35	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-739	blog/3.html	0	2018-10-25 21:23:05.865226+00	f	f	f	f	f	f	f	f	f	f	8	6	404 page not found.	2018-09-01 06:00:00+00
-1140	blog/6.html	0	2018-11-09 16:45:56.229802+00	f	f	f	f	f	f	f	f	f	f	8	19	Link does not work.	2018-09-01 06:00:00+00
-1145	blog/6.html	0	2018-11-09 16:45:56.238028+00	f	f	f	f	f	f	f	f	f	f	36	19	Linked to your homepage, not your blog 6.	2018-09-01 06:00:00+00
-1137	blog/6.html	2	2018-11-09 16:45:56.225228+00	t	f	f	f	f	f	t	f	f	f	8	23	Does not validate\r\nincorrect page content	2018-09-01 06:00:00+00
-1142	blog/6.html	10	2018-11-09 16:45:56.232984+00	t	t	t	t	t	t	t	t	t	t	36	23	You must type a summary of problems.	2018-09-01 06:00:00+00
-1147	blog/6.html	2	2018-11-09 16:45:56.241129+00	t	t	f	f	f	f	f	f	f	f	19	23	page started but not built out	2018-09-01 06:00:00+00
-1134	blog/6.html	0	2018-11-09 16:45:56.220242+00	f	f	f	f	f	f	f	f	f	f	24	36	page missing	2018-09-01 06:00:00+00
-1139	blog/6.html	0	2018-11-09 16:45:56.228274+00	f	f	f	f	f	f	f	f	f	f	8	36	page missing.	2018-09-01 06:00:00+00
-1131	blog/6.html	0	2018-11-09 16:45:56.215227+00	f	f	f	f	f	f	f	f	f	f	24	39	404 error not found	2018-09-01 06:00:00+00
-1136	blog/6.html	0	2018-11-09 16:45:56.223454+00	f	f	f	f	f	f	f	f	f	f	8	39	404 error not found	2018-09-01 06:00:00+00
-1146	blog/6.html	5	2018-11-09 16:45:56.239554+00	t	f	t	f	f	t	f	t	f	t	19	39	When I completed this evaluation the blog was not completed. So I was unable to check off everything on the list	2018-09-01 06:00:00+00
-1152	blog/6.html	10	2018-11-09 16:45:56.249037+00	t	t	t	t	t	t	t	t	t	t	5	17	Your blog 6 was very fascinating.	2018-09-01 06:00:00+00
-1138	blog/6.html	0	2018-11-09 16:45:56.22672+00	f	f	f	f	f	f	f	f	f	f	8	24	boooo	2018-09-01 06:00:00+00
-1143	blog/6.html	10	2018-11-09 16:45:56.234535+00	t	t	t	t	t	t	t	t	t	t	36	24	a-ok brother man	2018-09-01 06:00:00+00
-1148	blog/6.html	10	2018-11-09 16:45:56.242747+00	t	t	t	t	t	t	t	t	t	t	19	24	Lookin' good.	2018-09-01 06:00:00+00
-1150	blog/6.html	10	2018-11-09 16:45:56.245947+00	t	t	t	t	t	t	t	t	t	t	19	36	page accomplishes what it was made to do	2018-09-01 06:00:00+00
-1132	blog/6.html	0	2018-11-09 16:45:56.216809+00	f	f	f	f	f	f	f	f	f	f	24	23	No page fond	2018-09-01 06:00:00+00
-686	index.html	9	2018-10-23 12:34:38.640206+00	t	f	t	t	t	t	t	t	t	t	13	7	It looks great! \r\nThere is a problem with the validation of the site though. The alt tag is missing on the img. A nice touch would be to also rotate the img so it is facing right side up. Other than that it looks good	2018-09-01 06:00:00+00
-743	blog/3.html	8	2018-10-26 17:48:46.010184+00	t	t	t	t	t	f	t	f	t	t	42	41	There are still the same issues according to Validator that have been mentioned in the past.	2018-09-01 06:00:00+00
-749	blog/4.html	10	2018-10-29 19:09:19.714115+00	t	t	t	t	t	t	t	t	t	t	18	41	All looks good, good use of tabs.	2018-09-01 06:00:00+00
-424	index.html	5	2018-10-19 13:52:52.485281+00	t	f	t	f	f	t	f	f	t	t	24	34	Validator.org shows issues with the head, the image HTML, and the a attribute for a link. No CSS sheet linked. Very basic page, image has strange proportions. No JavaScript. There is a body, but no header, main, and footer.	2018-09-01 06:00:00+00
-587	blog/4.html	8	2018-10-22 16:07:31.555203+00	t	f	t	t	t	t	f	t	t	t	36	34	When I copied the URL into validator.org, it said "no character encoding found" https://validator.w3.org/check?uri=http%3A%2F%2Fwestonseniw.com%2Fblog%2F4.html&charset=%28detect+automatically%29&doctype=Inline&group=0\r\n\r\nNo JavaScript	2018-09-01 06:00:00+00
-1164	blog/6.html	10	2018-11-09 16:45:56.268072+00	t	t	t	t	t	t	t	t	t	t	33	3	very good only thing that had problems was some validator but overall good	2018-09-01 06:00:00+00
-1168	blog/6.html	0	2018-11-09 16:45:56.274384+00	f	f	f	f	f	f	f	f	f	f	26	3	Wrong URL so i can't tell what you did right or wrong	2018-09-01 06:00:00+00
-783	blog/4.html	10	2018-10-31 13:36:34.736463+00	t	t	t	t	t	t	t	t	t	t	7	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-794	index.html	10	2018-10-31 13:39:16.457459+00	t	t	t	t	t	t	t	t	t	t	10	13	Looks good but I would create another index.html for your blog posts.	2018-09-01 06:00:00+00
-779	blog/4.html	10	2018-10-31 13:35:04.30384+00	t	t	t	t	t	t	t	t	t	t	6	40	Page looks good and met all the requirements. Good job!	2018-09-01 06:00:00+00
-796	blog/4.html	10	2018-10-31 13:39:20.327015+00	t	t	t	t	t	t	t	t	t	t	10	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-763	blog/4.html	8	2018-10-31 13:30:40.94429+00	t	f	f	t	t	t	t	t	t	t	2	23	Page does not validate\r\nNot tabs	2018-09-01 06:00:00+00
-777	blog/4.html	10	2018-10-31 13:34:59.195809+00	t	t	t	t	t	t	t	t	t	t	6	32	Nice page!	2018-09-01 06:00:00+00
-756	index.html	7	2018-10-31 13:26:59.096907+00	t	t	f	f	f	t	t	t	t	t	1	5	The page is missing links to all of the blogs. The page is missing CSS styling and as a result is missing visual appeal. It is just plain html.	2018-09-01 06:00:00+00
-757	blog/4.html	8	2018-10-31 13:27:01.403436+00	t	f	f	t	t	t	t	t	t	t	1	5	The assignment asked for three speeches and this page only includes one. There are also some errors in the html code.	2018-09-01 06:00:00+00
-1175	blog/6.html	9	2018-11-09 16:45:56.285243+00	t	f	t	t	t	t	t	t	t	t	14	37	Just some validator errors looks good tho	2018-09-01 06:00:00+00
-1154	blog/6.html	10	2018-11-09 16:45:56.252181+00	t	t	t	t	t	t	t	t	t	t	5	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-1158	blog/6.html	10	2018-11-09 16:45:56.25872+00	t	t	t	t	t	t	t	t	t	t	3	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-1162	blog/6.html	0	2018-11-09 16:45:56.264983+00	f	f	f	f	f	f	f	f	f	f	17	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-1173	blog/6.html	8	2018-11-09 16:45:56.282192+00	t	f	t	t	f	t	t	t	t	t	37	42	Minor html tag errors.	2018-09-01 06:00:00+00
-1179	blog/6.html	9	2018-11-09 16:45:56.291638+00	t	f	t	t	t	t	t	t	t	t	18	37	Just some margin errors but good overall.	2018-09-01 06:00:00+00
-1166	blog/6.html	10	2018-11-09 16:45:56.27116+00	t	t	t	t	t	t	t	t	t	t	33	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-1177	blog/6.html	9	2018-11-09 16:45:56.288428+00	t	f	t	t	t	t	t	t	t	t	14	42	Some html tag errors.	2018-09-01 06:00:00+00
-1183	blog/6.html	9	2018-11-09 16:45:56.297931+00	t	f	t	t	t	t	t	t	t	t	42	37	This one was really cool just some validator errors	2018-09-01 06:00:00+00
-1187	blog/6.html	9	2018-11-09 16:45:56.304298+00	t	f	t	t	t	t	t	t	t	t	2	37	There were a lot of validator errors but good overall.	2018-09-01 06:00:00+00
-1181	blog/6.html	9	2018-11-09 16:45:56.294812+00	t	f	t	t	t	t	t	t	t	t	18	42	Minor html tag errors.	2018-09-01 06:00:00+00
-1190	blog/6.html	9	2018-11-09 16:45:56.308952+00	t	f	t	t	t	t	t	t	t	t	2	42	Some html tag errors.	2018-09-01 06:00:00+00
-1188	blog/6.html	10	2018-11-09 16:45:56.30585+00	t	t	t	t	t	t	t	t	t	t	2	14	I like the picture you chose to put at the top, and it looks very clear and organized! Great job!	2018-09-01 06:00:00+00
-1178	blog/6.html	6	2018-11-09 16:45:56.289977+00	t	f	t	t	f	t	t	f	f	t	14	2	Could clean up the look and make it a little more organized, also validate the HTML	2018-09-01 06:00:00+00
-1182	blog/6.html	8	2018-11-09 16:45:56.296354+00	t	f	t	t	t	f	t	t	t	t	18	2	Looks great, and cool new skill, just validate the HTML and add a picture	2018-09-01 06:00:00+00
-1186	blog/6.html	8	2018-11-09 16:45:56.302669+00	t	f	t	t	t	t	t	t	f	t	42	2	Cool new rule, just fix the HTML for full credit.	2018-09-01 06:00:00+00
-1159	blog/6.html	0	2018-11-09 16:45:56.260344+00	f	f	f	f	f	f	f	f	f	f	17	5	The page is not located at the correct url. Therefore, it is unable to review and award any points.	2018-09-01 06:00:00+00
-1171	blog/6.html	8	2018-11-09 16:45:56.279056+00	t	t	t	t	t	f	t	t	f	t	37	14	You must type a summary of problems.	2018-09-01 06:00:00+00
-1184	blog/6.html	10	2018-11-09 16:45:56.299469+00	t	t	t	t	t	t	t	t	t	t	42	14	Looks great! I like that you reiterated what the final image should look like again at the end.	2018-09-01 06:00:00+00
-1167	blog/6.html	0	2018-11-09 16:45:56.272786+00	f	f	f	f	f	f	f	f	f	f	26	5	The webpage is not located at the correct url. It is therefore impossible to review or to award any points.	2018-09-01 06:00:00+00
-1174	blog/6.html	6	2018-11-09 16:45:56.283691+00	t	f	t	t	t	f	t	f	f	t	37	2	Confusing, needs an explanation, pictures, main menu, header and footer.. etc...	2018-09-01 06:00:00+00
-1180	blog/6.html	10	2018-11-09 16:45:56.293206+00	t	t	t	t	t	t	t	t	t	t	18	14	This is really cool, you did an awesome job! PS thanks for the countdown to the end of the semester :)	2018-09-01 06:00:00+00
-1063	blog/3.html	8	2018-11-06 11:59:57.834763+00	t	t	t	t	t	t	t	f	f	t	33	34	no header, main, or footer tags and no main menu link	2018-09-01 06:00:00+00
-1156	blog/6.html	10	2018-11-09 16:45:56.255464+00	t	t	t	t	t	t	t	t	t	t	3	17	Your blog 6 was straight forward and I learned.	2018-09-01 06:00:00+00
-1161	blog/6.html	0	2018-11-09 16:45:56.263482+00	f	f	f	f	f	f	f	f	f	f	17	33	no blog	2018-09-01 06:00:00+00
-1170	blog/6.html	0	2018-11-09 16:45:56.277558+00	f	f	f	f	f	f	f	f	f	f	26	33	no blog	2018-09-01 06:00:00+00
-1165	blog/6.html	10	2018-11-09 16:45:56.269643+00	t	t	t	t	t	t	t	t	t	t	33	17	I liked your blog 6	2018-09-01 06:00:00+00
-1086	blog/3.html	8	2018-11-07 20:05:36.051157+00	t	f	t	t	t	t	t	f	t	t	16	15	HTML isn't valid, banner and main missing.	2018-09-01 06:00:00+00
-1169	blog/6.html	0	2018-11-09 16:45:56.275915+00	f	f	f	f	f	f	f	f	f	f	26	17	Your blog 6 had restricted me from accessing it.	2018-09-01 06:00:00+00
-1172	blog/6.html	10	2018-11-09 16:45:56.280671+00	t	t	t	t	t	t	t	t	t	t	37	18	Cool lesson	2018-09-01 06:00:00+00
-1176	blog/6.html	10	2018-11-09 16:45:56.286748+00	t	t	t	t	t	t	t	t	t	t	14	18	wow.	2018-09-01 06:00:00+00
-1185	blog/6.html	10	2018-11-09 16:45:56.301124+00	t	t	t	t	t	t	t	t	t	t	42	18	Cool lesson	2018-09-01 06:00:00+00
-1189	blog/6.html	10	2018-11-09 16:45:56.30742+00	t	t	t	t	t	t	t	t	t	t	2	18	Looks great	2018-09-01 06:00:00+00
-827	blog/4.html	10	2018-10-31 13:46:30.659058+00	t	t	t	t	t	t	t	t	t	t	19	16	AWESOME JOB!	2018-09-01 06:00:00+00
-829	blog/4.html	8	2018-10-31 13:47:13.019982+00	t	f	f	t	t	t	t	t	t	t	20	38	Great page! The validator said that your img element needs an alt attribute. Also, we are supposed to have three speeches, so maybe add two more. Looks nice, though!	2018-09-01 06:00:00+00
-837	blog/4.html	10	2018-10-31 13:48:25.587587+00	t	t	t	t	t	t	t	t	t	t	22	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-822	blog/4.html	9	2018-10-31 13:44:29.129571+00	t	t	t	t	t	f	t	t	t	t	16	19	One of the images is not loading.	2018-09-01 06:00:00+00
-819	index.html	9	2018-10-31 13:44:19.6333+00	t	f	t	t	t	t	t	t	t	t	16	42	Some issues with lines 28, 35 and 110.	2018-09-01 06:00:00+00
-821	blog/4.html	9	2018-10-31 13:44:27.610076+00	t	f	t	t	t	t	t	t	t	t	16	42	Some issues with lines 62 and 123.	2018-09-01 06:00:00+00
-826	index.html	9	2018-10-31 13:46:26.189123+00	t	f	t	t	t	t	t	t	t	t	19	42	Line 9, syntax issue.	2018-09-01 06:00:00+00
-818	index.html	10	2018-10-31 13:44:17.528964+00	t	t	t	t	t	t	t	t	t	t	16	37	Looks good.	2018-09-01 06:00:00+00
-820	blog/4.html	9	2018-10-31 13:44:25.178462+00	t	f	t	t	t	t	t	t	t	t	16	37	still missing slash in validator	2018-09-01 06:00:00+00
-861	blog/4.html	0	2018-10-31 13:51:06.594754+00	f	f	f	f	f	f	f	f	f	f	26	30	Error 404 page not found (blog 4 is unfinished and is in an extra folder /blog/blog/4.html)	2018-09-01 06:00:00+00
-812	blog/3.html	10	2018-10-31 13:43:46.50081+00	t	t	t	t	t	t	t	t	t	t	15	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-815	blog/3.html	10	2018-10-31 13:44:11.459439+00	t	t	t	t	t	t	t	t	t	t	16	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-858	index.html	10	2018-10-31 13:50:51.716189+00	t	t	t	t	t	t	t	t	t	t	26	22	Looks great!	2018-09-01 06:00:00+00
-809	index.html	7	2018-10-31 13:42:44.011026+00	t	t	f	f	f	t	t	t	t	t	14	23	No styling	2018-09-01 06:00:00+00
-845	blog/3.html	1	2018-10-31 13:49:13.860692+00	t	f	f	f	f	f	f	f	f	f	24	22	Does not display a page. 404 error.	2018-09-01 06:00:00+00
-860	blog/4.html	1	2018-10-31 13:51:05.155673+00	t	f	f	f	f	f	f	f	f	f	26	22	Does not display a page. 404 error.ary of problems.	2018-09-01 06:00:00+00
-811	blog/4.html	8	2018-10-31 13:42:51.530973+00	t	f	t	t	t	t	t	f	t	t	14	23	Does not validate\r\nNo footer	2018-09-01 06:00:00+00
-857	blog/4.html	8	2018-10-31 13:50:24.998133+00	t	f	t	t	f	t	t	t	t	t	25	23	Does not validate\r\nInitial active Tab Is blank\r\nNo Page Title	2018-09-01 06:00:00+00
-1198	blog/6.html	10	2018-11-09 16:45:56.321352+00	t	t	t	t	t	t	t	t	t	t	41	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-1202	blog/6.html	10	2018-11-09 16:45:56.327714+00	t	t	t	t	t	t	t	t	t	t	34	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-1206	blog/6.html	10	2018-11-09 16:45:56.333903+00	t	t	t	t	t	t	t	t	t	t	12	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-1231	blog/6.html	0	2018-11-09 16:45:56.373175+00	f	f	f	f	f	f	f	f	f	f	1	38	URL not found	2018-09-01 06:00:00+00
-1204	blog/6.html	8	2018-11-09 16:45:56.330806+00	t	f	t	t	t	f	t	t	t	t	12	41	Looks helpful and pleasing to my eyeballs. There are a few issues with your images and missing a lang in the beginning of the html.	2018-09-01 06:00:00+00
-1215	blog/6.html	0	2018-11-09 16:45:56.347946+00	f	f	f	f	f	f	f	f	f	f	11	31	Invalid URL	2018-09-01 06:00:00+00
-1219	blog/6.html	9	2018-11-09 16:45:56.354293+00	t	f	t	t	t	t	t	t	t	t	4	31	Invalid HTML check for a stray </a> on line 22.	2018-09-01 06:00:00+00
-1223	blog/6.html	0	2018-11-09 16:45:56.360538+00	f	f	f	f	f	f	f	f	f	f	21	31	Invalid URL	2018-09-01 06:00:00+00
-1227	blog/6.html	0	2018-11-09 16:45:56.366762+00	f	f	f	f	f	f	f	f	f	f	6	31	Invalid URL	2018-09-01 06:00:00+00
-1064	index.html	10	2018-11-06 12:00:41.126791+00	t	t	t	t	t	t	t	t	t	t	23	2	You must type a summary of problems.	2018-09-01 06:00:00+00
-1087	blog/3.html	10	2018-11-07 20:58:52.716133+00	t	t	t	t	t	t	t	t	t	t	16	14	Looks really good!	2018-09-01 06:00:00+00
-1212	blog/6.html	10	2018-11-09 16:45:56.343212+00	t	t	t	t	t	t	t	t	t	t	31	4	Looks good might want to explain what a Parallax is	2018-09-01 06:00:00+00
-1213	blog/6.html	10	2018-11-09 16:45:56.344798+00	t	t	t	t	t	t	t	t	t	t	31	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-1216	blog/6.html	0	2018-11-09 16:45:56.349535+00	f	f	f	f	f	f	f	f	f	f	11	4	404 i will keep reviewing it to give you points	2018-09-01 06:00:00+00
-1196	blog/6.html	8	2018-11-09 16:45:56.318291+00	t	f	t	t	t	t	t	f	t	t	41	34	8 validator errors. Only body tag, no header, main, or footer.	2018-09-01 06:00:00+00
-1211	blog/6.html	10	2018-11-09 16:45:56.341614+00	t	t	t	t	t	t	t	t	t	t	31	11	This blog looks great! Wouldn't update anything!	2018-09-01 06:00:00+00
-1205	blog/6.html	6	2018-11-09 16:45:56.332379+00	t	f	t	t	t	f	t	f	f	t	12	34	7 validator errors. No images. Only body tag, no header, main, or footer. No link to main menu.	2018-09-01 06:00:00+00
-1232	blog/6.html	2	2018-11-09 16:45:56.374759+00	f	f	f	f	t	f	t	f	f	f	1	7	There was not a page at the URL	2018-09-01 06:00:00+00
-1193	blog/6.html	10	2018-11-09 16:45:56.313482+00	t	t	t	t	t	t	t	t	t	t	22	12	fulfills assignment requirements	2018-09-01 06:00:00+00
-1197	blog/6.html	10	2018-11-09 16:45:56.31981+00	t	t	t	t	t	t	t	t	t	t	41	12	fulfills assignment requirements	2018-09-01 06:00:00+00
-1201	blog/6.html	10	2018-11-09 16:45:56.326084+00	t	t	t	t	t	t	t	t	t	t	34	12	Looks very nice!	2018-09-01 06:00:00+00
-1210	blog/6.html	9	2018-11-09 16:45:56.340027+00	t	f	t	t	t	t	t	t	t	t	13	12	The dropdown button doesn't appear to be working.	2018-09-01 06:00:00+00
-1226	blog/6.html	0	2018-11-09 16:45:56.365177+00	f	f	f	f	f	f	f	f	f	f	21	6	404 Page not found.	2018-09-01 06:00:00+00
-1222	blog/6.html	10	2018-11-09 16:45:56.359008+00	t	t	t	t	t	t	t	t	t	t	4	6	Well done.	2018-09-01 06:00:00+00
-1218	blog/6.html	0	2018-11-09 16:45:56.352683+00	f	f	f	f	f	f	f	f	f	f	11	6	404 page not found.	2018-09-01 06:00:00+00
-1214	blog/6.html	10	2018-11-09 16:45:56.346407+00	t	t	t	t	t	t	t	t	t	t	31	6	well done.	2018-09-01 06:00:00+00
-1195	blog/6.html	10	2018-11-09 16:45:56.316664+00	t	t	t	t	t	t	t	t	t	t	41	22	You must type a summary of problems.	2018-09-01 06:00:00+00
-1199	blog/6.html	10	2018-11-09 16:45:56.322912+00	t	t	t	t	t	t	t	t	t	t	34	22	You must type a summary of problems.	2018-09-01 06:00:00+00
-1203	blog/6.html	10	2018-11-09 16:45:56.329243+00	t	t	t	t	t	t	t	t	t	t	12	22	You must type a summary of problems.	2018-09-01 06:00:00+00
-1207	blog/6.html	9	2018-11-09 16:45:56.335483+00	t	t	t	t	t	t	f	t	t	t	13	22	You must type a summary of problems.	2018-09-01 06:00:00+00
-1229	blog/6.html	9	2018-11-09 16:45:56.36998+00	t	f	t	t	t	t	t	t	t	t	6	4	Good work.	2018-09-01 06:00:00+00
-1220	blog/6.html	1	2018-11-09 16:45:56.355848+00	t	f	f	f	f	f	f	f	f	f	4	11	Not a validated page, also page content is very confusing	2018-09-01 06:00:00+00
-1224	blog/6.html	3	2018-11-09 16:45:56.362115+00	t	f	t	f	f	f	f	f	f	t	21	11	I would add more content to the blog!	2018-09-01 06:00:00+00
-1228	blog/6.html	10	2018-11-09 16:45:56.368398+00	t	t	t	t	t	t	t	t	t	t	6	11	I think the page is very helpful and looks great!!	2018-09-01 06:00:00+00
-1225	blog/6.html	8	2018-11-09 16:45:56.363656+00	t	f	t	t	t	t	t	t	f	t	21	4	So i saw that you have a star rating but not sure if that is like a Vote what you think or a What i think this blog/food/item is rated on my website . i have you as many points as i could but add a menu and fix up the last of the valid html to get full points	2018-09-01 06:00:00+00
-1217	blog/6.html	8	2018-11-09 16:45:56.351102+00	t	t	t	t	f	f	t	t	t	t	11	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-1221	blog/6.html	9	2018-11-09 16:45:56.357442+00	t	t	t	t	t	f	t	t	t	t	4	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-1230	blog/6.html	10	2018-11-09 16:45:56.371594+00	t	t	t	t	t	t	t	t	t	t	6	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-846	blog/3.html	0	2018-10-31 13:49:16.61815+00	f	f	f	f	f	f	f	f	f	f	24	23	Page Not Found	2018-09-01 06:00:00+00
-1074	blog/3.html	10	2018-11-06 22:39:41.112868+00	t	t	t	t	t	t	t	t	t	t	27	28	Nice page! I like it!	2018-09-01 06:00:00+00
-912	blog/4.html	10	2018-10-31 14:02:54.638743+00	t	t	t	t	t	t	t	t	t	t	37	16	LOOKS GREAT!!	2018-09-01 06:00:00+00
-921	blog/3.html	10	2018-10-31 14:03:33.226879+00	t	t	t	t	t	t	t	t	t	t	39	38	Love this page! My only suggestion would be to maybe add a few more pictures of the location.	2018-09-01 06:00:00+00
-873	index.html	10	2018-10-31 13:56:14.703603+00	t	t	t	t	t	t	t	t	t	t	30	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-877	blog/4.html	10	2018-10-31 13:56:23.667127+00	t	t	t	t	t	t	t	t	t	t	30	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-903	blog/4.html	0	2018-10-31 14:01:33.832658+00	f	f	f	f	f	f	f	f	f	f	35	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-914	blog/4.html	9	2018-10-31 14:02:57.626156+00	t	f	t	t	t	t	t	t	t	t	37	19	The section on MLK is not there.	2018-09-01 06:00:00+00
-896	index.html	10	2018-10-31 14:00:27.066646+00	t	t	t	t	t	t	t	t	t	t	33	6	Homepage looks nice, works well. Nicely done.	2018-09-01 06:00:00+00
-895	blog/4.html	10	2018-10-31 14:00:25.856768+00	t	t	t	t	t	t	t	t	t	t	33	6	You must type a summary of problems.	2018-09-01 06:00:00+00
-885	blog/4.html	10	2018-10-31 13:59:51.924808+00	t	t	t	t	t	t	t	t	t	t	32	6	You must type a summary of problems.	2018-09-01 06:00:00+00
-883	index.html	10	2018-10-31 13:59:41.516024+00	t	t	t	t	t	t	t	t	t	t	32	6	You must type a summary of problems.	2018-09-01 06:00:00+00
-911	index.html	10	2018-10-31 14:02:46.469881+00	t	t	t	t	t	t	t	t	t	t	37	42	You must type a summary of problems.	2018-09-01 06:00:00+00
-913	blog/4.html	10	2018-10-31 14:02:55.916042+00	t	t	t	t	t	t	t	t	t	t	37	42	No issues.	2018-09-01 06:00:00+00
-920	blog/3.html	9	2018-10-31 14:03:31.454249+00	t	t	t	t	t	f	t	t	t	t	39	37	Missing images	2018-09-01 06:00:00+00
-870	blog/4.html	10	2018-10-31 13:55:17.668161+00	t	t	t	t	t	t	t	t	t	t	29	7	I like how your tabs function compared to the template we were given.	2018-09-01 06:00:00+00
-884	blog/4.html	10	2018-10-31 13:59:48.266182+00	t	t	t	t	t	t	t	t	t	t	32	40	Looked good, met all the objectives listed in the assignment. Good job!	2018-09-01 06:00:00+00
-869	blog/4.html	10	2018-10-31 13:55:16.270965+00	t	t	t	t	t	t	t	t	t	t	29	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-894	blog/4.html	10	2018-10-31 14:00:24.569287+00	t	t	t	t	t	t	t	t	t	t	33	40	Page met all the requirements, I enjoyed the speeches you chose, especially the one by \r\nU.S. Navy Adm. William H. McRaven	2018-09-01 06:00:00+00
-875	index.html	10	2018-10-31 13:56:20.841675+00	t	t	t	t	t	t	t	t	t	t	30	22	looks good!	2018-09-01 06:00:00+00
-879	blog/4.html	10	2018-10-31 13:56:59.688948+00	t	t	t	t	t	t	t	t	t	t	30	22	Awesome job.	2018-09-01 06:00:00+00
-902	index.html	10	2018-10-31 14:01:29.837228+00	t	t	t	t	t	t	t	t	t	t	35	22	Looks good, but you should fix the issues you have on the validator page.	2018-09-01 06:00:00+00
-904	blog/4.html	1	2018-10-31 14:01:36.678136+00	t	f	f	f	f	f	f	f	f	f	35	22	Does not display a page. 404 error.	2018-09-01 06:00:00+00
-872	blog/3.html	10	2018-10-31 13:56:12.769139+00	t	t	t	t	t	t	t	t	t	t	30	32	Nice page!	2018-09-01 06:00:00+00
-891	index.html	10	2018-10-31 14:00:18.497426+00	t	t	t	t	t	t	t	t	t	t	33	32	Cool page!!	2018-09-01 06:00:00+00
-893	blog/4.html	10	2018-10-31 14:00:22.499194+00	t	t	t	t	t	t	t	t	t	t	33	32	Nice page!!	2018-09-01 06:00:00+00
-922	index.html	10	2018-10-31 14:03:39.696926+00	t	t	t	t	t	t	t	t	t	t	39	5	All problems were fixed.	2018-09-01 06:00:00+00
-1258	blog/6.html	0	2018-11-09 16:45:56.416281+00	f	f	f	f	f	f	f	f	f	f	27	32	404 error	2018-09-01 06:00:00+00
-1262	blog/6.html	10	2018-11-09 16:45:56.422673+00	t	t	t	t	t	t	t	t	t	t	40	32	Nice page! Very easy to learn!	2018-09-01 06:00:00+00
-1244	blog/6.html	9	2018-11-09 16:45:56.39397+00	t	f	t	t	t	t	t	t	t	t	16	38	Love it! Just need to fix a few HTML errors.	2018-09-01 06:00:00+00
-1240	blog/6.html	10	2018-11-09 16:45:56.38757+00	t	t	t	t	t	t	t	t	t	t	7	38	This is so cool! Can't wait to follow your instructions!	2018-09-01 06:00:00+00
-1248	blog/6.html	0	2018-11-09 16:45:56.400239+00	f	f	f	f	f	f	f	f	f	f	29	38	URL not found.	2018-09-01 06:00:00+00
-1237	blog/6.html	10	2018-11-09 16:45:56.382753+00	t	t	t	t	t	t	t	t	t	t	38	16	Great work!!	2018-09-01 06:00:00+00
-1233	blog/6.html	0	2018-11-09 16:45:56.37634+00	f	f	f	f	f	f	f	f	f	f	1	16	URL not found	2018-09-01 06:00:00+00
-1250	blog/6.html	0	2018-11-09 16:45:56.403419+00	f	f	f	f	f	f	f	f	f	f	29	16	URL not found	2018-09-01 06:00:00+00
-1241	blog/6.html	10	2018-11-09 16:45:56.389149+00	t	t	t	t	t	t	t	t	t	t	7	16	Great work! I like what you picked!	2018-09-01 06:00:00+00
-1261	blog/6.html	9	2018-11-09 16:45:56.421034+00	t	f	t	t	t	t	t	t	t	t	40	25	one item does no validate\r\n\r\nvery detailed instruction	2018-09-01 06:00:00+00
-1252	blog/6.html	0	2018-11-09 16:45:56.40653+00	f	f	f	f	f	f	f	f	f	f	20	40	Page does not exist at the location specified ---> blog/6.html	2018-09-01 06:00:00+00
-1260	blog/6.html	10	2018-11-09 16:45:56.419501+00	t	t	t	t	t	t	t	t	t	t	40	27	no problems. very nice	2018-09-01 06:00:00+00
-1265	blog/6.html	0	2018-11-09 16:45:56.427419+00	f	f	f	f	f	f	f	f	f	f	25	40	Sorry, but there was not page present at the specified location blog/6.html	2018-09-01 06:00:00+00
-1249	blog/6.html	2	2018-11-09 16:45:56.401815+00	f	f	f	t	f	f	t	f	f	f	29	7	There was no page at the URL	2018-09-01 06:00:00+00
-1236	blog/6.html	10	2018-11-09 16:45:56.381132+00	t	t	t	t	t	t	t	t	t	t	38	7	Looks great, easy to read, and follow.	2018-09-01 06:00:00+00
-1253	blog/6.html	0	2018-11-09 16:45:56.408098+00	f	f	f	f	f	f	f	f	f	f	20	25	page not found	2018-09-01 06:00:00+00
-1257	blog/6.html	0	2018-11-09 16:45:56.414597+00	f	f	f	f	f	f	f	f	f	f	27	25	page not found	2018-09-01 06:00:00+00
-1251	blog/6.html	0	2018-11-09 16:45:56.404925+00	f	f	f	f	f	f	f	f	f	f	20	27	Additionally, a 404 Not Found error was encountered while trying to use an ErrorDocument to handle the request.	2018-09-01 06:00:00+00
-1256	blog/6.html	10	2018-11-09 16:45:56.413023+00	t	t	t	t	t	t	t	t	t	t	27	40	Good job getting your page up, content is interesting	2018-09-01 06:00:00+00
-1264	blog/6.html	10	2018-11-09 16:45:56.425846+00	t	t	t	t	t	t	t	t	t	t	25	27	You must type a summary of problems.	2018-09-01 06:00:00+00
-1246	blog/6.html	10	2018-11-09 16:45:56.397108+00	t	t	t	t	t	t	t	t	t	t	16	29	Good job. The validator shows some minor errors, but I don't really think that's a big problem.	2018-09-01 06:00:00+00
-1242	blog/6.html	10	2018-11-09 16:45:56.390807+00	t	t	t	t	t	t	t	t	t	t	7	29	I like that shaking animation, looks funny. Good job.	2018-09-01 06:00:00+00
-1238	blog/6.html	10	2018-11-09 16:45:56.384283+00	t	t	t	t	t	t	t	t	t	t	38	29	Good job.	2018-09-01 06:00:00+00
-1234	blog/6.html	0	2018-11-09 16:45:56.377966+00	f	f	f	f	f	f	f	f	f	f	1	29	I couldn't find the page.	2018-09-01 06:00:00+00
-1255	blog/6.html	10	2018-11-09 16:45:56.411409+00	t	t	t	t	t	t	t	t	t	t	27	20	good explanation of SEO	2018-09-01 06:00:00+00
-1259	blog/6.html	10	2018-11-09 16:45:56.417895+00	t	t	t	t	t	t	t	t	t	t	40	20	Good explanation on how to create page slider	2018-09-01 06:00:00+00
-1263	blog/6.html	10	2018-11-09 16:45:56.424266+00	t	t	t	t	t	t	t	t	t	t	25	20	everything looks good	2018-09-01 06:00:00+00
-1235	blog/6.html	10	2018-11-09 16:45:56.379539+00	t	t	t	t	t	t	t	t	t	t	38	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-1239	blog/6.html	10	2018-11-09 16:45:56.385893+00	t	t	t	t	t	t	t	t	t	t	7	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-1243	blog/6.html	9	2018-11-09 16:45:56.392379+00	t	t	t	t	t	t	f	t	t	t	16	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-1247	blog/6.html	10	2018-11-09 16:45:56.398705+00	t	t	t	t	t	t	t	t	t	t	29	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-905	blog/4.html	0	2018-10-31 14:01:38.855964+00	f	f	f	f	f	f	f	f	f	f	35	30	Error 404 page not found (no blog 4)	2018-09-01 06:00:00+00
-943	blog/5.html	9	2018-11-05 16:01:58.014989+00	t	t	f	t	t	t	t	t	t	t	29	7	Looks good. \r\nHowever, it did not contain 10 photos from 2 different sources or their descriptions as the instructions stated.\r\nA tip for your CSS would be to limit the box width so there is not so much of a white border surrounding the photo.\r\nOtherwise it looks good, functional, and valid.	2018-09-01 06:00:00+00
-946	blog/5.html	9	2018-11-05 16:01:58.020719+00	t	f	t	t	t	t	t	t	t	t	10	7	Looks good. \r\nHowever, it did not validate because the header tag is supposed to be in the body of the file and not in the head section.\r\nOtherwise it looks good and functional.	2018-09-01 06:00:00+00
-949	blog/5.html	9	2018-11-05 16:01:58.026282+00	t	f	t	t	t	t	t	t	t	t	13	7	It looks good.\r\nHowever, it did not validate because of the CSS in the img tag. You used an equals sign (=) and not CSS notation of a colon and semicolon  ( : ; ). here is an example of your code that is fixed.\r\n       <div class="item">\r\n                <img src="https://www.colegeddes.com/blog/images/2.PNG" alt="Trees Before" style="min-width:500px; max-width:500px; min-height:250px; max-height:250px;">\r\n                <div class="carousel-caption">\r\n                    <h3>Untouched forest</h3>\r\n                    <p></p>\r\n                </div>\r\n            </div>\r\nOther than it looks good and is functional.	2018-09-01 06:00:00+00
-942	blog/5.html	10	2018-11-05 16:01:58.01295+00	t	t	t	t	t	t	t	t	t	t	7	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-945	blog/5.html	10	2018-11-05 16:01:58.018886+00	t	t	t	t	t	t	t	t	t	t	29	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-948	blog/5.html	10	2018-11-05 16:01:58.024418+00	t	t	t	t	t	t	t	t	t	t	10	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-726	index.html	10	2018-10-24 19:35:58.386147+00	t	t	t	t	t	t	t	t	t	t	42	16	Looks great!	2018-09-01 06:00:00+00
-813	blog/3.html	9	2018-10-31 13:43:49.003149+00	t	f	t	t	t	t	t	t	t	t	15	16	Looks great! There are still some errors with your HTML	2018-09-01 06:00:00+00
-882	blog/4.html	10	2018-10-31 13:59:04.968467+00	t	t	t	t	t	t	t	t	t	t	31	41	All looks good. Good use of tabs and css styling.	2018-09-01 06:00:00+00
-937	blog/4.html	9	2018-10-31 14:04:59.692147+00	t	f	t	t	t	t	t	t	t	t	42	16	Still some problems with the HTML. Overall nice work!!	2018-09-01 06:00:00+00
-930	blog/4.html	10	2018-10-31 14:04:04.231013+00	t	t	t	t	t	t	t	t	t	t	40	6	Everything works well and looks the way that it should! nicely done!	2018-09-01 06:00:00+00
-938	blog/4.html	9	2018-10-31 14:05:01.715351+00	t	f	t	t	t	t	t	t	t	t	42	19	There was some css code on the webpage at the very bottom. Looks good overall.	2018-09-01 06:00:00+00
-928	index.html	10	2018-10-31 14:03:59.935758+00	t	t	t	t	t	t	t	t	t	t	40	6	Home page looks nice!	2018-09-01 06:00:00+00
-795	index.html	9	2018-10-31 13:39:18.421212+00	t	f	t	t	t	t	t	t	t	t	10	7	Looks good. \r\nIt has one error with the validation. When scaling an img in HTML and not CSS you use the number with out the px element.\r\nThat was the only problem that I found, good job.	2018-09-01 06:00:00+00
-939	blog/4.html	10	2018-10-31 14:05:03.723487+00	t	t	t	t	t	t	t	t	t	t	42	37	Looks good	2018-09-01 06:00:00+00
-797	blog/4.html	9	2018-10-31 13:39:21.916687+00	t	f	t	t	t	t	t	t	t	t	10	7	The page is nicely organized.\r\nThe page will not pass the validator possibly because the end tags for main, body and other necessary tags seem to be missing.\r\nOther than that it looks great.	2018-09-01 06:00:00+00
-805	blog/4.html	9	2018-10-31 13:41:35.46249+00	t	t	f	t	t	t	t	t	t	t	13	7	The page is really nice.\r\nOne of the guide lines for this blog was to use tabs to display the speeches.\r\nOther than that it looks great.	2018-09-01 06:00:00+00
-839	blog/4.html	7	2018-10-31 13:48:29.855447+00	t	f	f	t	t	f	t	t	t	t	22	30	blog 4 appears to be a general blog content page that links to the other 3 blogs.  It does not have any speeches.\r\n\r\nThe validator lists errors in parent child relationships and spaces in links and images.	2018-09-01 06:00:00+00
-935	index.html	10	2018-10-31 14:04:36.400746+00	t	t	t	t	t	t	t	t	t	t	41	18	You must type a summary of problems.	2018-09-01 06:00:00+00
-892	index.html	10	2018-10-31 14:00:20.452416+00	t	t	t	t	t	t	t	t	t	t	33	40	I liked your home page, the pictures are a bit large I would scale them down to make the page load faster	2018-09-01 06:00:00+00
-936	blog/3.html	10	2018-10-31 14:04:52.601756+00	t	t	t	t	t	t	t	t	t	t	42	40	Nice page and great layout, met all the requirements. Only issue I saw is the pictures are slightly blurry	2018-09-01 06:00:00+00
-929	blog/4.html	10	2018-10-31 14:04:02.42075+00	t	t	t	t	t	t	t	t	t	t	40	32	Nice page!	2018-09-01 06:00:00+00
-658	blog/3.html	9	2018-10-23 03:10:35.21274+00	t	t	t	t	f	t	t	t	t	t	7	5	This page is very close to correct. However, the changes made to the bootstrap template make the page appear more like basic html. Specifically the top half of the page looks like it was made with hardly any CSS styling. Using bootstrap templates can help to build visually appealing websites with minimal effort.	2018-09-01 06:00:00+00
-711	blog/3.html	0	2018-10-24 09:24:37.79653+00	f	f	f	f	f	f	f	f	f	f	8	5	The page is not located at the appropriate URL. Therefore it is impossible to grade and award points.	2018-09-01 06:00:00+00
-735	blog/3.html	9	2018-10-25 07:20:48.56795+00	t	t	f	t	t	t	t	t	t	t	6	5	There does not appear to be a logo for the company. Also, there are several spelling errors. Otherwise, the page is good. You may want to consider adding your own additional styling to make your page more unique.	2018-09-01 06:00:00+00
-772	blog/4.html	9	2018-10-31 13:32:42.125967+00	t	t	f	t	t	t	t	t	t	t	4	5	This page is visually very good. The assignment called for both a description of the context of each speech as well as a description of the significance of the speech. These aspects are missing from some of the speeches. There are also some spelling errors.	2018-09-01 06:00:00+00
-927	blog/4.html	8	2018-10-31 14:03:47.071677+00	t	t	t	t	t	t	t	f	f	t	39	5	There is no header or footer for this page. There is also no menu linking to other pages on the website. You might also want to increase the left margin on some of the headlines. They are really close to edge which makes them a little difficult to read.	2018-09-01 06:00:00+00
-1066	blog/3.html	10	2018-11-06 14:07:40.440064+00	t	t	t	t	t	t	t	t	t	t	33	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-751	blog/4.html	10	2018-10-31 03:25:33.334724+00	t	t	t	t	t	t	t	t	t	t	27	38	This looks great! This page has a really cool design!	2018-09-01 06:00:00+00
-1194	blog/6.html	10	2018-11-09 16:45:56.31509+00	t	t	t	t	t	t	t	t	t	t	22	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-1160	blog/6.html	0	2018-11-09 16:45:56.26195+00	f	f	f	f	f	f	f	f	f	f	17	3	not correct URL so i can't see what you did right or wrong	2018-09-01 06:00:00+00
-1088	blog/4.html	0	2018-11-08 01:13:45.461373+00	f	f	f	f	f	f	f	f	f	f	24	36	missing page	2018-09-01 06:00:00+00
-1268	blog/6.html	10	2018-11-09 16:45:56.432143+00	t	t	t	t	t	t	t	t	t	t	32	27	very nice	2018-09-01 06:00:00+00
-950	blog/5.html	7	2018-11-05 16:01:58.027979+00	t	f	t	f	f	t	t	t	t	t	13	29	The html has several errors, The visual appearance can be way better.	2018-09-01 06:00:00+00
-947	blog/5.html	9	2018-11-05 16:01:58.022577+00	t	f	t	t	t	t	t	t	t	t	10	29	Good.\r\nThe HTML has an error, checking the source it seems you have a <header> tag inside the <head> and that shouldn't happen.	2018-09-01 06:00:00+00
-1267	blog/6.html	10	2018-11-09 16:45:56.430569+00	t	t	t	t	t	t	t	t	t	t	32	20	simple and effective explanation	2018-09-01 06:00:00+00
-944	blog/5.html	9	2018-11-05 16:01:58.016875+00	t	f	t	t	t	t	t	t	t	t	29	10	some issues in the validater	2018-09-01 06:00:00+00
-941	blog/5.html	10	2018-11-05 16:01:58.010765+00	t	t	t	t	t	t	t	t	t	t	7	10	looks good	2018-09-01 06:00:00+00
-953	blog/5.html	10	2018-11-05 16:01:58.033596+00	t	t	t	t	t	t	t	t	t	t	20	27	Awesome picture.	2018-09-01 06:00:00+00
-990	blog/5.html	9	2018-11-05 16:01:58.09655+00	t	f	t	t	t	t	t	t	t	t	2	23	Does not validate	2018-09-01 06:00:00+00
-993	blog/5.html	9	2018-11-05 16:01:58.101777+00	t	f	t	t	t	t	t	t	t	t	25	23	Does not validate	2018-09-01 06:00:00+00
-996	blog/5.html	8	2018-11-05 16:01:58.106828+00	t	f	t	t	t	t	t	f	t	t	14	23	Does not validate\r\n\r\nNo Banner/ Footer	2018-09-01 06:00:00+00
-954	blog/5.html	10	2018-11-05 16:01:58.035267+00	t	t	t	t	t	t	t	t	t	t	20	38	Great! I like how you told an individual story with each picture.	2018-09-01 06:00:00+00
-1000	blog/5.html	10	2018-11-05 16:01:58.113559+00	t	t	t	t	t	t	t	t	t	t	34	24	Looks heat	2018-09-01 06:00:00+00
-979	blog/5.html	9	2018-11-05 16:01:58.078108+00	t	f	t	t	t	t	t	t	t	t	37	16	Great story lol!! Only a few errors with your HTML	2018-09-01 06:00:00+00
-982	blog/5.html	9	2018-11-05 16:01:58.083297+00	t	f	t	t	t	t	t	t	t	t	42	16	Cool pictures! HTML has some errors	2018-09-01 06:00:00+00
-960	blog/5.html	10	2018-11-05 16:01:58.045359+00	t	t	t	t	t	t	t	t	t	t	27	38	This makes me want to go on a trip like this! The page looks amazing.	2018-09-01 06:00:00+00
-978	blog/5.html	9	2018-11-05 16:01:58.076379+00	t	t	t	t	t	t	t	f	t	t	16	19	Did not see the footer but glad Hank ignited his fire!	2018-09-01 06:00:00+00
-985	blog/5.html	8	2018-11-05 16:01:58.088168+00	t	t	f	t	t	f	t	t	t	t	19	16	Only four pictures. Add six more!	2018-09-01 06:00:00+00
-981	blog/5.html	9	2018-11-05 16:01:58.081598+00	t	t	t	t	t	t	t	f	t	t	37	19	Did not see a footer. Those images should be centered. Good overall!	2018-09-01 06:00:00+00
-984	blog/5.html	10	2018-11-05 16:01:58.08658+00	t	t	t	t	t	t	t	t	t	t	42	19	Looks good!	2018-09-01 06:00:00+00
-976	blog/5.html	9	2018-11-05 16:01:58.072786+00	t	f	t	t	t	t	t	t	t	t	16	37	Everything looked good just validator errors.	2018-09-01 06:00:00+00
-983	blog/5.html	9	2018-11-05 16:01:58.084897+00	t	f	t	t	t	t	t	t	t	t	42	37	Looked good just validator errors.	2018-09-01 06:00:00+00
-986	blog/5.html	8	2018-11-05 16:01:58.089947+00	t	t	f	t	t	f	t	t	t	t	19	37	Looks like a good start just need to finish it.	2018-09-01 06:00:00+00
-963	blog/5.html	10	2018-11-05 16:01:58.050299+00	t	t	t	t	t	t	t	t	t	t	38	27	Without problems. Nice pictures	2018-09-01 06:00:00+00
-995	blog/5.html	6	2018-11-05 16:01:58.105117+00	t	f	t	f	t	t	t	f	f	t	14	25	html does not validate\r\nI took off  points because the image carousel takes up the whole page and leaves no room for the header, footer,or menus	2018-09-01 06:00:00+00
-991	blog/5.html	9	2018-11-05 16:01:58.098354+00	t	f	t	t	t	t	t	t	t	t	25	2	Fix the one HTML error for full credit	2018-09-01 06:00:00+00
-998	blog/5.html	10	2018-11-05 16:01:58.110178+00	t	t	t	t	t	t	t	t	t	t	23	25	Great job formatting the images	2018-09-01 06:00:00+00
-997	blog/5.html	9	2018-11-05 16:01:58.108511+00	t	t	f	t	t	t	t	t	t	t	23	2	Need to add a paragraph explaining your pictures, other than that it looks great.	2018-09-01 06:00:00+00
-1005	blog/5.html	0	2018-11-05 16:01:58.122308+00	f	f	f	f	f	f	f	f	f	f	24	28	No page submitted :(	2018-09-01 06:00:00+00
-965	blog/5.html	1	2018-11-05 16:01:58.053713+00	t	f	f	f	f	f	f	f	f	f	26	22	Page is no found. 404 Error	2018-09-01 06:00:00+00
-1008	blog/5.html	10	2018-11-05 16:01:58.127264+00	t	t	t	t	t	t	t	t	t	t	36	28	Nice page and pictures!	2018-09-01 06:00:00+00
-968	blog/5.html	10	2018-11-05 16:01:58.058915+00	t	t	t	t	t	t	t	t	t	t	35	22	Looks good, but your New York image is not properly connected.	2018-09-01 06:00:00+00
-975	blog/5.html	10	2018-11-05 16:01:58.070922+00	t	t	t	t	t	t	t	t	t	t	30	22	Looks good!	2018-09-01 06:00:00+00
-1002	blog/5.html	7	2018-11-05 16:01:58.116934+00	t	t	f	t	t	f	f	t	t	t	34	28	The page doesn't have an image carousel.	2018-09-01 06:00:00+00
-977	blog/5.html	9	2018-11-05 16:01:58.074583+00	t	f	t	t	t	t	t	t	t	t	16	42	Just some minor tag errors. Looks good!	2018-09-01 06:00:00+00
-980	blog/5.html	8	2018-11-05 16:01:58.079822+00	t	f	t	t	f	t	t	t	t	t	37	42	Just some minor tag errors. Try adjusting the image sizes or rather the arrow sizing.	2018-09-01 06:00:00+00
-987	blog/5.html	10	2018-11-05 16:01:58.091617+00	t	t	t	t	t	t	t	t	t	t	19	42	None.	2018-09-01 06:00:00+00
-952	blog/5.html	10	2018-11-05 16:01:58.031883+00	t	t	t	t	t	t	t	t	t	t	20	9	I really like the pictures you chose to present! Your code looks good I couldn't find any errors so great job.	2018-09-01 06:00:00+00
-962	blog/5.html	10	2018-11-05 16:01:58.048703+00	t	t	t	t	t	t	t	t	t	t	38	9	Now I'm thirsty for some water, great job on the project. I liked the idea and the story was well said. No HTML errors and keep up the good work	2018-09-01 06:00:00+00
-1007	blog/5.html	10	2018-11-05 16:01:58.125638+00	t	t	t	t	t	t	t	t	t	t	36	24	heat	2018-09-01 06:00:00+00
-1010	blog/5.html	10	2018-11-05 16:01:58.130578+00	t	t	t	t	t	t	t	t	t	t	28	24	fire	2018-09-01 06:00:00+00
-966	blog/5.html	0	2018-11-05 16:01:58.055499+00	f	f	f	f	f	f	f	f	f	f	26	30	Error 404 bad link: http://irb.wpr.mybluehost.me/blog/blog/5.html This url has one too many directories.  It should read: http://irb.wpr.mybluehost.me/blog/5.html	2018-09-01 06:00:00+00
-967	blog/5.html	10	2018-11-05 16:01:58.057287+00	t	t	t	t	t	t	t	t	t	t	35	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-989	blog/5.html	10	2018-11-05 16:01:58.094932+00	t	t	t	t	t	t	t	t	t	t	2	14	You must type a summary of problems.	2018-09-01 06:00:00+00
-992	blog/5.html	10	2018-11-05 16:01:58.099983+00	t	t	t	t	t	t	t	t	t	t	25	14	Looks great!	2018-09-01 06:00:00+00
-999	blog/5.html	10	2018-11-05 16:01:58.111838+00	t	t	t	t	t	t	t	t	t	t	23	14	You must type a summary of problems.	2018-09-01 06:00:00+00
-970	blog/5.html	7	2018-11-05 16:01:58.062307+00	t	t	f	t	t	t	t	f	f	t	22	26	I like the photo story, but I did not see a banner or footer. I also did not see a link to a home page.	2018-09-01 06:00:00+00
-973	blog/5.html	10	2018-11-05 16:01:58.067567+00	t	t	t	t	t	t	t	t	t	t	30	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-1001	blog/5.html	9	2018-11-05 16:01:58.115223+00	t	t	f	t	t	t	t	t	t	t	34	36	Page just needs the carousel but looks good!	2018-09-01 06:00:00+00
-1004	blog/5.html	0	2018-11-05 16:01:58.120634+00	f	f	f	f	f	f	f	f	f	f	24	36	Page is missing	2018-09-01 06:00:00+00
-1011	blog/5.html	10	2018-11-05 16:01:58.132299+00	t	t	t	t	t	t	t	t	t	t	28	36	Nice job page looks good could use a css rule that makes pictures the same size	2018-09-01 06:00:00+00
-955	blog/5.html	10	2018-11-05 16:01:58.036906+00	t	t	t	t	t	t	t	t	t	t	9	20	good rock and roll content	2018-09-01 06:00:00+00
-958	blog/5.html	10	2018-11-05 16:01:58.042059+00	t	t	t	t	t	t	t	t	t	t	27	20	good pictures taken by yourself good quality and great views	2018-09-01 06:00:00+00
-961	blog/5.html	10	2018-11-05 16:01:58.046979+00	t	t	t	t	t	t	t	t	t	t	38	20	good story of how water is made and ends in your cup	2018-09-01 06:00:00+00
-964	blog/5.html	10	2018-11-05 16:01:58.051976+00	t	t	t	t	t	t	t	t	t	t	26	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-971	blog/5.html	10	2018-11-05 16:01:58.064053+00	t	t	t	t	t	t	t	t	t	t	22	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-974	blog/5.html	10	2018-11-05 16:01:58.069319+00	t	t	t	t	t	t	t	t	t	t	30	35	You must type a summary of problems.	2018-09-01 06:00:00+00
-1003	blog/5.html	0	2018-11-05 16:01:58.118907+00	f	f	f	f	f	f	f	f	f	f	24	34	does not exist	2018-09-01 06:00:00+00
-1006	blog/5.html	9	2018-11-05 16:01:58.123988+00	t	f	t	t	t	t	t	t	t	t	36	34	just two errors on the validator	2018-09-01 06:00:00+00
-1009	blog/5.html	7	2018-11-05 16:01:58.12891+00	t	t	t	t	f	t	t	f	f	t	28	34	Carousel is very large and there are no other aspects to the page. No header, main, or footer tags or main menu link	2018-09-01 06:00:00+00
-1254	blog/6.html	10	2018-11-09 16:45:56.409719+00	t	t	t	t	t	t	t	t	t	t	20	32	Nice page!	2018-09-01 06:00:00+00
-951	blog/5.html	10	2018-11-05 16:01:58.029727+00	t	t	t	t	t	t	t	t	t	t	13	10	elemental story works	2018-09-01 06:00:00+00
-1055	blog/5.html	-1	2018-11-05 16:01:58.206832+00	f	f	f	f	f	f	f	f	f	f	11	8	You must type a summary of problems.	2018-09-01 06:00:00+00
-1026	blog/5.html	10	2018-11-05 16:01:58.158369+00	t	t	t	t	t	t	t	t	t	t	3	12	Looks good! Your images are a bit large and distorted though. Also check your validator issues.	2018-09-01 06:00:00+00
-1041	blog/5.html	9	2018-11-05 16:01:58.183411+00	t	f	t	t	t	t	t	t	t	t	4	39	I like how this student broke down the themes into separate tabs. The images for each theme are cohesive and professional in appearance. The only point I couldn't give full credit for is the valid html. The image tags simply need a "%" after each width specification. For example, width="500;" should be changed to width="500%;". That should take care of the errors!	2018-09-01 06:00:00+00
-1029	blog/5.html	8	2018-11-05 16:01:58.163399+00	t	f	t	t	f	t	t	t	t	t	17	12	A lot of images are broken and the carousel doesn't appear to be working right. Also, check your validator issues.	2018-09-01 06:00:00+00
-1032	blog/5.html	0	2018-11-05 16:01:58.168405+00	f	f	f	f	f	f	f	f	f	f	21	12	Page nonexistent or located at wrong URL.	2018-09-01 06:00:00+00
-1038	blog/5.html	10	2018-11-05 16:01:58.178412+00	t	t	t	t	t	t	t	t	t	t	5	39	I gave this student a 10/10 because the requirements for the assignment were nearly completely met. The only thing I noticed that could've potentially lowered this student's score was an image that appeared to be missing in the carousel. I'm reviewing this before the deadline for the assignment so the missing image could be due to some last minute changes this particular student is working on. Thus,  no points were deducted for the absence of one photo.	2018-09-01 06:00:00+00
-1049	blog/5.html	9	2018-11-05 16:01:58.196759+00	t	t	t	t	t	t	t	f	t	t	18	41	There are multiple issues but are all about using figcaption for your paragraphs.	2018-09-01 06:00:00+00
-1051	blog/5.html	9	2018-11-05 16:01:58.200211+00	t	f	t	t	t	t	t	t	t	t	31	41	Looks good but on the validator it says that you need to use more than one meta. Other than that everything looks good.	2018-09-01 06:00:00+00
-1027	blog/5.html	8	2018-11-05 16:01:58.160005+00	t	t	t	t	t	t	t	t	f	f	17	3	page not set up right in which i know its moving but i don't see the image that's moving just the the stagnic images going down the page	2018-09-01 06:00:00+00
-1030	blog/5.html	0	2018-11-05 16:01:58.164966+00	f	f	f	f	f	f	f	f	f	f	21	3	not right url so i can't tell what you did right or wrong	2018-09-01 06:00:00+00
-1033	blog/5.html	10	2018-11-05 16:01:58.170044+00	t	t	t	t	t	t	t	t	t	t	12	3	good overall some validator problems	2018-09-01 06:00:00+00
-1021	blog/5.html	10	2018-11-05 16:01:58.149641+00	t	t	t	t	t	t	t	t	t	t	6	32	Nice!	2018-09-01 06:00:00+00
-1013	blog/5.html	9	2018-11-05 16:01:58.136018+00	t	t	f	t	t	t	t	t	t	t	32	40	I liked the pictures you chose. There was no introduction paragraph like called for in the instructions, otherwise good job. The picture captions were a little hard to read since half of it was off of the picture in white space	2018-09-01 06:00:00+00
-1016	blog/5.html	9	2018-11-05 16:01:58.140852+00	t	t	f	t	t	t	t	t	t	t	33	40	Good job with pictures and intro paragraph. Only issue was each photo was supposed to have a caption	2018-09-01 06:00:00+00
-1023	blog/5.html	10	2018-11-05 16:01:58.153158+00	t	t	t	t	t	t	t	t	t	t	6	40	Good job, page met all requirements and I l enjoyed the pictures you chose.,	2018-09-01 06:00:00+00
-1036	blog/5.html	10	2018-11-05 16:01:58.175032+00	t	t	t	t	t	t	t	t	t	t	5	4	This looks great and i love that you have a story per slide	2018-09-01 06:00:00+00
-1018	blog/5.html	10	2018-11-05 16:01:58.144311+00	t	t	t	t	t	t	t	t	t	t	40	32	Very nice!	2018-09-01 06:00:00+00
-1046	blog/5.html	8	2018-11-05 16:01:58.191653+00	t	t	t	t	t	t	t	f	f	t	39	4	missing your banner ... throw that back in to get 10 :)	2018-09-01 06:00:00+00
-1050	blog/5.html	9	2018-11-05 16:01:58.198536+00	t	f	t	t	t	t	t	t	t	t	31	18	It is difficult to say if any of our blog 5's will have a 'business purpose' but it does tell a story involving one of the 4 elements so I gave you that point too. :)\r\nI am not sure why but the validator had an issue with your 'meta charset'	2018-09-01 06:00:00+00
-1052	blog/5.html	10	2018-11-05 16:01:58.20193+00	t	t	t	t	t	t	t	t	t	t	41	18	Looks good. My carousel forms to each image too. Couldn't figure that one out.	2018-09-01 06:00:00+00
-1057	blog/5.html	10	2018-11-05 16:01:58.210059+00	t	t	t	t	t	t	t	t	t	t	15	8	Amazing choice of photos and captions!	2018-09-01 06:00:00+00
-1024	blog/5.html	10	2018-11-05 16:01:58.15476+00	t	t	t	t	t	t	t	t	t	t	3	17	Overall it was good!	2018-09-01 06:00:00+00
-1031	blog/5.html	0	2018-11-05 16:01:58.166635+00	f	f	f	f	f	f	f	f	f	f	21	17	Nothing was found except an error page	2018-09-01 06:00:00+00
-1034	blog/5.html	10	2018-11-05 16:01:58.171715+00	t	t	t	t	t	t	t	t	t	t	12	17	Overall it was a real nice blog.	2018-09-01 06:00:00+00
-1039	blog/5.html	9	2018-11-05 16:01:58.180157+00	t	t	f	t	t	t	t	t	t	t	4	5	The page is missing captions on the photos, an intriguing introduction, and a description of why the story was told.	2018-09-01 06:00:00+00
-1044	blog/5.html	0	2018-11-05 16:01:58.188384+00	f	f	f	f	f	f	f	f	f	f	1	39	The page has not yet been uploaded so there is not anything for me to rate at this point.	2018-09-01 06:00:00+00
-1014	blog/5.html	10	2018-11-05 16:01:58.137636+00	t	t	t	t	t	t	t	t	t	t	32	6	Nice looks good!	2018-09-01 06:00:00+00
-1017	blog/5.html	10	2018-11-05 16:01:58.142658+00	t	t	t	t	t	t	t	t	t	t	33	6	Page looks great! nicely done!	2018-09-01 06:00:00+00
-1020	blog/5.html	10	2018-11-05 16:01:58.147895+00	t	t	t	t	t	t	t	t	t	t	40	6	Page looks super nice and works well!	2018-09-01 06:00:00+00
-1048	blog/5.html	10	2018-11-05 16:01:58.194984+00	t	t	t	t	t	t	t	t	t	t	18	31	All good	2018-09-01 06:00:00+00
-1053	blog/5.html	10	2018-11-05 16:01:58.203661+00	t	t	t	t	t	t	t	t	t	t	41	31	Looks good	2018-09-01 06:00:00+00
-1056	blog/5.html	9	2018-11-05 16:01:58.208437+00	t	t	t	t	t	t	t	t	f	t	15	11	I would additionally put a home page button, but other than that it looks good!	2018-09-01 06:00:00+00
-1058	blog/5.html	0	2018-11-05 16:01:58.211652+00	f	f	f	f	f	f	f	f	f	f	8	11	There is nothing here! Just add to it, and work on it!	2018-09-01 06:00:00+00
-1012	blog/5.html	10	2018-11-05 16:01:58.134412+00	t	t	t	t	t	t	t	t	t	t	32	33	I think you did a great job. I really liked the pictures that you chose, and I think your captions describe them well. I would try to center your photos but other than that, great job!	2018-09-01 06:00:00+00
-1019	blog/5.html	10	2018-11-05 16:01:58.146049+00	t	t	t	t	t	t	t	t	t	t	40	33	Not only did I enjoy your pictures, I also enjoyed your story. I think you did a wonderful job and I wouldn't change a single thing!	2018-09-01 06:00:00+00
-1054	blog/5.html	0	2018-11-05 16:01:58.205224+00	f	f	f	f	f	f	f	f	f	f	11	15	404 not found	2018-09-01 06:00:00+00
-1059	blog/5.html	0	2018-11-05 16:01:58.213279+00	f	f	f	f	f	f	f	f	f	f	8	15	404 not found	2018-09-01 06:00:00+00
-1047	blog/5.html	9	2018-11-05 16:01:58.193329+00	t	t	t	t	t	t	f	t	t	t	39	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-1040	blog/5.html	10	2018-11-05 16:01:58.181887+00	t	t	t	t	t	t	t	t	t	t	4	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-1037	blog/5.html	10	2018-11-05 16:01:58.176722+00	t	t	t	t	t	t	t	t	t	t	5	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-1089	index.html	10	2018-11-08 01:14:39.331134+00	t	t	t	t	t	t	t	t	t	t	24	28	Nice!	2018-09-01 06:00:00+00
-1043	blog/5.html	10	2018-11-05 16:01:58.186602+00	t	t	t	t	t	t	t	t	t	t	1	4	It works	2018-09-01 06:00:00+00
-1035	blog/5.html	10	2018-11-05 16:01:58.173451+00	t	t	t	t	t	t	t	t	t	t	12	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-1025	blog/5.html	10	2018-11-05 16:01:58.156568+00	t	t	t	t	t	t	t	t	t	t	3	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-1028	blog/5.html	8	2018-11-05 16:01:58.161755+00	t	t	t	f	t	t	f	t	t	t	17	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-1191	blog/6.html	8	2018-11-09 16:45:56.310483+00	t	f	t	t	t	t	t	f	t	t	22	41	Very helpful, like how you did the screenshots. There are a few issues, most of them seem to be with your list of your links. Also with adding a lang at the beginning of the html. There is a missing header and a stray footer.	2018-09-01 06:00:00+00
-1200	blog/6.html	8	2018-11-09 16:45:56.324502+00	t	t	t	t	t	f	f	t	t	t	34	41	Looks good, easy to follow. There are a few issues with your images and a bad value of java script.	2018-09-01 06:00:00+00
-1208	blog/6.html	10	2018-11-09 16:45:56.337006+00	t	t	t	t	t	t	t	t	t	t	13	41	Nice job no issues in the validator, however I was wondering when you click the drop down button if it was suppose to lead to something?	2018-09-01 06:00:00+00
-1071	blog/3.html	9	2018-11-06 21:12:11.6407+00	t	f	t	t	t	t	t	t	t	t	28	25	You must type a summary of problems.	2018-09-01 06:00:00+00
-1270	blog/6.html	10	2018-11-09 16:45:56.435401+00	t	t	t	t	t	t	t	t	t	t	32	25	does not validate\r\nthe styling could be more interesting	2018-09-01 06:00:00+00
-1126	blog/6.html	9	2018-11-09 16:45:56.207269+00	t	f	t	t	t	t	t	t	t	t	23	39	I feel that this student did an excellent job at showing a step by step tutorial for coding. The only thing I couldnt check off on the evaluation list is valid html. When Checking the validity of the html of this page, I encountered some errors. Other then  that I'd say this person deserves full credit	2018-09-01 06:00:00+00
-1141	blog/6.html	8	2018-11-09 16:45:56.231389+00	t	t	f	t	f	t	t	t	t	t	36	39	This student completed the basic aspects of this assignment but I did not find it to be immediately clear what the purpose of this blog is meant to be. The instructions are too small and a bit vague. I find that the photo is a bit abrupt and too large in comparison to the text which is why I could not check off the visual appeal aspect of the evaluation.	2018-09-01 06:00:00+00
-1269	blog/6.html	10	2018-11-09 16:45:56.433727+00	t	t	t	t	t	t	t	t	t	t	32	40	You chose a cool example. Only problem I saw was that the code was not able to be selected to make copy and paste easy. To do this, you can use the following html tag:  <textarea cols="75" rows="40"><textare>\r\nYou can check out my page at samuelss.com/blog/6.html to check out what I am talking about. Good job!	2018-09-01 06:00:00+00
-1068	index.html	9	2018-11-06 16:10:31.876046+00	t	t	t	t	t	t	t	f	t	t	28	34	In the HTML, there is a body, header, and footer, but no main tag.	2018-09-01 06:00:00+00
-1072	blog/4.html	9	2018-11-06 21:13:34.225666+00	t	t	t	t	f	t	t	t	t	t	23	14	You must type a summary of problems.	2018-09-01 06:00:00+00
-1085	index.html	0	2018-11-07 20:02:16.25546+00	f	f	f	f	f	f	f	f	f	f	24	34	.net/index.html is supposed to be the home page but it is the projects page (which is supposed to be .net/projects/index.html). 5 errors on validator. Is supposed to be the home page, therefore incorrect content. No CSS or JavaScript. One image is formatted strange. Very boring visually. No header, main, or footer (just body). There is a link to the main menu, but it just takes you back to the same page (projects page). If this was a business' website, I would not trust its validity.	2018-09-01 06:00:00+00
-1078	index.html	10	2018-11-07 03:18:50.725625+00	t	t	t	t	t	t	t	t	t	t	23	14	You must type a summary of problems.	2018-09-01 06:00:00+00
-1155	blog/6.html	9	2018-11-09 16:45:56.253912+00	t	f	t	t	t	t	t	t	t	t	3	5	There are quite a few errors when this webpage is analyzed by the html validator. There are some minor spelling errors and no footer, but I did not take off points for this because of how minor this issues are.	2018-09-01 06:00:00+00
-1070	index.html	10	2018-11-06 19:34:05.532732+00	t	t	t	t	t	t	t	t	t	t	28	36	nice page love the visual effects	2018-09-01 06:00:00+00
-1076	blog/4.html	10	2018-11-07 01:14:56.832627+00	t	t	t	t	t	t	t	t	t	t	28	36	Nice page love the organization.	2018-09-01 06:00:00+00
-1083	index.html	9	2018-11-07 19:56:36.921553+00	t	t	t	t	f	t	t	t	t	t	24	36	page is in need of some color and style	2018-09-01 06:00:00+00
-1163	blog/6.html	9	2018-11-09 16:45:56.266496+00	t	f	t	t	t	t	t	t	t	t	33	5	There are several errors when this webpage is analyzed by the html validator. Otherwise, the webpage looks great.	2018-09-01 06:00:00+00
-1192	blog/6.html	6	2018-11-09 16:45:56.311978+00	t	f	t	t	f	t	t	f	t	f	22	34	9 issues on validator. Is the assignment, but is pictures with very small text. There is an actual example of the accordion, but it is not stated and I had to click around to find it. CSS sheet is used. I don't like how it looks with just the pictures. It's hard to read and confusing. Only body tag, no header, main, or footer. Confusing and hard to understand, overall.	2018-09-01 06:00:00+00
-1209	blog/6.html	8	2018-11-09 16:45:56.3385+00	t	t	t	t	t	t	t	f	f	t	13	34	There is supposed to be an example of what is being taught, but I don't think it works... <main> opening tag is in the wrong place. Links to blogs and projects, but not main menu.	2018-09-01 06:00:00+00
-1065	blog/4.html	8	2018-11-06 12:00:55.198276+00	t	t	t	t	t	t	t	f	f	t	28	34	no header, main, or footer tags, no link to main menu	2018-09-01 06:00:00+00
-1101	blog/6.html	9	2018-11-09 16:45:56.167386+00	t	f	t	t	t	t	t	t	t	t	10	30	There are some image validator problems.	2018-09-01 06:00:00+00
-1245	blog/6.html	9	2018-11-09 16:45:56.395506+00	t	f	t	t	t	t	t	t	t	t	16	7	Looks great.\r\nOne problem was that it did not validate because of missing attributes and HTML 5 does not validate with <style> attribute by its self. However, it will validate if you move your CSS into a stylesheet and link it that way.\r\nOtherwise it looks and functions well.	2018-09-01 06:00:00+00
-1153	blog/6.html	10	2018-11-09 16:45:56.250596+00	t	t	t	t	t	t	t	t	t	t	5	33	Wonderful job, I think you did a great job explaining it and it looked super cool!\r\nYou have one stray end </div> tag in your code. It popped up on the validator. Once you read this just open it up and delete it. I didnt think it was worth marking you down a full point because you did such a great job.	2018-09-01 06:00:00+00
-1157	blog/6.html	9	2018-11-09 16:45:56.257149+00	t	t	t	t	t	t	t	f	t	t	3	33	I really enjoy your rounded pictures! I found your page very useful, thank you! However, we did have to include a header, footer, and so on. I will be happy to give the points back once this is fixed! Your validator popped up with a lot of errors. I'm not sure if it is because of the nature of the rounded picture or not... I would take a look at it but as Seamans said, we are open to errors now since we are doing more advanced stuff!	2018-09-01 06:00:00+00
-1106	blog/6.html	9	2018-11-09 16:45:56.175537+00	t	f	t	t	t	t	t	t	t	t	28	30	This was really cool. Great job.\r\nThe validator found some errors in the Java script, the page was missing the character encoding, and the image was missing an alt tag.	2018-09-01 06:00:00+00
-1111	blog/6.html	6	2018-11-09 16:45:56.183474+00	t	f	t	t	f	t	t	f	f	t	15	30	This example page has a few notable issues.  The validator found only one error, the head element is not above the meta data properly.  There are no menu, or banner, and the general appeal of the tutorial is no greater than the raw code that was taken from w3 schools.	2018-09-01 06:00:00+00
-1077	index.html	10	2018-11-07 03:10:28.697651+00	t	t	t	t	t	t	t	t	t	t	12	17	It was great as always!	2018-09-01 06:00:00+00
-1104	blog/6.html	8	2018-11-09 16:45:56.172234+00	t	f	t	t	t	t	t	f	t	t	10	15	Header is in the head, it should be in the body. Several errors in the validator.	2018-09-01 06:00:00+00
-940	blog/5.html	10	2018-11-05 16:01:57.987476+00	t	t	t	t	t	t	t	t	t	t	7	29	Good job. In my opinion, the page is too gray, but it kinda works with the theme of the page.	2018-09-01 06:00:00+00
-1075	blog/4.html	10	2018-11-06 23:53:17.144032+00	t	t	t	t	t	t	t	t	t	t	28	24	Looks good my man.	2018-09-01 06:00:00+00
-1080	index.html	10	2018-11-07 14:51:45.294373+00	t	t	t	t	t	t	t	t	t	t	9	20	good home page all links work	2018-09-01 06:00:00+00
-1272	blog/3.html	9	2018-11-13 10:19:30.065774+00	t	f	t	t	t	t	t	t	t	t	15	14	There were some errors in the validator that you might need to fix, but other than that it looks great!!	2018-09-01 06:00:00+00
-1271	blog/3.html	10	2018-11-09 20:51:53.832028+00	t	t	t	t	t	t	t	t	t	t	33	36	beautiful page with very nice pictures	2018-09-01 06:00:00+00
-1275	blog/7.html	10	2018-11-19 16:56:43.292689+00	t	t	t	t	t	t	t	t	t	t	30	28	There are some HTML errors but that is probably wordpress fault	2018-09-01 06:00:00+00
-1276	blog/7.html	10	2018-11-19 16:56:43.294455+00	t	t	t	t	t	t	t	t	t	t	30	15	You must type a summary of problems.	2018-09-01 06:00:00+00
-1277	blog/7.html	10	2018-11-19 16:56:43.29618+00	t	t	t	t	t	t	t	t	t	t	30	9	Good article. To bad I suck at math but I like the way you welcomed everybody and it was a convincing piece. Hopefully it convinces some people to join! nice work	2018-09-01 06:00:00+00
-1324	blog/7.html	9	2018-11-19 16:56:43.372388+00	t	f	t	t	t	t	t	t	t	t	36	23	does not validate	2018-09-01 06:00:00+00
-1314	blog/7.html	0	2018-11-19 16:56:43.35626+00	f	f	f	f	f	f	f	f	f	f	24	23	No page	2018-09-01 06:00:00+00
-1287	blog/7.html	10	2018-11-19 16:56:43.312814+00	t	t	t	t	t	t	t	t	t	t	10	9	Very touching article! It's awesome that both of your sisters are adopted. I'd bet they are extremely happy to be where they are. As far as the page goes, i saw no problem with anything, No coding problem, pictures look good, overall job = awesome piece.	2018-09-01 06:00:00+00
-1329	blog/7.html	0	2018-11-19 16:56:43.380218+00	f	f	f	f	f	f	f	f	f	f	19	23	No page found	2018-09-01 06:00:00+00
-1333	blog/7.html	10	2018-11-19 16:56:43.386493+00	t	t	t	t	t	t	t	t	t	t	5	3	very good no real problems	2018-09-01 06:00:00+00
-1295	blog/7.html	2	2018-11-19 16:56:43.325508+00	t	f	f	f	f	f	f	f	f	t	15	10	Mainly bank page	2018-09-01 06:00:00+00
-1290	blog/7.html	10	2018-11-19 16:56:43.317576+00	t	t	t	t	t	t	t	t	t	t	28	10	no problems, great work	2018-09-01 06:00:00+00
-1279	blog/7.html	10	2018-11-19 16:56:43.299486+00	t	t	t	t	t	t	t	t	t	t	35	10	Was one html issue but is minor and everything functions	2018-09-01 06:00:00+00
-1336	blog/7.html	10	2018-11-19 16:56:43.391251+00	t	t	t	t	t	t	t	t	t	t	5	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-1300	blog/7.html	9	2018-11-19 16:56:43.333675+00	f	t	t	t	t	t	t	t	t	t	9	10	was sent the right link and everything looks great!	2018-09-01 06:00:00+00
-1284	blog/7.html	5	2018-11-19 16:56:43.308039+00	t	t	f	f	f	t	f	f	t	t	10	35	I am not sure if you have the right idea with this project. It would have been nice to see a more professional looking site.	2018-09-01 06:00:00+00
-1289	blog/7.html	9	2018-11-19 16:56:43.316037+00	t	t	t	t	t	t	t	f	t	t	28	35	I liked the site. I would like to see more content.	2018-09-01 06:00:00+00
-1294	blog/7.html	0	2018-11-19 16:56:43.323896+00	f	f	f	f	f	f	f	f	f	f	15	35	no content	2018-09-01 06:00:00+00
-1299	blog/7.html	9	2018-11-19 16:56:43.332009+00	t	t	f	t	t	t	t	t	t	t	9	35	It is rather simple page. I would have like to see more content.	2018-09-01 06:00:00+00
-1306	blog/7.html	10	2018-11-19 16:56:43.34344+00	t	t	t	t	t	t	t	t	t	t	39	36	great page very appealing	2018-09-01 06:00:00+00
-1311	blog/7.html	10	2018-11-19 16:56:43.351455+00	t	t	t	t	t	t	t	t	t	t	23	36	wonderful page i like it	2018-09-01 06:00:00+00
-1316	blog/7.html	0	2018-11-19 16:56:43.359432+00	f	f	f	f	f	f	f	f	f	f	24	36	page missing	2018-09-01 06:00:00+00
-1321	blog/7.html	0	2018-11-19 16:56:43.367571+00	f	f	f	f	f	f	f	f	f	f	8	36	page missing	2018-09-01 06:00:00+00
-1332	blog/7.html	0	2018-11-19 16:56:43.384904+00	f	f	f	f	f	f	f	f	f	f	19	36	page missing	2018-09-01 06:00:00+00
-1335	blog/7.html	10	2018-11-19 16:56:43.389604+00	t	t	t	t	t	t	t	t	t	t	5	33	This is an amazing blog. I really enjoy how clean and professional this looks. You can tell you worked hard on it and it looks awesome. Bravo!	2018-09-01 06:00:00+00
-1308	blog/7.html	9	2018-11-19 16:56:43.346666+00	t	f	t	t	t	t	t	t	t	t	23	39	This student did a really nice job with formatting. The page as a whole looked very professional which in turn made it easier to read about the subject matter.	2018-09-01 06:00:00+00
-1313	blog/7.html	0	2018-11-19 16:56:43.354658+00	f	f	f	f	f	f	f	f	f	f	24	39	404 Page not found error	2018-09-01 06:00:00+00
-1318	blog/7.html	0	2018-11-19 16:56:43.362716+00	f	f	f	f	f	f	f	f	f	f	8	39	404 page not found	2018-09-01 06:00:00+00
-1323	blog/7.html	7	2018-11-19 16:56:43.370857+00	t	f	t	t	f	t	t	t	t	f	36	39	This page does not complete all the listed requirements on the rubric.	2018-09-01 06:00:00+00
-1328	blog/7.html	0	2018-11-19 16:56:43.378607+00	f	f	f	f	f	f	f	f	f	f	19	39	Page not yet active.	2018-09-01 06:00:00+00
-1280	blog/7.html	10	2018-11-19 16:56:43.30159+00	t	t	t	t	t	t	t	t	t	t	35	28	Sounds interesting! And the page is really cool!	2018-09-01 06:00:00+00
-1285	blog/7.html	10	2018-11-19 16:56:43.309678+00	t	t	t	t	t	t	t	t	t	t	10	28	I loved your topic and your story! :)	2018-09-01 06:00:00+00
-1296	blog/7.html	7	2018-11-19 16:56:43.327165+00	t	t	f	t	f	f	t	t	t	t	15	28	Needs more content! :)	2018-09-01 06:00:00+00
-1301	blog/7.html	10	2018-11-19 16:56:43.335299+00	t	t	t	t	t	t	t	t	t	t	9	28	Link is https://davecoin.net/blog-7-html/ \r\nNice page!	2018-09-01 06:00:00+00
-1307	blog/7.html	10	2018-11-19 16:56:43.345088+00	t	t	t	t	t	t	t	t	t	t	39	19	Looks good.	2018-09-01 06:00:00+00
-1312	blog/7.html	10	2018-11-19 16:56:43.35306+00	t	t	t	t	t	t	t	t	t	t	23	19	Looks really good!	2018-09-01 06:00:00+00
-1317	blog/7.html	0	2018-11-19 16:56:43.361059+00	f	f	f	f	f	f	f	f	f	f	24	19	Link did not work.	2018-09-01 06:00:00+00
-1322	blog/7.html	0	2018-11-19 16:56:43.369147+00	f	f	f	f	f	f	f	f	f	f	8	19	Link did not work.	2018-09-01 06:00:00+00
-1327	blog/7.html	10	2018-11-19 16:56:43.377123+00	t	t	t	t	t	t	t	t	t	t	36	19	Looks good.	2018-09-01 06:00:00+00
-1283	blog/7.html	10	2018-11-19 16:56:43.30639+00	t	t	t	t	t	t	t	t	t	t	10	30	Nice page.  I'd like to see the CSS on a dedicated page because the validator gets confused by the tags but that is a minor technicality.	2018-09-01 06:00:00+00
-1288	blog/7.html	10	2018-11-19 16:56:43.314427+00	t	t	t	t	t	t	t	t	t	t	28	30	No errors.  The blog post was very informative and did a good job selling the service.	2018-09-01 06:00:00+00
-1293	blog/7.html	3	2018-11-19 16:56:43.322329+00	t	f	f	f	f	f	t	f	f	t	15	30	This appears to be a basic template with no content.  There are a couple validator errors	2018-09-01 06:00:00+00
-1281	blog/7.html	9	2018-11-19 16:56:43.303287+00	t	t	t	t	t	t	t	f	t	t	35	15	Warning on an empty heading. No main.	2018-09-01 06:00:00+00
-1331	blog/7.html	1	2018-11-19 16:56:43.383388+00	t	f	f	f	f	f	f	f	f	f	19	8	It had the correct URL, but when I clicked it said 404 page not found. Something was not right with a code. Check codes again.	2018-09-01 06:00:00+00
-1326	blog/7.html	10	2018-11-19 16:56:43.375503+00	t	t	t	t	t	t	t	t	t	t	36	8	It all looks great! Everything was perfected.	2018-09-01 06:00:00+00
-1315	blog/7.html	1	2018-11-19 16:56:43.357806+00	t	f	f	f	f	f	f	f	f	f	24	8	Although the URL is how its suppose to be, it said 404 page not found.	2018-09-01 06:00:00+00
-1305	blog/7.html	10	2018-11-19 16:56:43.341695+00	t	t	t	t	t	t	t	t	t	t	39	8	Perfected everything. Met all the requirements.	2018-09-01 06:00:00+00
-1286	blog/7.html	7	2018-11-19 16:56:43.311226+00	t	f	t	t	t	t	f	f	t	t	10	15	Validator was not happy. No js controls or main.	2018-09-01 06:00:00+00
-1291	blog/7.html	8	2018-11-19 16:56:43.319197+00	t	t	t	t	t	t	f	f	t	t	28	15	No js controls or main.	2018-09-01 06:00:00+00
-1319	blog/7.html	9	2018-11-19 16:56:43.364462+00	t	f	t	t	t	t	t	t	t	t	8	23	Does not validate	2018-09-01 06:00:00+00
-1303	blog/7.html	10	2018-11-19 16:56:43.338444+00	t	t	t	t	t	t	t	t	t	t	39	23	few warnings on validaot	2018-09-01 06:00:00+00
-1297	blog/7.html	10	2018-11-19 16:56:43.32876+00	t	t	t	t	t	t	t	t	t	t	15	9	I saw no problems in your webpage, Very informative and compelling. I liked the way to tied in the reader and as far as the inner workings of the web-page. Everything looks great, nice job	2018-09-01 06:00:00+00
-1304	blog/7.html	4	2018-11-19 16:56:43.340112+00	t	t	f	t	t	f	f	f	f	f	39	24	I don't see any body.	2018-09-01 06:00:00+00
-1309	blog/7.html	10	2018-11-19 16:56:43.348331+00	t	t	t	t	t	t	t	t	t	t	23	24	Looks good , homie.	2018-09-01 06:00:00+00
-1320	blog/7.html	0	2018-11-19 16:56:43.36606+00	f	f	f	f	f	f	f	f	f	f	8	24	404 error.	2018-09-01 06:00:00+00
-1325	blog/7.html	10	2018-11-19 16:56:43.374019+00	t	t	t	t	t	t	t	t	t	t	36	24	looks nice, salvation army is my fav.	2018-09-01 06:00:00+00
-1330	blog/7.html	0	2018-11-19 16:56:43.381831+00	f	f	f	f	f	f	f	f	f	f	19	24	404 error.	2018-09-01 06:00:00+00
-1334	blog/7.html	10	2018-11-19 16:56:43.388089+00	t	t	t	t	t	t	t	t	t	t	5	17	Your blog 7 was incredible.	2018-09-01 06:00:00+00
-1338	blog/7.html	10	2018-11-19 16:56:43.394402+00	t	t	t	t	t	t	t	t	t	t	3	17	I enjoyed reading your blog 7.	2018-09-01 06:00:00+00
-1374	blog/7.html	-1	2018-11-19 16:56:43.450602+00	f	f	f	f	f	f	f	f	f	f	22	34	You must type a summary of problems.	2018-09-01 06:00:00+00
-1377	blog/7.html	-1	2018-11-19 16:56:43.455429+00	f	f	f	f	f	f	f	f	f	f	41	22	You must type a summary of problems.	2018-09-01 06:00:00+00
-1378	blog/7.html	-1	2018-11-19 16:56:43.456985+00	f	f	f	f	f	f	f	f	f	f	41	34	You must type a summary of problems.	2018-09-01 06:00:00+00
-1381	blog/7.html	-1	2018-11-19 16:56:43.461778+00	f	f	f	f	f	f	f	f	f	f	34	22	You must type a summary of problems.	2018-09-01 06:00:00+00
-1385	blog/7.html	-1	2018-11-19 16:56:43.468074+00	f	f	f	f	f	f	f	f	f	f	12	22	You must type a summary of problems.	2018-09-01 06:00:00+00
-1387	blog/7.html	-1	2018-11-19 16:56:43.471093+00	f	f	f	f	f	f	f	f	f	f	12	34	You must type a summary of problems.	2018-09-01 06:00:00+00
-1389	blog/7.html	-1	2018-11-19 16:56:43.474271+00	f	f	f	f	f	f	f	f	f	f	13	22	You must type a summary of problems.	2018-09-01 06:00:00+00
-1391	blog/7.html	-1	2018-11-19 16:56:43.477434+00	f	f	f	f	f	f	f	f	f	f	13	34	You must type a summary of problems.	2018-09-01 06:00:00+00
-1397	blog/7.html	0	2018-11-19 16:56:43.486901+00	f	f	f	f	f	f	f	f	f	f	11	31	Does not exist	2018-09-01 06:00:00+00
-1376	blog/7.html	10	2018-11-19 16:56:43.453841+00	t	t	t	t	t	t	t	t	t	t	22	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-1380	blog/7.html	10	2018-11-19 16:56:43.460186+00	t	t	t	t	t	t	t	t	t	t	41	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-1384	blog/7.html	0	2018-11-19 16:56:43.466446+00	f	f	f	f	f	f	f	f	f	f	34	13	page was not found, check your url.	2018-09-01 06:00:00+00
-1388	blog/7.html	10	2018-11-19 16:56:43.472683+00	t	t	t	t	t	t	t	t	t	t	12	13	You must type a summary of problems.	2018-09-01 06:00:00+00
-1375	blog/7.html	8	2018-11-19 16:56:43.452181+00	t	f	t	t	t	t	f	t	t	t	22	12	Meets project requirements but has some validator errors	2018-09-01 06:00:00+00
-1379	blog/7.html	8	2018-11-19 16:56:43.458631+00	t	f	t	t	t	t	f	t	t	t	41	12	Meets project requirements but has some validator errors	2018-09-01 06:00:00+00
-1383	blog/7.html	0	2018-11-19 16:56:43.46492+00	f	f	f	f	f	f	f	f	f	f	34	12	Page nonexistent or located at incorrect URL	2018-09-01 06:00:00+00
-1340	blog/7.html	10	2018-11-19 16:56:43.397555+00	t	t	t	t	t	t	t	t	t	t	3	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-1344	blog/7.html	0	2018-11-19 16:56:43.40391+00	f	f	f	f	f	f	f	f	f	f	17	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-1348	blog/7.html	0	2018-11-19 16:56:43.410125+00	f	f	f	f	f	f	f	f	f	f	33	26	You must type a summary of problems.	2018-09-01 06:00:00+00
-1392	blog/7.html	8	2018-11-19 16:56:43.479051+00	t	f	t	t	t	t	f	t	t	t	13	12	Meets project requirements but has some validator errors	2018-09-01 06:00:00+00
-1342	blog/7.html	0	2018-11-19 16:56:43.400716+00	f	f	f	f	f	f	f	f	f	f	17	3	not able to see page since URL was wrong i got a 404	2018-09-01 06:00:00+00
-1350	blog/7.html	0	2018-11-19 16:56:43.413247+00	f	f	f	f	f	f	f	f	f	f	26	3	i only see front page of word press and nothing else so fix URL to correct one so others can see your content	2018-09-01 06:00:00+00
-1394	blog/7.html	10	2018-11-19 16:56:43.482131+00	t	t	t	t	t	t	t	t	t	t	31	4	Looks good .. i dont know how but maybe changing the background text from white to something else	2018-09-01 06:00:00+00
-1398	blog/7.html	0	2018-11-19 16:56:43.488467+00	f	f	f	f	f	f	f	f	f	f	11	4	404	2018-09-01 06:00:00+00
-1396	blog/7.html	10	2018-11-19 16:56:43.485334+00	t	t	t	t	t	t	t	t	t	t	31	6	Looks good!	2018-09-01 06:00:00+00
-1400	blog/7.html	0	2018-11-19 16:56:43.49154+00	f	f	f	f	f	f	f	f	f	f	11	6	404 page not found	2018-09-01 06:00:00+00
-1341	blog/7.html	0	2018-11-19 16:56:43.399202+00	f	f	f	f	f	f	f	f	f	f	17	5	The webpage is not located at the correct url. It is therefore impossible to review or award any points.	2018-09-01 06:00:00+00
-1349	blog/7.html	0	2018-11-19 16:56:43.411641+00	f	f	f	f	f	f	f	f	f	f	26	5	When I visit the page, the default WordPress "Coming Soon" page pops up. I am therefore unable to view the page or to award it any points.	2018-09-01 06:00:00+00
-1370	blog/7.html	0	2018-11-19 16:56:43.444228+00	f	f	f	f	f	f	f	f	f	f	2	14	Page not found	2018-09-01 06:00:00+00
-1366	blog/7.html	9	2018-11-19 16:56:43.43813+00	t	f	t	t	t	t	t	t	t	t	42	14	There are some HTML errors on the validator that could be fixed but other than that it looks great!	2018-09-01 06:00:00+00
-1353	blog/7.html	10	2018-11-19 16:56:43.417928+00	t	t	t	t	t	t	t	t	t	t	37	14	Looks awesome!!	2018-09-01 06:00:00+00
-1343	blog/7.html	0	2018-11-19 16:56:43.402345+00	f	f	f	f	f	f	f	f	f	f	17	33	Uh Oh! No page, notify me when one is uploaded so I can complete your review.	2018-09-01 06:00:00+00
-1352	blog/7.html	0	2018-11-19 16:56:43.416395+00	f	f	f	f	f	f	f	f	f	f	26	33	Uh Oh! No page, notify me when one is uploaded so I can complete your review.	2018-09-01 06:00:00+00
-1356	blog/7.html	10	2018-11-19 16:56:43.422555+00	t	t	t	t	t	t	t	t	t	t	37	2	You must type a summary of problems.	2018-09-01 06:00:00+00
-1360	blog/7.html	9	2018-11-19 16:56:43.428791+00	t	f	t	t	t	t	t	t	t	t	14	2	Fix HTML	2018-09-01 06:00:00+00
-1364	blog/7.html	10	2018-11-19 16:56:43.434997+00	t	t	t	t	t	t	t	t	t	t	18	2	You must type a summary of problems.	2018-09-01 06:00:00+00
-1368	blog/7.html	10	2018-11-19 16:56:43.441129+00	t	t	t	t	t	t	t	t	t	t	42	2	You must type a summary of problems.	2018-09-01 06:00:00+00
-1355	blog/7.html	10	2018-11-19 16:56:43.420957+00	t	t	t	t	t	t	t	t	t	t	37	42	You must type a summary of problems.	2018-09-01 06:00:00+00
-1359	blog/7.html	9	2018-11-19 16:56:43.427217+00	t	f	t	t	t	t	t	t	t	t	14	42	Some errors with tags.	2018-09-01 06:00:00+00
-1363	blog/7.html	8	2018-11-19 16:56:43.433445+00	t	t	f	t	f	t	t	t	t	t	18	42	Missing content.	2018-09-01 06:00:00+00
-1372	blog/7.html	9	2018-11-19 16:56:43.447505+00	t	f	t	t	t	t	t	t	t	t	2	42	Some tag errors.	2018-09-01 06:00:00+00
-1357	blog/7.html	8	2018-11-19 16:56:43.424129+00	t	f	t	t	t	f	t	t	t	t	14	37	Some validator errors just need to add the images	2018-09-01 06:00:00+00
-1361	blog/7.html	8	2018-11-19 16:56:43.430394+00	t	t	f	t	t	f	t	t	t	t	18	37	Missing some of the requirements for the blog and the images.	2018-09-01 06:00:00+00
-1365	blog/7.html	8	2018-11-19 16:56:43.436451+00	t	f	t	t	t	f	t	t	t	t	42	37	Some validator errors and missing images.	2018-09-01 06:00:00+00
-1369	blog/7.html	9	2018-11-19 16:56:43.442677+00	t	f	t	t	t	t	t	t	t	t	2	37	Just some validator errors but overall a good blog	2018-09-01 06:00:00+00
-1354	blog/7.html	10	2018-11-19 16:56:43.419456+00	t	t	t	t	t	t	t	t	t	t	37	18	That is a great cause.	2018-09-01 06:00:00+00
-1358	blog/7.html	10	2018-11-19 16:56:43.425668+00	t	t	t	t	t	t	t	t	t	t	14	18	Very visually appealing	2018-09-01 06:00:00+00
-1367	blog/7.html	10	2018-11-19 16:56:43.439601+00	t	t	t	t	t	t	t	t	t	t	42	18	What a good idea!	2018-09-01 06:00:00+00
-1371	blog/7.html	10	2018-11-19 16:56:43.44585+00	t	t	t	t	t	t	t	t	t	t	2	18	Looks very professional	2018-09-01 06:00:00+00
-1390	blog/7.html	9	2018-11-19 16:56:43.475887+00	t	t	t	f	t	t	t	t	t	t	13	41	Looks good but there are some issues with the CSS float and CSS right.	2018-09-01 06:00:00+00
-1386	blog/7.html	10	2018-11-19 16:56:43.469559+00	t	t	t	t	t	t	t	t	t	t	12	41	All looks good, there are no problems with the validator.	2018-09-01 06:00:00+00
-1382	blog/7.html	9	2018-11-19 16:56:43.463361+00	t	f	t	t	t	t	t	t	t	t	34	41	I am unable to find the page.	2018-09-01 06:00:00+00
-1373	blog/7.html	8	2018-11-19 16:56:43.449045+00	t	t	t	t	t	f	t	f	t	t	22	41	There are a couple of issues with your img scr and div tags. Some of the other concerns are the use of quotes when tagging.	2018-09-01 06:00:00+00
-1395	blog/7.html	10	2018-11-19 16:56:43.483747+00	t	t	t	t	t	t	t	t	t	t	31	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-1351	blog/7.html	10	2018-11-19 16:56:43.414861+00	t	t	t	t	t	t	t	t	t	t	26	17	Your blog 7 is real nice and straight forward	2018-09-01 06:00:00+00
-1399	blog/7.html	10	2018-11-19 16:56:43.49002+00	t	t	t	t	t	t	t	t	t	t	11	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-1416	blog/7.html	-1	2018-11-19 16:56:43.516345+00	f	f	f	f	f	f	f	f	f	f	1	29	You must type a summary of problems.	2018-09-01 06:00:00+00
-1420	blog/7.html	-1	2018-11-19 16:56:43.522546+00	f	f	f	f	f	f	f	f	f	f	38	29	You must type a summary of problems.	2018-09-01 06:00:00+00
-1424	blog/7.html	-1	2018-11-19 16:56:43.52874+00	f	f	f	f	f	f	f	f	f	f	7	29	You must type a summary of problems.	2018-09-01 06:00:00+00
-1428	blog/7.html	-1	2018-11-19 16:56:43.535219+00	f	f	f	f	f	f	f	f	f	f	16	29	You must type a summary of problems.	2018-09-01 06:00:00+00
-1401	blog/7.html	8	2018-11-19 16:56:43.493106+00	t	f	t	t	t	f	t	t	t	t	4	31	HTML does not validate. Some image links are broken.	2018-09-01 06:00:00+00
-1405	blog/7.html	0	2018-11-19 16:56:43.499441+00	f	f	f	f	f	f	f	f	f	f	21	31	Does not exist	2018-09-01 06:00:00+00
-1409	blog/7.html	0	2018-11-19 16:56:43.505851+00	f	f	f	f	f	f	f	f	f	f	6	31	Does not exist	2018-09-01 06:00:00+00
-1426	blog/7.html	10	2018-11-19 16:56:43.531997+00	t	t	t	t	t	t	t	t	t	t	16	38	Great job! I love the pictures on this page!	2018-09-01 06:00:00+00
-1413	blog/7.html	0	2018-11-19 16:56:43.511877+00	f	f	f	f	f	f	f	f	f	f	1	38	I couldn't find your article at the requested URL.	2018-09-01 06:00:00+00
-1422	blog/7.html	9	2018-11-19 16:56:43.525634+00	t	t	t	t	t	f	t	t	t	t	7	38	Great article on Juul use! The only thing missing was images.	2018-09-01 06:00:00+00
-1430	blog/7.html	0	2018-11-19 16:56:43.538295+00	f	f	f	f	f	f	f	f	f	f	29	38	Could not find blog at requested URL.	2018-09-01 06:00:00+00
-1393	blog/7.html	8	2018-11-19 16:56:43.480583+00	t	t	t	t	f	f	t	t	t	t	31	11	Looks good, would make it more visually appealing	2018-09-01 06:00:00+00
-1402	blog/7.html	10	2018-11-19 16:56:43.494618+00	t	t	t	t	t	t	t	t	t	t	4	11	Looks fantastic!	2018-09-01 06:00:00+00
-1406	blog/7.html	0	2018-11-19 16:56:43.501044+00	f	f	f	f	f	f	f	f	f	f	21	11	There is nothing at this url!!	2018-09-01 06:00:00+00
-1410	blog/7.html	0	2018-11-19 16:56:43.507385+00	f	f	f	f	f	f	f	f	f	f	6	11	There is nothing here!!!	2018-09-01 06:00:00+00
-1438	blog/7.html	10	2018-11-19 16:56:43.550585+00	t	t	t	t	t	t	t	t	t	t	27	40	Very nice page design. Detailed information was giving regarding the University. I found the topic very interesting, but not sure if it is a non for profit? Anyways, page deserves full points for being very well put together. Good job	2018-09-01 06:00:00+00
-1415	blog/7.html	10	2018-11-19 16:56:43.514878+00	t	t	t	t	t	t	t	t	t	t	1	16	Looks Great! I love the cause(:	2018-09-01 06:00:00+00
-1451	blog/7.html	10	2018-11-19 16:56:43.583462+00	t	t	t	t	t	t	t	t	t	t	32	40	Nice page. Good work including a picture slideshow in your page with no bugs present. Well designed and got the message across. I enjoyed the pictures you chose. Good job overall	2018-09-01 06:00:00+00
-1434	blog/7.html	9	2018-11-19 16:56:43.544576+00	t	f	t	t	t	t	t	t	t	t	20	40	Nice page but there were a lot of HTML errors	2018-09-01 06:00:00+00
-1346	blog/7.html	0	2018-11-19 16:56:43.407027+00	f	f	f	f	f	f	f	f	f	f	33	3	page not found so i can't tell what you did or didn't do right	2018-09-01 06:00:00+00
-1407	blog/7.html	0	2018-11-19 16:56:43.502713+00	f	f	f	f	f	f	f	f	f	f	21	4	404. i will try again at a latter time to give credit	2018-09-01 06:00:00+00
-1448	blog/7.html	10	2018-11-19 16:56:43.571167+00	t	t	t	t	t	t	t	t	t	t	25	32	Nice page!	2018-09-01 06:00:00+00
-1273	blog/7.html	10	2018-11-19 16:56:43.269841+00	t	t	t	t	t	t	t	t	t	t	30	35	great site!	2018-09-01 06:00:00+00
-1274	blog/7.html	10	2018-11-19 16:56:43.290605+00	t	t	t	t	t	t	t	t	t	t	30	10	Page is there and great!	2018-09-01 06:00:00+00
-1440	blog/7.html	10	2018-11-19 16:56:43.553772+00	t	t	t	t	t	t	t	t	t	t	27	32	2 errors but very nice page!	2018-09-01 06:00:00+00
-1444	blog/7.html	10	2018-11-19 16:56:43.559963+00	t	t	t	t	t	t	t	t	t	t	40	32	Very nice page but a few errors.	2018-09-01 06:00:00+00
-1436	blog/7.html	10	2018-11-19 16:56:43.547571+00	t	t	t	t	t	t	t	t	t	t	20	32	Nice page!	2018-09-01 06:00:00+00
-1439	blog/7.html	7	2018-11-19 16:56:43.552143+00	t	f	f	t	t	f	t	t	t	t	27	25	Does not falidate\r\nNo images\r\nNo clear call to action to get people involved	2018-09-01 06:00:00+00
-1443	blog/7.html	9	2018-11-19 16:56:43.558481+00	t	f	t	t	t	t	t	t	t	t	40	25	You must type a summary of problems.	2018-09-01 06:00:00+00
-1452	blog/7.html	10	2018-11-19 16:56:43.590794+00	t	t	t	t	t	t	t	t	t	t	32	25	If I could give extra points for the dog pictures I would.	2018-09-01 06:00:00+00
-1435	blog/7.html	0	2018-11-19 16:56:43.546091+00	f	f	f	f	f	f	f	f	f	f	20	25	blog 7 was not up at the time of this review	2018-09-01 06:00:00+00
-1404	blog/7.html	10	2018-11-19 16:56:43.497812+00	t	t	t	t	t	t	t	t	t	t	4	6	Nice it looks very well done!	2018-09-01 06:00:00+00
-1408	blog/7.html	0	2018-11-19 16:56:43.504218+00	f	f	f	f	f	f	f	f	f	f	21	6	page not found	2018-09-01 06:00:00+00
-1414	blog/7.html	8	2018-11-19 16:56:43.513361+00	f	t	f	t	t	t	t	t	t	t	1	7	Missing URL	2018-09-01 06:00:00+00
-1418	blog/7.html	10	2018-11-19 16:56:43.519544+00	t	t	t	t	t	t	t	t	t	t	38	7	Looks great. However, you might consider changing your first paragraph to a list form or something else so that it is easier to read. \r\nOtherwise your page is well structured and to the point.	2018-09-01 06:00:00+00
-1431	blog/7.html	10	2018-11-19 16:56:43.539846+00	t	t	t	t	t	t	t	t	t	t	29	7	Looks great. There were some odd validation errors that you may want to check out. Otherwise it has good form, structure, and appeal.	2018-09-01 06:00:00+00
-1417	blog/7.html	10	2018-11-19 16:56:43.517833+00	t	t	t	t	t	t	t	t	t	t	38	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-1421	blog/7.html	10	2018-11-19 16:56:43.524089+00	t	t	t	t	t	t	t	t	t	t	7	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-1425	blog/7.html	10	2018-11-19 16:56:43.530431+00	t	t	t	t	t	t	t	t	t	t	16	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-1429	blog/7.html	10	2018-11-19 16:56:43.536754+00	t	t	t	t	t	t	t	t	t	t	29	1	I like how you throw some visual picture to draw emotions	2018-09-01 06:00:00+00
-1446	blog/7.html	9	2018-11-19 16:56:43.563026+00	t	f	t	t	t	t	t	t	t	t	25	27	Warning: The main role is unnecessary for element main.\r\n\r\nFrom line 41, column 5; to line 41, column 22\r\n\r\nnav>↩↩    <main role="main">↩↩	2018-09-01 06:00:00+00
-1437	blog/7.html	10	2018-11-19 16:56:43.54911+00	t	t	t	t	t	t	t	t	t	t	27	20	Good job!	2018-09-01 06:00:00+00
-1441	blog/7.html	10	2018-11-19 16:56:43.555393+00	t	t	t	t	t	t	t	t	t	t	40	20	good research and awareness	2018-09-01 06:00:00+00
-1445	blog/7.html	10	2018-11-19 16:56:43.561502+00	t	t	t	t	t	t	t	t	t	t	25	20	amazing cause of ronald mcdonald	2018-09-01 06:00:00+00
-1449	blog/7.html	10	2018-11-19 16:56:43.573199+00	t	t	t	t	t	t	t	t	t	t	32	20	its hard seeing all these commercials about sad dogs in cages but its the only way to get people out to save them	2018-09-01 06:00:00+00
-1419	blog/7.html	10	2018-11-19 16:56:43.521035+00	t	t	t	t	t	t	t	t	t	t	38	16	Very Well Done!	2018-09-01 06:00:00+00
-1423	blog/7.html	10	2018-11-19 16:56:43.527195+00	t	t	t	t	t	t	t	t	t	t	7	16	Your page is designed very well! Awesome Job	2018-09-01 06:00:00+00
-1432	blog/7.html	9	2018-11-19 16:56:43.541415+00	t	f	t	t	t	t	t	t	t	t	29	16	Page Looks Great! Only a few errors with the HTML	2018-09-01 06:00:00+00
-1411	blog/7.html	8	2018-11-19 16:56:43.508851+00	f	f	t	t	t	t	t	t	t	t	6	4	If you put it in the right spot and fix the HTML full points	2018-09-01 06:00:00+00
-1403	blog/7.html	10	2018-11-19 16:56:43.496212+00	t	t	t	t	t	t	t	t	t	t	4	21	You must type a summary of problems.	2018-09-01 06:00:00+00
-1470	brain	10	2018-11-25 15:48:25.426013+00	t	t	t	t	t	t	t	t	t	t	44	53	Missing slides and Auth. All else is there.\r\n\r\nEdit: misread the assignment, everything is good	2018-09-01 06:00:00+00
-1412	blog/7.html	7	2018-11-19 16:56:43.510416+00	t	t	f	f	t	t	t	t	t	f	6	21	Just didnt have the purpose on your site	2018-09-01 06:00:00+00
-1472	brain	9	2018-11-25 15:48:25.43074+00	t	t	t	f	t	t	t	t	t	t	44	47	The header is a little large. Other then that I really like the colors used. Page works properly.	2018-09-01 06:00:00+00
-1337	blog/7.html	8	2018-11-19 16:56:43.392783+00	t	f	f	t	t	t	t	t	t	t	3	5	There are multiple errors that come up when the website is analyzed by the HTML validator. There is also no clear discussion of the 3 strategies that will support the vision of the organization. There are also a lot of spelling and grammar errors.	2018-09-01 06:00:00+00
-1345	blog/7.html	0	2018-11-19 16:56:43.405512+00	f	f	f	f	f	f	f	f	f	f	33	5	The webpage is not located at the url. It is therefore impossible to review or award any points.	2018-09-01 06:00:00+00
-1362	blog/7.html	9	2018-11-19 16:56:43.431886+00	t	t	f	t	t	t	t	t	t	t	18	14	I think you're missing a couple things about your organization that you could add to give more information, but other than that it looks really good!!	2018-09-01 06:00:00+00
-1339	blog/7.html	10	2018-11-19 16:56:43.395978+00	t	t	t	t	t	t	t	t	t	t	3	33	I think you did a great job. I do think you need to add links to donate, and instead of just listing the youtube page, make it link so it looks better. I liked your image and I thought the "Vision and Hope" section was beautiful.	2018-09-01 06:00:00+00
-1427	blog/7.html	10	2018-11-19 16:56:43.533596+00	t	t	t	t	t	t	t	t	t	t	16	7	Looks like an amazing cause. Good form, structure, and appeal.	2018-09-01 06:00:00+00
-1433	blog/7.html	0	2018-11-19 16:56:43.543008+00	f	f	f	f	f	f	f	f	f	f	20	27	Not Found\r\nThe requested URL /~defcongo/index.php was not found on this server.\r\n\r\nAdditionally, a 404 Not Found error was encountered while trying to use an ErrorDocument to handle the request.	2018-09-01 06:00:00+00
-1442	blog/7.html	9	2018-11-19 16:56:43.55697+00	t	f	t	t	t	t	t	t	t	t	40	27	Error: Stray end tag ul.\r\n\r\nFrom line 88, column 17; to line 88, column 21\r\n\r\n          </ul>↩     \r\n\r\nError: End tag for  body seen, but there were unclosed elements.\r\n\r\nFrom line 152, column 3; to line 152, column 9\r\n\r\nscript>↩  </body>↩</htm\r\n\r\nError: Unclosed element div.\r\n\r\nFrom line 53, column 5; to line 53, column 27\r\n\r\n/div>↩    <div class="container">↩	2018-09-01 06:00:00+00
-1278	blog/7.html	10	2018-11-19 16:56:43.297828+00	t	t	t	t	t	t	t	t	t	t	35	30	I liked the page very much.  It was very well put together and met the design goals. One minor error about headline muting but I think that is not anything to worry about.	2018-09-01 06:00:00+00
-1298	blog/7.html	8	2018-11-19 16:56:43.330413+00	t	f	t	f	t	t	t	t	t	t	9	30	Validators flag alot of wordpress page content with warnings but no real things to be fixed by a user.\r\n\r\nThe style could do with some sprucing up but otherwise not bad.	2018-09-01 06:00:00+00
-1310	blog/7.html	10	2018-11-19 16:56:43.349931+00	t	t	t	t	t	t	t	t	t	t	23	8	Everything looked great! I love the style of this page.	2018-09-01 06:00:00+00
-179	blog/2.html	10	2018-10-15 16:02:30.592744+00	t	t	t	t	t	t	t	t	t	t	20	18	Fixed the link, looks great.	2018-09-01 06:00:00+00
-1100	blog/6.html	10	2018-11-09 16:45:56.165783+00	t	t	t	t	t	t	t	t	t	t	35	9	The step sin your tutorial were amazing. Very clear and clean way to get someone to follow your instructions. The only change I would make is to have the option of bigger pictures since you can see them.	2018-09-01 06:00:00+00
-1105	blog/6.html	9	2018-11-09 16:45:56.173831+00	t	f	t	t	t	t	t	t	t	t	10	9	Clear instructions, the only i found wrong with your page was a lot of html errors. Check the validotor yourself but most of them had to deal wiht the img src attribute elemts of 50% which you can have.	2018-09-01 06:00:00+00
-1110	blog/6.html	9	2018-11-09 16:45:56.181903+00	t	f	t	t	t	t	t	t	t	t	28	9	Great page and good steps on explaing how to create the zoom over the picture. I found a couple html errors when validating the page and that was it. 2 of them had to deal with at line 180 and 182 where there is a space inbetween the < sign which you have to delete. Other than that good job	2018-09-01 06:00:00+00
-1115	blog/6.html	8	2018-11-09 16:45:56.189865+00	t	t	t	t	f	f	t	t	t	t	15	9	Good web-page, but as far as the content goes for explaining the process of how to do your example, there is no clear order of what we should do and it looks as if you didn't finish it completely. Let me know if this is the final project, cause i fnot Ill re update when its done	2018-09-01 06:00:00+00
-1282	blog/7.html	10	2018-11-19 16:56:43.304816+00	t	t	t	t	t	t	t	t	t	t	35	9	I had to double check your webpage because I thought I was on some offical business website haha, but thats a good thing!!! Very professional, good energy and I like the design of your webpage. Cool idea and I hope the best for you, If you'r ever interested in stocks HMU	2018-09-01 06:00:00+00
-1292	blog/7.html	10	2018-11-19 16:56:43.320757+00	t	t	t	t	t	t	t	t	t	t	28	9	I like the organization you chose to pick! Knowledge is everything and for those who can't access it are put at a disadvantage in our society. Touching piece, very informative and it grab my attention. As far as the inner workings of the page, I saw no problems. Everything looks great, Nice job!	2018-09-01 06:00:00+00
-1455	brain	7	2018-11-25 15:48:25.393448+00	t	f	t	t	f	t	t	t	t	f	43	44	HTML validation errors (see https://validator.w3.org/nu/?doc=http://adam1400.com/brain ). No user authentication.	2018-09-01 06:00:00+00
-1465	brain	8	2018-11-25 15:48:25.414542+00	t	t	t	t	f	t	t	t	t	f	53	44	No user authentication.	2018-09-01 06:00:00+00
-1460	brain	8	2018-11-25 15:48:25.402802+00	t	t	t	t	f	t	t	t	t	f	54	44	No user authentication.	2018-09-01 06:00:00+00
-1464	brain	10	2018-11-25 15:48:25.412161+00	t	t	t	t	t	t	t	t	t	t	53	54	I had no issues accessing the brain of the site	2018-09-01 06:00:00+00
-1467	brain	9	2018-11-25 15:48:25.419089+00	t	t	t	f	t	t	t	t	t	t	53	47	There are no problems with rolf8022's main brain page although the design is somewhat blah. Could have changed the colors at least.	2018-09-01 06:00:00+00
-1469	brain	10	2018-11-25 15:48:25.423657+00	t	t	t	t	t	t	t	t	t	t	44	54	I had no issues accessing the site.	2018-09-01 06:00:00+00
-1457	brain	10	2018-11-25 15:48:25.397034+00	t	t	t	t	t	t	t	t	t	t	43	47	I like the design and all colors flow together well. page works properly.	2018-09-01 06:00:00+00
-1462	brain	9	2018-11-25 15:48:25.407433+00	t	t	t	f	t	t	t	t	t	t	54	47	The design is kind of a basic design. Could have changed the colors or picture.	2018-09-01 06:00:00+00
-1468	brain	10	2018-11-25 15:48:25.42142+00	t	t	t	t	t	t	t	t	t	t	44	43	1) Your solution page looks different from the others.... not a big deal though because its not required to have that page.	2018-09-01 06:00:00+00
-1463	brain	10	2018-11-25 15:48:25.40985+00	t	t	t	t	t	t	t	t	t	t	53	43	1) Your solutions page looks a little different from the others.	2018-09-01 06:00:00+00
-1458	brain	10	2018-11-25 15:48:25.398734+00	t	t	t	t	t	t	t	t	t	t	54	43	1) your "http://sova4698.mahboi.com/32/"\r\npage looks different from your other pages.	2018-09-01 06:00:00+00
-1453	brain	8	2018-11-25 15:48:25.380899+00	t	f	t	f	t	t	t	t	t	t	43	54	I had a hard time to navigate the buttons because of the design scheme. Other than that it was really good.\r\n\r\nAlso the validator says you cant put anchor tags in buttons, I would just make the anchor tags with CSS look like buttons\r\n\r\nOther than that nice job	2018-09-01 06:00:00+00
-1466	brain	9	2018-11-25 15:48:25.416814+00	t	t	t	t	f	t	t	t	t	t	53	52	Colors are kinda gross. Well organized. Log buttons do not work. No login for user auth. Main page links probably would look better as buttons.	2018-09-01 06:00:00+00
-1461	brain	9	2018-11-25 15:48:25.405148+00	t	t	t	f	t	t	t	t	t	t	54	52	Log buttons do not work. Colors are gross. Cannot return to main page from some sections. Some sections do not follow the same common page design. Well organized.	2018-09-01 06:00:00+00
-1459	brain	10	2018-11-25 15:48:25.400423+00	t	t	t	t	t	t	t	t	t	t	54	53	Has everything, just somethings broken. No CSS on slide creation, Auth did not work for me. Otherwise everything is good\r\n\r\nEdit: misread the assignment, you are fine	2018-09-01 06:00:00+00
-1454	brain	10	2018-11-25 15:48:25.391409+00	t	t	t	t	t	t	t	t	t	t	43	53	No Auth was present, and the slides page displayed nothing\r\n\r\nEdit: misread the assignment, you are fine	2018-09-01 06:00:00+00
-1450	blog/7.html	10	2018-11-19 16:56:43.581459+00	t	t	t	t	t	t	t	t	t	t	32	27	Error: Element li not allowed as child of element div in this context. (Suppressing further errors from this subtree.)\r\n\r\nFrom line 126, column 9; to line 126, column 12\r\n\r\n>↩        <li> <a  h\r\n\r\nContexts in which element li may be used:\r\nInside ol elements.\r\nInside ul elements.\r\nInside menu elements.\r\nContent model for element div:\r\nIf the element is a child of a dl element: one or more dt elements followed by one or more dd elements, optionally intermixed with script-supporting elements.\r\nIf the element is not a child of a dl element: flow content.\r\nError: Element li not allowed as child of element div in this context. (Suppressing further errors from this subtree.)\r\n\r\nFrom line 127, column 9; to line 127, column 12\r\n\r\n>↩        <li> <a hr\r\n\r\nContexts in which element li may be used:\r\nInside ol elements.\r\nInside ul elements.\r\nInside menu elements.\r\nContent model for element div:\r\nIf the element is a child of a dl element: one or more dt elements followed by one or more dd elements, optionally intermixed with script-supporting elements.\r\nIf the element is not a child of a dl element: flow content.\r\nError: Element li not allowed as child of element div in this context. (Suppressing further errors from this subtree.)\r\n\r\nFrom line 128, column 9; to line 128, column 12\r\n\r\n>↩        <li> <a hr\r\n\r\nContexts in which element li may be used:\r\nInside ol elements.\r\nInside ul elements.\r\nInside menu elements.\r\nContent model for element div:\r\nIf the element is a child of a dl element: one or more dt elements followed by one or more dd elements, optionally intermixed with script-supporting elements.\r\nIf the element is not a child of a dl element: flow content.\r\nError: End tag for  body seen, but there were unclosed elements.\r\n\r\nFrom line 130, column 5; to line 130, column 11\r\n\r\n↩    ↩    </body>↩\r\n\r\nError: Unclosed element div.\r\n\r\nFrom line 77, column 3; to line 77, column 30\r\n\r\ndes -->↩  <div class="carousel-inner">↩    <\r\n\r\nError: Unclosed element div.\r\n\r\nFrom line 62, column 5; to line 62, column 69\r\n\r\n></p>↩    <div id="myCarousel" class="carousel slide" data-ride="carousel">↩  ↩	2018-09-01 06:00:00+00
-12	blog/2.html	9	2018-10-10 13:21:18.228445+00	t	t	f	t	t	t	t	t	t	t	4	3	Now you! prefer something super new? Take a look at this page. Only there the choice of young girls for every will and completely free! They are good slaves, they will and want perform everything you say ! \r\nhttps://rebrand.ly/governy#O18	2018-09-01 06:00:00+00
-1473	brain	10	2018-11-25 15:48:25.433037+00	t	t	t	t	t	t	t	t	t	t	52	43	1) this page "http://unco-bacs.org/bacs_350/solution/" looks different from the other pages. Not a big deal though...	2018-09-01 06:00:00+00
-1347	blog/7.html	8	2018-11-19 16:56:43.40849+00	f	t	t	t	f	t	t	t	t	t	33	17	You had a second link to your blog 7.	2018-09-01 06:00:00+00
-1493	brain	10	2018-11-25 15:48:25.474169+00	t	t	t	t	t	t	t	t	t	t	49	45	The only thing that seems like it's a bit odd is the login / signup links on your brain page. Fix that, and you're all set to go.	2018-09-01 06:00:00+00
-1474	brain	10	2018-11-25 15:48:25.435724+00	t	t	t	t	t	t	t	t	t	t	52	54	I had no issues accessing the brain site	2018-09-01 06:00:00+00
-1489	brain	9	2018-11-25 15:48:25.467662+00	t	f	t	t	t	t	t	t	t	t	50	49	Looks very good!! Everything works and looks very good. The only problems are that the html validator gives 3 warnings.	2018-09-01 06:00:00+00
-1479	brain	4	2018-11-25 15:48:25.44738+00	t	t	t	f	f	f	f	f	f	t	47	54	o While all the links load\r\no There is no visual appeal\r\no No structure of the brain just links\r\no Doesnt validate html	2018-09-01 06:00:00+00
-1481	brain	6	2018-11-25 15:48:25.451759+00	t	f	t	f	t	t	f	t	t	f	47	44	A couple of HTML validation errors (see https://validator.w3.org/nu/?doc=http://ghaschbacs350.com/brain ). No user authentication observed.	2018-09-01 06:00:00+00
-1508	brain	9	2018-11-25 15:48:25.498022+00	t	f	t	t	t	t	t	t	t	t	46	45	It looks like your HTML isn't valid since you left two open elements.	2018-09-01 06:00:00+00
-1476	brain	8	2018-11-25 15:48:25.440364+00	t	t	t	t	f	t	t	t	t	f	52	44	No user Authentication.	2018-09-01 06:00:00+00
-1505	brain	10	2018-11-25 15:48:25.492948+00	t	t	t	t	t	t	t	t	t	t	48	49	No, auth, other than that it looks good.	2018-09-01 06:00:00+00
-1504	brain	10	2018-11-25 15:48:25.491352+00	t	t	t	t	t	t	t	t	t	t	48	50	Looks good, maybe make your Nike logo a little smaller. Also, all of the links aren't up on the main controller. Nice!	2018-09-01 06:00:00+00
-1484	brain	10	2018-11-25 15:48:25.458268+00	t	t	t	t	t	t	t	t	t	t	45	49	Looks great!	2018-09-01 06:00:00+00
-1478	brain	7	2018-11-25 15:48:25.445086+00	t	f	f	f	t	t	t	t	t	t	47	43	1) A few html issues... w3 schools will tell you exactly what to fix.\r\n\r\n2) Apply  your "darktheme.css" to your "http://ghaschbacs350.com/brain/" page for a common page design.\r\n\r\n3) Adding css to this page would help with your visual appeal... Also improve  your css from "darktheme.css" a little.	2018-09-01 06:00:00+00
-1511	brain	9	2018-11-25 15:48:25.502965+00	t	t	t	f	t	t	t	t	t	t	46	51	Looks excellent, all of the links work and the page is excellent. \r\nThe page does have a lot of white blank space. The blank space could be edited for visual appeal, but overall the page functions perfectly and meets all of the requirements.	2018-09-01 06:00:00+00
-1506	brain	8	2018-11-25 15:48:25.494685+00	t	t	t	t	t	t	t	f	f	t	48	51	The page looks excellent and meets all of the requirements.\r\n\r\nHowever, the page is missing links to the slides and review application. Once those are added, the page will be perfect.	2018-09-01 06:00:00+00
-1510	brain	9	2018-11-25 15:48:25.501315+00	t	f	t	t	t	t	t	t	t	t	46	49	The only issue is that the validator gives two errors.	2018-09-01 06:00:00+00
-1500	brain	7	2018-11-25 15:48:25.485058+00	t	t	f	f	t	t	t	t	t	f	51	49	Looks good, the color choices are kinda bad though and the img needs to be moved to be inside of the header element.	2018-09-01 06:00:00+00
-1499	brain	9	2018-11-25 15:48:25.483392+00	t	t	t	f	t	t	t	t	t	t	51	50	It is working nicely! I would try and make your color scheme a little bit less harsh. Good job.	2018-09-01 06:00:00+00
-1503	brain	10	2018-11-25 15:48:25.489797+00	t	t	t	t	t	t	t	t	t	t	48	45	Your logo is a little too big. Aside from that, your page looks fine.	2018-09-01 06:00:00+00
-1512	brain	8	2018-11-25 15:48:25.50468+00	t	t	t	t	f	t	t	t	t	f	46	48	Looks Great! My only suggestion would be to make your fonts a tad bit larger!	2018-09-01 06:00:00+00
-1486	brain	10	2018-11-25 15:48:25.462587+00	t	t	t	t	t	t	t	t	t	t	45	48	Good job! Try a more complicated bootstrap maybe sometime!!	2018-09-01 06:00:00+00
-1501	brain	8	2018-11-25 15:48:25.486616+00	t	t	f	t	f	t	t	t	t	t	51	48	Looks great! I liked the dark and light contrast on your page! It's a tad over whelming but I like it!	2018-09-01 06:00:00+00
-1494	brain	10	2018-11-25 15:48:25.475711+00	t	t	t	t	t	t	t	t	t	t	49	50	This looks great! If I had to be picky I would make your UX a little bit better by distinguishing the buttons from other lines within the apps. If that makes sense!	2018-09-01 06:00:00+00
-1490	brain	10	2018-11-25 15:48:25.469357+00	t	t	t	t	t	t	t	t	t	t	50	51	Everything works fine and is in place, the page is excellent and simple. I like the ease of use in this page and the simple layout.	2018-09-01 06:00:00+00
-1496	brain	10	2018-11-25 15:48:25.47875+00	t	t	t	t	t	t	t	t	t	t	49	48	It's beautiful. That is all.	2018-09-01 06:00:00+00
-1491	brain	10	2018-11-25 15:48:25.470945+00	t	t	t	t	t	t	t	t	t	t	50	48	Looks great! Love the green and the slides look great.	2018-09-01 06:00:00+00
-1483	brain	10	2018-11-25 15:48:25.456116+00	t	t	t	t	t	t	t	t	t	t	45	50	Nice! All the links aren't up but it is all working.	2018-09-01 06:00:00+00
-1509	brain	9	2018-11-25 15:48:25.499607+00	t	f	t	t	t	t	t	t	t	t	46	50	2 html issues. I was unable to log-in and view at all the apps. I would also try and make the buttons look a little prettier. Nice Job!	2018-09-01 06:00:00+00
-1488	brain	10	2018-11-25 15:48:25.465933+00	t	t	t	t	t	t	t	t	t	t	50	45	Really cool animated logo, and the big, stand-out buttons are great too. You may want to change link text in your css to some other color other than purple to differentiate them though.	2018-09-01 06:00:00+00
-1480	brain	10	2018-11-25 15:48:25.449677+00	t	t	t	t	t	t	t	t	t	t	47	53	Only thing missing I see is that there is no auth required, adding that should bring it to completion\r\n\r\nEdit: misread the assignment, you are fine	2018-09-01 06:00:00+00
-1502	brain	9	2018-11-25 15:48:25.488185+00	t	t	t	t	f	t	t	t	t	t	51	46	Ugly as sin but other than lacking user authentication the brain page is good.	2018-09-01 06:00:00+00
-1487	brain	8	2018-11-25 15:48:25.464221+00	t	t	t	f	f	t	t	t	t	t	45	46	No user authentication and a bland theme that looks identical to the example. However the theme is consistent across all pages.	2018-09-01 06:00:00+00
-1497	brain	9	2018-11-25 15:48:25.480258+00	t	t	t	t	f	t	t	t	t	t	49	46	No user auth, cluttered design but it adheres to a bootstrap theme which is good.	2018-09-01 06:00:00+00
-1535	brain/notes.php	9	2018-11-28 16:29:01.333617+00	t	t	t	t	f	t	t	t	t	t	52	53	Missing Auth is only problem	2018-09-01 06:00:00+00
-1477	brain	10	2018-11-25 15:48:25.442781+00	t	t	t	t	t	t	t	t	t	t	52	47	I like the design of your first page, everything flows well design wise. Page works well and has correct link.	2018-09-01 06:00:00+00
-1495	brain	9	2018-11-25 15:48:25.477253+00	t	t	t	f	t	t	t	t	t	t	49	51	The page is excellent and includes all of the requirements for the brain page.\r\n\r\nThe only disagreement I had was your header takes up half of the page, while everything else is sitting in the bottom half. The header looks excellent, it is just disproportionate to the rest of the page.	2018-09-01 06:00:00+00
-1498	brain	9	2018-11-25 15:48:25.481888+00	t	t	t	f	t	t	t	t	t	t	51	45	The flat black background makes it kinda hard to see things. The red is also too bright and is jarring compared to the black to really be appealing.	2018-09-01 06:00:00+00
-1485	brain	6	2018-11-25 15:48:25.460391+00	t	t	t	f	t	t	t	f	f	f	45	51	The page works well and includes all of the requirements. \r\n\r\nThe page is missing links to slides and reviews.\r\n\r\nThe page is just a copy of Mark's css, which needs to be updated.\r\n\r\nChange the css and add the links, then this page will be excellent.	2018-09-01 06:00:00+00
-1302	blog/7.html	8	2018-11-19 16:56:43.336899+00	f	f	t	t	t	t	t	t	t	t	9	15	Owner send me an email for the URL of the website at https://davecoin.net/blog-7-html/. When sent through the validator, it showed errors in the youtube player. Even though no static images are shown I can count the video as a series of images.	2018-09-01 06:00:00+00
-1482	brain	8	2018-11-25 15:48:25.453976+00	t	f	t	t	f	t	t	t	t	t	47	52	HTML does not validate, 6 errors shown. No login for user auth. Main page does not have the same common page design as all of the rest. The other pages look really good, but the home page just needs more css. It would also be useful to have the option to return to the home page from your other pages. The style is nice, but maybe add more padding to things below the header?	2018-09-01 06:00:00+00
-1471	brain	9	2018-11-25 15:48:25.428373+00	t	t	t	t	f	t	t	t	t	t	44	52	No login for user auth. Good consistent format. Header seems a little too big that it takes away from the main content. Well organized. Maybe add some padding below the header for more visual appeal. The buttons do not work on the log page, but no one has this working.	2018-09-01 06:00:00+00
-1456	brain	4	2018-11-25 15:48:25.395255+00	t	f	t	t	t	f	f	f	f	f	43	52	Html does not validate, 3 errors. The home page seems very empty. The buttons also do not work. I was unable to access any other page. The color scheme is nice and the hover color event is pretty cool.	2018-09-01 06:00:00+00
-1507	brain	9	2018-11-25 15:48:25.496331+00	t	t	t	t	f	t	t	t	t	t	48	46	There is no user authentication accessible from the Brain page, or any sub pages. I only evaluated the brain page however the Slides page doesnt seem to be working right now.	2018-09-01 06:00:00+00
-1492	brain	8	2018-11-25 15:48:25.472564+00	t	f	t	t	f	t	t	t	t	t	50	46	Some invalid html: https://validator.w3.org/nu/?doc=http%3A%2F%2Fcosmenaut.org%2Fbrain%2F\r\n\r\nHowever I absolutely love this site and the whole theme. It also functions perfectly, save for user authentication.	2018-09-01 06:00:00+00
-1475	brain	10	2018-11-25 15:48:25.438168+00	t	t	t	t	t	t	t	t	t	t	52	53	I did not see the slides as a part of the website, nor was authorization required. That was the only problem.\r\n\r\nEdit: misread the assignment, you are fine	2018-09-01 06:00:00+00
-593	blog/4.html	10	2018-10-22 16:07:31.565479+00	t	t	t	t	t	t	t	t	t	t	32	33	I think this looks great. I would go through the HTML and make sure you are closing your image tags properly, but since we are doing other stuff it won't all be valid. However, you're missing the impact of the speeches. We were required to have a brief description of the context, text of the speech, a summary of the impact. Your tabs work great and overall I think is a super great job. Let me know when you add the impact and I'll be happy to regrade it!	2018-09-01 06:00:00+00
-433	index.html	10	2018-10-19 13:52:52.499726+00	t	t	t	t	t	t	t	t	t	t	32	33	I think your page looks great and displays what we have learned! I am wondering why your page doesn't extend to the whole screen? Maybe it has to do with the container or jumbo tron. I don't know how to fix it might have to ask the teacher, but I still think your site looks great! I think all you need to do is run it through the validator. We all will have a few errors just because we are using more complex stuff, but I think that there are just a few stray things floating in your code. You have a few end tags that don't have a start and don't need to be there, so once you change that, I'll be happy to redo your grade :) great job!	2018-09-01 06:00:00+00
-95	blog/2.html	10	2018-10-10 13:21:18.347251+00	t	t	t	t	t	t	t	t	t	t	32	30	When I ran the validator it found a host of issues with paragraph elements.  I think it's saying the left justified everything is causing parent, child relationships to fail.\r\n\r\nI don't see a banner (with catchy blog page title, that is different than blog 2 title), or a menu with links to other pages.\r\n\r\nI do like the embedded video at the top and the second link at the bottom of the page.	2018-09-01 06:00:00+00
-336	blog/3.html	10	2018-10-15 16:06:44.49006+00	t	t	t	t	t	t	t	t	t	t	32	31	For the html validation look at line 94. It doesn't like something about the tags. You could actually delete that part of it and it should pass. Otherwise looks good.	2018-09-01 06:00:00+00
-1513	brain/notes.php	10	2018-11-28 16:29:01.268932+00	t	t	t	t	t	t	t	t	t	t	43	54	There was nothing wrong with this implementation	2018-09-01 06:00:00+00
-1524	brain/notes.php	10	2018-11-28 16:29:01.311484+00	t	t	t	t	t	t	t	t	t	t	53	54	There was nothing functionally wrong with this application	2018-09-01 06:00:00+00
-1523	brain/notes.php	9	2018-11-28 16:29:01.309241+00	t	t	t	t	f	t	t	t	t	t	53	43	1) you have a warning in the html validator. \r\n\r\n2) No user auth.	2018-09-01 06:00:00+00
-1534	brain/notes.php	10	2018-11-28 16:29:01.331447+00	t	t	t	t	t	t	t	t	t	t	52	54	There was nothing wrong with this application	2018-09-01 06:00:00+00
-1528	brain/notes.php	9	2018-11-28 16:29:01.319698+00	t	t	t	t	f	t	t	t	t	t	44	43	1) no user auth.\r\n\r\n2) have some warnings in the html validator.	2018-09-01 06:00:00+00
-1533	brain/notes.php	9	2018-11-28 16:29:01.329786+00	t	t	t	t	f	t	t	t	t	t	52	43	1) no user auth.	2018-09-01 06:00:00+00
-1531	brain/notes.php	9	2018-11-28 16:29:01.325608+00	t	t	t	t	f	t	t	t	t	t	44	52	Warnings are shown for the html. No login feature. Good visual appeal, could be improved with adding padding between white box and text. App works great, all functions work.	2018-09-01 06:00:00+00
-1526	brain/notes.php	9	2018-11-28 16:29:01.315534+00	t	t	t	t	f	t	t	t	t	t	53	52	Warnings are shown in the validator for the html. No login. App works great, no problem using it, all functions work. The blue and the yellow could be changed for a better visual appeal.	2018-09-01 06:00:00+00
-1514	brain/notes.php	8	2018-11-28 16:29:01.290687+00	t	t	t	t	f	t	t	t	t	f	43	53	Notes do not appear as soon as they are entered. Auth is missing	2018-09-01 06:00:00+00
-1530	brain/notes.php	8	2018-11-28 16:29:01.323698+00	t	t	t	t	f	t	t	t	t	f	44	53	Shows date instead of body of note, no auth	2018-09-01 06:00:00+00
-1515	brain/notes.php	8	2018-11-28 16:29:01.292838+00	t	f	t	t	t	t	t	t	t	f	43	44	Some html validation errors: https://validator.w3.org/nu/?doc=http://adam1400.com/brain/notes.php	2018-09-01 06:00:00+00
-1520	brain/notes.php	7	2018-11-28 16:29:01.302629+00	t	t	t	t	t	t	t	f	f	f	54	44	I am unable to add notes on this page.	2018-09-01 06:00:00+00
-1525	brain/notes.php	8	2018-11-28 16:29:01.313482+00	t	f	t	t	t	t	t	t	t	f	53	44	html validation warning: https://validator.w3.org/nu/?doc=http://moosen.xyz/brain/notes.php	2018-09-01 06:00:00+00
-1522	brain/notes.php	7	2018-11-28 16:29:01.307094+00	t	t	t	f	f	t	f	t	t	t	54	47	Page has correct valid HTML. The user is able to add a note, once the note is added there is no way to edit nor see the note after. Very basic page design.	2018-09-01 06:00:00+00
-1532	brain/notes.php	9	2018-11-28 16:29:01.32783+00	t	t	t	f	t	t	t	t	t	t	44	47	Again, the header is slightly large but at least it is consistent throughout all your pages. Only thing setting back a perfect score.	2018-09-01 06:00:00+00
-1546	brain/notes.php	9	2018-11-28 16:29:01.35651+00	t	t	t	t	f	t	t	t	t	t	45	48	Super simple but looks great! I liked the note you added about creating notes.	2018-09-01 06:00:00+00
-1551	brain/notes.php	9	2018-11-28 16:29:01.367306+00	t	t	t	t	f	t	t	t	t	t	50	48	The visual appeal is amazing. It looked really great.	2018-09-01 06:00:00+00
-1553	brain/notes.php	9	2018-11-28 16:29:01.371558+00	t	f	t	t	t	t	t	t	t	t	49	45	You've got one error in your html, just a stray end tag with no beginning tag, so that should be an easy fix. Otherwise, everything seems to work as intended minus the login and signup on your banner.	2018-09-01 06:00:00+00
-1537	brain/notes.php	10	2018-11-28 16:29:01.337734+00	t	t	t	t	t	t	t	t	t	t	52	47	Valid html throughout the entire page. Page works properly. I like the ability to be able to delete specific notes.	2018-09-01 06:00:00+00
-1584	brain/review.php	10	2018-11-28 16:29:45.711694+00	t	t	t	t	t	t	t	t	t	t	53	54	Found page and correct requirements	2018-09-01 06:00:00+00
-1541	brain/notes.php	10	2018-11-28 16:29:01.346743+00	t	t	t	t	t	t	t	t	t	t	47	44	Looks nice and works well	2018-09-01 06:00:00+00
-1586	brain/review.php	6	2018-11-28 16:29:45.714812+00	t	f	t	t	f	t	f	t	t	f	53	52	Invalid html, 2 errors found. Unable to view, edit, add, or delete from database. No data shown. No login/user authentication.	2018-09-01 06:00:00+00
-1556	brain/notes.php	10	2018-11-28 16:29:01.377791+00	t	t	t	t	t	t	t	t	t	t	49	48	My only critique would be that the note text is right aligned which is a little strange. But other than that it's amazing.	2018-09-01 06:00:00+00
-1589	brain/review.php	9	2018-11-28 16:29:45.719735+00	t	t	t	t	f	t	t	t	t	t	44	54	Doesnt save content, other than that works great	2018-09-01 06:00:00+00
-1542	brain/notes.php	8	2018-11-28 16:29:01.348848+00	f	t	t	t	f	t	t	t	t	t	47	52	Link was not valid from this website. Should have been http://ghaschbacs350.com/brain/notes.php instead of http://ghaschbacs350.com/brain/notes/index.php. No login/user authentication..	2018-09-01 06:00:00+00
-1561	brain/notes.php	7	2018-11-28 16:29:01.386834+00	t	t	t	f	f	t	t	t	t	f	51	48	Looks great but I was unable to add a note!	2018-09-01 06:00:00+00
-1594	brain/review.php	10	2018-11-28 16:29:45.728091+00	t	t	t	t	t	t	t	t	t	t	52	54	Everything is good with this code	2018-09-01 06:00:00+00
-1558	brain/notes.php	8	2018-11-28 16:29:01.381821+00	t	t	t	f	t	t	f	t	t	t	51	45	You've got a couple warnings in your html code. The black-and-red color scheme is a bit jarring as well, which you might want to try less sharp colors. I'm also not sure of how I would be able to add a note, though I can edit other notes and delete them.	2018-09-01 06:00:00+00
-1572	brain/notes.php	9	2018-11-28 16:29:01.403979+00	t	t	t	t	f	t	t	t	t	t	46	48	Looks great and works great! I had to search for the link would be the only downfall	2018-09-01 06:00:00+00
-1559	brain/notes.php	3	2018-11-28 16:29:01.383741+00	t	f	t	f	f	t	f	f	f	f	51	50	It needs some work, I don't know where to add a note. When I edit the title it changed the body instead of the title in the main menu.	2018-09-01 06:00:00+00
-1544	brain/notes.php	9	2018-11-28 16:29:01.352884+00	t	t	t	t	f	t	t	t	t	t	45	49	Looks good just needs auth.	2018-09-01 06:00:00+00
-1579	brain/review.php	8	2018-11-28 16:29:45.70344+00	t	t	t	t	f	t	f	t	t	t	54	53	Deletion borked and no auth	2018-09-01 06:00:00+00
-1563	brain/notes.php	8	2018-11-28 16:29:01.389936+00	t	t	t	t	t	t	f	t	t	f	48	45	I'm not sure if they can actually come up, but I can't see any notes, but in theory I could add notes, since that part appears to work. Add note works, but as soon as I type in all of my info, it just disappears with no changes.	2018-09-01 06:00:00+00
-1554	brain/notes.php	9	2018-11-28 16:29:01.373765+00	t	f	t	t	t	t	t	t	t	t	49	50	other than some HTML warnings, no issues at all!	2018-09-01 06:00:00+00
-1588	brain/review.php	9	2018-11-28 16:29:45.718097+00	t	t	t	t	t	t	t	t	t	f	44	43	1) does not display review after it is created. \r\n\r\n2) perfect otherwise!	2018-09-01 06:00:00+00
-1593	brain/review.php	10	2018-11-28 16:29:45.72642+00	t	t	t	t	t	t	t	t	t	t	52	43	Perfect!	2018-09-01 06:00:00+00
-1569	brain/notes.php	4	2018-11-28 16:29:01.399341+00	f	t	t	t	t	f	f	f	f	f	46	50	I can't find the page at /notes.php had to do some exploring. It won't let me get passed the user auth so I can't really test it! I am sure it's working underneath I just couldn't get to it!	2018-09-01 06:00:00+00
-1591	brain/review.php	6	2018-11-28 16:29:45.722808+00	t	t	t	t	f	t	f	t	f	f	44	52	Cannot view,add, edit, or delete review information. Database for reviews are incorrect. No login. Page layout looks great.	2018-09-01 06:00:00+00
-1547	brain/notes.php	7	2018-11-28 16:29:01.358818+00	t	f	t	t	f	t	f	t	t	t	45	46	No user auth, invalid html per \r\nhttps://validator.w3.org/nu/?doc=http%3A%2F%2Fgrb.wpr.mybluehost.me%2Fbrain%2Fnotes.php \r\n\r\nCannot view note content, cannot confirm that edits work.	2018-09-01 06:00:00+00
-1552	brain/notes.php	9	2018-11-28 16:29:01.369589+00	t	t	t	t	f	t	t	t	t	t	50	46	Great visual style. No user auth	2018-09-01 06:00:00+00
-1562	brain/notes.php	8	2018-11-28 16:29:01.388341+00	t	t	t	t	f	t	f	t	t	t	51	46	No user auth and cannot make new notes, can edit/delete though.	2018-09-01 06:00:00+00
-1567	brain/notes.php	8	2018-11-28 16:29:01.396278+00	t	t	t	t	f	t	f	t	t	t	48	46	Reviewed at this URL: http://jessielane.net/Notes/\r\n\r\nAnd not \r\nbrain/notes.php\r\n\r\n/Notes/ allows to add a new not but not update/delete \r\n\r\nNo user auth	2018-09-01 06:00:00+00
-1574	brain/review.php	8	2018-11-28 16:29:45.695004+00	t	t	t	t	f	t	f	t	t	t	43	53	No auth, and can't go back and edit reviews. Also note that the URL is not technically correct (off by an s) but not worth saying it was invalid over.	2018-09-01 06:00:00+00
-1590	brain/review.php	8	2018-11-28 16:29:45.721288+00	t	t	t	t	f	t	f	t	t	t	44	53	Can't edit the reviews, and no auth, but other then that it's all there.	2018-09-01 06:00:00+00
-1575	brain/review.php	9	2018-11-28 16:29:45.69684+00	f	t	t	t	t	t	t	t	t	t	43	44	Works properly. Not valid at correct url but easily found from main page.	2018-09-01 06:00:00+00
-1580	brain/review.php	9	2018-11-28 16:29:45.705064+00	f	t	t	t	t	t	t	t	t	t	54	44	Works properly. Unable to find at initial link but easily found on main page.	2018-09-01 06:00:00+00
-1578	brain/review.php	9	2018-11-28 16:29:45.701713+00	t	t	t	t	t	t	t	t	t	f	54	43	looks good	2018-09-01 06:00:00+00
-1585	brain/review.php	10	2018-11-28 16:29:45.713317+00	t	t	t	t	t	t	t	t	t	t	53	44	I had no problems with your review app.	2018-09-01 06:00:00+00
-1596	brain/review.php	10	2018-11-28 16:29:45.731304+00	t	t	t	t	t	t	t	t	t	t	52	44	I had no problems with your review app.	2018-09-01 06:00:00+00
-1539	brain/notes.php	7	2018-11-28 16:29:01.342316+00	f	t	t	t	f	t	f	t	t	t	47	54	Auth isnt there\r\nviews dont catch what the action is\r\nnot at the right link	2018-09-01 06:00:00+00
-1592	brain/review.php	9	2018-11-28 16:29:45.724598+00	t	t	t	t	f	t	t	t	t	t	44	47	Did not see any user authentication. Page design is consistent. Not able to find the review that was submitted.	2018-09-01 06:00:00+00
-1582	brain/review.php	1	2018-11-28 16:29:45.70836+00	f	f	t	f	f	f	f	f	f	f	54	47	I did search for the reviews page and could not find it. Not sure if you implemented it within your notes app.	2018-09-01 06:00:00+00
-1549	brain/notes.php	9	2018-11-28 16:29:01.362751+00	t	t	t	t	f	t	t	t	t	t	50	49	Just missing the Auth, good work!	2018-09-01 06:00:00+00
-1560	brain/notes.php	9	2018-11-28 16:29:01.385313+00	t	t	t	t	f	t	t	t	t	t	51	49	Just missing the Auth, good work!	2018-09-01 06:00:00+00
-1565	brain/notes.php	9	2018-11-28 16:29:01.392923+00	t	t	t	t	f	t	t	t	t	t	48	49	Just missing the Auth, good work!	2018-09-01 06:00:00+00
-1570	brain/notes.php	10	2018-11-28 16:29:01.400865+00	t	t	t	t	t	t	t	t	t	t	46	49	Good work!	2018-09-01 06:00:00+00
-1573	brain/review.php	10	2018-11-28 16:29:45.692728+00	t	t	t	t	t	t	t	t	t	t	43	54	Found page and met requirements	2018-09-01 06:00:00+00
-1608	brain/review.php	9	2018-11-28 16:29:45.752088+00	t	t	t	t	f	t	t	t	t	t	50	45	You allow users to edit/delete other people's work without logging in, so you may want to implement a user auth for that.	2018-09-01 06:00:00+00
-1649	brain/slides.php	5	2018-11-28 16:31:24.624368+00	t	t	t	t	f	f	f	f	f	t	44	54	Presentation loaded but no way to add a new review	2018-09-01 06:00:00+00
-1601	brain/review.php	9	2018-11-28 16:29:45.739566+00	f	t	t	t	t	t	t	t	t	t	47	44	Works properly and looks nice.	2018-09-01 06:00:00+00
-1606	brain/review.php	1	2018-11-28 16:29:45.74886+00	f	f	f	f	f	f	t	f	f	f	45	48	I couldn't find your site!	2018-09-01 06:00:00+00
-1611	brain/review.php	9	2018-11-28 16:29:45.756835+00	t	t	t	t	f	t	t	t	t	t	50	48	Looks great! I loved how the scorecard was included.	2018-09-01 06:00:00+00
-1654	brain/slides.php	7	2018-11-28 16:31:24.632699+00	t	t	t	t	t	f	f	f	t	t	52	54	Slides are correct but there is no way to create new slides	2018-09-01 06:00:00+00
-1597	brain/review.php	10	2018-11-28 16:29:45.73306+00	t	t	t	t	t	t	t	t	t	t	52	47	Page works well. Able to delete specific reviews that were posted or view after submission.	2018-09-01 06:00:00+00
-1616	brain/review.php	9	2018-11-28 16:29:45.764653+00	t	t	t	t	f	t	t	t	t	t	49	48	Looks fabulousss. Once again, the right align notes bother me a little but that's no biggy.	2018-09-01 06:00:00+00
-1633	brain/slides.php	4	2018-11-28 16:31:24.597966+00	t	t	t	f	f	f	f	f	f	t	43	54	No slides	2018-09-01 06:00:00+00
-1632	brain/review.php	1	2018-11-28 16:29:45.789863+00	f	f	f	f	f	t	f	f	f	f	46	48	I couldn't find your site!	2018-09-01 06:00:00+00
-1598	brain/review.php	7	2018-11-28 16:29:45.734764+00	f	t	t	t	t	t	f	t	t	f	47	43	1) does not display review once its posted.\r\n\r\n2) Wrong url... instead of reviews/index.php put it at just reviews.php\r\n\r\n3) can't edit a review	2018-09-01 06:00:00+00
-1603	brain/review.php	1	2018-11-28 16:29:45.742917+00	f	f	t	f	f	f	f	f	f	f	45	50	I couldn't find the URL	2018-09-01 06:00:00+00
-1613	brain/review.php	8	2018-11-28 16:29:45.759885+00	t	f	t	t	f	t	t	t	t	t	49	45	You've got a couple errors in your html code. You also allow users to edit/delete other people's reviews, so you may want a user authentication for that.	2018-09-01 06:00:00+00
-1644	brain/slides.php	10	2018-11-28 16:31:24.616182+00	t	t	t	t	t	t	t	t	t	t	53	54	Fixed and correct	2018-09-01 06:00:00+00
-1648	brain/slides.php	3	2018-11-28 16:31:24.622491+00	t	f	f	t	f	f	f	t	f	f	44	43	looks good	2018-09-01 06:00:00+00
-1626	brain/review.php	5	2018-11-28 16:29:45.780428+00	t	t	t	t	t	f	f	f	f	f	48	51	Your page is likely having the same issue as your notes page.\r\n\r\nIt does not look to be updating your database or your views.	2018-09-01 06:00:00+00
-1614	brain/review.php	9	2018-11-28 16:29:45.761475+00	t	f	t	t	t	t	t	t	t	t	49	50	minor html issue! Working great! only complaint is some UX stuff!	2018-09-01 06:00:00+00
-1631	brain/review.php	3	2018-11-28 16:29:45.788205+00	f	t	t	t	f	f	f	f	f	f	46	51	The page is not at the proper URL.\r\n\r\nThe Reviews page should not require Authentication, the authentication seems to not be working properly, so I am unable to add a review.	2018-09-01 06:00:00+00
-1623	brain/review.php	5	2018-11-28 16:29:45.775606+00	t	t	t	t	f	f	f	f	t	f	48	45	There's no user authentication, but adding in a review also doesn't seem to go through.	2018-09-01 06:00:00+00
-1604	brain/review.php	9	2018-11-28 16:29:45.744669+00	t	t	t	t	f	t	t	t	t	t	45	49	Just missing the Auth, good work!	2018-09-01 06:00:00+00
-1651	brain/slides.php	7	2018-11-28 16:31:24.627741+00	t	f	t	t	f	t	f	t	t	t	44	52	NO user auth/login. html error. Just a slideshow, no database its connected to.	2018-09-01 06:00:00+00
-1619	brain/review.php	7	2018-11-28 16:29:45.769332+00	t	t	t	t	t	t	t	f	f	f	51	50	I can't add a review! Fix that and it'll be fine	2018-09-01 06:00:00+00
-1650	brain/slides.php	8	2018-11-28 16:31:24.62604+00	t	t	t	t	f	t	f	t	t	t	44	53	Slideshow, but no building custom ones.	2018-09-01 06:00:00+00
-1624	brain/review.php	6	2018-11-28 16:29:45.777285+00	t	t	t	t	t	t	f	f	f	f	48	50	The review I added isn't displaying	2018-09-01 06:00:00+00
-1641	brain/slides.php	6	2018-11-28 16:31:24.611325+00	t	f	t	t	f	f	f	t	t	t	54	52	Invalid Html. Neat change for visual appeal, harder to read but different. No database/views. No login.	2018-09-01 06:00:00+00
-1636	brain/slides.php	4	2018-11-28 16:31:24.603427+00	t	f	t	t	f	f	t	f	f	f	43	52	Invalid html, 5 errors found. No information is shown. Buttons do not work. Visually it looks great.	2018-09-01 06:00:00+00
-1634	brain/slides.php	6	2018-11-28 16:31:24.600047+00	t	t	t	t	f	f	f	t	t	f	43	53	The page exists. That's about it. Needs the actual slideshow part of it	2018-09-01 06:00:00+00
-1629	brain/review.php	5	2018-11-28 16:29:45.785098+00	t	t	t	t	t	f	f	f	f	f	46	50	Same issue for me again. I can't get past the log in	2018-09-01 06:00:00+00
-1612	brain/review.php	9	2018-11-28 16:29:45.758382+00	t	t	t	t	f	t	t	t	t	t	50	46	Good, no user auth	2018-09-01 06:00:00+00
-1617	brain/review.php	9	2018-11-28 16:29:45.76627+00	t	t	t	t	f	t	t	t	t	t	49	46	No user auth	2018-09-01 06:00:00+00
-1622	brain/review.php	8	2018-11-28 16:29:45.773976+00	t	t	t	t	f	t	f	t	t	t	51	46	Cannot add new review\r\nNo user auth	2018-09-01 06:00:00+00
-1627	brain/review.php	8	2018-11-28 16:29:45.781985+00	t	t	t	t	f	t	f	t	t	t	48	46	Cannot add/edit/delete reviews. \r\nNo user auth	2018-09-01 06:00:00+00
-1607	brain/review.php	9	2018-11-28 16:29:45.750451+00	t	t	t	t	f	t	t	t	t	t	45	46	Everything works great, however there is no user auth.	2018-09-01 06:00:00+00
-1639	brain/slides.php	6	2018-11-28 16:31:24.60823+00	t	t	f	t	f	f	f	t	t	t	54	53	Not quite what was expected in the deliverable, but it works. Just missing the add presentations feature of it.	2018-09-01 06:00:00+00
-1643	brain/slides.php	9	2018-11-28 16:31:24.614519+00	t	f	t	t	t	t	t	t	t	t	53	43	looks good	2018-09-01 06:00:00+00
-1635	brain/slides.php	4	2018-11-28 16:31:24.601741+00	t	f	f	t	f	f	t	t	f	f	43	44	Unable to view/ edit slides. Some html validation issues: https://validator.w3.org/nu/?doc=http://adam1400.com/brain/slides.php	2018-09-01 06:00:00+00
-1645	brain/slides.php	8	2018-11-28 16:31:24.617792+00	t	f	t	t	t	t	t	t	t	f	53	44	Seems to work properly. A couple html warnings: https://validator.w3.org/nu/?doc=http://moosen.xyz/brain/slides.php	2018-09-01 06:00:00+00
-1637	brain/slides.php	7	2018-11-28 16:31:24.605089+00	t	f	t	t	f	t	f	t	t	t	43	47	Very little valid html. Once page opens there is nothing there.	2018-09-01 06:00:00+00
-1642	brain/slides.php	8	2018-11-28 16:31:24.612874+00	t	f	t	t	f	t	t	t	t	t	54	47	Page opens up right to the slides. I like the design of it. No user authentication.	2018-09-01 06:00:00+00
-1647	brain/slides.php	9	2018-11-28 16:31:24.620886+00	t	t	t	t	f	t	t	t	t	t	53	47	No user authentication. Only thing from making this a perfect page. I like the ability to add and delete a entire slide show.	2018-09-01 06:00:00+00
-1652	brain/slides.php	3	2018-11-28 16:31:24.629295+00	f	f	t	f	f	t	f	t	f	f	44	47	Hunted for the slides page, was unable to find on owners website.	2018-09-01 06:00:00+00
-1609	brain/review.php	9	2018-11-28 16:29:45.753675+00	t	t	t	t	f	t	t	t	t	t	50	49	Just missing the Auth, good work!	2018-09-01 06:00:00+00
-1620	brain/review.php	9	2018-11-28 16:29:45.770836+00	t	t	t	t	f	t	t	t	t	t	51	49	Just missing the Auth, good work!	2018-09-01 06:00:00+00
-1625	brain/review.php	9	2018-11-28 16:29:45.778847+00	t	t	t	t	f	t	t	t	t	t	48	49	Just missing the Auth, good work!	2018-09-01 06:00:00+00
-1630	brain/review.php	10	2018-11-28 16:29:45.78665+00	t	t	t	t	t	t	t	t	t	t	46	49	Good work!	2018-09-01 06:00:00+00
-1602	brain/review.php	8	2018-11-28 16:29:45.741083+00	t	f	t	t	f	t	t	t	t	t	47	52	Url was supposed to be http://ghaschbacs350.com/brain/review/index.php instead of http://ghaschbacs350.com/brain/reviews/index.php. Html errors. Layout is nice, but colors make it a little difficult to read.	2018-09-01 06:00:00+00
-1081	blog/2.html	7	2018-11-07 14:52:08.052037+00	t	t	f	t	f	f	t	t	t	t	24	21	The images didnt pop up	2018-09-01 06:00:00+00
-1518	brain/notes.php	7	2018-11-28 16:29:01.298389+00	t	t	t	t	f	t	t	t	f	f	54	43	1) no user auth.\r\n\r\n2) does not display notes after you press "Add".	2018-09-01 06:00:00+00
-1545	brain/notes.php	7	2018-11-28 16:29:01.354712+00	t	t	t	t	f	t	f	t	t	f	45	51	The common theme appears throughout the page, but it is Mark's Css.\r\n\r\nThe User Authentication is not present.\r\n\r\nThe delete function is present, but there is not edit function.\r\n\r\nThere only two items missing from this assignment are the edit feature and the user authentication.	2018-09-01 06:00:00+00
-1548	brain/notes.php	10	2018-11-28 16:29:01.360949+00	t	t	t	t	t	t	t	t	t	t	50	45	Seems just fine to me. You've got some warnings in your HTML code that you might want to take care of, but aside from that, the page looks good.	2018-09-01 06:00:00+00
-1529	brain/notes.php	10	2018-11-28 16:29:01.321285+00	t	t	t	t	t	t	t	t	t	t	44	54	There was nothing wrong with this application	2018-09-01 06:00:00+00
-1550	brain/notes.php	8	2018-11-28 16:29:01.364948+00	t	t	t	t	f	t	f	t	t	t	50	51	Excellent and original looking page.\r\n\r\nThe only two items missing are the user authentication and the edit feature. \r\n\r\nOtherwise, excellent page, all features are working.	2018-09-01 06:00:00+00
-1555	brain/notes.php	9	2018-11-28 16:29:01.375869+00	t	t	t	t	f	t	t	t	t	t	49	51	Excellent visual appeal and original looking page.\r\n\r\nOnly missing the user authentication.\r\n\r\nThis may have been on purpose, but the body text looks to be indented several times, if does not look bad, but it throws off the flow of your page.	2018-09-01 06:00:00+00
-1516	brain/notes.php	6	2018-11-28 16:29:01.294842+00	t	f	t	t	f	t	f	t	t	f	43	52	Html invalid, 9 errors found. Buttons do not work for page navigation. No delete feature, no edit feature. Organization with the layout of the individual notes could be improved. It is hard to distinguish the different sections. Title maybe should be made larger?	2018-09-01 06:00:00+00
-1536	brain/notes.php	9	2018-11-28 16:29:01.335671+00	t	f	t	t	t	t	t	t	t	t	52	44	Seems to work properly. A couple of warnings for HTML validation here: https://validator.w3.org/nu/?doc=http://tyz.wpr.mybluehost.me/brain/notes.php	2018-09-01 06:00:00+00
-1566	brain/notes.php	6	2018-11-28 16:29:01.39448+00	t	t	t	t	f	f	f	t	t	f	48	51	The page is very original looking.\r\n\r\nThe add note feature does not work.\r\nI would suggest making sure that you are connecting to the correct database and hitting the proper table.\r\n\r\nIt might also be an error in your views on how you are trying to display your data.	2018-09-01 06:00:00+00
-1538	brain/notes.php	7	2018-11-28 16:29:01.340101+00	f	t	t	t	f	t	f	t	t	t	47	43	1) change url link to lead to notes.php instead of notes/index.php\r\n\r\n2) no user auth\r\n\r\n3) Can't edit a note after its created.	2018-09-01 06:00:00+00
-1666	brain/slides.php	1	2018-11-28 16:31:24.65194+00	f	f	f	f	f	f	f	t	f	f	45	48	I could not find your sight!	2018-09-01 06:00:00+00
-1676	brain/slides.php	10	2018-11-28 16:31:24.667625+00	t	t	t	t	t	t	t	t	t	t	49	48	Looks and works really great!	2018-09-01 06:00:00+00
-1681	brain/slides.php	2	2018-11-28 16:31:24.675857+00	f	f	f	t	f	f	f	t	f	f	51	48	All I saw on your page was a slideshow, I wasn't able to add to it!	2018-09-01 06:00:00+00
-1692	brain/slides.php	1	2018-11-28 16:31:24.693211+00	f	f	t	f	f	f	f	f	f	f	46	48	I couldn't find your page!	2018-09-01 06:00:00+00
-1658	brain/slides.php	1	2018-11-28 16:31:24.639168+00	f	f	f	t	f	f	f	f	f	f	47	43	1) Put your slides page at slides.php reather than slide/slides.php\r\n\r\n2) Page is just a slideshow... no place to edit or add a slide.\r\n\r\n3) no user auth.	2018-09-01 06:00:00+00
-1670	brain/slides.php	4	2018-11-28 16:31:24.658211+00	t	t	t	t	f	f	f	f	f	f	50	51	The page looks excellent.\r\n\r\nDoes not have any user authentication.\r\n\r\nI cannot add a slide, so I cannot test to see any of the features work.	2018-09-01 06:00:00+00
-1668	brain/slides.php	4	2018-11-28 16:31:24.655059+00	t	t	t	t	f	f	f	f	f	f	50	45	You have no user authentication. There's also no way for me to add or view slides in any way.	2018-09-01 06:00:00+00
-1673	brain/slides.php	9	2018-11-28 16:31:24.662816+00	t	t	t	t	f	t	t	t	t	t	49	45	There's no user auth, which allows me to edit/delete other people's slides, however, aside from that, the page is perfect.	2018-09-01 06:00:00+00
-1662	brain/slides.php	6	2018-11-28 16:31:24.645625+00	f	f	t	t	t	f	f	t	t	t	47	52	Html error. Page not under correct url. No databse or views for multiple presentations.	2018-09-01 06:00:00+00
-1678	brain/slides.php	3	2018-11-28 16:31:24.670835+00	t	t	f	t	f	f	f	f	f	f	51	45	Your page doesn't allow people to create slides; it is the slides themselves, which is kind of an issue.	2018-09-01 06:00:00+00
-1691	brain/slides.php	3	2018-11-28 16:31:24.691505+00	f	t	t	t	f	f	f	f	f	f	46	51	Same issue as the other pages.\r\n\r\nPage on the wrong URL.\r\n\r\nUser authentication does not work and I cannot sign in to use this.	2018-09-01 06:00:00+00
-1667	brain/slides.php	5	2018-11-28 16:31:24.653496+00	t	t	t	t	f	f	f	f	t	f	45	46	Sideshow does display however I cannot find a slideshow creation app page.	2018-09-01 06:00:00+00
-1672	brain/slides.php	8	2018-11-28 16:31:24.661265+00	t	t	t	t	f	t	f	t	t	t	50	46	Cannot add slideshow\r\nNo user auth	2018-09-01 06:00:00+00
-1677	brain/slides.php	9	2018-11-28 16:31:24.669247+00	t	t	t	t	f	t	t	t	t	t	49	46	Good, but no user auth	2018-09-01 06:00:00+00
-1687	brain/slides.php	6	2018-11-28 16:31:24.685217+00	t	t	t	t	f	t	f	t	f	f	48	46	Cannot create slides. Cannot view lists of created slides. Can view a functioning slideshow though.	2018-09-01 06:00:00+00
-1664	brain/slides.php	9	2018-11-28 16:31:24.648802+00	t	t	t	t	f	t	t	t	t	t	45	49	Just missing the Auth, good work!	2018-09-01 06:00:00+00
-1674	brain/slides.php	10	2018-11-28 16:31:24.664413+00	t	t	t	t	t	t	t	t	t	t	49	50	Nicely done!	2018-09-01 06:00:00+00
-1679	brain/slides.php	5	2018-11-28 16:31:24.672455+00	t	t	t	t	f	t	f	f	f	f	51	50	I was able to view your slides but not add any to  the slide show!	2018-09-01 06:00:00+00
-1684	brain/slides.php	4	2018-11-28 16:31:24.680499+00	f	t	t	t	f	t	f	f	f	f	48	50	Was able to view the slides but not add any!	2018-09-01 06:00:00+00
-1689	brain/slides.php	9	2018-11-28 16:31:24.688346+00	t	t	t	t	f	t	t	t	t	t	46	50	Looks good but couldn't get past user auth	2018-09-01 06:00:00+00
-1655	brain/slides.php	6	2018-11-28 16:31:24.634335+00	t	t	t	t	f	f	f	f	t	t	52	53	Works, just need to add the functionality of creating your own and presenting them	2018-09-01 06:00:00+00
-1660	brain/slides.php	6	2018-11-28 16:31:24.642484+00	t	t	t	t	f	f	f	f	t	t	47	53	Works, just need to add the create your own and then be able to present it.	2018-09-01 06:00:00+00
-1663	brain/slides.php	1	2018-11-28 16:31:24.647185+00	f	f	f	f	f	t	f	f	f	f	45	50	Hey Alex! I was not able to find your slides page!	2018-09-01 06:00:00+00
-1657	brain/slides.php	8	2018-11-28 16:31:24.637607+00	t	t	t	t	f	t	f	t	t	t	52	47	Opens up directly to the slides. Unable to add/edit/delete a slide and does not include user authentication.	2018-09-01 06:00:00+00
-1669	brain/slides.php	9	2018-11-28 16:31:24.656675+00	t	t	t	t	f	t	t	t	t	t	50	49	Just missing the Auth, good work!	2018-09-01 06:00:00+00
-1680	brain/slides.php	9	2018-11-28 16:31:24.674183+00	t	t	t	t	f	t	t	t	t	t	51	49	Just missing the Auth, good work!	2018-09-01 06:00:00+00
-1685	brain/slides.php	9	2018-11-28 16:31:24.682099+00	t	t	t	t	f	t	t	t	t	t	48	49	Just missing the Auth, good work!	2018-09-01 06:00:00+00
-1690	brain/slides.php	10	2018-11-28 16:31:24.689931+00	t	t	t	t	t	t	t	t	t	t	46	49	Just missing the Auth, good work!	2018-09-01 06:00:00+00
-1661	brain/slides.php	7	2018-11-28 16:31:24.644041+00	f	t	t	t	f	t	t	t	t	f	47	44	Page not at expected location but found from main page. Looks as expected. No edit/ add function but works.	2018-09-01 06:00:00+00
-1564	brain/notes.php	6	2018-11-28 16:29:01.391405+00	t	t	t	t	t	t	f	f	f	f	48	50	it isn't letting me add notes! Fix this and I am sure it'll work great!	2018-09-01 06:00:00+00
-1521	brain/notes.php	7	2018-11-28 16:29:01.304848+00	t	t	t	t	f	t	f	t	t	f	54	52	Cannot add notes or view notes. There is no data to show or edit in the notes application. The add form does show, but does not enter. The blue and yellow for the header could also be improved with better colors. Below the header looks nice.	2018-09-01 06:00:00+00
-1571	brain/notes.php	3	2018-11-28 16:29:01.402418+00	f	t	t	t	f	f	f	f	f	f	46	51	The page looks excellent.\r\n\r\nI was  unable to sign in/create an account to add notes. \r\n\r\nI was able to sign in, but when I go to the notes page, it says to please log in.	2018-09-01 06:00:00+00
-1621	brain/review.php	8	2018-11-28 16:29:45.772397+00	t	t	t	f	f	t	t	t	t	t	51	48	The blue text is a little hard to read but other than that it looks great.	2018-09-01 06:00:00+00
-1610	brain/review.php	10	2018-11-28 16:29:45.755295+00	t	t	t	t	t	t	t	t	t	t	50	51	Everything is present, and the page looks excellent and original. \r\n\r\nThe only feature I would change is the add review as it looks to be hiding directly under the scorecard.	2018-09-01 06:00:00+00
-1671	brain/slides.php	8	2018-11-28 16:31:24.659709+00	t	t	t	f	f	t	t	t	t	t	50	48	It wouldn't let me create a new slide but other than that the page looks great!	2018-09-01 06:00:00+00
-1615	brain/review.php	9	2018-11-28 16:29:45.763037+00	t	t	t	f	t	t	t	t	t	t	49	51	The page meets all of the the requirements.\r\n\r\nI did not check visual appeal because all of the reviews look crammed together without a space between them. I would recommend putting them on a card so they are easier to read.	2018-09-01 06:00:00+00
-1638	brain/slides.php	2	2018-11-28 16:31:24.606693+00	t	f	f	t	f	f	f	f	f	f	54	43	1) not valid html\r\n\r\n2) page is just a slideshow... no place to create a slide or edit. \r\n\r\n3) no user auth.\r\n\r\n4) slides look good though!	2018-09-01 06:00:00+00
-1543	brain/notes.php	7	2018-11-28 16:29:01.350957+00	t	f	t	t	t	t	f	t	t	f	45	50	a few minor errors. Some invalid HTML and it won't let me edit the notes. When I go to edit, the original text isn't there. Fix this and it'll work just right!	2018-09-01 06:00:00+00
-1618	brain/review.php	7	2018-11-28 16:29:45.767761+00	t	t	t	f	f	t	f	t	t	t	51	45	The dark blue text on a black background makes it incredibly hard to read anything. You also let users edit/delete each other's reviews, so you may want a user auth for that. I also have no way of adding a review on that page, so you may want to change that.	2018-09-01 06:00:00+00
-1653	brain/slides.php	2	2018-11-28 16:31:24.630985+00	t	f	f	t	f	f	f	f	f	f	52	43	1) Not valid html\r\n\r\n2) No user auth\r\n\r\n3) page  is just a slideshow... no place to edit or add a new slide...	2018-09-01 06:00:00+00
-1675	brain/slides.php	9	2018-11-28 16:31:24.665972+00	t	t	t	f	t	t	t	t	t	t	49	51	The page works excellent and has all of the key features.\r\n\r\nThe authentication feature is missing.\r\n\r\nThe slides are formatted excellently and your slides page looks nice, I would recommend using this formatting for your reviews page so it would look less crammed.	2018-09-01 06:00:00+00
-1686	brain/slides.php	4	2018-11-28 16:31:24.683697+00	t	t	t	t	f	f	f	f	f	f	48	51	Your page is present and looks nice and pink.\r\n\r\nYour page is about the same as mine and doesn't actually have a way to create/edit slides and start a presentation. I would recommend looking at his solution 34 in the repo.	2018-09-01 06:00:00+00
-1557	brain/notes.php	8	2018-11-28 16:29:01.380061+00	t	f	t	t	f	t	t	t	t	t	49	46	HTML problems per https://validator.w3.org/nu/?doc=http%3A%2F%2Fwww.danielherrera.space%2Fbrain%2Fnotes.php\r\n\r\nNo auth, otherwise great.	2018-09-01 06:00:00+00
-1682	brain/slides.php	6	2018-11-28 16:31:24.677422+00	t	t	t	t	f	t	f	t	f	f	51	46	Cannot create new slides or view slides. The supplied url does lead to a slideshow though.	2018-09-01 06:00:00+00
-1688	brain/slides.php	9	2018-11-28 16:31:24.6868+00	t	f	t	t	t	t	t	t	t	t	46	45	Your HTML isn't valid. The textbox for actually inputting slides is also kinda small, but aside from that, it looks just fine to me.	2018-09-01 06:00:00+00
-1519	brain/notes.php	7	2018-11-28 16:29:01.300235+00	t	t	t	t	f	t	f	t	t	f	54	53	This page needs some work, Notes do not appear at all after entering them in. No Auth as well.	2018-09-01 06:00:00+00
-1540	brain/notes.php	6	2018-11-28 16:29:01.344666+00	f	t	t	t	f	f	f	t	t	t	47	53	Does not let editing of notes, date is not automatic as it should be, URL is not correct, Auth is missing.	2018-09-01 06:00:00+00
-1595	brain/review.php	9	2018-11-28 16:29:45.729725+00	t	t	t	t	f	t	t	t	t	t	52	53	Absolutely perfect, except for the auth	2018-09-01 06:00:00+00
-1600	brain/review.php	5	2018-11-28 16:29:45.737938+00	f	t	t	t	f	f	f	t	t	f	47	53	Basically nothing works; can add but won't display, so can't edit, log is broken, no auth, URL is very incorrect, but it looks pretty good	2018-09-01 06:00:00+00
-1640	brain/slides.php	8	2018-11-28 16:31:24.609809+00	t	f	t	t	t	t	t	t	t	f	54	44	Looks nice. I got some html validation errors: https://validator.w3.org/nu/?doc=http://sova4698.mahboi.com/brain/slides.php	2018-09-01 06:00:00+00
-1656	brain/slides.php	8	2018-11-28 16:31:24.635996+00	t	f	t	t	t	t	t	t	t	f	52	44	Seems to work correctly. A couple of warnings regarding html validation: https://validator.w3.org/nu/?doc=http://tyz.wpr.mybluehost.me/brain/slides.php	2018-09-01 06:00:00+00
-1659	brain/slides.php	7	2018-11-28 16:31:24.640741+00	f	t	t	t	f	t	f	t	t	t	47	54	Auth isnt there\r\nviews dont catch what the action is\r\nnot at the right link	2018-09-01 06:00:00+00
-1096	blog/6.html	9	2018-11-09 16:45:56.15926+00	t	f	t	t	t	t	t	t	t	t	35	30	The validator doesn't like px after the pixel size in images.  Missing the doctype tag as well.\r\n\r\nOn the tutorial pages, if you can, make the pictures display larger.  I know to open each in a new tab but most people wouldn't think to do that.  As is they are pretty hard to make out.\r\n\r\nOtherwise good job!	2018-09-01 06:00:00+00
-1605	brain/review.php	6	2018-11-28 16:29:45.746795+00	t	t	t	t	t	t	f	f	f	f	45	51	The page is attractive and almost all the the features required.\r\n\r\nHowever, you are missing the views for the reviews, I cannot see any of the reviews that I submit.	2018-09-01 06:00:00+00
-1665	brain/slides.php	2	2018-11-28 16:31:24.650383+00	t	t	f	f	f	f	f	f	f	f	45	51	The page now exists, but the page only displays slides on how to create a slideshow, it does not have a way to create slides or edit them.	2018-09-01 06:00:00+00
-1517	brain/notes.php	7	2018-11-28 16:29:01.296597+00	t	f	t	t	f	t	f	t	t	t	43	47	Add note works properly. Although you do have to go hunt for the note that you previously posted. There is no ability to edit notes.	2018-09-01 06:00:00+00
-1527	brain/notes.php	9	2018-11-28 16:29:01.31748+00	t	t	t	f	t	t	t	t	t	t	53	47	I really like how the page is able to delete a specific note, not just clear the entire list. Page is also very easy to use. only thing from getting a 10/10 was the visual appeal.	2018-09-01 06:00:00+00
-1577	brain/review.php	10	2018-11-28 16:29:45.700129+00	t	t	t	t	t	t	t	t	t	t	43	47	I did have to search for the page. I like the layout of your review page. Everything is spread out and easy to read. I was not able to view the review after posted though.	2018-09-01 06:00:00+00
-1587	brain/review.php	9	2018-11-28 16:29:45.716505+00	t	t	t	t	f	t	t	t	t	t	53	47	Page has valid html. I like that you are able to see the scorecard before submitting the review. Was unable to view the review after submission.	2018-09-01 06:00:00+00
-1628	brain/review.php	9	2018-11-28 16:29:45.78356+00	t	f	t	t	t	t	t	t	t	t	46	45	Again, like the notes app, the user auth seems a bit too stringent (seeing other reviews is kinda the point, without having to log out), and your html has a few errors, but aside from that, it all works well.	2018-09-01 06:00:00+00
-1754	brain/notes.php	8	2018-12-03 16:23:55.385468+00	t	t	t	t	f	t	f	t	t	t	43	53	No deletion and auth, but everything else works as intended	2018-09-01 06:00:00+00
-1683	brain/slides.php	7	2018-11-28 16:31:24.678942+00	f	t	t	t	f	t	f	t	t	t	48	45	Your slides page is at the wrong URL. It should be at:\r\nhttp://jessielane.net/brain/slides.php\r\nnot where it is currently, at:\r\nhttp://jessielane.net/slides/\r\n\r\nYou also have no user auth, and no way to add/edit slides.	2018-09-01 06:00:00+00
-1568	brain/notes.php	9	2018-11-28 16:29:01.397842+00	t	f	t	t	t	t	t	t	t	t	46	45	The Auth seems a little excessive (allowing people to view other notes seems like it would be fine), but aside from that and some errors in your html, it works just fine.	2018-09-01 06:00:00+00
-1724	brain	10	2018-12-03 16:22:38.289169+00	t	t	t	t	t	t	t	t	t	t	45	49	Looks Great!	2018-09-01 06:00:00+00
-1698	brain	10	2018-12-03 16:22:38.247013+00	t	t	t	t	t	t	t	t	t	t	54	43	looks good	2018-09-01 06:00:00+00
-1729	brain	10	2018-12-03 16:22:38.297547+00	t	t	t	t	t	t	t	t	t	t	50	49	Looks Great!	2018-09-01 06:00:00+00
-1700	brain	10	2018-12-03 16:22:38.250362+00	t	t	t	t	t	t	t	t	t	t	54	44	No problems with this page.	2018-09-01 06:00:00+00
-1703	brain	9	2018-12-03 16:22:38.255485+00	t	f	t	t	t	t	t	t	t	t	53	43	looks good	2018-09-01 06:00:00+00
-1740	brain	10	2018-12-03 16:22:38.314539+00	t	t	t	t	t	t	t	t	t	t	51	49	Looks great!	2018-09-01 06:00:00+00
-1745	brain	10	2018-12-03 16:22:38.322161+00	t	t	t	t	t	t	t	t	t	t	48	49	Looks great!	2018-09-01 06:00:00+00
-1708	brain	10	2018-12-03 16:22:38.263551+00	t	t	t	t	t	t	t	t	t	t	44	43	looks good	2018-09-01 06:00:00+00
-1750	brain	10	2018-12-03 16:22:38.329897+00	t	t	t	t	t	t	t	t	t	t	46	49	Looks great!	2018-09-01 06:00:00+00
-1713	brain	10	2018-12-03 16:22:38.271591+00	t	t	t	t	t	t	t	t	t	t	52	43	looks good	2018-09-01 06:00:00+00
-1705	brain	9	2018-12-03 16:22:38.258687+00	t	f	t	t	t	t	t	t	t	t	53	44	2 small HTML validation errors. No issues other than that.	2018-09-01 06:00:00+00
-1718	brain	9	2018-12-03 16:22:38.279638+00	t	f	t	t	t	t	t	t	t	t	47	43	looks good	2018-09-01 06:00:00+00
-1716	brain	10	2018-12-03 16:22:38.276608+00	t	t	t	t	t	t	t	t	t	t	52	44	I saw no problems with this page.	2018-09-01 06:00:00+00
-1721	brain	8	2018-12-03 16:22:38.284282+00	t	f	f	t	t	t	t	t	t	t	47	44	Nice color scheme. A few html errors and no header.	2018-09-01 06:00:00+00
-1701	brain	10	2018-12-03 16:22:38.252289+00	t	t	t	t	t	t	t	t	t	t	54	52	No problems with functionality. Well organized and easy to navigate. The red on the green is a little hard to read though. The header works great, the red lettering makes it difficult. Neat Christmas them though.	2018-09-01 06:00:00+00
-1726	brain	9	2018-12-03 16:22:38.292854+00	t	t	t	t	f	t	t	t	t	t	45	48	Looks great! No issues at all.	2018-09-01 06:00:00+00
-1731	brain	10	2018-12-03 16:22:38.300794+00	t	t	t	t	t	t	t	t	t	t	50	48	this is so great! I love the animation at the bottom as well!	2018-09-01 06:00:00+00
-1736	brain	10	2018-12-03 16:22:38.308476+00	t	t	t	t	t	t	t	t	t	t	49	48	Fantastic job Daniel!	2018-09-01 06:00:00+00
-1741	brain	10	2018-12-03 16:22:38.316024+00	t	t	t	t	t	t	t	t	t	t	51	48	This looks great! No changes are needed at all!	2018-09-01 06:00:00+00
-1725	brain	10	2018-12-03 16:22:38.291189+00	t	t	t	t	t	t	t	t	t	t	45	51	Page meets all of the needs for the main brain page and is visually appealing.	2018-09-01 06:00:00+00
-1752	brain	10	2018-12-03 16:22:38.333055+00	t	t	t	t	t	t	t	t	t	t	46	48	Great job! Especially with the user auth section.	2018-09-01 06:00:00+00
-1723	brain	9	2018-12-03 16:22:38.287516+00	t	t	t	t	f	t	t	t	t	t	45	50	The Brain looks great!	2018-09-01 06:00:00+00
-1734	brain	10	2018-12-03 16:22:38.305369+00	t	t	t	t	t	t	t	t	t	t	49	50	Excellent!	2018-09-01 06:00:00+00
-1706	brain	8	2018-12-03 16:22:38.260223+00	t	f	t	t	f	t	t	t	t	t	53	52	Invalid html, 2 Errors shown. No login/auth. Looks very nice and organized. Easy to navigate.	2018-09-01 06:00:00+00
-1739	brain	8	2018-12-03 16:22:38.313053+00	t	f	t	t	f	t	t	t	t	t	51	50	No user Auth\r\nsome html issues	2018-09-01 06:00:00+00
-1744	brain	10	2018-12-03 16:22:38.320616+00	t	t	t	t	t	t	t	t	t	t	48	50	"Slide app" doesn't take you anywhere important	2018-09-01 06:00:00+00
-1749	brain	9	2018-12-03 16:22:38.328359+00	t	f	t	t	t	t	t	t	t	t	46	50	Looks good. Some html issues.	2018-09-01 06:00:00+00
-1730	brain	10	2018-12-03 16:22:38.299069+00	t	t	t	t	t	t	t	t	t	t	50	51	Page meets all of the requirements for the brain. \r\n\r\nThe page is also oddly visually appealing.	2018-09-01 06:00:00+00
-1746	brain	10	2018-12-03 16:22:38.323751+00	t	t	t	t	t	t	t	t	t	t	48	51	No errors on the page.	2018-09-01 06:00:00+00
-1696	brain	10	2018-12-03 16:22:38.243542+00	t	t	t	t	t	t	t	t	t	t	43	52	Pink is a little hard to read. The buttons are very nice. The layout is very nice and easy to navigate. Has no functionality problems.	2018-09-01 06:00:00+00
-1709	brain	10	2018-12-03 16:22:38.265219+00	t	t	t	t	t	t	t	t	t	t	44	54	Very nice design	2018-09-01 06:00:00+00
-1727	brain	9	2018-12-03 16:22:38.294462+00	t	t	t	t	f	t	t	t	t	t	45	46	No auth, everything else is perfect.	2018-09-01 06:00:00+00
-1693	brain	10	2018-12-03 16:22:38.219942+00	t	t	t	t	t	t	t	t	t	t	43	54	Very nice design	2018-09-01 06:00:00+00
-1719	brain	9	2018-12-03 16:22:38.281186+00	t	f	t	t	t	t	t	t	t	t	47	54	Errors on validator	2018-09-01 06:00:00+00
-1704	brain	10	2018-12-03 16:22:38.257067+00	t	t	t	t	t	t	t	t	t	t	53	54	There were errors for the validation, but percents are ok in html	2018-09-01 06:00:00+00
-1753	brain/notes.php	10	2018-12-03 16:23:55.383185+00	t	t	t	t	t	t	t	t	t	t	43	54	Very Nice Job	2018-09-01 06:00:00+00
-1751	brain	10	2018-12-03 16:22:38.331384+00	t	t	t	t	t	t	t	t	t	t	46	51	All requirements are met.	2018-09-01 06:00:00+00
-1728	brain	10	2018-12-03 16:22:38.295999+00	t	t	t	t	t	t	t	t	t	t	50	45	You have a couple errors in your html, but otherwise, your page looks just fine!	2018-09-01 06:00:00+00
-1743	brain	10	2018-12-03 16:22:38.319079+00	t	t	t	t	t	t	t	t	t	t	48	45	Looks good to me. Your visual style is a bit basic, which might be what you're going for.	2018-09-01 06:00:00+00
-1733	brain	10	2018-12-03 16:22:38.303854+00	t	t	t	t	t	t	t	t	t	t	49	45	Looks good to me! No errors, no problems.	2018-09-01 06:00:00+00
-1748	brain	9	2018-12-03 16:22:38.3268+00	t	f	t	t	t	t	t	t	t	t	46	45	You've got a couple errors in your html, and the links on your page (not inside the banner) don't seem to work.	2018-09-01 06:00:00+00
-1707	brain	10	2018-12-03 16:22:38.261966+00	t	t	t	t	t	t	t	t	t	t	53	47	Update from last review is much better. I like the theme you went with	2018-09-01 06:00:00+00
-1702	brain	10	2018-12-03 16:22:38.25393+00	t	t	t	t	t	t	t	t	t	t	54	47	I really like the Christmas theme on your home page.	2018-09-01 06:00:00+00
-1712	brain	10	2018-12-03 16:22:38.270008+00	t	t	t	t	t	t	t	t	t	t	44	47	Problems I had with previous review have been completed. I like the page.	2018-09-01 06:00:00+00
-1714	brain	10	2018-12-03 16:22:38.273183+00	t	t	t	t	t	t	t	t	t	t	52	54	There was a page to login, but there was no way to signup. Also no matter the input the login page will output login successful	2018-09-01 06:00:00+00
-1732	brain	8	2018-12-03 16:22:38.302326+00	t	f	t	t	f	t	t	t	t	t	50	46	No user auth and invalid html according to the link. Love your style though.	2018-09-01 06:00:00+00
-1737	brain	10	2018-12-03 16:22:38.310091+00	t	t	t	t	t	t	t	t	t	t	49	46	Perfect. Would recommended a visual indicator that the user is logged in displayed on the homepage	2018-09-01 06:00:00+00
-1742	brain	8	2018-12-03 16:22:38.317642+00	t	f	t	t	f	t	t	t	t	t	51	46	Invalid HTML, no user auth.	2018-09-01 06:00:00+00
-1747	brain	9	2018-12-03 16:22:38.325289+00	t	t	t	t	f	t	t	t	t	t	48	46	No user auth, good style.	2018-09-01 06:00:00+00
-1694	brain	9	2018-12-03 16:22:38.239916+00	t	t	t	t	f	t	t	t	t	t	43	53	No auth	2018-09-01 06:00:00+00
-1699	brain	10	2018-12-03 16:22:38.248687+00	t	t	t	t	t	t	t	t	t	t	54	53	10/10 - IGN	2018-09-01 06:00:00+00
-1715	brain	10	2018-12-03 16:22:38.274842+00	t	t	t	t	t	t	t	t	t	t	52	53	Looks good to me!	2018-09-01 06:00:00+00
-1710	brain	9	2018-12-03 16:22:38.266776+00	t	t	t	t	f	t	t	t	t	t	44	53	No auth	2018-09-01 06:00:00+00
-1720	brain	9	2018-12-03 16:22:38.282711+00	t	t	t	t	f	t	t	t	t	t	47	53	No auth	2018-09-01 06:00:00+00
-1789	brain/notes.php	9	2018-12-03 16:23:55.440021+00	t	t	t	t	f	t	t	t	t	t	50	49	Looks great! Still needs auth.	2018-09-01 06:00:00+00
-1758	brain/notes.php	9	2018-12-03 16:23:55.392845+00	t	t	t	t	t	t	t	t	t	f	54	43	looks good	2018-09-01 06:00:00+00
-1800	brain/notes.php	9	2018-12-03 16:23:55.456757+00	t	t	t	t	f	t	t	t	t	t	51	49	Looks great! Still needs auth.	2018-09-01 06:00:00+00
-1805	brain/notes.php	9	2018-12-03 16:23:55.464407+00	t	t	t	t	f	t	t	t	t	t	48	49	Looks great! Still needs auth.	2018-09-01 06:00:00+00
-1810	brain/notes.php	10	2018-12-03 16:23:55.472004+00	t	t	t	t	t	t	t	t	t	t	46	49	Looks great!	2018-09-01 06:00:00+00
-1763	brain/notes.php	10	2018-12-03 16:23:55.401124+00	t	t	t	t	t	t	t	t	t	t	53	43	looks good	2018-09-01 06:00:00+00
-1768	brain/notes.php	10	2018-12-03 16:23:55.408778+00	t	t	t	t	t	t	t	t	t	t	44	43	looks good	2018-09-01 06:00:00+00
-1773	brain/notes.php	10	2018-12-03 16:23:55.416182+00	t	t	t	t	t	t	t	t	t	t	52	43	looks good	2018-09-01 06:00:00+00
-1755	brain/notes.php	9	2018-12-03 16:23:55.387395+00	t	t	t	t	t	t	t	t	t	f	43	44	A couple of spelling errors. Looks fine and works otherwise.	2018-09-01 06:00:00+00
-1778	brain/notes.php	8	2018-12-03 16:23:55.423587+00	f	t	t	t	t	t	t	t	t	f	47	43	looks good	2018-09-01 06:00:00+00
-1760	brain/notes.php	9	2018-12-03 16:23:55.396398+00	t	t	t	t	t	t	t	t	t	f	54	44	A couple of html warnings but no actual errors. Works properly.	2018-09-01 06:00:00+00
-1776	brain/notes.php	10	2018-12-03 16:23:55.420651+00	t	t	t	t	t	t	t	t	t	t	52	44	Works properly. HTML warnings but no actual errors.	2018-09-01 06:00:00+00
-1765	brain/notes.php	9	2018-12-03 16:23:55.404109+00	t	f	t	t	t	t	t	t	t	t	53	44	A couple of html validation errors. Site works otherwise.	2018-09-01 06:00:00+00
-1781	brain/notes.php	8	2018-12-03 16:23:55.427961+00	f	t	t	t	t	t	t	t	t	f	47	44	Incorrect URL but works otherwise.	2018-09-01 06:00:00+00
-1786	brain/notes.php	10	2018-12-03 16:23:55.435431+00	t	t	t	t	t	t	t	t	t	t	45	48	Looks great!!	2018-09-01 06:00:00+00
-1791	brain/notes.php	10	2018-12-03 16:23:55.443093+00	t	t	t	t	t	t	t	t	t	t	50	48	I love this page so much the green and purple is awesome and it works perfectly.	2018-09-01 06:00:00+00
-1796	brain/notes.php	10	2018-12-03 16:23:55.450643+00	t	t	t	t	t	t	t	t	t	t	49	48	Looks fabulous!	2018-09-01 06:00:00+00
-1815	brain/slides.php	7	2018-12-03 16:24:22.013037+00	t	t	t	t	f	t	f	t	t	f	43	44	No user auth or way to edit. Looks nice but unable to see slides.	2018-09-01 06:00:00+00
-1801	brain/notes.php	10	2018-12-03 16:23:55.458305+00	t	t	t	t	t	t	t	t	t	t	51	48	Looks good!	2018-09-01 06:00:00+00
-1812	brain/notes.php	10	2018-12-03 16:23:55.475053+00	t	t	t	t	t	t	t	t	t	t	46	48	looks and works great.	2018-09-01 06:00:00+00
-1785	brain/notes.php	9	2018-12-03 16:23:55.433972+00	t	t	t	t	f	t	t	t	t	t	45	51	Page does not have user authentication, but otherwise, meets all of the requirements.	2018-09-01 06:00:00+00
-1790	brain/notes.php	9	2018-12-03 16:23:55.441591+00	t	t	t	t	f	t	t	t	t	t	50	51	The page meets all of the needs except for user authentication.	2018-09-01 06:00:00+00
-1783	brain/notes.php	9	2018-12-03 16:23:55.430995+00	t	t	t	t	f	t	t	t	t	t	45	50	no user auth. Looks great!	2018-09-01 06:00:00+00
-1794	brain/notes.php	10	2018-12-03 16:23:55.447712+00	t	t	t	t	t	t	t	t	t	t	49	50	looks great I just wasn't able to log in	2018-09-01 06:00:00+00
-1799	brain/notes.php	9	2018-12-03 16:23:55.455221+00	t	t	t	t	f	t	t	t	t	t	51	50	no user auth	2018-09-01 06:00:00+00
-1795	brain/notes.php	10	2018-12-03 16:23:55.449184+00	t	t	t	t	t	t	t	t	t	t	49	51	The page is working great, user auth is perfect, and it is visually appealing.	2018-09-01 06:00:00+00
-1804	brain/notes.php	7	2018-12-03 16:23:55.462834+00	f	t	t	t	f	t	f	t	t	t	48	50	not able to edit the notes. Invalid URL	2018-09-01 06:00:00+00
-1782	brain/notes.php	8	2018-12-03 16:23:55.429456+00	f	t	t	t	f	t	t	t	t	t	47	52	Unable to edit and delete individual notes. Url supposed to be http://ghaschbacs350.com/brain/notes.php instead of http://ghaschbacs350.com/brain/notes/index.php. No user login/user authentication.	2018-09-01 06:00:00+00
-1809	brain/notes.php	10	2018-12-03 16:23:55.470451+00	t	t	t	t	t	t	t	t	t	t	46	50	Nice! works well	2018-09-01 06:00:00+00
-1766	brain/notes.php	8	2018-12-03 16:23:55.405721+00	t	f	t	t	f	t	t	t	t	t	53	52	No user authentication/login for notes section. Invalid html, 2 errors shown. Functions well and is easy to navigate. Well organized.	2018-09-01 06:00:00+00
-1764	brain/notes.php	10	2018-12-03 16:23:55.402602+00	t	t	t	t	t	t	t	t	t	t	53	54	Very Nice Job	2018-09-01 06:00:00+00
-1769	brain/notes.php	10	2018-12-03 16:23:55.410317+00	t	t	t	t	t	t	t	t	t	t	44	54	Very Nice Job	2018-09-01 06:00:00+00
-1774	brain/notes.php	10	2018-12-03 16:23:55.417721+00	t	t	t	t	t	t	t	t	t	t	52	54	Very Nice Job	2018-09-01 06:00:00+00
-1811	brain/notes.php	9	2018-12-03 16:23:55.473544+00	t	t	t	t	t	t	t	t	t	f	46	51	One defect on logging in that requires page refresh.\r\n\r\nNo title for each note.	2018-09-01 06:00:00+00
-1779	brain/notes.php	8	2018-12-03 16:23:55.42504+00	f	t	t	t	t	t	t	t	f	t	47	54	Cant edit notes, other than that looks good	2018-09-01 06:00:00+00
-1813	brain/slides.php	8	2018-12-03 16:24:22.00887+00	t	t	t	t	t	t	t	t	f	f	43	54	None of the links work, but data looks nice and I assume the data is stored correctly	2018-09-01 06:00:00+00
-1793	brain/notes.php	9	2018-12-03 16:23:55.446223+00	t	f	t	t	t	t	t	t	t	t	49	45	You've got a couple errors in your html. Otherwise everything works as intended.	2018-09-01 06:00:00+00
-1756	brain/notes.php	9	2018-12-03 16:23:55.389515+00	t	t	t	t	t	t	t	t	t	f	43	52	Must refresh page in order to show new updated information. No way to edit or delete. Colors make it hard to look at, but does have a good visual appeal just not readability.	2018-09-01 06:00:00+00
-1771	brain/notes.php	9	2018-12-03 16:23:55.413262+00	t	t	t	t	f	t	t	t	t	t	44	52	Body shows date instead of input body text. No user auth/login. All functions work.	2018-09-01 06:00:00+00
-1803	brain/notes.php	6	2018-12-03 16:23:55.461318+00	t	t	t	t	f	f	f	t	t	f	48	45	You've got no user auth, and your views doesn't seem to function correctly at all.	2018-09-01 06:00:00+00
-1757	brain/notes.php	9	2018-12-03 16:23:55.39114+00	t	t	t	t	t	t	f	t	t	t	43	47	Add note works properly. Can not edit/delete a note though.	2018-09-01 06:00:00+00
-1762	brain/notes.php	10	2018-12-03 16:23:55.399635+00	t	t	t	t	t	t	t	t	t	t	54	47	Notes app works properly. I like how you can edit/delete specific notes.	2018-09-01 06:00:00+00
-1767	brain/notes.php	10	2018-12-03 16:23:55.407216+00	t	t	t	t	t	t	t	t	t	t	53	47	Notes app works properly. I like the theme	2018-09-01 06:00:00+00
-1772	brain/notes.php	10	2018-12-03 16:23:55.414745+00	t	t	t	t	t	t	t	t	t	t	44	47	Notes app functionality works well. I like the subtle theme.	2018-09-01 06:00:00+00
-1777	brain/notes.php	10	2018-12-03 16:23:55.422117+00	t	t	t	t	t	t	t	t	t	t	52	47	Valid html throughout the entire page. Page works properly. I like the ability to be able to delete specific notes.	2018-09-01 06:00:00+00
-1787	brain/notes.php	9	2018-12-03 16:23:55.436965+00	t	t	t	t	f	t	t	t	t	t	45	46	Very functional, no auth.	2018-09-01 06:00:00+00
-1797	brain/notes.php	9	2018-12-03 16:23:55.452119+00	t	f	t	t	t	t	t	t	t	t	49	46	HTML is not valid, good auth but I am not sure how having it is beneficial if I can edit/delete others notes.	2018-09-01 06:00:00+00
-1802	brain/notes.php	8	2018-12-03 16:23:55.459756+00	t	f	t	t	f	t	t	t	t	t	51	46	Would add edit button to make editing more clear but good otherwise.	2018-09-01 06:00:00+00
-1759	brain/notes.php	8	2018-12-03 16:23:55.394846+00	t	t	t	t	f	t	f	t	t	t	54	53	Delete didn't work and no auth	2018-09-01 06:00:00+00
-1770	brain/notes.php	9	2018-12-03 16:23:55.411753+00	t	t	t	t	f	t	t	t	t	t	44	53	No auth	2018-09-01 06:00:00+00
-1775	brain/notes.php	9	2018-12-03 16:23:55.419178+00	t	t	t	t	f	t	t	t	t	t	52	53	No auth	2018-09-01 06:00:00+00
-1780	brain/notes.php	6	2018-12-03 16:23:55.426505+00	f	t	t	t	f	t	f	f	t	t	47	53	Date should not have to be input, no individual delete, no auth, bad URL	2018-09-01 06:00:00+00
-1814	brain/slides.php	8	2018-12-03 16:24:22.011196+00	t	t	t	t	f	t	t	f	t	t	43	53	Buttons didn't work, but controls were there. No auth	2018-09-01 06:00:00+00
-1849	brain/slides.php	10	2018-12-03 16:24:22.068229+00	t	t	t	t	t	t	t	t	t	t	50	49	Looks great! Still needs auth.	2018-09-01 06:00:00+00
-1860	brain/slides.php	9	2018-12-03 16:24:22.085153+00	t	t	t	t	f	t	t	t	t	t	51	49	Looks great! Still needs auth.	2018-09-01 06:00:00+00
-1818	brain/slides.php	10	2018-12-03 16:24:22.018033+00	t	t	t	t	t	t	t	t	t	t	54	43	looks good	2018-09-01 06:00:00+00
-1823	brain/slides.php	9	2018-12-03 16:24:22.026057+00	t	f	t	t	t	t	t	t	t	t	53	43	looks good	2018-09-01 06:00:00+00
-1870	brain/slides.php	10	2018-12-03 16:24:22.100798+00	t	t	t	t	t	t	t	t	t	t	46	49	Looks great!	2018-09-01 06:00:00+00
-1865	brain/slides.php	3	2018-12-03 16:24:22.092888+00	t	t	f	f	f	f	f	f	f	t	48	49	I got a 404.	2018-09-01 06:00:00+00
-1828	brain/slides.php	5	2018-12-03 16:24:22.034136+00	t	f	f	t	t	t	f	t	f	f	44	43	looks good	2018-09-01 06:00:00+00
-1833	brain/slides.php	6	2018-12-03 16:24:22.042342+00	t	f	t	t	t	t	f	t	f	f	52	43	looks good	2018-09-01 06:00:00+00
-1838	brain/slides.php	5	2018-12-03 16:24:22.050099+00	f	t	f	t	t	t	f	t	f	f	47	43	looks good	2018-09-01 06:00:00+00
-1820	brain/slides.php	9	2018-12-03 16:24:22.021145+00	t	t	t	t	f	t	t	t	t	t	54	44	Works nicely. Proper views. Only issue is there is no user Auth.	2018-09-01 06:00:00+00
-1825	brain/slides.php	9	2018-12-03 16:24:22.029252+00	t	t	t	t	f	t	t	t	t	t	53	44	Works properly. No user auth. Otherwise it works perfect.	2018-09-01 06:00:00+00
-1846	brain/slides.php	10	2018-12-03 16:24:22.063542+00	t	t	t	t	t	t	t	t	t	t	45	48	Good job! Works great.	2018-09-01 06:00:00+00
-1851	brain/slides.php	10	2018-12-03 16:24:22.071256+00	t	t	t	t	t	t	t	t	t	t	50	48	Works great!	2018-09-01 06:00:00+00
-1836	brain/slides.php	8	2018-12-03 16:24:22.047013+00	t	t	t	t	f	t	f	t	t	t	52	44	Works to show slides but a static page. Unable to edit and no user auth.	2018-09-01 06:00:00+00
-1856	brain/slides.php	10	2018-12-03 16:24:22.079045+00	t	t	t	t	t	t	t	t	t	t	49	48	10/10 as per usual! Good job daniel.	2018-09-01 06:00:00+00
-1861	brain/slides.php	10	2018-12-03 16:24:22.086658+00	t	t	t	t	t	t	t	t	t	t	51	48	Looks and works great! Good job Evan.	2018-09-01 06:00:00+00
-1841	brain/slides.php	6	2018-12-03 16:24:22.054688+00	f	t	t	t	f	t	f	t	t	f	47	44	Page is not in the correct url and no user auth/ views. Works otherwise as an slide display.	2018-09-01 06:00:00+00
-1872	brain/slides.php	10	2018-12-03 16:24:22.103956+00	t	t	t	t	t	t	t	t	t	t	46	48	Looks and works great! Great job. Once again, good job getting the user auth to work successfully.	2018-09-01 06:00:00+00
-1845	brain/slides.php	9	2018-12-03 16:24:22.061957+00	t	t	t	t	f	t	t	t	t	t	45	51	The page is missing user authentication.	2018-09-01 06:00:00+00
-1850	brain/slides.php	9	2018-12-03 16:24:22.069769+00	t	t	t	t	f	t	t	t	t	t	50	51	This page meets all of the requirements except for user authentication.	2018-09-01 06:00:00+00
-1843	brain/slides.php	9	2018-12-03 16:24:22.058377+00	t	t	t	t	f	t	t	t	t	t	45	50	No user auth. Works well.	2018-09-01 06:00:00+00
-1866	brain/slides.php	4	2018-12-03 16:24:22.094432+00	f	t	t	t	f	f	f	t	f	f	48	51	The page was not at the correct url.\r\n\r\nno user auth\r\n\r\nno way to view, edit, or delete individual slides	2018-09-01 06:00:00+00
-1854	brain/slides.php	10	2018-12-03 16:24:22.075907+00	t	t	t	t	t	t	t	t	t	t	49	50	Works well. I can't log in.	2018-09-01 06:00:00+00
-1859	brain/slides.php	7	2018-12-03 16:24:22.083636+00	t	t	t	t	f	t	t	t	f	f	51	50	The slideshow is displaying the date not the markdown	2018-09-01 06:00:00+00
-1871	brain/slides.php	10	2018-12-03 16:24:22.102408+00	t	t	t	t	t	t	t	t	t	t	46	51	All requirements for this page are met.	2018-09-01 06:00:00+00
-1816	brain/slides.php	5	2018-12-03 16:24:22.014744+00	t	f	t	t	f	t	t	f	f	f	43	52	Invalid html, 5 errors found. No information is shown. Buttons do not work. Visually it looks great.	2018-09-01 06:00:00+00
-1824	brain/slides.php	10	2018-12-03 16:24:22.027652+00	t	t	t	t	t	t	t	t	t	t	53	54	Very nice job	2018-09-01 06:00:00+00
-1831	brain/slides.php	7	2018-12-03 16:24:22.039038+00	t	f	t	t	f	t	f	t	t	t	44	52	Invalid html, no login, no database connection. Just a simple presentation.	2018-09-01 06:00:00+00
-1869	brain/slides.php	10	2018-12-03 16:24:22.099218+00	t	t	t	t	t	t	t	t	t	t	46	50	Works great!	2018-09-01 06:00:00+00
-1829	brain/slides.php	9	2018-12-03 16:24:22.035707+00	t	t	t	t	t	t	t	t	f	t	44	54	Displays a powerpoint, but cant add one. Tried looking with a different url but no dice.	2018-09-01 06:00:00+00
-1834	brain/slides.php	9	2018-12-03 16:24:22.043884+00	t	t	t	t	t	t	t	t	f	t	52	54	Slideshow works but cant add slides. Tried looking at other links with no dice.	2018-09-01 06:00:00+00
-1839	brain/slides.php	8	2018-12-03 16:24:22.051686+00	f	t	t	t	t	t	t	t	f	t	47	54	Slideshow works but cant add a new slideshow. Also at a different url	2018-09-01 06:00:00+00
-1873	brain/review.php	7	2018-12-03 16:24:48.203891+00	f	t	t	t	t	t	t	f	f	t	43	54	No slideshow given,\r\nNo links work\r\nNot at right url	2018-09-01 06:00:00+00
-1864	brain/slides.php	7	2018-12-03 16:24:22.091297+00	f	t	t	t	t	t	t	t	f	f	48	50	invalid  URL link,  slide show doesn't play	2018-09-01 06:00:00+00
-1848	brain/slides.php	9	2018-12-03 16:24:22.066684+00	t	t	t	t	f	t	t	t	t	t	50	45	You've got a couple warnings in your html. You also have no user auth.	2018-09-01 06:00:00+00
-1853	brain/slides.php	9	2018-12-03 16:24:22.074342+00	t	t	t	t	t	t	t	t	t	f	49	45	Everything works properly except for the views; it seems like you can't view any presentations while you are logged in.	2018-09-01 06:00:00+00
-1817	brain/slides.php	8	2018-12-03 16:24:22.016326+00	t	t	t	t	f	t	f	t	t	t	43	47	I like the layout of the page/theme although I could not get a presentation to open/edit/delete.	2018-09-01 06:00:00+00
-1858	brain/slides.php	8	2018-12-03 16:24:22.082135+00	t	t	t	t	f	t	t	t	t	f	51	45	You've got a couple warnings in your html. You also have no user auth, and it seems like views isn't working properly.	2018-09-01 06:00:00+00
-1827	brain/slides.php	9	2018-12-03 16:24:22.032486+00	t	t	t	t	f	t	t	t	t	t	53	47	No user authentication. Only thing from making this a perfect page. I like the ability to add and delete a entire slide show. Slide show works very well.	2018-09-01 06:00:00+00
-1832	brain/slides.php	7	2018-12-03 16:24:22.040705+00	t	t	t	f	f	t	f	t	t	t	44	47	Very basic slide show presentation. No user auth, theme is basic.	2018-09-01 06:00:00+00
-1837	brain/slides.php	7	2018-12-03 16:24:22.048498+00	t	t	t	f	f	t	f	t	t	t	52	47	Opens up directly to the slides. Unable to add/edit/delete a slide and does not include user authentication.	2018-09-01 06:00:00+00
-1868	brain/slides.php	9	2018-12-03 16:24:22.097585+00	t	f	t	t	t	t	t	t	t	t	46	45	Your html has a few errors. Aside from that, everything looks good.	2018-09-01 06:00:00+00
-1847	brain/slides.php	9	2018-12-03 16:24:22.06511+00	t	t	t	t	f	t	t	t	t	t	45	46	Good, no auth.	2018-09-01 06:00:00+00
-1852	brain/slides.php	9	2018-12-03 16:24:22.072803+00	t	t	t	t	f	t	t	t	t	t	50	46	No auth, but good otherwise.	2018-09-01 06:00:00+00
-1857	brain/slides.php	9	2018-12-03 16:24:22.080548+00	t	t	t	t	t	t	f	t	t	t	49	46	Cannot view presentation? Couldn't find where to view it at. Otherwise great.	2018-09-01 06:00:00+00
-1862	brain/slides.php	8	2018-12-03 16:24:22.088226+00	t	f	t	t	f	t	t	t	t	t	51	46	Good, no auth, invalid html	2018-09-01 06:00:00+00
-1819	brain/slides.php	9	2018-12-03 16:24:22.019568+00	t	t	t	t	f	t	t	t	t	t	54	53	Everything works, just no auth	2018-09-01 06:00:00+00
-1830	brain/slides.php	8	2018-12-03 16:24:22.037364+00	t	t	t	t	f	t	f	t	t	t	44	53	No custom slides, no auth	2018-09-01 06:00:00+00
-1835	brain/slides.php	8	2018-12-03 16:24:22.045479+00	t	t	t	t	f	t	f	t	t	t	52	53	No auth and no custom slides.	2018-09-01 06:00:00+00
-1840	brain/slides.php	7	2018-12-03 16:24:22.053169+00	f	t	t	t	f	t	f	t	t	t	47	53	Bad URL, no auth, no custom slides	2018-09-01 06:00:00+00
-1909	brain/review.php	9	2018-12-03 16:24:48.264152+00	t	t	t	t	f	t	t	t	t	t	50	49	Looks great! Still needs auth.	2018-09-01 06:00:00+00
-1920	brain/review.php	9	2018-12-03 16:24:48.28142+00	t	t	t	t	f	t	t	t	t	t	51	49	Looks great! Still needs auth.	2018-09-01 06:00:00+00
-1925	brain/review.php	9	2018-12-03 16:24:48.289628+00	t	t	t	t	f	t	t	t	t	t	48	49	Looks great! Still needs auth.	2018-09-01 06:00:00+00
-1930	brain/review.php	10	2018-12-03 16:24:48.29752+00	t	t	t	t	t	t	t	t	t	t	46	49	Looks great!	2018-09-01 06:00:00+00
-1878	brain/review.php	9	2018-12-03 16:24:48.214066+00	t	t	t	t	t	t	t	t	t	f	54	43	looks good	2018-09-01 06:00:00+00
-1883	brain/review.php	6	2018-12-03 16:24:48.222112+00	t	f	t	t	t	t	t	f	f	f	53	43	looks good	2018-09-01 06:00:00+00
-1888	brain/review.php	8	2018-12-03 16:24:48.230214+00	t	t	t	t	t	t	t	t	f	f	44	43	looks good	2018-09-01 06:00:00+00
-1893	brain/review.php	5	2018-12-03 16:24:48.238378+00	t	t	t	t	t	f	f	f	f	f	52	43	looks good	2018-09-01 06:00:00+00
-1898	brain/review.php	7	2018-12-03 16:24:48.246481+00	f	t	t	t	t	t	t	f	t	f	47	43	looks good	2018-09-01 06:00:00+00
-1905	brain/review.php	10	2018-12-03 16:24:48.257888+00	t	t	t	t	t	t	t	t	t	t	45	51	Page meets all of the requirements and does not require user authentication.	2018-09-01 06:00:00+00
-1906	brain/review.php	10	2018-12-03 16:24:48.259437+00	t	t	t	t	t	t	t	t	t	t	45	48	Looks awesome. Good job! All requirements were met.	2018-09-01 06:00:00+00
-1875	brain/review.php	9	2018-12-03 16:24:48.208366+00	f	t	t	t	t	t	t	t	t	t	43	44	Works properly to interact with reviews. Unable to find at expected URL but located easily from main brain page.	2018-09-01 06:00:00+00
-1911	brain/review.php	10	2018-12-03 16:24:48.267305+00	t	t	t	t	t	t	t	t	t	t	50	48	Looks great and works perfectly.	2018-09-01 06:00:00+00
-1916	brain/review.php	10	2018-12-03 16:24:48.275168+00	t	t	t	t	t	t	t	t	t	t	49	48	Great job.	2018-09-01 06:00:00+00
-1880	brain/review.php	10	2018-12-03 16:24:48.217301+00	t	t	t	t	t	t	t	t	t	t	54	44	Works properly and is at the correct url. Also has a couple html validation warnings, but no actual errors.	2018-09-01 06:00:00+00
-1885	brain/review.php	9	2018-12-03 16:24:48.225339+00	t	f	t	t	t	t	t	t	t	t	53	44	Works properly. A couple of HTML warnings.	2018-09-01 06:00:00+00
-1921	brain/review.php	9	2018-12-03 16:24:48.283026+00	t	t	t	t	f	t	t	t	t	t	51	48	Good job it looks great!	2018-09-01 06:00:00+00
-1896	brain/review.php	10	2018-12-03 16:24:48.24328+00	t	t	t	t	t	t	t	t	t	t	52	44	Works properly with no errors. Looks nice.	2018-09-01 06:00:00+00
-1910	brain/review.php	10	2018-12-03 16:24:48.265737+00	t	t	t	t	t	t	t	t	t	t	50	51	The page works perfectly and meets all of the business needs.\r\n\r\nUser authentication is not required.	2018-09-01 06:00:00+00
-1915	brain/review.php	7	2018-12-03 16:24:48.273578+00	t	t	t	f	f	t	t	t	t	f	49	51	The page does not have breaks between each review, making it hard to read.\r\n\r\nUser authentication in not suppose to be on this page.	2018-09-01 06:00:00+00
-1891	brain/review.php	8	2018-12-03 16:24:48.235106+00	t	t	t	t	f	t	t	t	t	f	44	52	Unable to add to the database or edit for delete. No user authentication/login. Date is not displayed properly.	2018-09-01 06:00:00+00
-1931	brain/review.php	9	2018-12-03 16:24:48.299139+00	t	t	t	t	f	t	t	t	t	t	46	51	Page works great, all requirements are met.\r\n\r\nUser auth is not suppose to be required for this page.	2018-09-01 06:00:00+00
-1903	brain/review.php	9	2018-12-03 16:24:48.254672+00	t	t	t	t	f	t	t	t	t	t	45	50	Works well, no user auth	2018-09-01 06:00:00+00
-1914	brain/review.php	10	2018-12-03 16:24:48.27196+00	t	t	t	t	t	t	t	t	t	t	49	50	Works correctly	2018-09-01 06:00:00+00
-1919	brain/review.php	10	2018-12-03 16:24:48.279819+00	t	t	t	t	t	t	t	t	t	t	51	50	Works well.	2018-09-01 06:00:00+00
-1884	brain/review.php	10	2018-12-03 16:24:48.223626+00	t	t	t	t	t	t	t	t	t	t	53	54	Very Nice Job	2018-09-01 06:00:00+00
-1924	brain/review.php	9	2018-12-03 16:24:48.287923+00	f	t	t	t	t	t	t	t	t	t	48	50	wrong URL	2018-09-01 06:00:00+00
-1889	brain/review.php	8	2018-12-03 16:24:48.231864+00	t	t	t	t	t	t	t	t	f	f	44	54	Cant add or edit reviews	2018-09-01 06:00:00+00
-1929	brain/review.php	10	2018-12-03 16:24:48.295894+00	t	t	t	t	t	t	t	t	t	t	46	50	Everythings works well!	2018-09-01 06:00:00+00
-1894	brain/review.php	10	2018-12-03 16:24:48.239979+00	t	t	t	t	t	t	t	t	t	t	52	54	Nice Job	2018-09-01 06:00:00+00
-1899	brain/review.php	8	2018-12-03 16:24:48.24828+00	t	t	t	t	t	t	t	t	f	f	47	54	Cant add or edit reviews	2018-09-01 06:00:00+00
-1902	brain/review.php	8	2018-12-03 16:24:48.253074+00	t	f	t	t	f	t	t	t	t	t	47	52	Url was supposed to be http://ghaschbacs350.com/brain/review/index.php instead of http://ghaschbacs350.com/brain/reviews/index.php. Html errors. Layout is nice, but colors make it a little difficult to read.	2018-09-01 06:00:00+00
-1886	brain/review.php	9	2018-12-03 16:24:48.226953+00	t	f	t	t	t	t	t	t	t	t	53	52	2 html errors. No problems with this app.	2018-09-01 06:00:00+00
-1877	brain/review.php	10	2018-12-03 16:24:48.212181+00	t	t	t	t	t	t	t	t	t	t	43	47	I did have to search for the page. I like the layout of your review page. Everything is spread out and easy to read. I was not able to view the review after posted though.	2018-09-01 06:00:00+00
-1882	brain/review.php	9	2018-12-03 16:24:48.220504+00	t	t	t	t	t	t	f	t	t	t	54	47	I like the theme used. When you go to delete a review the page breaks.	2018-09-01 06:00:00+00
-1908	brain/review.php	9	2018-12-03 16:24:48.262592+00	t	t	t	t	f	t	t	t	t	t	50	45	Your html has a few warnings, and you have no user auth.	2018-09-01 06:00:00+00
-1887	brain/review.php	9	2018-12-03 16:24:48.228592+00	t	t	t	t	f	t	t	t	t	t	53	47	I really like the layout of the page everything is easy to see/use. There is no user auth.	2018-09-01 06:00:00+00
-1913	brain/review.php	9	2018-12-03 16:24:48.27038+00	t	f	t	t	t	t	t	t	t	t	49	45	You've got a lot of errors and warnings in your html.	2018-09-01 06:00:00+00
-1897	brain/review.php	9	2018-12-03 16:24:48.244894+00	t	t	t	t	f	t	t	t	t	t	52	47	Page works well. Able to delete specific reviews that were posted or view after submission. No user auth.	2018-09-01 06:00:00+00
-1923	brain/review.php	7	2018-12-03 16:24:48.286258+00	t	t	t	t	f	t	f	t	t	f	48	45	You have no user auth, and it doesn't seem like any of your CRUD apps work.	2018-09-01 06:00:00+00
-1928	brain/review.php	9	2018-12-03 16:24:48.294232+00	t	f	t	t	t	t	t	t	t	t	46	45	You've got a few errors in your html, but aside from that, everything works great.	2018-09-01 06:00:00+00
-1907	brain/review.php	9	2018-12-03 16:24:48.261057+00	t	t	t	t	f	t	t	t	t	t	45	46	No auth	2018-09-01 06:00:00+00
-1912	brain/review.php	9	2018-12-03 16:24:48.26882+00	t	t	t	t	f	t	t	t	t	t	50	46	No user auth.	2018-09-01 06:00:00+00
-1917	brain/review.php	9	2018-12-03 16:24:48.276728+00	t	f	t	t	t	t	t	t	t	t	49	46	Good page, although being able to edit everyones reviews kinda moots the point of user login.	2018-09-01 06:00:00+00
-1922	brain/review.php	8	2018-12-03 16:24:48.284719+00	t	f	t	t	f	t	t	t	t	t	51	46	No user auth and invalid html	2018-09-01 06:00:00+00
-1927	brain/review.php	5	2018-12-03 16:24:48.292739+00	f	t	t	t	f	t	f	t	f	f	48	46	Can add a review but it disappears to the ether? Cannot edit, view, or delete the review.	2018-09-01 06:00:00+00
-1874	brain/review.php	9	2018-12-03 16:24:48.206232+00	t	t	t	t	f	t	t	t	t	t	43	53	Bad url, off by an s (still gave credit, nothing to lose sleep over). No auth	2018-09-01 06:00:00+00
-1879	brain/review.php	9	2018-12-03 16:24:48.215702+00	t	t	t	t	f	t	t	t	t	t	54	53	No auth	2018-09-01 06:00:00+00
-1890	brain/review.php	9	2018-12-03 16:24:48.233499+00	t	t	t	t	f	t	t	t	t	t	44	53	No auth	2018-09-01 06:00:00+00
-1895	brain/review.php	9	2018-12-03 16:24:48.241574+00	t	t	t	t	f	t	t	t	t	t	52	53	No auth	2018-09-01 06:00:00+00
-1900	brain/review.php	7	2018-12-03 16:24:48.249951+00	f	t	t	t	f	t	f	t	t	t	47	53	No delete or edit, bad URL, no auth	2018-09-01 06:00:00+00
-1695	brain	10	2018-12-03 16:22:38.241869+00	t	t	t	t	t	t	t	t	t	t	43	44	No problems observed with this page.	2018-09-01 06:00:00+00
-1583	brain/review.php	6	2018-11-28 16:29:45.709949+00	t	f	t	t	t	f	t	t	f	f	53	43	looks good	2018-09-01 06:00:00+00
-1784	brain/notes.php	9	2018-12-03 16:23:55.432449+00	t	t	t	t	f	t	t	t	t	t	45	49	Looks great! Still needs auth.	2018-09-01 06:00:00+00
-1761	brain/notes.php	9	2018-12-03 16:23:55.397971+00	t	t	t	t	t	t	t	t	t	f	54	52	When deleting note, there is an error. Nice Christmas theme. The colors so make it a bit hard to read, but the theme is cool. Also the body of the data shows the date instead of the inputted text. Organized layout, easy to edit and delete (if worked properly)specifics.	2018-09-01 06:00:00+00
-1844	brain/slides.php	9	2018-12-03 16:24:22.060322+00	t	t	t	t	f	t	t	t	t	t	45	49	Looks great! Still needs auth.	2018-09-01 06:00:00+00
-1904	brain/review.php	9	2018-12-03 16:24:48.256182+00	t	t	t	t	f	t	t	t	t	t	45	49	Looks great! Still needs auth.	2018-09-01 06:00:00+00
-1711	brain	9	2018-12-03 16:22:38.268316+00	t	t	t	t	f	t	t	t	t	t	44	52	No user auth. Very nice design, easy to read colors and format. Also very organized and easy to navigate. Only missing login.	2018-09-01 06:00:00+00
-1722	brain	8	2018-12-03 16:22:38.285928+00	t	f	t	t	f	t	t	t	t	t	47	52	6 html errors shown. No login. Missing user auth. Visually could be better. The main page for the brain could be made a lot nicer in particular. It seems very empty. The colors are easy to read and everything is well organized. Could use a link back to the home page on each section though.	2018-09-01 06:00:00+00
-1932	brain/review.php	9	2018-12-03 16:24:48.300674+00	t	t	t	f	t	t	t	t	t	t	46	48	good job it works and looks great!	2018-09-01 06:00:00+00
-1576	brain/review.php	10	2018-11-28 16:29:45.698508+00	t	t	t	t	t	t	t	t	t	t	43	52	Expected url was http://adam1400.com/brain/review.php instead of http://adam1400.com/brain/reviews.php. Very well organized. Nice css style. The colors could be better though as the pink is a little hard to read.	2018-09-01 06:00:00+00
-1901	brain/review.php	8	2018-12-03 16:24:48.251497+00	f	t	f	t	t	t	t	t	t	t	47	44	Works properly. No header on the page and not at expect url but looks nice with the colors chosen.	2018-09-01 06:00:00+00
-1735	brain	10	2018-12-03 16:22:38.306957+00	t	t	t	t	t	t	t	t	t	t	49	51	The page is creative and visually appealing, all links work, all requirements are met.	2018-09-01 06:00:00+00
-1581	brain/review.php	8	2018-11-28 16:29:45.706745+00	t	t	t	t	f	t	t	t	t	f	54	52	When deleting reviews, there is an error. Nice Christmas theme. The colors so make it a bit hard to read, but the theme is cool. Also the body of the data shows the date instead of the inputted text. Organized layout, easy to edit and delete (if worked properly)specifics. There is no difference from notes as from reviews.	2018-09-01 06:00:00+00
-1855	brain/slides.php	8	2018-12-03 16:24:22.077458+00	t	t	t	t	t	t	t	t	f	f	49	51	The page has no way of viewing the slideshow that is created.	2018-09-01 06:00:00+00
-1806	brain/notes.php	6	2018-12-03 16:23:55.465971+00	f	t	t	t	f	t	f	t	t	f	48	51	The link to the notes app on your brain home page brought me to a better working page than the link on the design reviews.\r\n\r\nno user auth\r\n\r\nno add, edit, or delete features	2018-09-01 06:00:00+00
-1926	brain/review.php	7	2018-12-03 16:24:48.291122+00	f	t	t	t	t	t	f	t	t	f	48	51	Brain page link was different than actual page, review based off brain page link as it was the better working app.\r\n\r\nUser auth was not required for this page.\r\n\r\nNo edit, add, or delete for individual slides.	2018-09-01 06:00:00+00
-1646	brain/slides.php	9	2018-11-28 16:31:24.619341+00	t	f	t	t	t	t	t	t	t	t	53	52	No login and invalid html, but this is the best one I have seen yet. The presentations work well. Everything is well organized as easy to follow. Good job!	2018-09-01 06:00:00+00
-1826	brain/slides.php	9	2018-12-03 16:24:22.030927+00	t	f	t	t	t	t	t	t	t	t	53	52	No login and invalid html, but this is the best one I have seen yet. The presentations work well. Everything is well organized as easy to follow. Good job!	2018-09-01 06:00:00+00
-1738	brain	9	2018-12-03 16:22:38.311554+00	t	f	t	t	t	t	t	t	t	t	51	45	You have two errors in your html, but those ought to be an easy fix. Your visual style also feels a little basic, which might be what you're going for.	2018-09-01 06:00:00+00
-1788	brain/notes.php	9	2018-12-03 16:23:55.438513+00	t	t	t	t	f	t	t	t	t	t	50	45	You've got a few warnings in your html, so you might want to check those out. There's also no user auth at all. Aside from that, everything seems to work.	2018-09-01 06:00:00+00
-1798	brain/notes.php	9	2018-12-03 16:23:55.453696+00	t	t	t	t	f	t	t	t	t	t	51	45	You don't have any user authentication, and you've got a few warnings in your html.	2018-09-01 06:00:00+00
-1697	brain	10	2018-12-03 16:22:38.245253+00	t	t	t	t	t	t	t	t	t	t	43	47	I like the design and all colors flow together well. page has correct validation as well.	2018-09-01 06:00:00+00
-1717	brain	10	2018-12-03 16:22:38.278158+00	t	t	t	t	t	t	t	t	t	t	52	47	I like the design of your first page, everything flows well design wise. Page works well and has correct link and validation.	2018-09-01 06:00:00+00
-1808	brain/notes.php	9	2018-12-03 16:23:55.468962+00	t	f	t	t	t	t	t	t	t	t	46	45	You've got a couple errors in your html and the login bug is still there. Otherwise, it's all good.	2018-09-01 06:00:00+00
-1821	brain/slides.php	9	2018-12-03 16:24:22.022749+00	t	t	t	f	t	t	t	t	t	t	54	52	Visually colors need to be changed. The slides work great. The navigation back to the main home screen does not work.	2018-09-01 06:00:00+00
-1842	brain/slides.php	7	2018-12-03 16:24:22.056334+00	f	t	t	t	f	t	f	t	t	t	47	52	Incorrect url. No login and no database. Just a simple presentation.	2018-09-01 06:00:00+00
-1876	brain/review.php	7	2018-12-03 16:24:48.210333+00	f	t	t	t	f	t	t	t	t	f	43	52	url incorrect, no user authentication. Pink is hard to read. There is no way to edit or delete items from database.	2018-09-01 06:00:00+00
-1822	brain/slides.php	9	2018-12-03 16:24:22.024335+00	t	t	t	t	f	t	t	t	t	t	54	47	I like the theme you used inside the presentation. There is not user auth.	2018-09-01 06:00:00+00
-1881	brain/review.php	8	2018-12-03 16:24:48.218962+00	t	t	t	t	f	t	t	t	t	f	54	52	When deleting reviews, there is an error. Nice Christmas theme. The colors so make it a bit hard to read, but the theme is cool. Also the body of the data shows the date instead of the inputted text. Organized layout, easy to edit and delete (if worked properly)specifics. There is no difference from notes as from reviews.	2018-09-01 06:00:00+00
-1863	brain/slides.php	6	2018-12-03 16:24:22.089812+00	f	t	t	t	f	t	f	t	t	f	48	45	Your page should be at:\r\n\r\nbrain/slides.php ,\r\n\r\nnot:\r\n\r\nbrain/slides3/ .\r\n\r\nYou also have no user auth, and you can only add slides, which appears to be a bit buggy (hitting enter three times, for example, will create three of the same presentation in rapid succession).	2018-09-01 06:00:00+00
-1892	brain/review.php	9	2018-12-03 16:24:48.236729+00	t	t	t	t	f	t	t	t	t	t	44	47	Did not see any user authentication. Not able to find the review that was submitted.	2018-09-01 06:00:00+00
-1918	brain/review.php	7	2018-12-03 16:24:48.278328+00	t	f	t	t	f	t	t	t	t	f	51	45	You've got 1 error in your html. You also have no user auth, and editing doesn't appear to work properly, though all of the other views do.	2018-09-01 06:00:00+00
-1792	brain/notes.php	8	2018-12-03 16:23:55.444657+00	t	f	t	t	f	t	t	t	t	t	50	46	Invalid html per the link, good functionality, would advise having an edit button to make editing more clear. Great style.	2018-09-01 06:00:00+00
-1807	brain/notes.php	8	2018-12-03 16:23:55.467486+00	t	t	t	t	f	t	f	t	t	t	48	46	The notes app is at notes/index which is ok but cannot edit/delete note. Cant create notes at the supplied url though. Seems like you have two different note apps.	2018-09-01 06:00:00+00
-1867	brain/slides.php	5	2018-12-03 16:24:22.095934+00	f	t	t	t	f	t	f	t	f	f	48	46	Cannot view, edit, or delete slideshows. No auth, url is not correct and there are 2 different slide pages.	2018-09-01 06:00:00+00
-1933	blog/4.html	-1	2018-12-06 21:11:09.097627+00	f	f	f	f	f	f	f	f	f	f	5	39	You must type a summary of problems.	2018-09-01 06:00:00+00
-1934	index.html	-1	2018-12-07 06:10:24.961682+00	f	f	f	f	f	f	f	f	f	f	1	39	You must type a summary of problems.	2018-09-01 06:00:00+00
-1935	index.html	-1	2018-12-07 12:02:42.198585+00	f	f	f	f	f	f	f	f	f	f	5	39	You must type a summary of problems.	2018-09-01 06:00:00+00
-1936	blog/3.html	-1	2018-12-07 19:47:22.299699+00	f	f	f	f	f	f	f	f	f	f	3	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-1937	blog/3.html	-1	2018-12-07 21:22:07.57421+00	f	f	f	f	f	f	f	f	f	f	1	4	You must type a summary of problems.	2018-09-01 06:00:00+00
-1938	blog/4.html	-1	2018-12-08 03:49:20.583012+00	f	f	f	f	f	f	f	f	f	f	5	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-1939	blog/4.html	-1	2018-12-09 17:50:45.705638+00	f	f	f	f	f	f	f	f	f	f	3	12	You must type a summary of problems.	2018-09-01 06:00:00+00
-1940	index.html	-1	2018-12-10 17:26:33.610165+00	f	f	f	f	f	f	f	f	f	f	3	17	You must type a summary of problems.	2018-09-01 06:00:00+00
-1941	blog/3.html	-1	2018-12-10 17:26:33.922317+00	f	f	f	f	f	f	f	f	f	f	1	2	You must type a summary of problems.	2018-09-01 06:00:00+00
-1942	blog/4.html	-1	2018-12-10 17:30:55.613276+00	f	f	f	f	f	f	f	f	f	f	3	17	You must type a summary of problems.	2018-09-01 06:00:00+00
-1943	index.html	-1	2018-12-10 17:30:58.049464+00	f	f	f	f	f	f	f	f	f	f	5	1	You must type a summary of problems.	2018-09-01 06:00:00+00
-1944	blog/3.html	-1	2018-12-10 17:30:59.721385+00	f	f	f	f	f	f	f	f	f	f	9	10	You must type a summary of problems.	2018-09-01 06:00:00+00
-1945	blog/3.html	-1	2018-12-12 02:40:19.871383+00	f	f	f	f	f	f	f	f	f	f	3	2	You must type a summary of problems.	2018-09-01 06:00:00+00
-1946	blog/4.html	-1	2018-12-13 20:48:19.233399+00	f	f	f	f	f	f	f	f	f	f	1	4	You must type a summary of problems.	2018-09-01 06:00:00+00
-1947	index.html	-1	2018-12-13 20:48:25.770239+00	f	f	f	f	f	f	f	f	f	f	5	4	You must type a summary of problems.	2018-09-01 06:00:00+00
-1948	index.html	-1	2018-12-13 20:48:27.510545+00	f	f	f	f	f	f	f	f	f	f	3	12	You must type a summary of problems.	2018-09-01 06:00:00+00
-1949	blog/3.html	-1	2018-12-13 20:48:31.334647+00	f	f	f	f	f	f	f	f	f	f	9	11	You must type a summary of problems.	2018-09-01 06:00:00+00
-1950	blog/4.html	-1	2018-12-13 21:28:18.513648+00	f	f	f	f	f	f	f	f	f	f	1	39	You must type a summary of problems.	2018-09-01 06:00:00+00
-1951	blog/4.html	-1	2018-12-13 21:28:19.405868+00	f	f	f	f	f	f	f	f	f	f	5	4	You must type a summary of problems.	2018-09-01 06:00:00+00
-1952	index.html	-1	2018-12-13 21:28:20.721454+00	f	f	f	f	f	f	f	f	f	f	1	4	You must type a summary of problems.	2018-09-01 06:00:00+00
-1953	blog/3.html	-1	2018-12-13 21:28:22.033964+00	f	f	f	f	f	f	f	f	f	f	5	8	You must type a summary of problems.	2018-09-01 06:00:00+00
-1954	blog/3.html	-1	2018-12-13 21:28:22.43708+00	f	f	f	f	f	f	f	f	f	f	3	4	You must type a summary of problems.	2018-09-01 06:00:00+00
-\.
-
-
---
--- Name: unc_review_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.unc_review_id_seq', 1954, true);
-
-
---
--- Data for Name: unc_reviewerscore; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.unc_reviewerscore (id, date, score, designer, reviewer, notes) FROM stdin;
-1	2017-11-13 00:26:56.867228+00	0	stre7262	stre7262	1
-2	2017-11-13 00:34:33.132998+00	1	stre7262	stre7262	1
-3	2017-11-13 16:28:41.472113+00	2	weav8611	kell7133	Reviewer could of added more. Feedback wasn't detailed or helpful. The reviewer didn't spend much time on my site.
-4	2017-11-13 16:30:29.995377+00	5	herr9858	adam5160	Great feedback, more detail would have been nice, but not required.
-5	2017-11-13 16:30:49.325502+00	5	moni2990	cutl7614	This review was very detailed and gave me some feedback about the small things that I could do to improve the website since I've already finished fixing all of the larger things.
-6	2017-11-13 16:30:57.722125+00	5	casp2764	shin8899	Wonderful review, Very helpful.
-7	2017-11-13 16:31:28.272835+00	5	herr9858	cutl7614	Great feedback, lots of detail, helpful hints, if I could I would give you a 6.
-8	2017-11-13 16:31:42.906847+00	5	weav8611	enge7698	Excellent review. Very helpful information on how to improve my site.
-9	2017-11-13 16:32:25.070774+00	5	mont0846	drur4653	Great feedback! Except this person said there was something wrong with my html. But everything is okay with my html. Other than that, it was great feedback. Thank you!
-10	2017-11-13 16:32:27.3396+00	2	bell1486	weav8611	He provided the least amount of feedback after giving the worst grade I received. He gave a few points on broken links but overall did not think my site was worth a 10.
-11	2017-11-13 16:32:42.783941+00	5	cruz3674	milt0773	Very good feedback, you went straight to the point. It helped that your review was was short and simple that way I didn't have to keep going back to see what your feedback was.
-12	2017-11-13 16:32:50.395589+00	5	herr9858	moni2990	Good feedback, fairly detailed, clear and organized.
-13	2017-11-13 16:32:53.98581+00	5	casp2764	here9018	great feedback, very helpful
-15	2017-11-13 16:33:33.083506+00	0	herr9858	stre7262	No content or feedback.
-16	2017-11-13 16:33:53.002525+00	5	casp2764	mena7788	Very well thought out.
-17	2017-11-13 16:34:04.633073+00	5	mont0846	adel4571	Great Feedback! It was short sweet and straight to the point!
-18	2017-11-13 16:34:15.045373+00	4	bell1486	kell7133	She provided good points of improvement but graded banner pretty harsh on the account I did not have a favicon.
-19	2017-11-13 16:35:11.559208+00	5	weav8611	bell1486	Good review. Helpful information and insight to improve my site.
-20	2017-11-13 16:35:22.092976+00	2	mont0846	tutt7678	They checked the wrong page. Therefore, I was not able to get accurate feedback.
-21	2017-11-13 16:35:39.850198+00	3	moni2990	adam5160	Not too sure what adam5160 meant when he said that he could not get access to my page at all. The website had been in the correct place with the correct url for the entire duration of the grading period and my other reviewers were able to find my site easily.
-22	2017-11-13 16:35:40.558095+00	5	shie5673	harm4214	Helpful feedback
-23	2017-11-13 16:35:48.046268+00	5	bell1486	enge7698	She graded very fairly, and provided the most useful information on the reviewers. She explained her reasoning behind point deductions and how it could be improved. Over all it was very helpful.
-24	2017-11-13 16:36:25.884594+00	5	shie5673	mate2933	Helpful feedback
-25	2017-11-13 16:36:34.907748+00	0	bell1486	mull9451	Did not review my site.
-26	2017-11-13 16:36:43.31256+00	5	cutl7614	herr9858	Fantastic feedback! I sincerely appreciate all the helpful tips and honest critiques given! I absolutely will take them to heart!\r\n\r\nA list of some of the most useful advice:\r\n- adding a lightly-colored background/something to make the website look more professional and eye-catching\r\n- A BETTER BANNER (lol, yeah, I was planning on making my own from scratch with a better resolution, I was just low on time and using a filler when I made this prototype site)\r\n- fixing the overlap for the image on the "Convenience" page - I definitely didn't catch that error, so I'm thankful someone did\r\n- fixing the "Asus Zenbo" accordion header on the "Convenience" page\r\n\r\nAlso, they complimented my menu and I cried a little, because I'm pretty happy with making the menu tabs look the way they do (minus a different color theme), and I'm glad someone appreciated it. ;u;
-27	2017-11-13 16:36:43.684984+00	2	mont0846	kaup6567	Checked the wrong page, therefore I was not able to get accurate feedback.
-28	2017-11-13 16:36:53.428564+00	4	shie5673	carr4666	Late feedback
-29	2017-11-13 16:37:31.689838+00	5	cruz3674	hern6661	Excellent feedback! Your review helped me out a lot.I like how you gave me a lot suggestions on how to improve my site. For example you suggested that I should use different fonts and colors. I also appreciated that you offered to help me if i needed any help!
-30	2017-11-13 16:37:57.997229+00	5	lang8151	orti8903	Well done review. Obviously took time to thoroughly examine my page.
-31	2017-11-13 16:38:15.025103+00	5	moni2990	herr9858	This review was very detailed and gave me a lot of feedback about the small things that I could do to improve the website in each category. I got a lot of interesting feedback and the reviewer gave me a lot of good ideas.
-32	2017-11-13 16:38:47.543848+00	0	moni2990	stre7262	I did not receive a review from this student.
-33	2017-11-13 16:40:21.6765+00	5	cutl7614	moni2990	Provided comments for every part, including reasons why they graded me the way they did. Stayed consistent to the grading scale, and I appreciate that. Very kind in their grading, and I may have liked some tougher critique, but their feedback definitely helped me know what features I did well and should keep.
-34	2017-11-13 16:40:39.88038+00	5	lang8151	espi0784	Great Review. Gave me some specific tips on how to make my page better.
-35	2017-11-13 16:40:43.71004+00	4	enge7698	kell7133	There was helpful information, but there was not anything extraordinary about it.  There was not a lot of detail provided.
-36	2017-11-13 16:40:48.013068+00	4	drur4653	adel4571	I wanted to give adel4571 a 4/5 for pretty good scoring. The only problem with the review that I saw was that I was missing some photos, however when I tested the pages, it showed on the bacs200 server correctly. I also did have some other reviewers say they were seeing the photos, so I'm not quite sure why it wasn't showing correctly. However, they did assist me with more advice on how to make my website more convenient for my viewers, as well as how to make it stronger. I definitely appreciate all the help on how to make it better.
-37	2017-11-13 16:40:49.622123+00	5	mate2933	shie5673	The review was overall good. The advise given made sense . Feedback was straight to the point and helpful.
-38	2017-11-13 16:41:41.395218+00	5	lang8151	butl5737	Good review. Enjoyed seeing their take. They definitely invested time into properly reviewing my page.
-39	2017-11-13 16:44:30.071192+00	5	enge7698	weav8611	There was a lot of detail within each attribute, and there were helpful comments.
-40	2017-11-13 16:45:15.70952+00	5	drur4653	mont0846	I believe Mont0846 did a really good job with grading my website. They kept it very organized and it helped me organize how to make my website more efficient. They also answered each question on the rubric on whether or not my website had everything it needed on each section. I appreciated all the reviews, because it definitely helped me improve on my website.
-41	2017-11-13 16:45:55.387648+00	1	cruz3674	simo8137	I did not get any feedback from you
-42	2017-11-13 16:46:40.162827+00	5	drur4653	kaup6567	I previously scored this kaup6567, but didn't put the correct score. Here's the correct score!
-43	2017-11-13 16:47:07.099754+00	5	rist4093	marq6695	Thanks for the feedback, you gave me some great suggestions. Thanks for the extra points!
-44	2017-11-13 16:47:19.555339+00	5	cutl7614	adam5160	Provided a very, very helpful note about usability! Mentioned that the scroll-over effect is very sensitive and difficult to use in some browsers. This is something that I would not have realized until I got around to testing the site (probably the day before it was due, if I'm being honest) so I am immensely grateful they brought this to my attention, so I can plan around that and possibly use a different JavaScript feature other than the accordion I'm using now. I want my site as user-friendly as possible, and this review allowed me to get a head-start on that, instead of finding out about it a day before the deadline and having to completely redesign my website last-minute. :)
-45	2017-11-13 16:48:22.683806+00	5	rist4093	carl9668	Thanks for the feedback.
-46	2017-11-13 16:48:35.127829+00	3	enge7698	mull9451	There was not much detail provided, and not every attribute that was scored down had an explanation as to why it was scored down.  There were a few helpful comments included.
-47	2017-11-13 16:48:55.852028+00	2	drur4653	tutt7678	Tutt7678 reviewed my website for me and gave me a 45/50, but I wasn't quite sure what all I got scored on. There wasn't much of a rubric or any organization to help me improve my website. I do appreciate the score I was given, but I wasn't sure how to make my website better since there wasn't really any advice on how to improve.
-48	2017-11-13 16:49:33.947951+00	5	rist4093	hans9131	Thanks for the feedback, you gave me some great suggestions.
-49	2017-11-13 16:49:35.414827+00	5	marq6695	rist4093	Gave good feedback!
-50	2017-11-13 16:50:21.127391+00	5	marq6695	hans9131	Like the honest review and thorough feedback!
-51	2017-11-13 16:50:43.815465+00	5	marq6695	carl9668	Good review, well done!
-52	2017-11-13 16:54:33.736566+00	4	enge7698	bell1486	There was detail involved, but some attributes scored were not an accurate representation of what is present on my site.  Attributes were explained and there were some helpful comments.
-53	2017-11-13 16:56:55.464032+00	4	mate2933	harm4214	Review had lots of feedback. Some of the feedback was good and I understood what I needed to do to fix my webpage. Other feedback was a bit confusing/didn't give enough information. For example, under the banner feedback when it asked if the banner has an attractive artwork, you wrote "No it doesn't". It would have been great if you had given some advice on how to make it more attractive. \r\n\r\nOverall, the feedback was good.
-54	2017-11-13 19:42:49.050592+00	2	hern6661	milt0773	I think you might have not correctly navigated to my webpage. The url for my site is http://bacs200.unco.edu/hern6661/MySite/index.html. which I believe is what it is supposed to be, not sure though. But I believe all my links work, as well as all my images.
-55	2017-11-13 19:44:14.531888+00	5	hern6661	cruz3674	Thanks for the feedback, it was super helpful! Working on the feedback you gave me. :)
-56	2017-11-13 21:07:53.672448+00	3	hans9131	rist4093	Review was based on the wrong webpage, I accidentally had two indexes but that has been fixed, so most of the feedback didn't really apply. Therefore, it's a little more difficult to judge the quality of helpfulness. On some of the items though there are suggestions on how to improve those parts. So I'm guessing that if the review had been for the right page it would have been helpful.
-57	2017-11-13 21:13:20.905265+00	4	hans9131	marq6695	Gave some good suggestions on parts that need some work. However, gave a four on the layout but neglected to give any feed back as to how to get a five. Also, gave me a zero for the JavaScript when the last page was a tab setup which is JavaScript.
-58	2017-11-13 21:15:25.38651+00	5	hans9131	carl9668	Gave clear reasoning as to why I got the score I got. Also, on the part that I didn't get full credit there was an explanation as to why and what I needed to do to get the full score.
-59	2017-11-14 00:24:51.675266+00	5	shie5673	mate2933	The feedback given was good. The notes given to me were short/ to the point and overall helpful.
-60	2017-11-14 00:28:02.513216+00	1	carr4666	mate2933	No review was given.
-61	2017-11-14 00:36:42.144528+00	5	harm4214	mate2933	Received lots of helpful feedback, but some feedback were short and not explained enough. For example, when asked if the banner was given good artwork the response was "No, it doesn't". Would have been nice to be given advice to make it better. Also, didn't understand when said to give it a "theme". My theme for the website is how music can benefit your life. If the theme was not clear, how could I better make it clear? Overall, the feedback was good.
-62	2017-11-14 02:04:27.717204+00	5	adel4571	mont0846	Let me know what was missing which gave me an idea of what I need to fix to make my site better!
-63	2017-11-14 02:06:55.579645+00	5	adel4571	tutt7678	Gave me specifics of what worked well and what needed to be added and fixed which was helpful
-64	2017-11-14 02:10:22.667902+00	5	adel4571	drur4653	let me know what I needed to fix which was helpful! But i think the index page suggestion was off
-65	2017-11-14 02:11:09.588828+00	0	adel4571	kaup6567	I don't see a review for my page
-66	2017-11-14 03:31:52.682689+00	5	carl2159	feas4242	Gave feedback that I needed.
-67	2017-11-14 03:32:28.527362+00	5	carl2159	pani2679	Gave feedback that I needed.
-68	2017-11-14 03:33:18.656392+00	1	carl2159	lous9442	Did not give feedback for anybody in the group.
-69	2017-11-14 06:40:27.869865+00	5	cutl7614	adam5160	Thank you for the effort you put into giving me advice. You are very detailed. Thank you for the 2 reviews.
-70	2017-11-14 06:42:00.493616+00	5	moni2990	adam5160	Thank you for the detailed review.
-71	2017-11-14 06:42:58.786078+00	5	herr9858	adam5160	Thank you for the detailed review. I will take the advice you gave into consideration.
-72	2017-11-17 16:22:12.6018+00	4	mull9451	kell7133	kell7133 was an excellent grader and provided great feedback for me on my page. However, they rated me a "1" on JavaScript controls. I do actually have a javascript control on me "About Me" page... it is an accordion control. Also, kell7133 rated me a "1" on my banner, when I do in fact have a banner on my pages. Thanks for the feedback kell7133!
-73	2017-11-17 16:25:19.750087+00	5	mull9451	weav8611	weav8611 provided clear and concise feedback for my page. All of the feedback was helpful and will give me good insight when I update my design. Thank you.
-74	2017-11-17 16:27:46.311929+00	5	mull9451	enge7698	enge7698 provided good feedback. They rated me a "4" on my banner and said that it only appears on the first page. However, it does appear on all of the pages except "about me".
-75	2017-11-17 16:41:36.549417+00	47	bell1486	weav8611	Home: Correct Project Name. http://bacs200.unco.edu/bell1486/MySite/index.html. 5/5 stars. \r\n\r\nBanner: Nice looking banner on all 5 pages 5/5 stars. \r\n\r\nLayout: Good page layout. Good use of white space. multiple columns. Every Page is consistent. 5/5 stars\r\n\r\nPages: There are 5 pages. Page names are correct. 5/5 stars. \r\n\r\nMenu: Menu on each page. Home link is broken. brings to a 404. 4/5\r\n\r\nImages: Nice looking images on each page. 5/5\r\n\r\nJavaScript: JavaScript on index page. 5/5\r\n\r\nText: Yes, but maybe add more text to the about us, snowboarding, hiking, and biking pages.  3/5\r\n\r\nOrganization: Clear purpose to the site. Easy to navigate. 5/5\r\n\r\nFooter: Footer on each page. 5/5
-\.
-
-
---
--- Name: unc_reviewerscore_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.unc_reviewerscore_id_seq', 75, true);
-
-
---
--- Data for Name: unc_reviewscore; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.unc_reviewscore (id, date, score, designer, reviewer, notes) FROM stdin;
-4	2017-11-08 16:22:13.392862+00	10	bell1486	weav8611	Home: No project site. http://bacs200.unco.edu/bell1486/MySite/index.html is there exercise page. All the links are broken. 1/5 stars. \r\n\r\nBanner: No banner. Need to have banner 1/5 stars. \r\n\r\nLayout: Bad page layout. It's just the exercise page. 1/5 stars\r\n\r\nPages: All exercise links are broken. The only link that works is the BACS200 Web Server link. 1/5\r\n\r\nMenu: No menu. Need to add menu 1/5\r\n\r\nImages: No images. 1/5\r\n\r\nJavaScript: No JavaScript. 1/5\r\n\r\nText: 1/5\r\n\r\nOrganization: 1/5\r\n\r\nFooter: no footer. 1/5
-6	2017-11-08 16:27:45.829866+00	37	butl5737	orti8903	– Home (5/5)\r\n\r\n– Banner (1/5): I couldn’t find any banner in any page.\r\n\r\n– Layout (5/5): Keep in mind that a consistent layout design will make it easier for anyone who visits your website to look around the pages.\r\n\r\n– Pages (4/5): Some pages feel a little ‘empty’, but I guess it’s because I’m looking at a prototype.\r\n\r\n– Menu (4/5): By including the menu on every HTML file, you can allow the user to explore your website easier.\t\r\n\r\n– Images (5/5)\r\n\t\t\t\t\r\n– JavaScript (1/5): You can use the image carousel to display the beers.\r\n\r\n– Text (4/5): Some pages feel a little ‘empty’, but I guess it’s because I’m looking at a prototype.\r\n\r\n– Organization (4/5): Some pages feel a little ‘empty’, but I guess it’s because I’m looking at a prototype. Overall, organization seems clear. Include menu on all pages.\r\n\r\n– Footer (4/5): Your name is missing, that’s it.
-7	2017-11-08 16:30:00.519217+00	10	espi0784	orti8903	– Home (1/5)\r\n\r\n– Banner (1/5)\r\n\r\n– Layout (1/5)\r\n\r\n– Pages (1/5)\r\n\r\n– Menu (1/5)                                                                                                                        \r\n\r\n– Images (1/5)                                                                                                                        \r\n\r\n– JavaScript (1/5)                                                                                                                        \r\n\r\n– Text (1/5)                                                                                                                        \r\n\r\n– Organization (1/5)                                                            \r\n\r\n– Footer (1/5)
-8	2017-11-08 16:31:31.751912+00	10	lang8151	orti8903	– Home (1/5)                                                                            \r\n\r\n– Banner (1/5)                                                                            \r\n\r\n– Layout (1/5)                                                                            \r\n\r\n– Pages (1/5)                                                                            \r\n\r\n– Menu (1/5)                                                                            \r\n\r\n– Images (1/5)                                                                            \r\n\r\n– JavaScript (1/5)\r\n\r\n– Text (1/5)\r\n\r\n– Organization (1/5)\r\n\r\n– Footer (1/5)
-9	2017-11-08 16:33:46.751866+00	42	here9018	casp2764	Here9018\r\nHome\r\nMaybe have some txt telling what the site is about.\r\nYou may have a space in "mySite"\r\n3\r\n\r\nBanner\r\nLooks Perfect\r\n5\r\n\r\nLayout\r\nYour Menu covers the picture on the first page\r\n4\r\n\r\nPages\r\nNo suggestions\r\n5\r\n\r\nMenu\r\nPerfect menu- good job\r\n5\r\n\r\nImages\r\nDo you own these pictures?- or are they from a free site\r\n4\r\n\r\nJavaScript\r\nI don’t see a Java Script Control\r\n1\r\n\r\nText\r\nAll good\r\n5\r\n\r\nOrganization\r\nAll good\r\n5\r\n\r\nFooter\r\nEverything looks good\r\n5\r\n\r\nFooter\r\nEverything looks good\r\n5
-3	2017-11-08 16:17:31.470504+00	10	stre7262	herr9858	Upon loading http://bacs200.unco.edu/stre7262/MySite/index.html a 404 code is returned. Further inspection of the FTP server shows no MySite directory. There are index.html files, but they are essentially empty. Due to the inability to load anything at all, the only choice I am left with is to give this person a zero. These words are only here for padding to get over the 500 character limit. I apologize for having to do this, but there wasn't any content to review. Just a few more words...almost there...
-5	2017-11-08 16:26:49.592279+00	49	casp2764	here9018	1. Home page is not named incorrectly. It should look like ---> MySite/index.hml. change mysite.html to index.hml\r\n2. Missing banner on the pages. Create banner and input it into each page.\r\n3. Missing images on all pages except one. pages need images.\r\n4. Footer is incorrect. It should look like ----> © 2017 Courtney. Here is the code on how it should be written.\r\n<footer>\r\n\t<p>&copy; 2017 Courtney</p>\r\n</footer>\r\n5. all links connect to a page nice job.     \r\nOther than the errors listed above everything else seems to work fine.
-10	2017-11-08 16:34:49.733264+00	0	carl9668	rist4093	I cant find your site anywhere on your page.\r\nHome\r\nThere is none. Make a site and make it accessible \r\nBanner\r\nThere is none.Make a site and make it accessible \r\nLayout\r\nThere is none. Make a site and make it accessible \r\nPages\r\nThere is none.Make a site and make it accessible \r\nMenu\r\nThere is none.Make a site and make it accessible \r\nImages\r\nThere is none.Make a site and make it accessible \r\nJavaScript\r\nThere is none.Make a site and make it accessible \r\nText\r\nThere is none.Make a site and make it accessible \r\nOrganization\r\nThere is none.Make a site and make it accessible \r\nFooter\r\nThere is none.Make a site and make it accessible
-11	2017-11-08 16:35:03.706376+00	39	carl2159	feas4242	Home- 5\r\nCould put a little more about your creations under each tab, good start though!\r\n\r\nBanner- 1\r\nNo banner on any pages :(\r\n\r\nLayout-5\r\nGood use of space, could use more colors besides black\r\n\r\nPages-5\r\n6 pages, all have good titles\r\n\r\nMenu-5\r\nMain menu located on side, could make your links a little big larger so they are easier to find and see.\r\n\r\nImages-1\r\nNo Images :(\r\n\r\nJavaScript-4\r\nHave a JavaScript accordion on every page, could add more information to it to enhance quality \r\n\r\nText-4\r\nGood text to start, could add more about your products and creations\r\n\r\nOrganization-5\r\nOrganized well\r\n\r\nFooter-4\r\nFooter is nice, having the email box here looks a little awkward on the home page, could look better on a separate page.
-13	2017-11-08 16:35:54.147882+00	40	bell1486	kell7133	Home\t     4\tthe site is not located on the right location at\r\n                mysite/index.html\r\nBanner\t     1\tthere is no favicon on any of the pages\r\nLayout\t     5\tlayout is good and appealing, menu looks good \r\nPages\t     4\tpage for home layout is not good\r\nMenu\t     3\tHome link and the Hiking link do not lead to a page\r\nImages\t     4\twould be cool with more pictures but each one has a header image\r\nJavaScript   5\t\r\nText\t     4\tno actual text for most pages but there is placeholder text\r\nOrganization 5\t\r\nFooter\t     5\t\r\n\t    40
-14	2017-11-08 16:38:15.86645+00	38	enge7698	kell7133	Home\t      5\t\r\nBanner\t      1    no favicon on any of the pages\r\nLayout\t      4    there is a lot of empty space making it look blank\r\nPages\t      5\t\r\nMenu\t      4    I don’t think the menu order and items should change for each \r\n                   page, plus the bio isn't in the menu on all the pages\r\nImages\t      4    would be cool with more pictures but each one has a header image\r\nJavaScript    1\t   no javascript controls\r\nText\t      5\t\r\nOrganization  4    navigation a little weird\r\nFooter\t      5\t\r\n\t     38
-15	2017-11-08 16:41:33.932348+00	48	enge7698	weav8611	Home: http://bacs200.unco.edu/enge7698/MySite/index.html. Correct home page name. Communicates the primary purpose. 5/5 stars.  \r\n\r\nBanner: Banner on the top of page. Looks good. Only thing would be to remove some of the white space between the banner and the menu 4/5 stars. \r\n\r\nLayout: Page layout is good. Plenty of white space. Maybe add some sidebars. Every page is consistent. 4/5 stars.\r\n\r\nPages: Has 5 pages. Good names 5/5\r\n\r\nMenu: Has menu with 4 items. All links work 5/5\r\n\r\nImages: Good images. 5/5\r\n\r\nJavaScript: JavaScript on the personal experience. 5/5\r\n\r\nText: Clear message. Grabs attention 5/5\r\n\r\nOrganization: Clear message 5/5\r\n\r\nFooter: Has Footer with copyright. 5/5
-16	2017-11-08 16:42:45.712991+00	41	mull9451	kell7133	Home\t      5\t                                                               \r\nBanner\t      1\t no favicon on any of the pages\r\nLayout\t      5\t layout is beautiful\r\nPages\t      5\t                                                           \r\nMenu\t      5\t                                                               \r\nImages\t      4\t link on about me page back to the home does not work\r\nJavaScript    1\t no javascript control\r\nText\t      5\t\r\nOrganization  5\t         \r\nFooter\t      5\t                                                          \r\n\t     41
-17	2017-11-08 16:43:37.027169+00	34	carr4666	mate2933	•\tDoes the banner have attractive artwork?\r\no\tI don’t see a banner in any of your pages. I would suggest making a banner that involves gaming.\r\n•\tIs the banner used on each page of the website?\r\no\tNo, I don’t see the banner. First make the banner than add to each page.\r\n•\tIs a nice font used for the banner?\r\no\tNo banner. Make sure the font you do use is readable. \r\n•\tIs there some kind of multiple columns or sidebars?\r\no\tNo. I would suggest to add sidebars on each page and add some text, so that way your page will look full with interesting information. \r\n•\tAre there at least five pages?\r\no\tNo. It looks like you only have 3 pages. I would suggest making more pages to your main menu. \r\n•\tDo all links connect to a page?\r\no\tNone of your links connect to your page. I would suggest looking at the codes and see if they are typed correctly and see if you are sending them to the right pages. \r\n  *Overall for the images, you just need to add an image to each page and make sure they include the alt="" to get the full points.\r\n\tOverall, the grammar and spelling are good. Just has 1 misspelled word (sence should be sense).
-12	2017-11-08 16:35:24.054684+00	44	mena7788	here9018	1. home page is named incorrectly. It should look like this ---------> MySite/index.hml instead of mySite.html\r\n2. primary purpose of the site is communicated but there is no further information on any other page.\r\n3. missing one page. 5 pages are required but only 4 are provided.\r\n4. all links connect somewhere, nice job.\r\n5. image on all pages is the same. not sure if its the banner or a simple image.\r\n6. there is no JavaScript anywhere on the site.\r\n7. footer is incorrect. It should look like this -------> \r\n<footer>\r\n\t<p>&copy; 2017 "your name"</p>\r\n</footer>
-19	2017-11-08 16:44:19.101673+00	40	weav8611	kell7133	Home\t      5\t                                                                 \r\nBanner\t      2\t no favicon on any of the pages\r\nLayout\t      5\t                                                                  \r\nPages\t      5\t                                                                \r\nMenu\t      5\t                                                                \r\nImages\t      4\t good but pictures need formating\r\nJavaScript    1\t no javascript control\r\nText\t      3\t some pages are missing any text or description\r\nOrganization  5\t                                                                  \r\nFooter\t      5\t                                                                 \r\n\t     40
-20	2017-11-08 16:46:50.678183+00	50	drur4653	kaup6567	Home 5/5\r\nBanner 5/5\r\nLayout 5/5\r\nPages 5/5\r\nMenu 5/5\r\nImages 5/5\r\nJavaScript 5/5\r\nText 5/5\r\nOrganization 5/5\r\nFooter 5/5\r\nScore (Stars) 50/50\r\n\r\nText\r\n\r\nEverything was clear and well presented. The only tip I have is for your "What We Do?" page. Under your tabs, all of your text is in bold because you included your <p> command within the <h2> command (usually used for titles), which overwrites it. If you just separate the commands it should pop back to normal font. Unless you wanted this, in which case...congrats? Your website looked great!
-23	2017-11-08 16:50:23.098237+00	44	mena7788	casp2764	Home\r\nIt communicates the purpose\r\n5\r\n\r\nBanner\r\nIs the banner the Daisy?\r\nMaybe make it smaller. you have to scroll to see the meat of your site\r\n3\r\n\r\nLayout\r\nMaybe put the txt inside the box\r\n4\r\n\r\nPages\r\nIt needs one more page\r\n4\r\n\r\nMenu\r\nThere is a working review on each page\r\n5\r\n\r\nImages\r\nPut another image in maybe\r\n4\r\n\r\nJavaScript\r\nNice email sign up\r\n5\r\n\r\nText\r\nCan you make the txt bigger, or put it in a different spot\r\n4\r\n\r\nOrganization\r\nEasy to follow \r\n5\r\n\r\nFooter\r\nI like that you tried to link it to a privacy statement\r\n5
-24	2017-11-08 16:51:14.800067+00	29	hans9131	rist4093	Home: 5\r\nThe page has the features for the assignment, but I think you could work to add content\r\nBanner: 4\r\nThe banner has the title and tabs, it needs the artwork and connections to the tabs.\r\nLayout: 4\r\nYou have a layout for the page, make sure it relays functions.\r\nPages: 1 \r\nNone of your pages connect to anything. But you have names for them\r\nMenu: 2\r\nYou have a menu with named items, but they don’t connect to anything\r\nImages: 1\r\nThere are no images\r\nJavaScript: 1\r\nThere is no javascript\r\nText: 4\r\nThe text clarifies the purpose of the page, but it looks like it is put off on the side\r\nOrganization: 2\r\nThere is very little content so it is hard to have a navigation path. \r\nFooter: 5\r\nIt has the copyright.
-25	2017-11-08 16:51:56.252071+00	37	pani2679	feas4242	Home- 5\r\nGood home page, could have an intro about your site or what you want to convey to your audience \r\n\r\nBanner-5\r\nbanner on every page\r\n\r\nLayout-4\r\nalright use of your space, could add something to that yellow "sidebar" area that you left \r\n\r\nPages-4\r\nYou have at least 5 pages, but no content on the pages. you should add a title to each one so people know the differences between your pages\r\n\r\nMenu-4\r\nYou have a consistent menu, but you could change your page titles to names instead of just "page 1, page 2.." etc.\r\n\r\nImages-3\r\nThere are images on every page but no text or explanation about the images and why they are on the page\r\n\r\nJavaScript-1\r\nNo JavaScript on any pages :(\r\n\r\nText-1\r\nMinimal text, could add more about what this site is about\r\n\r\nOrganization-5\r\nClean design and organization\r\n\r\nFooter-5\r\nConsistent footer on each page
-26	2017-11-08 16:53:19.575281+00	38	drur4653	adel4571	Home: 3\r\n-Just make the home page mysite/index.html. Don't have it as page 1\r\n-add a picture\r\n\r\nBanner: 2\r\n-add it to every page\r\n-make the banner more relevant to what the website is about\r\n\r\nLayout: 3\r\nA lot of white space on some pages, especially the why did we start our business page\r\n\r\nPages: 5\r\n\r\nMenu: 4\r\n-Add the menu to each page so you don't have to hit the back button each time you are trying to get to the home page.\r\n\r\nImages: 2\r\nAdd images to each page. Only see them on 2\r\n\r\nJavascript: 5\r\nText: 5\r\nOrganization: 5\r\nFooter: 5
-27	2017-11-08 16:54:13.648906+00	47	cutl7614	herr9858	5 Index/Home Page - Looks great, formatted well, maybe a light blue background or something along those lines would make things a little nicer to look at.\r\n4 Banner - Banner is ok, if you could redesign it at a larger resolution, it would solve the stretched look.\r\n5 Layout - Looks good, fairly organized pages are easy to find and all the links in the main menu work.\r\n5 Pages - All five pages are present and return no errors.\r\n5 Menu - Menu is great, looks very nice and functions properly.\r\n4 Images - All the Images are there, image on "Convenience" page overlaps the shadow on the first section. Just needs a small formatting change.\r\n4 JavaScript - Implementation of javascript is done well, it'd be nice if more than tabs were used, also the "Asus Zenbo" tab on the "Convenience" page needs a small formatting change. \r\n5 Text - For the most part the text is satisfactory, the "Luxury" page might need a little more, but other than that it looks pretty good.\r\n5 Organization - Very organized, navigation is clear and easy.\r\n5 Footer - Footer is on every page centered and correctly formatted.
-29	2017-11-08 16:54:35.51139+00	26	kell7133	weav8611	Home: http://bacs200.unco.edu/kell7133/mysite/index.html. Correct home page name. Not really clear what it communicates. 2/5 stars.  \r\n\r\nBanner: No banner on the MySite page. 1/5 stars. \r\n\r\nLayout: Plenty of white space. Maybe add some sidebars. Pages are not consistent though. Possibly make them consistent. 2/5 stars.\r\n\r\nPages: Has 5 pages. Home page broken link. Not good names. Possibly get rid of page 1...etc. 3/5\r\n\r\nMenu: Has menu with 4 items. Home link is broken. 3/5\r\n\r\nImages: 3 page with images out of 5. Maybe add more images to each page. 3/5\r\n\r\nJavaScript: No JavaScript. 1/5\r\n\r\nText: Maybe make it a little clearer on the home page what the page is about. 3/5\r\n\r\nOrganization: Kind of clear. Add more text to help better understand what the page is about. 3/5\r\n\r\nFooter: Has Footer with copyright. 5/5
-31	2017-11-08 16:59:03.095434+00	0	adam5160	cutl7614	- I didn't know if your website project was the Wendy's website or the Instanbul website, so I wasn't sure which one to review. I'm reviewing both, but scoring you based on which website you score higher on. ;) They're both really cool. Wendy's website home page looked amazing! The Hookah Bar website was incredible, dude - what a cool concept (I wish I'd thought of it), and there were some amazing features!\r\n\r\n1. Home - Score: 1\r\n\t- The website home page should have this url: http://bacs200.unco.edu/adam5160/MySite/index.html\r\n\t- Make a folder in your FTP server called "MySite," with a document called "index.html" in that folder that contains your first page info. The folder should be next to your Templates and web-root folders.\r\n2. Banner - Score: 1\r\n\t- No banner on either website.\r\n3. Layout - Score: 5\r\n\t- Layout was great for the Wendy's home page, layout on the Hookah Bar website was missing a CSS stylesheet, and came up as plain text.\r\n4. Pages - Score: 3\r\n\t- Only your Wendy's site had multiple pages, but the only page that worked was the Menu page. Maybe there was an issue with linking the other pages? Check the links and make sure they have the exact names of the right pages. \r\n\t- The Hookah Bar website was only one page, so I'd recommend putting the different parts of the website into different pages (i.e. making a reservation page, making menu page, making a store page to browse/buy hookah packages, etc.).\r\n5. Menu - Score: 2\r\n\t- Both pages had a list of links, but they weren't formatted into a proper menu. Check to make sure they match the code from our Menu exercise from class, or the Menu Templates.\r\n\t- Menu should be included on all pages of the website, not just the home page.\r\n\t- Again, not all links connect to a page.\r\n6. Images - Score: 4\r\n\t- Some images were broken in both the Wendy's page and the Hookah page, however, so check to make sure they're linked properly (the links have the exact name of the right images, so "number2.jpg", etc.) and that the images are included in your FTP server.\r\n7. JavaScript - Score: 4\r\n\t- No JavaScript on the Wendy's page, but the Hookah page definitely had fancy stuff going on. :D\r\n8. Text - Score: 5\r\n\t- Both websites had a clear message and were written well, for what was there!\r\n9. Organization - Score: 5\r\n\t- Organization of the Wendy's site was clear (the order of the links made sense), but the order of the Hookah bar website was a bit jumbled. There was a link to make a reservation towards the top of the page, but the actual reservation stuff was halfway down the page. I'd recommend making sure the features are together under one heading or in one separate page altogether.\r\n10. Footer - Score: 5\r\n\t- There was a footer on the Wendy's page, but not the Hookah page.
-32	2017-11-08 16:59:03.977383+00	44	shin8899	casp2764	Home\r\n•\tI think you cover everything here\r\n•\t5\r\nBanner\r\n•\tThe banner is only on the Homepage, but looks nice\r\n•\t3\r\nLayout\r\n•\tConsistent pages.\r\n•\t5\r\nPages\r\n•\t5 pages, and all of them have good names.\r\n•\t5\r\nMenu\r\n•\tMenu is only present on the first page, Put it on all of the pages\r\n•\t2\r\nImages\r\n•\tGood images on each page\r\n•\t5\r\nJavaScript\r\n•\tGreat Java Script Control\r\n•\t5\r\nText\r\n•\tCan you make the text more noticeable\r\n•\t4\r\nOrganization\r\n•\tEasy to follow \r\n•\t5\r\nFooter\r\n•\tGood copyright for every page\r\n•\t5
-33	2017-11-08 17:01:59.258185+00	48	mull9451	weav8611	Home: http://bacs200.unco.edu/mull9451/MySite/index.html. Correct home page name. Clear what it communicates. 5/5 stars.  \r\n\r\nBanner: Has banner. Looks good. 5/5 stars. \r\n\r\nLayout: Plenty of white space. Maybe add some sidebars on homepage. Pages are consistent. layout of pages look good. 5/5 stars.\r\n\r\nPages: Has 5 pages. All page links work. 5/5\r\n\r\nMenu: Has menu with 4 items.  5/5\r\n\r\nImages: 3 page with images out of 5. Maybe add more images to each page. 4/5\r\n\r\nJavaScript: Has JavaScript on about "me page". 5/5\r\n\r\nText: All text looks good. 5/5\r\n\r\nOrganization: Kind of clear. Add more organization to each page. 4/5\r\n\r\nFooter: Has Footer with copyright. 5/5
-34	2017-11-08 17:02:00.954008+00	48	marq6695	rist4093	Home:5\r\n Nice home page, it is clear about the purpose of the page. Looking for more main section content\r\nBanner:5\r\nIt has the logo feature and title. And is consistent on all of the pages. Consider alternative size and/or location for logo. \r\nLayout:5\r\nGood use of space and sidebars.\r\nPages:5\r\nAll pages are present and named\r\nMenu:5\r\nAll menu items are labeled and connected\r\nImages:4\r\nImages are present, but they looked stretched \r\nJavaScript:5\r\nNice sign up thingy, add a page to connect it to.\r\nText: 4\r\nHas a clear message, needs more content\r\nOrganization:5\r\nClear purpose, and navigation. I can tell the goal of the site\r\nFooter:5\r\nGood footer, has name, copyright, and privacy statement that link back.
-36	2017-11-08 17:05:49.057054+00	50	lang8151	butl5737	Home\r\nDoesn't appear to have any content.\r\nSite is properly named index.html\r\nWould like to see more\r\n2/5\r\n\r\nBanner\r\nThere is no banner\r\n1/5\r\n\r\nLayout\r\nbecause there is not enough content,\r\nI do not have any layout to grade\r\n1/5\r\n\r\nPages\r\nappears to have one link to an email subscription.\r\nin FTP, there are 2 links\r\n2/5\r\n\r\nMenu\r\nThere is no content for a main menu\r\nsubscribe link connects to no content\r\n1/5\r\n\r\nImages\r\nAppear to be no images\r\nNo attribution to image owners.\r\n1/5\r\n\r\nJavaScript\r\nTHere is no javascript on the website\r\n1/5\r\n\r\nText\r\nAlthough there is a lacking of content there\r\nis some text\r\n2/5\r\n\r\nOrganization\r\nI believe the individual wants to do something with fashion.\r\n2/5\r\n\r\nFooter\r\nNo footer or copyright
-37	2017-11-08 17:06:39.726788+00	11	lang8151	butl5737	There is no banner\r\n1/5\r\n\r\nLayout\r\nbecause there is not enough content,\r\nI do not have any layout to grade\r\n1/5\r\n\r\nPages\r\nappears to have one link to an email subscription.\r\nin FTP, there are 2 links\r\n2/5\r\n\r\nMenu\r\nThere is no content for a main menu\r\nsubscribe link connects to no content\r\n1/5\r\n\r\nImages\r\nAppear to be no images\r\nNo attribution to image owners.\r\n1/5\r\n\r\nJavaScript\r\nTHere is no javascript on the website\r\n1/5\r\n\r\nText\r\nAlthough there is a lacking of content there\r\nis some text\r\n2/5\r\n\r\nOrganization\r\nI believe the individual wants to do something with fashion.\r\n2/5\r\n\r\nFooter\r\nNo footer or copyright
-38	2017-11-08 17:08:52.895668+00	10	sim08137	hern6661	No directory named MySite exists on FTP, nor is there any other directory or page that seems like it could be the website project. Let me know if you would like additional help on developing your webpage. _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-39	2017-11-08 17:09:46.499381+00	10	simo8137	hern6661	No directory named MySite exists on FTP, nor is there any other directory or page that seems like it could be the website project. Let me know if you would like additional help on developing your webpage.___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-40	2017-11-08 17:10:30.783429+00	47	herr9858	cutl7614	1. Home - Score: 5\r\n2. Banner - Score: 5\r\n3. Layout - Score: 4\r\n\t- All the pages look consistent except for the "More resources" page, which has different margins then the other pages of the site. I would recommend making the margins the same as the other pages'.\r\n4. Pages - Score: 5\r\n5. Menu - Score: 5\r\n6. Images - Score: 4\r\n\t- There weren't any images on the "Future Eclipses" or "More resources" pages. All other images looked very neat. Make sure to credit the images too, if you got them from anywhere that wasn't an open-source website.\r\n7. JavaScript - Score: 5\r\n8. Text - Score: 4\r\n\t- The text was a little sparse on each page. I know it was a rough draft, however, so just make sure to flesh out the pages more with a narrative.\r\n9. Organization - Score: 5\r\n10. Footer - Score: 5\r\n\r\n- Great job, dude! Very interesting content! I can't wait to see it when it's done!
-41	2017-11-08 17:10:52.761494+00	50	orti8903	butl5737	Home\r\nlooks profesional\r\n5/5\r\n\r\nBanner\r\nbeautiful banner \r\nand nice use of font\r\n5/5\r\n\r\nLayout\r\nconsistency is great\r\nand great use of white space\r\n5/5\r\n\r\npages\r\n5 pages with good names\r\n5/5\r\n\r\nMenu\r\nMain menu looks great\r\nall links work\r\n5/5\r\n\r\nImages\r\nimages are grasping and attractive\r\nimages enhacne the experience of visitng the site\r\n5/5\r\n\r\nJavascript\r\nGreat use of javascript\r\n5/5\r\n\r\nText\r\nUnique text but not overdone. Hard to tell grammar and spelling because it is in spanish\r\n5/5\r\n\r\nOrganization\r\ngreat navagation paths and purpose\r\n5/5\r\n\r\nFooter\r\nfooter is present\r\n5/5
-57	2017-11-08 21:07:49.248591+00	34	mena7788	shin8899	1.\tHome: 4/5\r\nNot named MySite/index.html\r\n\r\n2.\tBanner: 1/5\r\nOnly a picture, no actual banner. Picture looks like its taking the whole webpage.\r\n\r\n3.\tLayout: 4/5\r\nLifestyle changes menu look, not consistent with others. Description of page is above H1 header.\r\n\r\n4.\tPages: 4/5\r\nOnly four pages.\r\n\r\n5.\tMenu: 5/5\r\nMinimum four items, all links connect to a page.\r\n\r\n6.\tImages: 3/5\r\nImages on every page, just taking up too much of the page and they’re all the same, doesn’t relate to each menu item.\r\n\r\n7.\tJavaScript: 0/5\r\nNo JavaScript found.\r\n\r\n8.\tText: 4/5\r\nText on every page, except the body text should go below the headers for easier readability. \r\n\r\n9.\tOrganization: 5/5\r\nClear menu items that connect to correct pages.\r\n\r\n10.\tFooter: 4/5\r\nCopyright used on every page except Lifestyle.
-44	2017-11-08 17:27:20.444901+00	39	shie5673	harm4214	Home-4\r\n•\tIs the home page named correctly? MySite/index.hml. \r\no\tYes was named correctly but hard to find \r\n•\tDoes it communicate the primary purpose of the site?\r\no\tIt does show the purpose of the site and more  \r\n•\tIs there an enticement to learn more?\r\no\tYes kind of, could use a little more excitement \r\nBanner-3\r\n•\tDoes the banner have attractive artwork?\r\no\tYes it does \r\n•\tIs the banner used on each page of the website?\r\no\tYes it is \r\n•\tIs a nice font used for the banner?\r\no\tThere is not text just a picture \r\nLayout-4\r\n•\tIs there good use of white space? margin/padding\r\no\tThere is a lot white space but padding and margin looks good\r\n•\tIs there some kind of multiple columns or sidebars?\r\no\tThere is a top menu but not side bar \r\n•\tIs every page consistent?\r\no\tYes every page is consistent and looks the same \r\nPages-4\r\n•\tAre there at least five pages?\r\no\tYes \r\n•\tDo they have good names?\r\no\tYes they do and looks well \r\nMenu- 4\r\n•\tIs there a main menu with at least four items?\r\no\tYes it has 4  items on it but  there is also a home button on the home page \r\n•\tDo all links connect to a page?\r\no\tYes they connect to other pages \r\n•\tIs the menu present on each page?\r\no\tYes it is\r\nImages-4\r\n•\tAre there attractive images on each page?\r\no\tYes there is an Image on all but two \r\n•\tIs there attribution of the image owners?\r\no\tno I don’t see any \r\n•\tDo the images enhance the theme of the website?\r\no\tYes they help show what the page is about \r\n•\tGood use of color and fonts for visual appeal?\r\no\tGood color and font maybe use a little more color \r\nJavaScript-4\r\n•\tIs there a fancy JavaScript control somewhere on the website?\r\no\tYes there is two of them used from emails and the other for packages \r\n•\tDoes this control enhance the appeal of the website?\r\no\tYes it lets you look at packages and allows you to get on to the email list \r\nText-4\r\n•\tDoes this website have a clear message?\r\no\tYes but it might need some help\r\n•\tIs writ with goodly grammar and spell?\r\no\tYes everything is spelled correctly and grammar is correct \r\n•\tDoes the text grab your attention?\r\no\tIt does show up and contrast nicely with the background  \r\nOrganization-4\r\n•\tIs the purpose of your site clear?\r\no\tIt is clear but not exciting \r\n•\tIs the navigation path clear?\r\no\tYes it is a clear path\r\n•\tDoes the organization of the site support your business goals?\r\no\tYes the site is well organized and supports the business \r\nFooter-4\r\n•\tIs there an attractive footer? \r\no\tYes the footer is there and works well for the site \r\n•\tDoes this site have a copyright notification?\r\no\tYes \r\n\r\n- Meets all of the requirements just a bit plain maybe throw some color on
-45	2017-11-08 17:45:57.119843+00	41	kell7133	enge7698	Review Checklist\r\nScore each website based on the quality of the features\r\n1.\tHome – 5 stars\r\n2.\tBanner – 4 stars\r\n3.\tLayout – 5 stars\r\n4.\tPages – 4 stars\r\n5.\tMenu – 4 stars\r\n6.\tImages – 4 stars\r\n7.\tJavaScript – 1 star\r\n8.\tText – 4 stars\r\n9.\tOrganization – 5 stars\r\n10.\tFooter – 5 stars\r\n\r\nScore (Stars)\r\n1.\tFeature is missing\r\n2.\tFeature is not working properly\r\n3.\tFeature has problems\r\n4.\tSome improvements required\r\n5.\tNo further work is needed\r\n\r\nWebsite Features\r\nHome – 5 Stars\r\n•\tIs the home page named correctly? MySite/index.html\r\no\tYes.\r\n•\tDoes it communicate the primary purpose of the site?\r\no\tYes, it provides a summary of what the page is intended to be about.\r\n•\tIs there an enticement to learn more?\r\no\tThe summary provides an enticement to learn more about the full site. \r\n\r\nBanner – 4 Stars\r\n•\tDoes the banner have attractive artwork?\r\no\tNo.  Consider adding a small image of some kind. \r\n•\tIs the banner used on each page of the website?\r\no\tYes. \r\n•\tIs a nice font used for the banner?\r\no\tYes.\r\n\r\nLayout – 5 Stars\r\n•\tIs there good use of white space? margin/padding\r\no\tYes.\r\n•\tIs there some kind of multiple columns or sidebars?\r\no\tYes, there are sidebars present.\r\n•\tIs every page consistent?\r\no\tEvery page is consistent.\r\n\r\nPages – 4 Stars\r\n•\tAre there at least five pages?\r\no\tThere are only 4 pages.  Consider adding an extra page that lists some more information. \r\n•\tDo they have good names?\r\no\tThe page names are listed as “page-1.html”, etc.  Consider renaming them what you have in the menu as Recipes, Crochet, and Crafts. \r\no\tAlso, consider adding a sub heading for each page so that the visitor can easily tell which page they are currently on. \r\n \r\nMenu – 4 Stars\r\n•\tIs there a main menu with at least four items?\r\no\tYes.  \r\n•\tDo all links connect to a page?\r\no\tYes. However, the crochet page links to “page-2.html” instead of “crochetbeards.html”.\r\n•\tIs the menu present on each page?\r\no\tYes. \r\n\r\nImages – 4 Stars\r\n•\tAre there attractive images on each page?\r\no\tYes, but the image on the recipes page appears to be of a dog, and you have it titled as “Bell Pepper Italian Sausage Soup”.  Also, when I click on this image, it takes me to a 404.  The link is for “peppersoup.html” instead of the page for recipes.\r\no\tThe image for the crochet beards takes you to the page “crochetbeards.html”, but the menu page listed as “crochet” links to the page titled “page-2.html”.  \r\n•\tIs there attribution of the image owners?\r\no\tNo, but if these are your images then there doesn’t need to be. \r\n•\tDo the images enhance the theme of the website?\r\no\tYes, but consider adding more images for each page to add to the overall appeal. \r\n•\tGood use of color and fonts for visual appeal?\r\no\tYes. \r\n\r\nJavaScript – 1 star\r\n•\tIs there a fancy JavaScript control somewhere on the website?\r\no\tThere doesn’t appear to be any use of JavaScript on your site.\r\n•\tDoes this control enhance the appeal of the website?\r\no\tThere is currently no JavaScript.\r\n\r\nText – 4 Stars\r\n•\tDoes this website have a clear message?\r\no\tYes, but go back and add more text on each page to describe what each individual page is about, and add some success stories and disasters that you claim the site will include on the home page.    \r\n•\tIs writ with goodly grammar and spell?\r\no\tYes.\r\n•\tDoes the text grab your attention?\r\no\tThe text that you have so far does grab my attention.\r\n\r\nOrganization – 5 Stars\r\n•\tIs the purpose of your site clear?\r\no\tYes.\r\n•\tIs the navigation path clear?\r\no\tYes.\r\n•\tDoes the organization of the site support your business goals?\r\no\tYes.\r\n\r\nFooter – 5 Stars\r\n•\tIs there an attractive footer?\r\no\tYes.\r\n•\tDoes this site have a copyright notification?\r\no\tYes.
-46	2017-11-08 18:05:06.018178+00	44	mull9451	enge7698	Review Checklist\r\nScore each website based on the quality of the features\r\n1.\tHome – 5 stars\r\n2.\tBanner – 4 stars\r\n3.\tLayout – 4 stars\r\n4.\tPages – 5 stars\r\n5.\tMenu – 4 stars\r\n6.\tImages – 4 stars\r\n7.\tJavaScript – 5 stars\r\n8.\tText – 4 stars\r\n9.\tOrganization – 5 stars\r\n10.\tFooter – 4 stars\r\n\r\nScore (Stars)\r\n1.\tFeature is missing\r\n2.\tFeature is not working properly\r\n3.\tFeature has problems\r\n4.\tSome improvements required\r\n5.\tNo further work is needed\r\n\r\nWebsite Features\r\nHome – 5 Stars\r\n•\tIs the home page named correctly? MySite/index.html\r\no\tYes.\r\n•\tDoes it communicate the primary purpose of the site?\r\no\tYes, it provides a summary of what the page is intended to be about.\r\n•\tIs there an enticement to learn more?\r\no\tThe summary provides an enticement to learn more about the full site. \r\n\r\nBanner – 4 Stars\r\n•\tDoes the banner have attractive artwork?\r\no\tYes.\r\n•\tIs the banner used on each page of the website?\r\no\tNo, the banner only appears to be present on the home page.  \r\n•\tIs a nice font used for the banner?\r\no\tYes.\r\n\r\nLayout – 4 Stars\r\n•\tIs there good use of white space? margin/padding\r\no\tYes.\r\n•\tIs there some kind of multiple columns or sidebars?\r\no\tThere is no use of columns or sidebars.  I don’t think these are necessary for your site, but consider using them.\r\n•\tIs every page consistent?\r\no\tThe About Me page doesn’t have a title, or a banner.  Both the Fashion and Travel pages are also missing banners.  The Contact Me page has a banner for the bottom, but does not include one for the top of the page.\r\n    \r\nPages – 5 Stars\r\n•\tAre there at least five pages?\r\no\tThere are 5 pages. \r\n•\tDo they have good names?\r\no\tYes, the names seem to correspond with what’s on each page.\r\n \r\nMenu – 4 Stars\r\n•\tIs there a main menu with at least four items?\r\no\tYes.  \r\n•\tDo all links connect to a page?\r\no\tYes. \r\n•\tIs the menu present on each page?\r\no\tThe menu is only present on the home page. \r\n\r\nImages – 4 Stars\r\n•\tAre there attractive images on each page?\r\no\tThere is not an image present on every page. \r\n•\tIs there attribution of the image owners?\r\no\tNo, but if these are your images then there doesn’t need to be. \r\n•\tDo the images enhance the theme of the website?\r\no\tYes, but consider adding more images for each page to add to the overall appeal. \r\n•\tGood use of color and fonts for visual appeal?\r\no\tYes. \r\n\r\nJavaScript – 5 stars\r\n•\tIs there a fancy JavaScript control somewhere on the website?\r\no\tYes, on the About Me page.\r\n•\tDoes this control enhance the appeal of the website?\r\no\tYes, but consider making it an accordion instead of tabs.  I think the accordion is better suited for your purpose.  \r\n\r\nText – 4 Stars\r\n•\tDoes this website have a clear message?\r\no\tYes, but go back and add more text on each page that adds more information, and makes your site more appealing and informative. \r\no\tThe “Submit” button on the Contact Me page does not have a link connected to it, so it takes you to a 404 error.\r\n•\tIs writ with goodly grammar and spell?\r\no\tYes.\r\n•\tDoes the text grab your attention?\r\no\tThe text that you have so far does grab my attention.\r\n\r\nOrganization – 5 Stars\r\n•\tIs the purpose of your site clear?\r\no\tYes.\r\n•\tIs the navigation path clear?\r\no\tYes.\r\n•\tDoes the organization of the site support your business goals?\r\no\tYes.\r\n\r\nFooter – 4 Stars\r\n•\tIs there an attractive footer?\r\no\tYes, but there is no footer on the About Me page.\r\n•\tDoes this site have a copyright notification?\r\no\tYes.
-59	2017-11-08 21:14:08.579225+00	50	cutl7614	moni2990	Home: 5- Home page is named correctly, communicates primary purpose, and entices visitor to learn more\r\nBanner: 5- Banner is used on every page, has nice font, and has attractive artwork\r\nLayout: 5- Good use of white space and good consistency throughout the site\r\nPages: 5- There are 5 pages which have good names\r\nMenu: 5- All pages have working menu \r\nImages: 5- There are attractive images on each page\r\nJavaScript: 5- Good use of javascript\r\nText: 5- Website has clear message with good grammar\r\nOrganization: 5- website is organized well\r\nFooter: 5- Footer is attractive and has copyright
-48	2017-11-08 18:20:36.942636+00	37	adel4571	mont0846	Home\r\n\r\nIs the home page named correctly? MySite/index.hml\r\n-It looks like you don't have an index page.\r\nDoes it communicate the primary purpose of the site?\r\n-I can understand that the site is about dogs which is a great start!\r\nIs there an enticement to learn more?\r\n-Yes! The picture of the dog on the homepage makes me want to learn a little more.\r\nBanner\r\n\r\nDoes the banner have attractive artwork?\r\n-Yes\r\nIs the banner used on each page of the website?\r\n- No it is only on the main page\r\nIs a nice font used for the banner?\r\n-Yes\r\nLayout\r\n\r\nIs there good use of white space? margin/padding\r\n-Yes\r\nIs these some kind of multiple columns or sidebars?\r\n-Yes!\r\nIs every page consistent?\r\n-Not every page is consistent, the about us link does not want to work.\r\n\r\nPages\r\n\r\nAre there at least five pages?\r\n-Yes there is including the main page\r\nDo they have good names?\r\n-Yes, I understand what each page is about when I look at the names\r\nMenu\r\n\r\nIs there a main menu with at least four items?\r\n-Yes\r\nDo all links connect to a page?\r\n-yes, except for the about us link\r\nIs the menu present on each page?\r\n-No, it is only present on the home page.\r\n\r\nImages\r\n\r\nAre there attractive images on each page?\r\nyes, except for the about us link\r\nIs there attribution of the image owners?\r\n-make sure if it is not your image, give credit to who's it is. But if got it from free images, then you are good!\r\n\r\nDo the images enhance the theme of the website?\r\n-Yes, gives each page character\r\nGood use of color and fonts for visual appeal?\r\n-yes\r\nJavaScript\r\n\r\nIs there a fancy JavaScript control somewhere on the website?\r\n-Yes!\r\nDoes this control enhance the appeal of the website?\r\n-Yes!\r\n\r\nText\r\n\r\nDoes this website have a clear message?\r\nYes!\r\nIs writ with goodly grammar and spell?\r\nyes\r\nDoes the text grab your attention?\r\nyes\r\n\r\nOrganization\r\n\r\nIs the purpose of your site clear?\r\nyes\r\nIs the navigation path clear?\r\nyes\r\nDoes the organization of the site support your business goals?\r\nyes\r\nFooter\r\n\r\nIs there an attractive footer?\r\nyes\r\nDoes this site have a copyright notification?\r\nyes
-49	2017-11-08 18:30:25.591252+00	40	drur4653	mont0846	Home\r\n\r\nIs the home page named correctly? MySite/index.hml\r\n-yes, but has to rename it to index.html instead of page-1.html\r\nDoes it communicate the primary purpose of the site?\r\n-Yes!\r\nIs there an enticement to learn more?\r\n-Yes\r\nBanner\r\n\r\nDoes the banner have attractive artwork?\r\n-Yes\r\nIs the banner used on each page of the website?\r\n-it is not on every page\r\nIs a nice font used for the banner?\r\n-on the main page there is!\r\n\r\nLayout\r\n\r\nIs there good use of white space? margin/padding\r\n-Yes!\r\nIs these some kind of multiple columns or sidebars?\r\n-Yes!\r\nIs every page consistent?\r\n-No, maybe trying using the same template from the home page.\r\n\r\nPages\r\n\r\nAre there at least five pages?\r\n-yes!\r\nDo they have good names?\r\n-Yes!\r\n\r\nMenu\r\n\r\nIs there a main menu with at least four items?\r\n-Yes!\r\nDo all links connect to a page?\r\n-yes! great job!\r\nIs the menu present on each page?\r\n-yes\r\nImages\r\n\r\nAre there attractive images on each page?\r\n-you are missing two pictures\r\nIs there attribution of the image owners?\r\n-makes sure it you use someone else's picture, then give them credit. If not you good to go!\r\nDo the images enhance the theme of the website?\r\n-Yes\r\nGood use of color and fonts for visual appeal?\r\n-Yes\r\nJavaScript\r\n\r\nIs there a fancy JavaScript control somewhere on the website?\r\n-Yes\r\nDoes this control enhance the appeal of the website?\r\n-yes\r\n\r\nText\r\n\r\nDoes this website have a clear message?\r\n-yes\r\nIs writ with goodly grammar and spell?\r\n-yes\r\nDoes the text grab your attention?\r\n-yes\r\n\r\nOrganization\r\n\r\nIs the purpose of your site clear?\r\n-yes\r\nIs the navigation path clear?\r\n-yes\r\nDoes the organization of the site support your business goals?\r\n-yes\r\n\r\nFooter\r\n\r\nIs there an attractive footer?\r\nyes\r\nDoes this site have a copyright notification?\r\nyes
-58	2017-11-08 21:08:41.077865+00	44	here9018	shin8899	1.\tHome: 5/5\r\nHome page shows menu buttons, image, and banner.\r\n\r\n2.\tBanner: 5/5\r\nCool banner showing a logo, found on every page.\r\n\r\n3.\tLayout: 4/5\r\nLayout is good on every page. Only thing I would change is on the home page & center the menu buttons and maybe put a break in between the menu and picture on front. I like where the menu buttons are when you’re on a webpage deeper than the index.html.\r\n\r\n4.\tPages: 5/5\r\nFive pages all with images..\r\n\r\n5.\tMenu: 5/5\r\nAll link to correct page.\r\n\r\n6.\tImages: 5/5\r\nImages on every page, explained by text.\r\n\r\n7.\tJavaScript: 0/5\r\nNo JavaScript found.\r\n\r\n8.\tText: 5/5\r\nText on every page except best places, but that is self-explanatory.  \r\n\r\n9.\tOrganization: 5/5\r\nClear menu items that connect to correct pages.\r\n\r\n10.\tFooter: 5/5\r\nCopyright used on every page.
-70	2017-11-09 00:06:04.742156+00	40	harm4214	shie5673	Home - 5\r\nBanner - 1 Feature is missing\r\nLayout - 4 Lacks Consistency\r\nPages - 5\r\nMenu - 2 Menu not present on every page, broken links\r\nImages - 4 Pages missing images \r\nJavaScript - 5\r\nText – 4 Change text on Java\r\nOrganization - 5\r\nFooter – 5 \r\n\r\nThis is a great start to your website.  I would recommend fixing those broken links and developing a clearer vision of this website.  You might try standardizing the format you use for all pages to keep it consistent.  Looking forward to the completed product
-54	2017-11-08 19:35:16.951255+00	34	mont0846	drur4653	Director Mysite (with index.html): (1 point) From what I can see it looks like your index.html is the\r\nwebsite, rather than a directory to your website. To fix this make a page that has a link that directs\r\nus to your website.\r\n\r\nBanner with Title and Art:(1 Point) There wasn't a logo, so to make one by going off the directions from\r\nour exercise 12. This contains all the details on how to make the logo for your site.\r\n\r\nProfessional Page Layout(with semantic elements): (5 points) You did a good job using the elements. I saw\r\nthat you did use a few different ones. Nice job!\r\n\r\n5 pages: (5 points) You did have all 5 pages. Nice job!\r\nMain Menu for page navigation:(3 Points) The menu has a couple broken links. They don't all take us to\r\nthe page they're suppose to. Just fix it up a little bit and you should get 5/5 points!\r\n\r\nAt least one image per page:(3 Points) None of the pictures seem to be displaying correctly, but I see\r\nthat you did try to insert them. Just fix the coding to make them display correctly and you'll get 5/5.\r\n\r\nJavaScript Control (one of bxslider, tabs, accordion, calendar, etc.): (2 Points) I saw the slider on \r\nthe main menu, but that's the only one that was used throughout the pages. Try using accordions, tabs,\r\nor anything else you can think of on your other pages in order to get 5/5.\r\n\r\nFirst draft at text on each page: (4 Points) There was drafted text on each page, but on some of them\r\nthere was hardly any wording. Try expanding a little more on what you write on the page for 5/5 on it.\r\n\r\nClear content organization: (5 Points) The site was well organized. Nice job!\r\n\r\nCopyright in Footer: (5 Points) Site had a copyright footer. Nice Job!
-51	2017-11-08 18:54:13.856462+00	10	tutt7678	mont0846	Home\r\n\r\nIs the home page named correctly? MySite/index.hml\r\n-Yes!\r\nDoes it communicate the primary purpose of the site?\r\n-yes\r\nIs there an enticement to learn more?\r\n-yes\r\nBanner\r\n\r\nDoes the banner have attractive artwork?\r\n-yes\r\nIs the banner used on each page of the website?\r\n-yes\r\nIs a nice font used for the banner?\r\nyes\r\n\r\nLayout\r\n\r\nIs there good use of white space? margin/padding\r\n-yes\r\nIs these some kind of multiple columns or sidebars?\r\n-yes\r\nIs every page consistent?\r\n-yes\r\n\r\nPages\r\n\r\nAre there at least five pages?\r\n-yes\r\nDo they have good names?\r\n-yes\r\n\r\nMenu\r\n\r\nIs there a main menu with at least four items?\r\n-yes\r\nDo all links connect to a page?\r\n-yes\r\nIs the menu present on each page?\r\n-yes\r\n\r\nImages\r\n\r\nAre there attractive images on each page?\r\n-yes\r\nIs there attribution of the image owners?\r\n-If you do not own the images make sure to give credit, if got them from a website with free images, then you are good!\r\nDo the images enhance the theme of the website?\r\n-yes\r\nGood use of color and fonts for visual appeal?\r\n-yes\r\n\r\nJavaScript\r\n\r\nIs there a fancy JavaScript control somewhere on the website?\r\n-yes\r\nDoes this control enhance the appeal of the website?\r\n-yes\r\n\r\nText\r\n\r\nDoes this website have a clear message?\r\n-yes\r\nIs writ with goodly grammar and spell?\r\n-yes\r\nDoes the text grab your attention?\r\n-yes\r\n\r\nOrganization\r\n\r\nIs the purpose of your site clear?\r\n-yes\r\nIs the navigation path clear?\r\n-yes\r\nDoes the organization of the site support your business goals?\r\n-yes\r\n\r\nFooter\r\n\r\nIs there an attractive footer?\r\n-yes\r\nDoes this site have a copyright notification?\r\nyes\r\n\r\n\r\n\r\n\r\n\r\nCOULD NOT FIND WEBSITE
-55	2017-11-08 21:06:28.806686+00	38	casp2764	shin8899	1.\tHome: 4/5\r\nNot named MySite/index.html\r\n\r\n2.\tBanner: 0/5\r\nNo banner.\r\n\r\n3.\tLayout: 5/5\r\nEasy to see tabs, h1 and explanation of the site.\r\n\r\n4.\tPages: 5/5\r\nFive pages, all have text on them.\r\n\r\n5.\tMenu: 4/5\r\nMenu on pictures page & signup page doesn’t look the same. \r\n\r\n6.\tImages: 1/5\r\nThere’s only images on 1 page.\r\n\r\n7.\tJavaScript: 5/5\r\nNice visual under Pictures\r\n\r\n8.\tText: 5/5\r\nText on every page.\r\n\r\n9.\tOrganization: 5/5\r\nClear menu items that take you to the right place. \r\n\r\n10.\tFooter: 4/5\r\nUse &copy; to put the copyright symbol on each footer
-56	2017-11-08 21:07:24.758838+00	26	adam5160	moni2990	Home score: 3- The home page is not named correctly, but it does communicate the primary purpose of the site.\r\nBanner: 0- There is no banner\r\nLayout: 2- There are no columns or sidebars, not consistent throughout entire site\r\nPages: 4- There are 5 pages, but none of them are complete \r\nMenu: 2- There is no menu, but there are links\r\nImages: 2- There is an image on 2 of the 5 pages\r\nJavaScript: 0- There is no javascript\r\nText: 3- There is some text that conveys a clear meaning, but only on the main page\r\nOrganization: 5- Purpose of the site is clear, navigation is intuitive\r\nFooter: 5- There is a footer with copyright
-53	2017-11-08 19:34:11.63748+00	46	kaup6567	drur4653	Director Mysite (with index.html): (5 points) Your index had a directory to your webiste. Nicely done!\r\n\r\nBanner with Title and Art: (3 Points) Your logo didn't display correctly, but I did give 3 points since I can see you\r\ntried to get it to appear. Just make it display correctly for 5/5 points.\r\n\r\nProfessional Page Layout(with semantic elements): (5 Points) Great useage of the elements!\r\n\r\n \r\n5 pages: (5 Points) Contains all 5 pages. Well done!\r\n\r\nMain Menu for page navigation: (5 Points) Your main menu was well organized and all links worked. Nice job!\r\n\r\nAt least one image per page: (5 Points) Your site had at least 1 image per page. Well done!\r\n\r\nJavaScript Control (one of bxslider, tabs, accordion, calendar, etc.): (3 Points) The Main Menu looked perfect on this, \r\nbut the other pages didn't have any accordions, bxsliders, etc. Just try to insert some of those in your other pages for\r\na 5/5 on points.\r\n\r\nFirst draft at text on each page: (5 points)You did have first draft text on each page, but I'd\r\nbut I'd expand on the pages where you have the link to the website to purchase the tickets to as well. \r\nClear content organization: (5 points) Was very organized and easy to follow. Nicely done!\r\n\r\nCopyright in Footer: (5 points) Has the copyright footer. Perfect spot for it!
-60	2017-11-08 21:20:04.035441+00	47	herr9858	moni2990	Home: 4- Home page is named correctly, communicates primary purpose, but still needs more text and an image\r\nBanner: 5- Banner is used on every page, has nice font, and has attractive artwork\r\nLayout: 5- Good use of white space and good consistency throughout the site. I like how the background is shaded gray for this topic.\r\nPages: 4- There are 5 pages, I think the home page on the menu should just be called "Home" instead of "Back to Home"\r\nMenu: 5- All pages have working menu \r\nImages: 3- Still need an image on "home," "Future Eclipses", and "More Resources"\r\nJavaScript: 5- Good use of javascript\r\nText: 5- Website has clear message with good grammar\r\nOrganization: 5- website is organized well\r\nFooter: 5- Footer is attractive and has copyright
-61	2017-11-08 21:25:03.363652+00	0	stre7262	moni2990	There is currently no project in the directory for stre7262\r\nHome: 0- No home page\r\nBanner: 0- No banner\r\nLayout: 0- No layout\r\nPages: 0- No pages\r\nMenu: 0- No menu \r\nImages: 0- No images\r\nJavaScript: 0- No javascript\r\nText: 0- no text\r\nOrganization: 0- no organization\r\nFooter: 0- no footer                                                         \r\n                                                                              \r\n                                        \r\n                                        \r\n.
-62	2017-11-08 23:00:42.257961+00	46	enge7698	mull9451	1. Home= 5 stars\r\n2. Banner= 4 stars (no font)\r\n3. Layout= 5 stars\r\n4. Pages= 4 stars (could be simplified)\r\n5. Menu= 5 stars\r\n6. Images= 3 stars\r\n7. JavaScript= 5 stars\r\n8. Text= 5 stars\r\n9. Organization= 5 stars\r\n10. Footer= 5 stars\r\n\r\nThe banner itself is unclear. I can see that it is a golf hole, but there is no main header. The name of the pages on the menu bar could be simplified. Also they disappear when you click on one of the pages. It should always stay on the menu bar. The menu bar is supposed to be unchanging.
-63	2017-11-08 23:08:05.664774+00	39	kell7133	mull9451	1. Home= 5 stars\r\n2. Banner= 5 stars\r\n3. Layout= 4 stars (There is no clear design. The pictures are the same and not sized the same.)\r\n4. Pages=5 stars\r\n5. Menu=5 stars\r\n6. Images=4 stars (The images are all sized differently so it throws off the layout a little bit. The dog is cute, but why is it there?)\r\n7. JavaScript= 0 stars (There is no JavaScript control used)\r\n8. Text= 3 stars. (There is not content on every page)\r\n9. Organization= 4 stars (The purpose of the site is not clear)\r\n10. Footer= 4 stars (The footer is not on every page.
-64	2017-11-08 23:14:56.054219+00	38	kaup6567	adel4571	Home: 2\r\n-Not a very clear message of what the website's purpose is\r\n-Maybe add a home page saying "this is a travel agency" etc to give the viewers a better idea/preview\r\n\r\nBanner: 1\r\n-Add a Banner\r\n\r\nLayout: 4\r\n-I would make the steamboat picture bigger so it occupies more space on the page, eliminating some of the white space. This way, it looks like the other pages with the big pictures\r\n\r\nPages: 4\r\n-I would add a home page stating it is a travel agency or present a clear purpose for what the website is to do.\r\n\r\nMenu: 3\r\n-Add the menu or a home tab to the linked pages so the user of the website doesn't have to hit the back arrow each time they wan't to get to the main page\r\n\r\nImages: 5\r\n\r\nJavascript: 5\r\n\r\nText: 5\r\n\r\nOrganization: 4\r\n-Create a clearer website goal\r\n\r\nFooter: 5
-65	2017-11-08 23:21:00.951145+00	39	mont0846	adel4571	Home: 4\r\n-Add a little more text to state what the website or business is about and what it is offering to the users who visit.\r\n\r\nBanner: 1\r\n-Add a banner to the home page and each of the pages\r\n\r\nLayout: 4\r\n-There's a lot of white space on the home page. Maybe add a picture and text to make it more full and occupy the space.\r\n\r\nPages: 5\r\n\r\nMenu: 5\r\n\r\nImages: 4\r\n-Add a bigger image to the home page, perhaps one that could eliminate some of the white space.\r\n\r\nJavascript: 3\r\n-Images don't appear on the carousel on oyur home page. It just shows a spinning , loading symbol.\r\n\r\nText: 4\r\n-About is spelled wrong on the menu bar on the other pages. I think it is spelled "Ahout" (unless it's just blended into the banner then ignore)\r\n\r\nOrganization: 4\r\n-I would add a purpose statement of the business to the home page to give the visitors a better idea of what they will be viewing. \r\n\r\nFooter: 5
-67	2017-11-08 23:50:08.125593+00	34	carl2159	pani2679	There were no images if you add an image or two on each page it will look nicer. There was no banner so the website felt a little disconnected to me. menu is good but I believe it was a little small so took me some time to find it If you make it bigger and pop out more I feel like your site will improve. All of your pages have a little text on them but do not quite explain what your site is about so you will need to add detail in your text. You can also try adding more drop down menus to make the site look more professional and standout more.
-69	2017-11-08 23:59:37.814288+00	29	feas4242	pani2679	You have a good start to your page however I feel that it is very bland. The only page with an image besides your banner is your image carousel so if you add more images through out the site it will help you improve. Another thing is that most if not all of your pages have a lot of blank space so if you fill up that empty space that would help a lot. You should also add the trademark onto every page and center it at the bottom of each page. On your home page you should add some text to tell the viewers what your page is about. you should also just add text in some way on every page to guide people through your site more effectively and efficiently.
-72	2017-11-09 00:12:51.254514+00	10	stre7262	cutl7614	Home - Score: 1\r\n- No website homepage.\r\n\r\nBanner - Score: 1\r\n- No website, so no banner.\r\n\r\nLayout - Score: 1\r\n- No website, so no layout to grade.\r\n\r\nPages - Score: 1\r\n- No website, so no pages.\r\n\r\nMenu - Score: 1\r\n- No website, so no menu.\r\n\r\nImages - Score: 1\r\n- No website, so noimages.\r\n\r\nJavaScript - Score: 1\r\n- No website, so no JavaScript elements.\r\n\r\nText - Score: 1\r\n- No website, so no text to read.\r\n\r\nOrganization - Score: 1\r\n- No website, so no organization to grade.\r\n\r\nFooter - Score: 1\r\n- No website, so no footer.
-73	2017-11-09 00:13:12.825854+00	48	mate2933	shie5673	Home – 5 \r\nBanner – 4 Develop a Banner for all pages of website \r\nLayout – 5 \r\nPages – 5 \r\nMenu – 4 Menu needs to be on all pages\r\nImages – 5 \r\nJavaScript – 5 \r\nText – 5 \r\nOrganization – 5 \r\nFooter – 5 \r\n \r\nI really like your site and I think there are only a few, simple fixes that would complete it.  I think you need to make the menu appear across all of the pages for easier navigation, and developing a banner across all pages will give the website some consistency.  I also really like the topic that you chose.  Great Job!
-75	2017-11-09 00:38:08.534164+00	49	moni2990	cutl7614	1. Home - Score: 5\r\n- Nice home page!\r\n\r\n2. Banner - Score: 5\r\n- I appreciate that you made the color of the banner font red to match the hiker's jacket, but the "United States" part of your heading is a bit hard to read. Maybe consider using a bolder font, or find a way to outline the letters in white? \r\n\r\n3. Layout - Score: 4\r\n- Nice layout! The only critique is that the layout of the "Popular Trails" page isn't consistent with the other four - its border makes the margins different from that of the other pages.\r\n\r\n4. Pages - Score: 5\r\n\r\n5. Menu - Score: 5\r\n- Thank you for including a home page tab! Menu is there and all links work, so you're all good.\r\n\r\n6. Images - Score: 5\r\n- Very pretty pictures! Just keep in mind that you should credit any images that you didn't  find from an open source website\r\n\r\n7. JavaScript - Score: 5\r\n\r\n8. Text - Score: 5\r\n- Very interesting topic! Your tone is friendly and passionate, and it definitely makes the reader comfortable and excited to learn more. ^^\r\n\r\n9. Organization - Score: 5\r\n\r\n10. Footer - Score: 5\r\n\r\n- Great job dude! Can't wait to see it more fleshed-out, and maybe with some flashier fonts/layout elements. It already looks very professional.
-76	2017-11-09 00:43:46.068789+00	25	moni2990	adam5160	Home: 2.5stars; \r\nBanner: 2.5 stars; \r\nLayout:2.5stars; \r\nPages: 2.5 stars; \r\nMenu:2.5 stars; \r\nImages:2.5 stars;  \r\nJavaScript:2.5 stars; \r\nText:2.5 stars; \r\nOrganization:2.5 stars; \r\nFooter:2.5 stars; \r\n\r\nI could not get access to your page at all, so i wasn't sure what to grade. I bet it was a well developed web site. Hopefully I can look a it another time. \r\n\r\nGoing off the professors grading I am giving you 50% for now. However, it is my understanding that we can update the grade as we are going along.
-77	2017-11-09 01:21:43.101858+00	45	feas4242	carl2159	Need pictures for pages...................................................\r\n\r\n\r\nAdd design to pages............................................................\r\n\r\n\r\nMain  page link does not exist on the email list page.......................... \r\n\r\n\r\nNo redirect to go back to the main page........................................ \r\n\r\n\r\nMain page seems to have some thought...........................................\r\n\r\n\r\nWhile the rest of the pages look like they could use some attention to detail..\r\n\r\n\r\nOverall the website includes most of requirements but could use work...........
-78	2017-11-09 01:28:25.959568+00	35	lous9442	carl2159	Need Website and pictures for pages.............................................\r\n\r\n\r\nAll pages have design............................................................\r\n\r\n\r\nMain  page link does not exist on pages......................................... \r\n\r\n\r\nNo redirect to go back to the main page........................................ \r\n\r\n\r\nMain page is our class exercise page.............................................\r\n\r\n\r\nNeed to design a mysite webpage..................................................\r\n\r\n\r\nNeed to add mysiteindex.......................................................
-79	2017-11-09 01:35:41.548353+00	45	pani2679	carl2159	Pictures for pages are perfect.............................................\r\n\r\n\r\nPages could use some form of text................................................\r\n\r\n\r\nAll pages have design............................................................ \r\n\r\n\r\nMain page has great layout.....................................................\r\n\r\n\r\nHaving a link from the class exercise page is a plus............................\r\n\r\n\r\nAdd a title or detail on what the site is about................................
-98	2017-11-09 18:33:49.194552+00	25	stre7262	adam5160	Home: 2.5stars; \r\nBanner: 2.5 stars; \r\nLayout:2.5stars; \r\nPages: 2.5 stars; \r\nMenu:2.5 stars; \r\nImages:2.5 stars;  \r\nJavaScript:2.5 stars; \r\nText:2.5 stars; \r\nOrganization:2.5 stars; \r\nFooter:2.5 stars; \r\n\r\nI could not get access to your page at all, so i wasn't sure what to grade. I bet it was a well developed web site. Hopefully I can look a it another time. \r\n\r\nGoing off the professors grading I am giving you 50% for now. However, it is my understanding that we can update the grade as we are going along.
-66	2017-11-08 23:33:18.465355+00	1	tutt7678	adel4571	Cannot find website anywhere, including in the file directory.\r\n………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..………………………………..................................................................................................................................................................\r\n'
-83	2017-11-09 02:12:39.035047+00	48	moni2990	herr9858	5 Index/Home Page - Looks good, a light background color can add a lot to your page though. The subscription box is very nice.\r\n5 Banner - Banner is ok, if you could redesign it at a larger resolution, and center it I think it would look much better.\r\n5 Layout - Basic layout that is easy to follow, good work.\r\n5 Pages - All five pages are present and return no errors.\r\n5 Menu - Menu is good, I would prefer it centered and under the banner, but that's just personal preference. All links function and return no errors.\r\n5 Images - All the Images are there, I'm having the same issue on my image carousel with the weird pause and play buttons, I've narrowed it down to some weirdness with the margin and padding settings, try messing with those to fix that problem. \r\n5 JavaScript - Implementation of javascript is done well, it'd be nice if there was more implementation, like a table, or some accordion tabs. \r\n4 Text - For the most part the text is satisfactory, the Hiking records page could use a little more.\r\n5 Organization - Very organized, navigation is clear and easy.\r\n4 Footer - Footer is on every page but is not centered.
-84	2017-11-09 02:22:45.83306+00	10	espi0784	butl5737	There does not appear to be any content on the website. All I can see is a page that says "My sites" with three hyperlinks that do not work.\r\n\r\nHome\r\nnot much content\r\n1 out of 5\r\n\r\nBanner\r\nno banner 1/5\r\n\r\nLayout\r\nthe layout is consistent 2/5\r\n\r\nPages\r\nthere are three pages but with broken links\r\n2/5\r\n\r\nMenu\r\nmain menu but not much else\r\n1/5\r\n\r\nImages\r\nno images provided\r\n1/5\r\n\r\nJavascript\r\nno javascript used\r\n1/5\r\n\r\ntext\r\ntext is very limited\r\n1/5\r\n\r\norganization\r\nthere appears to be a small attempt at organization\r\n1/5\r\n\r\nfooter\r\nno footer\r\n1/5
-86	2017-11-09 03:03:51.063192+00	12	hern6661	milt0773	Home 2/5\r\ndoesn't direct me to an homepage\r\nBanner 1/5 \r\nI don't see any banner try and fix the link you have\r\nLayout 1/5\r\ndoesn't look like a clear lay out \r\nPages 1/5\r\nI only seen one page other links didn't work fix the links to other pages\r\nMenu 2/5\r\nmenu is there but doesn't go any where fix the links \r\nImages 1/5\r\nno images\r\nJavaScript 1/5\r\nno visible JavaScript\r\nText 1/5\r\nno text found\r\nOrganization 1/5\r\nno real organization add some organiztion\r\nFooter 1/5\r\nno footer was found add content
-87	2017-11-09 03:20:27.813583+00	30	cruz3674	milt0773	Home 5/5\r\nhome is there just tune up some of the aesthetic side \r\nBanner 3/5\r\nbanner need to be shrunk it's way too big  \r\nLayout 3/5\r\ngood layout clear an organized\r\nPages 2/5\r\npages don't go anywhere fix how you linked the pages \r\nMenu 3/5\r\nclear menu and helpful but doesn't go anywhere after you click the link, fix how you coded the link\r\nImages\r\n3/5 more images are needed\r\nJavaScript 1/5\r\nno JavaScript found add some in \r\nText 2/5\r\nnot a lot of content yet\r\nOrganization 4/5\r\nvery organized clear\r\nFooter 5/5\r\nfooter is there and clear
-21	2017-11-08 16:47:06.348735+00	41	harm4214	carr4666	HARM4214                                                          \r\nHome-5(good but make sure there is a mysite folder)\r\nBanner-4(not on every page)\r\nLayout-3(White spacinging needs some work since everything is crapmt together)\r\nPages-3(not five Pages ready to launch add them)\r\nMenu-3(Not all links have a pgae)\r\nImages-4(Attribution to owners and not on every page)\r\nJava-5(Put into website)\r\ntext-5(Great)\r\nOrganize-4(But main menu at the top of the page or to the left so it is easy to find)\r\nFooter-5(Good)\r\nTotal-41\r\n-Matthew Carranza
-85	2017-11-09 02:41:34.013546+00	10	simo8137	milt0773	Home 1/5\r\nThere's no content to be found\r\nadd content\r\nBanner 1/5\r\nThere's no content to be found\r\nadd content\r\nLayout 1/5\r\nThere's no content to be found\r\nadd content\r\nPages 1/5\r\nThere's no content to be found\r\nadd content\r\nMenu 1/5\r\nThere's no content to be found\r\nadd content\r\nImages 1/5\r\nThere's no content to be found\r\nadd content\r\nJavaScript 1/5\r\nThere's no content to be found\r\nadd content\r\nText 1/5\r\nThere's no content to be found\r\nadd content\r\nOrganization 1/5\r\nThere's no content to be found\r\nadd content \r\nFooter 1/5\r\nThere's no content to be found\r\nadd content
-91	2017-11-09 04:30:45.849115+00	20	lous9442	feas4242	Home-2\r\nYou have a homepage with your name on it, is working properly, and showing what is on it. But it is not exactly what the assignment asked for.\r\n\r\nBanner-3\r\nYou have a nice banner\r\n\r\nLayout-2\r\neverything is just on the left side, could use more of your space on the page\r\n\r\nPages-1\r\nYou only have 1 page :(\r\n\r\nMenu-2\r\nYou have a menu for all the exercises needed in class but not the pages needed for the assignment\r\n\r\nImages-1\r\nNo images :(\r\n\r\nJavaScript-2\r\nYou did the javascript assignments but did not make another one for this assignment\r\n\r\nText-2\r\nThere is text on your page telling us what it is about, but not with the assignment\r\n\r\nOrganization-4\r\nYour page is organized well\r\n\r\nFooter-1\r\nNo footer
-92	2017-11-09 06:07:31.664502+00	38	adel4571	tutt7678	Home 4\r\n\t•\tIs the home page named correctly? MySite/index.hml\r\n\t•\tWhen first entering adel4571’s website, I was greeted with a great picture of a Golden Retriever. The homepage was properly named, due to the fact that I typed in “bacs200.unco.edu/adel4571/mysite” and the I was able to successfully reach the homepage of her website. \r\n\t•\tDoes it communicate the primary purpose of the site?\r\n\t•\tYes, adel4571’s website, properly communicates the primary purpose of the site because I was able to identify that her company “Happy Paws”, was a place that would board, and take care of your dog, or other “furry friend”, while you were out of town.\r\n\t•\tIs there an enticement to learn more?\r\n\t•\tYes, I feel there was a strong enticement to learn more about adel4571’s company through her greeting that was given on the main homepage.\r\nBanner 1\r\n\t•\tDoes the banner have attractive artwork?\r\n\t•\tIf you count the Navigation bar as the banner, then no there is no artwork, but it is nice to have this navigation option at the top.\r\n\t•\tIs the banner used on each page of the website?\r\n\t•\tNo the banner was not on every page of the website\r\n\t•\tIs a nice font used for the banner? The banner is not necessarily used in within this website, but definitely has the potential to placed, perhaps above the navigation bar, and would go along really good with the flow of the page.\r\nLayout 4\r\n\t•\tIs there good use of white space? margin/padding\r\n\t•\tYes, there is good margin and padding within the website, that allows for good whitespace for the user, but some padding could be added to make the spaces between certain content easier to read through.\r\n\t•\tIs these some kind of multiple columns or sidebars? Yes, there is a great use of sidebars, and columns within the webpage which definitely makes it nice to view, and search through. I would just suggest that some of the other pages would have this same column structure implemented in order to have consistency throughout the website. But overall the homepage is great.\r\n\t•\tIs every page consistent? Yes, each web page is consistent, but a suggestion would be to try and implement the navigation bar on all five of the pages, so that would help the flow of the website when clicking on the different web pages from the homepage.\r\nPages 4\r\n\t•\tAre there at least five pages? Yes there are at least 5 pages that are all easily accessible from the navigation bar at the top of the homepage.\r\n\t•\tDo they have good names? Yes, each of the 5 pages have good, concrete, names, that help the user find out more about the Happy Paws company very fast.\r\nMenu 4\r\n\t•\tIs there a main menu with at least four items? Yes, the main menu has 5 items which is located at the top of the page making it very easy to access, and view from the homepage.\r\n\t•\tDo all links connect to a page? Yes, this was very good how all of the links for each of the main menu items connected properly to the pages that they were meant to connect to.\r\n\t•\tIs the menu present on each page? Not on every page, but I feel like this addition would provide more consistency to the website as a whole, and would make navigating through it, more user friendly. But how it is laid out on the top of the homepage is great.\r\nImages 4\r\n\t•\tAre there attractive images on each page? Yes, there are great images throughout the website, that also stick to the theme of the Happy Paws company.\r\n\t•\tIs there attribution of the image owners? No, but I feel as though most of these images were taken from a free image website.\r\n\t•\tDo the images enhance the theme of the website? Yes, the homepage, along with other pages within the website are greatly enhanced by the images that were chosen.\r\n\t•\tGood use of color and fonts for visual appeal? It has a good visual appeal with the way the homepage is set up, but it would be nice to see more consistency within the other pages with a similar format.\r\nJavaScript 5\r\n\t•\tIs there a fancy JavaScript control somewhere on the website? Yes, with both an image carousel, and drop down tabs, there is great implementation of Javascript within this website.\r\n\t•\tDoes this control enhance the appeal of the website? Yes, the implementations of this JavaScript definitely helps enhance the overall appeal of the website.\r\nText 5\r\n\t•\tDoes this website have a clear message? Yes, the text has a great message that offers insight as to pricing, and services, that one would want to know when sending their dog, or pet to Happy Paws.\r\n\t•\tIs writ with goodly grammar and spell? Yes, the grammar, and spelling throughout the website is very good.\r\n\t•\tDoes the text grab your attention? Yes, the text definitely grabs your attention, but maybe if there was some variation in the color of some of the texts this would help with the overall visuals.\r\nOrganization 5\r\n\t•\tIs the purpose of your site clear? Yes, the purpose of the site is very clear, and well discussed throughout the pages within the website.\r\n\t•\tIs the navigation path clear? Yes, the navigation at the top of the web page offers a clear path for the user, and would definitely be nice if this feature was on each of the five web pages in order to return back and forth from page to page\r\n\t•\tDoes the organization of the site support your business goals? Yes, the overall organization of the website offers a clear mission statement that the company wants to offer to its customers, and their pets.\r\nFooter 5\r\n\t•\tIs there an attractive footer? Yes, there is a footer with a copyright logo for Happy Paws within the site.\r\n\t•\tDoes this site have a copyright notification? Yes, there is a proper copyright logo for the Happy Paws Company
-93	2017-11-09 06:13:37.214862+00	25	mont0846	tutt7678	This website needs a lot of work in order to get all of the links working properly and the image carousel to work properly. But I feel that if this is done properly then there will be a great website. I also think that if you were to throw in a good style sheet that this would also help. But if you are able to get the css style sheets, along with the links working from the main page, it should work out good. Overall though the main page does have all of the criteria that you need in order to navigate to the other pages properly.
-94	2017-11-09 06:18:49.265982+00	40	kaup6567	tutt7678	I thought this website was done very good, and the layout was also very good. I really liked how at the end of the site navigation, you were linked to trip advisor, in order to book your trip. I also liked how the images within the site were very visually appealing, and you had a great use of columns and sidebars. I think that you could also improve this site with a css style sheet for the project in order to give it a nice background for some of the pages. I really like how easy it was to navigate through the site, and you were able to implement all of the features that were necessary for the website features. I only noticed that a couple images did not show up, but that can be easily fixed. But overall very good!
-95	2017-11-09 06:23:33.262703+00	45	drur4653	tutt7678	Wow, I was definitely impressed with this whole website, and you were able to implement a large amount of website features throughout the entire site. I really liked how you even had a lot of text for all the pages that were really good at telling the user all about the company Drury, Inc. I think all of the content was done really strongly, and it shows that you spent a lot of time and effort making this site really good. I enjoyed navigating through it, and feel that you made a really good use of sidebars, and columns, and styles within the website that made the overall experience for user very informative and easy to use. Great Job Man!
-96	2017-11-09 06:30:35.24878+00	26	mont0846	kaup6567	Home 5/5\r\nBanner 1/5\r\nLayout 3/5\r\nPages 2/5\r\nMenu 2/5\r\nImages 1/5\r\nJavaScript 3/5\r\nText 1/5\r\nOrganization 3/5\r\nFooter 5/5\r\n\r\nBanner\r\n\r\nDoes the banner have attractive artwork? No banner is attached.\r\nIs the banner used on each page of the website? No banner is attached.\r\nIs a nice font used for the banner? No banner is attached.\r\n\r\n*there doesn't seem to be any link to a banner in your code. Once created, treat it like an image when uploading it to the FTP and using command in codes.\r\n\r\nLayout\r\n\r\nIs there good use of white space? there may be too much white space, but may be resolved once image carousel is working?\r\nIs these some kind of multiple columns or sidebars? Menu option, but pages are not accessible\r\nIs every page consistent? N/A because pages are not loading\r\n\r\n*tip: check that all of your images/pages are properly uploaded into the FTP server\r\n\r\nPages\r\n\r\nAre there at least five pages? Yes, but when attempting to access they give a 404 error. \r\nDo they have good names? Yes, but I cannot see the content.\r\n*tip: check that they are uploaded properly into FTP\r\n\r\nMenu\r\n\r\nIs there a main menu with at least four items? Yes, but it does not access anything.\r\nDo all links connect to a page? No\r\nIs the menu present on each page? N/A\r\n\r\n*See previous recommendations\r\n\r\nImages\r\n\r\nAre there attractive images on each page? Images do not load\r\nIs there attribution of the image owners? N/A\r\nDo the images enhance the theme of the website? N/A\r\nGood use of color and fonts for visual appeal? N/A\r\n\r\n*See previous recommendations\r\n\r\nJavaScript\r\n\r\nIs there a fancy JavaScript control somewhere on the website? Yes, but not operational\r\nDoes this control enhance the appeal of the website? N/A\r\n\r\n*See previous recommendations\r\n\r\nText\r\n\r\nDoes this website have a clear message? It is going in the right direction.\r\nIs writ with goodly grammar and spell? N/A\r\nDoes the text grab your attention?N/A\r\n\r\n*See previous recommendations\r\n\r\nOrganization\r\n\r\nIs the purpose of your site clear? Yes\r\nIs the navigation path clear? No\r\nDoes the organization of the site support your business goals? Once operational I believe it will.\r\n\r\n*See previous recommendations
-97	2017-11-09 06:40:24.735431+00	50	tutt7678	kaup6567	Home 5/5\r\nBanner 5/5\r\nLayout 5/5\r\nPages 5/5\r\nMenu 5/5\r\nImages 5/5\r\nJavaScript 5/5\r\nText 5/5\r\nOrganization 5/5\r\nFooter 5/5\r\n\r\nFooter\r\n\r\nIs there an attractive footer? Yes\r\nDoes this site have a copyright notification? No\r\n\r\n*Tip: Put the copyright symbol in\r\n---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-88	2017-11-09 03:47:24.301425+00	49	here9018	mena7788	Awesome page. Best one yet. Good job. - there is a few typos in your body though. \r\n\r\nHome\r\n\r\n· Is the home page named correctly? MySite/index.hml\r\n\r\n· Does it communicate the primary purpose of the site?\r\n\r\n· Is there an enticement to learn more?\r\n\r\nBanner\r\n\r\n· Does the banner have attractive artwork?\r\n\r\n· Is the banner used on each page of the website?\r\n\r\n· Is a nice font used for the banner?\r\n\r\nLayout\r\n\r\n· Is there good use of white space? margin/padding\r\n\r\n· Is these some kind of multiple columns or sidebars?\r\n\r\n· Is every page consistent?\r\n\r\nPages\r\n\r\n· Are there at least five pages?\r\n\r\n· Do they have good names?\r\n\r\nMenu\r\n\r\n· Is there a main menu with at least four items?\r\n\r\n· Do all links connect to a page?\r\n\r\n· Is the menu present on each page?\r\n\r\nImages\r\n\r\n· Are there attractive images on each page?\r\n\r\n· Is there attribution of the image owners?\r\n\r\n· Do the images enhance the theme of the website?\r\n\r\n· Good use of color and fonts for visual appeal?\r\n\r\nJavaScript\r\n\r\n· Is there a fancy JavaScript control somewhere on the website?\r\n\r\n· Does this control enhance the appeal of the website?\r\n\r\nText\r\n\r\n· Does this website have a clear message?\r\n\r\n· Is writ with goodly grammar and spell?\r\n\r\n· Does the text grab your attention?\r\n\r\nOrganization\r\n\r\n· Is the purpose of your site clear?\r\n\r\n· Is the navigation path clear?\r\n\r\n· Does the organization of the site support your business goals?\r\n\r\nFooter\r\n\r\n· Is there an attractive footer?\r\n\r\n· Does this site have a copyright notification?
-89	2017-11-09 03:49:40.116483+00	49	shin8899	mena7788	Good job!  - work on showing primary purpose on the home page\r\nHome\r\n\r\n· Is the home page named correctly? MySite/index.hml\r\n\r\n· Does it communicate the primary purpose of the site?\r\n\r\n· Is there an enticement to learn more?\r\n\r\nBanner\r\n\r\n· Does the banner have attractive artwork?\r\n\r\n· Is the banner used on each page of the website?\r\n\r\n· Is a nice font used for the banner?\r\n\r\nLayout\r\n\r\n· Is there good use of white space? margin/padding\r\n\r\n· Is these some kind of multiple columns or sidebars?\r\n\r\n· Is every page consistent?\r\n\r\nPages\r\n\r\n· Are there at least five pages?\r\n\r\n· Do they have good names?\r\n\r\nMenu\r\n\r\n· Is there a main menu with at least four items?\r\n\r\n· Do all links connect to a page?\r\n\r\n· Is the menu present on each page?\r\n\r\nImages\r\n\r\n· Are there attractive images on each page?\r\n\r\n· Is there attribution of the image owners?\r\n\r\n· Do the images enhance the theme of the website?\r\n\r\n· Good use of color and fonts for visual appeal?\r\n\r\nJavaScript\r\n\r\n· Is there a fancy JavaScript control somewhere on the website?\r\n\r\n· Does this control enhance the appeal of the website?\r\n\r\nText\r\n\r\n· Does this website have a clear message?\r\n\r\n· Is writ with goodly grammar and spell?\r\n\r\n· Does the text grab your attention?\r\n\r\nOrganization\r\n\r\n· Is the purpose of your site clear?\r\n\r\n· Is the navigation path clear?\r\n\r\n· Does the organization of the site support your business goals?\r\n\r\nFooter\r\n\r\n· Is there an attractive footer?\r\n\r\n· Does this site have a copyright notification?
-52	2017-11-08 19:32:55.80115+00	40	adel4571	drur4653	Director Mysite (with index.html): (1 point). To fix it, you need to create the index.html that has a link in the page, \r\nwhere we click on a link that takes us to your website. It should contain maybe a pic of yourself, your exercises, and a \r\ntitle.\r\n\r\nBanner with Title and Art: (5 points). The banner displayed with a title. Awesome job.\r\n\r\nProfessional Page Layout(with semantic elements): (5 Points) You had good formatting on your pages.\r\n\r\n5 pages: (4 points) I could only find 4 pages on this in your MySite folder. You just need 1 more completed page.\r\n\r\nMain Menu for page navigation: (4 point) You do have a completed main page, but the Home link doesn't work. You just need \r\nto go through and try and fix the code so the links to the pages work correctly.\r\n\r\nAt least one image per page: (5 Points) You had at least one image or more per page. Awesome job.\r\n\r\nJavaScript Control (one of bxslider, tabs, accordion, calendar, etc.): (3 Points) You did a good job for most of the pages,\r\nbut your Staff page and About Us page could use a little more javascript tools.\r\n \r\nFirst draft at text on each page: (4 Points) You did have draft text on every page, however I only found 4/5 pages. You\r\njust need that 5th page with drafted text and you'll get all 5 points!\r\n\r\nClear content organization: (4 points) The website was organized pretty well, but you just need that Home page to work\r\non the website and youll have all 5 points.\r\n\r\nCopyright in Footer: (5 Points) You had a footer for copyright. Perfect!
-90	2017-11-09 04:00:30.771369+00	10	tutt7678	drur4653	Director Mysite (with index.html): (1 point) There's no website directory. Create a URL\r\nthat can get take us to your website.\r\n\r\nBanner with Title and Art:(1 point) There's no banner or logo displayed. Create a logo\r\nusing instructions from exercise 12, then save it and add it to your website.\r\n\r\nProfessional Page Layout(with semantic elements): (1 point) There's no semantic elements displayed.\r\nThrow in elements like <div> or <header> to start, and expand on it a bit.\r\n\r\n5 pages: (1 point) No pages created. Just need to work on the project and create pages.\r\n\r\nMain Menu for page navigation: (1 point) There's no main menu. Create a main menu with\r\nlinks that direct us to your other pages.\r\n\r\nAt least one image per page:(1 point) No images. Be sure to place at least one image\r\non each of your pages. Be sure to have it display correctly as well.\r\n\r\nJavaScript Control (one of bxslider, tabs, accordion, calendar, etc.): (1 point)\r\nNo javascript control usage. Try to be as creative as possible and use things like bxslider,\r\ncalendar, accordion, etc. to make your site look as professional as possible.\r\n\r\nFirst draft at text on each page:(1 point) No text on any pages. Needs to contain\r\nsome sort of explanation for some page, or just talk about what each page is about.\r\n\r\nClear content organization:(1 point) No content displayed. Try to make your content\r\nas clear and organized as possible in order to keep the viewer interested and stress free.\r\n\r\nCopyright in Footer: (1 point) No footer. Be sure to add footer in to your website\r\nin order to show copyrights.
-1	2017-11-07 18:34:15.53108+00	50	seam	seam	# Review Checklist\r\n\r\nScore each website based on the quality of the features\r\n\r\n1. Home\r\n2. Banner\r\n3. Layout\r\n4. Pages\r\n5. Menu\r\n6. Images\r\n7. JavaScript\r\n8. Text\r\n9. Organization\r\n10. Footer\r\n\r\n\r\nScore (Stars)\r\n\r\n1. Feature is missing\r\n2. Feature is work working properly\r\n3. Feature has problems\r\n4. Some improvements required\r\n5. No further work is needed\r\n\r\n\r\n## Website Features\r\n\r\nHome\r\n\r\n* Is the home page named correctly?   MySite/index.hml\r\n* Does it communicate the primary purpose of the site?\r\n* Is there an enticement to learn more?\r\n\r\nBanner\r\n\r\n* Does the banner have attractive artwork?\r\n* Is the banner used on each page of the website?\r\n* Is a nice font used for the banner?\r\n\r\nLayout\r\n\r\n* Is there good use of white space? margin/padding\r\n* Is these some kind of multiple columns or sidebars?\r\n* Is every page consistent?\r\n\r\nPages\r\n\r\n* Are there at least five pages?\r\n* Do they have good names?\r\n\r\nMenu\r\n\r\n* Is there a main menu with at least four items?\r\n* Do all links connect to a page?\r\n* Is the menu present on each page?\r\n\r\nImages\r\n\r\n* Are there attractive images on each page?\r\n* Is there attribution of the image owners?\r\n* Do the images enhance the theme of the website?\r\n* Good use of color and fonts for visual appeal?\r\n\r\nJavaScript\r\n\r\n* Is there a fancy JavaScript control somewhere on the website?\r\n* Does this control enhance the appeal of the website?\r\n\r\nText\r\n\r\n* Does this website have a clear message?\r\n* Is writ with goodly grammar and spell?\r\n* Does the text grab your attention?\r\n\r\nOrganization\r\n\r\n* Is the purpose of your site clear?\r\n* Is the navigation path clear?\r\n* Does the organization of the site support your business goals?\r\n\r\nFooter\r\n\r\n* Is there an attractive footer?\r\n* Does this site have a copyright notification?
-22	2017-11-08 16:47:51.625257+00	37	cruz3674	hern6661	Home-4                Banner-3                 Layout-3                 Pages-4              Menu-3 Images-4         JavaScript-2       Text-4        Organization-5          Footer-5 \r\n\r\nHome- 4\r\n\r\nIs the home page named correctly? MySite/index.hml\r\nI don't think you have an index page, but thats an easy fix! Let me know if you need help. \r\nDoes it communicate the primary purpose of the site?\r\nYes, it's a personal blog :)\r\nIs there an enticement to learn more?\r\nYes, I personally enjoy blogs, so i look forward to seeing how you update this. :)\r\nBanner- 3\r\n\r\nDoes the banner have attractive artwork?\r\nTry adding colors or more artwork. :)\r\nIs the banner used on each page of the website?\r\nNot sure if your banner is the view of the city \r\nIs a nice font used for the banner?\r\nEasy to read but very basic, would recommend using a different font.\r\nLayout- 3\r\n\r\nIs there good use of white space? margin/padding\r\nToo much white space\r\nIs these some kind of multiple columns or sidebars?\r\nYes you have a top menu, but on the rest of the sites there is no columns, side bars, or top menu.\r\nIs every page consistent?\r\nYes, however there is no content except a picture in your other 4 forms. \r\nPages- 4 \r\n\r\nAre there at least five pages?\r\nYes\r\nDo they have good names?\r\nYes, capitalize "travel"\r\nMenu- 3\r\n\r\nIs there a main menu with at least four items?\r\nYes :)\r\nDo all links connect to a page?\r\nYes except home.\r\nIs the menu present on each page?\r\nno. :(\r\nImages- 4 \r\n\r\nAre there attractive images on each page?\r\nSame image on each page\r\nIs there attribution of the image owners?\r\nNo, not sure how we are supposed to do this though\r\nDo the images enhance the theme of the website?\r\nYes, but need different images\r\nGood use of color and fonts for visual appeal?\r\nHaven't added different colors or fonts\r\nJavaScript- 2\r\n\r\nIs there a fancy JavaScript control somewhere on the website?\r\nNo\r\nDoes this control enhance the appeal of the website?\r\nNo\r\nText-4\r\n\r\nDoes this website have a clear message?\r\nYes\r\nIs it written with good grammar and spelling?\r\nYes\r\nDoes the text grab your attention?\r\nYes, but pretty empty\r\nOrganization- 5\r\n\r\nIs the purpose of your site clear?\r\nYes\r\nIs the navigation path clear?\r\nYes\r\nDoes the organization of the site support your business goals?\r\nyes\r\nFooter- 5\r\n\r\nIs there an attractive footer?\r\nYes\r\nDoes this site have a copyright notification?\r\nYes
-28	2017-11-08 16:54:19.512338+00	45	harm4214	mate2933	•\tDoes the banner have attractive artwork?\r\no\tI am not sure if your banner is the image of the “open” sign, but if it is it looks great. The neon sign catches my eye. \r\n•\tIs every page consistent?\r\no\tYes. From the pages you have, they look consistent, but not all the pages upload to another page. \r\n•\tDo all links connect to a page?\r\no\tOf the five pages I only saw that 3 out of the 5 pages connect to another page. I would suggest checking the name of each html page that does not link to another page. There may be some misspelled words which is preventing your pages to link.  (p.s. I noticed in your FTP There is no html for the two pages that do not connect to another page. So I believe you have no html file uploaded which is why your links won't work)\r\n•\tIs the menu present on each page?\r\no\tIt looks like the main menu only shows on the home page. I would suggest adding the menu to the other pages, maybe on the side pages. \r\n•\tAre there attractive images on each page?\r\no\tI only saw images on the home page and one other page. The images look great, but I would make sure to add at least one image to each page. \r\n•\tIs writing with goodly grammar and spell?\r\no\tThere are only a few grammar and spelling errors. I suggest taking a look at words that may or may not require apostrophes.
-68	2017-11-08 23:59:09.663847+00	50	cutl7614	adam5160	Home: 5 stars; everything is included\r\nBanner: 5 stars; everything is included\r\nLayout:5 stars; everything is included\r\nPages: 5 stars; everything is included\r\nMenu:5 stars; everything is included\r\nImages:5 stars; everything is included\r\nJavaScript:5 stars; everything is included\r\nText:5 stars; everything is included\r\nOrganization:5 stars; everything is included\r\nFooter:5 stars; everything is included\r\n\r\n\r\nThis is a very nice, well organized website. Everything on the checklist is checked off. 100%.  \r\n\r\nThe only suggestion I would suggest is to not have the scroll over effect. It was hard for my browser to make it stay open.
-30	2017-11-08 16:58:15.948943+00	33	carr4666	harm4214	Home-4\r\n•\tIs the home page named correctly? MySite/index.hml. \r\no\tYes was named correctly.\r\n•\tDoes it communicate the primary purpose of the site?\r\no\tIt does but could use a little more explaining \r\n•\tIs there an enticement to learn more?\r\no\tYes has a good first line but the could use some help to keep people interested \r\nBanner-2\r\n•\tDoes the banner have attractive artwork?\r\no\tNo \r\n•\tIs the banner used on each page of the website?\r\no\tno\r\n•\tIs a nice font used for the banner?\r\no\tYes easy to read and nice \r\nLayout-4\r\n•\tIs there good use of white space? margin/padding\r\no\tThere is a lot of white space but padding and margin looks good \r\n•\tIs there some kind of multiple columns or sidebars?\r\no\tThere is two top bars and it looks good \r\n•\tIs every page consistent?\r\no\tCan’t find other pages \r\nPages-3\r\n•\tAre there at least five pages?\r\no\tno\r\n•\tDo they have good names?\r\no\tLooks good pages just don’t open \r\nMenu- 3\r\n•\tIs there a main menu with at least four items?\r\no\tThere is only three \r\n•\tDo all links connect to a page?\r\no\tNo they say 404 not found \r\n•\tIs the menu present on each page?\r\no\tCan’t tell pages don’t load\r\nImages-1\r\n•\tAre there attractive images on each page?\r\no\tNo images\r\n•\tIs there attribution of the image owners?\r\no\tNo images\r\n•\tDo the images enhance the theme of the website?\r\no\tNo images\r\n•\tGood use of color and fonts for visual appeal?\r\no\tGood color and font a little boring \r\nJavaScript-5\r\n•\tIs there a fancy JavaScript control somewhere on the website?\r\no\tYes there is one on the main menu \r\n•\tDoes this control enhance the appeal of the website?\r\no\tYes it helps to get around the site.\r\nText-5\r\n•\tDoes this website have a clear message?\r\no\tYes wants to have a video game website \r\n•\tIs writ with goodly grammar and spell?\r\no\tYes everything is spelled correctly and grammar is correct \r\n•\tDoes the text grab your attention?\r\no\tIt does show up and contrast nicely with the background \r\nOrganization-3\r\n•\tIs the purpose of your site clear?\r\no\tIt is pretty clear , could be explained better \r\n•\tIs the navigation path clear?\r\no\tYes it is clear\r\n•\tDoes the organization of the site support your business goals?\r\no\tIt seems to support the business not sure what the end will be \r\nFooter-3\r\n•\tIs there an attractive footer? \r\no\tIts just a footer with the copyright \r\n•\tDoes this site have a copyright notification?\r\no\tYes
-35	2017-11-08 17:03:55.895538+00	20	milt0773	hern6661	Home-3                                 Banner-2                      Layout-3                 Pages-2             Menu-2 Images-1                              JavaScript-0                    Text-3                Organization-3          Footer-1 \r\n\r\nHome- 3\r\n•\tIs the home page named correctly? MySite/index.hml\r\no\tNo, should have an index page. Let me know if you need help fixing this!\r\n•\tDoes it communicate the primary purpose of the site?\r\no\tYes, being vegan is dope! \r\n•\tIs there an enticement to learn more?\r\no\tYes, my roommates are vegan, so I would continue reading this\r\nBanner- 2\r\n•\tDoes the banner have attractive artwork? \r\no\tI would consider adding images\r\n•\tIs the banner used on each page of the website?\r\no\tDon’t think it has a banner\r\n•\tIs a nice font used for the banner?\r\n•\tEasy to read\r\nLayout- 3\r\n•\tIs there good use of white space? margin/padding\r\no\tNo white space\r\n•\tIs these some kind of multiple columns or sidebars?\r\no\tTop menu on home page\r\n•\tIs every page consistent?\r\no\tOnly homepage works\r\nPages- 2\r\n•\tAre there at least five pages?\r\no\tNo\r\n•\tDo they have good names?\r\no\tYes, but no other pages exist\r\nMenu- 2\r\n•\tIs there a main menu with at least four items?\r\no\tYes\r\n•\tDo all links connect to a page?\r\no\tNo\r\n•\tIs the menu present on each page?\r\no\tNo\r\nImages- 1\r\n•\tAre there attractive images on each page?\r\no\tNo images\r\n•\tIs there attribution of the image owners?\r\no\tNo images\r\n•\tDo the images enhance the theme of the website?\r\no\tNo Images\r\n•\tGood use of color and fonts for visual appeal?\r\no\tDigging the green\r\nJavaScript- 0 \r\n•\tIs there a fancy JavaScript control somewhere on the website?\r\no\tNo\r\n•\tDoes this control enhance the appeal of the website?\r\no\tNo\r\nText- 3\r\n•\tDoes this website have a clear message?\r\no\tYes\r\n•\tIs writ with goodly grammar and spell?\r\no\tYes\r\n•\tDoes the text grab your attention?\r\no\tYes, but add info\r\nOrganization- 3\r\n•\tIs the purpose of your site clear?\r\no\tYes\r\n•\tIs the navigation path clear?\r\no\tYes, but none of the other links work\r\n•\tDoes the organization of the site support your business goals?\r\no\tI would imagine once you add info, yes\r\nFooter- 1\r\n•\tIs there an attractive footer?\r\no\tNo\r\n•\tDoes this site have a copyright notification?\r\no\tNo
-42	2017-11-08 17:14:57.782582+00	45	mate2933	harm4214	Home-5\r\n•\tIs the home page named correctly? MySite/index.hml. \r\no\tYes was named correctly.\r\n•\tDoes it communicate the primary purpose of the site?\r\no\tIt does show the purpose of the site and more  \r\n•\tIs there an enticement to learn more?\r\no\tYes there is it has interesting facts maybe could be moved to the top of the page\r\nBanner-4\r\n•\tDoes the banner have attractive artwork?\r\no\tNo it doesn’t \r\n•\tIs the banner used on each page of the website?\r\no\tYes it is \r\n•\tIs a nice font used for the banner?\r\no\tYes nice and easy to read \r\nLayout-4\r\n•\tIs there good use of white space? margin/padding\r\no\tThere is white space but padding and margin looks good \r\n•\tIs there some kind of multiple columns or sidebars?\r\no\tThere is a top menu but not side bar \r\n•\tIs every page consistent?\r\no\tYes every page is consistent and looks the same \r\nPages-5\r\n•\tAre there at least five pages?\r\no\tYes \r\n•\tDo they have good names?\r\no\tYes they do and looks well \r\nMenu- 4\r\n•\tIs there a main menu with at least four items?\r\no\tYes it has 5 items on it\r\n•\tDo all links connect to a page?\r\no\tYes they connect to other pages \r\n•\tIs the menu present on each page?\r\no\tNo it is not but there is a homepage button on each page\r\nImages-4\r\n•\tAre there attractive images on each page?\r\no\tYes there is \r\n•\tIs there attribution of the image owners?\r\no\tno I don’t see any \r\n•\tDo the images enhance the theme of the website?\r\no\tYes they do help to show the things being talked about \r\n•\tGood use of color and fonts for visual appeal?\r\no\tGood color and font could maybe use a little more color \r\nJavaScript-5\r\n•\tIs there a fancy JavaScript control somewhere on the website?\r\no\tYes there is one for the interesting facts \r\n•\tDoes this control enhance the appeal of the website?\r\no\tYes it helps to get you interested in the webpage \r\nText-5\r\n•\tDoes this website have a clear message?\r\no\tYes it is about how music can benefit your life \r\n•\tIs writ with goodly grammar and spell?\r\no\tYes everything is spelled correctly and grammar is correct \r\n•\tDoes the text grab your attention?\r\no\tIt does show up and contrast nicely with the background  \r\nOrganization-5\r\n•\tIs the purpose of your site clear?\r\no\tIt is about music benefiting your life and how it does it \r\n•\tIs the navigation path clear?\r\no\tYes it is a clear path\r\n•\tDoes the organization of the site support your business goals?\r\no\tYes the site is well organized and supports the business \r\nFooter-4\r\n•\tIs there an attractive footer? \r\no\tYes the footer is there and works well for the site \r\n•\tDoes this site have a copyright notification?\r\no\tYes \r\n\r\n-really good site put on a theme and it would be 100
-43	2017-11-08 17:21:42.515342+00	42	bell1486	enge7698	Review Checklist\r\nScore each website based on the quality of the features\r\n1.\tHome – 3 stars\r\n2.\tBanner – 5 stars\r\n3.\tLayout – 5 stars\r\n4.\tPages – 5 stars\r\n5.\tMenu – 3 stars\r\n6.\tImages – 4 stars\r\n7.\tJavaScript – 3 stars\r\n8.\tText – 4 stars\r\n9.\tOrganization – 5 stars\r\n10.\tFooter – 5 stars\r\n\r\nScore (Stars)\r\n1.\tFeature is missing\r\n2.\tFeature is not working properly\r\n3.\tFeature has problems\r\n4.\tSome improvements required\r\n5.\tNo further work is needed\r\n\r\nWebsite Features\r\nHome – 3 Stars\r\n•\tIs the home page named correctly? MySite/index.html\r\no\tThe home page that you have is titled “MySite.html”.  Change it to “index.html” so that bacs200.unco.edu/bell1486/MySite/index.html will bring up this page.\r\n•\tDoes it communicate the primary purpose of the site?\r\no\tYes, it provides a summary of what the page is intended to be about.\r\n•\tIs there an enticement to learn more?\r\no\tThe summary provides an enticement to learn more about the full site.\r\n \r\nBanner – 5 Stars\r\n•\tDoes the banner have attractive artwork?\r\no\tYes.\r\n•\tIs the banner used on each page of the website?\r\no\tYes, but the Hiking link does has a 404 error, so you need to provide the correct page on the menu for the Hiking page.  It’s currently set up to use the page titled “hikes.html”, and on the FTP server you have it titled as “hiking.html”. \r\n•\tIs a nice font used for the banner?\r\no\tYes.\r\n\r\nLayout – 5 Stars\r\n•\tIs there good use of white space? margin/padding\r\no\tYes.\r\n•\tIs there some kind of multiple columns or sidebars?\r\no\tYes, there are sidebars present.\r\n•\tIs every page consistent?\r\no\tEvery page is consistent.\r\n\r\nPages – 5 Stars\r\n•\tAre there at least five pages?\r\no\tThere are 5 pages.\r\n•\tDo they have good names?\r\no\tThe names fit what the pages seem to be about. \r\n\r\nMenu – 3 Stars\r\n•\tIs there a main menu with at least four items?\r\no\tYes.\r\n•\tDo all links connect to a page?\r\no\tThe home links to the wrong page.  You have it set up to link to “home.html”, but it should be linked to “index.html” once you change the title of your “MySite.html” to “index.html”.  The Hiking page also links to the wrong place.  It links to “hikes.html” instead of “hiking.html”.\r\n•\tIs the menu present on each page?\r\no\tYes. \r\n\r\nImages – 4 Stars\r\n•\tAre there attractive images on each page?\r\no\tYes, but the same images are on every page.  Try to get different images that relate to each page specifically.  \r\n•\tIs there attribution of the image owners?\r\no\tNo, but if these are your images then there doesn’t need to be. \r\n•\tDo the images enhance the theme of the website?\r\no\tYes. \r\n•\tGood use of color and fonts for visual appeal?\r\no\tYes. \r\n\r\nJavaScript – 3 stars\r\n•\tIs there a fancy JavaScript control somewhere on the website?\r\no\tIt looks like you tried to do an image carousel, but you didn’t link the javascript code in the head of the page. \r\n•\tDoes this control enhance the appeal of the website?\r\no\tIt will once it’s done correctly. \r\n\r\nText – 4 Stars\r\n•\tDoes this website have a clear message?\r\no\tYes, but go back and provide information about each page instead of just saying “information about snowboarding”, etc.  \r\n•\tIs writ with goodly grammar and spell?\r\no\tYes.\r\n•\tDoes the text grab your attention?\r\no\tThe text that you have so far does grab my attention.\r\n\r\nOrganization – 5 Stars\r\n•\tIs the purpose of your site clear?\r\no\tYes.\r\n•\tIs the navigation path clear?\r\no\tYes, just fix the menu links.\r\n•\tDoes the organization of the site support your business goals?\r\no\tYes.\r\n\r\nFooter – 5 Stars\r\n•\tIs there an attractive footer?\r\no\tYes.\r\n•\tDoes this site have a copyright notification?\r\no\tYes.
-47	2017-11-08 18:19:28.466306+00	46	weav8611	enge7698	Review Checklist\r\nScore each website based on the quality of the features\r\n1.\tHome – 5 stars\r\n2.\tBanner – 4 stars\r\n3.\tLayout – 4 stars\r\n4.\tPages – 5 stars\r\n5.\tMenu – 4 stars\r\n6.\tImages – 4 stars\r\n7.\tJavaScript – 5 stars\r\n8.\tText – 4 stars\r\n9.\tOrganization – 5 stars\r\n10.\tFooter – 4 stars\r\n\r\nScore (Stars)\r\n1.\tFeature is missing\r\n2.\tFeature is not working properly\r\n3.\tFeature has problems\r\n4.\tSome improvements required\r\n5.\tNo further work is needed\r\n\r\nWebsite Features\r\nHome – 5 Stars\r\n•\tIs the home page named correctly? MySite/index.html\r\no\tYes.\r\n•\tDoes it communicate the primary purpose of the site?\r\no\tYes, it provides a summary of what the page is intended to be about.\r\n•\tIs there an enticement to learn more?\r\no\tThe summary provides an enticement to learn more about the full site. \r\n\r\nBanner – 4 Stars\r\n•\tDoes the banner have attractive artwork?\r\no\tYes.\r\n•\tIs the banner used on each page of the website?\r\no\tNo, the banner only appears to be present on the home page.  \r\n•\tIs a nice font used for the banner?\r\no\tYes.\r\n\r\nLayout – 4 Stars\r\n•\tIs there good use of white space? margin/padding\r\no\tYes.\r\n•\tIs there some kind of multiple columns or sidebars?\r\no\tYes.\r\n•\tIs every page consistent?\r\no\tEvery page is not consistent.  Every page but the home page does not have a banner, or a menu.  \r\n\r\nPages – 5 Stars\r\n•\tAre there at least five pages?\r\no\tThere are 6 pages. \r\n•\tDo they have good names?\r\no\tYes, the names seem to correspond with what’s on each page. \r\n\r\nMenu – 4 Stars\r\n•\tIs there a main menu with at least four items?\r\no\tYes.  \r\n•\tDo all links connect to a page?\r\no\tYes. \r\n•\tIs the menu present on each page?\r\no\tThe menu is only present on the home page.\r\n \r\nImages – 4 Stars\r\n•\tAre there attractive images on each page?\r\no\tThere is not an image present on the Prices page. \r\n•\tIs there attribution of the image owners?\r\no\tNo, but if these are your images then there doesn’t need to be. \r\n•\tDo the images enhance the theme of the website?\r\no\tYes. \r\n•\tGood use of color and fonts for visual appeal?\r\no\tYes. \r\n\r\nJavaScript – 5 stars\r\n•\tIs there a fancy JavaScript control somewhere on the website?\r\no\tYes, on the index page.\r\n•\tDoes this control enhance the appeal of the website?\r\no\tYes, but consider adding a title that says that the pictures are a sample of your work, or something to that effect.\r\n  \r\nText – 4 Stars\r\n•\tDoes this website have a clear message?\r\no\tYes, but go back and add more text that further explains the prices, and what “Oversee your Service” means. \r\no\tThe “Subscribe” button where you put in your email to Oversee and Schedule does not have a link connected to it, so it takes you to a 404 error.\r\n•\tIs writ with goodly grammar and spell?\r\no\tYou incorrectly spelled Northglenn as “Northglen”. \r\n•\tDoes the text grab your attention?\r\no\tThe text that you have so far does grab my attention.\r\n\r\nOrganization – 5 Stars\r\n•\tIs the purpose of your site clear?\r\no\tYes.\r\n•\tIs the navigation path clear?\r\no\tYes.\r\n•\tDoes the organization of the site support your business goals?\r\no\tYes.\r\n\r\nFooter – 4 Stars\r\n•\tIs there an attractive footer?\r\no\tYes, but there is only a footer present on the index page.\r\n•\tDoes this site have a copyright notification?\r\no\tYes.
-74	2017-11-09 00:31:41.477895+00	46	herr9858	adam5160	Home: 5 stars; everything is included\r\nBanner: 5 stars; everything is included\r\nLayout:5 stars; everything is included\r\nPages: 5 stars; everything is included\r\nMenu:5 stars; everything is included\r\nImages:2 stars; some pictures are on the pages. Unless the banner counts but I’m not sure \r\nJavaScript:5 stars; everything is included\r\nText:5 stars; everything is included\r\nOrganization:4 stars; The navigation path is not 100% clear, text is overlapping \r\nFooter:5 stars; everything is included\r\n\r\nThe website is very nice overall. My suggestion would be to add one picture to every page. Also, clean up your navigation menu so text isn’t over lapping.  Good job.
-80	2017-11-09 01:36:27.244859+00	44	shie5673	mate2933	•\tIs the home page named correctly? MySite/index.html\r\no\tThe home page is not named correctly. While looking at your FTP I noticed that you don’t have an HTML file for your index. I only saw the pages. I would suggest creating an html file with the name MySite/index.html \r\n•\tIs there some kind of multiple columns or sidebars?\r\no\tI do not see any sidebars. So I would suggest adding at least a sidebar in your home page to add more facts on your topic. \r\n•\tDo all links connect to a page?\t\r\no\tAll but one of your links connect to a page. The one page that is not connecting is under your “mailing list” page and it is when you click on subscribe. I tried clicking on the subscribe button, but it takes me to a 404 page. After looking at your FTP, I believe the problem you are having is that you have not uploaded an html file for the subscription. Just drag your “subscribe.html” into your remote site and it should allow the link to work. \r\n•\tAre there attractive images on each page?\r\no\tA majority of your pages have an image. I would suggest adding an image to your “packages” and “mailing list” page. \r\n•\tIs there attribution of the image owners?\r\no\tIt looks like your images do not provide an attribution. To add an attribution type the following: alt=”name of your image”. For example, for your image in your “about me” page you can type alt=”Bears”  \r\n•\tIs the purpose of your site clear?\r\no\tI understand the website is about Mutual of Omaha, but I would suggest adding more background information because I do not know too much about the topic.
-81	2017-11-09 01:42:58.803433+00	33	carr4666	shie5673	Home - 5\r\nBanner - 1 Feature is missing\r\nLayout - 4 Can not see other pages\r\nPages - 3 Can not see other pages\r\nMenu - 2 Only 3 items, Broken links\r\nImages - 1 Feature is missing\r\nJava - 5 \r\nText - 4 Could use more content\r\nOrganization - 4 Good on the page i can see\r\nFooter - 5\r\n\r\n\r\nYou are on the right track.  Fixing broken links and meeting page requirements are the biggest things for you to correct.  Also need to add some pictures to the website.  I like the topic you chose and I am looking forward to seeing the completed product.
-82	2017-11-09 02:11:21.09777+00	25	adam5160	herr9858	5 Index/Home Page - Looks good, red shadow looks good, could use some padding at the top.\r\n2 Banner - I'll accept the Wendy's logo as a banner, but it is only present on the home page. \r\n3 Layout - Layout on the home page is good, the text could use some formatting.\r\n3 Pages - Only home page, and Menu pages are present and have content, Traning does not return an error but also doesn't have any content, the rest of the pages return a 404 error.\r\n3 Menu - Menu is pretty basic and only three of the links function normally.\r\n2 Images - There is only one image on the menu page, although, I would probably use a different picture. \r\n1 JavaScript - No JavaScript implementation.\r\n2 Text - Text is only present on the home page.\r\n1 Organization - Navigation is easy on the page, but there is no MySite directory. In your student directory there should be another directory named 'MySite' this directory should contain an 'index.html' file and 5 other .html files that are the other pages of your site.\r\n3 Footer - Footer is on the home page and is centered, but you don't need the word 'copyright' that's what the symbol stands for.
-18	2017-11-08 16:43:47.549939+00	46	casp2764	mena7788	Home 4\r\n•\tIs the home page named correctly? MySite/index.hml – No. \r\n•\tDoes it communicate the primary purpose of the site? – yes.  \r\n•\tIs there an enticement to learn more? Yes. \r\nBanner 4\r\n•\tDoes the banner have attractive artwork? Needs work, \r\n•\tIs the banner used on each page of the website? Yes \r\n•\tIs a nice font used for the banner? Yes  \r\nLayout 5\r\n•\tIs there good use of white space? margin/padding yes, 5\r\n•\tIs these some kind of multiple columns or sidebars? Yes, 5\r\n•\tIs every page consistent? Yes, 5\r\nPages 5 \r\n•\tAre there at least five pages? Yes, 5\r\n•\tDo they have good names? Yes, 5 \r\nMenu 5\r\n•\tIs there a main menu with at least four items? Yes, 5\r\n•\tDo all links connect to a page? Yes, 5\r\n•\tIs the menu present on each page? Yes 5\r\nImages 4 \r\n•\tAre there attractive images on each page? Needs work. \r\n•\tIs there attribution of the image owners? Needs work \r\n•\tDo the images enhance the theme of the website? Yes 5\r\n•\tGood use of color and fonts for visual appeal? Yes 5\r\nJavaScript  5\r\n•\tIs there a fancy JavaScript control somewhere on the website? Yes \r\n•\tDoes this control enhance the appeal of the website? Yes \r\nText 5\r\n•\tDoes this website have a clear message? Yes, 5\r\n•\tIs writ with goodly grammar and spell? Yes, 5 \r\n•\tDoes the text grab your attention? Yes, 5\r\nOrganization 5\r\n•\tIs the purpose of your site clear? Yes. \r\n•\tIs the navigation path clear? Yes  \r\n•\tDoes the organization of the site support your business goals? Yes \r\nFooter 4\r\n•\tIs there an attractive footer? Needs work 4\r\n•\tDoes this site have a copyright notification? Yes 5
-106	2017-11-10 16:31:50.155473+00	36	kell7133	bell1486	Home: (4) The home is index.html instead of MySite/index.html. The home page is too vague and needs to be more enticing.\r\n\r\nBanner: (3) The banner could be improved.\r\n\r\nLayout: (4) The layout is pretty good but you could use more features to make it more attractive. The other pages have no content.\r\n\r\nPages: (3) The pages are consistent in having no content, but do have good names.\r\n\r\nMenu: (3) There are at least 4 menu items, connecting to blank pages. No menus present on any other pages.\r\n\r\nImages: (3) There are three images but they do not appear. There is attribution of the image owners. \r\n\r\nJava: (5) There is a subscribe button available.\r\n\r\nText: (3) There is not enough to portray a clear message or the actual purpose behind it.\r\n\r\nOrganization: (4) Its a good start but use formats to make it more appealing.\r\n\r\nFooter: (4) It is all there and bold, maybe included some css to make it nicer.
-130	2017-11-13 14:54:31.823305+00	49	rist4093	hans9131	1. Home: 5\r\n\r\n2. Banner: 5\r\nMy only suggestion is that the banner could be centered a little better on a couple of the pages.\r\n\r\n3. Layout: 5\r\n\r\n4. Pages: 5\r\n\r\n5. Menu: 5\r\n\r\n6. Images: 4\r\nContact page needs an image.\r\n\r\n7. Javascript: 5\r\n\r\n8. Text: 5\r\n\r\n9. Organization: 5\r\n\r\n10. Footer: 5\r\n\r\nOverall your web page looks amazing. It looks extremely professional and it looks like the type of site I would use if I had my own business. Other than the few tweaks I suggest I don't think you need to add anything.
-50	2017-11-08 18:38:07.984302+00	50	kaup6567	mont0846	Home\r\n\r\nIs the home page named correctly? MySite/index.hml\r\n-Yes!\r\nDoes it communicate the primary purpose of the site?\r\n-yes\r\nIs there an enticement to learn more?\r\n-yes\r\nBanner\r\n\r\nDoes the banner have attractive artwork?\r\n-yes\r\nIs the banner used on each page of the website?\r\n-yes\r\nIs a nice font used for the banner?\r\nyes\r\n\r\nLayout\r\n\r\nIs there good use of white space? margin/padding\r\n-yes\r\nIs these some kind of multiple columns or sidebars?\r\n-yes\r\nIs every page consistent?\r\n-yes\r\n\r\nPages\r\n\r\nAre there at least five pages?\r\n-yes\r\nDo they have good names?\r\n-yes\r\n\r\nMenu\r\n\r\nIs there a main menu with at least four items?\r\n-yes\r\nDo all links connect to a page?\r\n-yes\r\nIs the menu present on each page?\r\n-yes\r\n\r\nImages\r\n\r\nAre there attractive images on each page?\r\n-yes\r\nIs there attribution of the image owners?\r\n-If you do not own the images make sure to give credit, if got them from a website with free images, then you are good!\r\nDo the images enhance the theme of the website?\r\n-yes\r\nGood use of color and fonts for visual appeal?\r\n-yes\r\n\r\nJavaScript\r\n\r\nIs there a fancy JavaScript control somewhere on the website?\r\n-yes\r\nDoes this control enhance the appeal of the website?\r\n-yes\r\n\r\nText\r\n\r\nDoes this website have a clear message?\r\n-yes\r\nIs writ with goodly grammar and spell?\r\n-yes\r\nDoes the text grab your attention?\r\n-yes\r\n\r\nOrganization\r\n\r\nIs the purpose of your site clear?\r\n-yes\r\nIs the navigation path clear?\r\n-yes\r\nDoes the organization of the site support your business goals?\r\n-yes\r\n\r\nFooter\r\n\r\nIs there an attractive footer?\r\n-yes\r\nDoes this site have a copyright notification?\r\nyes
-99	2017-11-10 03:55:50.523727+00	90			Nov. 9, 2017, 11:33 a.m.\tadam5160\tstre7262\r\nNov. 8, 2017, 11:40 p.m.\tkaup6567\ttutt7678\r\nNov. 8, 2017, 11:30 p.m.\tkaup6567\tmont0846\r\nNov. 8, 2017, 11:23 p.m.\ttutt7678\tdrur4653\r\nNov. 8, 2017, 11:18 p.m.\ttutt7678\tkaup6567\r\nNov. 8, 2017, 11:13 p.m.\ttutt7678\tmont0846\r\nNov. 8, 2017, 11:07 p.m.\ttutt7678\tadel4571\r\nNov. 8, 2017, 9:30 p.m.\tfeas4242\tlous9442\r\nNov. 8, 2017, 9 p.m.\tdrur4653\ttutt7678\r\nNov. 8, 2017, 8:49 p.m.\tmena7788\tshin8899\r\nNov. 9, 2017, 11:33 a.m.\tadam5160\tstre7262\r\nNov. 8, 2017, 11:40 p.m.\tkaup6567\ttutt7678\r\nNov. 8, 2017, 11:30 p.m.\tkaup6567\tmont0846\r\nNov. 8, 2017, 11:23 p.m.\ttutt7678\tdrur4653\r\nNov. 8, 2017, 11:18 p.m.\ttutt7678\tkaup6567\r\nNov. 8, 2017, 11:13 p.m.\ttutt7678\tmont0846\r\nNov. 8, 2017, 11:07 p.m.\ttutt7678\tadel4571\r\nNov. 8, 2017, 9:30 p.m.\tfeas4242\tlous9442\r\nNov. 8, 2017, 9 p.m.\tdrur4653\ttutt7678\r\nNov. 8, 2017, 8:49 p.m.\tmena7788\tshin8899Nov. 9, 2017, 11:33 a.m.\tadam5160\tstre7262\r\nNov. 8, 2017, 11:40 p.m.\tkaup6567\ttutt7678\r\nNov. 8, 2017, 11:30 p.m.\tkaup6567\tmont0846\r\nNov. 8, 2017, 11:23 p.m.\ttutt7678\tdrur4653\r\nNov. 8, 2017, 11:18 p.m.\ttutt7678\tkaup6567\r\nNov. 8, 2017, 11:13 p.m.\ttutt7678\tmont0846\r\nNov. 8, 2017, 11:07 p.m.\ttutt7678\tadel4571\r\nNov. 8, 2017, 9:30 p.m.\tfeas4242\tlous9442\r\nNov. 8, 2017, 9 p.m.\tdrur4653\ttutt7678\r\nNov. 8, 2017, 8:49 p.m.\tmena7788\tshin8899
-100	2017-11-10 04:11:14.977035+00	90	seam	seam	master 5a90470f] Use basic text\r\n 1 file changed, 2 insertions(+), 2 deletions(-)\r\nAlready up-to-date.\r\nCounting objects: 4, done.\r\nDelta compression using up to 4 threads.\r\nCompressing objects: 100% (4/4), done.\r\nWriting objects: 100% (4/4), 360 bytes | 360.00 KiB/s, done.\r\nTotal 4 (delta 3), reused 0 (delta 0)\r\nremote: Resolving deltas: 100% (3/3), completed with 3 local objects.\r\nTo github.com:Shrinking-World/MyBook.git\r\n   79b262a4..5a90470f  master -> master\r\nOn branch master\r\nYour branch is up-to-date with 'origin/master'.\r\nnothing to commit, working tree clean\r\nAlready up-to-date.\r\nEverything up-to-date\r\nOps Command - production deploy\r\nServer: mybookonline.org\r\nVersion Control /Users/seaman/Projects/MyBook\r\nOn branch master\r\nYour branch is up-to-date with 'origin/master'.\r\nnothing to commit, working tree clean\r\nVersion Control /Users/seaman/Projects/MyBook/Documents\r\nOn branch master\r\nYour branch is up-to-date with 'origin/master'.\r\nnothing to commit, working tree clean\r\nRemote pull\r\n\r\nRemote Execution \r\n    ssh django@mybookonline.org "git pull; cd Documents; git pull"\r\nFrom github.com:Shrinking-World/MyBook\r\n   79b262a..5a90470  master     -> origin/master\r\nUpdating 79b262a..5a90470\r\nFast-forward\r\n unc/views.py | 4 ++--\r\n 1 file changed, 2 insertions(+), 2 deletions(-)\r\nAlready up-to-date.\r\nRemote service restart\r\n\r\nRemote Execution \r\n    ssh root@mybookonline.org "service gunicorn restart"\r\n\r\nRemote Execution \r\n    ssh root@mybookonline.org "service nginx restart"\r\nOps Command - production web\r\nServer: mybookonline.org\r\nShow web page: x web mybookonline.org\r\n~/Projects/MyBook/unc/templates(master)$
-101	2017-11-10 16:21:08.640299+00	25	enge7698	bell1486	Home:(4)Home page is not named correctly. It does communicate the primary purpose. The is not much enticement.\r\n\r\nBanner:(1) Banner does not display. \r\n\r\nLayout: (1)There is no layout present.\r\n\r\nPages: (4) There are five pages but only one has content.\r\n\r\nMenu: (3) The menu could be improved but does list four items.\r\n\r\nImages:(1) Image does not display\r\n\r\nJavaScript:(1) There is no java.\r\n\r\nText: (4) There is a clear message. Has good grammar and spelling, could be more enticing.\r\n\r\nOrganization: (2) There is the start of organization but it needs improvement.\r\n\r\nFooter: (4) There is a footer but it could be more attractive.
-102	2017-11-10 16:22:39.067881+00	46	mate29933	carr4666	mate2933                                                        \r\nHome-5(good)\r\nBanner-3(Could have a a banners on the top)\r\nLayout-4(could fix layouts of images on page)\r\nPages-5(good)                                                                   \r\nMenu-4(There is not a menu on all the pages)\r\nImages-5(good)\r\nJava-5(good)\r\ntext-5(good)                                                                \r\nOrganize-5(good)\r\nFooter-5(good)                            \r\nTotal-46(overall good)                                   \r\nMatthew Carranza
-103	2017-11-10 16:27:37.346942+00	46	shie5673	carr4666	shie5673                                                                                                                                                                                                                      \r\nHome-5\r\nBanner-3(Could have a a banners on the top)\r\nLayout-3(it's kinda basic and the home page doesn't have anything)\r\nPages-5                                                                                                                                                                \r\nMenu-5\r\nImages-5\r\nJava-5\r\ntext-5\r\nOrganize-5\r\nFooter-5\r\nTotal-46
-104	2017-11-10 16:29:28.99761+00	3	lous9442	pani2679	You have a part of a main page but beyond that there is not much on your site. No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.No further info on site.
-105	2017-11-10 16:30:14.33472+00	47	butl5737	lang8151	Home-5\r\n\r\n  Home tab looks great\r\n\r\nBanner-5\r\n\r\n  Banner looks ok to me\r\n\r\nLayout-5\r\n\r\n  Layout is well executed\r\n\r\nPages-5\r\n\r\n  Includes 5 useful pages. Good job\r\n\r\nMenu-5\r\n\r\n  Menu has good design and is easy to locate\r\n\r\nImages-4\r\n\r\n  Would like to see more images but overall looks good.\r\n\r\nJavaScript-5\r\n\r\n  Looks okay to me\r\n\r\nText-4\r\n\r\n  Text is fine, but I would like to see more interesting design to the text. \r\n  It's a bit bland.\r\n\r\nOrganization-5\r\n\r\n   Looks good. Nice Flow\r\n\r\nFooter-4\r\n\r\n  Looks okay, maybe add add a small note to earn 5 out of 5
-107	2017-11-10 16:33:10.503379+00	41	espi0784	lang8151	Home-5\r\n\r\n  Home tab looks great\r\n\r\nBanner-5\r\n\r\n  Banner looks ok to me\r\n\r\nLayout-4\r\n\r\n  Layout is well executed. Would like a bit more color.\r\n\r\nPages-2\r\n\r\n  Includes 5 useful pages. But the pages are not accessible.\r\n\r\nMenu-5\r\n\r\n  Menu has good design and is easy to locate\r\n\r\nImages-4\r\n\r\n  Would like to see more images but overall looks good.\r\n\r\nJavaScript-3\r\n\r\n  Looks okay to me. Pages need to be linked.\r\n\r\nText-4\r\n\r\n  Text is fine, but I would like to see more interesting design to the text. \r\n  It's a bit bland.\r\n\r\nOrganization-5\r\n\r\n   Looks good. Nice Flow\r\n\r\nFooter-4\r\n\r\n  Looks okay, maybe add add a small note to earn 5 out of 5
-108	2017-11-10 16:35:58.258546+00	49	orti8903	lang8151	Home-5\r\n\r\n  Home tab looks great\r\n\r\nBanner-5\r\n\r\n  Banner looks ok to me\r\n\r\nLayout-5\r\n\r\n  Layout is well executed\r\n\r\nPages-5\r\n\r\n  Includes 5 useful pages. Good job\r\n\r\nMenu-5\r\n\r\n  Menu has good design and is easy to locate\r\n\r\nImages-5\r\n\r\n  Would like to see more images but overall looks good.\r\n\r\nJavaScript-5\r\n\r\n  Looks good to me\r\n\r\nText-5\r\n\r\n  Text looks great. Good info and good design to the text\r\n\r\nOrganization-5\r\n\r\n   Looks good. Nice Flow\r\n\r\nFooter-4\r\n\r\n  Looks okay, maybe add add a small note and date to earn 5 out of 5
-109	2017-11-10 16:36:40.595995+00	30	adam5160	cutl7614	- (I'M SORRY I MIS-SCORED MY LAST REVIEW FOR YOU. D: IT SHOULD HAVE BEEN 30, NOT 0!! ;A; I'm still reviewing you based off the highest scores between both sites, even though now, seeing the other reviewers, I believe your real site was the Wendy's one. I still think the Hookah Bar website idea was way cooler though. ;p I changed my comments to strictly-Wendy's related, but kept (what was supposed to be) the score from last time.)\r\n\r\n1. Home - Score: 1\r\n\t- The website home page should have this url: http://bacs200.unco.edu/adam5160/MySite/index.html\r\n\t- Make a folder in your FTP server called "MySite," with a document called "index.html" in that folder that contains your first page info. The folder should be next to your Templates and web-root folders.\r\n2. Banner - Score: 1\r\n\t- No banner on either website.\r\n3. Layout - Score: 5\r\n\t- Layout was great for the Wendy's home page.\r\n4. Pages - Score: 3\r\n\t- Only your Wendy's site had multiple pages, but the only page that worked was the Menu page. Maybe there was an issue with linking the other pages? Check the links and make sure they have the exact names of the right pages. \r\n5. Menu - Score: 2\r\n\t- Your Wendy's site had a list of links, but they weren't formatted into a proper menu. Check to make sure they match the code from our Menu exercise from class, or the Menu Templates.\r\n\t- Menu should be included on all pages of the website, not just the home page.\r\n\t- Again, not all links connect to a page.\r\n6. Images - Score: 4\r\n\t- Some images were broken in the Wendy's page, so check to make sure they're linked properly (the links have the exact name of the right images, so "number2.jpg", etc.) and that the images are included in your FTP server.\r\n7. JavaScript - Score: 4\r\n\t- No JavaScript on the Wendy's page, but the Hookah page definitely had fancy stuff going on. :D\r\n8. Text - Score: 5\r\n\t- Both websites had a clear message and were written well, for what was there! Obviously will need more text on the Wendy's page, but I trust you'll do that once you get your other pages up and linked properly.\r\n9. Organization - Score: 5\r\n\t- Organization of the Wendy's site was clear (the order of the links made sense).\r\n10. Footer - Score: 5\r\n\t- There was a footer on the Wendy's page.
-110	2017-11-10 16:39:30.560695+00	35	butl5737	espi0784	Notes:\r\n\r\n– Home (5/5)\r\n\r\n– Banner (2/5): i thi\r\n\r\n– Layout (5/5): Keep in mind that a consistent layout design will make it easier for anyone who visits your website to look around the pages.\r\n\r\n– Pages (4/5): Some pages feel a little ‘empty’, but I guess it’s because I’m looking at a prototype.\r\n\r\n– Menu (4/5): missing a way to get around in all your pages.\t\r\n\r\n– Images (5/5)\r\n\t\t\t\t\r\n– JavaScript (1/5): You can use the image carousel to display the beers.\r\n\r\n– Text (4/5): great start but it looks like some of them can include more text \r\n\r\n– Organization (5/5): It looks very organize\r\n\r\n– Footer (4/5): Your name is missing, that’s it.
-111	2017-11-10 16:39:39.985854+00	52	rist4093	marq6695	Home:5\r\n-The homepage is named correctly, communicates the purpose and is very enticing!\r\n\r\nBanner:5 \r\n-I love the Banner! It is on every page and I like how the home page banner is a little different from the other pages.\r\n\r\nLayout: 5\r\n-Good use of white space, overall it looks great!\r\n\r\nPages: 5\r\n-Has all 5 pages with good names!\r\n\r\nMenu:5\r\n-Has a main menu with links to all pages and present on every page. Really like how the menu is at the top and at the bottom.\r\n\r\nImages:5\r\n-Every page has an image.\r\n\r\nJavaScript: 4.5\r\n-Nice signup page, consider adding a page to connect to it.\r\n\r\nText: 4.5\r\n-Website has a clear message, good grammar, spelling and grabs your attention. I would recommend removing the "bullets" on the services and events pages.\r\n\r\nOrganization: 5\r\n-Purpose is clear and navigation is great!\r\n\r\nFooter: 5\r\n-Footer is very nice, I like how it also has the logo at the bottom. \r\n\r\nGave you an extra 3 points because your website is really, really good. It was hard for me to find anything to give you feedback on! Good Job!
-112	2017-11-10 16:40:44.250508+00	41	marq6695	hans9131	Home: 4\r\nNeed to add java and content but otherwise looks good.\r\nBanner: 4\r\nAssuming it is the UNC logo, it needs to be added to all pages.\r\nLayout: 4\r\nLayout looks good and there is consistency over all pages. My only suggestion would be to to add a little height to your images so they don't look as squished.\r\nPages: 5\r\nThere are 5 pages with appropriate names.\r\nMenu: 5\r\nMenu looks good, all links work, and it is present on all pages.\r\nImages: 5\r\nJust look into changing the height.\r\nJavascript: 2\r\nThere is a plan for where it is going it just needs to be executed.\r\nText: 2\r\nText has be planned just needs to be added.\r\nOrganization: 5\r\nClear organization\r\nFooter: 5\r\nFooter is present and has copyright.
-113	2017-11-10 16:41:04.169477+00	39	mull9451	bell1486	Home:(5) The home page is correctly named, and does communicated the primary purpose of the site. There is some what of enticement to go further.\r\n\r\nBanner: (4) The banner of your name looks good but the images are not appearing.\r\n\r\nLayout: (3) work on the layout there is no margin or padding, no columns or sidebars. and there is nothing on the other pages.\r\n\r\nPages: (4) There are five pages but there is no content. All have good names.\r\n\r\nMenu: (4) The menu have at least four items, they connect to blank pages, and there is no menu on the other pages.\r\n\r\nImages: (3) Images do not appear.\r\n\r\nJava Script: (2) There is no javascript.\r\n\r\nText: (5) There is a clear message and good grammar.\r\n\r\nOrganization: (4) The organization cold improve if the layout improves.\r\n\r\nFooter:(4) Footer is there and unique could be the more attractive.
-114	2017-11-10 16:44:45.127281+00	21	lang8151	espi0784	Notes:\r\n\r\n– Home (1/5)missing a lot of things in your home page \r\n\r\n– Banner (1/5): I couldn’t find any banner in any page.\r\n\r\n– Layout (5/5): your layout has the right idea.\r\n\r\n– Pages (3/5): the outline of the pages are correct but all your pages are empty.\r\n\r\n– Menu (5/5): good inclusion of the menu in all pages.\t\r\n\r\n– Images (0/5)no images\r\n\t\t\t\t\r\n– JavaScript (0/5): \r\n\r\n– Text (1/5): there is little to no text\r\n\r\n– Organization (4/5): the organization is really good\r\n\r\n– Footer (1/5): do not have one just the lay out.
-115	2017-11-10 16:48:13.20276+00	45	weav8611	bell1486	Home: (5) Home page is named correctly, communicates the purpose (could make the paragraph more appealing to readers.\r\n\r\nBanner: (4) Banner does not display\r\n\r\nLayout: (5) There is a good layout present, with white space, padding, and margins.\r\n\r\nPages: (3) The pages are there and have good names but no content.\r\n\r\nMenu: (4) Menu is great. except not on every page.\r\n\r\nImages: (4) Images are there but do not display.\r\n\r\nJavaScipt: (5) Working Carasel\r\n\r\nText: (5) All grammar is correct, could improve appeal to audience though.\r\n\r\nOrganization: (5) Organization is good and logical. There is a clear purpose and path, and does support your business goals.\r\n\r\nFooter:(5) All there and centered.
-116	2017-11-10 16:48:40.512212+00	36	lang8151	espi0784	Home (5/5)\r\n\r\n– Banner (3/5): i think its a good start you just need an actual banner\r\n\r\n– Layout (5/5): Keep in mind that a consistent layout design will make it easier for anyone who visits your website to look around the pages.\r\n\r\n– Pages (4/5): Some pages feel a little ‘empty’, but I guess it’s because I’m looking at a prototype.\r\n\r\n– Menu (4/5): missing a way to get around in all your pages.\t\r\n\r\n– Images (5/5)\r\n\t\t\t\t\r\n– JavaScript (1/5): You can use the image carousel to display the beers.\r\n\r\n– Text (4/5): great start but it looks like some of them can include more text \r\n\r\n– Organization (5/5): It looks very organize\r\n\r\n– Footer (4/5): Your name is missing, that’s it.
-117	2017-11-10 16:50:09.738727+00	47	hern6661	cruz3674	Review Checklist\r\n\r\nScore each website based on the quality of the features\r\n\r\nHome 5\r\nBanner 4\r\nLayout 4\r\nPages 5\r\nMenu 5\r\nImages 5\r\nJavaScript 5\r\nText 5            \r\nOrganization 4\r\nFooter       5\r\n\r\n\r\n\r\nHome 5\r\n\r\nIs the home page named correctly? MySite/index.hml \r\nYes \r\n\r\nDoes it communicate the primary purpose of the site?\r\nYes, it is a wedding site.\r\n\r\nIs there an enticement to learn more?\r\nYes there is a lot of interesting content that i look forward to see, such as DIYs\r\n\r\nBanner 4\r\n\r\nDoes the banner have attractive artwork?\r\nYes it does, its colorful and flows with the theme\r\n\r\nIs the banner used on each page of the website?\r\nUnfortunately not but this is something that can be easily fixed \r\n\r\nIs a nice font used for the banner?\r\nYes, however i think it should be a little smaller that way it looks more sleek\r\n\r\nLayout 4\r\n\r\nIs there good use of white space? margin/padding\r\nYes\r\nIs these some kind of multiple columns or sidebars?\r\nYes\r\nIs every page consistent?\r\nYes\r\n\r\nPages 5\r\n\r\nAre there at least five pages?\r\nYes\r\nDo they have good names?\r\nYes, they are straight to the point and the content within it fits the name\r\n\r\nMenu 5\r\n\r\nIs there a main menu with at least four items?\r\nYes\r\nDo all links connect to a page?\r\nYes\r\nIs the menu present on each page?\r\nYes\r\n\r\nImages 5\r\n\r\nAre there attractive images on each page?\r\nYes\r\nIs there attribution of the image owners?\r\nYes\r\nDo the images enhance the theme of the website?\r\nYes they do however the sizing should be changed on the cakes page, to make it better.\r\nGood use of color and fonts for visual appeal?\r\nYes, i love the color scheme! Normally i see pink for wedding websites but i really like how you chose a lilac color because its more calming \r\n\r\nJavaScript-5\r\n\r\nIs there a fancy JavaScript control somewhere on the website?\r\nYes\r\nDoes this control enhance the appeal of the website?\r\nYes \r\n\r\nText 5\r\n\r\nDoes this website have a clear message?\r\nYes, it is clear that this is a wedding website\r\nIs writ with goodly grammar and spell?\r\nYes, everything is spelled correctly \r\nDoes the text grab your attention?\r\nYes. however i think it should be a little bit smaller, but thats just my personal opinion, i know some people would rather look at bigger text \r\n\r\nOrganization 5\r\n\r\nIs the purpose of your site clear?\r\nYes, its straight to the point and has nice graphics in the home page that make you want to look further in the website \r\nIs the navigation path clear?\r\nYes\r\nDoes the organization of the site support your business goals?\r\nYes\r\n\r\nFooter\r\n\r\nIs there an attractive footer?\r\nYes, i love how it matches your website\r\nDoes this site have a copyright notification\r\nYes
-118	2017-11-10 16:50:20.747262+00	12	carl9668	hans9131	Home: 1\r\nTitle does not reflect the purpose of the site. There is no css used.\r\nBanner:1\r\nThere is a spot for the logo but nothing shows up.\r\nLayout:1\r\nNo content to show adequate layout.\r\nPages:2\r\nThere are 5 pages with links to 4 of them but all the pages are named the same and the 4 linked pages only say sample text.\r\nMenu:1\r\nLinks for the menu appear as a list and not a menu format.\r\nImages:1\r\nThere is one image on the main page but not quite sure what it has to do with the site.\r\nJavascript:1\r\nThere is no javascript.\r\nText:1\r\nThere is no content.\r\nOrganization:1\r\nNot enough content to show organization.\r\nFooter:2 \r\nThere is a footer with copyright on the main page.
-119	2017-11-10 16:53:20.551862+00	47	orti8903	espi0784	Home (5/5)\r\n\r\n– Banner (5/5): really enjoy your the banner\r\n\r\n– Layout (5/5): great layout looks really good.\r\n\r\n– Pages (4/5): Some pages feel a little ‘empty’, but I guess it’s because I’m looking at a prototype.\r\n\r\n– Menu (5/5):included in all your pages.\t\r\n\r\n– Images (5/5)\r\n\t\t\t\t\r\n– JavaScript (4/5): the names on the image carousel don't make sense but it is really good.\r\n\r\n– Text (4/5): great start but it looks like some of them can include more text \r\n\r\n– Organization (5/5): It looks very organize\r\n\r\n– Footer (5/5): .
-120	2017-11-10 16:54:13.903229+00	12	hans9131	marq6695	Home:3\r\n-The homepage is named correctly! I would recommend adding text to communicate the purpose of your site.\r\nBanner:1\r\n- Banner has an image. I would recommend downsizing the image.\r\nLayout:0\r\n-Pages do not have columns or sidebars\r\nPages:1\r\n-I see your site has the links for the additional pages, but I could not access them. \r\nMenu:1\r\n-The Menu just says page1, page2, etc. I would recommend adding names to your menu tabs.\r\nImages:1\r\n-Since I could not access your other pages, I only saw the one image on your home page.\r\nJavaScript:0\r\n-There is no JavaScript. Would recommend adding some to make your site more appealing.\r\nText:0\r\n-The website has no text and therefore, no clear message about its purpose.\r\nOrganization:0\r\n-Not sure what the websites purpose it, could use some more clarification.\r\nFooter:5\r\n- Website has a footer with a copyright notification.
-121	2017-11-10 16:55:55.025099+00	48	marq6695	carl9668	Home - The site is named mysite.html instead of mysite/index.html but the link works and is easy to find. It does communicate its message. It does entice. 5\r\n\r\nBanner - The banner is attractive. Banner is not used on each page, just the main. The font is clear and attractive. 4\r\n\r\nLayout - There is good use of white space, logos and links are spaced out well. Margins are good. Sidebars are structured very well. Pages are all consistent. 5\r\n\r\nPages - There are exactly 5 pages. They do have consistent names. 5\r\n\r\nMenu - There is a main menu that is easy to navigate. Links do connect to each other smoothly. Menu is present in each page. 5\r\n\r\nImages - They are attractive and add to each page. Images do enhance the site's attractiveness. There are a few colors, could use more to make it more attractive, but the central focus is there with the design. 4\r\n\r\nJavaScript - yes 5\r\n\r\nText - Message is clear, good grammar. 5\r\n\r\nOrganization - very consistent and clear. navigation is easy. 5\r\n\r\nFooter - yes it is attractive and copyright is there. 5
-122	2017-11-10 17:01:44.946612+00	19	milt0773	cruz3674	Website Features\r\n\r\nHome 4\r\n\r\nIs the home page named correctly? MySite/index.hml\r\nNo\r\nDoes it communicate the primary purpose of the site?\r\nYes, it purpose is being vegan\r\nIs there an enticement to learn more?\r\nyes, i'm not to knowledgeable in this are so i would love to learn more\r\n\r\nBanner 3\r\n\r\nDoes the banner have attractive artwork?\r\nNo\r\nIs the banner used on each page of the website?\r\nNo\r\nIs a nice font used for the banner?\r\nYes\r\n\r\nLayout 2\r\n\r\nIs there good use of white space? margin/padding\r\nNo white space\r\nIs these some kind of multiple columns or sidebars?\r\nKind of, there is only the top menu on home page\r\nIs every page consistent?\r\nOnly home page works\r\n\r\nPages 2\r\n\r\nAre there at least five pages?\r\nNo\r\nDo they have good names?\r\nYes, but no pages open \r\n\r\nMenu 1\r\n\r\nIs there a main menu with at least four items?\r\nYes\r\nDo all links connect to a page?\r\nNo\r\nIs the menu present on each page?\r\nNo\r\nImages-0\r\n\r\nAre there attractive images on each page?\r\nNo\r\nIs there attribution of the image owners?\r\nNo\r\nDo the images enhance the theme of the website?\r\nNo\r\nGood use of color and fonts for visual appeal?\r\nNo\r\n\r\nJavaScript-0\r\n\r\nIs there a fancy JavaScript control somewhere on the website?\r\nNo\r\nDoes this control enhance the appeal of the website?\r\nNo\r\n\r\nText 5\r\n\r\nDoes this website have a clear message?\r\nyes\r\nIs writ with goodly grammar and spell?\r\nyes\r\nDoes the text grab your attention?\r\nyes\r\n\r\nOrganization-2\r\n\r\nIs the purpose of your site clear?\r\nYes\r\nIs the navigation path clear?\r\nNo\r\nDoes the organization of the site support your business goals?\r\nNo because there is not enough information \r\n\r\nFooter 0\r\n\r\nIs there an attractive footer?\r\nNo\r\nDoes this site have a copyright notification?\r\nNo
-123	2017-11-10 17:08:48.802434+00	10	milt0773	cruz3674	Home 1\r\n\r\nIs the home page named correctly? MySite/index.hml\r\nno\r\nDoes it communicate the primary purpose of the site?\r\nno\r\nIs there an enticement to learn more?\r\nno\r\n\r\nBanner 1\r\n\r\nDoes the banner have attractive artwork?\r\nno\r\nIs the banner used on each page of the website?\r\nno\r\nIs a nice font used for the banner?\r\nno\r\n\r\nLayout 1\r\n\r\nIs there good use of white space? margin/padding\r\nno\r\nIs these some kind of multiple columns or sidebars?\r\nno\r\nIs every page consistent?\r\nno\r\nPages-1\r\n\r\nAre there at least five pages?\r\nno\r\nDo they have good names?\r\nno\r\nMenu-0\r\n\r\nIs there a main menu with at least four items?\r\nno\r\nDo all links connect to a page?\r\nno\r\nIs the menu present on each page?\r\nno\r\n\r\nImages-1\r\n\r\nAre there attractive images on each page?\r\nno\r\nIs there attribution of the image owners?\r\nno\r\nDo the images enhance the theme of the website?\r\nno\r\nGood use of color and fonts for visual appeal?\r\n\r\nno\r\nJavaScript-1\r\n\r\nIs there a fancy JavaScript control somewhere on the website?\r\nno\r\nDoes this control enhance the appeal of the website?\r\nno\r\n\r\nText-0\r\n\r\n\r\n\r\nDoes this website have a clear message?\r\nno\r\nIs writ with goodly grammar and spell?\r\nno\r\nDoes the text grab your attention?\r\nno\r\n\r\nOrganization-1\r\n\r\nIs the purpose of your site clear?\r\nno\r\n\r\nIs the navigation path clear?\r\nno\r\nDoes the organization of the site support your business goals?\r\n\r\nno\r\nFooter-1\r\n\r\nIs there an attractive footer?\r\nno\r\n\r\nDoes this site have a copyright notification?\r\nno\r\n\r\n\r\n\r\nLet me know if i made a mistake in grading you, i couldn't find your website so i gave you the lowest score
-124	2017-11-10 17:10:07.147069+00	47	herr9858	cutl7614	- I still pretty much stick by how I graded before. The only difference is that I agree that the menu's format overlaps when using a smaller device or smaller window, so its not responsive to other formats.\r\n\r\nGrading is the exact same as last time, I just chose to add comments for the things I liked about each element. :)\r\n\r\n1. Home - Score: 5\r\n        - As another reviewer mentioned, I really liked the gray background! It adds a level of polish and lets your words and images stick out more.\r\n2. Banner - Score: 5\r\n        - Your banner was neat, legible, simple, and looked well-formatted. I appreciate how thin it was, and that it didn't take up a huge fraction of the page.\r\n3. Layout - Score: 4\r\n\t- All the pages look consistent except for the "More resources" page, which has different margins then the other pages of the site. I would recommend making the margins the same as the other pages'.\r\n        - Other than that, I appreciate how modern and sleek the layouts generally look. Great use of space!\r\n4. Pages - Score: 5\r\n        - Nice topics for each page. They were labeled clearly and each had an important purpose that added to the topic.\r\n5. Menu - Score: 5\r\n        - As I mentioned above, the menu looks great, however it needs to be able to be formatted well on any device and window size.\r\n6. Images - Score: 4\r\n\t- There weren't any images on the "Future Eclipses" or "More resources" pages. All other images looked very neat!\r\n7. JavaScript - Score: 5\r\n        - I especially like the "More Resources" page - the tabs are very useful, and organizes the information so well. I love how efficient it is and how much room it saves.\r\n8. Text - Score: 4\r\n\t- The text was a little sparse on each page. I know it was a rough draft, however, so just make sure to flesh out the pages more with a narrative. \r\n        - I should note that the reason I scored this a 4 and not a 5 isn't because of the lack of text, it's because I interpreted the "blah blah blah" on the home page as improper grammar.\r\n9. Organization - Score: 5\r\n        - I like the organization. You draw the readers in with an awesome slideshow of cool pictures, then tell them about eclipses and how they happen. As it stands, the "Equipment Used" tab seems superfluous, with only a telescope on it, and it would be better having that information on the same page as the "Eclipse Pictures," however, you may decide to add more to that page (like eclipse-viewing sun glasses and where to get them, or a the "piece of paper with a hole in it" trick) to make the page seem more valid. If you did that, you might consider renaming the page to "How do you View it?" or something like that.\r\n10. Footer - Score: 5\r\n        - It doesn't really matter, but I just want to mention that the footer on your "More Resources" page is colored gray instead of black like on every other page, in case you wanted to change that. \r\n\r\n- Again, I love your topic and can't wait to see each page more fleshed-out! Awesome job so far!
-125	2017-11-10 17:12:35.379745+00	42	hans9131	marq6695	For some reason your page takes quite a bit to load.\r\n\r\nHome:5\r\n-The homepage is named correctly and communicates the purpose. \r\nBanner:4\r\n-Your banner is only on your homepage. Would consider adding it to all your pages.\r\nLayout:4\r\nPages:5\r\n-You have all five pages and they have good names. \r\nMenu:4\r\n-I would recommend having the same menu on all five pages. And mainly, making the "home" tab the first one in the row.\r\nImages:5\r\n-All the pages have images.\r\nJavaScript:0\r\n-I didn't see any JavaScript. Possibly consider adding some.\r\nText:5\r\n-The text clarifies the purpose of the page.\r\nOrganization:5\r\n-Purpose of your site was clear. \r\nFooter:5\r\n-Does have a footer with a copyright notification.
-126	2017-11-10 17:12:53.313491+00	49	hans9131	carl9668	Home - My site index is used. it does communicate its purpose. 5\r\n\r\nBanner - banner is attractive, it isn't used in every page. font is nice. 4\r\n\r\nLayout - Very good use of white space, design is consistent. There is a row of links, each with their own design language. Pages are consistent. 5\r\n\r\nPages - There are more than 5 pages, it is detailed overall and names make sense and are easy to navigate. 5\r\n\r\nMenu - There is a main menu. Links work good, however, home page and equipment load sometimes, so maybe that's an internet issue rather than code. Not sure, but it works for the most part and it looks good. Menu is present in each page. 5\r\n\r\nImages - great use of images. Gets the idea through to the viewer. Very attractive use of them, and the theme is consistent with the topic. Good use of colors. 5\r\n\r\nJavaScript - yes 5\r\n\r\nText - Text is clear, didn't find any errors or grammar problems. Text does grab my attention to specific items. 5\r\n\r\nOrganization - navigation is clear, consistent and simple. 5\r\n\r\nFooter - Yes it is there. 5
-127	2017-11-10 17:22:57.449188+00	49	rist4093	carl9668	Home - Yes, names correctly, clear purpose, very enticing. 5\r\n\r\nBanner - Banner is used for every page. Consistent and clear. Nice font and design. 5\r\n\r\nLayout - great use of white space, and ties into design layout very well. There are bars above each page that are easy to navigate to and read. 5\r\n\r\nPages - Exactly 5 pages, each easy to read and navigate to and full of content. Nothing needs to be added, because its purpose is clear, but you could add more if you get any more ideas. Really like the menus and how they're laid out. Couldn't tell it was from a course. 5\r\n\r\nMenu - Menu is there and it is consistent across the site. Links work well. 5\r\n\r\nJavaScript - yes 5\r\n\r\nText - very clear and fonts are nice and easy to read. Grammar is good, and grabs my attention. 5\r\n\r\nOrganization - purpose is very clear and navigation is as easy as can be even for someone new to the internet. 5\r\n\r\nFooter - yes and copyright is there in text, however the only adjustment that would make this page absolutely perfect would be the actual copyright logo, but everything else is spot on. 4
-128	2017-11-11 17:31:27.541316+00	0	stre7262	stre7262	Nov. 10, 2017, 10:22 a.m.\tcarl9668\trist4093\r\nNov. 10, 2017, 10:12 a.m.\tcarl9668\thans9131\r\nNov. 10, 2017, 10:12 a.m.\tmarq6695\thans9131\r\nNov. 10, 2017, 10:10 a.m.\tcutl7614\therr9858\r\nNov. 10, 2017, 10:08 a.m.\tcruz3674\tmilt0773\r\nNov. 10, 2017, 10:01 a.m.\tcruz3674\tmilt0773\r\nNov. 10, 2017, 9:55 a.m.\tcarl9668\tmarq6695\r\nNov. 10, 2017, 9:54 a.m.\tmarq6695\thans9131\r\nNov. 10, 2017, 9:53 a.m.\tespi0784\torti8903\r\nNov. 10, 2017, 9:50 a.m.\thans9131\tcarl9668Nov. 10, 2017, 10:22 a.m.\tcarl9668\trist4093\r\nNov. 10, 2017, 10:12 a.m.\tcarl9668\thans9131\r\nNov. 10, 2017, 10:12 a.m.\tmarq6695\thans9131\r\nNov. 10, 2017, 10:10 a.m.\tcutl7614\therr9858\r\nNov. 10, 2017, 10:08 a.m.\tcruz3674\tmilt0773\r\nNov. 10, 2017, 10:01 a.m.\tcruz3674\tmilt0773\r\nNov. 10, 2017, 9:55 a.m.\tcarl9668\tmarq6695\r\nNov. 10, 2017, 9:54 a.m.\tmarq6695\thans9131\r\nNov. 10, 2017, 9:53 a.m.\tespi0784\torti8903\r\nNov. 10, 2017, 9:50 a.m.\thans9131\tcarl9668Nov. 10, 2017, 10:22 a.m.\tcarl9668\trist4093\r\nNov. 10, 2017, 10:12 a.m.\tcarl9668\thans9131\r\nNov. 10, 2017, 10:12 a.m.\tmarq6695\thans9131\r\nNov. 10, 2017, 10:10 a.m.\tcutl7614\therr9858\r\nNov. 10, 2017, 10:08 a.m.\tcruz3674\tmilt0773\r\nNov. 10, 2017, 10:01 a.m.\tcruz3674\tmilt0773\r\nNov. 10, 2017, 9:55 a.m.\tcarl9668\tmarq6695\r\nNov. 10, 2017, 9:54 a.m.\tmarq6695\thans9131\r\nNov. 10, 2017, 9:53 a.m.\tespi0784\torti8903\r\nNov. 10, 2017, 9:50 a.m.\thans9131\tcarl9668
-129	2017-11-13 07:31:29.843145+00	27	tutt7678	adel4571	**Graded on where the final project should be located, the index.html**\r\n\r\nHome : 1\r\n\r\nIs the home page named correctly? MySite/index.hml: No\r\nDoes it communicate the primary purpose of the site? : Yes, it is a home page for the class in gneeral but not specific to this project\r\nIs there an enticement to learn more?: No\r\n\r\nBanner: 2\r\n\r\nDoes the banner have attractive artwork? Yes, the unco banner. Not specfic to a website created for this project however\r\nIs the banner used on each page of the website? Yes, just about\r\nIs a nice font used for the banner? Yes\r\n\r\nLayout 4\r\n\r\nIs there good use of white space? margin/padding: yes\r\nIs these some kind of multiple columns or sidebars? yes\r\nIs every page consistent? yes\r\n\r\nPages 3\r\n\r\nAre there at least five pages? yes, but they are all the same and don't lead anywhere new\r\nDo they have good names? yes\r\n\r\nMenu 5\r\n\r\nIs there a main menu with at least four items? yes\r\nDo all links connect to a page? yes but they are all the same. no different context\r\nIs the menu present on each page? yes but each page is the same thing, nothing different is on any page. \r\n\r\nImages: 1\r\nAdd unique images to each page\r\n\r\nJavascript: 2\r\nI would add an image carousel or an accordion or email subscription to add to the javascript that we had learned in class. \r\n\r\nText: 2\r\nNo text of substance, just mostly bullet points. I would add content to add to the website. \r\n\r\nOrganization: 5\r\nThe website I can access is very organzied\r\n\r\nFooter: 2\r\nadd a copyright symbol and your name or the websites name
-131	2017-11-13 16:29:33.877657+00	14	carl9668	rist4093	I found your page\r\nHome: 2\r\nThe page is there but has no clear content or purpose\r\nBanner: 1\r\nThere is no logo or space for banner\r\nLayout: 1\r\nThere is no layout\r\nPages: 1 \r\nNone of your pages connect to anything. \r\nMenu: 2\r\nYou have a menu with named items, but they don’t connect to anything\r\nImages: 1\r\nThere is one image but has no clear purpose and is over sized\r\nJavaScript: 1\r\nThere is no javascript\r\nText: 1\r\nThere is no text\r\nOrganization: 1\r\nThere is very little content so it is hard to have a navigation path. \r\nFooter: 3\r\nIt has the copyright.
-71	2017-11-09 00:08:19.859297+00	49	shin8899	here9018	1. Home page is named correctly. There is no image on the front page and not much information about the site.\r\n2. The banner is well put together and looks good, nice job. \r\n3. Not much information on the site.\r\n4. Site is easy to navigate. Menu works well.\r\n5. copyright is included at the footer.\r\n6. Good use of colors in the site. They all nicely together.\r\n\r\nSite looks good overall and is well put together. A little more information could be added to help the user navigate it and know more about it.
-132	2017-11-17 16:33:25.189013+00	50	cutl7614	herr9858	cutl7614\r\nScore: 48\r\n5 Index/Home Page - Looks great, formatted well, I really like the colors that pop and grab the readers attention. Good work!\r\n5 Banner - Banner is ok, if you could redesign it at a larger resolution, it would solve the stretched look.\r\n5 Layout - Looks good, fairly organized pages are easy to find and all the links in the main menu work.\r\n5 Pages - All five pages are present and return no errors.\r\n5 Menu - Menu is great, looks very nice and functions properly.\r\n5 Images - All the Images are there, and formatted nicely, well done.\r\n5 JavaScript - Implementation of javascript is done well, and is formatted nicely.\r\n5 Text - For the most part the text is satisfactory.\r\n5 Organization - Very organized, navigation is clear and easy.\r\n5 Footer - Footer is on every page centered and correctly formatted.
-133	2017-11-17 16:34:17.711262+00	47	hern6661	cruz3674	Home 5\r\n\r\nIs the home page named correctly? MySite/index.hml \r\nYes \r\n\r\nDoes it communicate the primary purpose of the site?\r\nYes, it is a wedding site.\r\n\r\nIs there an enticement to learn more?\r\nYes there is a lot of interesting content that i look forward to see, such as DIYs\r\n\r\nBanner 4\r\n\r\nDoes the banner have attractive artwork?\r\nYes it does, its colorful and flows with the theme\r\n\r\nIs the banner used on each page of the website?\r\nUnfortunately not but this is something that can be easily fixed \r\n\r\nIs a nice font used for the banner?\r\nYes, however i think it should be a little smaller that way it looks more sleek\r\n\r\nLayout 4\r\n\r\nIs there good use of white space? margin/padding\r\nYes\r\nIs these some kind of multiple columns or sidebars?\r\nYes\r\nIs every page consistent?\r\nYes\r\n\r\nPages 5\r\n\r\nAre there at least five pages?\r\nYes\r\nDo they have good names?\r\nYes, they are straight to the point and the content within it fits the name\r\n\r\nMenu 5\r\n\r\nIs there a main menu with at least four items?\r\nYes\r\nDo all links connect to a page?\r\nYes\r\nIs the menu present on each page?\r\nYes\r\n\r\nImages 5\r\n\r\nAre there attractive images on each page?\r\nYes\r\nIs there attribution of the image owners?\r\nYes\r\nDo the images enhance the theme of the website?\r\nYes they do however the sizing should be changed on the cakes page, to make it better.\r\nGood use of color and fonts for visual appeal?\r\nYes, i love the color scheme! Normally i see pink for wedding websites but i really like how you chose a lilac color because its more calming \r\n\r\nJavaScript-5\r\n\r\nIs there a fancy JavaScript control somewhere on the website?\r\nYes\r\nDoes this control enhance the appeal of the website?\r\nYes \r\n\r\nText 5\r\n\r\nDoes this website have a clear message?\r\nYes, it is clear that this is a wedding website\r\nIs writ with goodly grammar and spell?\r\nYes, everything is spelled correctly \r\nDoes the text grab your attention?\r\nYes. however i think it should be a little bit smaller, but thats just my personal opinion, i know some people would rather look at bigger text \r\n\r\nOrganization 5\r\n\r\nIs the purpose of your site clear?\r\nYes, its straight to the point and has nice graphics in the home page that make you want to look further in the website \r\nIs the navigation path clear?\r\nYes\r\nDoes the organization of the site support your business goals?\r\nYes\r\n\r\nFooter\r\n\r\nIs there an attractive footer?\r\nYes, i love how it matches your website\r\nDoes this site have a copyright notification\r\nYes
-134	2017-11-17 16:35:46.415766+00	20	cruz3674	milt0773	Website Features\r\n\r\nHome 5\r\n\r\nIs the home page named correctly? MySite/index.hml\r\nYes\r\nDoes it communicate the primary purpose of the site?\r\nYes, it purpose is being vegan\r\nIs there an enticement to learn more?\r\nyes, i'm not to knowledgeable in this are so i would love to learn more\r\n\r\nBanner 3\r\n\r\nDoes the banner have attractive artwork?\r\nNo\r\nIs the banner used on each page of the website?\r\nNo\r\nIs a nice font used for the banner?\r\nYes\r\n\r\nLayout 2\r\n\r\nIs there good use of white space? margin/padding\r\nNo white space\r\nIs these some kind of multiple columns or sidebars?\r\nKind of, there is only the top menu on home page\r\nIs every page consistent?\r\nOnly home page works\r\n\r\nPages 2\r\n\r\nAre there at least five pages?\r\nNo\r\nDo they have good names?\r\nYes, but no pages open \r\n\r\nMenu 1\r\n\r\nIs there a main menu with at least four items?\r\nYes\r\nDo all links connect to a page?\r\nNo\r\nIs the menu present on each page?\r\nNo\r\nImages-0\r\n\r\nAre there attractive images on each page?\r\nNo\r\nIs there attribution of the image owners?\r\nNo\r\nDo the images enhance the theme of the website?\r\nNo\r\nGood use of color and fonts for visual appeal?\r\nNo\r\n\r\nJavaScript-0\r\n\r\nIs there a fancy JavaScript control somewhere on the website?\r\nNo\r\nDoes this control enhance the appeal of the website?\r\nNo\r\n\r\nText 5\r\n\r\nDoes this website have a clear message?\r\nyes\r\nIs writ with goodly grammar and spell?\r\nyes\r\nDoes the text grab your attention?\r\nyes\r\n\r\nOrganization-2\r\n\r\nIs the purpose of your site clear?\r\nYes\r\nIs the navigation path clear?\r\nNo\r\nDoes the organization of the site support your business goals?\r\nNo because there is not enough information \r\n\r\nFooter 0\r\n\r\nIs there an attractive footer?\r\nNo\r\nDoes this site have a copyright notification?\r\nNo
-135	2017-11-17 16:37:36.990507+00	48	mont0846	adel4571	Home:5\r\n\r\nIs the home page named correctly? MySite/index.hml \r\nYes!\r\n\r\nDoes it communicate the primary purpose of the site?\r\nYes\r\n\r\nIs there an enticement to learn more?\r\nyes \r\n\r\nBanner:4\r\n\r\nDoes the banner have attractive artwork? yes\r\nIs the banner used on each page of the website? no, only on the home page\r\nIs a nice font used for the banner? It is a relevant picture\r\n\r\nLayout:5\r\n\r\nIs there good use of white space? margin/padding : yes\r\nIs these some kind of multiple columns or sidebars? : yes\r\nIs every page consistent?: yes\r\n\r\nPages: 5\r\n\r\nAre there at least five pages? : yes\r\nDo they have good names? Yes\r\n\r\nMenu: 5\r\n\r\nIs there a main menu with at least four items?: yes\r\nDo all links connect to a page? : yes\r\nIs the menu present on each page?: yes\r\n\r\nImages: 5\r\n\r\nAre there attractive images on each page? Yes\r\nIs there attribution of the image owners? no, but I'm sure it was from a free site\r\nDo the images enhance the theme of the website? yes\r\nGood use of color and fonts for visual appeal? yes\r\n\r\nJavaScript: 5\r\n\r\nIs there a fancy JavaScript control somewhere on the website? yes\r\nDoes this control enhance the appeal of the website? yes\r\n\r\nText: 4\r\n\r\nDoes this website have a clear message? yes\r\nIs writ with goodly grammar and spell? yes, the menu "about: is still spelled "ahout" on some pages\r\nDoes the text grab your attention? yes\r\n\r\nOrganization: 5\r\n\r\nIs the purpose of your site clear? yes\r\nIs the navigation path clear? yes\r\nDoes the organization of the site support your business goals? yes\r\n\r\nFooter: 5\r\n\r\nIs there an attractive footer? yes\r\nDoes this site have a copyright notification? yes
-136	2017-11-17 16:40:58.854444+00	43	bell1486	mull9451	Home: No project site. Unable to find on regular server. Almost thought there was no site at all. 3/5. Your "home" tab is broken...it is supposed to reference the index page.\r\n\r\nBanner: The banner is awesome! Great job. 5/5\r\n\r\nLayout: The page layout is decent. A little broken in some areas, but it is still there! 5/5\r\n\r\nPages: The pages are all the same layout. Flow well together, but not centered. But you have 5 pages. 5/5\r\n\r\nMenu: Menu at the top it well organized. 5/5\r\n\r\nImages: The images are not showing up for some reason, only on the index page. 4/5.\r\n\r\nJavaScript: Good. 5/5\r\n\r\nText: Not any text. 1/5\r\n\r\nOrganization: 5/5\r\n\r\nFooter: Good. 5/5
-137	2017-11-17 16:43:24.317431+00	50	weav8611	enge7698	Review Checklist\r\nScore each website based on the quality of the features\r\n1.\tHome – 5 stars\r\n2.\tBanner – 5 stars\r\n3.\tLayout – 5 stars\r\n4.\tPages – 5 stars\r\n5.\tMenu – 5 stars\r\n6.\tImages – 5 stars\r\n7.\tJavaScript – 5 stars\r\n8.\tText – 5 stars\r\n9.\tOrganization – 5 stars\r\n10.\tFooter – 5 stars\r\n\r\nScore (Stars)\r\n1.\tFeature is missing\r\n2.\tFeature is not working properly\r\n3.\tFeature has problems\r\n4.\tSome improvements required\r\n5.\tNo further work is needed\r\n\r\nWebsite Features\r\nHome – 5 Stars\r\n•\tIs the home page named correctly? MySite/index.html\r\no\tYes.\r\n•\tDoes it communicate the primary purpose of the site?\r\no\tYes, it provides a summary of what the page is intended to be about.\r\n•\tIs there an enticement to learn more?\r\no\tThe summary provides an enticement to learn more about the full site.\r\n \r\nBanner – 5 Stars\r\n•\tDoes the banner have attractive artwork?\r\no\tYes.\r\n•\tIs the banner used on each page of the website?\r\no\tYes.  \r\n•\tIs a nice font used for the banner?\r\no\tYes.\r\n\r\nLayout – 5 Stars\r\n•\tIs there good use of white space? margin/padding\r\no\tYes.\r\n•\tIs there some kind of multiple columns or sidebars?\r\no\tYes.\r\n•\tIs every page consistent?\r\no\tEvery page is consistent.  \r\n\r\nPages – 5 Stars\r\n•\tAre there at least five pages?\r\no\tThere are 5 pages. \r\n•\tDo they have good names?\r\no\tYes, the names seem to correspond with what’s on each page. \r\n\r\nMenu – 5 Stars\r\n•\tIs there a main menu with at least four items?\r\no\tYes, but the menu does not include the oversee page, except on the index page.  \r\n•\tDo all links connect to a page?\r\no\tYes. \r\n•\tIs the menu present on each page?\r\no\tYes.\r\n\r\nImages – 5 Stars\r\n•\tAre there attractive images on each page?\r\no\tYes. \r\n•\tIs there attribution of the image owners?\r\no\tNo, but if these are your images then there doesn’t need to be. \r\n•\tDo the images enhance the theme of the website?\r\no\tYes. \r\n•\tGood use of color and fonts for visual appeal?\r\no\tYes. \r\n\r\nJavaScript – 5 stars\r\n•\tIs there a fancy JavaScript control somewhere on the website?\r\no\tYes, on the index page.\r\n•\tDoes this control enhance the appeal of the website?\r\no\tYes, but consider adding a title that says that the pictures are a sample of your work, or something to that effect.  \r\n\r\nText – 5 Stars\r\n•\tDoes this website have a clear message?\r\no\tYes.\r\n•\tIs writ with goodly grammar and spell?\r\no\tYes. \r\n•\tDoes the text grab your attention?\r\no\tThe text that you have so far does grab my attention.\r\n\r\nOrganization – 5 Stars\r\n•\tIs the purpose of your site clear?\r\no\tYes.\r\n•\tIs the navigation path clear?\r\no\tYes.\r\n•\tDoes the organization of the site support your business goals?\r\no\tYes.\r\n\r\nFooter – 5 Stars\r\n•\tIs there an attractive footer?\r\no\tYes.\r\n•\tDoes this site have a copyright notification?\r\no\tYes.
-138	2017-11-17 16:45:24.052791+00	50	weav8611	mull9451	Home: Home page is named correctly, has purpose! Looks great. 5/5\r\n\r\nBanner:Banner looks great. 5/5\r\nLayout: Layout is nicely structured. 5/5\r\nPages: Nice job. Some of the layout is a little bit messed up/off center on some of the pages. But not to the point where you cannot understand it. Looks good! 5/5\r\n\r\nMenu: Menu looks good. All of the links work correctly. 5/5\r\n\r\nImages: All images appear! 5/5\r\n\r\nJavaScipt: Carousel 5/5. Nice\r\n\r\nText: Decent! But its there. 5/5\r\n\r\nOrganization: Nice organization. Projects business goal! 5/5\r\n\r\nFooter: Footer is there and looks good. 5/5
-139	2017-11-17 16:45:58.333049+00	50	mate2933	harm4214	Home-5\r\n•\tIs the home page named correctly? MySite/index.hml. \r\no\tYes was named correctly.\r\n•\tDoes it communicate the primary purpose of the site?\r\no\tIt does show the purpose of the site and more  \r\n•\tIs there an enticement to learn more?\r\no\tYes there is it has interesting facts maybe could be moved to the top of the page\r\nBanner-5\r\n•\tDoes the banner have attractive artwork?\r\no\tYes it does  \r\n•\tIs the banner used on each page of the website?\r\no\tYes it is \r\n•\tIs a nice font used for the banner?\r\no\tYes nice and easy to read \r\nLayout-5\r\n•\tIs there good use of white space? margin/padding\r\no\tThere is white space but padding and margin looks good \r\n•\tIs there some kind of multiple columns or sidebars?\r\no\tThere is a top menu but not side bar \r\n•\tIs every page consistent?\r\no\tYes every page is consistent and looks the same \r\nPages-5\r\n•\tAre there at least five pages?\r\no\tYes \r\n•\tDo they have good names?\r\no\tYes they do and looks well \r\nMenu- 5\r\n•\tIs there a main menu with at least four items?\r\no\tYes it has 5 items on it.\r\n•\tDo all links connect to a page?\r\no\tYes they connect to other pages. \r\n•\tIs the menu present on each page?\r\no\tYes it looks really good.\r\nImages-5\r\n•\tAre there attractive images on each page?\r\no\tYes there is \r\n•\tIs there attribution of the image owners?\r\no\tno I don’t see any \r\n•\tDo the images enhance the theme of the website?\r\no\tYes it helps to show what you are reading. \r\n•\tGood use of color and fonts for visual appeal?\r\no\tGood color and font! \r\nJavaScript-5\r\n•\tIs there a fancy JavaScript control somewhere on the website?\r\no\tYes there is one for the interesting facts \r\n•\tDoes this control enhance the appeal of the website?\r\no\tYes it helps to get you interested in the webpage \r\nText-5\r\n•\tDoes this website have a clear message?\r\no\tYes it is about how music can benefit your life \r\n•\tIs writ with goodly grammar and spell?\r\no\tYes everything is spelled correctly and grammar is correct \r\n•\tDoes the text grab your attention?\r\no\tIt does show up and contrast nicely with the background  \r\nOrganization-5\r\n•\tIs the purpose of your site clear?\r\no\tIt is about music benefiting your life and how it does it \r\n•\tIs the navigation path clear?\r\no\tYes it is a clear path\r\n•\tDoes the organization of the site support your business goals?\r\no\tYes the site is well organized and supports the business \r\nFooter-5\r\n•\tIs there an attractive footer? \r\no\tYes the footer is there and works well for the site \r\n•\tDoes this site have a copyright notification?\r\no\tYes \r\n\r\n- Really nice site looks good and gets the point across.
-140	2017-11-17 16:47:52.184748+00	50	adel4571	mont0846	Home\r\n\r\nIs the home page named correctly? MySite/index.hml\r\n-GREAT JOB! I see you fixed your index.\r\nDoes it communicate the primary purpose of the site?\r\n-I can understand that the site is about dogs which is a great start!\r\nIs there an enticement to learn more?\r\n-Yes! The picture of the dog on the homepage makes me want to learn a little more.\r\nBanner\r\nDoes the banner have attractive artwork?\r\n-Yes\r\nIs the banner used on each page of the website?\r\n- No it is only on the main page\r\nIs a nice font used for the banner?\r\n-Yes\r\nLayout\r\n\r\nIs there good use of white space? margin/padding\r\n-Yes\r\nIs these some kind of multiple columns or sidebars?\r\n-Yes!\r\nIs every page consistent?\r\n-Yes! Great Job! I see you fixed the about us link!\r\n\r\nPages\r\n\r\nAre there at least five pages?\r\n-Yes there is including the main page\r\nDo they have good names?\r\n-Yes, I understand what each page is about when I look at the names\r\nMenu\r\n\r\nIs there a main menu with at least four items?\r\n-Yes\r\nDo all links connect to a page?\r\n-yes!\r\nIs the menu present on each page?\r\n-Yes!\r\n\r\nImages\r\n\r\nAre there attractive images on each page?\r\nYes!\r\nIs there attribution of the image owners?\r\n-make sure if it is not your image, give credit to who's it is. But if got it from free images, then you are good!\r\n\r\nDo the images enhance the theme of the website?\r\n-Yes, gives each page character\r\nGood use of color and fonts for visual appeal?\r\n-yes\r\nJavaScript\r\n\r\nIs there a fancy JavaScript control somewhere on the website?\r\n-Yes!\r\nDoes this control enhance the appeal of the website?\r\n-Yes!\r\n\r\nText\r\n\r\nDoes this website have a clear message?\r\nYes!\r\nIs writ with goodly grammar and spell?\r\nyes\r\nDoes the text grab your attention?\r\nyes\r\n\r\nOrganization\r\n\r\nIs the purpose of your site clear?\r\nyes\r\nIs the navigation path clear?\r\nyes\r\nDoes the organization of the site support your business goals?\r\nyes\r\nFooter\r\n\r\nIs there an attractive footer?\r\nyes\r\nDoes this site have a copyright notification?\r\nyes
-141	2017-11-17 16:48:26.558673+00	47	kell7133	weav8611	Home: http://bacs200.unco.edu/kell7133/mysite/index.html. Correct home page name. Clear what it communicates. 5/5 stars \r\n\r\nBanner: Good banner on the MySite page. 5/5 stars\r\n\r\nLayout: Plenty of white space. Pages are consistent. 5/5 stars\r\n\r\nPages: Has 5 pages. Good names. 5/5\r\n\r\nMenu: Has menu with 4 items. Menu on each page 5/5\r\n\r\nImages: Images on each page. 5/5\r\n\r\nJavaScript: JavaScript on index page. 5/5\r\n\r\nText: Maybe add more text on each page. 3/5\r\n\r\nOrganization: Clear. Add more text to help better understand what the page is about on each page. 4/5\r\n\r\nFooter: Has Footer with copyright. On each page. 5/5
-142	2017-11-17 16:52:05.379156+00	50	herr9858	cutl7614	- Heck yeah! You made some great additions/changes to your site dude! :D\r\n\r\n1. Home - Score: 5\r\n- TWO COLUMNS!!! :D\r\n- Bullet Points!!!\r\n- Kick-ass Facts!!!!!!!\r\n- Something I noticed was that the text box went right up against the side of the window when I shortened the window - I think this would look better if there was a margin to the right of the text box, that's the same size as the margin to the left of the picture. It'd add space, ensure the text box wasn't crowding the edge of the window, and would add symmetry.\r\n\r\n2. Banner - Score: 5\r\n- Still looks great, no matter the size of the browser window.\r\n\r\n3. Layout - Score: 5\r\n- You fixed the margins of the "More resources" page! :D\r\n\r\n4. Pages - Score: 5\r\n- You added so much content! Especially to the "More resources" & "Future Eclipses" pages! Loved it!\r\n\r\n5. Menu - Score: 5\r\n- Menu still looks good, but also still does not react well when on a smaller window.\r\n\r\n6. Images - Score: 5\r\n- Images on all pages!! :D And they were CREDITED!!!! Awesome job!\r\n\r\n7. JavaScript - Score: 5\r\n\r\n8. Text - Score: 5\r\n- You added so much text to each page, I loved it. Very interesting and such stellar work (pun intended?).\r\n\r\n9. Organization - Score: 5\r\n\r\n10. Footer - Score: 5\r\n\r\n- You made a lot of surprising improvements! Your site was already really good before, but the additions you made definitely heightened it. Awesome work!
-143	2017-11-17 16:52:13.517092+00	47	bell1486	enge7698	Review Checklist\r\nScore each website based on the quality of the features\r\n1.\tHome – 5 stars\r\n2.\tBanner – 5 stars\r\n3.\tLayout – 5 stars\r\n4.\tPages – 5 stars\r\n5.\tMenu – 4 stars\r\n6.\tImages – 4 stars\r\n7.\tJavaScript – 5 stars\r\n8.\tText – 4 stars\r\n9.\tOrganization – 5 stars\r\n10.\tFooter – 5 stars\r\n\r\nScore (Stars)\r\n1.\tFeature is missing\r\n2.\tFeature is not working properly\r\n3.\tFeature has problems\r\n4.\tSome improvements required\r\n5.\tNo further work is needed\r\n\r\nWebsite Features\r\nHome – 5 Stars\r\n•\tIs the home page named correctly? MySite/index.html\r\no\tYes.\r\n•\tDoes it communicate the primary purpose of the site?\r\no\tYes, it provides a summary of what the page is intended to be about.\r\n•\tIs there an enticement to learn more?\r\no\tThe summary provides an enticement to learn more about the full site.\r\n \r\nBanner – 5 Stars\r\n•\tDoes the banner have attractive artwork?\r\no\tYes.\r\n•\tIs the banner used on each page of the website?\r\no\tYes. \r\n•\tIs a nice font used for the banner?\r\no\tYes.\r\n\r\nLayout – 5 Stars\r\n•\tIs there good use of white space? margin/padding\r\no\tYes.\r\n•\tIs there some kind of multiple columns or sidebars?\r\no\tYes, there are sidebars present.\r\n•\tIs every page consistent?\r\no\tEvery page is consistent.\r\n\r\nPages – 5 Stars\r\n•\tAre there at least five pages?\r\no\tThere are 5 pages.\r\n•\tDo they have good names?\r\no\tThe names fit what the pages seem to be about.\r\n \r\nMenu – 4 Stars\r\n•\tIs there a main menu with at least four items?\r\no\tYes.\r\n•\tDo all links connect to a page?\r\no\tThe home links to the wrong page.  You have it set up to link to “home.html”, but it should be linked to “index.html”.\r\n•\tIs the menu present on each page?\r\no\tYes. \r\n\r\nImages – 4 Stars\r\n•\tAre there attractive images on each page?\r\no\tNo, there are only images on the index page.\r\n•\tIs there attribution of the image owners?\r\no\tNo, but if these are your images then there doesn’t need to be. \r\n•\tDo the images enhance the theme of the website?\r\no\tYes. \r\n•\tGood use of color and fonts for visual appeal?\r\no\tYes. \r\n\r\nJavaScript – 5 stars\r\n•\tIs there a fancy JavaScript control somewhere on the website?\r\no\tYes.\r\n•\tDoes this control enhance the appeal of the website?\r\no\tYes. \r\n\r\nText – 4 Stars\r\n•\tDoes this website have a clear message?\r\no\tYes, but go back and provide information about each page instead of just saying “information about snowboarding”, etc.  \r\n•\tIs writ with goodly grammar and spell?\r\no\tYes.\r\n•\tDoes the text grab your attention?\r\no\tThe text that you have so far does grab my attention.\r\n\r\nOrganization – 5 Stars\r\n•\tIs the purpose of your site clear?\r\no\tYes.\r\n•\tIs the navigation path clear?\r\no\tYes, just fix the menu links.\r\n•\tDoes the organization of the site support your business goals?\r\no\tYes.\r\n\r\nFooter – 5 Stars\r\n•\tIs there an attractive footer?\r\no\tYes.\r\n•\tDoes this site have a copyright notification?\r\no\tYes.
-144	2017-11-17 16:52:40.25687+00	48	drur4653	mont0846	Home\r\n\r\nIs the home page named correctly? MySite/index.hml\r\n-yes!\r\nDoes it communicate the primary purpose of the site?\r\n-Yes!\r\nIs there an enticement to learn more?\r\n-Yes\r\nBanner\r\n\r\nDoes the banner have attractive artwork?\r\n-Yes\r\nIs the banner used on each page of the website?\r\n-it is not on every page\r\nIs a nice font used for the banner?\r\n-on the main page there is!\r\n\r\nLayout\r\n\r\nIs there good use of white space? margin/padding\r\n-Yes!\r\nIs these some kind of multiple columns or sidebars?\r\n-Yes!\r\nIs every page consistent?\r\n-Yes, great Job!\r\n\r\nPages\r\n\r\nAre there at least five pages?\r\n-yes!\r\nDo they have good names?\r\n-Yes!\r\n\r\nMenu\r\n\r\nIs there a main menu with at least four items?\r\n-Yes!\r\nDo all links connect to a page?\r\n-yes! great job!\r\nIs the menu present on each page?\r\n-yes\r\nImages\r\n\r\nAre there attractive images on each page?\r\n-I see that you have the little man on fire on every page! Maybe on the what we do page try to make him more visible, good job though!\r\nIs there attribution of the image owners?\r\n-makes sure it you use someone else's picture, then give them credit. If not you good to go!\r\nDo the images enhance the theme of the website?\r\n-Yes\r\nGood use of color and fonts for visual appeal?\r\n-Yes\r\nJavaScript\r\n\r\nIs there a fancy JavaScript control somewhere on the website?\r\n-Yes\r\nDoes this control enhance the appeal of the website?\r\n-yes\r\n\r\nText\r\n\r\nDoes this website have a clear message?\r\n-yes\r\nIs writ with goodly grammar and spell?\r\n-yes\r\nDoes the text grab your attention?\r\n-yes\r\n\r\nOrganization\r\n\r\nIs the purpose of your site clear?\r\n-yes\r\nIs the navigation path clear?\r\n-yes\r\nDoes the organization of the site support your business goals?\r\n-yes\r\n\r\nFooter\r\n\r\nIs there an attractive footer?\r\nyes\r\nDoes this site have a copyright notification?\r\nyes
-145	2017-11-17 16:55:14.245392+00	50	kaup6567	mont0846	Is the home page named correctly? MySite/index.hml\r\n-Yes!\r\nDoes it communicate the primary purpose of the site?\r\n-yes\r\nIs there an enticement to learn more?\r\n-yes\r\nBanner\r\n\r\nDoes the banner have attractive artwork?\r\n-yes, try to get your logo to work so it adds more POW! Great job though!\r\nIs the banner used on each page of the website?\r\n-yes\r\nIs a nice font used for the banner?\r\nyes\r\n\r\nLayout\r\n\r\nIs there good use of white space? margin/padding\r\n-yes\r\nIs these some kind of multiple columns or sidebars?\r\n-yes\r\nIs every page consistent?\r\n-yes\r\n\r\nPages\r\n\r\nAre there at least five pages?\r\n-yes\r\nDo they have good names?\r\n-yes\r\n\r\nMenu\r\n\r\nIs there a main menu with at least four items?\r\n-yes\r\nDo all links connect to a page?\r\n-yes\r\nIs the menu present on each page?\r\n-yes\r\n\r\nImages\r\n\r\nAre there attractive images on each page?\r\n-yes\r\nIs there attribution of the image owners?\r\n-If you do not own the images make sure to give credit, if got them from a website with free images, then you are good!\r\nDo the images enhance the theme of the website?\r\n-yes\r\nGood use of color and fonts for visual appeal?\r\n-yes\r\n\r\nJavaScript\r\n\r\nIs there a fancy JavaScript control somewhere on the website?\r\n-yes\r\nDoes this control enhance the appeal of the website?\r\n-yes\r\n\r\nText\r\n\r\nDoes this website have a clear message?\r\n-yes\r\nIs writ with goodly grammar and spell?\r\n-yes\r\nDoes the text grab your attention?\r\n-yes\r\n\r\nOrganization\r\n\r\nIs the purpose of your site clear?\r\n-yes\r\nIs the navigation path clear?\r\n-yes\r\nDoes the organization of the site support your business goals?\r\n-yes\r\n\r\nFooter\r\n\r\nIs there an attractive footer?\r\n-yes\r\nDoes this site have a copyright notification?\r\nyes
-146	2017-11-17 16:58:40.946072+00	45	kell7133	enge7698	Review Checklist\r\nScore each website based on the quality of the features\r\n1.\tHome – 5 stars\r\n2.\tBanner – 5 stars\r\n3.\tLayout – 5 stars\r\n4.\tPages – 5 stars\r\n5.\tMenu – 5 stars\r\n6.\tImages – 5 stars\r\n7.\tJavaScript – 1 star\r\n8.\tText – 4 stars\r\n9.\tOrganization – 5 stars\r\n10.\tFooter – 5 stars\r\n\r\nScore (Stars)\r\n1.\tFeature is missing\r\n2.\tFeature is not working properly\r\n3.\tFeature has problems\r\n4.\tSome improvements required\r\n5.\tNo further work is needed\r\n\r\nWebsite Features\r\nHome – 5 Stars\r\n•\tIs the home page named correctly? MySite/index.html\r\no\tYes.\r\n•\tDoes it communicate the primary purpose of the site?\r\no\tYes, it provides a summary of what the page is intended to be about.\r\n•\tIs there an enticement to learn more?\r\no\tThe summary provides an enticement to learn more about the full site.\r\n \r\nBanner – 5 Stars\r\n•\tDoes the banner have attractive artwork?\r\no\tYes.\r\n•\tIs the banner used on each page of the website?\r\no\tYes. \r\n•\tIs a nice font used for the banner?\r\no\tYes.\r\n\r\nLayout – 5 Stars\r\n•\tIs there good use of white space? margin/padding\r\no\tYes.\r\n•\tIs there some kind of multiple columns or sidebars?\r\no\tYes, there are sidebars present.\r\n•\tIs every page consistent?\r\no\tEvery page is consistent.\r\n\r\nPages – 5 Stars\r\n•\tAre there at least five pages?\r\no\tThere are 6 pages.\r\n•\tDo they have good names?\r\no\tYes.\r\n\r\nMenu – 5 Stars\r\n•\tIs there a main menu with at least four items?\r\no\tYes.  \r\n•\tDo all links connect to a page?\r\no\tYes. \r\n•\tIs the menu present on each page?\r\no\tYes. \r\n\r\nImages – 5 Stars\r\n•\tAre there attractive images on each page?\r\no\tYes.\r\n•\tIs there attribution of the image owners?\r\no\tNo, but if these are your images then there doesn’t need to be. \r\n•\tDo the images enhance the theme of the website?\r\no\tYes, but consider adding more images for each page to add to the overall appeal. \r\n•\tGood use of color and fonts for visual appeal?\r\no\tYes. \r\n\r\nJavaScript – 1 star\r\n•\tIs there a fancy JavaScript control somewhere on the website?\r\no\tThere doesn’t appear to be any use of JavaScript on your site.\r\n•\tDoes this control enhance the appeal of the website?\r\no\tThere is currently no JavaScript.\r\n\r\nText – 4 Stars\r\n•\tDoes this website have a clear message?\r\no\tYes, but go back and add more text on each page to describe what each individual page is about, and add some success stories and disasters that you claim the site will include on the home page.    \r\n•\tIs writ with goodly grammar and spell?\r\no\tYes.\r\n•\tDoes the text grab your attention?\r\no\tThe text that you have so far does grab my attention.\r\n\r\nOrganization – 5 Stars\r\n•\tIs the purpose of your site clear?\r\no\tYes.\r\n•\tIs the navigation path clear?\r\no\tYes.\r\n•\tDoes the organization of the site support your business goals?\r\no\tYes.\r\n\r\nFooter – 5 Stars\r\n•\tIs there an attractive footer?\r\no\tYes.\r\n•\tDoes this site have a copyright notification?\r\no\tYes.
-147	2017-11-17 18:47:33.884846+00	47	cruz3674	hern6661	Home-4\r\nIs the home page named correctly? MySite/index.hml\r\nI think you still don’t have an index file.\r\nDoes it communicate the primary purpose of the site?\r\nYes its about Pi Lambda Chi \r\nIs there an enticement to learn more?\r\nOmg Yes! I am interested in joining a sorority so I would totally read this!\r\nBanner- 5\r\nDoes the banner have attractive artwork?\r\nYes \r\nIs the banner used on each page of the website?\r\nSure is!\r\nIs a nice font used for the banner?\r\nEasy to read. \r\nLayout- 5\r\nIs there good use of white space? margin/padding\r\nYes\r\nIs these some kind of multiple columns or sidebars?\r\nYes you have a side menu  \r\nIs every page consistent?\r\nYes\r\nPages- 5\r\nAre there at least five pages?\r\nYes \r\nDo they have good names?\r\nYes makes sense to have those names to learn more about Pi Lambda Chi\r\nMenu- 4\r\nIs there a main menu with at least four items?\r\nYes\r\nDo all links connect to a page?\r\nYes\r\nIs the menu present on each page?\r\nNot yet\r\nImages- 4\r\nAre there attractive images on each page?\r\nSame Image on each page, maybe add a couple more if you have time?  \r\nIs there attribution of the image owners?\r\nIdk how we are supposed to give credit to owners lol\r\nDo the images enhance the theme of the website?\r\nYes\r\nGood use of color and fonts for visual appeal?\r\nYes\t\r\nJavaScript- 5\r\nIs there a fancy JavaScript control somewhere on the website?\r\nYes\r\nDoes this control enhance the appeal of the website?\r\nYes\r\nText- 5\r\nDoes this website have a clear message?\r\nYes\r\nIs writ with goodly grammar and spell?\r\nYes\r\nDoes the text grab your attention?\r\nYes! \r\nOrganization- 5\r\nIs the purpose of your site clear?\r\nYes\r\nIs the navigation path clear?\r\nYes\r\nDoes the organization of the site support your business goals?\r\nYes\r\nFooter-5 \r\nIs there an attractive footer?\r\nYes  It even links back to your BACS 200 website \r\nDoes this site have a copyright notification?\r\nYes \r\nYou did so much work! Great Progress! :) Looking forward to seeing your site. :)
-148	2017-11-17 18:53:47.45367+00	32	milt0773	hern6661	Home-4\r\nIs the home page named correctly? MySite/index.hml\r\nI think you still don’t have an index file.\r\nDoes it communicate the primary purpose of the site?\r\nYes its about Pi Lambda Chi \r\nIs there an enticement to learn more?\r\nOmg Yes! I am interested in joining a sorority so I would totally read this!\r\nBanner- 5\r\nDoes the banner have attractive artwork?\r\nYes \r\nIs the banner used on each page of the website?\r\nSure is!\r\nIs a nice font used for the banner?\r\nEasy to read. \r\nLayout- 5\r\nIs there good use of white space? margin/padding\r\nYes\r\nIs these some kind of multiple columns or sidebars?\r\nYes you have a side menu  \r\nIs every page consistent?\r\nYes\r\nPages- 5\r\nAre there at least five pages?\r\nYes \r\nDo they have good names?\r\nYes makes sense to have those names to learn more about Pi Lambda Chi\r\nMenu- 4\r\nIs there a main menu with at least four items?\r\nYes\r\nDo all links connect to a page?\r\nYes\r\nIs the menu present on each page?\r\nNot yet\r\nImages- 4\r\nAre there attractive images on each page?\r\nSame Image on each page, maybe add a couple more if you have time?  \r\nIs there attribution of the image owners?\r\nIdk how we are supposed to give credit to owners lol\r\nDo the images enhance the theme of the website?\r\nYes\r\nGood use of color and fonts for visual appeal?\r\nYes\t\r\nJavaScript- 5\r\nIs there a fancy JavaScript control somewhere on the website?\r\nYes\r\nDoes this control enhance the appeal of the website?\r\nYes\r\nText- 5\r\nDoes this website have a clear message?\r\nYes\r\nIs writ with goodly grammar and spell?\r\nYes\r\nDoes the text grab your attention?\r\nYes! \r\nOrganization- 5\r\nIs the purpose of your site clear?\r\nYes\r\nIs the navigation path clear?\r\nYes\r\nDoes the organization of the site support your business goals?\r\nYes\r\nFooter-5 \r\nIs there an attractive footer?\r\nYes  It even links back to your BACS 200 website \r\nDoes this site have a copyright notification?\r\nYes \r\nMilt0773\r\nHome- 5\r\nIs the home page named correctly? MySite/index.hml\r\nYes\r\nDoes it communicate the primary purpose of the site?\r\nYes\r\nIs there an enticement to learn more?\r\nYes\r\nBanner- 3\r\nDoes the banner have attractive artwork?\r\nNo logo, I looked at your code, and there is an image but the link is broken.\r\nIs the banner used on each page of the website?\r\nNo\r\nIs a nice font used for the banner?\r\nIdk, I can’t see it.\r\nLayout- 4\r\nIs there good use of white space? margin/padding\r\nyes\r\nIs these some kind of multiple columns or sidebars?\r\nTop menu\r\nIs every page consistent?\r\nOnly one page works\r\nPages- 3\r\nAre there at least five pages?\r\nno\r\nDo they have good names?\r\nyes\r\nMenu- 3\r\nIs there a main menu with at least four items?\r\nYes\r\nDo all links connect to a page?\r\nNo\r\nIs the menu present on each page?\r\nNo\r\nImages- 3\r\nAre there attractive images on each page?\r\nNo\r\nIs there attribution of the image owners?\r\nNo\r\nDo the images enhance the theme of the website?\r\nNo images\r\nGood use of color and fonts for visual appeal?\r\nYes\r\nJavaScript- 1\r\nIs there a fancy JavaScript control somewhere on the website?\r\nNo\r\nDoes this control enhance the appeal of the website?\r\nNo\r\nText- 5\r\nDoes this website have a clear message?\r\nYes\r\nIs writ with goodly grammar and spell?\r\nYes\r\nDoes the text grab your attention?\r\nYes\r\nOrganization\r\nIs the purpose of your site clear?\r\nYes\r\nIs the navigation path clear?\r\nYes\t\r\nDoes the organization of the site support your business goals?\r\nYes\r\nFooter-5\r\nIs there an attractive footer?\r\nYes \r\nDoes this site have a copyright notification?\r\nYes
-149	2017-11-17 21:15:46.408375+00	36	adam5160	moni2990	Home: 3-The home page was not named correctly, but does communicate primary purpose of the site\r\nBanner: 4- This banner is pretty good, I would just recommend trying to add text or something a little more to the banner\r\nLayout: 4- The layout has improved since the last time, there is no kind of multiple columns though\r\nPages: 4- I saw 4 out of 5 pages working so far. The finances page wasn't working.\r\nMenu: 5- There is a main menu with at least four items, it is not quite working on every page but the menu is good.\r\nImages: 0- There were no images yet\r\nJava: 3- I like the idea of putting java in the memories tab, as soon as you put it in, you should get a 5 in this section\r\nText: 3- There was a clear message with the text, but you still have a lot of text to still add to the project\r\nOrganization: 5- There was good organization\r\nFooter: 5- This was an attractive footer and was centered. Good job.\r\n\r\nOverall, I think your improvements were good, it will be cool to see the finished project
-150	2017-11-17 21:19:29.099775+00	50	cutl7614	moni2990	Home: 5- Home page was named correctly and communicates primary purpose of the site\r\nBanner: 5- Nice banner, I think it was really creative and well put together\r\nLayout: 5- Good use of white space and every page was consistent\r\nPages: 5- All 5 pages were there and worked well\r\nMenu: 5- The main menu worked and was present on every page\r\nImages: 5- There were images on every page and they were very good images for the topics\r\nJava: 5- There was JavaScript and it worked well\r\nText: 5- The page did have a clear message and had good grammar\r\nOrganization: 5- The page had good organization\r\nFooter: 5- The page had a good working footer\r\n\r\nIt was nice to see how well this website was put together. Good job.
-151	2017-11-17 21:22:35.472212+00	50	herr9858	moni2990	Home: 5- the home page was named correctly, worked well, and had good text\r\nBanner: 5- the banner was attractive and worked well\r\nLayout: 5- I like the way this website was laid out\r\nPages: 5- there were at least 5 pages and every page was consistent and put together well\r\nMenu: 5- There are at least 4 items in the main menu, all of them are working\r\nImages: 5- There were images on every page and it worked out well\r\nText: 5- The text was very interesting and informative\r\nOrganization: 5- The purpose was clear and the navigation was clear\r\nFooter: 5- There was an attractive footer\r\n\r\nGood job on the website!
-152	2017-11-17 21:25:40.466748+00	0	stre7262	moni2990	There still is no project up on the web server.\r\nHome: 0\r\nBanner: 0\r\nlayout: 0\r\nPages: 0\r\nMenu: 0\r\nImages: 0\r\nJava: 0\r\nText: 0\r\nOrganization: 0\r\nFooter: 0\r\n\r\n\r\n3.141592653589793238462643383279502884197169 39937510582097494459230781640628620899862803 48253421170679821480865132823066470938446095 50582231725359408128481117450284102701938521 10555964462294895493038196442881097566593344 61284756482337867831652712019091456485669234 60348610454326648213393607260249141273724587 00660631558817488152092096282925409171536436 78925903600113305305488204665213841469519415 11609433057270365759591953092186117381932611 79310511854807446237996274956735188575272489 12279381830119491298336733624406566430860213 94946395224737190702179860943702770539217176 29317675238467481846766940513200056812714526 35608277857713427577896091736371787214684409 01224953430146549585371050792279689258923542 01995611212902196086403441815981362977477130 99605187072113499999983729780499510597317328 16096318595024459455346908302642522308253344 68503526193118817101000313783875288658753320 83814206171776691473035982534904287554687311 59562863882353787593751957781857780532171226\r\n806613001927876611195909216420198
-\.
-
-
---
--- Name: unc_reviewscore_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.unc_reviewscore_id_seq', 152, true);
-
-
---
--- Data for Name: unc_student; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.unc_student (id, name, email, domain, course_id, designer_score, reviewer_score) FROM stdin;
-1	Muataz Alshuaibi	alsh3467	hzz.zqf.mybluehost.me	1	51	100
-2	Connor Anderson	ande5803	ande5803.com	1	83	100
-3	Matthew Bailey	bail8147	dqy.wpr.mybluehost.me	1	95	100
-4	Nicholas Bartnik	bart2368	aue.zqf.mybluehost.me	1	89	100
-5	Matthew Bradow	brad8259	matthewbradowwebdesign.com	1	99	100
-6	Chase Brock	broc7175	ufp.ywb.mybluehost.me	1	78	100
-7	Paul Buchholz	buch8576	dux.wpr.mybluehost.me	1	96	100
-8	Sarah Calderon	cald5551	sarah-calderon.org	1	9	71
-9	David Cunningham	cunn8644	davecoin.net	1	94	100
-10	Mitchell Darnell	darn4198	jsr.wpr.mybluehost.me	1	89	100
-11	Brittney Dinsmore	dins1473	www.bdinsmore.org	1	14	100
-12	Dyani Dussault	duss1418	www.dyanidussault.com	1	88	100
-13	Cole Geddes	gedd7471	www.colegeddes.com	1	68	100
-14	Ashton Hall	hall2859	www.ashtonmhall.com	1	76	100
-15	Christian Hogue	hogu4987	veh.wpr.mybluehost.me	1	83	100
-23	Benjamin McEwen	mcew3231	iro.wpr.mybluehost.me	1	97	100
-24	Sean Miller	mill2469	dirtypetrol.net	1	25	100
-25	Alexia Moses	mose3931	alexiamoses.com	1	85	100
-26	Shannon Nelson	nels0782	irb.wpr.mybluehost.me	1	41	100
-27	Sy Martin Nguyen	nguy0278	martinnguyensy.com	1	87	100
-28	Edgar Osornio Velazquez	osor4767	edgarov.ml	1	93	100
-29	Abraham Porter Mastache	port6100	abrahamporter.tk	1	81	85
-30	Kevin Ritter	ritt9966	lay.zqf.mybluehost.me	1	93	100
-43	Allen Adams	adam1400	adam1400.com	2	80	100
-45	Alexander Brems	brem0097	grb.wpr.mybluehost.me	2	78	100
-49	Daniel Herrera	daniel.herrera	www.danielherrera.space	2	93	100
-54	Eric Sova	eric.sova	sova4698.mahboi.com	2	83	100
-51	Evan Minor	evan.minor	evansawesomeworld.com	2	79	100
-47	Garrett Hasch	hasc9362	ghaschbacs350.com	2	72	100
-48	Jessica Herold	hero7354	jessielane.net	2	73	100
-50	Cosme Martinez	mart6384	cosmenaut.org	2	89	100
-16	Taylor Ingram	ingr0590	cpi.wpr.mybluehost.me	1	91	100
-17	Jerone Jackson	jack3769	jeronejackson.com	1	57	100
-18	Mariah Jeffreys	jeff1929	ivj.wpr.mybluehost.me	1	90	100
-31	Joshua Rosenow	rose8155	joshrosenow2601.net	1	93	100
-19	Matthew Knop	knop8177	knop-unco.com	1	70	100
-20	Eleazar Lara	lara7667	defcongold.com	1	55	100
-32	Jordan Roy	roy6883	gvx.wpr.mybluehost.me	1	96	100
-33	Sierrah Royle	royl3716	sierrahroyle.com	1	86	100
-34	McKenzie Rozar	roza1798	uqx.wpr.mybluehost.me	1	61	87
-35	Jorge Rubio	rubi1422	holisticsuccesscoaching.com	1	70	100
-36	Weston Seniw	seni0970	westonseniw.com	1	90	100
-37	Mandeep Singh	sing3112	mandeep.online	1	86	100
-38	Halie Spaur	spau3841	haliespaur.com	1	99	100
-39	Zoe Svedlow	sved1970	jty.wpr.mybluehost.me	1	86	100
-44	Nicholas Alm	nicholas.alm	qyd.wpr.mybluehost.me	2	83	100
-52	Christina Ritchey	ritc9446	tyz.wpr.mybluehost.me	2	88	100
-40	Samuel Tegethoff	tege8917	samuelss.com	1	95	100
-41	Madeline Thoma	thom3491	madthoma.com	1	95	100
-42	Deron Yoshimura	yosh4246	dyoshimura.net	1	82	100
-46	Robert Carver	robert.carver	pvw.wpr.mybluehost.me	2	82	100
-53	Noah Rolf	rolf8022	moosen.xyz	2	89	100
-21	Jamari Logan	loga6868	hunchologan.com	1	6	100
-22	Erick Martinez	mart0877	luzcarmenboutique.com	1	85	88
-\.
-
-
---
--- Name: unc_student_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.unc_student_id_seq', 54, true);
-
-
---
--- Data for Name: wiki_wikidoc; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.wiki_wikidoc (id, title, path, body, user_id, slug) FROM stdin;
-1	Seaman Wiki	No path	This wiki documents the development of the reusable software platform, called Hammer. A large number of design patterns are used to produce a complete standalone wiki tool. This tool is then extended into a large variety of applications.\r\n\r\nThis project creates a wiki type application.\r\n\r\n* [Seaman Wiki](/wiki/seaman-wiki)\r\n* [Wiki Test](/wiki/wiki-test)\r\n* [Wiki UX](/wiki/wiki-ux)	1	seaman-wiki
-5	Technology Selection	No path	# Technology Selection\r\n\r\nThe selection of a web development framework is one of the most important decisions that you will make.  Every option has an associated learning curve and job opportunities.\r\n\r\nSelect one of the most popular frameworks to increase your return on investment.\r\n\r\n* **Django/Python** - Django is the most popular web framework written in the Python programming language.\r\n* **Ruby on Rails** - Rails is the framework you would use to program in Ruby.\r\n* **.Net** - Microsoft .Net is popular for programming in C#.\r\n* **PHP** - This open source development environment gives you bare-bones tools.\r\n* **MEAN** - This open-source development stack includes Mongo DB, Express, Apache, Node.  It is the preferred platform for programming in JavaScript.\r\n* **Angular JS** - This Java Script environment is good for building Client-side Execution Applications.	1	technology-selection
-2	Wiki Project	No path	This wiki documents the development of the reusable software platform, called Hammer. A large number of design patterns are used to produce a complete standalone wiki tool. This tool is then extended into a large variety of applications.\r\n\r\n**Project Requirements**\r\n\r\n* Select goals for project\r\n* Create a project plan\r\n* Choose milestones\r\n* Build forms input\r\n* Create view styles\r\n* Document the process and schedule\r\n* Inventory of technical tricks\r\n\r\n**Project Milestones**\r\n\r\n* **Project Plan** - preparation and design\r\n\r\n    * Documented project plan\r\n    * Documented design patterns\r\n    * Web views for issue tracking\r\n    * Web views for project tracking\r\n\r\n* **Core Features** - prototype\r\n\r\n    * Web hosting\r\n    * Page layout (menu, CSS, style)\r\n    * List all pages\r\n    * Add a new page\r\n    * Edit the title and body text of a page\r\n    * Link pages (eg. /wiki/detail/11)\r\n\r\n* **Minimum Viable Product** - engage with others\r\n\r\n    * Display text using a slug in the URL\r\n    * Delete a page\r\n    * Page navigation menu\r\n    * Image upload\r\n    * Image display\r\n\r\n* **Extended Features** - most critical enhancements\r\n\r\n    * Export pages to Markdown file directory\r\n    * Import pages from Markdown file directory\r\n    * Automatic page tests using Selenium\r\n    * Automatic tests looking for unexpected results\r\n    * Approval workflow for accepting test results\r\n    * Change history\r\n    * Version rollback	1	wiki-project
-3	Wiki Test	No path	# Automatic Testing\r\n\r\n## Test Cases\r\n* Show list of pages\r\n* Add new page\r\n* Edit page\r\n* Delete page\r\n* View page details\r\n\r\n## Page Testing\r\n* Use selenium to test pages\r\n* Build logic to fetch a specific page\r\n* Fetch a list of pages\r\n* List all pages\r\n* Save html for page\r\n* Show difference of html/text for page\r\n* Approve current HTML as new correct answer\r\n* Show unexpected results	1	wiki-test
-4	Wiki UX	No path	# Wiki User Experience\r\n\r\nA wiki is server-based software that allows users to build the website content without back-end access to the server.\r\n\r\n## Wiki User Stories\r\nThe user has the following capabilities when using a wiki\r\n\r\n**Basic Features**\r\n\r\n* List all pages\r\n* Add a new page\r\n* Edit the title and body text of a page\r\n* Write text for pages in Markdown\r\n* Display text using a slug in the URL\r\n* Delete a page\r\n* Page navigation (Menu)\r\n* Page layout (CSS)\r\n\r\n**Full Features**\r\n\r\n* Documented project plan\r\n* Documented design patterns\r\n* Web views for issue tracking\r\n* Web views for project tracking\r\n\r\n**Extended Features**\r\n\r\n* Export pages to Markdown file directory\r\n* Import pages from Markdown file directory\r\n* Automatic page tests using Selenium\r\n* Automatic tests looking for unexpected results\r\n* Approval workflow for accepting test results	1	wiki-ux
-6	Project Goals	No path	This project plan is intended to jump start learning skills required by modern software developers.  It focuses on hands-on experience with tools and methods that are proven to be best practices in the software industry.\r\n\r\nThis project assumes a general familiarity with the agile software practice of Scrum.   All work will be done in project cycles that culminate with completed deliverables.  After going through this project you will be very comfortable with all of the practices of Scrum.\r\n\r\nThis project is designed around the scope and scale that would be appropriate for a semester long graduate or undergraduate course in computer science.\r\n\r\nThe project is ideal for either a team of three or individuals.  There are 15 development iterations which can be done as Sprint cycles.  This will produce the fully built out system that specified by the default project plan.	1	project-goals
-7	Available Time	No path	This project is laid out in a series of incremental development cycles.\r\n\r\n** Experience Level**\r\n\r\nThe amount of time to be invested in each cycle will depend on the previous experience level of the engineer.  Each development cycle will require about three fundamental skills.\r\n\r\nIf the student already has the required skills then the deliverables can be produced in about 2 hours of effort.  For students that are completely lacking the skills about three days of effort will be required.\r\n\r\n**Team Sprints**\r\n\r\nA team of three people working together can complete the project while learning the required skills.  The effort level is set to be optimized for a college class that meets three hours a week.  A team of three people should collectively invest 27 hours per week to complete one Sprint cycle.\r\n\r\n **Learn and Do**\r\n\r\nEvery cycle will require a mix of learning and applying the learned skills.  An experienced engineer using a familiar technology will be able to complete each cycle in less than three hours.  Inexperienced students will probably spend around 25-30 hours as a team of three completing each Sprint.\r\n\r\n**15 Steps**\r\n\r\nThe steps in development are intended to match a 15 week college class.  If students work	1	available-time
-\.
-
-
---
--- Name: wiki_wikidoc_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.wiki_wikidoc_id_seq', 7, true);
-
-
---
--- Data for Name: workshop_category; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.workshop_category (id, name, cumulative, client_id) FROM stdin;
-\.
-
-
---
--- Name: workshop_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.workshop_category_id_seq', 1, false);
-
-
---
--- Data for Name: workshop_money; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.workshop_money (id, dollars, date, category_id) FROM stdin;
-\.
-
-
---
--- Name: workshop_money_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.workshop_money_id_seq', 1, false);
-
-
---
--- Data for Name: workshop_moneyclient; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.workshop_moneyclient (id, organization, user_id) FROM stdin;
-\.
-
-
---
--- Name: workshop_moneyclient_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.workshop_moneyclient_id_seq', 1, false);
-
-
---
--- Data for Name: workshop_thot; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.workshop_thot (id, title, parent_id, thotbook_id) FROM stdin;
-4413	Aspirations (100%)	\N	1
-4414	Aspirations (100%)	4413	1
-4415	Work (40%)	4414	1
-4416	Web Services	4415	1
-4417	Who2Hire	4416	1
-4418	Fix open issues	4417	1
-4419	Extend testing	4417	1
-4420	Add features	4417	1
-4421	Code cleanup & refactoring	4417	1
-4422	Customer support	4417	1
-4423	Support operations	4417	1
-4424	Server updates	4423	1
-4425	Domains & hosting	4423	1
-4426	Email	4423	1
-4427	Software releases	4423	1
-4428	MyBook	4416	1
-4429	ToDo (tactical plan)	4428	1
-4430	Problems - what is the biggest known problem?	4429	1
-4431	High-level author experience	4430	1
-4432	Tests - what is the greatest unknown?	4429	1
-4433	Robot page tester	4432	1
-4434	Features - what is the biggest missing feature?	4429	1
-4435	Views: Client, Book, Chapter	4434	1
-4436	Clean Up - what is the messiest part of the code?	4429	1
-4437	Thot architecture - view refactoring	4436	1
-4438	Product UX	4428	1
-4439	Author Experience - private pages	4438	1
-4440	Client Registration & Login	4439	1
-4441	Profile photo	4439	1
-4442	Content: Client, Book, Chapter, Text	4439	1
-4443	Index for reading order	4439	1
-4444	Online editing of content (structure & text)	4439	1
-4445	Publish Experience	4438	1
-4446	Kindle book builder	4445	1
-4447	Non-publishable content	4445	1
-4448	Reading Experience	4438	1
-4449	Website creator	4448	1
-4450	Table of Contents	4448	1
-4451	Markdown formatter	4448	1
-4452	Migrate existing book projects to new system	4438	1
-4453	Product Design	4428	1
-4454	Structure	4453	1
-4455	Data Views:  Client, Book, Chapter, Image, Doc	4454	1
-4456	Book: add, list, edit, delete, detail	4454	1
-4457	Client file storage	4453	1
-4458	Directory per Book	4457	1
-4459	Document per Chapter	4457	1
-4460	Automatic Version Control	4457	1
-4461	Document Viewer	4453	1
-4462	Table of Contents - full index	4461	1
-4463	Keyhole Context - ancestry, grand kids, doc text	4461	1
-4464	Menu: Shrinking World, Books, Book, Doc	4461	1
-4465	automatic privacy indicator (green/blue)	4461	1
-4466	Markdown formatter	4461	1
-4467	Webcrawler	4461	1
-4468	Editing	4453	1
-4469	Rename thot	4468	1
-4470	Add thot to current node	4468	1
-4471	Delete thot	4468	1
-4472	Edit thot doc	4468	1
-4473	Aspire	4416	1
-4474	ToDo (tactical plan)	4473	1
-4475	Problems - what is the biggest known problem?	4474	1
-4476	High-level experience	4475	1
-4477	Tests - what is the greatest unknown?	4474	1
-4478	Robot page tester	4477	1
-4479	Features - what is the biggest missing feature?	4474	1
-4480	Daily deliverables	4479	1
-4481	Views: Client, Project, Goal, Time	4479	1
-4482	Clean Up - what is the messiest part of the code?	4474	1
-4483	Thot architecture - view refactoring	4482	1
-4484	Convert Aspire documents to Design Notes	4482	1
-4485	Product UX	4473	1
-4486	Client Registration & Login	4485	1
-4487	Define Roles, Projects, and Goals	4485	1
-4488	Online Goal Editing	4485	1
-4489	View URLs:	4485	1
-4490	task/time/<days>	4489	1
-4491	task/<activity>	4489	1
-4492	aspire	4489	1
-4493	aspire/<role>	4489	1
-4494	aspire/project/<project>	4489	1
-4495	aspire/<goal_id>	4489	1
-4496	Tabbed view for week/month/year	4485	1
-4497	Track Time Against Goals	4485	1
-4498	Time Investment	4497	1
-4499	Time Summary: Week/Month/Year, Project, Task	4497	1
-4500	Mirgrate existing content to new app	4485	1
-4501	Product Design	4473	1
-4502	Structure	4501	1
-4503	Data:  Client, Role, Goal	4502	1
-4504	Views: Client, Role, Goal	4502	1
-4505	Goal	4502	1
-4506	add, list, edit, delete, detail	4505	1
-4507	Client	4502	1
-4508	profile	4507	1
-4509	roles/projects	4507	1
-4510	Client storage	4501	1
-4511	Database records: Client, Role	4510	1
-4512	Import/Export: Client	4510	1
-4513	Cascading Goals UI	4510	1
-4514	Directory per Project	4510	1
-4515	Automatic Version Control	4510	1
-4516	Document Viewer	4501	1
-4517	Menu: Shrinking World, Client, Projects	4516	1
-4518	automatic privacy indicator (green/blue)	4516	1
-4519	Markdown formatter	4516	1
-4520	Webcrawler	4516	1
-4521	Personal Advisor - daily messenger	4416	1
-4522	Hosting location: Mark Seaman, Aspire, Thot	4521	1
-4523	Advice for today	4521	1
-4524	Recommendation for action	4523	1
-4525	Weekly Time	4523	1
-4526	Follow Up (tasks from last week, last month)	4523	1
-4527	Review Article	4523	1
-4528	Selection from Advice directory	4523	1
-4529	12 week review	4523	1
-4530	Scheduled messages - events & reminders	4523	1
-4531	Message scheduler	4521	1
-4532	Subscribers - add, list, delete	4531	1
-4533	Messages - add, list, delete, deliver, log	4531	1
-4534	Message Delivery	4531	1
-4535	Message Composer - content selection algorithm	4531	1
-4536	Brain	4416	1
-4537	Principles of Knowledge	4536	1
-4538	Workflow: Learn, Plan, Build, Teach	4536	1
-4539	Client management	4536	1
-4540	Public vs. Private	4536	1
-4541	Brain Developers Guide	4536	1
-4542	Move existing content from Evernotes	4536	1
-4543	Thot Recorder	4416	1
-4544	Index - Interactive outline view	4543	1
-4545	Keyhole context - ancestry & grandkids & thot doc	4543	1
-4546	Thot Saver - automatic versioning with git	4543	1
-4547	Each Thot may have notes (saved as file)	4543	1
-4548	Add, edit, delete, and move nodes	4543	1
-4549	External hyperlinks (red links)	4543	1
-4550	Read Thot Book content from files	4543	1
-4551	Database used to provide interactivity	4543	1
-4552	Organize info by client	4543	1
-4553	Web Dev - Workshop	4416	1
-4554	Decide on UX	4553	1
-4555	Build workshop app for training	4553	1
-4556	http://exteriorbrain.com/workshop	4553	1
-4557	Aspects of WebDev:  Project, UX, Data, Views, Script, Test, Ops	4553	1
-4558	WebDev workflow: Test, Fix, Extend, Improve	4553	1
-4559	Reusable Apps - Build 100 pages of content (50 tricks x 2 pages)	4553	1
-4560	Build public face of Shrinking World	4553	1
-4561	Replace shrinking-world.com	4553	1
-4562	Document design patterns in Core Systems	4553	1
-4563	Learning agenda for new tricks	4553	1
-4564	100 Rules for better programming	4553	1
-4565	Move existing content to new system	4553	1
-4566	Web Crawler	4416	1
-4567	Fetch pages with Selenium	4566	1
-4568	Extract links from page	4566	1
-4569	Track progress of crawl	4566	1
-4570	Find & fix broken links	4566	1
-4571	404 for missing pages	4566	1
-4572	Church Leadership Dashboard	4416	1
-4573	Redesign and refactor	4572	1
-4574	People metrics	4572	1
-4575	Money metrics	4572	1
-4576	Development projects	4572	1
-4577	ComSys	4416	1
-4578	Message board	4577	1
-4579	Note to future self	4577	1
-4580	Personal Advisor daily message	4577	1
-4581	System Dashboard	4416	1
-4582	Central Dashboard service on MyBook Server	4581	1
-4583	All system call with status info	4581	1
-4584	tests run & results	4583	1
-4585	alerts for offline servers	4583	1
-4586	Gather and present info	4581	1
-4587	Alert rules	4581	1
-4588	Expand self-test for each server	4581	1
-4589	Test Manager System	4581	1
-4590	Hammer Test	4589	1
-4591	Display all test results	4590	1
-4592	Run tests from remote server	4590	1
-4593	Approve test results	4590	1
-4594	Document Hammer Test	4590	1
-4595	Run tests hourly	4590	1
-4596	Cache results for a fixed time	4590	1
-4597	Measure test coverage	4590	1
-4598	Page Test Robot	4589	1
-4599	Display page diff	4598	1
-4600	Run all page tests from server	4598	1
-4601	Approve page results	4598	1
-4602	Create headless Selenium test	4598	1
-4603	Expand page coverage	4598	1
-4604	Server Management	4416	1
-4605	version update policy on Python	4604	1
-4606	package management on servers	4604	1
-4607	decommission shrinking-world.com	4604	1
-4608	decommission greeleyw2w.org	4604	1
-4609	Digital Ocean backup	4604	1
-4610	Digital Ocean monitoring	4604	1
-4611	SendGrid email analytics	4604	1
-4612	Writing Projects	4415	1
-4613	Books	4612	1
-4614	Search for Freedom	4613	1
-4615	Software Development	4613	1
-4616	Life that Matters	4613	1
-4617	Bootstraps & Blessings	4613	1
-4618	Blogs	4612	1
-4619	Seaman's Log - Big Ideas	4618	1
-4620	Spiritual Things	4618	1
-4621	Book Notes	4618	1
-4622	EQ	4621	1
-4623	PresentOverPerfect	4621	1
-4624	Essentialism	4621	1
-4625	Integrity	4621	1
-4626	Next100Years	4621	1
-4627	Creative non-fiction class	4612	1
-4628	Faceblog	4612	1
-4629	Develop habits for posting excerpts	4628	1
-4630	Follow up with people who like posts	4628	1
-4631	Post data daily	4628	1
-4632	Create subscriber list	4628	1
-4633	Training best practices	4415	1
-4634	Build template for System Design	4633	1
-4635	Project	4634	1
-4636	UX	4634	1
-4637	Front-end	4634	1
-4638	Back-end	4634	1
-4639	Automation	4634	1
-4640	Testing	4634	1
-4641	Hosting	4634	1
-4642	Project Management Plan	4633	1
-4643	Learn - Technical Tricks, Biz Needs, Design	4642	1
-4644	Plan - Alternatives, Milestones, Time History, Time Investment	4642	1
-4645	Build - Test, Fix, Extend, Improve	4642	1
-4646	Teach - Collab, Commitments, Communicate	4642	1
-4647	How to build reusable apps	4633	1
-4648	Shrinking world operations	4633	1
-4649	Applying leverage	4633	1
-4650	Programming Rules	4633	1
-4651	Focus	4650	1
-4652	Run to completion	4651	1
-4653	Stop when good enough	4651	1
-4654	Focus on one thing	4651	1
-4655	Record follow up	4651	1
-4656	Work below the water line	4651	1
-4657	Learning agenda - required understanding	4651	1
-4658	Complexity	4650	1
-4659	Simplify	4658	1
-4660	Type less	4658	1
-4661	Short functions	4658	1
-4662	Remove duplication	4658	1
-4663	Flatten structures	4658	1
-4664	Simple documentation	4658	1
-4665	Refactor every day	4658	1
-4666	Testing	4650	1
-4667	Test everything	4666	1
-4668	One line then test	4666	1
-4669	Testability comes first	4666	1
-4670	Investigate surprises	4666	1
-4671	Don't ignore defects	4666	1
-4672	Test something trivial (on/off)	4666	1
-4673	Test end-to-end	4666	1
-4674	Build tests in less than 1 minute	4666	1
-4675	Compare against expected output	4666	1
-4676	Build features	4650	1
-4677	Build incrementally	4676	1
-4678	Create something new	4676	1
-4679	Build features stand-alone	4676	1
-4680	Merge when ready	4676	1
-4681	Generalize later	4676	1
-4682	Get the trivial running first	4676	1
-4683	Understand technology	4415	1
-4684	WebDev platforms	4683	1
-4685	Python 3	4684	1
-4686	Django	4684	1
-4687	Material	4684	1
-4688	HTML	4684	1
-4689	CSS	4684	1
-4690	JavaScript	4684	1
-4691	MailChimp/Mandrill	4684	1
-4692	Hammer technology (reusable design)	4683	1
-4693	Project	4692	1
-4694	UX	4692	1
-4695	Front-end	4692	1
-4696	Back-end	4692	1
-4697	Test	4692	1
-4698	Hosting	4692	1
-4699	Automation	4692	1
-4700	Hammer design patterns	4683	1
-4701	Reusable Apps	4700	1
-4702	Doc display	4700	1
-4703	Model display	4700	1
-4704	Table display	4700	1
-4705	CSV Import/Export	4700	1
-4706	Data load/dump	4700	1
-4707	Data command script	4700	1
-4708	Command Script manager	4700	1
-4709	Canonical Views	4700	1
-4710	Standard Queries	4700	1
-4711	Email sending - Mandrill, templates, future send, selection, evernote	4700	1
-4712	Source code synchronization and reconciliation (src-changed)	4700	1
-4713	Data monitoring system	4700	1
-4714	Python Mastery	4683	1
-4715	Cancel Safari books online	4714	1
-4716	Pycon sessions	4714	1
-4717	Meetups	4714	1
-4718	daily PyCharm	4714	1
-4719	Django Rest Framework	4714	1
-4720	Django	4714	1
-4721	Efficient & effective work habits	4415	1
-4722	Learn - Grow, Know, Explore	4721	1
-4723	Personal dashboard	4722	1
-4724	Email design patterns	4722	1
-4725	Scheduled email	4722	1
-4726	Five core views	4722	1
-4727	Thinking systems (Brain, Aspire, WebDev, MyBook)	4722	1
-4728	Daily Idea Storm	4722	1
-4729	Idea lifecycle	4722	1
-4730	Create reading list for growth	4722	1
-4731	Plan - Aspire, Prioritize, Focus	4721	1
-4732	Celebrate past accomplishments	4731	1
-4733	Selection of investments	4731	1
-4734	Daily report	4731	1
-4735	Time data: Day, Week, Month, Year	4731	1
-4736	From idea to benefit in one hour	4731	1
-4737	I choose what I do	4731	1
-4738	Document System Design	4731	1
-4739	Build - Solve, Invent, Create	4721	1
-4740	Websites: home page and menus	4739	1
-4741	Private docs	4739	1
-4742	Aspire clients, projects, docs	4739	1
-4743	Church dashboard	4739	1
-4744	Create map of Documents directories	4739	1
-4745	Teach - Share, Collaborate, Influence	4721	1
-4746	Communications plan	4745	1
-4747	Websites for Internal and External needs	4745	1
-4748	Writing workflow	4745	1
-4749	Landing pages	4745	1
-4750	Subscriber list	4745	1
-4751	Design patterns	4745	1
-4752	Workflow guidance	4745	1
-4753	Book Notes	4745	1
-4754	Present best practices	4745	1
-4755	Maintain hosting for web apps	4415	1
-4756	Devops best practices	4755	1
-4757	Digital Ocean	4755	1
-4758	Security	4755	1
-4759	Web services plan	4755	1
-4760	SEO	4755	1
-4761	Business development	4415	1
-4762	Sales projections for Who2Hire	4761	1
-4763	Business plan for Who2Hire	4761	1
-4764	Investments and money needs	4761	1
-4765	MyBook business plan	4761	1
-4766	People (30%)	4414	1
-4767	Follow Up - Regular contacts	4766	1
-4768	Peter Runge	4767	1
-4769	Dad	4767	1
-4770	Don	4767	1
-4771	Birdie Sharber	4767	1
-4772	Betty Skaggs	4767	1
-4773	Diane Dawson	4767	1
-4774	Greg Hughes	4767	1
-4775	Josiah	4767	1
-4776	Bob Homan - Langham	4767	1
-4777	Chris Warren	4767	1
-4778	Connect Better (20%)	4766	1
-4779	Great husband	4778	1
-4780	Date night	4779	1
-4781	Be present	4779	1
-4782	Be honest and vulnerable	4779	1
-4783	Have regular heart-to-heart conversations	4779	1
-4784	Great dad	4778	1
-4785	Be present	4784	1
-4786	Be honest and vulnerable	4784	1
-4787	Be more self aware	4784	1
-4788	Release expectations	4784	1
-4789	Great friend	4778	1
-4790	Identify important relationships	4789	1
-4791	Build deeper connections	4789	1
-4792	Reach out and invest	4789	1
-4793	Church leadership (10%)	4766	1
-4794	Develop church leadership application	4793	1
-4795	System to track money	4793	1
-4796	System to track time	4793	1
-4797	Communications for leaders	4793	1
-4798	Help clarify vision	4793	1
-4799	Pray for God's leadership	4793	1
-4800	Mentor	4766	1
-4801	Identify potential opportunities	4800	1
-4802	Initial meeting	4801	1
-4803	Follow up meetings	4801	1
-4804	Regular follow up	4801	1
-4805	Collaboration	4801	1
-4806	Create a Tech Meetup	4800	1
-4807	Decide on charter for group	4806	1
-4808	Setup Meetup website	4806	1
-4809	Organize speakers	4806	1
-4810	Create training materials	4800	1
-4811	Create strategy for sequence of challenges	4810	1
-4812	Build first 10 challenges	4810	1
-4813	Engage with multiple people	4810	1
-4814	Expand engagement	4810	1
-4815	Mentorship community	4800	1
-4816	Reproducible models for mentoring	4815	1
-4817	Create subscriber lists through Meetup	4815	1
-4818	teaching opportunities	4815	1
-4819	Possible mentoring opportunities	4800	1
-4820	Cole	4819	1
-4821	Jayden	4819	1
-4822	Rachel	4819	1
-4823	Andrew	4819	1
-4824	Josiah	4819	1
-4825	Tristan	4819	1
-4826	Develop connection with readers	4766	1
-4827	Relational plan - who & why	4826	1
-4828	Develop writing venues	4826	1
-4829	Create goals and aspirations for each venue	4826	1
-4830	Invest time wisely	4826	1
-4831	Grow (10%)	4414	1
-4832	Manage My Expectations	4831	1
-4833	Distinguish Commitments from Interests	4832	1
-4834	Reconcile Time Investments	4832	1
-4835	Celebrate Success	4832	1
-4836	Manage ToDo list daily	4832	1
-4837	Live life generously	4831	1
-4838	Lifetime goals for giving	4837	1
-4839	Serve the vision of others	4837	1
-4840	Be a friend of God	4831	1
-4841	Regular time alone with God	4840	1
-4842	Keep short accounts	4840	1
-4843	Experience and respond to the Spirit	4840	1
-4844	Live a life that matters	4831	1
-4845	Live my destiny	4844	1
-4846	Lifelong love	4844	1
-4847	Become the person I wish to be	4844	1
-4848	Enjoy the journey	4844	1
-4849	Emotional health	4831	1
-4850	Counseling with Tim Musslewhite	4849	1
-4851	Write About Choosing Happiness	4849	1
-4852	Tricks for Contentment	4851	1
-4853	Being Grateful	4851	1
-4854	The Life I Want	4851	1
-4855	Worship	4851	1
-4856	Improve EQ	4849	1
-4857	Study EQ 2.0 book	4856	1
-4858	Practice EQ habits	4856	1
-4859	Integrate into Personal Advisor	4856	1
-4860	Contact author of EQ	4856	1
-4861	Reflection time	4856	1
-4862	Destructive cycle	4856	1
-4863	Deny, Suppress, Explode	4862	1
-4864	Experience, Understand, Act	4862	1
-4865	Four Horsemen - reflect on impact daily events	4856	1
-4866	Anger	4865	1
-4867	Sadness	4865	1
-4868	Fear	4865	1
-4869	Shame	4865	1
-4870	Mental Wellbeing	4856	1
-4871	Appreciation	4870	1
-4872	Creativity	4870	1
-4873	Destiny	4870	1
-4874	Connection	4870	1
-4875	Create habits for personal competence	4849	1
-4876	Create habits for social interactions	4849	1
-4877	Be intentional	4831	1
-4878	Create tools as needed	4877	1
-4879	Measure and respond	4877	1
-4880	Daily habit of capturing ideas	4877	1
-4881	Random selection of actions from 1000 Goals	4877	1
-4882	My Story	4831	1
-4883	Record life events by year	4882	1
-4884	Tell my life story	4882	1
-4885	Create a book	4882	1
-4886	Fun (20%)	4414	1
-4887	Enjoy music	4886	1
-4888	Build music collection	4887	1
-4889	Regular blues festivals	4887	1
-4890	Enjoy listening to music	4887	1
-4891	Expose music on mac system	4887	1
-4892	Photos	4886	1
-4893	Gather family photos	4892	1
-4894	Create highlights of vacations	4892	1
-4895	Collect photos from others	4892	1
-4896	Reading	4886	1
-4897	Reading for Enjoyment	4896	1
-4898	Richard Castle	4897	1
-4899	Brad Thor	4897	1
-4900	Ken Follet	4897	1
-4901	Reading for Inspiration	4896	1
-4902	Destiny	4901	1
-4903	Prophesy	4901	1
-4904	Reading for Information	4896	1
-4905	Next 100 Years	4904	1
-4906	EQ	4904	1
-4907	Entertainment: TV & movies	4886	1
-4908	Binge watch	4907	1
-4909	Turn	4908	1
-4910	Poldark	4908	1
-4911	SHIELD	4908	1
-4912	Sherlock	4908	1
-4913	Americans	4908	1
-4914	Homeland	4908	1
-4915	House of Cards	4908	1
-4916	Vikings	4908	1
-4917	Done watched	4907	1
-4918	Continuum	4917	1
-4919	Tomorrow People	4917	1
-4920	Regular series	4907	1
-4921	Timeless	4920	1
-4922	Legends	4920	1
-4923	Supergirl	4920	1
-4924	Goldbergs	4920	1
-4925	Fraiser	4920	1
-4926	Last Man	4920	1
-4927	Favorite Movie Series	4907	1
-4928	Hobbit/Lord of Rings	4927	1
-4929	Back to the Future	4927	1
-4930	Marvel	4927	1
-4931	James Bond	4927	1
-4932	Regular vacations and leisure activities	4886	1
-4933	Travel the world	4886	1
-\.
-
-
---
--- Name: workshop_thot_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.workshop_thot_id_seq', 4933, true);
-
-
---
--- Data for Name: workshop_thotbook; Type: TABLE DATA; Schema: public; Owner: django
---
-
-COPY public.workshop_thotbook (id, title, rootid) FROM stdin;
-4	Work_Modes	0
-6	thots	0
-2	Building_Software	499
-3	Thot_Recorder	631
-7	Advisor	0
-8	Journal	0
-10	Creativity	1527
-9	Who2Hire	2090
-5	ToDo	3666
-11	App_Design	3682
-12	Bio_Hammer	3764
-1	Goals	4413
-\.
-
-
---
--- Name: workshop_thotbook_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
---
-
-SELECT pg_catalog.setval('public.workshop_thotbook_id_seq', 12, true);
-
-
---
--- Name: aspire_client_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_client
-    ADD CONSTRAINT aspire_client_pkey PRIMARY KEY (id);
-
-
---
--- Name: aspire_client_user_id_key; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_client
-    ADD CONSTRAINT aspire_client_user_id_key UNIQUE (user_id);
-
-
---
--- Name: aspire_goal_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_goal
-    ADD CONSTRAINT aspire_goal_pkey PRIMARY KEY (id);
-
-
---
--- Name: aspire_node_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_node
-    ADD CONSTRAINT aspire_node_pkey PRIMARY KEY (id);
-
-
---
--- Name: aspire_project_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_project
-    ADD CONSTRAINT aspire_project_pkey PRIMARY KEY (id);
-
-
---
--- Name: aspire_role_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_role
-    ADD CONSTRAINT aspire_role_pkey PRIMARY KEY (id);
 
 
 --
@@ -10360,38 +6154,6 @@ ALTER TABLE ONLY public.auth_user
 
 
 --
--- Name: church_budget_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.church_budget
-    ADD CONSTRAINT church_budget_pkey PRIMARY KEY (id);
-
-
---
--- Name: church_budgetcategory_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.church_budgetcategory
-    ADD CONSTRAINT church_budgetcategory_pkey PRIMARY KEY (id);
-
-
---
--- Name: church_money_month_dc88639a_uniq; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.church_money
-    ADD CONSTRAINT church_money_month_dc88639a_uniq UNIQUE (month);
-
-
---
--- Name: church_money_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.church_money
-    ADD CONSTRAINT church_money_pkey PRIMARY KEY (id);
-
-
---
 -- Name: django_admin_log_pkey; Type: CONSTRAINT; Schema: public; Owner: django
 --
 
@@ -10432,30 +6194,6 @@ ALTER TABLE ONLY public.django_session
 
 
 --
--- Name: doc_doc_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.doc_doc
-    ADD CONSTRAINT doc_doc_pkey PRIMARY KEY (id);
-
-
---
--- Name: guide_course_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.guide_course
-    ADD CONSTRAINT guide_course_pkey PRIMARY KEY (id);
-
-
---
--- Name: guide_student_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.guide_student
-    ADD CONSTRAINT guide_student_pkey PRIMARY KEY (id);
-
-
---
 -- Name: health_healthscore_pkey; Type: CONSTRAINT; Schema: public; Owner: django
 --
 
@@ -10485,30 +6223,6 @@ ALTER TABLE ONLY public.life_experience
 
 ALTER TABLE ONLY public.life_year
     ADD CONSTRAINT life_year_pkey PRIMARY KEY (id);
-
-
---
--- Name: mybook_author_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.mybook_author
-    ADD CONSTRAINT mybook_author_pkey PRIMARY KEY (id);
-
-
---
--- Name: mybook_author_user_id_key; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.mybook_author
-    ADD CONSTRAINT mybook_author_user_id_key UNIQUE (user_id);
-
-
---
--- Name: mybook_book_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.mybook_book
-    ADD CONSTRAINT mybook_book_pkey PRIMARY KEY (id);
 
 
 --
@@ -10557,130 +6271,6 @@ ALTER TABLE ONLY public.tool_project
 
 ALTER TABLE ONLY public.tool_test
     ADD CONSTRAINT tool_test_pkey PRIMARY KEY (id);
-
-
---
--- Name: unc_course_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.unc_course
-    ADD CONSTRAINT unc_course_pkey PRIMARY KEY (id);
-
-
---
--- Name: unc_review_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.unc_review
-    ADD CONSTRAINT unc_review_pkey PRIMARY KEY (id);
-
-
---
--- Name: unc_reviewerscore_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.unc_reviewerscore
-    ADD CONSTRAINT unc_reviewerscore_pkey PRIMARY KEY (id);
-
-
---
--- Name: unc_reviewscore_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.unc_reviewscore
-    ADD CONSTRAINT unc_reviewscore_pkey PRIMARY KEY (id);
-
-
---
--- Name: unc_student_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.unc_student
-    ADD CONSTRAINT unc_student_pkey PRIMARY KEY (id);
-
-
---
--- Name: wiki_wikidoc_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.wiki_wikidoc
-    ADD CONSTRAINT wiki_wikidoc_pkey PRIMARY KEY (id);
-
-
---
--- Name: workshop_category_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_category
-    ADD CONSTRAINT workshop_category_pkey PRIMARY KEY (id);
-
-
---
--- Name: workshop_money_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_money
-    ADD CONSTRAINT workshop_money_pkey PRIMARY KEY (id);
-
-
---
--- Name: workshop_moneyclient_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_moneyclient
-    ADD CONSTRAINT workshop_moneyclient_pkey PRIMARY KEY (id);
-
-
---
--- Name: workshop_moneyclient_user_id_key; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_moneyclient
-    ADD CONSTRAINT workshop_moneyclient_user_id_key UNIQUE (user_id);
-
-
---
--- Name: workshop_thot_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_thot
-    ADD CONSTRAINT workshop_thot_pkey PRIMARY KEY (id);
-
-
---
--- Name: workshop_thotbook_pkey; Type: CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_thotbook
-    ADD CONSTRAINT workshop_thotbook_pkey PRIMARY KEY (id);
-
-
---
--- Name: aspire_goal_6be37982; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX aspire_goal_6be37982 ON public.aspire_goal USING btree (parent_id);
-
-
---
--- Name: aspire_node_6be37982; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX aspire_node_6be37982 ON public.aspire_node USING btree (parent_id);
-
-
---
--- Name: aspire_project_84566833; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX aspire_project_84566833 ON public.aspire_project USING btree (role_id);
-
-
---
--- Name: aspire_role_2bfe9d72; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX aspire_role_2bfe9d72 ON public.aspire_role USING btree (client_id);
 
 
 --
@@ -10747,27 +6337,6 @@ CREATE INDEX auth_user_username_6821ab7c_like ON public.auth_user USING btree (u
 
 
 --
--- Name: church_budget_category_id_a450de64; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX church_budget_category_id_a450de64 ON public.church_budget USING btree (category_id);
-
-
---
--- Name: church_budgetcategory_church_id_176ce09c; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX church_budgetcategory_church_id_176ce09c ON public.church_budgetcategory USING btree (church_id);
-
-
---
--- Name: church_money_month_dc88639a_like; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX church_money_month_dc88639a_like ON public.church_money USING btree (month varchar_pattern_ops);
-
-
---
 -- Name: django_admin_log_417f1b1c; Type: INDEX; Schema: public; Owner: django
 --
 
@@ -10796,13 +6365,6 @@ CREATE INDEX django_session_session_key_c0390e0f_like ON public.django_session U
 
 
 --
--- Name: doc_doc_e8701ad4; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX doc_doc_e8701ad4 ON public.doc_doc USING btree (user_id);
-
-
---
 -- Name: health_healthscore_user_id_0cb2520f; Type: INDEX; Schema: public; Owner: django
 --
 
@@ -10814,13 +6376,6 @@ CREATE INDEX health_healthscore_user_id_0cb2520f ON public.health_healthscore US
 --
 
 CREATE INDEX life_experience_aspect_id_55d08d71 ON public.life_experience USING btree (aspect_id);
-
-
---
--- Name: mybook_book_4f331e2f; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX mybook_book_4f331e2f ON public.mybook_book USING btree (author_id);
 
 
 --
@@ -10849,116 +6404,6 @@ CREATE INDEX tool_page_url_dcc809f9_like ON public.tool_page USING btree (url va
 --
 
 CREATE INDEX tool_project_e8701ad4 ON public.tool_project USING btree (user_id);
-
-
---
--- Name: unc_review_designer_id_0d380c75; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX unc_review_designer_id_0d380c75 ON public.unc_review USING btree (designer_id);
-
-
---
--- Name: unc_review_reviewer_id_7a9a0881; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX unc_review_reviewer_id_7a9a0881 ON public.unc_review USING btree (reviewer_id);
-
-
---
--- Name: unc_student_course_id_b7e35d45; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX unc_student_course_id_b7e35d45 ON public.unc_student USING btree (course_id);
-
-
---
--- Name: wiki_wikidoc_slug_d9bc447f; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX wiki_wikidoc_slug_d9bc447f ON public.wiki_wikidoc USING btree (slug);
-
-
---
--- Name: wiki_wikidoc_slug_d9bc447f_like; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX wiki_wikidoc_slug_d9bc447f_like ON public.wiki_wikidoc USING btree (slug varchar_pattern_ops);
-
-
---
--- Name: wiki_wikidoc_user_id_8fa4e04d; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX wiki_wikidoc_user_id_8fa4e04d ON public.wiki_wikidoc USING btree (user_id);
-
-
---
--- Name: workshop_category_client_id_137049f2; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX workshop_category_client_id_137049f2 ON public.workshop_category USING btree (client_id);
-
-
---
--- Name: workshop_money_category_id_a32bce9d; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX workshop_money_category_id_a32bce9d ON public.workshop_money USING btree (category_id);
-
-
---
--- Name: workshop_thot_parent_id_4f06a56f; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX workshop_thot_parent_id_4f06a56f ON public.workshop_thot USING btree (parent_id);
-
-
---
--- Name: workshop_thot_thotbook_id_3c9476b3; Type: INDEX; Schema: public; Owner: django
---
-
-CREATE INDEX workshop_thot_thotbook_id_3c9476b3 ON public.workshop_thot USING btree (thotbook_id);
-
-
---
--- Name: aspire_client_user_id_08263f1d_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_client
-    ADD CONSTRAINT aspire_client_user_id_08263f1d_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: aspire_goal_parent_id_e8b10d26_fk_aspire_goal_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_goal
-    ADD CONSTRAINT aspire_goal_parent_id_e8b10d26_fk_aspire_goal_id FOREIGN KEY (parent_id) REFERENCES public.aspire_goal(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: aspire_node_parent_id_cb20b142_fk_aspire_node_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_node
-    ADD CONSTRAINT aspire_node_parent_id_cb20b142_fk_aspire_node_id FOREIGN KEY (parent_id) REFERENCES public.aspire_node(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: aspire_project_role_id_6d6fd416_fk_aspire_role_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_project
-    ADD CONSTRAINT aspire_project_role_id_6d6fd416_fk_aspire_role_id FOREIGN KEY (role_id) REFERENCES public.aspire_role(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: aspire_role_client_id_e75e8cb2_fk_aspire_client_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.aspire_role
-    ADD CONSTRAINT aspire_role_client_id_e75e8cb2_fk_aspire_client_id FOREIGN KEY (client_id) REFERENCES public.aspire_client(id) DEFERRABLE INITIALLY DEFERRED;
 
 
 --
@@ -11018,14 +6463,6 @@ ALTER TABLE ONLY public.auth_user_user_permissions
 
 
 --
--- Name: church_budget_category_id_a450de64_fk_church_budgetcategory_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.church_budget
-    ADD CONSTRAINT church_budget_category_id_a450de64_fk_church_budgetcategory_id FOREIGN KEY (category_id) REFERENCES public.church_budgetcategory(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
 -- Name: django_admin_content_type_id_c4bce8eb_fk_django_content_type_id; Type: FK CONSTRAINT; Schema: public; Owner: django
 --
 
@@ -11042,14 +6479,6 @@ ALTER TABLE ONLY public.django_admin_log
 
 
 --
--- Name: doc_doc_user_id_9dcc2ae9_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.doc_doc
-    ADD CONSTRAINT doc_doc_user_id_9dcc2ae9_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
 -- Name: health_healthscore_user_id_0cb2520f_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: django
 --
 
@@ -11063,22 +6492,6 @@ ALTER TABLE ONLY public.health_healthscore
 
 ALTER TABLE ONLY public.life_experience
     ADD CONSTRAINT life_experience_aspect_id_55d08d71_fk_life_aspect_id FOREIGN KEY (aspect_id) REFERENCES public.life_aspect(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: mybook_author_user_id_75f2956c_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.mybook_author
-    ADD CONSTRAINT mybook_author_user_id_75f2956c_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: mybook_book_author_id_5b7ac26a_fk_mybook_author_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.mybook_book
-    ADD CONSTRAINT mybook_book_author_id_5b7ac26a_fk_mybook_author_id FOREIGN KEY (author_id) REFERENCES public.mybook_author(id) DEFERRABLE INITIALLY DEFERRED;
 
 
 --
@@ -11103,78 +6516,6 @@ ALTER TABLE ONLY public.superuser_administrator
 
 ALTER TABLE ONLY public.tool_project
     ADD CONSTRAINT tool_project_user_id_4389d573_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: unc_review_designer_id_0d380c75_fk_unc_student_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.unc_review
-    ADD CONSTRAINT unc_review_designer_id_0d380c75_fk_unc_student_id FOREIGN KEY (designer_id) REFERENCES public.unc_student(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: unc_review_reviewer_id_7a9a0881_fk_unc_student_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.unc_review
-    ADD CONSTRAINT unc_review_reviewer_id_7a9a0881_fk_unc_student_id FOREIGN KEY (reviewer_id) REFERENCES public.unc_student(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: unc_student_course_id_b7e35d45_fk_unc_course_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.unc_student
-    ADD CONSTRAINT unc_student_course_id_b7e35d45_fk_unc_course_id FOREIGN KEY (course_id) REFERENCES public.unc_course(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: wiki_wikidoc_user_id_8fa4e04d_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.wiki_wikidoc
-    ADD CONSTRAINT wiki_wikidoc_user_id_8fa4e04d_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: workshop_category_client_id_137049f2_fk_workshop_moneyclient_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_category
-    ADD CONSTRAINT workshop_category_client_id_137049f2_fk_workshop_moneyclient_id FOREIGN KEY (client_id) REFERENCES public.workshop_moneyclient(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: workshop_money_category_id_a32bce9d_fk_workshop_category_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_money
-    ADD CONSTRAINT workshop_money_category_id_a32bce9d_fk_workshop_category_id FOREIGN KEY (category_id) REFERENCES public.workshop_category(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: workshop_moneyclient_user_id_39508293_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_moneyclient
-    ADD CONSTRAINT workshop_moneyclient_user_id_39508293_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: workshop_thot_parent_id_4f06a56f_fk_workshop_thot_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_thot
-    ADD CONSTRAINT workshop_thot_parent_id_4f06a56f_fk_workshop_thot_id FOREIGN KEY (parent_id) REFERENCES public.workshop_thot(id) DEFERRABLE INITIALLY DEFERRED;
-
-
---
--- Name: workshop_thot_thotbook_id_3c9476b3_fk_workshop_thotbook_id; Type: FK CONSTRAINT; Schema: public; Owner: django
---
-
-ALTER TABLE ONLY public.workshop_thot
-    ADD CONSTRAINT workshop_thot_thotbook_id_3c9476b3_fk_workshop_thotbook_id FOREIGN KEY (thotbook_id) REFERENCES public.workshop_thotbook(id) DEFERRABLE INITIALLY DEFERRED;
 
 
 --
