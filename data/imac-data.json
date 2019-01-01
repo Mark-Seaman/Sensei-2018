@@ -748,7 +748,7 @@
         "fields": {
             "expected": "Fri Dec 28 18:29:09 MST 2018\n",
             "name": "tst-time",
-            "output": "Mon Dec 31 07:00:39 MST 2018\n"
+            "output": "Tue Jan  1 07:00:17 MST 2019\n"
         },
         "model": "tool.test",
         "pk": 58
@@ -1216,7 +1216,7 @@
         "fields": {
             "expected": "Log Length OK - /Users/seaman/Sensei/log/hammer.log, 1731 lines",
             "name": "log-length",
-            "output": "Log Length OK - /Users/seaman/Sensei/log/hammer.log, 1972 lines"
+            "output": "Log Length OK - /Users/seaman/Sensei/log/hammer.log, 1216 lines"
         },
         "model": "tool.test",
         "pk": 110
