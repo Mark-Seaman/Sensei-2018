@@ -748,7 +748,7 @@
         "fields": {
             "expected": "Fri Dec 28 18:29:09 MST 2018\n",
             "name": "tst-time",
-            "output": "Thu Jan  3 07:00:28 MST 2019\n"
+            "output": "Fri Jan  4 07:00:29 MST 2019\n"
         },
         "model": "tool.test",
         "pk": 58
@@ -1207,7 +1207,7 @@
         "fields": {
             "expected": "shell(curl -s https://markseaman.info) --> 256 lines (should be between 195 and 230)\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nOK - https://app.who2hire.us/admin",
             "name": "page-sites",
-            "output": "shell(curl -s https://markseaman.info) --> 256 lines (should be between 195 and 230)\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nshell(curl -s https://app.who2hire.us/admin) --> 1 lines (should be between 324 and 324)"
+            "output": "shell(curl -s https://markseaman.info) --> 253 lines (should be between 195 and 230)\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nshell(curl -s https://app.who2hire.us/admin) --> 1 lines (should be between 324 and 324)"
         },
         "model": "tool.test",
         "pk": 109
@@ -1216,7 +1216,7 @@
         "fields": {
             "expected": "Log Length OK - /Users/seaman/Sensei/log/hammer.log, 1731 lines",
             "name": "log-length",
-            "output": "Log Length OK - /Users/seaman/Sensei/log/hammer.log, 1756 lines"
+            "output": "Too Long Log - /Users/seaman/Sensei/log/hammer.log, 2026 lines"
         },
         "model": "tool.test",
         "pk": 110
