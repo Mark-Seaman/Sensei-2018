@@ -995,7 +995,7 @@ SELECT pg_catalog.setval('public.auth_permission_id_seq', 132, true);
 
 COPY public.auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
 2	pbkdf2_sha256$36000$62KSeQlGP4ck$HJi2Ug5Pfw764Ma578HjlLmKnl6LMqpW2D/fRqUtvyo=	2018-02-17 22:19:16.916101+00	f	StacieSeaman	Stacie	Seaman	Stacie.Seaman@gmail.com	t	t	2017-08-14 22:44:27.760861+00
-1	pbkdf2_sha256$36000$l3MBrZDF5pDf$d72tjaHBa6PeGcoUMkzwlu/oGKrvAWHn0cF18yBBiGc=	2018-12-20 18:49:21.863985+00	f	MarkSeaman	Mark	Seaman	Mark.B.Seaman@gmail.com	t	t	2017-04-12 13:53:38.916+00
+1	pbkdf2_sha256$36000$l3MBrZDF5pDf$d72tjaHBa6PeGcoUMkzwlu/oGKrvAWHn0cF18yBBiGc=	2019-01-03 19:10:46.199089+00	f	MarkSeaman	Mark	Seaman	Mark.B.Seaman@gmail.com	t	t	2017-04-12 13:53:38.916+00
 4	pbkdf2_sha256$36000$OHhS10nw7ups$kV7BdNUDJ43L0R3Of1vqeQKfoksm0bwjB73qWVAs8dE=	\N	f	JennyBeilman	Jenny	Beilman	jennyb@greeleyvineyard.org	t	t	2017-08-14 22:48:11.541665+00
 3	pbkdf2_sha256$36000$fxcELW0AaG3Y$0l/wIXbHCGGkY7QZwTXrpqH1Z2t0zSBBwygkj7yvlQg=	2018-01-09 22:48:14.532048+00	f	KyleWhitlow	Kyle	Whitlow	whitlow.k@gmail.com	t	t	2017-08-14 22:47:55.476422+00
 5	pbkdf2_sha256$36000$wR6fpQSVD91v$LxQrE75exG4vSF4X9a0SYrEkSXpCJxOTpto5S0Z+qu4=	2018-01-26 00:50:00.56793+00	f	ToddBeilman	Todd	Beilman	toddb@greeleyvineyard.org	t	t	2017-08-14 22:48:18.314431+00
@@ -1342,6 +1342,7 @@ myojqioxz2eed8wpcrhcn2lunauxx0ww	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZ
 njkde8028d4ktvv5ph6oa6w9ovwxcrhy	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-10-15 21:50:21.037437+00
 i4u1lzibq9mqn6j1y4m9f4e20vj4kj2j	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-06-30 17:36:18.817477+00
 wzb03ren40j6eaid03ilug8w9z7b27pe	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-08-16 14:20:15.337085+00
+y36jo3fa22t9xzx7opcrzjfndg5ssimn	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2019-01-17 19:10:46.204023+00
 inturdempcd0uw65lymuqtr82gscbje8	NDBmZGY2YWZlZWNhZWMyYzY0ZTBkMWFhMDdlY2Y1YWNlYTI5NGRkMTp7Il9hdXRoX3VzZXJfaGFzaCI6IjUxMjU4ODg2NjBkYTdhMzliMDNjNDAwZjk5NjM2YTY4NDRmYWQwYTYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIzIn0=	2017-10-18 21:40:24.545974+00
 m065j60bp268zcc0dfzz712b6s7i5pot	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-06-30 17:36:23.388762+00
 d6qt7lrof606i48r2fe2dzzmeu2sq6ig	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-08-16 14:20:19.779443+00
@@ -2361,13 +2362,13 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2054	Fun	\n        Return of the King \n        Niki Heat\n	2017-06-04	4	f
 2056	Tools	\n        fix tests	2017-06-05	2	f
 2165	Fun	\n        Aeon Flux	2017-06-30	2	f
-4388	People	    dinner at home\n    time with Stacie\n    	2018-12-16	2	f
 4389	Church	    Ruby's first church service	2018-12-16	4	f
 4390	Fun	    Stargate: Continuum, Resident\n    	2018-12-16	4	f
 4381	Grow	    5, 3, 3, 2\n    weight: 207.4\n    Man's Search for Meaning	2018-12-17	2	f
 4382	Teach	    explore Repl.it\n    write draft of first lessons\n    build embedded Repl\n    create Repl: Simple Page, HTML and CSS\n    	2018-12-17	5	f
 4384	Fun	    download Pentomino puzzles\n    GoT\n    	2018-12-17	3	f
 4385	People	    Lucy arrives\n    dinner with Lucy & Stacie\n    setup CPAP machine	2018-12-17	2	f
+4388	People	    dinner at home\n    time with Stacie\n    	2018-12-16	2	f
 2169	Fun	\n        Regarding Henry\n        Timeless, Legends\n	2017-07-01	5	f
 2170	Grow	\n        3, 3, 3, 2\n        nap	2017-07-02	2	f
 2171	Church	\n        church service	2017-07-02	4	f
@@ -2461,10 +2462,10 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1130	Business	\n        develop Household Economics\n        create general spreadsheet for Budget, Investment, House\n        create simplified budget review process\n        discuss family finance with Stacie\n        resolve gross/net budget\n        build spreadsheet for tracking investments	2016-12-02	5	f
 2435	People	\n        Stacie returns home	2017-09-11	2	f
 2436	Fun	\n        TV\n	2017-09-11	1	f
-4397	Business	    finish up on Agent Match project\n    	2018-12-19	1	f
 4399	Fun	    British Baking, Profit\n    	2018-12-19	2	f
 4400	People	    visit Rachel\n    Ruby now weighs 8 lb 2 oz	2018-12-19	2	f
 4396	Grow	    4, 1, 2, 2\n    weight: 209.4\n    reflection and prayer\n    Christmas Story	2018-12-19	3	f
+4397	Business	    finish up on Agent Match project\n    	2018-12-19	1	f
 156	Church	\N	2016-02-21	4	f
 3321	People	    discuss strategy for deeper connections\n    interact with Lynn on teaching\n    dinner with Stacie	2018-04-19	3	f
 3322	Fun	    Legends, Supergirl	2018-04-19	2	f
@@ -2519,12 +2520,12 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2756	Hammer	\n        time management scripts	2016-09-24	2	f
 2180	Tools	\n        create thot/App_Design\n        fix issues with new features\n        refactor tst_results code\n        clean up old WAM domain\n        implement doc sender\n        remove old email code\n        simplify old doc code\n        clean up advisor	2017-07-04	6	f
 2179	Grow	\n        3, 2, 2, 2	2017-07-04	0	f
-4434	Tools	    implement Rest Framework\n    install React\n    build React UI	2018-12-26	3	f
-4198	Grow	    5, 1, 3, 5\n    weight: 209.2	2018-11-17	0	f
 4435	Fun	    Muppets Christmas Carol\n    	2018-12-26	4	f
-4370	People	    neighborhood party at Faye's\n    get Christmas tree\n    buy concrete for household project	2018-12-14	5	f
+4198	Grow	    5, 1, 3, 5\n    weight: 209.2	2018-11-17	0	f
 4436	People	    Garcias over to watch Muppets	2018-12-26	2	f
 4403	Fun	    GoT\n    	2018-12-21	2	f
+4370	People	    neighborhood party at Faye's\n    get Christmas tree\n    buy concrete for household project	2018-12-14	5	f
+4434	Tools	    implement Rest Framework\n    install React\n    build React UI	2018-12-26	3	f
 2181	Fun	\n        Read\n	2017-07-04	2	f
 2183	People	\n        Stacie's computer fails to upgrade drivers\n        meet Larry Chapman for lunch	2017-07-05	4	f
 2185	Grow	\n        5, 2, 1, 1	2017-07-06	0	f
@@ -2839,6 +2840,9 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3609	Fun	    listen to Americans in Paris\n    Blues from the Top	2018-06-24	6	f
 4258	Fun	    TV	2018-02-20	5	f
 4130	Grow	    5, 3, 3, 2\n    weight: 207.4\n    prepare for personal retreat\n    plan Life Journey Notebook	2018-10-23	2	f
+4452	Grow	    5, 1, 2, 4\n    not feeling good in evening\n    constant back pain	2018-12-31	2	f
+4453	Fun	    walk on beach\n    GoT\n    watch New Years Eve TV\n    	2018-12-31	4	f
+4454	People	    New Years Eve (party and TV)\n    Greek Town Taverna for late lunch\n    time with Stacie	2018-12-31	8	f
 2529	Grow	\n        4, 5, 4, 5	2017-10-06	0	f
 2531	Fun	\n        Ultron\n        Iron Fist\n	2017-10-06	6	f
 2532	Grow	\n        4, 5, 4, 5	2017-10-07	0	f
@@ -5237,7 +5241,6 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1865	Fun	\n        Comics: X-force\n        TV\n	2016-01-28	4	f
 1923	Grow	\n        5, 3, 2, 2\n	2016-11-29	0	f
 1856	Tools	\n        Build form input for 4 thot app (rename, move, add node)\n        Debug thot app\n        Build content for Thots	2016-01-25	4	f
-4409	People	    visit with Stacie and Lucy\n    Stacie gets sick\n    attempt concrete project	2018-12-20	6	f
 3112	People	\n        Mehrgan Mostowfi over for dinner	2018-02-26	4	f
 1827	People	\n        Time with Stacie	2016-01-15	2	f
 1840	Business	\n        Invoice WAM	2016-01-19	0	f
@@ -5248,6 +5251,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4406	Teach	    plan out teaching prep\n    build unc classroom site\n    Classroom UX - style and navigation\n    shrinking-world.com/unc/bacs200\n    shrinking-world.com/unc/bacs350\n    rebuild seamansguide.com\n    	2018-12-20	4	f
 4407	Tools	    remove old code: guide, unc, aspire\n    prune old docs\n    fix tests	2018-12-20	2	f
 4408	Fun	    Last Kingdom, GoT\n    	2018-12-20	2	f
+4409	People	    visit with Stacie and Lucy\n    Stacie gets sick\n    attempt concrete project	2018-12-20	6	f
 1878	Business	\n        meeting with Mike Hefty\n        discuss money management with Stacie\n        long-term care meeting	2016-04-28	3	f
 1880	Grow	\n\n    \n## Accomplishments\n	2016-04-30	0	f
 1897	Grow	\n        5, 1, 3, 2\n	2016-10-17	0	f
@@ -5548,6 +5552,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1540	Tools	\n        set up seamanslog and spiritual websites\n        set up navigation between sites	2017-04-01	4	f
 4315	Fun	    shopping for Christmas\n    book browsing\n    Mr Robot, GoT\n    Deathly Hallows\n    	2018-11-24	6	f
 4291	Fun	    Crazy Rich Asians\n    ER\n    	2018-12-02	4	f
+4289	Grow	    5, 2, 2, 3\n    weight: 208.6\n    nap	2018-12-02	2	f
 4323	Grow	    4, 3, 2, 3\n    weight: 208	2018-11-26	0	f
 4286	Teach	    Last day of class\n    Scheduled alternate final\n    share memory extra credit\n    talk with students\n    give early final	2018-11-30	8	f
 4324	Teach	    debug system for Design Review\n    teach Learning in 200\n    	2018-11-26	8	f
@@ -5564,52 +5569,51 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4300	Teach	    build design review sys for 350\n    prep lesson for design reviews\n    	2018-11-25	4	f
 4302	Fun	    Deathly Hallows\n    GoT\n    	2018-11-25	4	f
 4288	People	    Rachel's due date\n    Greeley Chop House - last class celebration	2018-11-30	3	f
-4292	People	    lunch with Potters\n    Rachel in waiting\n    time with Stacie	2018-12-02	4	f
 4294	WAM	    build plan for WAM transition	2018-12-03	2	f
-4321	Fun	    \n    	2018-12-04	0	f
 4295	Teach	    create syllabus for BACS 200 - Spring 2019\n    schedule final review assignments\n    read "most import learning" feedback\n    grade final review in 350\n    	2018-12-03	5	f
+4321	Fun	    \n    	2018-12-04	0	f
 4297	Church	    UNC Outreach	2018-12-03	3	f
-4296	Business	    schedule meeting with Matt\n    driveway repair	2018-12-03	1	f
+4298	People	    Pie at Fat Alberts	2018-12-03	2	f
 4293	Grow	    5, 1, 2, 4\n    weight: 209.6\n    planning	2018-12-03	1	f
 4306	Teach	    Planning on Sensei Workshop project\n    	2018-12-01	2	f
 4307	Fun	    GoT\n    Mr Robot\n    IMDB Trailers\n    	2018-12-01	4	f
 4308	People	    breakfast at Warren's\n    Andrew and Rachel\n    discuss healthcare options with Stacie\n    sign up for Primary Care	2018-12-01	6	f
+4305	Grow	    5, 1, 3, 1\n    weight: 209.2\n    nap	2018-12-01	2	f
 4303	People	    Doug's Diner with Garcias and Potters\n    time with Stacie\n    	2018-11-25	2	f
 4304	Church	    talk with Matt at church	2018-11-25	3	f
 4301	Business	    write to Greg McCutchan	2018-11-25	1	f
 4312	People	    driveway project\n    repair toilet	2018-11-29	1	f
 4316	People	    La Creperie with Stacie	2018-11-24	3	f
-4305	Grow	    5, 1, 3, 1\n    weight: 209.2\n    nap	2018-12-01	2	f
+4410	Grow	    5, 2, 2, 2\n    weight: 208.4	2018-12-23	0	f
 2025	Tools	\n        refactor menu and site titles on several websites\n        make list of web services to develop\n	2017-05-28	2	f
-4412	Tools	    build custom views\n    build doc display	2018-12-23	2	f
 4413	Fun	    Last Kingdom\n    	2018-12-23	1	f
 4414	People	    Christmas dinner\n    Ruby feedings\n    	2018-12-23	8	f
 4318	Teach	    350 grades\n    explore Code Mentor, CodePen, React\n    invite Ben to FCIP\n    attend FCIP with Ben\n    	2018-12-04	5	f
+4319	Tools	    fix Menu on MyBook server\n    login for Meetup	2018-12-04	2	f
 4313	Grow	    5, 3, 1, 1\n    weight: 207.6\n    bed at 8:30	2018-11-24	1	f
 4314	Teach	    grading in 200	2018-11-24	4	f
-4410	Grow	    5, 2, 2, 2\n    weight: 208.4	2018-12-23	0	f
+4412	Tools	    build custom views\n    build doc display	2018-12-23	2	f
 1548	Hire	\n        learn how to create PDF file\n        install Latex on ubuntu servers\n        attempt to setup Latex on Macs\n        build Markdown file for report (title only)\n        convert Markdown to PDF\n        display PDF file in Who2Hire application\n        manage who2hire branch merges	2017-04-03	8	f
-4322	People	    Rachel in labor\n    discuss household projects\n    vigil at hospital	2018-12-04	5	f
+4317	Grow	    4, 2, 1, 1\n    weight: 208.8	2018-12-04	0	f
 4325	Fun	    ER, GoT, Fraiser\n    	2018-11-26	4	f
 4327	Grow	    4, 1, 3, 4\n    weight: 209.2	2018-11-28	0	f
 4285	Grow	    5, 2, 2, 4\n    weight: 208.2	2018-11-30	0	f
-4289	Grow	    5, 2, 2, 3\n    weight: 208.6\n    nap	2018-12-02	2	f
-4298	People	    Pie at Fat Alberts	2018-12-03	2	f
-4317	Grow	    4, 2, 1, 1\n    weight: 208.8	2018-12-04	0	f
 4290	Church	    Church service	2018-12-02	4	f
+4296	Business	    schedule meeting with Matt\n    driveway repair	2018-12-03	1	f
+4415	Grow	    5, 3, 2, 2\n    weight: 208.4	2018-12-22	0	f
+4292	People	    lunch with Potters\n    Rachel in waiting\n    time with Stacie	2018-12-02	4	f
 2019	Grow	\n        jetlag at sleeping patterns\n        think about non-sleeping activities\n        write about emotional triggers (5x5)\n        capture list of core emotions\n        plan most important activities\n        walk along river\n        brain purge\n        action priorities LPBT (7 each)	2017-05-27	8	f
 2026	Tools	\n        build basic thot view\n        refactor workshop demo views\n        refactor Menu & SiteTitle\n        create /thot/42 view\n        think about booknotes design\n        create new WordPress site with template	2017-05-29	0	f
 1587	Hire	\n        repair send mechanism\n        remove extra app code and scripts from Who2Hire\n        simplify bashrc-django \n        Issue 119. Disable notifications from staging\n        Issue 120. Landing page background color and other improvements\n        discuss User Guide with Stacie	2017-04-12	6	f
-4415	Grow	    5, 3, 2, 2\n    weight: 208.4	2018-12-22	0	f
 4326	People	    Sol de Jalisco   	2018-11-26	2	f
 4281	Teach	    grading and student interaction\n    plan out finals	2018-11-27	3	f
 4299	Grow	    5, 2, 3, 1\n    weight: 208.6	2018-11-25	0	f
 4411	Teach	    \n    	2018-12-23	0	f
-4320	Business	    Isborn Security prep for meeting 12-6	2018-12-04	2	f
+4322	People	    Rachel in labor\n    discuss household projects\n    vigil at hospital	2018-12-04	5	f
 4309	Grow	    5, 3, 3, 2\n    weight: 208	2018-11-29	0	f
 4311	Fun	    Resident, Madam Sec, This is Us\n    	2018-11-29	5	f
 4279	People	    Christmas shopping	2018-11-23	2	f
-4319	Tools	    fix Menu on MyBook server\n    login for Meetup	2018-12-04	2	f
+4320	Business	    Isborn Security prep for meeting 12-6	2018-12-04	2	f
 2268	Fun	\n        Dunkirk\n        Barnes & Noble\n        John Adams\n        So You Think You Can Dance\n	2017-08-02	8	f
 112	WAM	\n        Setup email at greeleyW2w.org\n        Setup Mandrill account\n        Debug email sending\n        Setup wam.w2Wgreeley.org domain\n        Hook up notifications to email sending	2016-02-08	4	f
 2280	People	\n        clean up garage with Stacie\n        meet with Jayden\n        try to setup computer for Jayden\n        try to meet with Kole Curtis\n        figure out video problem with computer for Hangouts	2017-08-05	8	f
@@ -5630,12 +5634,12 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1968	Tools	\n        update aspire/MyBook documents\n        setup Bootstraps and Blessings in MyBook\n        setup Leverage in MyBook\n        build author page and book page	2017-05-03	3	f
 2148	Tools	\n        remove extra CSS template libraries from MyBook\n        explore UI elements and techniques in Material\n        workshop views\n            template_derived\n            template_columns\n            template_content\n        create view to load custom templates\n        write ThotBook on Creativity\n        simplify plan.py and todo.py\n        plan new features for Time views\n        consolidate 1000Goals and ThotBook: Goals	2017-06-26	7	f
 2270	Tools	\n        create workshop/views.py code\n        support request for PipeScan\n        time tabs: Week, Month, Year\n        workshop tricks: DjangoApps, DjangoCommand, DjangoSettings, SecretSettings,\n             Parameters, QueryParameters, SimpleMatch, Accordion, Tabs, Icon\n        create new improved time summaries	2017-08-03	8	f
-4431	Church	    Lucy stays home from church with cold	2018-12-23	3	f
 4416	Teach	    meet with Ben Flebbe to discuss software tools\n    	2018-12-22	2	f
 4418	Fun	    Last Kingdom, GoT\n    	2018-12-22	2	f
-4310	Teach	    planning\n    email\n    grade 350 final project\n    rebuild design review reporting\n    	2018-11-29	8	f
-4373	Tools	    rebuild web pages with Senei/Documents\n    create new repos for Sensei and Documents-2019\n    Debug MyBook server with Documents-2019	2018-12-13	4	f
 4419	People	    grocery and Christmas shopping\n    visit with Lucy and Stacie	2018-12-22	2	f
+4310	Teach	    planning\n    email\n    grade 350 final project\n    rebuild design review reporting\n    	2018-11-29	8	f
+4431	Church	    Lucy stays home from church with cold	2018-12-23	3	f
+4373	Tools	    rebuild web pages with Senei/Documents\n    create new repos for Sensei and Documents-2019\n    Debug MyBook server with Documents-2019	2018-12-13	4	f
 2594	Fun	\n        Orville, Poldark	2017-10-24	3	f
 2598	People	\n        Stacie	2017-10-25	2	f
 2599	Fun	\n        TV	2017-10-25	4	f
@@ -5663,7 +5667,6 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 209	Sign	\n        investigate activation URL\n        meeting with Hamed to learn about SignSpan DevOps\n        meeting with Thomas about testing\n        meeting with Tom about design and integration	2016-03-05	4	f
 216	WAM	\n        setup redirect from greeleywAm.org to wam.weldwAm.org\n        delete unwanted database records from testing\n        turn on email test mode to allow real email logic\n        solve bug preventing email\n        reword notification for profile change\n        create initial superuser records\n        work with Stacie on testing	2016-03-07	6	f
 257	WAM	\n        create process for resetting database contents\n        reset staging server database\n        test application on staging\n        update production server with WAM 2.0.2 (a)	2016-03-21	4	f
-4335	Grow	    1, 1, 1, 4\n    read Django and Rest\n    nap 	2018-12-05	4	f
 3624	WAM	    Digital Ocean Women2Women account\n    Setup new WAM Droplet\n    Configure server scripts and testing\n    Solve problem with weldw2w.org being used by Shrinking World DO account\n    Setup domain routing\n    SSL certificate	2018-06-26	10	f
 2590	Fun	\n        Circle. Flash, Madam Sec	2017-10-23	4	f
 2591	Grow	\n        5,5,4,5\n        walk around golf course	2017-10-23	0	f
@@ -5675,10 +5678,11 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2601	Teach	\n        350: prep #29 write exam\n        200: prep #29 final project plan\n        Restructure doc management repos\n        Work on Github processes\n        work out pull request with multiple repos\n        move Jupyter notes	2017-10-26	10	f
 4277	Business	    meet with Matt Isborn\n    investigate solutions to personnel matching\n    	2018-11-23	3	f
 4203	Grow	    5, 3, 3, 4\n    weight: 207.6	2018-11-12	0	f
-4420	Teach	    build plan for class prep\n    update notes for Sensei and BACS 200 sites	2018-12-21	3	f
 4432	Grow	    3, 1, 1, 1\n    weight: 209.4\n    prayer during night\n    top fears\n    monthly objectives & personal review\n    nap	2018-12-26	4	f
-4334	People	    visit Rachel in hospital	2018-12-06	4	f
+4335	Grow	    1, 1, 1, 4\n    read Django and Rest\n    nap 	2018-12-05	4	f
+4420	Teach	    build plan for class prep\n    update notes for Sensei and BACS 200 sites	2018-12-21	3	f
 4333	Business	    prep for Isborn meeting\n    meet with Matt\n    research notes apps	2018-12-06	6	f
+4334	People	    visit Rachel in hospital	2018-12-06	4	f
 369	Sign	\n        interactive debug with \n        echo subscription code in status\n        invoke chargify api to get all subscriptions\n        use the auth key withing the Chargify API call\n        return the active status code\n        set the UNVERIFIED status for new users\n        pass through customer reference value\n        improve logging\n        write initial request user function\n        debugging on user auth	2016-04-23	8	f
 408	Sign	\n        Cancel subscription from UI (first draft)\n        debugging on user registration workflow\n        build user.py script\n        build charify.py script\n        move code from registration.py to chargify.py\n        debug API for cancel subscription\n        debug API for update plan\n        work around for venue type setup bug	2016-05-06	8	f
 455	WAM	\n        Deployment on Staging Server\n        Test deployment to staging server\n        Consolidate docs on configuration\n        Automate web page loading\n        Rebuild PyCharm project\n        Revamped processing of switches of test acceleration\n        Create qt for export\n        Build an export script for cases to CSV\n        Create import of cases from CSV\n        Test round trip of data\n        Refactor case.py and case_script.py\n        Automated test of case logic	2016-05-19	8	f
@@ -5726,13 +5730,13 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1874	Sign	\n        setup iMac email to point to mark@signspan.com\n        organize documents for Confluence\n        process email\n        update JIRA issues status\n        MVP-352 - Fix issue with activate URL\n        setup iMac on VPN\n        write Payment System definition doc\n        write Payment System design doc\n        write User Administration requirements doc\n        update Subscriber Status doc with state machine\n        update Notification messages doc\n        learn about Mandrill templates\n        Scrum meeting	2016-02-18	8	f
 1083	Grow	\n        review time summary for last quarter\n        make decisions about current time investments\n        nap\n        4, 3, 3, 1	2016-11-20	2	f
 1089	Church	\n        church board meeting\n            demo of Church Dashboard\n            discuss Todd full time\n        create main menu\n        build Dashboard view\n        build Overview view\n        build Meetings and Meetings detail view\n        build Budget and Budget detail view\n        create automatic scoring\n        debug editing of records\n        data backup\n        create budget import mechanism	2016-11-22	11	f
-4372	WAM	    work with Nathan and Troy to hand off WAM\n    	2018-12-13	3	f
 4367	Teach	    \n    	2018-12-14	0	f
 4433	Teach	    review UNC email\n    	2018-12-26	1	f
 4365	Grow	    3, 3, 2, 4\n    weight: 208	2018-12-14	0	f
 4366	WAM	    follow up with remaining issues for transition	2018-12-14	2	f
-4371	Grow	    5, 3, 3, 3\n    weight: 208	2018-12-13	0	f
 4369	Fun	    browse Bernard Cornwell books\n    	2018-12-14	1	f
+4372	WAM	    work with Nathan and Troy to hand off WAM\n    	2018-12-13	3	f
+4371	Grow	    5, 3, 3, 3\n    weight: 208	2018-12-13	0	f
 3747	Fun	    Travel Log: Day 2\n    Welcome to Vienna, time with Stacie!\n    Breakfast at hotel\n    Wonderful buffet at Hilton\n    Visit with couple from Munich\n    Taxi to Cruise Hotel\n    Hang out and write\n    Meet cruise directors\n    Bus to city center\n    Baklava at grocery store\n    Walk downtown\n    Meet Valerie and Brenda\n    Nap\n    Welcome instructions\n    Worst drought since 1973\n    6,000 steps	2018-07-09	7	f
 507	WAM	\n        solve issue with database incrementing of case records\n        redact sensitive data from casevote view\n        improve data reset process\n        reset database on staging server\n        rebuild users and cases from scratch\n        clean up migrations\n        move database data intact	2016-06-09	6	f
 606	Sign	\n        investigate immediate vs. delayed cancel\n        setup meeting with Thomas\n        test chargify script\n        build document to show how to use chargify.py\n        setup meeting with Brandon\n        implement immediate cancel for non-production hosts\n        research Discount codes\n        implement ALWAYSFREE and 99PERCENTOFF coupons on sandbox\n        wrote Tom about production login	2016-07-08	8	f
@@ -5741,71 +5745,70 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2258	Church	\n        build new church dashboard with two separate reports (Regular, Special)\n        create general infrastructure for multiple reports\n        build report with three levels of entries\n        show totals, monthly, percentages\n        send report via email to board members	2017-07-31	8	f
 357	Sign	\n        Test add user scenario\n        Investigate return URL from Chargify\n        Query Chargify for list of active customers\n        Work with Tom to debug code deployment problem\n        Verify that new users are properly added to Chargify\n        Resolve issue with credit card acceptance on Chargify\n        Implement query of Chargify API to get subscription info\n        Implement status route which always returns active\n        Simplified control and data flow in setup of payments\n        Convert all payment plans to pass out subscription_id	2016-04-20	8	f
 1030	Hire	\n        debug setup of users on server\n        move production data to dev server\n        baseline testing and review\n        document user stories\n        document test progress\n        refactor views in view types\n        tie openings to companies\n        require passwords to see views\n        review progress with Stacie\n        create test page for access to all views	2016-11-07	8	f
-4423	Fun	    Last Kingdom\n    	2018-12-24	1	f
+4424	People	    open presents after church\n    meet with Josiah family\n    Garcia's out house	2018-12-24	5	f
 239	WAM	\n        promote code to production server\n        investigate emails that are not delivered\n        sign up for paid Mandrill account\n        build staging server\n        create process for acceptance testing\n        log all outstanding issues\n        prioritize remaining work\n        add case number links to all notifications\n        make all Status fields optional when editing\n        voting view - Display users who voted	2016-03-14	8	f
 1820	WAM	\n        Debug form to add new users\n        Clean up code\n        Build script to send 5 types of notifications\n        Query for proper recipients for each notification\n        Build notification log\n        Refine logic for sending notifications\n        Add new capabilities for user roles\n        Debug voting logic and display rules\n        Update logic for handling new cases\n        Update CSS and HTML layout code	2016-01-13	10	f
 392	Sign	\n        investigate new organization failure\n        restore code to reuse \n        debug the organization lookup\n        fix up exception handling\n        simplify update_java_user\n        debug update_java_user\n        fix problems caused by instrumentation\n        return better responses for errors\n        investigate setting the email address during update\n        create local script to invoke UserAPI\n        debug update_java_user with qt.py\n        integrate code changes into restration.py\n        verify old password during change\n        debug reset password	2016-04-30	11	f
 116	WAM	\n        Stacie meets to review code with WAM \n        Stacie delivers code with WAM \n        Stacie's demo to project team\n        Create importer for both types of legacy data\n        Reset all case data on production server\n        Fix button issue with Safari\n        Fix issue with form submittal\n        Create email forwarding addresses at w2wweld.org\n        Setup new w2wweld.org domain\n        Convert Mandrill account to use wam@w2wweld.org\n        Create subdomain wam.w2wweld.org for hosting of app at Digital Ocean\n        Setup domain to work with Mandrill\n        Setup proper details of email text attributes\n        Test notification system	2016-02-09	10	f
-4421	Grow	    5, 1, 1, 2\n    weight: 209.4	2018-12-24	0	f
 4422	Tools	    Explore Codecademy\n    Try lessons for HTML, Git, Coding, Python, Git\n    debug pipenv context\n    	2018-12-24	4	f
-4425	Church	    Christmas Eve service\n    	2018-12-24	4	f
+4423	Fun	    Last Kingdom\n    	2018-12-24	1	f
 4426	Grow	    4, 1, 1, 1\n    weight: 209.8\n    start getting cold\n    nap\n    prayer 	2018-12-25	2	f
 4428	Tools	    learn about Codecademy	2018-12-25	2	f
 4430	People	    hot cinnamon rolls\n    Christmas morning\n    Julio & Jackie's Christmas\n    conversation with Wade and Anna\n    time with Stacie\n    video with Josiah family\n    phone call with Dad\n    visit with Lucy	2018-12-25	10	f
 4336	People	    Ruby is born at 6:30am\n    night at hospital\n    time with Jackie & Christine during Rachel's labor	2018-12-05	10	f
-4427	Teach	    \n    	2018-12-25	0	f
 4374	Fun	    Last Kingdom\n    ER, Profit\n    	2018-12-13	4	f
-4429	Fun	    \n    	2018-12-25	0	f
+4427	Teach	    \n    	2018-12-25	0	f
 4375	People	    visit with Rachel and Andrew and Ruby\n    repair fireplace\n    celebrate with Stacie at Romas\n    Stacie - first shift with Ruby	2018-12-13	3	f
-4424	People	    open presents after church\n    meet with Josiah family\n    Garcia's out house	2018-12-24	5	f
+4429	Fun	    \n    	2018-12-25	0	f
 4404	People	    tried to work on concrete project\n    visit Rachel\n    dinner at Dickie's BBQ\n    Ruby weighs 8lb 5oz	2018-12-21	4	f
-4380	Teach	    build ideas for teaching\n    	2018-12-15	2	f
-1467	Hire	\n        Issue 49. Multiple managers\n        Issue 70. Superuser access pages\n        Issue 79. Remove scorecard view\n        Issue 75. Constrain score\n        my_company needs spoofing\n        debug interview record\n        Issue 53. Terms of Usage\n        Issue 53. Privacy policy\n        Issue 63. Add candidate score\n        Issue 73. Delete button for candidates\n        reroute Who2Hire.US url\n        Test Customer Release 1	2017-03-09	9	f
-4355	Fun	    Electric Dreams\n    	2018-12-08	2	f
-4357	Grow	    5, 1, 2, 2\n    weight: 210.2\n    write New Reformation\n    enter notes	2018-12-07	2	f
-4395	People	    dinner with Beilmans at Pelegrini's\n    visit Ruby's house\n    discuss writing Life App notes\n    cleaning crew	2018-12-18	4	f
-4364	People	    write Greg McCutchen\n    write my dream phobias\n    contact Ben Flebbe - postpone working together\n    dinner at Pelican Lakes\n    time with Stacie\n    Stacie to Ruby's til 2am	2018-12-11	4	f
-4344	Tools	    rebuild website content for exteriorbrain, shrinking-world, seaman-tech\n    world-class-software etc.\n    fix domain router\n    experiment with character encoding\n    update pandoc char encoding \n    build project pages on shrinking-world	2018-12-10	7	f
-4346	WAM	    prep for meeting with Nathan	2018-12-10	1	f
-4362	Grow	    3, 1, 1, 5\n    Dr Visit intro visit to direct primary care\n    weight: 209.4\n    embrace personal brokenness (Narcissism)\n    Daily Examen app on phone	2018-12-11	4	f
-4337	Grow	    3, 3, 4, 2\n    weight: 209.4	2018-12-12	0	f
-4383	Tools	    create pages for UNC classes\n    work on 404 error handling	2018-12-17	2	f
-4349	Fun	    Last Kingdom, Good Place\n    	2018-12-09	2	f
-4352	Grow	    5, 1, 2, 3\n    weight: 210	2018-12-08	0	f
-4353	Teach	    Investigate teaching tools\n        - Repl.it, CodePen, TiddlyWiki\n    	2018-12-08	6	f
-4356	People	    visit Garcias\n    Stacie stayed till 2am\n    Christine drove me home	2018-12-08	2	f
-4378	People	    work on concrete for driveway\n    learn about concrete for project\n    prep project with Jayden Howell\n    Christmas decorations\n    Stacie to Ruby's\n    Ruby's family visit\n    Pizza from Pelican Joe's\n    hang lights outside	2018-12-15	8	f
+4425	Church	    Christmas Eve service\n    	2018-12-24	4	f
+4421	Grow	    5, 1, 1, 2\n    weight: 209.4	2018-12-24	0	f
 4359	Business	    Follow up on project plan\n    Investigate notes tools for Agent Match	2018-12-07	2	f
+1467	Hire	\n        Issue 49. Multiple managers\n        Issue 70. Superuser access pages\n        Issue 79. Remove scorecard view\n        Issue 75. Constrain score\n        my_company needs spoofing\n        debug interview record\n        Issue 53. Terms of Usage\n        Issue 53. Privacy policy\n        Issue 63. Add candidate score\n        Issue 73. Delete button for candidates\n        reroute Who2Hire.US url\n        Test Customer Release 1	2017-03-09	9	f
+4378	People	    work on concrete for driveway\n    learn about concrete for project\n    prep project with Jayden Howell\n    Christmas decorations\n    Stacie to Ruby's\n    Ruby's family visit\n    Pizza from Pelican Joe's\n    hang lights outside	2018-12-15	8	f
 4360	Fun	    Electric Dreams\n    	2018-12-07	3	f
+4363	Business	    start writing user guide for Agent Match app\n    working session with Heidi\n    create initial tag list\n    setup Evernote account for Heidi\n    process to create Agent Profiles\n    process to search using tags and text\n    process to create index of matching agents\n    follow up after working session\n    	2018-12-11	6	f
+4337	Grow	    3, 3, 4, 2\n    weight: 209.4	2018-12-12	0	f
+4346	WAM	    prep for meeting with Nathan	2018-12-10	1	f
+4349	Fun	    Last Kingdom, Good Place\n    	2018-12-09	2	f
+4364	People	    write Greg McCutchen\n    write my dream phobias\n    contact Ben Flebbe - postpone working together\n    dinner at Pelican Lakes\n    time with Stacie\n    Stacie to Ruby's til 2am	2018-12-11	4	f
+4340	Tools	    fix problems with websites	2018-12-12	2	f
+4350	People	    Right Coast Pizza\n    Visit Ruby	2018-12-09	4	f
+4352	Grow	    5, 1, 2, 3\n    weight: 210	2018-12-08	0	f
+4355	Fun	    Electric Dreams\n    	2018-12-08	2	f
+4356	People	    visit Garcias\n    Stacie stayed till 2am\n    Christine drove me home	2018-12-08	2	f
+4379	Fun	    Fraiser, Bean Holiday\n    nts 2\n    	2018-12-15	3	f
+4380	Teach	    build ideas for teaching\n    	2018-12-15	2	f
 4386	Grow	    3, 1, 4, 3\n    weight: 209.4\n    write project goals\n    nap\n    build planning system\n    prayer	2018-12-16	3	f
 4387	Teach	    capture ideas for teaching tools - submitting assignments\n    	2018-12-16	1	f
 4393	Tools	    build test pages for MyBook server\n    debug static server\n    debug page loading and redirect\n    simplify production code\n    build common test page format\n    rebuild lessons in HTML apps\n    remove images from HTML apps	2018-12-18	6	f
-4363	Business	    start writing user guide for Agent Match app\n    working session with Heidi\n    create initial tag list\n    setup Evernote account for Heidi\n    process to create Agent Profiles\n    process to search using tags and text\n    process to create index of matching agents\n    follow up after working session\n    	2018-12-11	6	f
+4394	Fun	    finish Lady Elizabeth audiobook\n    GoT	2018-12-18	2	f
+4395	People	    dinner with Beilmans at Pelegrini's\n    visit Ruby's house\n    discuss writing Life App notes\n    cleaning crew	2018-12-18	4	f
 4331	Grow	    3, 1, 1, 2\n    weight: 211.4\n    wake at 4:00\n    think about the New Reformation\n    write about life motivation\n    write about Creativity and Commitments\n    record activities\n    talk with Stacie about work fulfillment	2018-12-06	3	f
 4338	Teach	    write proposal for Independent Study\n    	2018-12-12	2	f
-4340	Tools	    fix problems with websites	2018-12-12	2	f
 4341	Fun	    Star Trek Beyond\n    Madam Sec\n    	2018-12-12	4	f
+4344	Tools	    rebuild website content for exteriorbrain, shrinking-world, seaman-tech\n    world-class-software etc.\n    fix domain router\n    experiment with character encoding\n    update pandoc char encoding \n    build project pages on shrinking-world	2018-12-10	7	f
 4345	Church	    party at Beilman's new house\n    	2018-12-10	4	f
-4347	Grow	    3, 1, 3, 2\n    weight: 209.6	2018-12-09	0	f
-4350	People	    Right Coast Pizza\n    Visit Ruby	2018-12-09	4	f
-4391	Grow	    4, 3, 1, 2\n    weight: 207.4\n    haircut\n    	2018-12-18	2	f
-4394	Fun	    finish Lady Elizabeth audiobook\n    GoT	2018-12-18	2	f
+4383	Tools	    create pages for UNC classes\n    work on 404 error handling	2018-12-17	2	f
+4351	Church	    advent	2018-12-09	4	f
+4353	Teach	    Investigate teaching tools\n        - Repl.it, CodePen, TiddlyWiki\n    	2018-12-08	6	f
+4362	Grow	    3, 1, 1, 5\n    Dr Visit intro visit to direct primary care\n    weight: 209.4\n    embrace personal brokenness (Narcissism)\n    Daily Examen app on phone	2018-12-11	4	f
 4339	Business	    Isborn\n        Build shared folders\n        Work with Heidi to get first three profiles\n        Reviewed solution with Matt\n        create consulting contract + send to Matt\n    	2018-12-12	5	f
 4342	People	    discuss Greg with Stacie	2018-12-12	1	f
-4351	Church	    advent	2018-12-09	4	f
-4368	Tools	    Rename Sensei\n    Improve and test repos\n    Debug Sensei & Sensei/Document repos\n    Fix problems on existing websites\n    Simplify websites and app code (eliminate %50 of content)	2018-12-14	6	f
+4347	Grow	    3, 1, 3, 2\n    weight: 209.6	2018-12-09	0	f
 4354	Business	    Isborn Security\n        Research tools for Agent Match platform (based on design requirements)\n        Build and share notes for project collaboration\n        Create Design Plan for initial implementation\n        Draft template for Agent Profiles	2018-12-08	4	f
 4376	Grow	    5, 2, 2, 4\n    weight: 208.4	2018-12-15	0	f
+4377	Tools	    update PyCharm on iMac\n    debug new repos on macbook	2018-12-15	1	f
+4357	Grow	    5, 1, 2, 2\n    weight: 210.2\n    write New Reformation\n    enter notes	2018-12-07	2	f
 4392	Teach	    \n    	2018-12-18	0	f
-4379	Fun	    Fraiser, Bean Holiday\n    nts 2\n    	2018-12-15	3	f
 4358	Teach	    gave last final exam\n    grade both classes\n    submit final grades\n    started work on idea of independent study\n    	2018-12-07	4	f
 4361	People	    Rachel & Andrew leave the hospital with Ruby\n    Stacie helps with Ruby (home at 3:00)\n    Lets Andrew & Rachel both sleep	2018-12-07	3	f
+4391	Grow	    4, 3, 1, 2\n    weight: 207.4\n    haircut\n    	2018-12-18	2	f
 4343	Grow	    5, 2, 1, 2\n    weight: 208.4\n    Dentist visit	2018-12-10	2	f
-4377	Tools	    update PyCharm on iMac\n    debug new repos on macbook	2018-12-15	1	f
 4348	Tools	    create plan for repos and apps\n    cancel 7 unused registered domains\n    resurrect page testing robot\n    remove old code	2018-12-09	4	f
+4368	Tools	    Rename Sensei\n    Improve and test repos\n    Debug Sensei & Sensei/Document repos\n    Fix problems on existing websites\n    Simplify websites and app code (eliminate %50 of content)	2018-12-14	6	f
 4402	Tools	    learn about pipenv\n    setup development for Rest\n    build Github repo for Rest API\n    learn about Django Rest API\n    record steps to build Rest API\n    update data models for Sensei Review App\n    update project planning notes for Sensei	2018-12-21	5	f
 4417	Tools	    learn about pipenv\n    setup Python3 with Django\n    create data models for Course, Lesson, Student\n    write docs for building Sensei app\n    debug context loading for pipenv on Rest and MyBook projects\n    pruned MyBook - aspire, cmd, doc	2018-12-22	8	f
-4332	Teach	    ideas for Seaman's Guides\n    think about app architecture\n    plan first four weeks - BACS 200\n    	2018-12-06	1	f
 4401	Grow	    4, 2, 1, 1\n    weight: 208.4\n    Stacie gets a cold, sleep on couch 	2018-12-21	0	f
 4398	Tools	    move Projects into Archive\n    fix tests for Archive\n    build page tester\n    site title from domdoc\n    menu from domdoc\n    random selector in Spiritual Things\n    random selector in Seamans Log	2018-12-19	6	f
 4437	Grow	    4, 1, 1, 1\n    weight: 209.8\n    nap	2018-12-27	2	f
@@ -5818,11 +5821,24 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4444	Tools	    manage length of hammer.log\n    improve web command\n    create class command	2018-12-28	1	f
 4445	Fun	    GoT\n    British baking, Yoyager\n    	2018-12-28	4	f
 4446	People	    take down tree\n    discuss trip arrangements with Stacie	2018-12-28	2	f
-4447	Grow	    3, 1, 1, 1\n    weight: 209.6	2018-12-29	0	f
+4447	Grow	    3, 1, 3, 3\n    weight: 209.6\n    fever and chill at airport hotel\n    nap\n    Food:\n        coffee - 3\n        soup - 2 bowls\n        cherry juice\n        chocolates - 4 	2018-12-29	4	f
+4449	Tools	    remove old database tables\n    attempt to import users for class	2018-12-29	3	f
+4451	People	    pack for trip\n    40th Anniversary\n    travel to Denver- check into Westin\n    bitter cold in Colorado\n    fire alarm at Westin\n    visit with Lucy\n    took Christmas tree to recycle\n    repair fitbit band	2018-12-29	6	f
+4450	Fun	    GoT\n    	2018-12-29	1	f
 4448	Teach	    \n    	2018-12-29	0	f
-4449	Tools	    remove old database tables	2018-12-29	2	f
-4450	Fun	    \n    	2018-12-29	0	f
-4451	People	    pack for trip	2018-12-29	1	f
+4332	Teach	    ideas for Seaman's Guides\n    think about app architecture\n    plan first four weeks - BACS 200\n    	2018-12-06	1	f
+4455	Grow	    1, 1, 4, 3\n    sleepless night, stay in bed til 1pm\n    serious back pain (diminished by 1pm)	2019-01-01	4	f
+4456	Fun	    New Years Day\n    GoT\n    	2019-01-01	2	f
+4457	People	    breakfast of granola, berries\n    Demitri's Greek Food\n    discuss fond memories of 2018	2019-01-01	8	f
+4458	Grow	    3, 1, 1, 3\n    fever in early night	2018-12-30	2	f
+4459	Fun	    travel to Ormond Beach\n    GoT\n    	2018-12-30	2	f
+4460	People	    breakfast at airport\n    fly to Orlando\n    drive with Stacie Orlando-Ormond Beach\n    check into condo\n    dinner and Genevisies restaurant\n    dense fog in evening	2018-12-30	10	f
+4461	Grow	    3, 3, 1, 1\n    think about gratitude\n    record aspirations for New Year\n    discuss the future with Stacie\n    create Thankful List	2019-01-03	4	f
+4462	Fun	    \n    	2019-01-03	0	f
+4463	People	    lunch at IHOP\n    shuffleboard\n    walk on beach	2019-01-03	4	f
+4464	Grow	    5, 1, 3, 4	2019-01-02	0	f
+4465	Fun	    Kennedy Space Center\n    	2019-01-02	10	f
+4466	People	    dinner at Alfie's\n    talk with Stacie about the future \n    drive to KSC	2019-01-02	4	f
 \.
 
 
@@ -5830,7 +5846,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 -- Name: tasks_task_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
 --
 
-SELECT pg_catalog.setval('public.tasks_task_id_seq', 4451, true);
+SELECT pg_catalog.setval('public.tasks_task_id_seq', 4466, true);
 
 
 --
@@ -5910,12 +5926,12 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 85	task-work	no output	no output
 132	wordpress-host	shell(x wordpress host) --> 13 lines (should be between 20 and 30)	shell(x wordpress host) --> 13 lines (should be between 20 and 30)
 134	booknotes-list	booknotes list\nExecution-quotes.html\nSiteTitle\nNext100Years\nThinking-quotes.html\nEssentialism\nOriginals-quotes.html\nPresentOverPerfect\nPrinciples-quotes.html\nActivateYourBrain-quotes.html\nEssentialism-quote.html\nIndex\nExecution\nIntegrity-quotes.html\nGoodIdeas-quotes.html\nIntegrity\nEQ\nTribeOfMentors-quotes.html\n	booknotes list\nExecution-quotes.html\nSiteTitle\nNext100Years\nThinking-quotes.html\nEssentialism\nOriginals-quotes.html\nPresentOverPerfect\nPrinciples-quotes.html\nActivateYourBrain-quotes.html\nEssentialism-quote.html\nIndex\nExecution\nIntegrity-quotes.html\nGoodIdeas-quotes.html\nIntegrity\nEQ\nTribeOfMentors-quotes.html\n
-179	log-length	Log Length OK - /home/django/MyBook/log/hammer.log, 1919 lines	Log Length OK - /home/django/MyBook/log/hammer.log, 1547 lines
+179	log-length	Log Length OK - /home/django/MyBook/log/hammer.log, 1069 lines	Log Length OK - /home/django/MyBook/log/hammer.log, 1547 lines
 65	ops-server-type	Ops Command - production type\n\n        ops production ['type']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n	Ops Command - production type\n\n        ops production ['type']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n
 20	app-switches	from os import environ\nfrom os.path import join\nfrom platform import node\n\n# Project\nHOME = environ.get('HOME', '/home/django')\nPROJECT_BASE = join(HOME, 'Projects', 'hammer')\n\n\n# Application Config\nBASE_DIR = environ.get('p', '/home/django/MyBook')\n\nAPP_PORT = '8001'\nAPP_DIRS = ['bin', 'hammer', 'test', 'tool', 'spiritual']\nAPP_DIR = 'tool'\n\n\n# Documents\nDOC_DIRS = ['tech', 'spiritual', 'software', 'seamanslog', 'brain', 'MarkSeaman']\nTODO_DIR  = join(BASE_DIR, 'Documents', 'info', 'days')\nTHOT_DIR = join(BASE_DIR, 'Documents', 'thot')\nTODO_FILES = [\n    join(TODO_DIR, '2018-05-08'),\n]\n\n\n# Test Settings\nTEST_ARCHIVE = False\nTEST_DOC = join(BASE_DIR, 'Documents', 'info', 'history', 'Index')\nTEST_DOC_ENCODING = False\nTEST_DATA = False\nTEST_SELENIUM = True\nTEST_EMAIL = False\nTEST_PAGES = join(BASE_DIR, 'Documents', 'tech', 'test', 'pages')\nTEST_HOSTS = ['localhost:8001', environ.get('DROPLET_IP','localhost')]\nIMPORT_RECORDS = True\nEXPORT_RECORDS = True\nSHOW_WEB_PAGE = False\nON_INTERNET = True\n\n\n# Servers\nWHO2HIRE_PRODUCTION  = 'app.who2hire.us'         # 138.68.46.197\nMYBOOK_PRODUCTION    = 'markseaman.org'    # 138.68.234.96  # old: 45.55.50.13\nSERVER_DIR           = '/home/django/MyBook'\n\n\n# Server Types\nif node()   == 'MyBook':           \n    SERVER_TYPE = 'production'\nelif node() == 'MyBook-Staging':   \n    SERVER_TYPE = 'staging'\nelif node() == 'Marks-iMac.local':\n    SERVER_TYPE = 'imac'\nelif node() == 'seaman-macbook.local':\n    SERVER_TYPE = 'macbook'\nelse:  \n    SERVER_TYPE = 'dev'\n\n\n# Type of server for this machine\ndef server_type():\n    return SERVER_TYPE\n\n\n# Select Domain that matches Hostname\ndef server_host(server):\n    if   server == 'who2hire':             return 'who2hire.co'\n    elif server == 'MyBook':               return 'markseaman.org'\n    elif server == 'Marks-iMac.local':     return 'iMac'\n    elif server == 'seaman-macbook.local': return 'macbook'\n\n	from os import environ\nfrom os.path import join\nfrom platform import node\n\n# Project\nHOME = environ.get('HOME', '/home/django')\nPROJECT_BASE = join(HOME, 'Projects', 'hammer')\n\n\n# Application Config\nBASE_DIR = environ.get('p', '/home/django/MyBook')\n\nAPP_PORT = '8001'\nAPP_DIRS = ['bin', 'hammer', 'test', 'tool', 'spiritual']\nAPP_DIR = 'tool'\n\n\n# Documents\nDOC_DIRS = ['tech', 'spiritual', 'software', 'seamanslog', 'brain', 'MarkSeaman']\nTODO_DIR  = join(BASE_DIR, 'Documents', 'info', 'days')\nTHOT_DIR = join(BASE_DIR, 'Documents', 'thot')\nTODO_FILES = [\n    join(TODO_DIR, '2018-05-08'),\n]\n\n\n# Test Settings\nTEST_ARCHIVE = False\nTEST_DOC = join(BASE_DIR, 'Documents', 'info', 'history', 'Index')\nTEST_DOC_ENCODING = False\nTEST_DATA = False\nTEST_SELENIUM = True\nTEST_EMAIL = False\nTEST_PAGES = join(BASE_DIR, 'Documents', 'tech', 'test', 'pages')\nTEST_HOSTS = ['localhost:8001', environ.get('DROPLET_IP','localhost')]\nIMPORT_RECORDS = True\nEXPORT_RECORDS = True\nSHOW_WEB_PAGE = False\nON_INTERNET = True\n\n\n# Servers\nWHO2HIRE_PRODUCTION  = 'app.who2hire.us'         # 138.68.46.197\nMYBOOK_PRODUCTION    = 'markseaman.org'    # 138.68.234.96  # old: 45.55.50.13\nSERVER_DIR           = '/home/django/MyBook'\n\n\n# Server Types\nif node()   == 'MyBook':           \n    SERVER_TYPE = 'production'\nelif node() == 'MyBook-Staging':   \n    SERVER_TYPE = 'staging'\nelif node() == 'Marks-iMac.local':\n    SERVER_TYPE = 'imac'\nelif node() == 'seaman-macbook.local':\n    SERVER_TYPE = 'macbook'\nelse:  \n    SERVER_TYPE = 'dev'\n\n\n# Type of server for this machine\ndef server_type():\n    return SERVER_TYPE\n\n\n# Select Domain that matches Hostname\ndef server_host(server):\n    if   server == 'who2hire':             return 'who2hire.co'\n    elif server == 'MyBook':               return 'markseaman.org'\n    elif server == 'Marks-iMac.local':     return 'iMac'\n    elif server == 'seaman-macbook.local': return 'macbook'\n\n
 103	project-import	\n\n        script to manage projects on servers\n\n        usage: x project command\n\n        command\n\n        List:\n            list                - list the configured project\n            get   name          - get a project by name lookup\n\n        Modify:\n            add     name user   - add a new project record\n            delete  name        - remove this project\n            edit    name value  - rename the project\n\n        I/O \n            import              - import all records from a file \n            export              - export all records to a file \n\n        \n	\n\n        script to manage projects on servers\n\n        usage: x project command\n\n        command\n\n        List:\n            list                - list the configured project\n            get   name          - get a project by name lookup\n\n        Modify:\n            add     name user   - add a new project record\n            delete  name        - remove this project\n            edit    name value  - rename the project\n\n        I/O \n            import              - import all records from a file \n            export              - export all records to a file \n\n        \n
 154	archive-dirs	dirs(/home/django/Archive/MyBook-2017) --> 1 dirs (should be between 504 and 507)\ndirs(/home/django/Archive/Documents-2017) --> 1 dirs (should be between 108 and 108)\ndirs(/home/django/Archive/Documents-2016) --> 1 dirs (should be between 88 and 88)\ndirs(/home/django/Archive/Documents-2015) --> 1 dirs (should be between 250 and 250)\ndirs(/home/django/Archive/Documents-2014) --> 1 dirs (should be between 947 and 947)\ndirs(/home/django/Archive/UNC-2017) --> 1 dirs (should be between 3643 and 3645)\ndirs(/home/django/Archive/rcp) --> 1 dirs (should be between 800 and 960)\n	dirs(/home/django/Archive/MyBook-2017) --> 1 dirs (should be between 504 and 507)\ndirs(/home/django/Archive/Documents-2017) --> 1 dirs (should be between 108 and 108)\ndirs(/home/django/Archive/Documents-2016) --> 1 dirs (should be between 88 and 88)\ndirs(/home/django/Archive/Documents-2015) --> 1 dirs (should be between 250 and 250)\ndirs(/home/django/Archive/Documents-2014) --> 1 dirs (should be between 947 and 947)\ndirs(/home/django/Archive/UNC-2017) --> 1 dirs (should be between 3643 and 3645)\ndirs(/home/django/Archive/rcp) --> 1 dirs (should be between 800 and 960)\n
-158	tst-time	Thu Jan  3 07:00:12 MST 2019\n	Sat Dec 29 09:42:14 MST 2018\n
+158	tst-time	Fri Jan  4 07:00:12 MST 2019\n	Sat Dec 29 09:42:14 MST 2018\n
 144	mybook-menu-list	Documents/Menu\nDocuments/info/Menu\nDocuments/aspire/Menu\nDocuments/seamanslog/Menu\nDocuments/Leverage/Menu\nDocuments/spiritual/Menu\nDocuments/MarkSeaman/Menu\nDocuments/guide/Teaching/Menu\nDocuments/guide/Menu\nDocuments/guide/HtmlApps/Menu\nDocuments/guide/PhpApps/Menu	Documents/Menu\nDocuments/info/Menu\nDocuments/aspire/Menu\nDocuments/seamanslog/Menu\nDocuments/Leverage/Menu\nDocuments/spiritual/Menu\nDocuments/MarkSeaman/Menu\nDocuments/guide/Teaching/Menu\nDocuments/guide/Menu\nDocuments/guide/HtmlApps/Menu\nDocuments/guide/PhpApps/Menu
 145	mybook-menu-mybook	('http://seaman-tech.com', 'zmdi-accounts-list', 'Shrinking World', None)\n('/mybook/Index', 'zmdi-home', 'Home', None)\n('/mybook/book_list', 'zmdi-local-library', 'Books', None)\n('/mybook/author_list', 'zmdi-face', 'Authors', None)	('http://seaman-tech.com', 'zmdi-accounts-list', 'Shrinking World', None)\n('/mybook/Index', 'zmdi-home', 'Home', None)\n('/mybook/book_list', 'zmdi-local-library', 'Books', None)\n('/mybook/author_list', 'zmdi-face', 'Authors', None)
 148	mybook-menu-swo	('/shrinking-world/Index', 'zmdi-home', 'Shrinking World', 'class=active')\n('/shrinking-world/Blog/Index', 'zmdi-library', 'Blog', None)\n('/shrinking-world/Staff', 'zmdi-accounts', 'Staff', None)\n('https://world-class-software.com/software/Index', 'zmdi-book', 'Training', None)	('/shrinking-world/Index', 'zmdi-home', 'Shrinking World', 'class=active')\n('/shrinking-world/Blog/Index', 'zmdi-library', 'Blog', None)\n('/shrinking-world/Staff', 'zmdi-accounts', 'Staff', None)\n('https://world-class-software.com/software/Index', 'zmdi-book', 'Training', None)
@@ -5960,7 +5976,7 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 35	author-drafts	no output	no output
 21	faceblog-list	faceblog command ['list']\nfaceblog list\nTimeBudget\nRandom\nOpportunity\n10000Days\nToolsSaveTime\nLearningCurve\nImportantWork\nUnfinishedBook\nLifeWork\nReadToLearn\nSiteTitle\nDailyHabits\nCommitments\nExpandContract\nMenu\nHabitualChange\nWorkMindset\nWritingWorkflow\nWhyWork\nMultitasking\nHitler\nLowCostMyth\nBusinessInvestment\nActToLearn\nScaledCommit\nStrengths\nCollaboration\nWritingStages\nPragmaticThinking\nOneImprovement\nSearch\nCareer\nProcessingIdeas\nYourBlogTopic\nIndex\nLifeFun\nLifeThatMatters\nBiggestIdea\nLifePeople\nLifeGrow\nNewYearsResolutions\nGenetics\nInvest20Percent\nCreativeScore\nRuthlessWithWaste\nFoodAndSex\nPessimism\nComputerComplexity\nIdeology\nMaunaKea\nWorkforce\nMyStory\n	faceblog command ['list']\nfaceblog list\nTimeBudget\nRandom\nOpportunity\n10000Days\nToolsSaveTime\nLearningCurve\nImportantWork\nUnfinishedBook\nLifeWork\nReadToLearn\nSiteTitle\nDailyHabits\nCommitments\nExpandContract\nMenu\nHabitualChange\nWorkMindset\nWritingWorkflow\nWhyWork\nMultitasking\nHitler\nLowCostMyth\nBusinessInvestment\nActToLearn\nScaledCommit\nStrengths\nCollaboration\nWritingStages\nPragmaticThinking\nOneImprovement\nSearch\nCareer\nProcessingIdeas\nYourBlogTopic\nIndex\nLifeFun\nLifeThatMatters\nBiggestIdea\nLifePeople\nLifeGrow\nNewYearsResolutions\nGenetics\nInvest20Percent\nCreativeScore\nRuthlessWithWaste\nFoodAndSex\nPessimism\nComputerComplexity\nIdeology\nMaunaKea\nWorkforce\nMyStory\n
 170	text-transforms	text_command\ntext_help\nfind_functions\n(.*)\\\nfind_links\nlink\nfind_urls\nmarkdown_list_links\nmarkdown_list_string\ntext_join\ntext_lines\ntext_match\ntext_no_match\ntext_outline\ntext_outline_string\ntext_markdown\ntext_body\ntext_replace\ntext_select\ntext_title\ntext_body\nmatch_lines\nmatch_pattern\ntransform_matches\ntext_command (options)\ntext_help (args=None)\nfind_functions (text)\n(.*)\\ (.*\\)\nfind_links (text)\nlink (anchor)\nfind_urls (text)\nmarkdown_list_links (host, lines)\nmarkdown_list_string (mylist)\ntext_join (text)\ntext_lines (text)\ntext_match (match_pattern, doc)\ntext_no_match (match_pattern, doc)\ntext_outline (text)\ntext_outline_string (outline, depth=0)\ntext_markdown (outline, depth=1)\ntext_body (lines)\ntext_replace (match_pattern, replace_pattern, doc)\ntext_select (selector, doc)\ntext_title (text)\ntext_body (text)\nmatch_lines (text, pattern)\nmatch_pattern (text, pattern)\ntransform_matches (text, match_pattern, select_pattern)	text_command\ntext_help\nfind_functions\n(.*)\\\nfind_links\nlink\nfind_urls\nmarkdown_list_links\nmarkdown_list_string\ntext_join\ntext_lines\ntext_match\ntext_no_match\ntext_outline\ntext_outline_string\ntext_markdown\ntext_body\ntext_replace\ntext_select\ntext_title\ntext_body\nmatch_lines\nmatch_pattern\ntransform_matches\ntext_command (options)\ntext_help (args=None)\nfind_functions (text)\n(.*)\\ (.*\\)\nfind_links (text)\nlink (anchor)\nfind_urls (text)\nmarkdown_list_links (host, lines)\nmarkdown_list_string (mylist)\ntext_join (text)\ntext_lines (text)\ntext_match (match_pattern, doc)\ntext_no_match (match_pattern, doc)\ntext_outline (text)\ntext_outline_string (outline, depth=0)\ntext_markdown (outline, depth=1)\ntext_body (lines)\ntext_replace (match_pattern, replace_pattern, doc)\ntext_select (selector, doc)\ntext_title (text)\ntext_body (text)\nmatch_lines (text, pattern)\nmatch_pattern (text, pattern)\ntransform_matches (text, match_pattern, select_pattern)
-178	page-sites	shell(curl -s https://markseaman.info) --> 256 lines (should be between 195 and 230)\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nshell(curl -s https://app.who2hire.us/admin) --> 1 lines (should be between 324 and 324)	shell(curl -s https://markseaman.info) --> 256 lines (should be between 195 and 230)\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nshell(curl -s https://app.who2hire.us/admin) --> 1 lines (should be between 324 and 324)
+178	page-sites	shell(curl -s https://markseaman.info) --> 253 lines (should be between 195 and 230)\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nshell(curl -s https://app.who2hire.us/admin) --> 1 lines (should be between 324 and 324)	shell(curl -s https://markseaman.info) --> 256 lines (should be between 195 and 230)\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nshell(curl -s https://app.who2hire.us/admin) --> 1 lines (should be between 324 and 324)
 48	seamanslog-show	no output	no output
 10	text-round-trip	0a1\n> \n10d10\n< \n15d14\n< \n21d19\n< \n23d20\n< \n25d21\n< \n27d22\n< \n29d23\n< \n31d24\n< \n33d25\n< \n35d26\n< \n39d29\n< \n42a33\n>     \n	0a1\n> \n10d10\n< \n15d14\n< \n21d19\n< \n23d20\n< \n25d21\n< \n27d22\n< \n29d23\n< \n31d24\n< \n33d25\n< \n35d26\n< \n39d29\n< \n42a33\n>     \n
 121	src-base	/home/django/Projects/Who2Hire\n	/home/django/Projects/Who2Hire\n
