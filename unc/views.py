@@ -11,10 +11,11 @@ class UncDocDisplay(TemplateView):
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title')
         doc = domain_doc(self.request.get_host(), 'unc/' + title)
+        title = 'Lesson %s' % title[-2:] if title[-3:-2]=='/' else 'UNC BACS 200'
         text = doc_html_text(doc, '/static/images')
         site = mybook_site_title(doc)
         menu = main_menu(site, doc)
-        return dict(site=site, title='Lesson %s' % title[-2:], text=text, menu=menu)
+        return dict(site=site, title=title, text=text, menu=menu)
 
 
 class UncSlidesDisplay(TemplateView):

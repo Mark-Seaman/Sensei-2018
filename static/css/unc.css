@@ -68,7 +68,6 @@ header a:hover {
 
 header h1 {
     border: none;
-    /*margin-left: 50px;*/
     padding-top: 0px;
     padding-bottom: 0px;
     font-size: 200%;
@@ -78,7 +77,6 @@ header h2 {
     color: white;
     background-color: #0E3D65;
     border: none;
-    /*margin-left: 50px;*/
     margin-top: 0px;
     margin-bottom: 0px;
     padding-top: 0px;
@@ -86,6 +84,7 @@ header h2 {
     font-size: 120%;
     text-align: left;
     width: 100%;
+    box-shadow: none;
 }
 
 header img.logo-image {
@@ -202,9 +201,9 @@ td {
     border: none;
 }
 
-.main-menu {
-    margin-top: 300px;
-}
+/*.main-menu {*/
+    /*margin-top: 0px;*/
+/*}*/
 
 .lesson-title {
     color: red;
@@ -238,7 +237,7 @@ td {
     ID
 ------------------------------*/
 
-#main a {
+#content a {
     color: #F6B018;
     background-color: #0E3D65;
     padding: 10px;
