@@ -24,5 +24,6 @@ class UncSlidesDisplay(TemplateView):
         title = self.kwargs.get('title')
         doc = 'Documents/unc' + title
         text = read_markdown(doc)
-        return dict(markdown=text)
+        bear = '\n\n---\n\n<img src="/static/images/unc/bacs200/Bear_Logo.png">\n\n---\n\n'
+        return dict(markdown=bear+text+bear)
 

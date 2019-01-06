@@ -11,6 +11,15 @@ Gold        -- #F6B018
     Elements
 ------------------------------*/
 
+#main a {
+    color: #F6B018;
+    background-color: #0E3D65;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #F6B018;
+    border-radius: 30px;
+}
+
 body {
     font-size: 18px;
     color: #0E3D65;
@@ -42,7 +51,7 @@ h2 {
     font-size: 200%;
     margin: 10px 20px;
     padding: 10px 20px;
-
+    box-shadow: 2px 2px 5px gray;
 }
 
 h3 {
@@ -124,8 +133,8 @@ i {
 }
 
 li {
-    margin: 0px 20px;
-    padding: 0em 0px;
+    /*margin: 0px 20px;*/
+    /*padding: 0em 0px;*/
 }
 
 img {
