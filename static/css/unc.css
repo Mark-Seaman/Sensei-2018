@@ -55,6 +55,8 @@ header {
     border: 2px solid white;
     background-color: #0E3D65;
     color: #F6B018;
+    width: 100%;
+    border: 1px solid green;
 }
 
 header a {
@@ -87,15 +89,15 @@ header h2 {
     box-shadow: none;
 }
 
-header img.logo-image {
-    background: white url("/static/images/guide/HtmlApps/Bear3.100.png") no-repeat;
-    border: white solid 2px;
+header img {
+    background: white url("/static/images/unc/bacs200/Bear_Logo.png") no-repeat;
     border-radius: 20px;
+    border: 10px solid white;
     box-shadow: none;
-    height: 100px;
     margin: 0px;
     padding: 0px;
-    width: 100px;
+    height: 115px;
+    width: 115px;
 }
 
 header .logo-text {
@@ -200,10 +202,6 @@ td {
     font-size: 150%;
     border: none;
 }
-
-/*.main-menu {*/
-    /*margin-top: 0px;*/
-/*}*/
 
 .lesson-title {
     color: red;
