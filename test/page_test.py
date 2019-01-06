@@ -1,4 +1,4 @@
-from bin.shell import check_shell_lines, shell
+from bin.shell import check_shell_lines
 
 
 def check_page(url, min=1, max=1):

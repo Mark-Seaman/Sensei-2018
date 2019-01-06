@@ -15,7 +15,7 @@ def web_command(args):
         web(args[0])
 
     else:
-        web_help()
+        web('https://markseaman.info')
 
 
 def web_help():

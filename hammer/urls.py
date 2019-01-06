@@ -11,6 +11,7 @@ import tasks.urls
 import tool.urls
 import health.urls
 import superuser.urls
+import unc.urls
 
 
 urlpatterns = [
@@ -39,6 +40,10 @@ urlpatterns = [
 
     # Tool
     url(r'^',           include(tool.urls)),
+
+    # UNC
+    # url(r'^unc/',       include(unc.urls)),
+    url(r'^unc',        include(unc.urls)),
 
     # MyBook
     url(r'^',           include(mybook.urls)),
