@@ -207,6 +207,11 @@ td {
     color: red;
 }
 
+.lesson-table {
+    margin: 3em;
+    padding: 3em;
+}
+
 .lesson-table tr {
     height: 3em;
 }
