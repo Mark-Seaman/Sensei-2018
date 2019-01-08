@@ -19,7 +19,8 @@ class UncDocDisplay(TemplateView):
         #     lessons = Lesson.objects.all()
         # else:
         #     lessons = []
-        lessons = []
+        lessons = Lesson.objects.all()
+        # lessons = []
         doc = domain_doc(self.request.get_host(), 'unc/' + title)
         title = 'Lesson %s' % title[-2:] if title[-3:-2]=='/' else 'UNC BACS 200'
         text = doc_html_text(doc, '/static/images/unc/bacs200')
