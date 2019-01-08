@@ -18,6 +18,7 @@ if 'MyBook' == node():
 else:
     DEBUG = True
     ALLOWED_HOSTS = ['*']
+DEBUG = True
 
 
 # Application definition
