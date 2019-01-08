@@ -34,7 +34,7 @@ class Lesson(models.Model):
     title = models.CharField(max_length=40)
     content = models.CharField(max_length=200)
     date = models.DateField()
-    course = models.ForeignKey(Course)
+    course = models.ForeignKey(Course, default=1)
 
     def __str__(self):
         return 'Lesson %02d. %s - %s' % (self.lesson, self.title, self.date)

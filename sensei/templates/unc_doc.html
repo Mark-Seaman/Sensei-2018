@@ -9,6 +9,7 @@
             <p>by Mark Seaman </p>
         {% endif %}
 
+
         {% if text %}
             {% autoescape off %}
                 <p>{{ text }}</p>
@@ -16,6 +17,15 @@
         {% else %}
             <h2>No document found. {{ doc }}</h2>
         {% endif %}
+
+
+        {% if lessons %}
+            <h2>Lessons</h2>
+            <pre>{{ lessons }}</pre>
+        {% else %}
+            <h2>No lessons found. {{ lessons }}</h2>
+        {% endif %}
+
 
         {% if readmore %}
             <p>Read more <a href="{{ readmore.1 }}">{{ readmore.0 }}</a></p>

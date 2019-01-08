@@ -42,6 +42,7 @@ urlpatterns = [
     url(r'^',           include(tool.urls)),
 
     # UNC
+    url(r'^unc/',       include(sensei.urls)),
     url(r'^unc',        include(sensei.urls)),
 
     # MyBook
