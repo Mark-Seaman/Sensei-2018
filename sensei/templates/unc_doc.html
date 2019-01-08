@@ -24,8 +24,9 @@
             <ul>
                 {% for lesson in lessons %}
                     <li>
-                        {{ lesson.date }} - Lesson #{{ lesson.lesson }}.
-                        <a href="{{ lesson.content }}">{{ lesson.title }}</a>
+                        {{ lesson.date }} - Lesson #{{ lesson.lesson }}. {{ lesson.title }}
+                        <a href="{{ lesson.content }}">Lesson #{{ lesson.lesson }}</a>
+                        <a href="{{ lesson.content }}/slides">Slides #{{ lesson.lesson }}</a>
                     </li>
                 {% endfor %}
             </ul>
