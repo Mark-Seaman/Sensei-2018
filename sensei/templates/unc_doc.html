@@ -21,7 +21,12 @@
 
         {% if lessons %}
             <h2>Lessons</h2>
-            <pre>{{ lessons.title }}</pre>
+            <ul>
+                {% for lesson in lessons %}
+                    <li>{{ lesson.title }}</li>
+                {% endfor %}
+            </ul>
+
         {% else %}
             <h2>No lessons found. {{ lessons }}</h2>
         {% endif %}
