@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     # MyBook
     'health',
     'life',
-    'mybook',
     'sensei',
     'superuser',
     'tasks',
