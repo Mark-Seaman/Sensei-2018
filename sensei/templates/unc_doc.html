@@ -21,7 +21,7 @@
 
         {% if lessons %}
             <h2>Lessons</h2>
-            <table>
+            <table class="lesson-table">
                 {% for lesson in lessons %}
                     <tr>
                         <td>{{ lesson.date }} - Lesson #{{ lesson.lesson }}. {{ lesson.title }}</td>
