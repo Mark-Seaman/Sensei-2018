@@ -211,6 +211,10 @@ td {
     height: 3em;
 }
 
+.lesson-table td {
+    margin: 1em;
+}
+
 .page {
     box-shadow: 2px 2px 5px gray;
     background-color: white;
