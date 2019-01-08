@@ -15,12 +15,10 @@ class UncDocDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title')
-        # if title == 'bacs200' or title == 'bacs200/Index':
-        #     lessons = Lesson.objects.all()
-        # else:
-        #     lessons = []
-        lessons = Lesson.objects.all()
-        # lessons = []
+        if title == 'bacs200' or title == 'bacs200/Index':
+            lessons = Lesson.objects.all()
+        else:
+            lessons = []
         doc = domain_doc(self.request.get_host(), 'unc/' + title)
         title = 'Lesson %s' % title[-2:] if title[-3:-2]=='/' else 'UNC BACS 200'
         text = doc_html_text(doc, '/static/images/unc/bacs200')
@@ -34,7 +32,7 @@ class UncSlidesDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title')
-        doc = 'Documents/unc' + title
+        doc = 'Documents/unc/' + title
         text = fix_images(read_markdown(doc), '/static/images/unc/bacs200')
         bear = '\n\n---\n\n<img src="/static/images/unc/bacs200/Bear_Logo.png">\n\n---\n\n'
         return dict(markdown=bear+text+bear)
