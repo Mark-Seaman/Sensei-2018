@@ -21,15 +21,17 @@
 
         {% if lessons %}
             <h2>Lessons</h2>
-            <table class="lesson-table">
-                {% for lesson in lessons %}
-                    <tr>
-                        <td>{{ lesson.date }} - Lesson #{{ lesson.lesson }}. {{ lesson.title }}</td>
-                        <td><a href="{{ lesson.content }}">Lesson #{{ lesson.lesson }}</a></td>
-                        <td><a href="{{ lesson.content }}/slides">Slides #{{ lesson.lesson }}</a></td>
-                    </tr>
-                {% endfor %}
-            </table>
+            <div class="box">
+                <table class="lesson-table">
+                    {% for lesson in lessons %}
+                        <tr>
+                            <td>{{ lesson.date }} - Lesson #{{ lesson.lesson }}. {{ lesson.title }}</td>
+                            <td><a href="{{ lesson.content }}">Lesson #{{ lesson.lesson }}</a></td>
+                            <td><a href="{{ lesson.content }}/slides">Slides #{{ lesson.lesson }}</a></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
 
         {% else %}
             <h2>No lessons found. {{ lessons }}</h2>
