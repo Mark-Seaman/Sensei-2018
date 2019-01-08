@@ -20,7 +20,7 @@ urlpatterns = [
     url(r'^favicon.ico$', RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'), permanent=True), name="favicon"),
 
     # Admin
-    url(r'^admin',      admin.site.urls),
+    url(r'^admin/',      admin.site.urls),
 
     # Health
     url(r'^health/',    include(health.urls)),
