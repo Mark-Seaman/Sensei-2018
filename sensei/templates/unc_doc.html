@@ -25,7 +25,7 @@
                 <table class="lesson-table">
                     {% for lesson in lessons %}
                         <tr>
-                            <td>{{ lesson.date }} - Lesson #{{ lesson.lesson }}. {{ lesson.title }}</td>
+                            <td>{{ lesson.date }} - Lesson {{ lesson.lesson }} - <b>{{ lesson.title }}</b></td>
                             <td><a href="{{ lesson.content }}">Lesson #{{ lesson.lesson }}</a></td>
                             <td><a href="{{ lesson.content }}/slides">Slides #{{ lesson.lesson }}</a></td>
                         </tr>
