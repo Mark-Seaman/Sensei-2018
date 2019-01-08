@@ -4,5 +4,5 @@ from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
-class UncConfig(AppConfig):
-    name = 'unc'
+class SenseiConfig(AppConfig):
+    name = 'sensei'

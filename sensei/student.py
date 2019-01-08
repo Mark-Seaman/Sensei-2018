@@ -1,7 +1,7 @@
 from csv import reader
 from traceback import format_exc
 
-from unc.models import Student
+from .models import Student
 from tool.log import log_exception
 from tool.user import user_add
 
@@ -9,7 +9,7 @@ from tool.user import user_add
 def import_students():
     '''
     usage:   dj shell
-         $ from unc.student import *
+         $ from sensei.student import *
          $ import_students()
     '''
     data_file = 'data/students.csv'
@@ -29,7 +29,7 @@ def import_students():
 def list_students():
     '''
     usage:   dj shell
-         $ from unc.student import *
+         $ from sensei.student import *
          $ list_students()
     '''
 
@@ -41,7 +41,7 @@ def list_students():
 def delete_students():
     '''
     usage:   dj shell
-         $ from unc.student import *
+         $ from sensei.student import *
          $ delete_students()
     '''
 

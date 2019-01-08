@@ -1,7 +1,6 @@
 # user.py -- created by factory script
 import traceback
 from csv import reader, writer
-from os import system
 
 from django.contrib.auth.models import User
 
@@ -117,27 +116,6 @@ def user_list():
         print(line)
 
 
-def user_reset(self):
-    User.objects.all().delete()
-    self.stdout.write('Use x for superuser passwords')
-    add_super_user('Stacie Seaman', 'stacie.seaman@shrinking-world.com', 'scs759-sws')
-    add_super_user('Mark Seaman', 'mark.seaman@gmail.com', 'MS1959-sws')
-
-
-def add_super_user(name, email, password):
-    '''
-    dj createsuperuser --username MarkSeaman --email mark.seaman@gmail.com
-    password: MS1959-sws
-    '''
-    username = name.replace(' ', '')
-    print('Set password to %s' % password)
-    system('dj createsuperuser --username %s --email %s' % (username, email))
-    u = User.objects.get(username=username)
-    x = name.split(' ')
-    u.first_name = x[0]
-    u.last_name = x[1]
-    u.set_password(password)
-    u.save()
 
 
 def user_password(username, password):

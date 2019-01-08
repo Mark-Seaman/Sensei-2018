@@ -1,7 +1,7 @@
 from random import shuffle
 
-from unc.models import Course, Review
-from unc.sensei import get_student, query_students
+from .models import Course, Review
+from .sensei import get_student, query_students
 
 
 def allow_review(reviewer, designer, page):

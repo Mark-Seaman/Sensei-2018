@@ -12,7 +12,7 @@ print("Directory: %s" % diagram_directory)
 web_images = join(environ['HOME'], 'Sensei', 'static', 'images', 'diagrams')
 print("Web Images: %s" % web_images)
 
-web_index = join(environ['HOME'], 'Sensei', 'Documents', 'unc', 'Diagrams.md')
+web_index = join(environ['HOME'], 'Sensei', 'Documents', 'sensei', 'Diagrams.md')
 print("Web Index: %s" % web_index)
 
 

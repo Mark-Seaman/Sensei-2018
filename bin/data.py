@@ -82,10 +82,10 @@ def data_load(host):
 
 
 def data_migrate():
-    modules = 'health life superuser tool tasks unc'
+    modules = 'health life superuser tool tasks sensei'
     system ('''
         cd $p
-        # rm */migrations/*
+        rm */migrations/*
         python ./manage.py makemigrations %s
         python ./manage.py migrate
         ''' % modules)

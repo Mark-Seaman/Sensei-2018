@@ -14,10 +14,10 @@ def unc_files_test():
 
 
 def unc_docs_test():
-    path = join(environ['HOME'], 'Sensei', 'Documents', 'unc')
+    path = join(environ['HOME'], 'Sensei', 'Documents', 'sensei')
     return check_files(path, 57, 57)
 
 
 def unc_site_test():
-    return check_page('https://shrinking-world.com/unc/bacs200/02', 320, 343)
+    return check_page('https://shrinking-world.com/sensei/bacs200/02', 320, 343)
 

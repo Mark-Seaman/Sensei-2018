@@ -35,10 +35,10 @@ INSTALLED_APPS = [
     'health',
     'life',
     'mybook',
+    'sensei',
     'superuser',
     'tasks',
     'tool',
-    'unc',
 ]
 
 MIDDLEWARE_CLASSES = [

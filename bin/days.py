@@ -105,7 +105,7 @@ def days_weeks(num_weeks):
                 f.write('Week %s - %s\n' % (i, d))
                 print('Week %s - %s\n' % (i+1, d))
 
-    weekly_schedule('Documents/unc/schedule.csv', int(num_weeks)*7)
+    weekly_schedule('Documents/sensei/schedule.csv', int(num_weeks)*7)
 
 
 # List all of the days before today

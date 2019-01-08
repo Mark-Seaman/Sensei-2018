@@ -7,7 +7,7 @@ from re import findall
 from bin.pandoc import read_markdown, text_to_html
 from hammer.settings import DOC_ROOT
 from tool.document import doc_html_text
-from unc.models import Student, Course
+from .models import Student, Course
 
 
 def content_lessons(course):

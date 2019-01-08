@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from unc.views import UncDocDisplay, UncSlidesDisplay
+from .views import UncDocDisplay, UncSlidesDisplay
 
 
 urlpatterns = [

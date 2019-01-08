@@ -7,7 +7,7 @@ def css_mybook_test():
 
 
 def css_unc_test():
-    return read_file(BASE_DIR+'/static/css/unc.css')
+    return read_file(BASE_DIR+'/static/css/sensei.css')
 
 
 def css_slides_test():
