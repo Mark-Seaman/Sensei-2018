@@ -23,7 +23,10 @@
             <h2>Lessons</h2>
             <ul>
                 {% for lesson in lessons %}
-                    <li>{{ lesson.title }}</li>
+                    <li>
+                        {{ lesson.date }} - Lesson #{{ lesson.lesson }}.
+                        <a href="{{ lesson.content }}">{{ lesson.title }}</a>
+                    </li>
                 {% endfor %}
             </ul>
 
