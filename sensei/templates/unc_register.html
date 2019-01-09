@@ -1,0 +1,47 @@
+{% extends "unc_theme.html" %}
+
+
+{% block card %}
+    <div class="card">
+
+        {% if photo %}
+            <p><img src="/static/images/{{ photo }}"></p>
+            <p>by Mark Seaman </p>
+        {% endif %}
+
+
+        {% if text %}
+            {% autoescape off %}
+                <p>{{ text }}</p>
+            {% endautoescape %}
+        {% else %}
+            <h2>No document found. {{ doc }}</h2>
+        {% endif %}
+
+
+        {% if lessons %}
+            <h2>Lessons</h2>
+            <div class="box">
+                <table class="lesson-table">
+                    {% for lesson in lessons %}
+                        <tr>
+                            <td>{{ lesson.date }} - Lesson {{ lesson.lesson }} - <b>{{ lesson.title }}</b></td>
+                            <td><a href="{{ lesson.content }}">Lesson #{{ lesson.lesson }}</a></td>
+                            <td><a href="{{ lesson.content }}/slides">Slides #{{ lesson.lesson }}</a></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+        {% else %}
+            <h2>No lessons found. {{ lessons }}</h2>
+        {% endif %}
+
+
+        {% if readmore %}
+            <p>Read more <a href="{{ readmore.1 }}">{{ readmore.0 }}</a></p>
+        {% endif %}
+
+    </div>
+
+{% endblock %}
