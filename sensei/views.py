@@ -6,6 +6,7 @@ from bin.pandoc import read_markdown
 from mybook.mybook import mybook_site_title, main_menu
 from tool.document import domain_doc, doc_html_text
 from .models import Lesson
+from tool.log import log
 
 
 def fix_images(text, image_path):
@@ -62,4 +63,5 @@ class UncRegister(FormView):
 
 
 def register_user_domain(name, email, password, domain):
-    print(name, email, password, domain)
+    log('name: %s, email: %s, domain: %s' % (name, email, domain))
+
