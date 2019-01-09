@@ -1189,92 +1189,128 @@
     },
     {
         "fields": {
-            "date_joined": "2017-04-12T13:53:38.916Z",
+            "codename": "add_review",
+            "content_type": 45,
+            "name": "Can add review"
+        },
+        "model": "auth.permission",
+        "pk": 133
+    },
+    {
+        "fields": {
+            "codename": "change_review",
+            "content_type": 45,
+            "name": "Can change review"
+        },
+        "model": "auth.permission",
+        "pk": 134
+    },
+    {
+        "fields": {
+            "codename": "delete_review",
+            "content_type": 45,
+            "name": "Can delete review"
+        },
+        "model": "auth.permission",
+        "pk": 135
+    },
+    {
+        "fields": {
+            "codename": "add_student",
+            "content_type": 46,
+            "name": "Can add student"
+        },
+        "model": "auth.permission",
+        "pk": 136
+    },
+    {
+        "fields": {
+            "codename": "change_student",
+            "content_type": 46,
+            "name": "Can change student"
+        },
+        "model": "auth.permission",
+        "pk": 137
+    },
+    {
+        "fields": {
+            "codename": "delete_student",
+            "content_type": 46,
+            "name": "Can delete student"
+        },
+        "model": "auth.permission",
+        "pk": 138
+    },
+    {
+        "fields": {
+            "codename": "add_course",
+            "content_type": 47,
+            "name": "Can add course"
+        },
+        "model": "auth.permission",
+        "pk": 139
+    },
+    {
+        "fields": {
+            "codename": "change_course",
+            "content_type": 47,
+            "name": "Can change course"
+        },
+        "model": "auth.permission",
+        "pk": 140
+    },
+    {
+        "fields": {
+            "codename": "delete_course",
+            "content_type": 47,
+            "name": "Can delete course"
+        },
+        "model": "auth.permission",
+        "pk": 141
+    },
+    {
+        "fields": {
+            "codename": "add_lesson",
+            "content_type": 48,
+            "name": "Can add lesson"
+        },
+        "model": "auth.permission",
+        "pk": 142
+    },
+    {
+        "fields": {
+            "codename": "change_lesson",
+            "content_type": 48,
+            "name": "Can change lesson"
+        },
+        "model": "auth.permission",
+        "pk": 143
+    },
+    {
+        "fields": {
+            "codename": "delete_lesson",
+            "content_type": 48,
+            "name": "Can delete lesson"
+        },
+        "model": "auth.permission",
+        "pk": 144
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-08T21:37:13.680Z",
             "email": "Mark.B.Seaman@gmail.com",
             "first_name": "Mark",
             "groups": [],
             "is_active": true,
             "is_staff": true,
-            "is_superuser": false,
-            "last_login": "2019-01-06T15:59:13.859Z",
+            "is_superuser": true,
+            "last_login": "2019-01-08T22:21:59.773Z",
             "last_name": "Seaman",
-            "password": "pbkdf2_sha256$36000$l3MBrZDF5pDf$d72tjaHBa6PeGcoUMkzwlu/oGKrvAWHn0cF18yBBiGc=",
+            "password": "pbkdf2_sha256$36000$LFrdoiC0MqLf$EbceWAdEF48961SNuxHnTT+XTfO4K0EcRdYKKnjIqAI=",
             "user_permissions": [],
             "username": "MarkSeaman"
         },
         "model": "auth.user",
         "pk": 1
-    },
-    {
-        "fields": {
-            "date_joined": "2017-08-14T22:44:27.760Z",
-            "email": "Stacie.Seaman@gmail.com",
-            "first_name": "Stacie",
-            "groups": [],
-            "is_active": true,
-            "is_staff": true,
-            "is_superuser": false,
-            "last_login": "2018-02-17T22:19:16.916Z",
-            "last_name": "Seaman",
-            "password": "pbkdf2_sha256$36000$62KSeQlGP4ck$HJi2Ug5Pfw764Ma578HjlLmKnl6LMqpW2D/fRqUtvyo=",
-            "user_permissions": [],
-            "username": "StacieSeaman"
-        },
-        "model": "auth.user",
-        "pk": 2
-    },
-    {
-        "fields": {
-            "date_joined": "2017-08-14T22:47:55.476Z",
-            "email": "whitlow.k@gmail.com",
-            "first_name": "Kyle",
-            "groups": [],
-            "is_active": true,
-            "is_staff": true,
-            "is_superuser": false,
-            "last_login": "2018-01-09T22:48:14.532Z",
-            "last_name": "Whitlow",
-            "password": "pbkdf2_sha256$36000$fxcELW0AaG3Y$0l/wIXbHCGGkY7QZwTXrpqH1Z2t0zSBBwygkj7yvlQg=",
-            "user_permissions": [],
-            "username": "KyleWhitlow"
-        },
-        "model": "auth.user",
-        "pk": 3
-    },
-    {
-        "fields": {
-            "date_joined": "2017-08-14T22:48:11.541Z",
-            "email": "jennyb@greeleyvineyard.org",
-            "first_name": "Jenny",
-            "groups": [],
-            "is_active": true,
-            "is_staff": true,
-            "is_superuser": false,
-            "last_login": null,
-            "last_name": "Beilman",
-            "password": "pbkdf2_sha256$36000$OHhS10nw7ups$kV7BdNUDJ43L0R3Of1vqeQKfoksm0bwjB73qWVAs8dE=",
-            "user_permissions": [],
-            "username": "JennyBeilman"
-        },
-        "model": "auth.user",
-        "pk": 4
-    },
-    {
-        "fields": {
-            "date_joined": "2017-08-14T22:48:18.314Z",
-            "email": "toddb@greeleyvineyard.org",
-            "first_name": "Todd",
-            "groups": [],
-            "is_active": true,
-            "is_staff": true,
-            "is_superuser": false,
-            "last_login": "2018-01-26T00:50:00.567Z",
-            "last_name": "Beilman",
-            "password": "pbkdf2_sha256$36000$wR6fpQSVD91v$LxQrE75exG4vSF4X9a0SYrEkSXpCJxOTpto5S0Z+qu4=",
-            "user_permissions": [],
-            "username": "ToddBeilman"
-        },
-        "model": "auth.user",
-        "pk": 5
     }
 ]
