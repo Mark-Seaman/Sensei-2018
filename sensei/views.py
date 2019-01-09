@@ -1,6 +1,7 @@
 from django import forms
 from django.forms import Form
 from django.views.generic import FormView, TemplateView
+from django.contrib.auth.models import User
 
 from bin.pandoc import read_markdown
 from mybook.mybook import mybook_site_title, main_menu
@@ -64,4 +65,15 @@ class UncRegister(FormView):
 
 def register_user_domain(name, email, password, domain):
     log('name: %s, email: %s, domain: %s' % (name, email, domain))
-
+    assert ' ' in name
+    first = name.split()[0]
+    last = name.split()[-1]
+    username = email
+    u = User.objects.get_or_create(username=username)[0]
+    u.first_name = first
+    u.last_name = last
+    u.email = email
+    u.is_staff = True
+    u.set_password(password)
+    u.save()
+    return u

@@ -26,8 +26,6 @@ def user_command(self, options):
         user_import(self, args)
     elif cmd == 'export':
         user_export(self, args)
-    elif cmd == 'reset':
-        user_reset(self)
     else:
         user_help()
 
