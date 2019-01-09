@@ -9,6 +9,24 @@
         <p>The BACS 200 class uses this server to manage all of the student data.</p>
         <p>Your BACS 200 Student Account is setup to point to your Bluehost account.</p>
 
+
+        {% if object_list %}
+            <h2>Student Domains</h2>
+            <div class="box">
+                <table class="lesson-table">
+                    {% for student in object_list %}
+                        <tr>
+                            <td>{{ student.email }}</td>
+                            <td>{{ student.domain }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        {% else %}
+            <h1>No Student Docmains registered</h1>
+        {% endif %}
+
+
     </div>
 
 {% endblock %}

@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import Form
-from django.views.generic import FormView, TemplateView
+from django.views.generic import FormView, ListView, TemplateView
 from django.contrib.auth.models import User
 
 from bin.pandoc import read_markdown
@@ -42,8 +42,9 @@ class UncSlidesDisplay(TemplateView):
         return dict(markdown=bear+text+bear)
 
 
-class UncRegistered(TemplateView):
+class UncRegistered(ListView):
     template_name = 'unc_registered.html'
+    model = Student
 
 
 class UncRegister(FormView):
