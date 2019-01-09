@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from bin.pandoc import read_markdown
 from mybook.mybook import mybook_site_title, main_menu
 from tool.document import domain_doc, doc_html_text
-from .models import Lesson
+from .models import Lesson, Student
 from tool.log import log
 
 
@@ -42,6 +42,10 @@ class UncSlidesDisplay(TemplateView):
         return dict(markdown=bear+text+bear)
 
 
+class UncRegistered(TemplateView):
+    template_name = 'unc_registered.html'
+
+
 class UncRegister(FormView):
 
     class EditDocForm(Form):
@@ -52,7 +56,7 @@ class UncRegister(FormView):
 
     form_class = EditDocForm
     template_name = 'unc_register.html'
-    success_url = '/unc/bacs200'
+    success_url = '/unc/registered'
 
     def form_valid(self, form):
         name = form.data.get('name')
@@ -76,4 +80,5 @@ def register_user_domain(name, email, password, domain):
     u.is_staff = True
     u.set_password(password)
     u.save()
-    return u
+    s = Student.objects.get_or_create(course_id=1, name=name, email=email, domain=domain)[0]
+    return s
