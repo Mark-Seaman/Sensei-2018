@@ -4,43 +4,37 @@
 {% block card %}
     <div class="card">
 
-        {% if photo %}
-            <p><img src="/static/images/{{ photo }}"></p>
-            <p>by Mark Seaman </p>
-        {% endif %}
+        <h1>Create your BACS 200 Account</h1>
 
+        <p>The BACS 200 class uses this server to manage all of the student data.</p>
+        <p>Register for BACS 200 Student Account.</p>
+        <p>Register your domain URL at Bluehost. Where is your website?</p>
 
-        {% if text %}
-            {% autoescape off %}
-                <p>{{ text }}</p>
-            {% endautoescape %}
-        {% else %}
-            <h2>No document found. {{ doc }}</h2>
-        {% endif %}
-
-
-        {% if lessons %}
-            <h2>Lessons</h2>
-            <div class="box">
-                <table class="lesson-table">
-                    {% for lesson in lessons %}
-                        <tr>
-                            <td>{{ lesson.date }} - Lesson {{ lesson.lesson }} - <b>{{ lesson.title }}</b></td>
-                            <td><a href="{{ lesson.content }}">Lesson #{{ lesson.lesson }}</a></td>
-                            <td><a href="{{ lesson.content }}/slides">Slides #{{ lesson.lesson }}</a></td>
-                        </tr>
-                    {% endfor %}
+        <form action="/unc/register" method="post"> {% csrf_token %}
+            <div class="lesson-table">
+                <table>
+                    <tr>
+                        <td><label>Bear Email</label></td>
+                        <td><input type="text" name="email" placeholder="your bear email"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Name</label></td>
+                        <td><input type="text" name="name" placeholder="your name"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Password</label></td>
+                        <td><input type="password" name="password" placeholder=""></td>
+                    </tr>
+                    <tr>
+                        <td><label>Domain</label></td>
+                        <td><input type="text" name="domain" placeholder="your Bluehost domain"></td>
+                    </tr>
                 </table>
+                <div>
+                    <input type="submit" value="Register Domain">
+                </div>
             </div>
-
-        {% else %}
-            <h2>No lessons found. {{ lessons }}</h2>
-        {% endif %}
-
-
-        {% if readmore %}
-            <p>Read more <a href="{{ readmore.1 }}">{{ readmore.0 }}</a></p>
-        {% endif %}
+        </form>
 
     </div>
 

@@ -1,4 +1,6 @@
-from django.views.generic import TemplateView
+from django import forms
+from django.forms import Form
+from django.views.generic import FormView, TemplateView
 
 from bin.pandoc import read_markdown
 from mybook.mybook import mybook_site_title, main_menu
@@ -37,3 +39,27 @@ class UncSlidesDisplay(TemplateView):
         bear = '\n\n---\n\n<img src="/static/images/unc/bacs200/Bear_Logo.png">\n\n---\n\n'
         return dict(markdown=bear+text+bear)
 
+
+class UncRegister(FormView):
+
+    class EditDocForm(Form):
+        name = forms.CharField()
+        email = forms.CharField()
+        password = forms.CharField()
+        domain = forms.CharField()
+
+    form_class = EditDocForm
+    template_name = 'unc_register.html'
+    success_url = '/unc/bacs200'
+
+    def form_valid(self, form):
+        name = form.data.get('name')
+        email = form.data.get('email')
+        password = form.data.get('password')
+        domain = form.data.get('domain')
+        register_user_domain(name, email, password, domain)
+        return super(UncRegister, self).form_valid(form)
+
+
+def register_user_domain(name, email, password, domain):
+    print(name, email, password, domain)

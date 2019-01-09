@@ -1,8 +1,6 @@
 from os import system
 from subprocess import PIPE, Popen
 
-
-from shell import shell
 from log import log
 from switches import SERVER_TYPE
 
@@ -117,14 +115,14 @@ tasks_task
 
 
 def data_reset():
-    if SERVER_TYPE == 'dev':
-        system ('rm $p/data/hammer.db')
-    else:
+    if SERVER_TYPE == 'production':
         print('cat <<EOF  | psql')
         for t in data_table_list.split('\n')[1:-1]:
             print('drop table %s cascade;' % t)
-        print('EOF')   
-        print('echo "\dt" | psql ') 
+        print('EOF')
+        print('echo "\dt" | psql ')
+    else:
+        system ('rm $p/data/hammer.db')
 
 
 def data_save(host):
