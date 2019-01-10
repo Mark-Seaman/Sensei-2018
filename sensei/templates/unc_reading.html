@@ -2,31 +2,21 @@
 
 
 {% block card %}
-    <div class="card">
 
-        <h1>Congratulations</h1>
-        <p>You have registered your BACS 200 Domain.</p>
-        <p>The BACS 200 class uses this server to manage all of the student data.</p>
-        <p>Your BACS 200 Student Account is setup to point to your Bluehost account.</p>
+    <h1>Student Reading</h1>
+    <p>Scores for the Zybook reading</p>
 
-
-        {% if object_list %}
-            <h2>Student Domains</h2>
-            <div class="box">
-                <table class="lesson-table">
-                    {% for student in object_list %}
-                        <tr>
-                            <td>{{ student.email }}</td>
-                            <td>{{ student.domain }}</td>
-                        </tr>
-                    {% endfor %}
-                </table>
-            </div>
-        {% else %}
-            <h1>No Student Docmains registered</h1>
-        {% endif %}
-
-
-    </div>
+    {% if students %}
+        <table>
+            {% for score in students %}
+                <tr>
+                        <td>{{ score.1 }} {{ score.0 }}</td>
+                        <td>{{ score.3 }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h1>No Students available</h1>
+    {% endif %}
 
 {% endblock %}
