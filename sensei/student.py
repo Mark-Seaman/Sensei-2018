@@ -57,7 +57,9 @@ def reading_scores():
         for row in reader(f):
             try:
                 log("Import user %s " % row)
-                students.append(row[:3]+[int(float(row[3]))]+row[4:])
+                points = 20 * int(float(row[3])) / 100
+                row = row[:3]+[points]+row[3:]
+                students.append(row)
             except:
                 print("*** %s ***" % row)
                 log_exception()
