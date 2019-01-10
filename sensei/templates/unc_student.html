@@ -1,0 +1,53 @@
+{% extends "unc_theme.html" %}
+
+
+{% block card %}
+
+
+    {% if student %}
+
+        <h1>Student Dashboard</h1>
+        <h2>{{ student.name }}</h2>
+
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>{{ student.name }}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>{{ student.name }}</td>
+            </tr>
+            <tr>
+                <td>Domain</td>
+                <td>{{ student.domain }}</td>
+            </tr>
+        </table>
+
+        <h2>Reading Assignment Status</h2>
+        <p>Zybooks name: {{ scores.0 }} {{ scores.1 }}</p>
+        <p>Zybook email: {{ scores.2 }}</p>
+
+
+        <table>
+            <tr>
+                <th>Assignment</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>{{ scores.3 }} </td>
+            </tr>
+        </table>
+
+    {% else %}
+        <h1>No Students available</h1>
+    {% endif %}
+
+    <h2>Web Pages</h2>
+
+    <p>Home Page</p>
+
+    <p><a href="https://{{ student.domain }}">{{ student.domain }}</a></p>
+
+{% endblock %}
