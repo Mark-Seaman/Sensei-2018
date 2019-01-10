@@ -28,6 +28,11 @@
         <p>Zybooks name: {{ scores.0 }} {{ scores.1 }}</p>
         <p>Zybook email: {{ scores.2 }}</p>
 
+        <p>Scores</p>
+        {% for s in scores %}
+            <p>{{ s }}</p>
+        {% endfor %}
+
 
         <table>
             <tr>
