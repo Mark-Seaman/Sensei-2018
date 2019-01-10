@@ -511,5 +511,77 @@
         },
         "model": "auth.permission",
         "pk": 57
+    },
+    {
+        "fields": {
+            "codename": "add_author",
+            "content_type": 20,
+            "name": "Can add author"
+        },
+        "model": "auth.permission",
+        "pk": 58
+    },
+    {
+        "fields": {
+            "codename": "change_author",
+            "content_type": 20,
+            "name": "Can change author"
+        },
+        "model": "auth.permission",
+        "pk": 59
+    },
+    {
+        "fields": {
+            "codename": "delete_author",
+            "content_type": 20,
+            "name": "Can delete author"
+        },
+        "model": "auth.permission",
+        "pk": 60
+    },
+    {
+        "fields": {
+            "codename": "add_book",
+            "content_type": 21,
+            "name": "Can add book"
+        },
+        "model": "auth.permission",
+        "pk": 61
+    },
+    {
+        "fields": {
+            "codename": "change_book",
+            "content_type": 21,
+            "name": "Can change book"
+        },
+        "model": "auth.permission",
+        "pk": 62
+    },
+    {
+        "fields": {
+            "codename": "delete_book",
+            "content_type": 21,
+            "name": "Can delete book"
+        },
+        "model": "auth.permission",
+        "pk": 63
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-09T15:15:07.244Z",
+            "email": "test@unco.edu",
+            "first_name": "Test",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": "2019-01-09T15:25:56.617Z",
+            "last_name": "Student",
+            "password": "pbkdf2_sha256$36000$PAC2m0MaWX5g$3V3YCE8fO8kNNmiP6KdobZFh7qjFVzxZrvW20Pf8CGc=",
+            "user_permissions": [],
+            "username": "test@unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 1
     }
 ]
