@@ -24,13 +24,6 @@ footer a {
     color: #0E3D65;
 }
 
-/*form td {*/
-    /*text-align: right;*/
-    /*margin: 20px;*/
-    /*border: 1px solid red;*/
-    /*width: 400px;*/
-/*}*/
-
 form label {
     width: 100px;
 }
@@ -272,5 +265,10 @@ td {
     margin: 10px;
     border: 2px solid #F6B018;
     border-radius: 30px;
+}
+
+
+#s-main-menu li {
+    margin: auto;
 }
 

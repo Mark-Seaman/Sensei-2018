@@ -56,25 +56,34 @@ def delete_students():
 def reading_scores():
     data_file = 'Documents/unc/bacs200/zybooks.csv'
     log('Import students reading scores from %s')
-    students = []
+    scores = {}
     with open(data_file) as f:
         for row in reader(f):
             try:
                 log("Import user %s " % row)
                 points = 20 * int(float(row[3])) / 100
                 row = row[:3]+[points]+row[3:]
-                students.append(row)
+                name = '%s %s' % (row[0], row[1])
+                scores[name] = row
             except:
                 print("*** %s ***" % row)
                 log_exception()
                 print(format_exc())
-    return students
+    return scores
+
+
+def student_totals(scores):
+    totals = []
+    for s in scores:
+        totals.append(scores[s])
+    return totals
 
 
 def student_scores(student_id):
     reading = reading_scores()
-
-    return reading[17]
+    s = student(student_id)
+    scores = reading.get(s.name, [])
+    return scores
 
 
 def fix_images(text, image_path):

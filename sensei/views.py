@@ -5,7 +5,7 @@ from django.views.generic import FormView, ListView, TemplateView
 from bin.pandoc import read_markdown
 from tool.document import domain_doc, doc_html_text
 
-from .student import fix_images, reading_scores, student_scores, site_settings, student, register_user_domain
+from .student import fix_images, student_scores, student_totals, site_settings, student, register_user_domain
 from .models import Lesson, Student
 
 
@@ -28,7 +28,7 @@ class UncReading(TemplateView):
     template_name = 'unc_reading.html'
 
     def get_context_data(self, **kwargs):
-        return site_settings(title='Reading Scores', students=reading_scores())
+        return site_settings(title='Reading Scores', students=student_totals())
 
 
 class UncRegister(FormView):
@@ -66,7 +66,6 @@ class UncSlidesDisplay(TemplateView):
         text = fix_images(read_markdown(doc), '/static/images/unc/bacs200')
         bear = '\n\n---\n\n<img src="/static/images/unc/bacs200/Bear_Logo.png">\n\n---\n\n'
         text = bear+text+bear
-        # return dict(markdown=text)
         return site_settings(title=title, markdown=text)
 
 
