@@ -10,6 +10,21 @@ from tool.log import log, log_exception
 from tool.user import user_add
 
 
+def delete_students():
+    '''
+    usage:   dj shell
+          from sensei.student import *
+          delete_students()
+    '''
+
+    print('delete_students')
+    Student.objects.all().delete()
+
+
+def fix_images(text, image_path):
+    return text.replace('![](img/', '![](%s/' % image_path)
+
+
 def import_students():
     '''
     usage:   dj shell
@@ -42,17 +57,6 @@ def list_students():
         print(str(s))
 
 
-def delete_students():
-    '''
-    usage:   dj shell
-          from sensei.student import *
-          delete_students()
-    '''
-
-    print('delete_students')
-    Student.objects.all().delete()
-
-
 def reading_scores():
     data_file = 'Documents/unc/bacs200/zybooks.csv'
     log('Import students reading scores from %s')
@@ -72,11 +76,21 @@ def reading_scores():
     return scores
 
 
-def student_totals(scores):
-    totals = []
-    for s in scores:
-        totals.append(scores[s])
-    return totals
+def register_user_domain(name, email, password, domain):
+    log('name: %s, email: %s, domain: %s' % (name, email, domain))
+    assert ' ' in name
+    first = name.split()[0]
+    last = name.split()[-1]
+    username = email
+    u = User.objects.get_or_create(username=username)[0]
+    u.first_name = first
+    u.last_name = last
+    u.email = email
+    u.is_staff = True
+    u.set_password(password)
+    u.save()
+    s = Student.objects.get_or_create(course_id=1, name=name, email=email, domain=domain)[0]
+    return s
 
 
 def student_scores(student_id):
@@ -86,8 +100,11 @@ def student_scores(student_id):
     return scores
 
 
-def fix_images(text, image_path):
-    return text.replace('![](img/', '![](%s/' % image_path)
+def student_totals(scores):
+    totals = []
+    for s in scores:
+        totals.append(scores[s])
+    return totals
 
 
 def site_settings(**kwargs):
@@ -107,18 +124,3 @@ def student(id):
     return Student.objects.get(pk=id)
 
 
-def register_user_domain(name, email, password, domain):
-    log('name: %s, email: %s, domain: %s' % (name, email, domain))
-    assert ' ' in name
-    first = name.split()[0]
-    last = name.split()[-1]
-    username = email
-    u = User.objects.get_or_create(username=username)[0]
-    u.first_name = first
-    u.last_name = last
-    u.email = email
-    u.is_staff = True
-    u.set_password(password)
-    u.save()
-    s = Student.objects.get_or_create(course_id=1, name=name, email=email, domain=domain)[0]
-    return s
