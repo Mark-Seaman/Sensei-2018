@@ -67,7 +67,7 @@ def reading_scores():
                 log("Import user %s " % row)
                 points = 20 * int(float(row[3])) / 100
                 row = row[:3]+[points]+row[3:]
-                name = '%s %s' % (row[0], row[1])
+                name = '%s %s' % (row[1], row[0])
                 scores[name] = row
             except:
                 print("*** %s ***" % row)
