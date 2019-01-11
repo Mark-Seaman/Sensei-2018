@@ -1450,7 +1450,7 @@
             "is_superuser": false,
             "last_login": null,
             "last_name": "Diallo",
-            "password": "pbkdf2_sha256$36000$fiRSSm43Pwva$q41jkKlZnPs1Wooa8iEinurVKf+OhSf54jf3tLZzcnI=",
+            "password": "pbkdf2_sha256$36000$oGwiu1GK5fWT$Ay/mvhHjgPTOkLlybeEnpk4VpFtmNiPMBSS56MXiKnI=",
             "user_permissions": [],
             "username": "dial3333@bears.unco.edu"
         },
@@ -1846,7 +1846,7 @@
             "is_superuser": false,
             "last_login": null,
             "last_name": "Limon",
-            "password": "pbkdf2_sha256$36000$UdSq3KWm4UM9$U7a+mu0cD1UGed0iYG4NSjsTkIygSwVOVU2scev4vN0=",
+            "password": "pbkdf2_sha256$36000$LJUf229WhWQH$bC/PnWjXzuIcfy5Jxy4z5a/NoYSiYNi6p/jcj+iKa4U=",
             "user_permissions": [],
             "username": "limo5725@bears.unco.edu"
         },
@@ -1906,5 +1906,41 @@
         },
         "model": "auth.user",
         "pk": 39
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-10T19:45:35.432Z",
+            "email": "dial3333@bears.unco.com",
+            "first_name": "Idrissa",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Diallo",
+            "password": "pbkdf2_sha256$36000$tkIvKxjBGoPi$8IDklaye1jdxspdk+NUi+MKuWMsvAba6WvtWBVOKdF0=",
+            "user_permissions": [],
+            "username": "dial3333@bears.unco.com"
+        },
+        "model": "auth.user",
+        "pk": 40
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-10T22:47:47.852Z",
+            "email": "stur7245@bears.unco.edu",
+            "first_name": "Braedy",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Pribelsky",
+            "password": "pbkdf2_sha256$36000$kg9mmLgAjTNG$kA3Vr0WyuxTal1W664CmPoeaLNswoiUTABmf4aO0N30=",
+            "user_permissions": [],
+            "username": "stur7245@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 41
     }
 ]
