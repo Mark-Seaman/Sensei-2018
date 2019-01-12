@@ -25,8 +25,7 @@
         </table>
 
         <h2>Reading Assignment Status</h2>
-        <p>Zybooks name: {{ scores.0 }} {{ scores.1 }}</p>
-        <p>Zybook email: {{ scores.2 }}</p>
+        <p>Zybooks name: {{ scores.0 }}</p>
 
 {#        <p>Scores</p>#}
 {#        {% for s in scores %}#}
@@ -41,16 +40,20 @@
             </tr>
             <tr>
                 <td>Web History</td>
-                <td>{{ scores.8 }}% </td>
+                <td>{{ scores.1 }}% </td>
             </tr>
             <tr>
                 <td>Domains & URLs</td>
-                <td>{{ scores.9 }}% </td>
+                <td>{{ scores.2 }}% </td>
             </tr>
-            <tr>
-                <td>Total</td>
-                <td>{{ scores.3 }} Points</td>
+             <tr>
+                <td>HTTP</td>
+                <td>{{ scores.3 }}% </td>
             </tr>
+{#            <tr>#}
+{#                <td>Total</td>#}
+{#                <td>{{ scores.3 }} Points</td>#}
+{#            </tr>#}
         </table>
 
     {% else %}
