@@ -1484,7 +1484,7 @@
             "is_active": true,
             "is_staff": true,
             "is_superuser": false,
-            "last_login": null,
+            "last_login": "2019-01-11T22:18:15.268Z",
             "last_name": "Dewerker",
             "password": "pbkdf2_sha256$36000$RREV3wy6Ap0Q$0EkLqsmVrRThNupbt0Y5KFqRgeB72yi7QePAjU5GJ0Q=",
             "user_permissions": [],
@@ -1785,14 +1785,14 @@
         "fields": {
             "date_joined": "2019-01-10T03:31:49.385Z",
             "email": "mili5468@bears.unco.edu",
-            "first_name": "joey",
+            "first_name": "Joey",
             "groups": [],
             "is_active": true,
             "is_staff": true,
             "is_superuser": false,
             "last_login": null,
             "last_name": "Milinazzo",
-            "password": "pbkdf2_sha256$36000$RO9IhnVmsQtG$So3F1MW3al5R9W4EcXwnrEj9w/kno+tRK2DhA5U3lY4=",
+            "password": "pbkdf2_sha256$36000$c01r5J4IItTG$cBrDfbA6RNNzGYuj/o7iYHS1NK2csJkGFzYbwZDoRq8=",
             "user_permissions": [],
             "username": "mili5468@bears.unco.edu"
         },
@@ -1864,7 +1864,7 @@
             "is_superuser": false,
             "last_login": null,
             "last_name": "Calabrese",
-            "password": "pbkdf2_sha256$36000$Wr1zvyDqCLfW$rMmvLaahu/tlmsRARu+pTf+s12sqK2oMyxltRdYoLpY=",
+            "password": "pbkdf2_sha256$36000$V78WlpzU7rkv$REyjkIohcn4oSx/pulbdIJEj84BU9Cse6++SbxKHWZ0=",
             "user_permissions": [],
             "username": "Cala8488@bears.unco.edu"
         },
@@ -1942,5 +1942,203 @@
         },
         "model": "auth.user",
         "pk": 41
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-11T17:34:03.543Z",
+            "email": "rive4151@bears.unco.edu",
+            "first_name": "Angel",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Rivera",
+            "password": "pbkdf2_sha256$36000$pmksKs2tEr3d$bA5BlRROGuWosK3CA8MGgmbXXuPECKtrPbPQSKtq4Lk=",
+            "user_permissions": [],
+            "username": "rive4151@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 42
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-11T18:38:23.381Z",
+            "email": "rive3564@bears.unco.edu",
+            "first_name": "Jaime",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Rivero",
+            "password": "pbkdf2_sha256$36000$hd635H4o2ZBM$4HcBmAMqoIjFns4aJlPGAwxf+4ho3/nVzdW1KydSW4M=",
+            "user_permissions": [],
+            "username": "rive3564@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 43
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-11T21:37:51.927Z",
+            "email": "orti5212@bears.unco.edu",
+            "first_name": "Desmond",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Ortiz",
+            "password": "pbkdf2_sha256$36000$YzCOmaHp0iKw$3qKWANxsNjcnkmA/bgTgBQ5Db0danVY1ojyN2hub3c4=",
+            "user_permissions": [],
+            "username": "orti5212@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 44
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-11T22:10:47.057Z",
+            "email": "benn7780@bears.unco.edu",
+            "first_name": "Dean",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Bennett",
+            "password": "pbkdf2_sha256$36000$9kkW7EZhtKkO$1fnmoDFGmnN+/I2GHisorhzcaV+tnCAQnwXc7f/UvKI=",
+            "user_permissions": [],
+            "username": "benn7780@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 45
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-11T22:11:08.148Z",
+            "email": "atch1788@bears.unco.edu",
+            "first_name": "Kacie",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Atchison",
+            "password": "pbkdf2_sha256$36000$bwOECn1yJd5H$s0+lkVyGzx9/JfbvB5s2sV4It5wqld/PSyq7BVstWs4=",
+            "user_permissions": [],
+            "username": "atch1788@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 46
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-11T22:11:22.664Z",
+            "email": "step4749@bears.unco.edu",
+            "first_name": "Tayis",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Stephens",
+            "password": "pbkdf2_sha256$36000$G7eN7peKI5yZ$LI0d+e8+fhtiFjeaALxC3RxR3VveO/WtRHRyq4qZcTc=",
+            "user_permissions": [],
+            "username": "step4749@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 47
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-11T22:11:37.950Z",
+            "email": "saleh.albishi@hotmail.com",
+            "first_name": "Saleh",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Albishi",
+            "password": "pbkdf2_sha256$36000$6PPtWJHiDGcx$zqTDAcUXa37Oq62kp08NaEkueAcKHPA+qaA3cmHLx28=",
+            "user_permissions": [],
+            "username": "saleh.albishi@hotmail.com"
+        },
+        "model": "auth.user",
+        "pk": 48
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-11T22:12:37.197Z",
+            "email": "mart2523@bears.unco.edu",
+            "first_name": "Cade",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Martinez",
+            "password": "pbkdf2_sha256$36000$hp81ke5jantn$WHZsKCxGTFV8rmfW7rHIrk4+4LmMrM69zERBd2HzJc0=",
+            "user_permissions": [],
+            "username": "mart2523@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 49
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-11T22:37:35.037Z",
+            "email": "step4748@bears.unco.edu",
+            "first_name": "Tayis",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Stephens",
+            "password": "pbkdf2_sha256$36000$oaUWTHVaASkg$KsbO/5WrUfEt1EG2kDsRllMgPxEfwtFREBuVjqOWMww=",
+            "user_permissions": [],
+            "username": "step4748@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 50
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-11T22:38:15.367Z",
+            "email": "albi9380@bears.unco.edu",
+            "first_name": "Saleh",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Albishi",
+            "password": "pbkdf2_sha256$36000$OY9wB8iyAWkR$MvZli73YyMb/JkqvCNbNBFxZ+ro6L/a0iGy7bmnZwaQ=",
+            "user_permissions": [],
+            "username": "albi9380@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 51
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-12T01:33:03.912Z",
+            "email": "kros0528@bears.unco.edu",
+            "first_name": "Kiley",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Krosky",
+            "password": "pbkdf2_sha256$36000$VpzqPskxC2YV$Fxv78zidcbG8K5wOpn0VXjA4v82jIOkz8Wb9wqXFUb0=",
+            "user_permissions": [],
+            "username": "kros0528@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 52
     }
 ]
