@@ -273,7 +273,7 @@
         "fields": {
             "expected": "\turl = git@github.com:Mark-Seaman/SeamanTech.git\n\n\turl = git@github.com:Mark-Seaman/Hammer.git\n\n\turl = https://github.com/Mark-Seaman/GitBook-Html-Apps.git\n\n\turl = git@github.com:Mark-Seaman/Documents-2014.git\n\n\turl = git@github.com:Shrinking-World/MyBook-2017.git\n\n\turl = git@github.com:kokopelli314/hydronote.git\n\n\turl = git@github.com:Mark-Seaman/Documents-2015.git\n\n\turl = https://github.com/Mark-Seaman/MyBook-2018.git\n\n\turl = https://github.com/Mark-Seaman/UNC-2018-Fall.git\n\n\turl = git@github.com:Mark-Seaman/iPython.git\n\n\turl = https://github.com/Mark-Seaman/GitBook-PHP-Apps.git\n\n    url = git@github.com:Shrinking-World/Who2Hire.git\n[branch \"urls\"]\n\tmerge = refs/heads/urls\n\n    url = /Users/seaman/Archive/Git/Viewer\n\n\turl = https://github.com/Mark-Seaman/GitBook-Python-Apps.git\n\n    url = git@github.com:Mark-Seaman/Leverage.git\n\n\turl = git@github.com:Shrinking-World/workbench.git\n\n\turl = https://github.com/Mark-Seaman/GitBook-Teaching.git\n\n\turl = git@github.com:Shrinking-World/Documents-2017.git\n\n\turl = git@github.com:Shrinking-World/Documents-2016.git\n\n\turl = git@github.com:Shrinking-World/UNC-2017.git\n\n\turl = https://github.com/Mark-Seaman/UNC-2018-Spring.git\n\n\turl = git@github.com:Mark-Seaman/Women2Women.git\n",
             "name": "archive-repo",
-            "output": "\turl = git@github.com:Mark-Seaman/SeamanTech.git\n\n\turl = git@github.com:Mark-Seaman/Hammer.git\n\n\turl = https://github.com/Mark-Seaman/GitBook-Html-Apps.git\n\n\turl = git@github.com:Mark-Seaman/Documents-2014.git\n\n\turl = git@github.com:Shrinking-World/MyBook-2017.git\n\n\turl = git@github.com:kokopelli314/hydronote.git\n\n\turl = git@github.com:Mark-Seaman/Documents-2015.git\n\n\turl = https://github.com/Mark-Seaman/MyBook-2018.git\n\n\turl = https://github.com/Mark-Seaman/UNC-2018-Fall.git\n\n\turl = git@github.com:Mark-Seaman/iPython.git\n\n\turl = https://github.com/Mark-Seaman/GitBook-PHP-Apps.git\n\n    url = git@github.com:Shrinking-World/Who2Hire.git\n[branch \"urls\"]\n\tmerge = refs/heads/urls\n\n    url = /Users/seaman/Archive/Git/Viewer\n\n\turl = https://github.com/Mark-Seaman/GitBook-Python-Apps.git\n\n    url = git@github.com:Mark-Seaman/Leverage.git\n\n\turl = git@github.com:Shrinking-World/workbench.git\n\n\turl = https://github.com/Mark-Seaman/GitBook-Teaching.git\n\n\turl = git@github.com:Shrinking-World/Documents-2017.git\n\n\turl = git@github.com:Shrinking-World/Documents-2016.git\n\n\turl = git@github.com:Shrinking-World/UNC-2017.git\n\n\turl = https://github.com/Mark-Seaman/UNC-2018-Spring.git\n\n\turl = git@github.com:Mark-Seaman/Women2Women.git\n"
+            "output": "\turl = git@github.com:Mark-Seaman/SeamanTech.git\n\n\turl = git@github.com:Mark-Seaman/Hammer.git\n\n\turl = https://github.com/Mark-Seaman/GitBook-Html-Apps.git\n\n\turl = git@github.com:Mark-Seaman/Documents-2014.git\n\n\turl = git@github.com:Shrinking-World/MyBook-2017.git\n\n\turl = git@github.com:kokopelli314/hydronote.git\n\n\turl = git@github.com:Mark-Seaman/Documents-2015.git\n\n\turl = https://github.com/Mark-Seaman/MyBook-2018.git\n\n\turl = https://github.com/Mark-Seaman/UNC-2018-Fall.git\n\n\turl = git@github.com:Mark-Seaman/iPython.git\n\n\turl = https://github.com/Mark-Seaman/GitBook-PHP-Apps.git\n\n    url = git@github.com:Shrinking-World/Who2Hire.git\n[branch \"urls\"]\n\tmerge = refs/heads/urls\n\n    url = /Users/seaman/Archive/Git/Viewer\n\n\turl = https://github.com/Mark-Seaman/GitBook-Python-Apps.git\n\n    url = git@github.com:Mark-Seaman/Leverage.git\n\n\turl = git@github.com:Shrinking-World/workbench.git\n\n\turl = https://github.com/Mark-Seaman/GitBook-Teaching.git\n\n\turl = git@github.com:Shrinking-World/Documents-2017.git\n\n\turl = git@github.com:Shrinking-World/Documents-2016.git\n\n\turl = git@github.com:Mark-Seaman/Keys.git\n\n\turl = git@github.com:Shrinking-World/UNC-2017.git\n\n\turl = https://github.com/Mark-Seaman/UNC-2018-Spring.git\n\n\turl = git@github.com:Mark-Seaman/Women2Women.git\n"
         },
         "model": "tool.test",
         "pk": 31
@@ -300,7 +300,7 @@
         "fields": {
             "expected": "Log Length OK - /Users/seaman/Sensei/log/hammer.log, 1270 lines",
             "name": "log-length",
-            "output": "Log Length OK - /Users/seaman/Sensei/log/hammer.log, 1270 lines"
+            "output": "Log Length OK - /Users/seaman/Sensei/log/hammer.log, 1540 lines"
         },
         "model": "tool.test",
         "pk": 34
@@ -507,7 +507,7 @@
         "fields": {
             "expected": "Fri Jan 11 07:03:34 MST 2019\n",
             "name": "tst-time",
-            "output": "Fri Jan 11 07:03:34 MST 2019\n"
+            "output": "Sat Jan 12 07:00:44 MST 2019\n"
         },
         "model": "tool.test",
         "pk": 57
