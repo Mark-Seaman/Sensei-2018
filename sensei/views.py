@@ -56,6 +56,9 @@ class UncRegistered(ListView):
     template_name = 'unc_registered.html'
     model = Student
 
+    def get_queryset(self):
+        return Student.objects.all().order_by('email')
+
 
 class UncSlidesDisplay(TemplateView):
     template_name = 'unc_slides.html'
