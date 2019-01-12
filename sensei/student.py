@@ -57,22 +57,44 @@ def list_students():
         print(str(s))
 
 
-def reading_scores():
+def reading_scores_table():
     data_file = 'Documents/unc/bacs200/zybooks.csv'
     log('Import students reading scores from %s')
-    scores = {}
+    scores = []
     with open(data_file) as f:
         for row in reader(f):
             try:
                 log("Import user %s " % row)
-                points = 20 * int(float(row[3])) / 100
-                row = row[:3]+[points]+row[3:]
-                name = '%s %s' % (row[1], row[0])
-                scores[name] = row
+                scores.append(row)
             except:
                 print("*** %s ***" % row)
                 log_exception()
                 print(format_exc())
+    return scores
+
+
+def reading_table(scores):
+    table = []
+    labels = scores[0][7:-7]
+    table.append(labels)
+    for s in scores[1:]:
+        values = [v for v in s[7:-7]]
+        table.append(['%s %s' % (s[1], s[0])] + ['%s' % int(float(v)) for v in values])
+    return table
+
+
+def reading_scores():
+    table = reading_table(reading_scores_table())
+    log('READING: ' + '   '.join(table[0]))
+    scores = {}
+    for row in table[1:]:
+        log('   '.join(row))
+        name = '%s' % (row[0])
+        student = Student.objects.filter(name=name)
+        if student:
+            scores[student[0]] = row
+        else:
+            log('Student record missing: '+name)
     return scores
 
 

@@ -10,7 +10,10 @@
         <table>
             {% for score in students %}
                 <tr>
-                    <td>{{ score }} </td>
+                    {% for x in score %}
+                        <td>{{ x }} </td>
+                    {% endfor %}
+
                 </tr>
             {% endfor %}
         </table>
