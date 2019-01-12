@@ -139,7 +139,7 @@ def site_settings(**kwargs):
 
 
 def students():
-    return Student.objects.all().order_by('name')
+    return Student.objects.all().order_by('email')
 
 
 def student(id):
