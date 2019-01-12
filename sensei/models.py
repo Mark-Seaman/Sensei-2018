@@ -24,6 +24,7 @@ class Student(models.Model):
     name    = models.CharField(max_length=100)
     email   = models.CharField(max_length=40)
     domain  = models.CharField(max_length=100)
+    zbooks  = models.CharField(max_length=100, null=True)
 
     def __unicode__(self):
         return '%s, %s, %s' % (self.email, self.name, self.domain)
@@ -61,3 +62,11 @@ Business Administration Computer Science
 BACS 200
 Web Design and Development for Small Business
 '''
+
+
+def fix_reading_names():
+    for s in Student.objects.all():
+        if not s.zbooks:
+            s.zbooks = s.name
+            s.save()
+
