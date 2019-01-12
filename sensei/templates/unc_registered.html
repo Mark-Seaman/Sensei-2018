@@ -1,35 +1,29 @@
 {% extends "unc_theme.html" %}
 
 
-{% block card %}
-    <div class="card">
+{% block content %}
 
-        <h1>Congratulations</h1>
-        <p>You have registered your BACS 200 Domain.</p>
-        <p>The BACS 200 class uses this server to manage all of the student data.</p>
-        <p>Your BACS 200 Student Account is setup to point to your Bluehost account.</p>
+    {% if object_list %}
+        <h2>Student Domains</h2>
+        <table class="lesson-table">
 
+            {% for student in object_list %}
 
-        {% if object_list %}
-            <h2>Student Domains</h2>
-            <div class="box">
-                <table class="lesson-table">
-                    {% for student in object_list %}
-                        <tr>
-                            <td>{{ student.id }}</td>
-                            <td>{{ student.name }}</td>
-                            <td>{{ student.email }}</td>
-                            <td><a href="/unc/student/{{ student.id }}">Dashboard</a></td>
-                            <td><a href="http://{{ student.domain }}">{{ student.domain }}</a></td>
-                        </tr>
-                    {% endfor %}
-                </table>
-            </div>
-        {% else %}
-            <h1>No Student Docmains registered</h1>
-        {% endif %}
+                <tr>
+                    <td>{{ student.id }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.email }}</td>
+                    <td><a href="/unc/student/{{ student.id }}">Dashboard</a></td>
+                    <td><a href="http://{{ student.domain }}">{{ student.domain }}</a></td>
+                </tr>
 
+            {% endfor %}
 
-    </div>
+        </table>
+
+    {% else %}
+        <h1>No Student Domains registered</h1>
+    {% endif %}
+
 
 {% endblock %}

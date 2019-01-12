@@ -118,7 +118,7 @@ def register_user_domain(name, email, password, domain):
 def student_scores(student_id):
     reading = reading_scores()
     s = student(student_id)
-    scores = reading.get(s.name, [])
+    scores = reading.get(s, [])
     return scores
 
 
@@ -139,7 +139,7 @@ def site_settings(**kwargs):
 
 
 def students():
-    return Student.objects.all()
+    return Student.objects.all().order_by('name')
 
 
 def student(id):
