@@ -28,7 +28,7 @@ class UncReading(TemplateView):
     template_name = 'unc_reading.html'
 
     def get_context_data(self, **kwargs):
-        return site_settings(title='Reading Scores', students=student_totals(reading_scores()))
+        return site_settings(title='Reading Scores', students=student_totals())
 
 
 class UncRegister(FormView):
