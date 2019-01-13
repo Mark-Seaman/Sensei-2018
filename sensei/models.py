@@ -70,3 +70,9 @@ def fix_reading_names():
             s.zbooks = s.name
             s.save()
 
+
+def fix_email_names():
+    for s in Student.objects.all():
+        if s.email != s.email.lower():
+            s.email = s.email.lower()
+            s.save()

@@ -122,11 +122,8 @@ def student_scores(student_id):
     return scores
 
 
-def student_totals(scores):
-    totals = []
-    for s in scores:
-        totals.append(scores[s])
-    return totals
+def student_totals():
+    return reading_table(reading_scores_table())
 
 
 def site_settings(**kwargs):
