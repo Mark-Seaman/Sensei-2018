@@ -63,6 +63,7 @@ alias music='x music'
 
 alias l='ls -al'
 alias le='less'
+alias lesson='cd ~/Sensei/Documents/unc/bacs200 && ls -al'
 alias ll='ls -l'
 alias log='tail -99 $p/log/hammer.log'
 
