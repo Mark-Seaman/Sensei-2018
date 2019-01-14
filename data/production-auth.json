@@ -1304,7 +1304,7 @@
             "is_active": true,
             "is_staff": true,
             "is_superuser": true,
-            "last_login": "2019-01-09T17:19:33.169Z",
+            "last_login": "2019-01-14T03:14:06.322Z",
             "last_name": "Seaman",
             "password": "pbkdf2_sha256$36000$LFrdoiC0MqLf$EbceWAdEF48961SNuxHnTT+XTfO4K0EcRdYKKnjIqAI=",
             "user_permissions": [],
@@ -1450,7 +1450,7 @@
             "is_superuser": false,
             "last_login": null,
             "last_name": "Diallo",
-            "password": "pbkdf2_sha256$36000$oGwiu1GK5fWT$Ay/mvhHjgPTOkLlybeEnpk4VpFtmNiPMBSS56MXiKnI=",
+            "password": "pbkdf2_sha256$36000$ZX0eTBaaXbQb$23lyUuz+5s5PkekkTqyfOQw9x9HOpQ7ba6RdQjuyyZw=",
             "user_permissions": [],
             "username": "dial3333@bears.unco.edu"
         },
@@ -1970,7 +1970,7 @@
             "is_active": true,
             "is_staff": true,
             "is_superuser": false,
-            "last_login": null,
+            "last_login": "2019-01-14T02:02:01.175Z",
             "last_name": "Rivero",
             "password": "pbkdf2_sha256$36000$hd635H4o2ZBM$4HcBmAMqoIjFns4aJlPGAwxf+4ho3/nVzdW1KydSW4M=",
             "user_permissions": [],
@@ -2140,5 +2140,23 @@
         },
         "model": "auth.user",
         "pk": 52
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-14T03:59:24.352Z",
+            "email": "robb5100@bears.unco.edu",
+            "first_name": "Aliesha",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": "2019-01-14T04:38:51.754Z",
+            "last_name": "Robbins",
+            "password": "pbkdf2_sha256$36000$I1kBhWbalCEo$D327HLNhuDDec4Q/+qTQD6TyE8kz0bIcYL9SsQt41/k=",
+            "user_permissions": [],
+            "username": "robb5100@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 53
     }
 ]
