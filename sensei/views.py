@@ -56,8 +56,9 @@ class UncRegistered(ListView):
     template_name = 'unc_registered.html'
     model = Student
 
-    def get_queryset(self):
-        return Student.objects.all().order_by('email')
+    def get_context_data(self, **kwargs):
+        students = Student.objects.all().order_by('email')
+        return site_settings(title='BACS 200 - Registered Domains', students=students)
 
 
 class UncSlidesDisplay(TemplateView):

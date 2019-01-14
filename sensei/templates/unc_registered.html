@@ -3,16 +3,16 @@
 
 {% block content %}
 
-    {% if object_list %}
+    {% if students %}
         <h2>Student Domains</h2>
         <table class="lesson-table">
 
-            {% for student in object_list %}
+            {% for student in students %}
 
                 <tr>
-                    <td>{{ student.id }}</td>
+{#                    <td>{{ student.id }}</td>#}
                     <td>{{ student.name }}</td>
-                    <td>{{ student.email }}</td>
+{#                    <td>{{ student.email }}</td>#}
                     <td><a href="/unc/student/{{ student.id }}">Dashboard</a></td>
                     <td><a href="http://{{ student.domain }}" target="_blank">{{ student.domain }}</a></td>
                 </tr>
