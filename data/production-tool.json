@@ -651,7 +651,7 @@
         "fields": {
             "expected": "no output",
             "name": "user-list",
-            "output": "shell(x user list) --> 50 lines (should be between 4 and 30)"
+            "output": "shell(x user list) --> 51 lines (should be between 4 and 30)"
         },
         "model": "tool.test",
         "pk": 73
@@ -1416,7 +1416,7 @@
         "fields": {
             "expected": "Wed Jan  9 09:00:10 MST 2019\n",
             "name": "tst-time",
-            "output": "Sun Jan 13 07:00:10 MST 2019\n"
+            "output": "Mon Jan 14 07:00:10 MST 2019\n"
         },
         "model": "tool.test",
         "pk": 158
@@ -1605,7 +1605,7 @@
         "fields": {
             "expected": "Too Long Log - /home/django/MyBook/log/hammer.log, 2110 lines",
             "name": "log-length",
-            "output": "Log Length OK - /home/django/MyBook/log/hammer.log, 1467 lines"
+            "output": "Log Length OK - /home/django/MyBook/log/hammer.log, 1343 lines"
         },
         "model": "tool.test",
         "pk": 179

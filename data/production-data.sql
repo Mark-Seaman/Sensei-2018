@@ -1190,6 +1190,7 @@ COPY public.auth_user (id, password, last_login, is_superuser, username, first_n
 41	pbkdf2_sha256$36000$kg9mmLgAjTNG$kA3Vr0WyuxTal1W664CmPoeaLNswoiUTABmf4aO0N30=	\N	f	stur7245@bears.unco.edu	Braedy	Pribelsky	stur7245@bears.unco.edu	t	t	2019-01-10 22:47:47.852419+00
 15	pbkdf2_sha256$36000$jENAZUCNE2a3$S3vMfwFKyvvF5BM9s2Tik2wwYlzJRWebs25Nl5Y9Chw=	\N	f	erge3406@bears.unco.edu	Kyle	Ergenbright	erge3406@bears.unco.edu	t	t	2019-01-09 22:59:36.13016+00
 16	pbkdf2_sha256$36000$RREV3wy6Ap0Q$0EkLqsmVrRThNupbt0Y5KFqRgeB72yi7QePAjU5GJ0Q=	2019-01-11 22:18:15.268363+00	f	vand8598@bears.unco.edu	Michael	Dewerker	vand8598@bears.unco.edu	t	t	2019-01-09 23:09:10.025719+00
+14	pbkdf2_sha256$36000$ZX0eTBaaXbQb$23lyUuz+5s5PkekkTqyfOQw9x9HOpQ7ba6RdQjuyyZw=	\N	f	dial3333@bears.unco.edu	Idrissa	Diallo	dial3333@bears.unco.edu	t	t	2019-01-09 22:41:55.717825+00
 17	pbkdf2_sha256$36000$FBgD6NR73raW$RM+CVRIit1g2ocxuEYOjPyC/aMvKuV0Ml0FYWuIzHds=	2019-01-09 23:11:28.685848+00	f	sieb5863@bears.unco.edu	Erika	Siebring	sieb5863@bears.unco.edu	t	t	2019-01-09 23:09:49.398665+00
 18	pbkdf2_sha256$36000$qkyKIiF4mkSG$iKbLRYoH3CitCzrU7y7WqPHGeDfdnp361ZYZOJp5J4Y=	\N	f	robe8684@bears.unco.edu	Elana	Roberts	robe8684@bears.unco.edu	t	t	2019-01-09 23:41:37.964066+00
 19	pbkdf2_sha256$36000$py9zPi2CL623$otxRBW9PdeMlv5XeYz2G6WIIN9Ivv2EV45wldH9cypc=	\N	f	pole7686@bears.unco.edu	McKenzie	Poley	pole7686@bears.unco.edu	t	t	2019-01-10 00:01:01.834194+00
@@ -1198,7 +1199,6 @@ COPY public.auth_user (id, password, last_login, is_superuser, username, first_n
 22	pbkdf2_sha256$36000$HuQiuvjrAxIp$JCbcrm/3bBi311BNY2SBsJ5atp2CE5spULjYlJdMmmQ=	\N	f	croi6323@bears.unco.edu	Gosha	Croitor	croi6323@bears.unco.edu	t	t	2019-01-10 00:12:47.012159+00
 7	pbkdf2_sha256$36000$tL9utdQpNeF3$qsITzaP1lW9b8CDEGI2ph06jZhO9CaF0El4Q9TqSE3I=	2019-01-09 15:27:11.115261+00	f	test@unco.edu	Test	Student	test@unco.edu	t	t	2019-01-09 15:16:42.297087+00
 23	pbkdf2_sha256$36000$4brGsvBBFkZf$AM2VmrG8bSMrWPcHHV3DgijkuErzCH0R2a7t/HqM6ok=	\N	f	Jone4799@bears.unco.edu	Johnny	Jones	Jone4799@bears.unco.edu	t	t	2019-01-10 00:46:43.257288+00
-1	pbkdf2_sha256$36000$LFrdoiC0MqLf$EbceWAdEF48961SNuxHnTT+XTfO4K0EcRdYKKnjIqAI=	2019-01-09 17:19:33.169319+00	t	MarkSeaman	Mark	Seaman	Mark.B.Seaman@gmail.com	t	t	2019-01-08 21:37:13.680793+00
 8	pbkdf2_sha256$36000$8Rn06b7PJUjO$sGHRBSyQW/J+xxD1tw7IAAIe7YHPiuu58jhk1RgJX4s=	\N	f	wadd9503@bears.unco.edu	Emily	Waddell	wadd9503@bears.unco.edu	t	t	2019-01-09 22:13:59.892839+00
 9	pbkdf2_sha256$36000$Av72NVhptTFU$ma+3JAvZnAOfS5M/AqSKhy+41YqvtXhPNYlF/g3HLDU=	\N	f	scha7837@bears.unco.edu	Alex	Schaffer	scha7837@bears.unco.edu	t	t	2019-01-09 22:14:45.260541+00
 10	pbkdf2_sha256$36000$BD84A6Tx0PSz$HX8r5UzUHsngjrLr8cy98YisOhdCp93YPAggoumz6ZA=	\N	f	carb1775@bears.unco.edu	Juan	Carbajal	carb1775@bears.unco.edu	t	t	2019-01-09 22:15:52.152512+00
@@ -1217,10 +1217,10 @@ COPY public.auth_user (id, password, last_login, is_superuser, username, first_n
 38	pbkdf2_sha256$36000$0D2yiQ8ClHSC$iwt1pcvwiVd0BNU6+qy6aYvJrhsLGlsrHGRQ5S4AiF0=	\N	f	bigg5570@bears.unco.edu	Brandon	Biggs	bigg5570@bears.unco.edu	t	t	2019-01-10 05:35:27.887915+00
 39	pbkdf2_sha256$36000$LVlj4T3yOpp9$uVuk7Tobh1KNesnwhNCTpwd6j8MHz0MEitUQyYxSKpM=	\N	f	Alex0680@bears.unco.edu	Preston	Alexander	Alex0680@bears.unco.edu	t	t	2019-01-10 06:30:17.920877+00
 40	pbkdf2_sha256$36000$tkIvKxjBGoPi$8IDklaye1jdxspdk+NUi+MKuWMsvAba6WvtWBVOKdF0=	\N	f	dial3333@bears.unco.com	Idrissa	Diallo	dial3333@bears.unco.com	t	t	2019-01-10 19:45:35.432074+00
-14	pbkdf2_sha256$36000$oGwiu1GK5fWT$Ay/mvhHjgPTOkLlybeEnpk4VpFtmNiPMBSS56MXiKnI=	\N	f	dial3333@bears.unco.edu	Idrissa	Diallo	dial3333@bears.unco.edu	t	t	2019-01-09 22:41:55.717825+00
+43	pbkdf2_sha256$36000$hd635H4o2ZBM$4HcBmAMqoIjFns4aJlPGAwxf+4ho3/nVzdW1KydSW4M=	2019-01-14 02:02:01.175907+00	f	rive3564@bears.unco.edu	Jaime	Rivero	rive3564@bears.unco.edu	t	t	2019-01-11 18:38:23.38188+00
 36	pbkdf2_sha256$36000$LJUf229WhWQH$bC/PnWjXzuIcfy5Jxy4z5a/NoYSiYNi6p/jcj+iKa4U=	\N	f	limo5725@bears.unco.edu	Heather	Limon	limo5725@bears.unco.edu	t	t	2019-01-10 04:02:40.720672+00
 42	pbkdf2_sha256$36000$pmksKs2tEr3d$bA5BlRROGuWosK3CA8MGgmbXXuPECKtrPbPQSKtq4Lk=	\N	f	rive4151@bears.unco.edu	Angel	Rivera	rive4151@bears.unco.edu	t	t	2019-01-11 17:34:03.543949+00
-43	pbkdf2_sha256$36000$hd635H4o2ZBM$4HcBmAMqoIjFns4aJlPGAwxf+4ho3/nVzdW1KydSW4M=	\N	f	rive3564@bears.unco.edu	Jaime	Rivero	rive3564@bears.unco.edu	t	t	2019-01-11 18:38:23.38188+00
+1	pbkdf2_sha256$36000$LFrdoiC0MqLf$EbceWAdEF48961SNuxHnTT+XTfO4K0EcRdYKKnjIqAI=	2019-01-14 03:14:06.32266+00	t	MarkSeaman	Mark	Seaman	Mark.B.Seaman@gmail.com	t	t	2019-01-08 21:37:13.680793+00
 37	pbkdf2_sha256$36000$V78WlpzU7rkv$REyjkIohcn4oSx/pulbdIJEj84BU9Cse6++SbxKHWZ0=	\N	f	Cala8488@bears.unco.edu	Shayla	Calabrese	Cala8488@bears.unco.edu	t	t	2019-01-10 05:16:34.032159+00
 44	pbkdf2_sha256$36000$YzCOmaHp0iKw$3qKWANxsNjcnkmA/bgTgBQ5Db0danVY1ojyN2hub3c4=	\N	f	orti5212@bears.unco.edu	Desmond	Ortiz	orti5212@bears.unco.edu	t	t	2019-01-11 21:37:51.927176+00
 33	pbkdf2_sha256$36000$c01r5J4IItTG$cBrDfbA6RNNzGYuj/o7iYHS1NK2csJkGFzYbwZDoRq8=	\N	f	mili5468@bears.unco.edu	Joey	Milinazzo	mili5468@bears.unco.edu	t	t	2019-01-10 03:31:49.385977+00
@@ -1232,6 +1232,7 @@ COPY public.auth_user (id, password, last_login, is_superuser, username, first_n
 50	pbkdf2_sha256$36000$oaUWTHVaASkg$KsbO/5WrUfEt1EG2kDsRllMgPxEfwtFREBuVjqOWMww=	\N	f	step4748@bears.unco.edu	Tayis	Stephens	step4748@bears.unco.edu	t	t	2019-01-11 22:37:35.03708+00
 51	pbkdf2_sha256$36000$OY9wB8iyAWkR$MvZli73YyMb/JkqvCNbNBFxZ+ro6L/a0iGy7bmnZwaQ=	\N	f	albi9380@bears.unco.edu	Saleh	Albishi	albi9380@bears.unco.edu	t	t	2019-01-11 22:38:15.367106+00
 52	pbkdf2_sha256$36000$VpzqPskxC2YV$Fxv78zidcbG8K5wOpn0VXjA4v82jIOkz8Wb9wqXFUb0=	\N	f	kros0528@bears.unco.edu	Kiley	Krosky	kros0528@bears.unco.edu	t	t	2019-01-12 01:33:03.912277+00
+53	pbkdf2_sha256$36000$I1kBhWbalCEo$D327HLNhuDDec4Q/+qTQD6TyE8kz0bIcYL9SsQt41/k=	2019-01-14 04:38:51.754273+00	f	robb5100@bears.unco.edu	Aliesha	Robbins	robb5100@bears.unco.edu	t	t	2019-01-14 03:59:24.352515+00
 \.
 
 
@@ -1254,7 +1255,7 @@ SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 1, false);
 -- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
 --
 
-SELECT pg_catalog.setval('public.auth_user_id_seq', 52, true);
+SELECT pg_catalog.setval('public.auth_user_id_seq', 53, true);
 
 
 --
@@ -1621,9 +1622,12 @@ w9fpdsw0hvr2aqpbitiu43y6wr5c31nr	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZ
 ns4v60irl1e63ovz9v64i03j4i8d3kwn	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-07-12 22:46:47.954301+00
 sy4hk2c9235fufswfjpsbf1ohu7899xq	YWE5YzA0MzU1Nzg2MDY4NDFhNzBiOWEzODgzNDUyNTY5MmYwMzQ4ODp7Il9hdXRoX3VzZXJfaGFzaCI6ImRlNTk3YjZlYTgyOGI1Y2JmNWQ1MzIxMTFmMWY1OGVhMzUyNTBiN2UiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxNiJ9	2019-01-25 22:18:15.271059+00
 07jpbbsguoikw539ptwxrtewoqz817u4	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-07-12 23:29:15.554581+00
+1zlrq98tu0sor7kax205czyekpwvu2u0	OGFlYTA3N2NkMzZiOWVjYTAzMWQ4MjRkNWM0MjIxZTBlM2NlNjg3OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjM2YWZlZmNhYWQ4NTVjYjMxMThjN2NjMjZiMmI5NTQ0N2VhOWI3MGEiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI0MyJ9	2019-01-28 02:02:01.17871+00
 394yher2riua4d5epoy0sant41uuq9px	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-07-12 23:29:20.489641+00
+yl3i4o5h586iqkzhmpsv9ze0uwpr2tc7	ZmMwZTI0YmE3NWFhNDY5NDIwNTBiN2ExMTcxZGUyN2YwZTAyYjYwYjp7Il9hdXRoX3VzZXJfaGFzaCI6IjE0MGNjYTRhN2ZjMmM4NWE4ODczNmE0MDQ1MzUzMmJlM2I4OWQ2MTUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2019-01-28 03:14:06.325792+00
 p96f8niq3s9sk1dhc0ht1saznsux06fu	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-07-12 23:32:07.371973+00
 m53y7786z9558luznm74pyhumm2vgmll	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-07-12 23:32:12.03978+00
+hpyoea0qbwqepin4ibe7569owlj5q5vq	M2U5ZDMwNTc1NzkzNWYzNmMzOGU4YmE3ZDhjNjZmYmYxOTgzZDBjODp7Il9hdXRoX3VzZXJfaGFzaCI6IjM1ZTAxNWU3NWE1YmY2OTJlY2JjNzQ1YzZkNTFhNjVkZmRhYzIzZTQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI1MyJ9	2019-01-28 04:38:51.757473+00
 9tew1wsr8jkn19gds8po6d0fmmu0kyt1	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-07-13 14:52:08.6727+00
 0mkp53ip2llziq3rggz52v958b7bmlak	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-07-13 14:52:13.260164+00
 gjp8z63v3riq2b2d82shiisqt822q9op	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-07-13 14:54:07.643267+00
@@ -1813,7 +1817,10 @@ COPY public.sensei_student (id, name, email, domain, course_id, zbooks) FROM std
 14	Dalton Davidson	davi7938@bears.unco.edu	rawstyle.net	1	Dalton Davidson
 15	Terrell Bryan	brya5089@bears.unco.edu	TikTokgroup.net	1	Terrell Bryan
 16	Gosha Croitor	croi6323@bears.unco.edu	goshacroitor.com	1	Gosha Croitor
+50	Idrissa Diallo	dial3333@bears.unco.edu	idrissa.club	1	\N
 18	John Warden	ward2974@bears.unco.edu	wardenworkshop.com	1	John Warden
+51	aliesha robbins	robb5100@bears.unco.edu	https://shrinking-world.com/unc/bacs200	1	\N
+52	Aliesha Robbins	robb5100@bears.unco.edu	aliesharobbins.com	1	\N
 21	Matthew Jones	jone6552@bears.unco.edu	www.blubri.com	1	Matthew Jones
 22	David Vandiver	vand2653@bears.unco.edu	dvandiver.com	1	David Vandiver
 23	Brian Donnelly	donn8007@bears.unco.edu	xwb.xzl.mybluehost.me	1	Brian Donnelly
@@ -1849,7 +1856,7 @@ COPY public.sensei_student (id, name, email, domain, course_id, zbooks) FROM std
 -- Name: sensei_student_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
 --
 
-SELECT pg_catalog.setval('public.sensei_student_id_seq', 49, true);
+SELECT pg_catalog.setval('public.sensei_student_id_seq', 52, true);
 
 
 --
@@ -2695,13 +2702,13 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2054	Fun	\n        Return of the King \n        Niki Heat\n	2017-06-04	4	f
 2056	Tools	\n        fix tests	2017-06-05	2	f
 2165	Fun	\n        Aeon Flux	2017-06-30	2	f
-4382	Teach	    explore Repl.it\n    write draft of first lessons\n    build embedded Repl\n    create Repl: Simple Page, HTML and CSS\n    	2018-12-17	5	f
 4384	Fun	    download Pentomino puzzles\n    GoT\n    	2018-12-17	3	f
 4385	People	    Lucy arrives\n    dinner with Lucy & Stacie\n    setup CPAP machine	2018-12-17	2	f
 4388	People	    dinner at home\n    time with Stacie\n    	2018-12-16	2	f
 4389	Church	    Ruby's first church service	2018-12-16	4	f
 4390	Fun	    Stargate: Continuum, Resident\n    	2018-12-16	4	f
 4381	Grow	    5, 3, 3, 2\n    weight: 207.4\n    Man's Search for Meaning	2018-12-17	2	f
+4382	Teach	    explore Repl.it\n    write draft of first lessons\n    build embedded Repl\n    create Repl: Simple Page, HTML and CSS\n    	2018-12-17	5	f
 2169	Fun	\n        Regarding Henry\n        Timeless, Legends\n	2017-07-01	5	f
 2170	Grow	\n        3, 3, 3, 2\n        nap	2017-07-02	2	f
 2171	Church	\n        church service	2017-07-02	4	f
@@ -2795,10 +2802,10 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1130	Business	\n        develop Household Economics\n        create general spreadsheet for Budget, Investment, House\n        create simplified budget review process\n        discuss family finance with Stacie\n        resolve gross/net budget\n        build spreadsheet for tracking investments	2016-12-02	5	f
 2435	People	\n        Stacie returns home	2017-09-11	2	f
 2436	Fun	\n        TV\n	2017-09-11	1	f
-4397	Business	    finish up on Agent Match project\n    	2018-12-19	1	f
 4399	Fun	    British Baking, Profit\n    	2018-12-19	2	f
 4400	People	    visit Rachel\n    Ruby now weighs 8 lb 2 oz	2018-12-19	2	f
 4396	Grow	    4, 1, 2, 2\n    weight: 209.4\n    reflection and prayer\n    Christmas Story	2018-12-19	3	f
+4397	Business	    finish up on Agent Match project\n    	2018-12-19	1	f
 156	Church	\N	2016-02-21	4	f
 3321	People	    discuss strategy for deeper connections\n    interact with Lynn on teaching\n    dinner with Stacie	2018-04-19	3	f
 3322	Fun	    Legends, Supergirl	2018-04-19	2	f
@@ -2853,12 +2860,12 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2756	Hammer	\n        time management scripts	2016-09-24	2	f
 2180	Tools	\n        create thot/App_Design\n        fix issues with new features\n        refactor tst_results code\n        clean up old WAM domain\n        implement doc sender\n        remove old email code\n        simplify old doc code\n        clean up advisor	2017-07-04	6	f
 2179	Grow	\n        3, 2, 2, 2	2017-07-04	0	f
-4403	Fun	    GoT\n    	2018-12-21	2	f
-4198	Grow	    5, 1, 3, 5\n    weight: 209.2	2018-11-17	0	f
 4434	Tools	    implement Rest Framework\n    install React\n    build React UI	2018-12-26	3	f
-4436	People	    Garcias over to watch Muppets	2018-12-26	2	f
-4370	People	    neighborhood party at Faye's\n    get Christmas tree\n    buy concrete for household project	2018-12-14	5	f
+4198	Grow	    5, 1, 3, 5\n    weight: 209.2	2018-11-17	0	f
 4435	Fun	    Muppets Christmas Carol\n    	2018-12-26	4	f
+4370	People	    neighborhood party at Faye's\n    get Christmas tree\n    buy concrete for household project	2018-12-14	5	f
+4436	People	    Garcias over to watch Muppets	2018-12-26	2	f
+4403	Fun	    GoT\n    	2018-12-21	2	f
 2181	Fun	\n        Read\n	2017-07-04	2	f
 2183	People	\n        Stacie's computer fails to upgrade drivers\n        meet Larry Chapman for lunch	2017-07-05	4	f
 2185	Grow	\n        5, 2, 1, 1	2017-07-06	0	f
@@ -3173,7 +3180,6 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3609	Fun	    listen to Americans in Paris\n    Blues from the Top	2018-06-24	6	f
 4258	Fun	    TV	2018-02-20	5	f
 4130	Grow	    5, 3, 3, 2\n    weight: 207.4\n    prepare for personal retreat\n    plan Life Journey Notebook	2018-10-23	2	f
-4452	Grow	    5, 1, 2, 4\n    not feeling good in evening\n    constant back pain	2018-12-31	2	f
 4453	Fun	    walk on beach\n    GoT\n    watch New Years Eve TV\n    	2018-12-31	4	f
 4454	People	    New Years Eve (party and TV)\n    Greek Town Taverna for late lunch\n    time with Stacie	2018-12-31	8	f
 4489	People	    Rachel & Andrew & Ruby\n    First day for Andrew back at work	2019-01-09	2	f
@@ -4000,10 +4006,10 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3233	People	\n        Pelican Lakes\n	2018-03-27	1	f
 4275	Grow	    5, 2, 3, 2\n    weight: 208.2	2018-11-23	0	f
 3224	Fun	\n        Vikings\n        Shield, Amazing Race, Goldbergs        \n	2018-03-25	3	f
-4470	Grow	    3, 3, 1, 1\n    weight: 210\n    think about relationship problems\n    worry about the future\n    	2019-01-05	2	f
 4468	Fun	    GoT\n    	2019-01-04	2	f
-4471	Teach	    none	2019-01-05	0	f
 4469	People	    travel home from Florida\n    unpack\n    visit with Rachel, Andrew, Ruby and Lucy\n    Andrew had promising job interview\n    he has made decision to switch jobs	2019-01-04	10	f
+4471	Teach	    none	2019-01-05	0	f
+4470	Grow	    3, 3, 1, 1\n    weight: 210\n    think about relationship problems\n    worry about the future\n    	2019-01-05	2	f
 181	Church	\N	2016-02-28	3	f
 198	Church	\N	2016-03-02	4	f
 163	Grow	\n        Conceptual model for balanced project work\n        Weekly review of results	2016-02-23	2	f
@@ -4197,12 +4203,13 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3234	Grow	\n        5, 4, 3, 2	2018-03-28	0	f
 322	People	\n        Josiah family	2016-04-10	1	f
 313	Grow	\n        long walk to enjoy the beautiful day\n        Margarita's and grilling	2016-04-07	2	f
-4487	Tools	    Setup UNC Computer\n        Github & Repos\n        Brackets\n        Dev Workflow	2019-01-09	2	f
 4488	Fun	    Hawaii 50, GoT\n    	2019-01-09	4	f
-314	Fun	\n        Elementary\n        sign up for Hulu commercial-free\n	2016-04-07	3	f
 4490	Grow	    5, 1, 3, 2\n    weight: 209.2\n    think about life	2019-01-08	1	f
+314	Fun	\n        Elementary\n        sign up for Hulu commercial-free\n	2016-04-07	3	f
 4492	Fun	    Hawaii 50\n    baking show\n    ER\n    	2019-01-08	3	f
 4493	People	    Sol de Jalisco with Lucy & Christine\n    Andrew accepted new job (wait to give notice)	2019-01-08	2	f
+4499	Grow	    3, 4, 3, 2\n    weight: 206.6\n    despair over job opportunities	2019-01-12	2	f
+4500	Teach	    grading of reading and blog\n    build reading score import\n    fix student entries on domains\n    	2019-01-12	6	f
 4485	Grow	    5, 3, 1, 1\n    weight: 208	2019-01-09	0	f
 376	People	\N	2016-04-25	1	f
 384	Grow	\N	2016-04-27	1	f
@@ -4950,12 +4957,10 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1127	Grow	\n        5, 4, 3, 2\n        bible study\n        2000 years of Charisma\n        prioritize projects - monthly objectives	2016-12-01	4	f
 1128	Tools	\n        hours add script\n        create list of days for month\n        create import filter	2016-12-01	1	f
 1131	Tools	\n        build monthly summary for tasks\n        learn about advanced queries in Django\n        deploy Task Master on production\n        import all 2016 months into Task Master	2016-12-02	3	f
-4494	Grow	    5, 3, 1, 1\n    weight: 208	2019-01-10	0	f
-4495	Teach	    Project management Ninja\n    	2019-01-10	1	f
-4496	Tools	    	2019-01-10	0	f
-4497	Fun	    \n    	2019-01-10	0	f
-4498	People	    	2019-01-10	0	f
+4498	People	    Roma's takeout	2019-01-10	2	f
 4486	Teach	    Lesson 2 - Web Hosting - Bluehost Challenge\n    Upside down name tags\n    Tutor - Alex Bremerton\n    	2019-01-09	6	f
+4496	Tools	    	2019-01-10	0	f
+4494	Grow	    5, 3, 5, 3\n    weight: 208\n    Dr Link	2019-01-10	2	f
 1140	People	\n        Rio with Rachel and Andrew\n        Hang Christmas lights with Stacie	2016-12-04	4	f
 1141	Fun	\n        create notes for Wars of the Roses\n        Big Bang\n        Jungle Book\n	2016-12-04	5	f
 1143	Tools	\n        review project priorities	2016-12-05	1	f
@@ -5591,17 +5596,17 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1865	Fun	\n        Comics: X-force\n        TV\n	2016-01-28	4	f
 1923	Grow	\n        5, 3, 2, 2\n	2016-11-29	0	f
 1856	Tools	\n        Build form input for 4 thot app (rename, move, add node)\n        Debug thot app\n        Build content for Thots	2016-01-25	4	f
-4408	Fun	    Last Kingdom, GoT\n    	2018-12-20	2	f
+4409	People	    visit with Stacie and Lucy\n    Stacie gets sick\n    attempt concrete project	2018-12-20	6	f
 3112	People	\n        Mehrgan Mostowfi over for dinner	2018-02-26	4	f
 1827	People	\n        Time with Stacie	2016-01-15	2	f
 1840	Business	\n        Invoice WAM	2016-01-19	0	f
 1924	People	\n        dinner with Courtney Peters	2016-12-01	0	f
 2908	Teach	\n        update lesson 1\n        teach lesson 1\n        request name tents\n        office hours\n        internet outage\n        investigate FTP permissions	2018-01-08	7	f
 1819	Fun	\n        Enterprise, Last Man\n	2016-01-12	3	f
-4409	People	    visit with Stacie and Lucy\n    Stacie gets sick\n    attempt concrete project	2018-12-20	6	f
 4405	Grow	    5, 1, 3, 2\n    weight: 210	2018-12-20	0	f
 4406	Teach	    plan out teaching prep\n    build unc classroom site\n    Classroom UX - style and navigation\n    shrinking-world.com/unc/bacs200\n    shrinking-world.com/unc/bacs350\n    rebuild seamansguide.com\n    	2018-12-20	4	f
 4407	Tools	    remove old code: guide, unc, aspire\n    prune old docs\n    fix tests	2018-12-20	2	f
+4408	Fun	    Last Kingdom, GoT\n    	2018-12-20	2	f
 1878	Business	\n        meeting with Mike Hefty\n        discuss money management with Stacie\n        long-term care meeting	2016-04-28	3	f
 1880	Grow	\n\n    \n## Accomplishments\n	2016-04-30	0	f
 1897	Grow	\n        5, 1, 3, 2\n	2016-10-17	0	f
@@ -5901,8 +5906,8 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4264	Fun	    Silicon Valley (finish season 4)\n    nts 2\n    ER, Goldbergs\n    	2018-11-21	10	f
 1540	Tools	\n        set up seamanslog and spiritual websites\n        set up navigation between sites	2017-04-01	4	f
 4315	Fun	    shopping for Christmas\n    book browsing\n    Mr Robot, GoT\n    Deathly Hallows\n    	2018-11-24	6	f
-4294	WAM	    build plan for WAM transition	2018-12-03	2	f
 4295	Teach	    create syllabus for BACS 200 - Spring 2019\n    schedule final review assignments\n    read "most import learning" feedback\n    grade final review in 350\n    	2018-12-03	5	f
+4297	Church	    UNC Outreach	2018-12-03	3	f
 4323	Grow	    4, 3, 2, 3\n    weight: 208	2018-11-26	0	f
 4286	Teach	    Last day of class\n    Scheduled alternate final\n    share memory extra credit\n    talk with students\n    give early final	2018-11-30	8	f
 4324	Teach	    debug system for Design Review\n    teach Learning in 200\n    	2018-11-26	8	f
@@ -5919,51 +5924,51 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4300	Teach	    build design review sys for 350\n    prep lesson for design reviews\n    	2018-11-25	4	f
 4302	Fun	    Deathly Hallows\n    GoT\n    	2018-11-25	4	f
 4288	People	    Rachel's due date\n    Greeley Chop House - last class celebration	2018-11-30	3	f
-4296	Business	    schedule meeting with Matt\n    driveway repair	2018-12-03	1	f
 4293	Grow	    5, 1, 2, 4\n    weight: 209.6\n    planning	2018-12-03	1	f
-4321	Fun	    \n    	2018-12-04	0	f
 4306	Teach	    Planning on Sensei Workshop project\n    	2018-12-01	2	f
+4321	Fun	    \n    	2018-12-04	0	f
 4307	Fun	    GoT\n    Mr Robot\n    IMDB Trailers\n    	2018-12-01	4	f
-4305	Grow	    5, 1, 3, 1\n    weight: 209.2\n    nap	2018-12-01	2	f
+4308	People	    breakfast at Warren's\n    Andrew and Rachel\n    discuss healthcare options with Stacie\n    sign up for Primary Care	2018-12-01	6	f
 4410	Grow	    5, 2, 2, 2\n    weight: 208.4	2018-12-23	0	f
 4412	Tools	    build custom views\n    build doc display	2018-12-23	2	f
 4413	Fun	    Last Kingdom\n    	2018-12-23	1	f
 4414	People	    Christmas dinner\n    Ruby feedings\n    	2018-12-23	8	f
+4318	Teach	    350 grades\n    explore Code Mentor, CodePen, React\n    invite Ben to FCIP\n    attend FCIP with Ben\n    	2018-12-04	5	f
 4303	People	    Doug's Diner with Garcias and Potters\n    time with Stacie\n    	2018-11-25	2	f
 4304	Church	    talk with Matt at church	2018-11-25	3	f
 4301	Business	    write to Greg McCutchan	2018-11-25	1	f
 4312	People	    driveway project\n    repair toilet	2018-11-29	1	f
 4316	People	    La Creperie with Stacie	2018-11-24	3	f
-4318	Teach	    350 grades\n    explore Code Mentor, CodePen, React\n    invite Ben to FCIP\n    attend FCIP with Ben\n    	2018-12-04	5	f
+4319	Tools	    fix Menu on MyBook server\n    login for Meetup	2018-12-04	2	f
 2025	Tools	\n        refactor menu and site titles on several websites\n        make list of web services to develop\n	2017-05-28	2	f
-4320	Business	    Isborn Security prep for meeting 12-6	2018-12-04	2	f
 4322	People	    Rachel in labor\n    discuss household projects\n    vigil at hospital	2018-12-04	5	f
 4317	Grow	    4, 2, 1, 1\n    weight: 208.8	2018-12-04	0	f
 4415	Grow	    5, 3, 2, 2\n    weight: 208.4	2018-12-22	0	f
 4313	Grow	    5, 3, 1, 1\n    weight: 207.6\n    bed at 8:30	2018-11-24	1	f
 4314	Teach	    grading in 200	2018-11-24	4	f
-4319	Tools	    fix Menu on MyBook server\n    login for Meetup	2018-12-04	2	f
+4320	Business	    Isborn Security prep for meeting 12-6	2018-12-04	2	f
 1548	Hire	\n        learn how to create PDF file\n        install Latex on ubuntu servers\n        attempt to setup Latex on Macs\n        build Markdown file for report (title only)\n        convert Markdown to PDF\n        display PDF file in Who2Hire application\n        manage who2hire branch merges	2017-04-03	8	f
-4289	Grow	    5, 2, 2, 3\n    weight: 208.6\n    nap	2018-12-02	2	f
+4290	Church	    Church service	2018-12-02	4	f
 4325	Fun	    ER, GoT, Fraiser\n    	2018-11-26	4	f
 4327	Grow	    4, 1, 3, 4\n    weight: 209.2	2018-11-28	0	f
 4285	Grow	    5, 2, 2, 4\n    weight: 208.2	2018-11-30	0	f
-4297	Church	    UNC Outreach	2018-12-03	3	f
-4308	People	    breakfast at Warren's\n    Andrew and Rachel\n    discuss healthcare options with Stacie\n    sign up for Primary Care	2018-12-01	6	f
-4290	Church	    Church service	2018-12-02	4	f
 4298	People	    Pie at Fat Alberts	2018-12-03	2	f
+4305	Grow	    5, 1, 3, 1\n    weight: 209.2\n    nap	2018-12-01	2	f
+4292	People	    lunch with Potters\n    Rachel in waiting\n    time with Stacie	2018-12-02	4	f
+4296	Business	    schedule meeting with Matt\n    driveway repair	2018-12-03	1	f
 2019	Grow	\n        jetlag at sleeping patterns\n        think about non-sleeping activities\n        write about emotional triggers (5x5)\n        capture list of core emotions\n        plan most important activities\n        walk along river\n        brain purge\n        action priorities LPBT (7 each)	2017-05-27	8	f
 2026	Tools	\n        build basic thot view\n        refactor workshop demo views\n        refactor Menu & SiteTitle\n        create /thot/42 view\n        think about booknotes design\n        create new WordPress site with template	2017-05-29	0	f
 1587	Hire	\n        repair send mechanism\n        remove extra app code and scripts from Who2Hire\n        simplify bashrc-django \n        Issue 119. Disable notifications from staging\n        Issue 120. Landing page background color and other improvements\n        discuss User Guide with Stacie	2017-04-12	6	f
-4292	People	    lunch with Potters\n    Rachel in waiting\n    time with Stacie	2018-12-02	4	f
+4294	WAM	    build plan for WAM transition	2018-12-03	2	f
 4326	People	    Sol de Jalisco   	2018-11-26	2	f
 4281	Teach	    grading and student interaction\n    plan out finals	2018-11-27	3	f
 4299	Grow	    5, 2, 3, 1\n    weight: 208.6	2018-11-25	0	f
 4411	Teach	    \n    	2018-12-23	0	f
-4291	Fun	    Crazy Rich Asians\n    ER\n    	2018-12-02	4	f
+4289	Grow	    5, 2, 2, 3\n    weight: 208.6\n    nap	2018-12-02	2	f
 4309	Grow	    5, 3, 3, 2\n    weight: 208	2018-11-29	0	f
 4311	Fun	    Resident, Madam Sec, This is Us\n    	2018-11-29	5	f
 4279	People	    Christmas shopping	2018-11-23	2	f
+4291	Fun	    Crazy Rich Asians\n    ER\n    	2018-12-02	4	f
 2268	Fun	\n        Dunkirk\n        Barnes & Noble\n        John Adams\n        So You Think You Can Dance\n	2017-08-02	8	f
 112	WAM	\n        Setup email at greeleyW2w.org\n        Setup Mandrill account\n        Debug email sending\n        Setup wam.w2Wgreeley.org domain\n        Hook up notifications to email sending	2016-02-08	4	f
 2280	People	\n        clean up garage with Stacie\n        meet with Jayden\n        try to setup computer for Jayden\n        try to meet with Kole Curtis\n        figure out video problem with computer for Hangouts	2017-08-05	8	f
@@ -5984,11 +5989,11 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1968	Tools	\n        update aspire/MyBook documents\n        setup Bootstraps and Blessings in MyBook\n        setup Leverage in MyBook\n        build author page and book page	2017-05-03	3	f
 2148	Tools	\n        remove extra CSS template libraries from MyBook\n        explore UI elements and techniques in Material\n        workshop views\n            template_derived\n            template_columns\n            template_content\n        create view to load custom templates\n        write ThotBook on Creativity\n        simplify plan.py and todo.py\n        plan new features for Time views\n        consolidate 1000Goals and ThotBook: Goals	2017-06-26	7	f
 2270	Tools	\n        create workshop/views.py code\n        support request for PipeScan\n        time tabs: Week, Month, Year\n        workshop tricks: DjangoApps, DjangoCommand, DjangoSettings, SecretSettings,\n             Parameters, QueryParameters, SimpleMatch, Accordion, Tabs, Icon\n        create new improved time summaries	2017-08-03	8	f
-4373	Tools	    rebuild web pages with Senei/Documents\n    create new repos for Sensei and Documents-2019\n    Debug MyBook server with Documents-2019	2018-12-13	4	f
 4431	Church	    Lucy stays home from church with cold	2018-12-23	3	f
 4416	Teach	    meet with Ben Flebbe to discuss software tools\n    	2018-12-22	2	f
-4310	Teach	    planning\n    email\n    grade 350 final project\n    rebuild design review reporting\n    	2018-11-29	8	f
 4418	Fun	    Last Kingdom, GoT\n    	2018-12-22	2	f
+4310	Teach	    planning\n    email\n    grade 350 final project\n    rebuild design review reporting\n    	2018-11-29	8	f
+4373	Tools	    rebuild web pages with Senei/Documents\n    create new repos for Sensei and Documents-2019\n    Debug MyBook server with Documents-2019	2018-12-13	4	f
 4419	People	    grocery and Christmas shopping\n    visit with Lucy and Stacie	2018-12-22	2	f
 2594	Fun	\n        Orville, Poldark	2017-10-24	3	f
 2598	People	\n        Stacie	2017-10-25	2	f
@@ -6017,7 +6022,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 209	Sign	\n        investigate activation URL\n        meeting with Hamed to learn about SignSpan DevOps\n        meeting with Thomas about testing\n        meeting with Tom about design and integration	2016-03-05	4	f
 216	WAM	\n        setup redirect from greeleywAm.org to wam.weldwAm.org\n        delete unwanted database records from testing\n        turn on email test mode to allow real email logic\n        solve bug preventing email\n        reword notification for profile change\n        create initial superuser records\n        work with Stacie on testing	2016-03-07	6	f
 257	WAM	\n        create process for resetting database contents\n        reset staging server database\n        test application on staging\n        update production server with WAM 2.0.2 (a)	2016-03-21	4	f
-4432	Grow	    3, 1, 1, 1\n    weight: 209.4\n    prayer during night\n    top fears\n    monthly objectives & personal review\n    nap	2018-12-26	4	f
+4335	Grow	    1, 1, 1, 4\n    read Django and Rest\n    nap 	2018-12-05	4	f
 3624	WAM	    Digital Ocean Women2Women account\n    Setup new WAM Droplet\n    Configure server scripts and testing\n    Solve problem with weldw2w.org being used by Shrinking World DO account\n    Setup domain routing\n    SSL certificate	2018-06-26	10	f
 2590	Fun	\n        Circle. Flash, Madam Sec	2017-10-23	4	f
 2591	Grow	\n        5,5,4,5\n        walk around golf course	2017-10-23	0	f
@@ -6029,10 +6034,10 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2601	Teach	\n        350: prep #29 write exam\n        200: prep #29 final project plan\n        Restructure doc management repos\n        Work on Github processes\n        work out pull request with multiple repos\n        move Jupyter notes	2017-10-26	10	f
 4277	Business	    meet with Matt Isborn\n    investigate solutions to personnel matching\n    	2018-11-23	3	f
 4203	Grow	    5, 3, 3, 4\n    weight: 207.6	2018-11-12	0	f
-4334	People	    visit Rachel in hospital	2018-12-06	4	f
 4420	Teach	    build plan for class prep\n    update notes for Sensei and BACS 200 sites	2018-12-21	3	f
+4432	Grow	    3, 1, 1, 1\n    weight: 209.4\n    prayer during night\n    top fears\n    monthly objectives & personal review\n    nap	2018-12-26	4	f
+4334	People	    visit Rachel in hospital	2018-12-06	4	f
 4333	Business	    prep for Isborn meeting\n    meet with Matt\n    research notes apps	2018-12-06	6	f
-4335	Grow	    1, 1, 1, 4\n    read Django and Rest\n    nap 	2018-12-05	4	f
 369	Sign	\n        interactive debug with \n        echo subscription code in status\n        invoke chargify api to get all subscriptions\n        use the auth key withing the Chargify API call\n        return the active status code\n        set the UNVERIFIED status for new users\n        pass through customer reference value\n        improve logging\n        write initial request user function\n        debugging on user auth	2016-04-23	8	f
 408	Sign	\n        Cancel subscription from UI (first draft)\n        debugging on user registration workflow\n        build user.py script\n        build charify.py script\n        move code from registration.py to chargify.py\n        debug API for cancel subscription\n        debug API for update plan\n        work around for venue type setup bug	2016-05-06	8	f
 455	WAM	\n        Deployment on Staging Server\n        Test deployment to staging server\n        Consolidate docs on configuration\n        Automate web page loading\n        Rebuild PyCharm project\n        Revamped processing of switches of test acceleration\n        Create qt for export\n        Build an export script for cases to CSV\n        Create import of cases from CSV\n        Test round trip of data\n        Refactor case.py and case_script.py\n        Automated test of case logic	2016-05-19	8	f
@@ -6080,13 +6085,13 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1874	Sign	\n        setup iMac email to point to mark@signspan.com\n        organize documents for Confluence\n        process email\n        update JIRA issues status\n        MVP-352 - Fix issue with activate URL\n        setup iMac on VPN\n        write Payment System definition doc\n        write Payment System design doc\n        write User Administration requirements doc\n        update Subscriber Status doc with state machine\n        update Notification messages doc\n        learn about Mandrill templates\n        Scrum meeting	2016-02-18	8	f
 1083	Grow	\n        review time summary for last quarter\n        make decisions about current time investments\n        nap\n        4, 3, 3, 1	2016-11-20	2	f
 1089	Church	\n        church board meeting\n            demo of Church Dashboard\n            discuss Todd full time\n        create main menu\n        build Dashboard view\n        build Overview view\n        build Meetings and Meetings detail view\n        build Budget and Budget detail view\n        create automatic scoring\n        debug editing of records\n        data backup\n        create budget import mechanism	2016-11-22	11	f
-4369	Fun	    browse Bernard Cornwell books\n    	2018-12-14	1	f
-4367	Teach	    \n    	2018-12-14	0	f
 4371	Grow	    5, 3, 3, 3\n    weight: 208	2018-12-13	0	f
+4367	Teach	    \n    	2018-12-14	0	f
 4372	WAM	    work with Nathan and Troy to hand off WAM\n    	2018-12-13	3	f
 4433	Teach	    review UNC email\n    	2018-12-26	1	f
-4366	WAM	    follow up with remaining issues for transition	2018-12-14	2	f
 4365	Grow	    3, 3, 2, 4\n    weight: 208	2018-12-14	0	f
+4369	Fun	    browse Bernard Cornwell books\n    	2018-12-14	1	f
+4366	WAM	    follow up with remaining issues for transition	2018-12-14	2	f
 3747	Fun	    Travel Log: Day 2\n    Welcome to Vienna, time with Stacie!\n    Breakfast at hotel\n    Wonderful buffet at Hilton\n    Visit with couple from Munich\n    Taxi to Cruise Hotel\n    Hang out and write\n    Meet cruise directors\n    Bus to city center\n    Baklava at grocery store\n    Walk downtown\n    Meet Valerie and Brenda\n    Nap\n    Welcome instructions\n    Worst drought since 1973\n    6,000 steps	2018-07-09	7	f
 507	WAM	\n        solve issue with database incrementing of case records\n        redact sensitive data from casevote view\n        improve data reset process\n        reset database on staging server\n        rebuild users and cases from scratch\n        clean up migrations\n        move database data intact	2016-06-09	6	f
 606	Sign	\n        investigate immediate vs. delayed cancel\n        setup meeting with Thomas\n        test chargify script\n        build document to show how to use chargify.py\n        setup meeting with Brandon\n        implement immediate cancel for non-production hosts\n        research Discount codes\n        implement ALWAYSFREE and 99PERCENTOFF coupons on sandbox\n        wrote Tom about production login	2016-07-08	8	f
@@ -6095,70 +6100,77 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2258	Church	\n        build new church dashboard with two separate reports (Regular, Special)\n        create general infrastructure for multiple reports\n        build report with three levels of entries\n        show totals, monthly, percentages\n        send report via email to board members	2017-07-31	8	f
 357	Sign	\n        Test add user scenario\n        Investigate return URL from Chargify\n        Query Chargify for list of active customers\n        Work with Tom to debug code deployment problem\n        Verify that new users are properly added to Chargify\n        Resolve issue with credit card acceptance on Chargify\n        Implement query of Chargify API to get subscription info\n        Implement status route which always returns active\n        Simplified control and data flow in setup of payments\n        Convert all payment plans to pass out subscription_id	2016-04-20	8	f
 1030	Hire	\n        debug setup of users on server\n        move production data to dev server\n        baseline testing and review\n        document user stories\n        document test progress\n        refactor views in view types\n        tie openings to companies\n        require passwords to see views\n        review progress with Stacie\n        create test page for access to all views	2016-11-07	8	f
-4430	People	    hot cinnamon rolls\n    Christmas morning\n    Julio & Jackie's Christmas\n    conversation with Wade and Anna\n    time with Stacie\n    video with Josiah family\n    phone call with Dad\n    visit with Lucy	2018-12-25	10	f
+4336	People	    Ruby is born at 6:30am\n    night at hospital\n    time with Jackie & Christine during Rachel's labor	2018-12-05	10	f
 239	WAM	\n        promote code to production server\n        investigate emails that are not delivered\n        sign up for paid Mandrill account\n        build staging server\n        create process for acceptance testing\n        log all outstanding issues\n        prioritize remaining work\n        add case number links to all notifications\n        make all Status fields optional when editing\n        voting view - Display users who voted	2016-03-14	8	f
 1820	WAM	\n        Debug form to add new users\n        Clean up code\n        Build script to send 5 types of notifications\n        Query for proper recipients for each notification\n        Build notification log\n        Refine logic for sending notifications\n        Add new capabilities for user roles\n        Debug voting logic and display rules\n        Update logic for handling new cases\n        Update CSS and HTML layout code	2016-01-13	10	f
 392	Sign	\n        investigate new organization failure\n        restore code to reuse \n        debug the organization lookup\n        fix up exception handling\n        simplify update_java_user\n        debug update_java_user\n        fix problems caused by instrumentation\n        return better responses for errors\n        investigate setting the email address during update\n        create local script to invoke UserAPI\n        debug update_java_user with qt.py\n        integrate code changes into restration.py\n        verify old password during change\n        debug reset password	2016-04-30	11	f
 116	WAM	\n        Stacie meets to review code with WAM \n        Stacie delivers code with WAM \n        Stacie's demo to project team\n        Create importer for both types of legacy data\n        Reset all case data on production server\n        Fix button issue with Safari\n        Fix issue with form submittal\n        Create email forwarding addresses at w2wweld.org\n        Setup new w2wweld.org domain\n        Convert Mandrill account to use wam@w2wweld.org\n        Create subdomain wam.w2wweld.org for hosting of app at Digital Ocean\n        Setup domain to work with Mandrill\n        Setup proper details of email text attributes\n        Test notification system	2016-02-09	10	f
-4426	Grow	    4, 1, 1, 1\n    weight: 209.8\n    start getting cold\n    nap\n    prayer 	2018-12-25	2	f
 4428	Tools	    learn about Codecademy	2018-12-25	2	f
-4374	Fun	    Last Kingdom\n    ER, Profit\n    	2018-12-13	4	f
+4430	People	    hot cinnamon rolls\n    Christmas morning\n    Julio & Jackie's Christmas\n    conversation with Wade and Anna\n    time with Stacie\n    video with Josiah family\n    phone call with Dad\n    visit with Lucy	2018-12-25	10	f
 4375	People	    visit with Rachel and Andrew and Ruby\n    repair fireplace\n    celebrate with Stacie at Romas\n    Stacie - first shift with Ruby	2018-12-13	3	f
 4404	People	    tried to work on concrete project\n    visit Rachel\n    dinner at Dickie's BBQ\n    Ruby weighs 8lb 5oz	2018-12-21	4	f
 4421	Grow	    5, 1, 1, 2\n    weight: 209.4	2018-12-24	0	f
-4427	Teach	    \n    	2018-12-25	0	f
 4422	Tools	    Explore Codecademy\n    Try lessons for HTML, Git, Coding, Python, Git\n    debug pipenv context\n    	2018-12-24	4	f
-4429	Fun	    \n    	2018-12-25	0	f
+4427	Teach	    \n    	2018-12-25	0	f
 4423	Fun	    Last Kingdom\n    	2018-12-24	1	f
+4429	Fun	    \n    	2018-12-25	0	f
 4424	People	    open presents after church\n    meet with Josiah family\n    Garcia's out house	2018-12-24	5	f
-4336	People	    Ruby is born at 6:30am\n    night at hospital\n    time with Jackie & Christine during Rachel's labor	2018-12-05	10	f
 4425	Church	    Christmas Eve service\n    	2018-12-24	4	f
-4363	Business	    start writing user guide for Agent Match app\n    working session with Heidi\n    create initial tag list\n    setup Evernote account for Heidi\n    process to create Agent Profiles\n    process to search using tags and text\n    process to create index of matching agents\n    follow up after working session\n    	2018-12-11	6	f
-1467	Hire	\n        Issue 49. Multiple managers\n        Issue 70. Superuser access pages\n        Issue 79. Remove scorecard view\n        Issue 75. Constrain score\n        my_company needs spoofing\n        debug interview record\n        Issue 53. Terms of Usage\n        Issue 53. Privacy policy\n        Issue 63. Add candidate score\n        Issue 73. Delete button for candidates\n        reroute Who2Hire.US url\n        Test Customer Release 1	2017-03-09	9	f
-4393	Tools	    build test pages for MyBook server\n    debug static server\n    debug page loading and redirect\n    simplify production code\n    build common test page format\n    rebuild lessons in HTML apps\n    remove images from HTML apps	2018-12-18	6	f
+4374	Fun	    Last Kingdom\n    ER, Profit\n    	2018-12-13	4	f
+4426	Grow	    4, 1, 1, 1\n    weight: 209.8\n    start getting cold\n    nap\n    prayer 	2018-12-25	2	f
 4364	People	    write Greg McCutchen\n    write my dream phobias\n    contact Ben Flebbe - postpone working together\n    dinner at Pelican Lakes\n    time with Stacie\n    Stacie to Ruby's til 2am	2018-12-11	4	f
-4340	Tools	    fix problems with websites	2018-12-12	2	f
-4346	WAM	    prep for meeting with Nathan	2018-12-10	1	f
-4349	Fun	    Last Kingdom, Good Place\n    	2018-12-09	2	f
-4378	People	    work on concrete for driveway\n    learn about concrete for project\n    prep project with Jayden Howell\n    Christmas decorations\n    Stacie to Ruby's\n    Ruby's family visit\n    Pizza from Pelican Joe's\n    hang lights outside	2018-12-15	8	f
-4380	Teach	    build ideas for teaching\n    	2018-12-15	2	f
-4344	Tools	    rebuild website content for exteriorbrain, shrinking-world, seaman-tech\n    world-class-software etc.\n    fix domain router\n    experiment with character encoding\n    update pandoc char encoding \n    build project pages on shrinking-world	2018-12-10	7	f
-4352	Grow	    5, 1, 2, 3\n    weight: 210	2018-12-08	0	f
-4357	Grow	    5, 1, 2, 2\n    weight: 210.2\n    write New Reformation\n    enter notes	2018-12-07	2	f
-4359	Business	    Follow up on project plan\n    Investigate notes tools for Agent Match	2018-12-07	2	f
-4386	Grow	    3, 1, 4, 3\n    weight: 209.4\n    write project goals\n    nap\n    build planning system\n    prayer	2018-12-16	3	f
-4387	Teach	    capture ideas for teaching tools - submitting assignments\n    	2018-12-16	1	f
-4394	Fun	    finish Lady Elizabeth audiobook\n    GoT	2018-12-18	2	f
+1467	Hire	\n        Issue 49. Multiple managers\n        Issue 70. Superuser access pages\n        Issue 79. Remove scorecard view\n        Issue 75. Constrain score\n        my_company needs spoofing\n        debug interview record\n        Issue 53. Terms of Usage\n        Issue 53. Privacy policy\n        Issue 63. Add candidate score\n        Issue 73. Delete button for candidates\n        reroute Who2Hire.US url\n        Test Customer Release 1	2017-03-09	9	f
 4395	People	    dinner with Beilmans at Pelegrini's\n    visit Ruby's house\n    discuss writing Life App notes\n    cleaning crew	2018-12-18	4	f
+4344	Tools	    rebuild website content for exteriorbrain, shrinking-world, seaman-tech\n    world-class-software etc.\n    fix domain router\n    experiment with character encoding\n    update pandoc char encoding \n    build project pages on shrinking-world	2018-12-10	7	f
+4349	Fun	    Last Kingdom, Good Place\n    	2018-12-09	2	f
+4352	Grow	    5, 1, 2, 3\n    weight: 210	2018-12-08	0	f
+4380	Teach	    build ideas for teaching\n    	2018-12-15	2	f
+4359	Business	    Follow up on project plan\n    Investigate notes tools for Agent Match	2018-12-07	2	f
+4346	WAM	    prep for meeting with Nathan	2018-12-10	1	f
+4355	Fun	    Electric Dreams\n    	2018-12-08	2	f
+4360	Fun	    Electric Dreams\n    	2018-12-07	3	f
+4386	Grow	    3, 1, 4, 3\n    weight: 209.4\n    write project goals\n    nap\n    build planning system\n    prayer	2018-12-16	3	f
+4393	Tools	    build test pages for MyBook server\n    debug static server\n    debug page loading and redirect\n    simplify production code\n    build common test page format\n    rebuild lessons in HTML apps\n    remove images from HTML apps	2018-12-18	6	f
+4394	Fun	    finish Lady Elizabeth audiobook\n    GoT	2018-12-18	2	f
+4362	Grow	    3, 1, 1, 5\n    Dr Visit intro visit to direct primary care\n    weight: 209.4\n    embrace personal brokenness (Narcissism)\n    Daily Examen app on phone	2018-12-11	4	f
+4363	Business	    start writing user guide for Agent Match app\n    working session with Heidi\n    create initial tag list\n    setup Evernote account for Heidi\n    process to create Agent Profiles\n    process to search using tags and text\n    process to create index of matching agents\n    follow up after working session\n    	2018-12-11	6	f
 4331	Grow	    3, 1, 1, 2\n    weight: 211.4\n    wake at 4:00\n    think about the New Reformation\n    write about life motivation\n    write about Creativity and Commitments\n    record activities\n    talk with Stacie about work fulfillment	2018-12-06	3	f
 4337	Grow	    3, 3, 4, 2\n    weight: 209.4	2018-12-12	0	f
 4338	Teach	    write proposal for Independent Study\n    	2018-12-12	2	f
-4345	Church	    party at Beilman's new house\n    	2018-12-10	4	f
+4340	Tools	    fix problems with websites	2018-12-12	2	f
+4341	Fun	    Star Trek Beyond\n    Madam Sec\n    	2018-12-12	4	f
 4383	Tools	    create pages for UNC classes\n    work on 404 error handling	2018-12-17	2	f
 4350	People	    Right Coast Pizza\n    Visit Ruby	2018-12-09	4	f
 4353	Teach	    Investigate teaching tools\n        - Repl.it, CodePen, TiddlyWiki\n    	2018-12-08	6	f
-4355	Fun	    Electric Dreams\n    	2018-12-08	2	f
 4356	People	    visit Garcias\n    Stacie stayed till 2am\n    Christine drove me home	2018-12-08	2	f
+4378	People	    work on concrete for driveway\n    learn about concrete for project\n    prep project with Jayden Howell\n    Christmas decorations\n    Stacie to Ruby's\n    Ruby's family visit\n    Pizza from Pelican Joe's\n    hang lights outside	2018-12-15	8	f
 4379	Fun	    Fraiser, Bean Holiday\n    nts 2\n    	2018-12-15	3	f
-4360	Fun	    Electric Dreams\n    	2018-12-07	3	f
-4361	People	    Rachel & Andrew leave the hospital with Ruby\n    Stacie helps with Ruby (home at 3:00)\n    Lets Andrew & Rachel both sleep	2018-12-07	3	f
-4341	Fun	    Star Trek Beyond\n    Madam Sec\n    	2018-12-12	4	f
-4351	Church	    advent	2018-12-09	4	f
+4357	Grow	    5, 1, 2, 2\n    weight: 210.2\n    write New Reformation\n    enter notes	2018-12-07	2	f
+4387	Teach	    capture ideas for teaching tools - submitting assignments\n    	2018-12-16	1	f
+4391	Grow	    4, 3, 1, 2\n    weight: 207.4\n    haircut\n    	2018-12-18	2	f
+4345	Church	    party at Beilman's new house\n    	2018-12-10	4	f
 4354	Business	    Isborn Security\n        Research tools for Agent Match platform (based on design requirements)\n        Build and share notes for project collaboration\n        Create Design Plan for initial implementation\n        Draft template for Agent Profiles	2018-12-08	4	f
 4376	Grow	    5, 2, 2, 4\n    weight: 208.4	2018-12-15	0	f
 4358	Teach	    gave last final exam\n    grade both classes\n    submit final grades\n    started work on idea of independent study\n    	2018-12-07	4	f
-4391	Grow	    4, 3, 1, 2\n    weight: 207.4\n    haircut\n    	2018-12-18	2	f
-4362	Grow	    3, 1, 1, 5\n    Dr Visit intro visit to direct primary care\n    weight: 209.4\n    embrace personal brokenness (Narcissism)\n    Daily Examen app on phone	2018-12-11	4	f
+4361	People	    Rachel & Andrew leave the hospital with Ruby\n    Stacie helps with Ruby (home at 3:00)\n    Lets Andrew & Rachel both sleep	2018-12-07	3	f
 4339	Business	    Isborn\n        Build shared folders\n        Work with Heidi to get first three profiles\n        Reviewed solution with Matt\n        create consulting contract + send to Matt\n    	2018-12-12	5	f
-4392	Teach	    \n    	2018-12-18	0	f
 4342	People	    discuss Greg with Stacie	2018-12-12	1	f
+4392	Teach	    \n    	2018-12-18	0	f
 4347	Grow	    3, 1, 3, 2\n    weight: 209.6	2018-12-09	0	f
-4368	Tools	    Rename Sensei\n    Improve and test repos\n    Debug Sensei & Sensei/Document repos\n    Fix problems on existing websites\n    Simplify websites and app code (eliminate %50 of content)	2018-12-14	6	f
-4343	Grow	    5, 2, 1, 2\n    weight: 208.4\n    Dentist visit	2018-12-10	2	f
+4351	Church	    advent	2018-12-09	4	f
 4377	Tools	    update PyCharm on iMac\n    debug new repos on macbook	2018-12-15	1	f
+4343	Grow	    5, 2, 1, 2\n    weight: 208.4\n    Dentist visit	2018-12-10	2	f
 4348	Tools	    create plan for repos and apps\n    cancel 7 unused registered domains\n    resurrect page testing robot\n    remove old code	2018-12-09	4	f
+4368	Tools	    Rename Sensei\n    Improve and test repos\n    Debug Sensei & Sensei/Document repos\n    Fix problems on existing websites\n    Simplify websites and app code (eliminate %50 of content)	2018-12-14	6	f
 4402	Tools	    learn about pipenv\n    setup development for Rest\n    build Github repo for Rest API\n    learn about Django Rest API\n    record steps to build Rest API\n    update data models for Sensei Review App\n    update project planning notes for Sensei	2018-12-21	5	f
 4417	Tools	    learn about pipenv\n    setup Python3 with Django\n    create data models for Course, Lesson, Student\n    write docs for building Sensei app\n    debug context loading for pipenv on Rest and MyBook projects\n    pruned MyBook - aspire, cmd, doc	2018-12-22	8	f
+4444	Tools	    manage length of hammer.log\n    improve web command\n    create class command	2018-12-28	1	f
+4445	Fun	    GoT\n    British baking, Yoyager\n    	2018-12-28	4	f
+4446	People	    take down tree\n    discuss trip arrangements with Stacie	2018-12-28	2	f
+4447	Grow	    3, 1, 3, 3\n    weight: 209.6\n    fever and chill at airport hotel\n    nap\n    Food:\n        coffee - 3\n        soup - 2 bowls\n        cherry juice\n        chocolates - 4 	2018-12-29	4	f
+4449	Tools	    remove old database tables\n    attempt to import users for class	2018-12-29	3	f
+4451	People	    pack for trip\n    40th Anniversary\n    travel to Denver- check into Westin\n    bitter cold in Colorado\n    fire alarm at Westin\n    visit with Lucy\n    took Christmas tree to recycle\n    repair fitbit band	2018-12-29	6	f
+4450	Fun	    GoT\n    	2018-12-29	1	f
 4332	Teach	    ideas for Seaman's Guides\n    think about app architecture\n    plan first four weeks - BACS 200\n    	2018-12-06	1	f
 4401	Grow	    4, 2, 1, 1\n    weight: 208.4\n    Stacie gets a cold, sleep on couch 	2018-12-21	0	f
 4398	Tools	    move Projects into Archive\n    fix tests for Archive\n    build page tester\n    site title from domdoc\n    menu from domdoc\n    random selector in Spiritual Things\n    random selector in Seamans Log	2018-12-19	6	f
@@ -6169,19 +6181,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4441	People	    visit with Lucy	2018-12-27	2	f
 4442	Grow	    5, 1, 1, 1\n    weight: 209.8\n    personal planning\n    injure back moving couch\n    nap\n    Food:\n        coffee - 3 cups\n        toast with peanut butter\n        reuben \n        chips and salsa\n        cherry juice - 16 oz\n        stew - 1 bowl\n        pumpkin pie\n        english toffee	2018-12-28	2	f
 4443	Teach	    class prep (Lessons 1-3)\n    create reading assignments\n    create list of students for BACS200\n    create process for adding students\n    	2018-12-28	5	f
-4444	Tools	    manage length of hammer.log\n    improve web command\n    create class command	2018-12-28	1	f
-4445	Fun	    GoT\n    British baking, Yoyager\n    	2018-12-28	4	f
-4446	People	    take down tree\n    discuss trip arrangements with Stacie	2018-12-28	2	f
-4447	Grow	    3, 1, 3, 3\n    weight: 209.6\n    fever and chill at airport hotel\n    nap\n    Food:\n        coffee - 3\n        soup - 2 bowls\n        cherry juice\n        chocolates - 4 	2018-12-29	4	f
-4449	Tools	    remove old database tables\n    attempt to import users for class	2018-12-29	3	f
-4451	People	    pack for trip\n    40th Anniversary\n    travel to Denver- check into Westin\n    bitter cold in Colorado\n    fire alarm at Westin\n    visit with Lucy\n    took Christmas tree to recycle\n    repair fitbit band	2018-12-29	6	f
-4450	Fun	    GoT\n    	2018-12-29	1	f
 4448	Teach	    \n    	2018-12-29	0	f
-4462	Fun	    GoT\n    	2019-01-03	2	f
-4463	People	    dinner at Greek Town\n    lunch at IHOP\n    shuffleboard\n    walk on beach	2019-01-03	6	f
-4464	Grow	    5, 1, 3, 4	2019-01-02	0	f
-4465	Fun	    Kennedy Space Center\n    	2019-01-02	10	f
-4466	People	    dinner at Alfie's\n    talk with Stacie about the future \n    drive to KSC	2019-01-02	4	f
 4455	Grow	    1, 1, 4, 3\n    sleepless night, stay in bed til 1pm\n    serious back pain (diminished by 1pm)	2019-01-01	4	f
 4456	Fun	    New Years Day\n    GoT\n    	2019-01-01	2	f
 4457	People	    breakfast of granola, berries\n    Demitri's Greek Food\n    discuss fond memories of 2018	2019-01-01	8	f
@@ -6189,6 +6189,13 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4459	Fun	    travel to Ormond Beach\n    GoT\n    	2018-12-30	2	f
 4460	People	    breakfast at airport\n    fly to Orlando\n    drive with Stacie Orlando-Ormond Beach\n    check into condo\n    dinner and Genevisies restaurant\n    dense fog in evening	2018-12-30	10	f
 4461	Grow	    3, 3, 1, 1\n    think about gratitude\n    record aspirations for New Year\n    discuss the future with Stacie\n    create Thankful List\n    record major events from 2018\n    	2019-01-03	6	f
+4462	Fun	    GoT\n    	2019-01-03	2	f
+4463	People	    dinner at Greek Town\n    lunch at IHOP\n    shuffleboard\n    walk on beach	2019-01-03	6	f
+4464	Grow	    5, 1, 3, 4	2019-01-02	0	f
+4465	Fun	    Kennedy Space Center\n    	2019-01-02	10	f
+4466	People	    dinner at Alfie's\n    talk with Stacie about the future \n    drive to KSC	2019-01-02	4	f
+4478	Fun	    GoT, Hawaii 50\n    	2019-01-06	3	f
+4479	People	    time with Stacie\n    visit with Christine, Lucy, Stacie	2019-01-06	3	f
 4476	Teach	    \n    	2019-01-06	0	f
 4482	Tools	    	2019-01-07	0	f
 4467	Grow	    3, 1, 2, 5\n    create summary of 2018 events\n    early morning restlessness\n    worry over career, relationships, and disappointments	2019-01-04	2	f
@@ -6201,9 +6208,22 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4484	People	    visit with Stacie, Lucy	2019-01-07	2	f
 4475	Grow	    4, 2, 3, 2\n    weight: 208.2\n    nap\n    write - Age of Distraction	2019-01-06	2	f
 4477	Tools	    add slide show to UNC app\n    create tests for UNC files, docs, site\n    create issues page and test page\n    Slide Show Presenter\n    simplify view logic	2019-01-06	6	f
-4478	Fun	    GoT, Hawaii 50\n    	2019-01-06	3	f
-4479	People	    time with Stacie\n    visit with Christine, Lucy, Stacie	2019-01-06	3	f
 4491	Tools	    update design plans for Sensei Classroom app\n    rename app unc to sensei\n    rebuild database tables\n    create new data models\n    debug data for Course, Student, Lesson\n    automatic list of lessons	2019-01-08	8	f
+4501	Fun	    Beauty and the Beast\n    Avengers Graphic Novel\n    nts 2\n    	2019-01-12	4	f
+4502	People	    lunch with Ben Flebbe (discuss career challenges)\n    demos of training content	2019-01-12	2	f
+4495	Teach	    Project management Ninja\n    build reading score page\n    grade reading assignments\n    create student dashboard page\n    automated reading grader tool\n    links to student domains\n    	2019-01-10	6	f
+4497	Fun	    Windsor library\n    Tom Clancy audio book\n    Avengers graphic novel\n    Miss Congeniality\n    Deep Space 9\n    	2019-01-10	4	f
+4452	Grow	    5, 1, 2, 4\n    not feeling good in evening\n    constant back pain	2018-12-31	2	f
+4503	Grow	    5, 4, 1, 1\n    weight: 206.6\n    depressing whether\n    rumor about adjuncts\n    self-pity\n    car accident and meth head on way home\n    	2019-01-11	4	f
+4504	Teach	    Lesson 3 - WordPress\n    cleaning (all day at UNC)\n    	2019-01-11	7	f
+4505	Fun	    Hawaii 50\n    Avengers Graphic Novel\n    	2019-01-11	2	f
+4506	People	    dinner with Lucy and Christine\n    called Chris Newby	2019-01-11	1	f
+4487	Tools	    Setup UNC Computer\n        Github & Repos\n        Brackets\n        Dev Workflow	2019-01-09	2	f
+4507	Grow	    5, 4, 2, 2\n    weight: 206.6\n    think through career goals\n    make decision to build course in order to get hired as trainer	2019-01-13	2	f
+4508	Teach	    begin building Seaman's Guide content for courses\n        * Web Dev I,II,III\n        * Teaching Tech\n        * Software Practices\n    build plans for teaching content	2019-01-13	4	f
+4509	Fun	    try to use Marvel subscription\n    	2019-01-13	1	f
+4510	People	    Royal Nepal\n    Rachel & Andrew visit\n    Rachel takes nap	2019-01-13	3	f
+4511	Church	    church service	2019-01-13	4	f
 \.
 
 
@@ -6211,7 +6231,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 -- Name: tasks_task_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
 --
 
-SELECT pg_catalog.setval('public.tasks_task_id_seq', 4498, true);
+SELECT pg_catalog.setval('public.tasks_task_id_seq', 4511, true);
 
 
 --
@@ -6285,7 +6305,7 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 146	mybook-menu-software	('/software', 'zmdi-home', 'World Class Software', 'class=active')\n('/software/Leverage', 'zmdi-key', 'Leverage Principle', None)\n('/software/BestPractice', 'zmdi-face', 'Best Practice', None)	('/software', 'zmdi-home', 'World Class Software', 'class=active')\n('/software/Leverage', 'zmdi-key', 'Leverage Principle', None)\n('/software/BestPractice', 'zmdi-face', 'Best Practice', None)
 75	opc-show	shell(x opc show) --> 42 lines (should be between 2200 and 2500)	shell(x opc show) --> 42 lines (should be between 2200 and 2500)
 31	hourly-list	\nHourly Tasks\n\n\n          echo "PATH=" `path`\n          echo "env=" `env`\n          echo Python: `which python`\n          # git status\n          x tst\n          x tst list\n          x tst send\n      \n\nDaily Tasks\n\n\n          # x spiritual article\n          # x seamanslog article\n          x data backup\n          rm $p/log/django.log\n      \n	\nHourly Tasks\n\n\n          echo "PATH=" `path`\n          echo "env=" `env`\n          echo Python: `which python`\n          # git status\n          x tst\n          x tst list\n          x tst send\n      \n\nDaily Tasks\n\n\n          # x spiritual article\n          # x seamanslog article\n          x data backup\n          rm $p/log/django.log\n      \n
-179	log-length	Log Length OK - /home/django/MyBook/log/hammer.log, 1467 lines	Too Long Log - /home/django/MyBook/log/hammer.log, 2110 lines
+179	log-length	Log Length OK - /home/django/MyBook/log/hammer.log, 1343 lines	Too Long Log - /home/django/MyBook/log/hammer.log, 2110 lines
 49	seamanslog-summary	    seamanslog                       51        1897         17 K\n\n	    seamanslog                       51        1897         17 K\n\n
 120	software-summary	    software                         68        5366         35 K\n	    software                         68        5366         35 K\n
 163	mybook-redirect	OK\nRedirect ('mybookonline.org', 'xxx', ''):  Expected: /mybook/xxx, Got: /missing/xxx\nOK\nRedirect ('mybookonline.org', 'mybook/Index', ''):  Expected: None, Got: /missing/mybook/Index\nOK\nOK\nOK\nRedirect ('mybookonline.org', 'brain', ''):  Expected: /mybook/brain, Got: /missing/brain\nRedirect ('exteriorbrain.org', 'brain', ''):  Expected: /brain/Index, Got: /missing/brain\nRedirect ('seamansguide.com', 'guide', ''):  Expected: /guide/Index, Got: None\nOK\nOK\nOK	OK\nRedirect ('mybookonline.org', 'xxx', ''):  Expected: /mybook/xxx, Got: /missing/xxx\nOK\nRedirect ('mybookonline.org', 'mybook/Index', ''):  Expected: None, Got: /missing/mybook/Index\nOK\nOK\nOK\nRedirect ('mybookonline.org', 'brain', ''):  Expected: /mybook/brain, Got: /missing/brain\nRedirect ('exteriorbrain.org', 'brain', ''):  Expected: /brain/Index, Got: /missing/brain\nRedirect ('seamansguide.com', 'guide', ''):  Expected: /guide/Index, Got: None\nOK\nOK\nOK
@@ -6298,7 +6318,7 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 103	project-import	\n\n        script to manage projects on servers\n\n        usage: x project command\n\n        command\n\n        List:\n            list                - list the configured project\n            get   name          - get a project by name lookup\n\n        Modify:\n            add     name user   - add a new project record\n            delete  name        - remove this project\n            edit    name value  - rename the project\n\n        I/O \n            import              - import all records from a file \n            export              - export all records to a file \n\n        \n	\n\n        script to manage projects on servers\n\n        usage: x project command\n\n        command\n\n        List:\n            list                - list the configured project\n            get   name          - get a project by name lookup\n\n        Modify:\n            add     name user   - add a new project record\n            delete  name        - remove this project\n            edit    name value  - rename the project\n\n        I/O \n            import              - import all records from a file \n            export              - export all records to a file \n\n        \n
 134	booknotes-list	booknotes list\nExecution-quotes.html\nSiteTitle\nNext100Years\nThinking-quotes.html\nEssentialism\nOriginals-quotes.html\nPresentOverPerfect\nPrinciples-quotes.html\nActivateYourBrain-quotes.html\nEssentialism-quote.html\nIndex\nExecution\nIntegrity-quotes.html\nGoodIdeas-quotes.html\nIntegrity\nEQ\nTribeOfMentors-quotes.html\n	booknotes list\nExecution-quotes.html\nSiteTitle\nNext100Years\nThinking-quotes.html\nEssentialism\nOriginals-quotes.html\nPresentOverPerfect\nPrinciples-quotes.html\nActivateYourBrain-quotes.html\nEssentialism-quote.html\nIndex\nExecution\nIntegrity-quotes.html\nGoodIdeas-quotes.html\nIntegrity\nEQ\nTribeOfMentors-quotes.html\n
 50	seamanslog-words	   439 seamanslog/TimeBudget\n   203 seamanslog/Opportunity\n   573 seamanslog/10000Days\n   411 seamanslog/ToolsSaveTime\n   547 seamanslog/LearningCurve\n   186 seamanslog/ImportantWork\n   439 seamanslog/UnfinishedBook\n   249 seamanslog/LifeWork\n   502 seamanslog/ReadToLearn\n     8 seamanslog/SiteTitle\n   409 seamanslog/DailyHabits\n   263 seamanslog/Commitments\n   246 seamanslog/ExpandContract\n     7 seamanslog/Menu\n   440 seamanslog/HabitualChange\n   605 seamanslog/WorkMindset\n   340 seamanslog/WritingWorkflow\n   307 seamanslog/WhyWork\n   487 seamanslog/Multitasking\n   324 seamanslog/Hitler\n   211 seamanslog/LowCostMyth\n   541 seamanslog/BusinessInvestment\n   341 seamanslog/ActToLearn\n   439 seamanslog/ScaledCommit\n   454 seamanslog/Strengths\n   356 seamanslog/Collaboration\n   614 seamanslog/WritingStages\n   490 seamanslog/PragmaticThinking\n   354 seamanslog/OneImprovement\n   420 seamanslog/Search\n   478 seamanslog/Career\n   344 seamanslog/ProcessingIdeas\n   284 seamanslog/YourBlogTopic\n    43 seamanslog/Index\n   223 seamanslog/LifeFun\n   109 seamanslog/LifeThatMatters\n    84 seamanslog/BiggestIdea\n   206 seamanslog/LifePeople\n   205 seamanslog/LifeGrow\n   332 seamanslog/NewYearsResolutions\n   262 seamanslog/Genetics\n   642 seamanslog/Invest20Percent\n   137 seamanslog/CreativeScore\n   326 seamanslog/RuthlessWithWaste\n   507 seamanslog/FoodAndSex\n   118 seamanslog/Pessimism\n   497 seamanslog/ComputerComplexity\n   360 seamanslog/Ideology\n   388 seamanslog/MaunaKea\n   192 seamanslog/Workforce\n   183 seamanslog/MyStory\n 17125\n	   439 seamanslog/TimeBudget\n   203 seamanslog/Opportunity\n   573 seamanslog/10000Days\n   411 seamanslog/ToolsSaveTime\n   547 seamanslog/LearningCurve\n   186 seamanslog/ImportantWork\n   439 seamanslog/UnfinishedBook\n   249 seamanslog/LifeWork\n   502 seamanslog/ReadToLearn\n     8 seamanslog/SiteTitle\n   409 seamanslog/DailyHabits\n   263 seamanslog/Commitments\n   246 seamanslog/ExpandContract\n     7 seamanslog/Menu\n   440 seamanslog/HabitualChange\n   605 seamanslog/WorkMindset\n   340 seamanslog/WritingWorkflow\n   307 seamanslog/WhyWork\n   487 seamanslog/Multitasking\n   324 seamanslog/Hitler\n   211 seamanslog/LowCostMyth\n   541 seamanslog/BusinessInvestment\n   341 seamanslog/ActToLearn\n   439 seamanslog/ScaledCommit\n   454 seamanslog/Strengths\n   356 seamanslog/Collaboration\n   614 seamanslog/WritingStages\n   490 seamanslog/PragmaticThinking\n   354 seamanslog/OneImprovement\n   420 seamanslog/Search\n   478 seamanslog/Career\n   344 seamanslog/ProcessingIdeas\n   284 seamanslog/YourBlogTopic\n    43 seamanslog/Index\n   223 seamanslog/LifeFun\n   109 seamanslog/LifeThatMatters\n    84 seamanslog/BiggestIdea\n   206 seamanslog/LifePeople\n   205 seamanslog/LifeGrow\n   332 seamanslog/NewYearsResolutions\n   262 seamanslog/Genetics\n   642 seamanslog/Invest20Percent\n   137 seamanslog/CreativeScore\n   326 seamanslog/RuthlessWithWaste\n   507 seamanslog/FoodAndSex\n   118 seamanslog/Pessimism\n   497 seamanslog/ComputerComplexity\n   360 seamanslog/Ideology\n   388 seamanslog/MaunaKea\n   192 seamanslog/Workforce\n   183 seamanslog/MyStory\n 17125\n
-158	tst-time	Sun Jan 13 07:00:10 MST 2019\n	Wed Jan  9 09:00:10 MST 2019\n
+158	tst-time	Mon Jan 14 07:00:10 MST 2019\n	Wed Jan  9 09:00:10 MST 2019\n
 144	mybook-menu-list	Documents/Menu\nDocuments/info/Menu\nDocuments/aspire/Menu\nDocuments/seamanslog/Menu\nDocuments/Leverage/Menu\nDocuments/spiritual/Menu\nDocuments/MarkSeaman/Menu\nDocuments/guide/Teaching/Menu\nDocuments/guide/Menu\nDocuments/guide/HtmlApps/Menu\nDocuments/guide/PhpApps/Menu	Documents/Menu\nDocuments/info/Menu\nDocuments/aspire/Menu\nDocuments/seamanslog/Menu\nDocuments/Leverage/Menu\nDocuments/spiritual/Menu\nDocuments/MarkSeaman/Menu\nDocuments/guide/Teaching/Menu\nDocuments/guide/Menu\nDocuments/guide/HtmlApps/Menu\nDocuments/guide/PhpApps/Menu
 145	mybook-menu-mybook	('http://seaman-tech.com', 'zmdi-accounts-list', 'Shrinking World', None)\n('/mybook/Index', 'zmdi-home', 'Home', None)\n('/mybook/book_list', 'zmdi-local-library', 'Books', None)\n('/mybook/author_list', 'zmdi-face', 'Authors', None)	('http://seaman-tech.com', 'zmdi-accounts-list', 'Shrinking World', None)\n('/mybook/Index', 'zmdi-home', 'Home', None)\n('/mybook/book_list', 'zmdi-local-library', 'Books', None)\n('/mybook/author_list', 'zmdi-face', 'Authors', None)
 148	mybook-menu-swo	('/shrinking-world/Index', 'zmdi-home', 'Shrinking World', 'class=active')\n('/shrinking-world/Blog/Index', 'zmdi-library', 'Blog', None)\n('/shrinking-world/Staff', 'zmdi-accounts', 'Staff', None)\n('https://world-class-software.com/software/Index', 'zmdi-book', 'Training', None)	('/shrinking-world/Index', 'zmdi-home', 'Shrinking World', 'class=active')\n('/shrinking-world/Blog/Index', 'zmdi-library', 'Blog', None)\n('/shrinking-world/Staff', 'zmdi-accounts', 'Staff', None)\n('https://world-class-software.com/software/Index', 'zmdi-book', 'Training', None)
@@ -6384,7 +6404,7 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 96	doc	no output	no output
 167	text-grep	### fix\n#### list of known problems\n#### issue tracking\n### test\n#### test inventory\n#### tests needed\n### extend\n### improve	### fix\n#### list of known problems\n#### issue tracking\n### test\n#### test inventory\n#### tests needed\n### extend\n### improve
 5	text-help	\n        text Command\n\n        usage: x text COMMAND\n\n        COMMAND:\n\n            match - show lines that match\n            no_match - show lines that don't match\n            replace - replace lines\n            select - pattern matching in doc\n\n        \n	\n        text Command\n\n        usage: x text COMMAND\n\n        COMMAND:\n\n            match - show lines that match\n            no_match - show lines that don't match\n            replace - replace lines\n            select - pattern matching in doc\n\n        \n
-73	user-list	shell(x user list) --> 50 lines (should be between 4 and 30)	no output
+73	user-list	shell(x user list) --> 51 lines (should be between 4 and 30)	no output
 101	days-show	no output	no output
 138	thot-list	Work_Modes: 54 Lines, Root: 0\nthots: 1 Lines, Root: 0\nBuilding_Software: 154 Lines, Root: 499\nThot_Recorder: 35 Lines, Root: 631\nAdvisor: 4 Lines, Root: 0\nJournal: 2 Lines, Root: 0\nCreativity: 31 Lines, Root: 1527\nWho2Hire: 130 Lines, Root: 2090\nToDo: 93 Lines, Root: 3666\nApp_Design: 157 Lines, Root: 3682\nBio_Hammer: 173 Lines, Root: 3764\nGoals: 621 Lines, Root: 3892\n	Work_Modes: 54 Lines, Root: 0\nthots: 1 Lines, Root: 0\nBuilding_Software: 154 Lines, Root: 499\nThot_Recorder: 35 Lines, Root: 631\nAdvisor: 4 Lines, Root: 0\nJournal: 2 Lines, Root: 0\nCreativity: 31 Lines, Root: 1527\nWho2Hire: 130 Lines, Root: 2090\nToDo: 93 Lines, Root: 3666\nApp_Design: 157 Lines, Root: 3682\nBio_Hammer: 173 Lines, Root: 3764\nGoals: 621 Lines, Root: 3892\n
 93	doc-show	no output	no output
