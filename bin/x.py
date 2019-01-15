@@ -2,7 +2,6 @@ from os import chdir, environ, system
 from sys import argv
 
 from app import app_command
-from book import book_command
 from booknotes import booknotes_command
 from data import data_command
 from doc import doc_command
@@ -24,9 +23,6 @@ def execute_command(cmd,args):
     chdir(environ['p'])
     if cmd == 'app':
         app_command(args)
-    
-    elif cmd == 'book':
-        book_command(args)
 
     elif cmd == 'booknotes':
         booknotes_command(args)
@@ -34,18 +30,12 @@ def execute_command(cmd,args):
     elif cmd == 'email':
         command_scriptor(cmd, args)
     
-    elif cmd == 'cmd':
-        cmd_command(args)
-    
     elif cmd == 'data':
         data_command(args)
     
     elif cmd == 'doc':
         doc_command(args)
     
-    elif cmd == 'guide':
-        guide_command(args)
-
     elif cmd == 'health':
         command_scriptor(cmd, args)
     
@@ -119,36 +109,27 @@ def command_help(cmd,args):
         cmd
 
             app         # Work with application code
-            aspire      # Set personal goals
-            author      # Manage writing content
-            book        # Work with book contents
             booknotes   # Manage notes for reading
-            cmd         # Manage command scripts
-            collab      # Application collaborator
             data        # Database scripting
             doc         # Manage project documents
             hourly      # Hourly command for maintence
             hours       # Hours of invested time
             log         # Manage logs
             page        # Page Master app
-            plan        # Planning Script
             ops         # Operations script
             project     # Projects for clients
             robot       # Web Robot using Selenium to fetch web pages
             seamanslog  # Seaman's Log blog
             spiritual   # Spiritual Things subscriber list
             software    # Work with software training materials
-            src         # Manage source code
-            staging     # Manage server at Digital Ocean
             task        # Task Master
-            thot        # Thot recorder
             todo        # To do list command
             tool        # Manage django tool scripts
             tst         # Run tests with expected results
             web         # Web pages
             wordpress   # Work with wordpress server at Digital Ocean
 
-        Example: x staging ip
+        Example: 
                  x doc list
                  x tst run
         ''' % (cmd,args))

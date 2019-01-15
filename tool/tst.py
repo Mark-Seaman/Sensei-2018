@@ -1,10 +1,8 @@
-from datetime import datetime
 from inspect import getmembers, isfunction
 from os import chdir, environ, listdir, system
 from os.path import join
-from platform import node
 
-from bin.shell import differences, banner, read_file, shell
+from bin.shell import differences, banner, shell
 from log import log
 from models import Test
 
@@ -45,8 +43,6 @@ def tst_command(self, args):
             tst_list(self,args)
         elif cmd=='edit':
             tst_edit(self,args)
-        elif cmd=='email':
-            tst_email()
         elif cmd=='find':
             tst_find()
         elif cmd=='list':
@@ -58,8 +54,6 @@ def tst_command(self, args):
             self.stdout.write(tst_results())
         elif cmd=='like':
             tst_like(self,args)
-        elif cmd=='qt':
-            tst_quick_test()
         elif cmd=='reset':
              Test.objects.all().delete()
         elif cmd=='results':
@@ -174,12 +168,6 @@ def tst_register(tests):
         for t in tests[m]:
             if not Test.objects.filter(name=t[0]):
                 Test.objects.create(name=t[0])
-
-
-def tst_quick_test():
-    print 'quick test'
-    from workshop.tests import quick_test
-    quick_test()
 
 
 def tst_results():
