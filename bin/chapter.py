@@ -4,6 +4,33 @@ from os import system
 from sys import argv
 
 
+chapter_list = '''
+AppendixA
+AppendixB
+AppendixC
+Code
+Debt
+Deployment
+Design
+Knowledge
+Learning
+Leverage
+Monitoring
+Part1
+Part2
+Part3
+Part4
+Planning
+Practices
+Preface
+Release
+Services
+Teamwork
+Technology
+Test
+'''
+
+
 def compare_chapter(c):
     print('Compare Chapter - %s' % c)
     cmd = 'diff ~/Sensei/Documents/Leverage/%s /Users/seaman/Archive/Leverage/chapters/%s.md' % (c,c)
@@ -21,9 +48,16 @@ def update_chapter(c):
     text = text.replace('\n\\pagebreak\n', '') 
     text = text.replace('](images/', '](img/Leverage/') 
     open(f1, 'w').write(text)
-    # cmd = 'diff %s %s' % (f1,f2)
-    # system(cmd)
 
 
-update_chapter(argv[1])
-compare_chapter(argv[1])
+def chapters():
+    return chapter_list.split('\n')[1:-1]
+
+def update_all_chapters():
+    for c in chapters():
+        update_chapter(c)
+        compare_chapter(c)
+     
+update_all_chapters()
+
+
