@@ -6,7 +6,7 @@ from subprocess import PIPE, Popen
 # Convert a markdown file to HTML text
 def file_to_html(path, image_path=None):
     def fix_images(text):
-        return text.replace('![](img/', '![](%s/' % image_path)
+        return text.replace('](img/', '](%s/' % image_path)
 
     if exists(path):
         return text_to_html(fix_images(read_markdown(path)))
