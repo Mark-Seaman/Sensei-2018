@@ -7,7 +7,13 @@ from re import findall
 from bin.pandoc import read_markdown, text_to_html
 from hammer.settings import DOC_ROOT
 from tool.document import doc_html_text
-from .models import Student, Course
+
+from .models import Course, Lesson, Student
+from .student import fix_images
+
+
+def add_student(course, name, email, domain):
+    Student.objects.create(course=course, name=name, email=email, domain=domain)
 
 
 def content_lessons(course):
@@ -15,6 +21,13 @@ def content_lessons(course):
     files = glob(path)
     x = len(guide_doc_path())
     return [f[x:] for f in files]
+
+
+def course_lessons(course, page):
+    if page == course or page == '%s/Index' % course:
+        return Lesson.objects.all()
+    else:
+        return []
 
 
 def guide_doc_path(doc=None):
@@ -45,16 +58,10 @@ def guide_schedule(lesson):
     return [r for r in table[3:] if r]
 
 
-def register_students():
-    c = Course.objects.get(name='bacs350')
-    print('%d. %s - %s' % (c.pk, c.name, c.title))
-    for s in domain_data('PhpApps'):
-        add_student(c, s[2], s[1], s[0])
-        print(s)
-
-
-def add_student(course, name, email, domain):
-    Student.objects.create(course=course, name=name, email=email, domain=domain)
+def home_link(title):
+    if title:
+        course = title.split('/')[0]
+        return ('%s' % course, '/guide/%s/Index.md' % course)
 
 
 def query_students(course, student=None):
@@ -96,6 +103,14 @@ def read_student_list():
     return domains
 
 
+def register_students():
+    c = Course.objects.get(name='bacs350')
+    print('%d. %s - %s' % (c.pk, c.name, c.title))
+    for s in domain_data('PhpApps'):
+        add_student(c, s[2], s[1], s[0])
+        print(s)
+
+
 def student_test_links(student):
 
     def url(student, page=''):
@@ -121,12 +136,6 @@ def student_test_links(student):
             (url(student, "/brain/review.php"), 'Review'),
             (url(student, "/brain/slides.php"), 'Slides'),
         ]
-
-
-def home_link(title):
-    if title:
-        course = title.split('/')[0]
-        return ('%s' % course, '/guide/%s/Index.md' % course)
 
 
 def lesson_cards(course, lesson):
@@ -297,6 +306,14 @@ def slide_content_data(course, lesson):
     title = 'UNC - BACS 350' if course == 'PhpApps' else 'UNC - BACS 200'
     text = format_slides(course, lesson)
     return dict(course=title, lesson=lesson, title='Setup web hosting', markdown=text)
+
+
+def slides_markdown(page):
+    course = page[:7]
+    doc = 'Documents/unc/' + page
+    text = fix_images(read_markdown(doc), '/static/images/unc/%s' % course)
+    bear = '\n\n---\n\n<img src="/static/images/unc/bacs200/Bear_Logo.png">\n\n---\n\n'
+    return bear + text + bear
 
 
 def test_links(course):
