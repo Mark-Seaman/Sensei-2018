@@ -2,10 +2,9 @@ from os import listdir
 from os.path import exists, isdir, isfile, join
 from random import choice
 
-from bin.pandoc import text_to_html
 from bin.shell import read_file
 from hammer.settings import BASE_DIR
-from tool.document import doc_html_text
+from tool.document import doc_html_text, text_to_html
 from tool.log import log
 # from tool.domain import domain_directory
 

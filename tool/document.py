@@ -1,7 +1,10 @@
-from django.http import Http404
-from os.path import exists, isdir, isfile, join
+from genericpath import exists
+from os import mkdir
+from subprocess import Popen, PIPE
 
-from bin.pandoc import text_to_html, file_to_html
+from django.http import Http404
+from os.path import exists, isdir, isfile, join, dirname
+
 from bin.shell import read_file
 from hammer.settings import BASE_DIR
 from tool.log import log
@@ -75,3 +78,42 @@ def domain_doc(domain, page):
     else:
         return join(d, page)
 
+
+def file_to_html(path, image_path=None):
+    def fix_images(text):
+        return text.replace('](img/', '](%s/' % image_path)
+
+    if exists(path):
+        return text_to_html(fix_images(read_markdown(path)))
+    else:
+        return 'No file found, ' + path
+
+
+def markdown_to_html(markdown_path, html_path):
+    text = read_markdown(markdown_path)
+    text = text_to_html(text)
+    write_html_file(html_path, text)
+
+
+def read_markdown(path):
+    bad_files = ['.DS_Store', '.jpg', '.jpeg', '.png', '.gif']
+    for x in bad_files:
+        if x in path:
+            return "No Markdown File: "+ path
+    return open(path).read()
+
+
+def text_to_html(text):
+    p = Popen('pandoc', stdin=PIPE, stdout=PIPE)
+    # text = text.encode('UTF-8')
+    return p.communicate(text)[0] #.decode('UTF-8')
+
+
+def title(p1):
+    return open(p1).read().split('\n')[0][2:]
+
+
+def write_html_file(path, html):
+    if not exists(dirname(path)):
+        mkdir(dirname(path))
+    open(path, 'w').write(html)

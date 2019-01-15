@@ -1,6 +1,6 @@
 from os.path import join
 
-from bin.pandoc import text_to_html
+from tool.document import text_to_html
 
 
 def has_kids(text, depth):

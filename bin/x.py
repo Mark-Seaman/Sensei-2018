@@ -4,7 +4,6 @@ from sys import argv
 from app import app_command
 from booknotes import booknotes_command
 from data import data_command
-from doc import doc_command
 from hourly import hourly_command
 from i import i_command
 from music import music_command
@@ -30,9 +29,6 @@ def execute_command(cmd,args):
     
     elif cmd == 'data':
         data_command(args)
-    
-    elif cmd == 'doc':
-        doc_command(args)
     
     elif cmd == 'health':
         command_scriptor(cmd, args)

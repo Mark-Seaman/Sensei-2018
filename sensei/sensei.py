@@ -4,9 +4,8 @@ from glob import glob
 from os.path import exists, join
 from re import findall
 
-from bin.pandoc import read_markdown, text_to_html
 from hammer.settings import DOC_ROOT
-from tool.document import doc_html_text
+from tool.document import doc_html_text, read_markdown, text_to_html
 
 from .models import Course, Lesson, Student
 from .student import fix_images
