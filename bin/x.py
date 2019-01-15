@@ -9,7 +9,6 @@ from hourly import hourly_command
 from i import i_command
 from music import music_command
 from ops import ops_command
-from seamanslog import seamanslog_command
 from text import text_command
 from todo import todo_command
 from tool import tool_command
@@ -65,9 +64,6 @@ def execute_command(cmd,args):
     elif cmd == 'robot':
         command_scriptor(cmd, args)
     
-    elif cmd == 'seamanslog':
-        seamanslog_command(args)
-    
     elif cmd == 'task':
         command_scriptor(cmd, args)
     
@@ -118,7 +114,6 @@ def command_help(cmd,args):
             ops         # Operations script
             project     # Projects for clients
             robot       # Web Robot using Selenium to fetch web pages
-            seamanslog  # Seaman's Log blog
             spiritual   # Spiritual Things subscriber list
             software    # Work with software training materials
             task        # Task Master

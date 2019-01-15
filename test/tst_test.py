@@ -1,6 +1,4 @@
-from bin.shell import check_lines, shell, file_tree_list
-
-from tool.models import Test
+from bin.shell import shell
 
 
 def tst_test():
@@ -9,8 +7,3 @@ def tst_test():
 
 def tst_time_test():
     return shell('date')
-
-
-# def remote_server_test():
-#     return shell('x server command bin/remote_tests.py')
-
