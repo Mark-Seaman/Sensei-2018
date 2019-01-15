@@ -27,7 +27,7 @@ def course_lessons(course, page):
     if not course.startswith('bacs'):
         return []
     if page == course or page == '%s/Index' % course:
-        return Lesson.objects.filter(course=course)
+        return Lesson.objects.filter(course__name=course)
     else:
         return []
 
