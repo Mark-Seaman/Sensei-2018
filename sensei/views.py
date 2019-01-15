@@ -65,11 +65,6 @@ class UncSlidesDisplay(TemplateView):
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title')
         text = slides_markdown(title)
-        # course = title[:7]
-        # doc = 'Documents/unc/' + title
-        # text = fix_images(read_markdown(doc), '/static/images/unc/%s' % course)
-        # bear = '\n\n---\n\n<img src="/static/images/unc/bacs200/Bear_Logo.png">\n\n---\n\n'
-        # text = bear+text+bear
         return site_settings(title=title, markdown=text)
 
 

@@ -25,7 +25,7 @@ def content_lessons(course):
 
 def course_lessons(course, page):
     if page == course or page == '%s/Index' % course:
-        return Lesson.objects.all()
+        return Lesson.objects.filter(course=course)
     else:
         return []
 
