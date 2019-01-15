@@ -14,13 +14,14 @@ class UncDocDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title')
-        if title == 'bacs200' or title == 'bacs200/Index':
+        course = title[:7]
+        if title == course or title == '%s/Index' % course:
             lessons = Lesson.objects.all()
         else:
             lessons = []
         doc = domain_doc(self.request.get_host(), 'unc/' + title)
-        title = 'Lesson %s' % title[-2:] if title[-3:-2]=='/' else 'UNC BACS 200'
-        text = doc_html_text(doc, '/static/images/unc/bacs200')
+        title = 'Lesson %s' % title[-2:] if title[-3:-2]=='/' else 'UNC BACS %s' % course[-3:]
+        text = doc_html_text(doc, '/static/images/unc/%s' % course)
         return site_settings(title=title, text=text, lessons=lessons)
 
 
