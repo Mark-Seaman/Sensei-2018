@@ -1,17 +1,9 @@
 from django.conf.urls import url
 
-from tool.project import ProjectList, ProjectDetail, ProjectCreate, ProjectUpdate, ProjectDelete
 from tool.user_views import UserList, UserCreate, UserDetail, UserEdit, UserDelete
 
 
 urlpatterns = [
-
-    # Project Views
-    url(r'^project/$',                          ProjectList.as_view(),     name='project_list'),
-    url(r'^project/(?P<pk>\d+)$',               ProjectDetail.as_view(),   name='project-detail'),
-    url(r'^project/add$',                       ProjectCreate.as_view(),   name='project_add'),
-    url(r'^project/(?P<pk>\d+)/edit$',          ProjectUpdate.as_view(),   name='project_update'),
-    url(r'^project/(?P<pk>\d+)/delete$',        ProjectDelete.as_view(),   name='project_delete'),
 
     # User
     url(r'^user_add$',                   UserCreate.as_view(), name='user_add'),

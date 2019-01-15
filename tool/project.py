@@ -4,7 +4,6 @@ from django.core.urlresolvers import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from log import log
-from models import Project
 from tool.models import Project
 
 

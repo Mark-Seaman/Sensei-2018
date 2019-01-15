@@ -11,4 +11,4 @@ def log_length_test():
         lines = lines [-1000:]
         open(log, 'w').write('\n'.join(lines))
         return 'Too Long Log - %s, %s lines' % (log,length)
-    return 'Log Length OK' % (log,length)
+    return 'Log Length OK'

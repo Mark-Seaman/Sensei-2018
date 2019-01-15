@@ -27,7 +27,7 @@ def app_settings_test():
 
 
 def app_show_test():
-    return check_shell_lines('x app show', 10000, 11000)
+    return check_shell_lines('x app show', 9000, 10000)
 
 
 def app_signature_test():

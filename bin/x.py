@@ -7,7 +7,6 @@ from data import data_command
 from doc import doc_command
 from hourly import hourly_command
 from i import i_command
-from log import log_command
 from music import music_command
 from ops import ops_command
 from seamanslog import seamanslog_command
