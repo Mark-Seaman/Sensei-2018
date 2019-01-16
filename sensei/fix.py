@@ -1,4 +1,4 @@
-from sensei.models import Student
+from sensei.models import *
 
 
 def fix_reading_names():
@@ -13,6 +13,14 @@ def fix_email_names():
         if s.email != s.email.lower():
             s.email = s.email.lower()
             s.save()
+
+
+def stud(id):
+    return Student.objects.get(pk=id)
+
+
+def name(name):
+    return Student.objects.filter(name__contains=name)
 
 
 '''
