@@ -75,10 +75,10 @@ def reading_scores_table():
 
 def reading_table(scores):
     table = []
-    labels = scores[0][7:-7]
+    labels = scores[0][7:-6]
     table.append(labels)
     for s in scores[1:]:
-        values = [v for v in s[7:-7]]
+        values = [v for v in s[7:-6]]
         table.append(['%s %s' % (s[1], s[0])] + ['%s' % int(float(v)) for v in values])
     return table
 
@@ -88,7 +88,6 @@ def reading_scores():
     log('READING: ' + '   '.join(table[0]))
     scores = {}
     for row in table[1:]:
-        # log('   '.join(row))
         name = '%s' % (row[0])
         student = Student.objects.filter(zbooks=name)
         if student:
