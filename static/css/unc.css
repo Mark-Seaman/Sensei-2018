@@ -259,16 +259,16 @@ td {
 ------------------------------*/
 
 #content a {
-    color: #F6B018;
-    background-color: #0E3D65;
+    color: #0E3D65;
+    background-color: white;
     padding: 10px;
     margin: 10px;
-    border: 2px solid #F6B018;
+    border: 3px solid #0E3D65;
     border-radius: 30px;
 }
 
 
 #s-main-menu li {
-    margin: auto;
+    margin: 0px;
 }
 
