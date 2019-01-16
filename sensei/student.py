@@ -88,7 +88,6 @@ def reading_scores():
     log('READING: ' + '   '.join(table[0]))
     scores = {}
     for row in table[1:]:
-        # log('   '.join(row))
         name = '%s' % (row[0])
         student = Student.objects.filter(zbooks=name)
         if student:
