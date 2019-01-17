@@ -1,0 +1,12 @@
+#!/bin/bash
+# Activate a Python Virtual Environment to do Django work
+
+
+cd $p/hammer
+pipenv shell
+
+figlet 'pipenv'
+
+cd $p
+ls -l 
+./manage.py
