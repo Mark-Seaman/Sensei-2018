@@ -1304,7 +1304,7 @@
             "is_active": true,
             "is_staff": true,
             "is_superuser": true,
-            "last_login": "2019-01-14T03:14:06.322Z",
+            "last_login": "2019-01-16T21:27:18.555Z",
             "last_name": "Seaman",
             "password": "pbkdf2_sha256$36000$LFrdoiC0MqLf$EbceWAdEF48961SNuxHnTT+XTfO4K0EcRdYKKnjIqAI=",
             "user_permissions": [],
@@ -1682,7 +1682,7 @@
             "is_active": true,
             "is_staff": true,
             "is_superuser": false,
-            "last_login": null,
+            "last_login": "2019-01-16T22:06:38.225Z",
             "last_name": "Jones",
             "password": "pbkdf2_sha256$36000$QpgbvAsNBqtq$ikxxfS1BAFC8ST+yGTZ1W65wHPvDtF7UAjxIoIW3CtQ=",
             "user_permissions": [],
@@ -2158,5 +2158,41 @@
         },
         "model": "auth.user",
         "pk": 53
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-16T19:05:26.452Z",
+            "email": "arag4948@bears.unco.edu",
+            "first_name": "Avenancio",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Aragon",
+            "password": "pbkdf2_sha256$36000$52bg1SR9p17z$qqttuupE5kUwfl1NAt1FC+K2uLR0AkDLUlh1n7wqGBI=",
+            "user_permissions": [],
+            "username": "arag4948@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 54
+    },
+    {
+        "fields": {
+            "date_joined": "2019-01-16T22:38:34.364Z",
+            "email": "lova0463@bears.unco.edu",
+            "first_name": "Diego",
+            "groups": [],
+            "is_active": true,
+            "is_staff": true,
+            "is_superuser": false,
+            "last_login": null,
+            "last_name": "Lovato",
+            "password": "pbkdf2_sha256$36000$hLlc0j0LEbyN$Gk/4L/Mh0oS6/hWJNwwPmwzmgaM1fSnKEbt6O21Z9nc=",
+            "user_permissions": [],
+            "username": "lova0463@bears.unco.edu"
+        },
+        "model": "auth.user",
+        "pk": 55
     }
 ]
