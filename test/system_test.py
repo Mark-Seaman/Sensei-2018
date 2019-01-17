@@ -37,7 +37,7 @@ def system_pandoc_test():
 
 def system_python_files_test():
     files = file_tree_list(environ['p'], '.py')
-    return check_lines('Python file list', '\n'.join(files), 140, 160)
+    return check_lines('Python file list', '\n'.join(files), 130, 140)
 
 
 def system_python_version_test():
