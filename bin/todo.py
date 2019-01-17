@@ -20,7 +20,7 @@ def todo_command(options):
     else:
         for d in recent_dates():
             edit_task_file(d)
-        system('e Documents/info/ideas Documents/info/Index')
+        # system('e Documents/info/ideas Documents/info/Index')
 
 
 def recent_dates(days=3):
@@ -32,17 +32,18 @@ task_default = '''%s
 
 Grow 0
     3, 3, 1, 1
+    weight: 20x
 
 Teach 0
     
     
-Tools 0
+Write 0
+    
+
+People 0
     
 
 Fun 0
-    
-    
-People 0
     
 
 '''
