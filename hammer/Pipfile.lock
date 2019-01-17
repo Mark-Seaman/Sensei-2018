@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "40a9f57f281d4ff4181c3aadc30a488c2d44ee50c12350b2cc3226f6510fd5a9"
+            "sha256": "9ade506c165406e23ab87c9cd1b9576afda5cf5624e8269dc60289d3bfd5a021"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.7"
+            "python_version": "2.7"
         },
         "sources": [
             {
@@ -26,10 +26,10 @@
         },
         "pytz": {
             "hashes": [
-                "sha256:31cb35c89bd7d333cd32c5f278fca91b523b0834369e757f4c5641ea252236ca",
-                "sha256:8e0f8568c118d3077b46be7d654cc8167fa916092e28320cde048e54bfc9f1e6"
+                "sha256:32b0891edff07e28efe91284ed9c31e123d84bea3fd98e1f72be2508f43ef8d9",
+                "sha256:d5f05e487007e29e03409f9398d074e158d920d36eb82eaf66fb1136b0c5374c"
             ],
-            "version": "==2018.7"
+            "version": "==2018.9"
         }
     },
     "develop": {}
