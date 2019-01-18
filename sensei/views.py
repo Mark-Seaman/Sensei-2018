@@ -9,6 +9,14 @@ from .student import student_scores, site_settings, student, student_totals, reg
 from .models import Student
 
 
+class GuideDoc(TemplateView):
+    template_name = 'guide_doc.html'
+
+    def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title')
+        return site_settings(title=title, doc='guide')
+
+
 class UncDocDisplay(TemplateView):
     template_name = 'unc_doc.html'
 

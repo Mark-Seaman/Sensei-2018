@@ -1,0 +1,65 @@
+/* -----------------------------
+    E L E M E N T S
+----------------------------- */
+
+body {
+    font-size: 20px;
+}
+
+
+header {
+    background-color: #333;
+    border: 1px solid yellow;
+}
+
+header h1 {
+    color: yellow;
+}
+
+header h2 {
+    color: yellow;
+}
+
+header img {
+    background: white url("/static/images/SWS_Globe_small.jpg") no-repeat;
+    border-radius: 20px;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    height: 100px;
+    width: 225px;
+}
+
+
+/* -----------------------------
+    C L A S S E S
+----------------------------- */
+
+.border {
+    border: 1px solid white;
+}
+
+.header {
+    width: 100%;
+}
+
+.user-btn {
+    color: white;
+    background-color: #333;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.user-btn a {
+    color: white;
+}
+
+
+.user-info {
+    background-color: #333;
+    padding: 1em;
+    margin: 1em;
+}

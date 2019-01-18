@@ -7,6 +7,10 @@ from bin.shell import check_lines, check_shell_lines, file_tree_list, line_match
 from bin.switches import TEST_DOC
 
 
+def system_bin_test():
+    return shell('ls -l bin')
+
+
 def system_cron_test():
     return shell('crontab -l')
 

@@ -3,10 +3,5 @@
 
 
 cd $p/hammer
-pipenv shell
+pipenv shell 
 
-figlet 'pipenv'
-
-cd $p
-ls -l 
-./manage.py

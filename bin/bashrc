@@ -35,4 +35,4 @@ $p/bin:\
 . $p/bin/bash-alias
 . $p/bin/bash-prompt
 
-
+cd $p
