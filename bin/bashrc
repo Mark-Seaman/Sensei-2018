@@ -10,7 +10,9 @@ fi
 echo "p = $p"
 
 
-export PIPENV_IGNORE_VIRTUALENVS=1
+#export PIPENV_IGNORE_VIRTUALENVS=1
+#export PIPENV_VENV_IN_PROJECT=1
+
 export CLICOLOR=true
 export imac='seaman@10.0.0.48'
 export macbook='markseaman@10.0.0.167'
@@ -36,3 +38,13 @@ $p/bin:\
 . $p/bin/bash-prompt
 
 cd $p
+[ "$p" != "$HOME/MyBook" ] &&
+[ "$PIPENV_ACTIVE" != '1' ] && 
+cd $p/hammer &&
+figlet pipenv shell &&
+pipenv shell 
+
+
+which python &&
+pip list
+
