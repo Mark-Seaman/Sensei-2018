@@ -433,7 +433,7 @@ def task_report(year, month):
 def save_monthly_reports(year):
 
     def save_report(report, month):
-        path = join('Documents', 'info', 'months', month)
+        path = join('Documents', 'info', 'history', 'months', month)
         with open(path, 'w') as f:
             f.write('# Tasks History     %s\n\n## Accomplishments\n\n' % month)
             f.write(report)
