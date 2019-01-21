@@ -419,7 +419,7 @@ def task_report(year, month):
         return [(t.strftime("%a, %m-%d"), Task.objects.filter(date=t)) for t in dates]
 
     def task_entry(task):
-        notes = task.notes if task.notes else []
+        notes = task.notes if task.notes else ''
         notes = [n for n in notes.split('\n') if n]
         notes = '\n    '.join(notes)
         # notes = notes.decode(encoding='UTF-8').encode('ascii', 'ignore')
