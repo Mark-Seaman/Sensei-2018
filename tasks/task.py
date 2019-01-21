@@ -423,7 +423,7 @@ def task_report(year, month):
         notes = [n for n in notes.split('\n') if n]
         notes = '\n'.join(notes)
         # notes = notes.decode(encoding='UTF-8').encode('ascii', 'ignore')
-        return '%s %s\n%s' % (task.name, task.hours, notes.encode('ascii', 'ignore'))
+        return '%s %s\n\n%s\n' % (task.name, task.hours, notes.encode('ascii', 'ignore'))
 
     report = []
     for day in query_month_tasks(year, month):
