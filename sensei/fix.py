@@ -4,6 +4,7 @@
 # Fix student records
 
 from sensei.models import *
+from sensei.student import *
 
 def fix_reading_names():
     for s in Student.objects.all():
@@ -22,6 +23,7 @@ def stud(id):
 
 def name(name):
     return Student.objects.filter(name__contains=name)
+
 
 
 #########################

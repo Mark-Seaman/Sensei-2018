@@ -59,7 +59,8 @@ class Review(models.Model):
     requirement_8 = models.BooleanField(default=False)
     requirement_9 = models.BooleanField(default=False)
     requirement_10 = models.BooleanField(default=False)
-    notes       = models.TextField(default='You must type a summary of problems.', validators=[MinLengthValidator(100)])
+    notes       = models.TextField()
+    #, validators=[MinLengthValidator(100)])
 
 
 class Requirements(models.Model):

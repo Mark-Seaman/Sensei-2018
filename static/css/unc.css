@@ -24,14 +24,6 @@ footer a {
     color: #0E3D65;
 }
 
-form label {
-    width: 100px;
-}
-
-form input {
-    width: 300px;
-}
-
 h1 {
     margin: 20px;
     padding: 30px;
@@ -259,12 +251,12 @@ td {
 ------------------------------*/
 
 #content a {
-    color: #0E3D65;
-    background-color: white;
-    padding: 10px;
-    margin: 10px;
-    border: 3px solid #0E3D65;
-    border-radius: 30px;
+    /*color: #0E3D65;*/
+    /*background-color: white;*/
+    /*padding: 10px;*/
+    /*margin: 10px;*/
+    /*border: 3px solid #0E3D65;*/
+    /*border-radius: 30px;*/
 }
 
 #content a.normal {

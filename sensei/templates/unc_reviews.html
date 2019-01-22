@@ -23,6 +23,7 @@
     {% if reviews %}
         <table>
             <tr>
+                <th></th>
                 <th>Designer</th>
                 <th>Reviewer</th>
                 <th>Page</th>
@@ -30,12 +31,15 @@
             </tr>
             {% for r in reviews %}
                 <tr>
+                    <td><a class="normal"
+                           href="/unc/review/{{ r.pk }}">Do Review</a>
+                    </td>
                     <td>{{ r.designer.name }} </td>
                     <td>{{ r.reviewer.name }} </td>
                     <td><a class="normal"
                            href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>
                     </td>
-                    <td>{{ r.due }} </td>
+                    <td>{{ r.due }}</td>
 
                 </tr>
             {% endfor %}
