@@ -3,7 +3,7 @@ from os import chdir, environ, listdir, mkdir, remove, rmdir, rename, system
 from os.path import exists, dirname, isdir, join
 from random import randint
 from sys import argv
-# from PIL import Image
+# from Pillow import Image
 
 from files import recursive_list
 from shell import file_list
@@ -70,9 +70,9 @@ def convert(f1,f2):
 
 
 def convert_png(f1,f2):
-    print 'convert PNG File', f1, f2
-    image = Image.open(f1)
-    image.save (f2, 'JPEG')
+    print 'delete PNG File', f1, f2
+    # image = Image.open(f1)
+    # image.save (f2, 'JPEG')
     remove(f1)
 
 
