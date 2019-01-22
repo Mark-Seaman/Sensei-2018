@@ -25,19 +25,6 @@ def create_review(reviewer, designer, page, due):
     return Review.objects.get_or_create(reviewer=reviewer, designer=designer, page=page, due=due)[0]
 
 
-def requirement_labels():
-    return '''Correct URL for page
-Valid HTML
-Correct Page Content
-CSS Styling
-Visual Appeal
-Images
-Java Script Controls
-Banner, Main, Footer
-Navigation
-Business Purpose'''.split('\n')
-
-
 def review_groups():
     groups = []
     num = 4
@@ -63,5 +50,5 @@ def review_pairs(groups):
 
 
 def student_reviews(student_id):
-    return Review.objects.filter(reviewer=student_id)
+    return Review.objects.filter(reviewer=student_id, score=-1)
 
