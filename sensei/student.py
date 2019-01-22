@@ -48,7 +48,8 @@ def import_students():
         for row in reader(f):
             try:
                 print("Import user %s " % row)
-                user_add(row[0], row[1], row[2])
+                #user_add(row[0], row[1], row[2])
+                Student.objects.get_or_create(name=row[0], email=row[1], domain=row[2])
             except:
                 print("*** %s ***" % row)
                 log_exception()
