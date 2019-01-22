@@ -1,4 +1,4 @@
-from csv import reader
+from csv import reader, writer
 from traceback import format_exc
 
 from django.contrib.auth.models import User
@@ -19,6 +19,17 @@ def delete_students():
 
     print('delete_students')
     Student.objects.all().delete()
+
+
+def export_students():
+    data_file = 'data/students.csv'
+    print("Exporting Students to %s" % data_file)
+    with open(data_file, 'w') as f:
+        w = writer(f)
+        for s in Student.objects.all():
+            row = [s.name, s.email, s.domain]
+            print(','.join(row))
+            w.writerow(row)
 
 
 def fix_images(text, image_path):

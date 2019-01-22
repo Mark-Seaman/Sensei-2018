@@ -23,6 +23,11 @@ def name(name):
     return Student.objects.filter(name__contains=name)
 
 
+# Export all the students to a file
+from sensei.student import *
+export_students()
+
+
 '''
 Title:  UNC BACS 200 - Web Dev for Small Business
 
