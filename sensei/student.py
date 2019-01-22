@@ -7,7 +7,7 @@ from mybook.mybook import mybook_site_title, main_menu
 
 from .models import Student
 from tool.log import log, log_exception
-from tool.user import user_add
+# from tool.user import user_add
 
 
 def delete_students():

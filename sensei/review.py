@@ -1,13 +1,46 @@
 from django.utils.timezone import make_aware
 from datetime import datetime
+from random import shuffle
 
 from .models import Review
+from .student import students
+
+
+def assign_reviews(page, due):
+    pairs = review_pairs(review_groups())
+    for p in pairs:
+        create_review(p[0], p[1], page, due)
+    return len(pairs)
 
 
 def create_review(reviewer, designer, page, due):
     due = make_aware(datetime.strptime(due, "%Y-%m-%d"))
-    return Review.objects.get_or_create(reviewer_id=reviewer, designer_id=designer, page=page,
-                                        due=due)[0]
+    return Review.objects.get_or_create(reviewer=reviewer, designer=designer, page=page, due=due)[0]
+
+
+def review_groups():
+    groups = []
+    num = 4
+    s = [s for s in students() if s.name != 'Test Student']
+    shuffle(s)
+    x = 0
+    while s[x:x + num]:
+        groups.append(s[x:x + num])
+        x += num
+    # groups = [groups[0] + groups[-1]] + groups[1:-1]
+    return groups
+
+
+def review_pairs(groups):
+    x = []
+    for team in groups:
+        for reviewer in team:
+            for designer in team:
+                if reviewer != designer:
+                    x.append((designer, reviewer))
+    print(len(x))
+    return x
+
 
 
 # from .models import Course, Review
@@ -80,31 +113,6 @@ def create_review(reviewer, designer, page, due):
 #     return len([x for x in requirements if x])
 #
 #
-# def review_groups():
-#     course = Course.objects.get(name='bacs350')
-#     ids = [s.pk for s in query_students(course)]
-#     shuffle(ids)
-#     x = 0
-#     while ids[x:x + 6]:
-#         print(str(ids[x:x + 6]) + ',')
-#         x += 6
-#
-#
-# bacs_200_groups = [
-#     [30, 35, 10, 28, 15, 9],
-#     [39, 23, 24, 8, 36, 19],
-#     [5, 3, 17, 33, 26],
-#     [37, 14, 18, 42, 2],
-#     [22, 41, 34, 12, 13],
-#     [31, 11, 4, 21, 6],
-#     [1, 38, 7, 16, 29],
-#     [20, 27, 40, 25, 32],
-# ]
-#
-# bacs_350_groups = [
-#     [43, 54, 53, 44, 52, 47],
-#     [45, 50, 49, 51, 48, 46],
-# ]
 #
 #
 # def review_pairs(groups):

@@ -267,6 +267,12 @@ td {
     border-radius: 30px;
 }
 
+#content a.normal {
+    color: green;
+    border: none;
+    margin: 5px;
+    padding: 5px;
+}
 
 #s-main-menu li {
     margin: 0px;

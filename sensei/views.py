@@ -4,9 +4,10 @@ from django.views.generic import FormView, ListView, TemplateView
 
 from tool.document import domain_doc, doc_html_text
 
+from .review import review_groups
 from .sensei import course_lessons, slides_markdown
 from .student import student_scores, site_settings, student, student_totals, register_user_domain
-from .models import Student
+from .models import Review, Student
 
 
 class GuideDoc(TemplateView):
@@ -65,6 +66,13 @@ class UncRegistered(ListView):
     def get_context_data(self, **kwargs):
         students = Student.objects.all().order_by('email')
         return site_settings(title='BACS 200 - Registered Domains', students=students)
+
+
+class UncReviews(TemplateView):
+    template_name = 'unc_reviews.html'
+
+    def get_context_data(self, **kwargs):
+        return site_settings(title='Design Reviews', reviews=Review.objects.all(), groups=review_groups())
 
 
 class UncSlidesDisplay(TemplateView):

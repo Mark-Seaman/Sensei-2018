@@ -1,0 +1,47 @@
+{% extends "unc_theme.html" %}
+
+
+{% block card %}
+
+    <h1>Student Design Reviews</h1>
+    <b>Design Review groups</b>
+
+    {% if groups %}
+        <ul>
+            {% for team in groups %}
+                <li>{% for s in team %}
+                    {{ s.name }},
+                {% endfor %}</li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+        <h1>No Reviews available</h1>
+    {% endif %}
+
+    <b>Design Review assignments</b>
+    {% if reviews %}
+        <table>
+            <tr>
+                <th>Designer</th>
+                <th>Reviewer</th>
+                <th>Page</th>
+                <th>Due</th>
+            </tr>
+            {% for r in reviews %}
+                <tr>
+                    <td>{{ r.designer.name }} </td>
+                    <td>{{ r.reviewer.name }} </td>
+                    <td><a class="normal"
+                           href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>
+                    </td>
+                    <td>{{ r.due }} </td>
+
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h1>No Reviews available</h1>
+    {% endif %}
+
+{% endblock %}
