@@ -4,7 +4,7 @@ from django.views.generic import FormView, ListView, TemplateView, UpdateView
 
 from tool.document import domain_doc, doc_html_text
 
-from .review import count_score, requirement_labels, review_groups, student_reviews
+from .review import count_score, review_groups, student_reviews
 from .sensei import course_lessons, slides_markdown
 from .student import student_scores, site_settings, student, student_totals, register_user_domain
 from .models import Review, Student
