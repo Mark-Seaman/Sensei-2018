@@ -1,4 +1,4 @@
-from csv import reader
+from csv import reader, writer
 from traceback import format_exc
 
 from django.contrib.auth.models import User
@@ -7,7 +7,7 @@ from mybook.mybook import mybook_site_title, main_menu
 
 from .models import Student
 from tool.log import log, log_exception
-from tool.user import user_add
+# from tool.user import user_add
 
 
 def delete_students():
@@ -19,6 +19,17 @@ def delete_students():
 
     print('delete_students')
     Student.objects.all().delete()
+
+
+def export_students():
+    data_file = 'data/students.csv'
+    print("Exporting Students to %s" % data_file)
+    with open(data_file, 'w') as f:
+        w = writer(f)
+        for s in Student.objects.all():
+            row = [s.name, s.email, s.domain]
+            print(','.join(row))
+            w.writerow(row)
 
 
 def fix_images(text, image_path):
@@ -37,7 +48,8 @@ def import_students():
         for row in reader(f):
             try:
                 print("Import user %s " % row)
-                user_add(row[0], row[1], row[2])
+                #user_add(row[0], row[1], row[2])
+                Student.objects.get_or_create(name=row[0], email=row[1], domain=row[2])
             except:
                 print("*** %s ***" % row)
                 log_exception()
@@ -76,7 +88,7 @@ def reading_scores_table():
 def reading_table(scores):
     table = []
     labels = scores[0][7:-7]
-    table.append(labels)
+    table.append(['Name'] + labels)
     for s in scores[1:]:
         values = [v for v in s[7:-7]]
         table.append(['%s %s' % (s[1], s[0])] + ['%s' % int(float(v)) for v in values])

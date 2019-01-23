@@ -46,11 +46,25 @@ class Review(models.Model):
     designer    = models.ForeignKey(Student, related_name='designer', default=1, editable=False)
     page        = models.CharField(max_length=100, editable=False)
     score       = models.IntegerField(default=-1)
-    date        = models.DateTimeField(default=now, editable=False)
-    due         = models.DateTimeField(default='2018-09-01', editable=False)
+    date        = models.DateTimeField(null=True, editable=False)
+    due         = models.DateTimeField(editable=False)
     requirements = models.TextField(default='NONE')
-    notes       = models.TextField(default='You must type a summary of problems.', validators=[MinLengthValidator(100)])
+    requirement_1 = models.BooleanField(default=False)
+    requirement_2 = models.BooleanField(default=False)
+    requirement_3 = models.BooleanField(default=False)
+    requirement_4 = models.BooleanField(default=False)
+    requirement_5 = models.BooleanField(default=False)
+    requirement_6 = models.BooleanField(default=False)
+    requirement_7 = models.BooleanField(default=False)
+    requirement_8 = models.BooleanField(default=False)
+    requirement_9 = models.BooleanField(default=False)
+    requirement_10 = models.BooleanField(default=False)
+    notes       = models.TextField()
+    #, validators=[MinLengthValidator(100)])
 
 
+class Requirements(models.Model):
+    labels = models.TextField(default='NONE')
+    url = models.URLField()
 
 

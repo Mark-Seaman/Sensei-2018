@@ -50,9 +50,17 @@
                 <td>HTTP</td>
                 <td>{{ scores.3 }}%</td>
             </tr>
-             <tr>
+            <tr>
                 <td>Web Trends</td>
                 <td>{{ scores.4 }}%</td>
+            </tr>
+            <tr>
+                <td>Intro to HTML</td>
+                <td>{{ scores.5 }}%</td>
+            </tr>
+            <tr>
+                <td>Intro to CSS</td>
+                <td>{{ scores.6 }}%</td>
             </tr>
             {#            <tr>#}
             {#                <td>Total</td>#}
@@ -61,8 +69,9 @@
         </table>
 
     {% else %}
-        <h1>No Students available</h1>
+        <h1>No Student data available</h1>
     {% endif %}
+
 
     <h2>Web Pages for Testing</h2>
 
@@ -70,6 +79,60 @@
     <p><a href="http://{{ student.domain }}">http://{{ student.domain }}</a></p>
 
     <h3>Home Page</h3>
-    <p><a href="http://{{ student.domain }}/bacs200/index.html">http://{{ student.domain }}/bacs200/index.html</a></p>
+    <p>
+        <a href="http://{{ student.domain }}/bacs200/index.html">http://{{ student.domain }}/bacs200/index.html</a>
+    </p>
+    <p>
+        <a href="https://validator.w3.org/nu/?doc=http://{{ student.domain }}/bacs200/index.html">
+            Validate index.html</a>
+    </p>
+
+    <h3>Projects</h3>
+    <p>
+        <a href="http://{{ student.domain }}/bacs200/inspire.html">http://{{ student.domain }}/bacs200/inspire.html</a>
+    </p>
+    <p>
+        <a href="https://validator.w3.org/nu/?doc=http://{{ student.domain }}/bacs200/inspire.html">
+            Validate inspire.html</a>
+    </p>
+
+    <h3>Exercises</h3>
+    <p>
+        <a href="http://{{ student.domain }}/bacs200/animals.html">http://{{ student.domain }}/bacs200/animals.html</a>
+    </p>
+    <p>
+        <a href="https://validator.w3.org/nu/?doc=http://{{ student.domain }}/bacs200/animals.html">
+            Validate animals.html</a>
+
+    </p>
+
+    {% if reviews %}
+        <h2>Design Review assignments</h2>
+        <p>Give feedback to your peers by the due date.</p>
+        <table>
+            <tr>
+                <th></th>
+                <th>Designer</th>
+                <th>Reviewer</th>
+                <th>Page</th>
+                <th>Due</th>
+            </tr>
+            {% for r in reviews %}
+                <tr>
+                    <td><a class="normal"
+                           href="/unc/review/{{ r.pk }}">{{ r.pk }}</a>
+                    </td>
+                    <td>{{ r.designer.name }} </td>
+                    <td>{{ r.reviewer.name }} </td>
+                    <td><a class="normal"
+                           href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>
+                    </td>
+                    <td>{{ r.due }} </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h1>No Reviews available</h1>
+    {% endif %}
 
 {% endblock %}

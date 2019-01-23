@@ -1297,6 +1297,33 @@
     },
     {
         "fields": {
+            "codename": "add_requirements",
+            "content_type": 49,
+            "name": "Can add requirements"
+        },
+        "model": "auth.permission",
+        "pk": 145
+    },
+    {
+        "fields": {
+            "codename": "change_requirements",
+            "content_type": 49,
+            "name": "Can change requirements"
+        },
+        "model": "auth.permission",
+        "pk": 146
+    },
+    {
+        "fields": {
+            "codename": "delete_requirements",
+            "content_type": 49,
+            "name": "Can delete requirements"
+        },
+        "model": "auth.permission",
+        "pk": 147
+    },
+    {
+        "fields": {
             "date_joined": "2019-01-08T21:37:13.680Z",
             "email": "Mark.B.Seaman@gmail.com",
             "first_name": "Mark",

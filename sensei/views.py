@@ -1,12 +1,21 @@
 from django import forms
 from django.forms import Form
-from django.views.generic import FormView, ListView, TemplateView
+from django.views.generic import FormView, ListView, TemplateView, UpdateView
 
 from tool.document import domain_doc, doc_html_text
 
+from .review import count_score, review_groups, student_reviews
 from .sensei import course_lessons, slides_markdown
 from .student import student_scores, site_settings, student, student_totals, register_user_domain
-from .models import Student
+from .models import Review, Student
+
+
+class GuideDoc(TemplateView):
+    template_name = 'guide_doc.html'
+
+    def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title')
+        return site_settings(title=title, doc='guide')
 
 
 class UncDocDisplay(TemplateView):
@@ -20,6 +29,36 @@ class UncDocDisplay(TemplateView):
         title = 'Lesson %s' % title[-2:] if title[-3:-2]=='/' else 'UNC BACS %s' % course[-3:]
         text = doc_html_text(doc, '/static/images/unc/%s' % course)
         return site_settings(title=title, text=text, lessons=lessons)
+
+
+class UncEditReview(UpdateView):
+    model = Review
+    fields = ['requirement_1', 'requirement_2', 'requirement_3', 'requirement_4', 'requirement_5',
+              'requirement_6', 'requirement_7', 'requirement_8', 'requirement_9', 'requirement_10', 'notes']
+    template_name = 'unc_review.html'
+
+    def get_context_data(self, **kwargs):
+        kwargs['requirements'] = '''Page appears at correct URL, "bacs200/inspire.html"
+WordPress blog is still visible at the top of the domain
+Article describes an inspirational figure
+Users can follow a hyperlink to learn more
+Writing is compelling and well thought out
+Technical Requirements
+Title is set properly on the browser tab
+Page has appropriate headline
+Image is properly displayed
+Text content is properly formatted
+Page contains valid HTML'''.split('\n')
+        return super(UncEditReview, self).get_context_data(**kwargs)
+
+    def form_valid(self, form):
+        self.object.score = count_score(self.object)
+        return super(UncEditReview, self).form_valid(form)
+
+    def get_success_url(self):
+        student_id = self.object.reviewer.pk
+        return '/unc/student/%s' % student_id
+        # return '/unc/reviews'
 
 
 class UncReading(TemplateView):
@@ -59,6 +98,13 @@ class UncRegistered(ListView):
         return site_settings(title='BACS 200 - Registered Domains', students=students)
 
 
+class UncReviews(TemplateView):
+    template_name = 'unc_reviews.html'
+
+    def get_context_data(self, **kwargs):
+        return site_settings(title='Design Reviews', reviews=Review.objects.all(), groups=review_groups())
+
+
 class UncSlidesDisplay(TemplateView):
     template_name = 'unc_slides.html'
 
@@ -75,5 +121,5 @@ class UncStudent(TemplateView):
         student_id = self.kwargs.get('id')
         title = 'Student Dashboard'
         reading = student_scores(student_id)
-        return site_settings(title=title, student=student(student_id), scores=reading)
+        return site_settings(title=title, student=student(student_id), scores=reading, reviews=student_reviews(student_id))
 
