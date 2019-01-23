@@ -1,0 +1,44 @@
+# My Book System Config
+
+This guide teaches how to configure a MyBook server that is running Ubuntu 16.04.
+
+## Config Files
+
+ReadMe - This doc describing setup
+
+Gunicorn - Web server configuration - /etc/systemd/system/gunicorn.service
+
+    gunicorn.orig, gunicorn.1 
+
+Nginx - Web server configuration - /etc/nginx/sites-available/django
+
+    nginx.orig, nginx.1, nginx.2     
+
+
+## Command Script
+
+service nginx stop
+service nginx start
+
+cat ~django/MyBook/hammer/config/gunicorn.1
+cat ~django/MyBook/hammer/config/nginx.1
+cat ~django/MyBook/hammer/config/nginx.2
+
+cat /etc/systemd/system/gunicorn.service
+
+cat /etc/nginx/sites-available/django
+
+cp ~django/MyBook/hammer/config/gunicorn.1 /etc/systemd/system/gunicorn.service
+
+cp ~django/MyBook/hammer/config/nginx.1    /etc/nginx/sites-available/django
+cp ~django/MyBook/hammer/config/nginx.2    /etc/nginx/sites-available/django
+
+    
+
+
+## Letsencrypt
+
+ops root
+service nginx stop
+letsencrypt renew
+service nginx start
