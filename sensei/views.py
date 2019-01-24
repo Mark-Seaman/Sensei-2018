@@ -118,7 +118,8 @@ class UncReviews(TemplateView):
     template_name = 'unc_reviews.html'
 
     def get_context_data(self, **kwargs):
-        return site_settings(title='Design Reviews', reviews=Review.objects.all(), groups=review_groups())
+        reviews = Review.objects.filter(score=-1)
+        return site_settings(title='Design Reviews', reviews=reviews)
 
 
 class UncSlidesDisplay(TemplateView):
