@@ -139,7 +139,7 @@
             {% endfor %}
         </table>
     {% else %}
-        <h1>No Reviews to do</h1>
+        <b>No Reviews to do</b>
     {% endif %}
 
 
@@ -153,7 +153,8 @@
                 <th>Designer</th>
                 <th>Reviewer</th>
                 <th>Page</th>
-                <th>Due</th>
+                <th>Score</th>
+                <th>Date Reviewed</th>
             </tr>
             {% for r in done %}
                 <tr>
@@ -165,7 +166,8 @@
                     <td><a class="normal"
                            href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>
                     </td>
-                    <td>{{ r.due }} </td>
+                    <td>{{ r.score }}</td>
+                    <td>{{ r.date }} </td>
                 </tr>
             {% endfor %}
         </table>
@@ -184,7 +186,7 @@
                 <th>Designer</th>
                 <th>Reviewer</th>
                 <th>Score</th>
-{#                <th>Reviewed</th>#}
+                <th>Reviewed</th>
             </tr>
             {% for r in feedback %}
                 <tr>
@@ -194,7 +196,7 @@
                     <td>{{ r.designer.name }} </td>
                     <td>{{ r.reviewer.name }} </td>
                     <td>{{ r.score }}</td>
-{#                    <td>{{ r.date }} </td>#}
+                    <td>{{ r.date }} </td>
                 </tr>
             {% endfor %}
         </table>

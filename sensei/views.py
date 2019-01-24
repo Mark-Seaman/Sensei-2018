@@ -1,6 +1,7 @@
 from django import forms
 from django.forms import Form
 from django.views.generic import FormView, ListView, TemplateView, UpdateView
+from django.utils.timezone import now
 
 from tool.document import domain_doc, doc_html_text
 
@@ -38,11 +39,12 @@ class UncEditReview(UpdateView):
     template_name = 'unc_review.html'
 
     def get_context_data(self, **kwargs):
-        kwargs['requirements'] = requirements()
+        kwargs = dict(title='Design Review', requirements = requirements())
         return super(UncEditReview, self).get_context_data(**kwargs)
 
     def form_valid(self, form):
         self.object.score = count_score(self.object)
+        self.object.date = now()
         return super(UncEditReview, self).form_valid(form)
 
     def get_success_url(self):
