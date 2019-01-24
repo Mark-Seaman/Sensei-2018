@@ -7,7 +7,7 @@ from tool.document import domain_doc, doc_html_text
 
 from .review import count_score, get_review, review_feedback, review_groups, student_reviews, student_reviews_done
 from .sensei import course_lessons, slides_markdown
-from .student import student_scores, site_settings, student, student_totals, register_user_domain
+from .student import student_scores, site_settings, student, student_totals, students, register_user_domain
 from .models import Review, Student
 
 
@@ -119,7 +119,8 @@ class UncReviews(TemplateView):
 
     def get_context_data(self, **kwargs):
         reviews = Review.objects.filter(score=-1)
-        designers = Review.objects.exclude(score=-1)
+        # designers = Review.objects.exclude(score=-1)
+        designers = [(s, review_feedback(s.pk)) for s in students()]
         return site_settings(title='Design Reviews', reviews=reviews, designers=designers)
 
 
