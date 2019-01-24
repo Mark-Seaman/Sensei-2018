@@ -184,7 +184,7 @@
                 <th>Designer</th>
                 <th>Reviewer</th>
                 <th>Score</th>
-                <th>Reviewed</th>
+{#                <th>Reviewed</th>#}
             </tr>
             {% for r in feedback %}
                 <tr>
@@ -194,7 +194,7 @@
                     <td>{{ r.designer.name }} </td>
                     <td>{{ r.reviewer.name }} </td>
                     <td>{{ r.score }}</td>
-                    <td>{{ r.date }} </td>
+{#                    <td>{{ r.date }} </td>#}
                 </tr>
             {% endfor %}
         </table>

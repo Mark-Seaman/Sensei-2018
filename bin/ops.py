@@ -97,8 +97,9 @@ def ops_update(args):
 
 
 def remote_command(server, cmd, user='django'):
-    bashrc = 'source /home/django/MyBook/bin/bashrc>/dev/null' 
-    script = "%s && %s" % (bashrc, cmd)
+    bashrc = 'source /home/django/MyBook/bin/bashrc' 
+    script = "%s ; %s" % (bashrc, cmd)
     ssh = 'ssh %s@%s -C \"%s\"' % (user, server, script)
     print('\nRemote Execution \n    ssh %s@%s \"%s\"' % (user, server, cmd))
+    print(ssh)
     system (ssh)
