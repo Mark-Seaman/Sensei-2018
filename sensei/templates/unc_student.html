@@ -25,7 +25,7 @@
         </table>
 
         <h2>Reading Assignment Status</h2>
-        <p>Zybooks name: {{ scores.0 }}</p>
+        <p>Zybooks name: {{ reading.0 }}</p>
 
         {#        <p>Scores</p>#}
         {#        {% for s in scores %}#}
@@ -40,27 +40,27 @@
             </tr>
             <tr>
                 <td>Web History</td>
-                <td>{{ scores.1 }}%</td>
+                <td>{{ reading.1 }}%</td>
             </tr>
             <tr>
                 <td>Domains & URLs</td>
-                <td>{{ scores.2 }}%</td>
+                <td>{{ reading.2 }}%</td>
             </tr>
             <tr>
                 <td>HTTP</td>
-                <td>{{ scores.3 }}%</td>
+                <td>{{ reading.3 }}%</td>
             </tr>
             <tr>
                 <td>Web Trends</td>
-                <td>{{ scores.4 }}%</td>
+                <td>{{ reading.4 }}%</td>
             </tr>
             <tr>
                 <td>Intro to HTML</td>
-                <td>{{ scores.5 }}%</td>
+                <td>{{ reading.5 }}%</td>
             </tr>
             <tr>
                 <td>Intro to CSS</td>
-                <td>{{ scores.6 }}%</td>
+                <td>{{ reading.6 }}%</td>
             </tr>
             {#            <tr>#}
             {#                <td>Total</td>#}
@@ -80,27 +80,27 @@
         <a href="http://{{ student.domain }}">http://{{ student.domain }}</a>
     </p>
     <p>
-        #2 Inspiration - 
+        #2 Inspiration -
         <a href="http://{{ student.domain }}/bacs200/inspire.html">
             http://{{ student.domain }}/bacs200/inspire.html
         </a>
     </p>
-    
+
     <h3>Exercises</h3>
     <p>
-        Home Page - 
+        Home Page -
         <a href="http://{{ student.domain }}/bacs200/index.html">
             http://{{ student.domain }}/bacs200/index.html
         </a>
     </p>
     <p>
-        FileZilla Setup - 
+        FileZilla Setup -
         <a href="http://{{ student.domain }}/bacs200/index.html">
             http://{{ student.domain }}/bacs200/index.html
         </a>
     </p>
     <p>
-        Animals - 
+        Animals -
         <a href="http://{{ student.domain }}/bacs200/animals.html">
             http://{{ student.domain }}/bacs200/animals.html
         </a>
@@ -111,9 +111,11 @@
         <a href="https://validator.w3.org/">Validate</a>
     </p>
 
+    
+    <h2>Design Review assignments</h2>
+    <p>Give feedback to your peers by the due date.</p>
+
     {% if reviews %}
-        <h2>Design Review assignments</h2>
-        <p>Give feedback to your peers by the due date.</p>
         <table>
             <tr>
                 <th></th>
@@ -137,7 +139,69 @@
             {% endfor %}
         </table>
     {% else %}
-        <h1>No Reviews available</h1>
+        <h1>No Reviews to do</h1>
+    {% endif %}
+
+
+    <h2>Design Reviews Done</h2>
+    <p>Design reviews that have been successfully completed</p>
+
+    {% if done %}
+        <table>
+            <tr>
+                <th></th>
+                <th>Designer</th>
+                <th>Reviewer</th>
+                <th>Page</th>
+                <th>Due</th>
+            </tr>
+            {% for r in done %}
+                <tr>
+                    <td><a class="normal"
+                           href="/unc/review/{{ r.pk }}">Do Review</a>
+                    </td>
+                    <td>{{ r.designer.name }} </td>
+                    <td>{{ r.reviewer.name }} </td>
+                    <td><a class="normal"
+                           href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>
+                    </td>
+                    <td>{{ r.due }} </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h1>No Reviews done</h1>
+    {% endif %}
+
+
+    <h2>Design Review Feedback</h2>
+    <p>Feedback on your pages by your peers.</p>
+
+    {% if feedback %}
+        <table>
+            <tr>
+                <th></th>
+                <th>Designer</th>
+                <th>Reviewer</th>
+                <th>Page</th>
+                <th>Due</th>
+            </tr>
+            {% for r in feedback %}
+                <tr>
+                    <td><a class="normal"
+                           href="/unc/review/{{ r.pk }}">Do Review</a>
+                    </td>
+                    <td>{{ r.designer.name }} </td>
+                    <td>{{ r.reviewer.name }} </td>
+                    <td><a class="normal"
+                           href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>
+                    </td>
+                    <td>{{ r.due }} </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h1>No Reviews feedback given</h1>
     {% endif %}
 
 {% endblock %}

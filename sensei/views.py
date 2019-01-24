@@ -4,7 +4,7 @@ from django.views.generic import FormView, ListView, TemplateView, UpdateView
 
 from tool.document import domain_doc, doc_html_text
 
-from .review import count_score, review_groups, student_reviews
+from .review import count_score, review_feedback, review_groups, student_reviews, student_reviews_done
 from .sensei import course_lessons, slides_markdown
 from .student import student_scores, site_settings, student, student_totals, register_user_domain
 from .models import Review, Student
@@ -118,8 +118,12 @@ class UncStudent(TemplateView):
     template_name = 'unc_student.html'
 
     def get_context_data(self, **kwargs):
-        student_id = self.kwargs.get('id')
-        title = 'Student Dashboard'
-        reading = student_scores(student_id)
-        return site_settings(title=title, student=student(student_id), scores=reading, reviews=student_reviews(student_id))
+        student_id  = self.kwargs.get('id')
+        title       = 'Student Dashboard'
+        reading     = student_scores(student_id)
+        reviews     = student_reviews(student_id)
+        done        = student_reviews_done(student_id)
+        feedback    = review_feedback(student_id)
+        return site_settings(title=title, student=student(student_id), scores=reading,
+                             reviews=reviews, feedback=feedback, done=done)
 
