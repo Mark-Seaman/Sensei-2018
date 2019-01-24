@@ -25,6 +25,10 @@ def create_review(reviewer, designer, page, due):
     return Review.objects.get_or_create(reviewer=reviewer, designer=designer, page=page, due=due)[0]
 
 
+def get_review(id):
+    return Review.objects.get(pk=id)
+
+
 def review_feedback(student_id):
     return Review.objects.filter(designer=student_id).exclude(score=-1)
 

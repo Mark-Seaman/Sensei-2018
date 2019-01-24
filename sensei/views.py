@@ -4,7 +4,7 @@ from django.views.generic import FormView, ListView, TemplateView, UpdateView
 
 from tool.document import domain_doc, doc_html_text
 
-from .review import count_score, review_feedback, review_groups, student_reviews, student_reviews_done
+from .review import count_score, get_review, review_feedback, review_groups, student_reviews, student_reviews_done
 from .sensei import course_lessons, slides_markdown
 from .student import student_scores, site_settings, student, student_totals, register_user_domain
 from .models import Review, Student
@@ -38,17 +38,7 @@ class UncEditReview(UpdateView):
     template_name = 'unc_review.html'
 
     def get_context_data(self, **kwargs):
-        kwargs['requirements'] = '''Page appears at correct URL, "bacs200/inspire.html"
-WordPress blog is still visible at the top of the domain
-Article describes an inspirational figure
-Users can follow a hyperlink to learn more
-Writing is compelling and well thought out
-Technical Requirements
-Title is set properly on the browser tab
-Page has appropriate headline
-Image is properly displayed
-Text content is properly formatted
-Page contains valid HTML'''.split('\n')
+        kwargs['requirements'] = requirements()
         return super(UncEditReview, self).get_context_data(**kwargs)
 
     def form_valid(self, form):
@@ -59,6 +49,30 @@ Page contains valid HTML'''.split('\n')
         student_id = self.object.reviewer.pk
         return '/unc/student/%s' % student_id
         # return '/unc/reviews'
+
+
+def requirements():
+    return '''Page appears at correct URL, "bacs200/inspire.html"
+WordPress blog is still visible at the top of the domain
+Article describes an inspirational figure
+Users can follow a hyperlink to learn more
+Writing is compelling and well thought out
+Technical Requirements
+Title is set properly on the browser tab
+Page has appropriate headline
+Image is properly displayed
+Text content is properly formatted
+Page contains valid HTML'''.split('\n')
+
+
+class UncReviewFeedback(TemplateView):
+    template_name = 'unc_feedback.html'
+
+    def get_context_data(self, **kwargs):
+        pk = kwargs.get('pk')
+        review = get_review(pk)
+        title = 'Design Review Feedback'
+        return site_settings(title=title, review=review, requirements=requirements())
 
 
 class UncReading(TemplateView):
