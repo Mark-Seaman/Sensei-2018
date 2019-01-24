@@ -140,6 +140,6 @@ class UncStudent(TemplateView):
         reviews     = student_reviews(student_id)
         done        = student_reviews_done(student_id)
         feedback    = review_feedback(student_id)
-        return site_settings(title=title, student=student(student_id), scores=reading,
+        return site_settings(title=title, student=student(student_id), reading=reading,
                              reviews=reviews, feedback=feedback, done=done)
 
