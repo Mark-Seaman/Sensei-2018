@@ -119,7 +119,8 @@ class UncReviews(TemplateView):
 
     def get_context_data(self, **kwargs):
         reviews = Review.objects.filter(score=-1)
-        return site_settings(title='Design Reviews', reviews=reviews)
+        designers = Review.objects.exclude(score=-1)
+        return site_settings(title='Design Reviews', reviews=reviews, designers=designers)
 
 
 class UncSlidesDisplay(TemplateView):

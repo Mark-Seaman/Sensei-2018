@@ -4,22 +4,22 @@
 {% block card %}
 
     <h1>Student Design Reviews</h1>
-    <b>Design Review groups</b>
+    {#    <b>Design Review groups</b>#}
+    {##}
+    {#    {% if groups %}#}
+    {#        <ul>#}
+    {#            {% for team in groups %}#}
+    {#                <li>{% for s in team %}#}
+    {#                    {{ s.name }},#}
+    {#                {% endfor %}</li>#}
+    {#            {% endfor %}#}
+    {#        </ul>#}
+    {##}
+    {#    {% else %}#}
+    {#        <h1>No Reviews available</h1>#}
+    {#    {% endif %}#}
 
-    {% if groups %}
-        <ul>
-            {% for team in groups %}
-                <li>{% for s in team %}
-                    {{ s.name }},
-                {% endfor %}</li>
-            {% endfor %}
-        </ul>
-
-    {% else %}
-        <h1>No Reviews available</h1>
-    {% endif %}
-
-    <b>Design Review assignments</b>
+    <h2>Design Review assignments</h2>
     {% if reviews %}
         <table>
             <tr>
@@ -40,6 +40,36 @@
                            href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>
                     </td>
                     <td>{{ r.due }}</td>
+
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h1>No Reviews available</h1>
+    {% endif %}
+
+    <h2>Designer Scores</h2>
+    {% if designers %}
+        <table>
+            <tr>
+                <th>Designer</th>
+                <th>Reviewer</th>
+                <th>Score</th>
+                <th>Page</th>
+            </tr>
+            {% for r in designers %}
+                <tr>
+                    <td>{{ r.designer.name }} </td>
+                    <td>{{ r.reviewer.name }} </td>
+                    <td>{{ r.score }} </td>
+                    <td>{{ r.page }} </td>
+                    {#                    <td><a class="normal"#}
+                    {#                           href="/unc/review/{{ r.pk }}">Do Review</a>#}
+                    {#                    </td>#}
+                    {#                    <td><a class="normal"#}
+                    {#                           href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>#}
+                    {#                    </td>#}
+                    {#                    <td>{{ r.due }}</td>#}
 
                 </tr>
             {% endfor %}
