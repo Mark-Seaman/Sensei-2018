@@ -17,6 +17,8 @@ export CLICOLOR=true
 export imac='seaman@10.0.0.48'
 export macbook='markseaman@10.0.0.167'
 export blue='uncobacs@unco-bacs.org'
+export mb="$HOME/Archive/MyBook-2018"
+export md="$HOME/Archive/Documents-2018"
 export mbw="$HOME/Archive/rcp/mbw"
 export s="$HOME/Sensei"
 
@@ -43,8 +45,4 @@ cd $p
 cd $p/hammer &&
 figlet pipenv shell &&
 pipenv shell 
-
-
-which python &&
-pip list
 
