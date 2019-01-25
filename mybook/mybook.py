@@ -131,7 +131,7 @@ def main_menu(menu, page=None):
 def booknotes_excerpt(doc):
 
     def booknotes_doc_path(doc=None):
-        path = join(BASE_DIR, 'Documents', 'booknotes')
+        path = join(BASE_DIR, 'Documents', 'MarkSeaman', 'booknotes')
         if doc:
             path = join(path, doc)
         return path
@@ -158,4 +158,4 @@ def booknotes_excerpt(doc):
         return text_to_html(summary + excerpt)
 
     doc = booknotes(doc)
-    return excerpt(doc), 'http://markseaman.org/booknotes/%s' % doc
+    return excerpt(doc), 'http://markseaman.org/MarkSeaman/booknotes/%s' % doc
