@@ -114,7 +114,7 @@ i {
 }
 
 li {
-    line-height: 3em;
+    line-height: 2em;
     margin: 0em 1em;
 }
 
@@ -132,8 +132,8 @@ main {
 }
 
 p {
-    margin: 1em;
-    padding: 1em;
+    margin: 0em 1em;
+    padding: 0em 1em;
 }
 
 pre {
