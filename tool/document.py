@@ -6,7 +6,7 @@ from django.http import Http404
 from os.path import exists, isdir, isfile, join, dirname
 
 from bin.shell import read_file
-from hammer.settings import BASE_DIR
+from hammer.settings import BASE_DIR, PANDOC_APP
 from tool.log import log
 
 
@@ -104,9 +104,10 @@ def read_markdown(path):
 
 
 def text_to_html(text):
-    p = Popen('pandoc', stdin=PIPE, stdout=PIPE)
+    p = Popen(PANDOC_APP, stdin=PIPE, stdout=PIPE)
     # text = text.encode('UTF-8')
-    return p.communicate(text)[0] #.decode('UTF-8')
+    # return p.communicate(text)[0].decode('UTF-8')
+    return p.communicate(text)[0]
 
 
 def title(p1):
