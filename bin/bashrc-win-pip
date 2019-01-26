@@ -1,0 +1,15 @@
+#!/bin/bash
+# Setup project context
+
+export p=$HOME/Documents/Sensei
+echo "p = $p"
+
+# Path variable
+# export PATH=$p:$p/bin:$PATH
+
+
+. $p/bin/bash-alias
+. $p/bin/bash-prompt
+
+
+dj
