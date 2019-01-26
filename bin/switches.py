@@ -69,4 +69,6 @@ def server_host(server):
     elif server == 'MyBook':               return 'markseaman.org'
     elif server == 'Marks-iMac.local':     return 'iMac'
     elif server == 'seaman-macbook.local': return 'macbook'
+    elif server == 'MCB15-3365':           return 'windows'
+    
 
