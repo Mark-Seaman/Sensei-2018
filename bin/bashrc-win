@@ -1,0 +1,16 @@
+#!/bin/bash
+# Setup project context
+
+export p=$HOME/Documents/Sensei
+
+
+# Path with pipenv
+x=/c/Users/mark.seaman/AppData/Roaming/Python/Python37/Scripts
+pandoc=/c/Users/mark.seaman/AppData/Local/Pandoc
+export PATH=$p:$p/bin:$x:$pandoc:$PATH
+
+# Start pipenv shell
+cd $p/hammer &&
+echo pipenv shell &&
+pipenv shell 
+

@@ -25,6 +25,11 @@ def name(name):
     return Student.objects.filter(name__contains=name)
 
 
+def fix_reviews():
+    for r in Review.objects.filter(score__lt=5):
+        print (r.designer, r.score)
+        
+fix_reviews()        
 
 #########################
 # Export all the students to a file
