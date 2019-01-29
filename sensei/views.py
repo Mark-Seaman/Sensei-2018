@@ -146,3 +146,100 @@ class UncStudent(TemplateView):
         return site_settings(title=title, student=student(student_id), reading=reading,
                              reviews=reviews, feedback=feedback, done=done)
 
+class UncUrlGame(TemplateView):
+    template_name = 'unc_urlgame.html'
+
+    def get_context_data(self, **kwargs):
+        title = 'URL Crusher'
+        return site_settings(title=title, q=generate_url_question())
+
+from random import choice,randint
+from os.path import join
+
+
+def generate_url_question():
+
+    domains = [
+        'https://www.unco.edu',
+        'https://shrinking-world.com',
+        'http://unco-bacs.org',
+        'https://unco-bacs.org',
+    ]
+
+    pages = [
+        "lesson40.html",
+        "image.html",
+        "color.html",
+        "lesson10.html",
+        "pie.html",
+    ]
+
+    files = [
+        "cat.jpg",
+        "dog.png",
+        "abe.png",
+        "Abe.png",
+        "abe.PNG",
+        "dog.gif",
+        "index.html",
+        "animals.html",
+        "projects.html",
+        "Lesson-1.html",
+        "styles.css",
+    ]
+
+    url_type = choice(['Relative', 'Absolute', 'Server'])
+    url_type = 'Relative'
+    domain = choice(domains)
+    path = random_path()
+    page = join(domain, path, choice(pages))
+    file_name = choice(files)
+    dir_name = random_path()
+    url = join(domain, dir_name, file_name)
+
+
+    if url_type == 'Absolute':
+        domain = choice(domains)
+    elif url_type == 'Server':
+        domain  = '/'
+    else:
+        domain = ''
+        dir_name = relative_path(path, dir_name)
+
+    answer  = join(domain, dir_name, file_name)
+
+    answered = '24'
+    left = '6'
+    return dict(page=page, url=url, url_type=url_type, answer=answer, answered=answered, left=left)
+
+
+def relative_path(p1, p2):
+    if p1 == p2: return ''
+    p1 = p1.split('/')
+    p2 = p2.split('/')
+    x1 = p1
+    x2 = p2
+    print('before', p1, p2)
+    for i,x in enumerate(p1):
+        if p1[i:] and p2[i:] and p1[i] == p2[i]:
+            x1 = p1[i+1:]
+            x2 = p2[i+1:]
+            print('same', x1, x2)
+        else:
+            break
+    p1 = '/'.join(['..' for d in x1])
+    p2 = '/'.join([d for d in x2])
+    print('after', p1, p2)
+    return join(p1, p2)
+
+
+def random_path():
+    directories = [
+        "css",
+        "images",
+        # "assets",
+        # "bacs200",
+        # "pages",
+        # "project",
+    ]
+    return '/'.join([choice(directories) for d in range(randint(0, 2))])
