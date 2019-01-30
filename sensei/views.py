@@ -5,10 +5,11 @@ from django.utils.timezone import now
 
 from tool.document import domain_doc, doc_html_text
 
-from .review import count_score, get_review, review_feedback, review_groups, student_reviews, student_reviews_done
+from .models import Review, Student
+from .review import count_score, get_review, review_feedback, student_reviews, student_reviews_done
 from .sensei import course_lessons, slides_markdown
 from .student import student_scores, site_settings, student, student_totals, students, register_user_domain
-from .models import Review, Student
+from .urlgame import generate_url_question
 
 
 class GuideDoc(TemplateView):
@@ -146,100 +147,99 @@ class UncStudent(TemplateView):
         return site_settings(title=title, student=student(student_id), reading=reading,
                              reviews=reviews, feedback=feedback, done=done)
 
-class UncUrlGame(TemplateView):
+
+class UncUrlGameAnswer(FormView):
+    class UrlForm(Form):
+        answer = forms.CharField()
+        url = forms.CharField()
+        url_type = forms.CharField()
+        page = forms.CharField()
+        correct = forms.CharField()
+        answered = forms.IntegerField()
+        left = forms.IntegerField()
+
+    form_class = UrlForm
     template_name = 'unc_urlgame.html'
 
     def get_context_data(self, **kwargs):
-        title = 'URL Crusher'
-        return site_settings(title=title, q=generate_url_question())
+        title = 'URL Crusher - Answer'
+        self.answer = self.request.GET.get('answer', "None")
+        self.answered = self.request.GET.get('answered', "0")
+        self.left = self.request.GET.get('left', "10")
+        self.page = self.request.GET.get('page', "None")
+        self.url = self.request.GET.get('url', "None")
+        self.url_type = self.request.GET.get('url_type', "None")
+        self.correct = self.request.GET.get('correct','None')
+        self.image = self.request.GET.get('image')
+        answer = dict(answer=self.answer, url=self.url, correct=self.correct, image=self.image,
+                      page=self.page, url_type=self.url_type)
+        return site_settings(title=title, a=answer,
+                             answered=self.answered, left=self.left)
 
-from random import choice,randint
-from os.path import join
-
-
-def generate_url_question():
-
-    domains = [
-        'https://www.unco.edu',
-        'https://shrinking-world.com',
-        'http://unco-bacs.org',
-        'https://unco-bacs.org',
-    ]
-
-    pages = [
-        "lesson40.html",
-        "image.html",
-        "color.html",
-        "lesson10.html",
-        "pie.html",
-    ]
-
-    files = [
-        "cat.jpg",
-        "dog.png",
-        "abe.png",
-        "Abe.png",
-        "abe.PNG",
-        "dog.gif",
-        "index.html",
-        "animals.html",
-        "projects.html",
-        "Lesson-1.html",
-        "styles.css",
-    ]
-
-    url_type = choice(['Relative', 'Absolute', 'Server'])
-    url_type = 'Relative'
-    domain = choice(domains)
-    path = random_path()
-    page = join(domain, path, choice(pages))
-    file_name = choice(files)
-    dir_name = random_path()
-    url = join(domain, dir_name, file_name)
-
-
-    if url_type == 'Absolute':
-        domain = choice(domains)
-    elif url_type == 'Server':
-        domain  = '/'
-    else:
-        domain = ''
-        dir_name = relative_path(path, dir_name)
-
-    answer  = join(domain, dir_name, file_name)
-
-    answered = '24'
-    left = '6'
-    return dict(page=page, url=url, url_type=url_type, answer=answer, answered=answered, left=left)
-
-
-def relative_path(p1, p2):
-    if p1 == p2: return ''
-    p1 = p1.split('/')
-    p2 = p2.split('/')
-    x1 = p1
-    x2 = p2
-    print('before', p1, p2)
-    for i,x in enumerate(p1):
-        if p1[i:] and p2[i:] and p1[i] == p2[i]:
-            x1 = p1[i+1:]
-            x2 = p2[i+1:]
-            print('same', x1, x2)
+    def form_valid(self, form):
+        self.url = form.data.get('url')
+        self.answer = form.data.get('answer')
+        self.answered = form.data.get('answered')
+        self.left = form.data.get('left')
+        self.correct = form.data.get('correct')
+        self.page = form.data.get('page')
+        self.url_type = form.data.get('url_type')
+        self.answered = str(int(self.answered) + 1)
+        if self.correct == self.url:
+            self.left = str(int(self.left) - 1)
         else:
-            break
-    p1 = '/'.join(['..' for d in x1])
-    p2 = '/'.join([d for d in x2])
-    print('after', p1, p2)
-    return join(p1, p2)
+            self.left = '10'
+        return super(UncUrlGameAnswer, self).form_valid(form)
+
+    def get_success_url(self):
+        parms = '&'.join([
+            "answer=%s"  % self.answer,
+            "answered=%s"  % self.answered,
+            "left=%s" % self.left,
+            "url=%s" % self.url,
+            "correct=%s" % self.correct,
+            "page=%s" % self.page,
+            "url_type=%s" % self.url_type,
+            "image=%s" % url_feedback(self.answer, self.correct),
+        ])
+        return '/unc/url-answer?%s' % parms
 
 
-def random_path():
-    directories = [
-        "css",
-        "images",
-        # "assets",
-        # "bacs200",
-        # "pages",
-        # "project",
-    ]
-    return '/'.join([choice(directories) for d in range(randint(0, 2))])
+def url_feedback(answer, correct):
+    if answer == correct:
+        return 'smiley1.jpg'
+    else:
+        return 'sad1.jpg'
+
+
+class UncUrlGameQuestion(FormView):
+    class UrlForm(Form):
+        url = forms.CharField()
+        correct = forms.CharField()
+        answered = forms.IntegerField()
+        left = forms.IntegerField()
+
+    form_class = UrlForm
+    template_name = 'unc_urlgame.html'
+
+    def get_context_data(self, **kwargs):
+        title = 'URL Crusher - Question'
+        self.answered = self.request.GET.get('answered', "0")
+        self.left = self.request.GET.get('left', "10")
+        return site_settings(title=title, q=generate_url_question(), url='google.com', answered=self.answered, left=self.left)
+
+    def form_valid(self, form):
+        url = form.data.get('url')
+        self.answered = form.data.get('answered')
+        self.left = form.data.get('left')
+        correct = form.data.get('correct')
+        self.answered = str(int(self.answered) + 1)
+        if correct == url:
+            self.left = str(int(self.left) - 1)
+        else:
+            self.left = '10'
+        return super(UncUrlGameQuestion, self).form_valid(form)
+
+    def get_success_url(self):
+        return '/unc/url-answer?answered=%s&left=%s' % (self.answered, self.left)
+
