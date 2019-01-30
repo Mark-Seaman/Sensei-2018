@@ -121,7 +121,7 @@ class UncReviews(TemplateView):
     def get_context_data(self, **kwargs):
         # reviews = Review.objects.filter(score=-1)
         # designers = Review.objects.exclude(score=-1)
-        reviews = [(s, student_reviews_done(s.pk)) for s in students()]
+        reviews = [(s, Review.objects.filter(reviewer=s.pk)) for s in students()]
         designers = [(s, review_feedback(s.pk)) for s in students()]
         return site_settings(title='Design Reviews', reviews=reviews, designers=designers)
 
