@@ -114,7 +114,7 @@ i {
 }
 
 li {
-    line-height: 3em;
+    line-height: 2em;
     margin: 0em 1em;
 }
 
@@ -133,7 +133,7 @@ main {
 
 p {
     margin: 1em;
-    padding: 1em;
+    padding: 0em 1em;
 }
 
 pre {
@@ -205,6 +205,17 @@ td {
     border: none;
 }
 
+.form-btn {
+    color: white;
+    background-color: #0E3D65;
+    font-size: 120%;
+    padding: 5px;
+    margin: 5px 4em;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 100px;
+}
+
 .lesson-title {
     color: red;
 }
@@ -228,6 +239,11 @@ td {
     border: 1px solid black;
     margin: 40px;
     padding: 50px;
+}
+
+.url-answer {
+    margin-left: 5em;
+    width: 80%;
 }
 
 .user-btn {

@@ -24,49 +24,27 @@
             </tr>
         </table>
 
-        <h2>Reading Assignment Status</h2>
-        <p>Zybooks name: {{ scores.0 }}</p>
+        <h2>Reading Assignments</h2>
 
-        {#        <p>Scores</p>#}
-        {#        {% for s in scores %}#}
-        {#            <p>{{ s }}</p>#}
-        {#        {% endfor %}#}
+        <ul>
+            <li>Jan 25 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/1">Lesson
+                8. HTML doc structure (section 2.1)</a></li>
+            <li>Jan 28 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/2">Lesson
+                9. Basic tags (section 2.2)</a></li>
+            <li>Jan 30 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/3">Lesson
+                10. Comments (section 2.3)</a></li>
+            <li>Feb 1 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/4">Lesson
+                11. Lists (section 2.4)</a></li>
+            <li>Feb 4 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/5">Lesson
+                12. Tables (section 2.5)</a></li>
+            <li>Feb 6 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/6">Lesson
+                13. Images (section 2.6)</a></li>
+            <li>Feb 11 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/7">Lesson
+                14. Links (section 2.7)</a></li>
+            <li>Feb 14 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/8">Lesson
+                15. Special Characters (section 2.8)</a></li>
+        </ul>
 
-
-        <table>
-            <tr>
-                <th>Assignment</th>
-                <th>Points</th>
-            </tr>
-            <tr>
-                <td>Web History</td>
-                <td>{{ scores.1 }}%</td>
-            </tr>
-            <tr>
-                <td>Domains & URLs</td>
-                <td>{{ scores.2 }}%</td>
-            </tr>
-            <tr>
-                <td>HTTP</td>
-                <td>{{ scores.3 }}%</td>
-            </tr>
-            <tr>
-                <td>Web Trends</td>
-                <td>{{ scores.4 }}%</td>
-            </tr>
-            <tr>
-                <td>Intro to HTML</td>
-                <td>{{ scores.5 }}%</td>
-            </tr>
-            <tr>
-                <td>Intro to CSS</td>
-                <td>{{ scores.6 }}%</td>
-            </tr>
-            {#            <tr>#}
-            {#                <td>Total</td>#}
-            {#                <td>{{ scores.3 }} Points</td>#}
-            {#            </tr>#}
-        </table>
 
     {% else %}
         <h1>No Student data available</h1>
@@ -76,31 +54,39 @@
     <h2>Web Pages for Testing</h2>
 
     <h3>Projects</h3>
-    <p>#1 WordPress Blog -
+
+    <p>#1 WordPress Blog - Due Jan 11 -
         <a href="http://{{ student.domain }}">http://{{ student.domain }}</a>
     </p>
     <p>
-        #2 Inspiration - 
+        #2 Inspire - Due Jan 18 -
         <a href="http://{{ student.domain }}/bacs200/inspire.html">
             http://{{ student.domain }}/bacs200/inspire.html
         </a>
     </p>
-    
+    <p>
+        #3 Amuse - Due Jan 25
+        <a href="http://{{ student.domain }}/bacs200/amuse.html">
+            http://{{ student.domain }}/bacs200/amuse.html
+        </a>
+    </p>
+    <p>
+        #3 Educate - Due Feb 1
+        <a href="http://{{ student.domain }}/bacs200/educate.html">
+            http://{{ student.domain }}/bacs200/educate.html
+        </a>
+    </p>
+
     <h3>Exercises</h3>
+
     <p>
-        Home Page - 
+        Home Page - Due Jan 28 -
         <a href="http://{{ student.domain }}/bacs200/index.html">
             http://{{ student.domain }}/bacs200/index.html
         </a>
     </p>
     <p>
-        FileZilla Setup - 
-        <a href="http://{{ student.domain }}/bacs200/index.html">
-            http://{{ student.domain }}/bacs200/index.html
-        </a>
-    </p>
-    <p>
-        Animals - 
+        Animals - Due Jan 30 -
         <a href="http://{{ student.domain }}/bacs200/animals.html">
             http://{{ student.domain }}/bacs200/animals.html
         </a>
@@ -111,9 +97,11 @@
         <a href="https://validator.w3.org/">Validate</a>
     </p>
 
+
+    <h2>Design Review assignments</h2>
+    <p>Give feedback to your peers by the due date.</p>
+
     {% if reviews %}
-        <h2>Design Review assignments</h2>
-        <p>Give feedback to your peers by the due date.</p>
         <table>
             <tr>
                 <th></th>
@@ -137,7 +125,70 @@
             {% endfor %}
         </table>
     {% else %}
-        <h1>No Reviews available</h1>
+        <b>No Reviews to do</b>
+    {% endif %}
+
+
+    <h2>Design Reviews Done</h2>
+    <p>Design reviews that have been successfully completed</p>
+
+    {% if done %}
+        <table>
+            <tr>
+                <th></th>
+                <th>Designer</th>
+                <th>Reviewer</th>
+                <th>Page</th>
+                <th>Score</th>
+                <th>Date Reviewed</th>
+            </tr>
+            {% for r in done %}
+                <tr>
+                    <td>
+                        <a class="normal" href="/unc/review/{{ r.pk }}">Do Review</a>
+                    </td>
+                    <td>{{ r.designer.name }} </td>
+                    <td>{{ r.reviewer.name }} </td>
+                    <td>
+                        <a class="normal"
+                           href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>
+                    </td>
+                    <td>{{ r.score }}</td>
+                    <td>{{ r.date }} </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h1>No Reviews done</h1>
+    {% endif %}
+
+
+    <h2>Design Review Feedback</h2>
+    <p>Feedback on your pages by your peers.</p>
+
+    {% if feedback %}
+        <table>
+            <tr>
+                <th></th>
+                <th>Designer</th>
+                <th>Reviewer</th>
+                <th>Score</th>
+                <th>Reviewed</th>
+            </tr>
+            {% for r in feedback %}
+                <tr>
+                    <td><a class="normal"
+                           href="/unc/feedback/{{ r.pk }}">Feedback</a>
+                    </td>
+                    <td>{{ r.designer.name }} </td>
+                    <td>{{ r.reviewer.name }} </td>
+                    <td>{{ r.score }}</td>
+                    <td>{{ r.date }} </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h1>No Reviews feedback given</h1>
     {% endif %}
 
 {% endblock %}

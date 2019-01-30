@@ -10,7 +10,7 @@ urlpatterns = [
     url(r'^logout$',                            logout, {'next_page': '/login'}),
 
     # Custom Pages
-    url(r'^booknotes/(?P<title>[\w/\-.]*)$',    BookNotes.as_view()),
+    # url(r'^MarkSeaman/booknotes/(?P<title>[\w/\-.]*)$',    BookNotes.as_view()),
     url(r'^info/(?P<title>[\w/\-_.]*)$',        MyBookPrivateDoc.as_view()),
     url(r'^seamanslog$',                        SeamansLog.as_view()),
     url(r'^spiritual/(?P<title>[\w\-_.]*)$',    SpiritualSelect.as_view()),

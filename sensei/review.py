@@ -25,8 +25,12 @@ def create_review(reviewer, designer, page, due):
     return Review.objects.get_or_create(reviewer=reviewer, designer=designer, page=page, due=due)[0]
 
 
+def get_review(id):
+    return Review.objects.get(pk=id)
+
+
 def review_feedback(student_id):
-    return Review.objects.filter(designer=student_id, score__ne=-1)
+    return Review.objects.filter(designer=student_id).exclude(score=-1)
 
 
 def review_groups():
@@ -58,6 +62,6 @@ def student_reviews(student_id):
 
 
 def student_reviews_done(student_id):
-    return Review.objects.filter(reviewer=student_id, score__ne=-1)
+    return Review.objects.filter(reviewer=student_id).exclude(score=-1)
 
 

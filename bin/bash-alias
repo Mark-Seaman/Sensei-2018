@@ -134,6 +134,13 @@ function ce {
     cd $p && e */$1.py
 }
 
+function commit {
+    git status &&
+    git add . &&
+    git commit -m "$*" &&
+    git push
+}
+
 function d {
     d=$1
     [ "$1" == "books" ] && d="$p/Documents/booknotes"

@@ -1,0 +1,11 @@
+#!/bin/bash
+# Setup project context
+
+# export p=$HOME/Documents/Sensei
+echo "p = $p"
+
+source $p/bin/bash-alias
+source $p/bin/bash-prompt
+
+cd $p
+

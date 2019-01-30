@@ -4,44 +4,81 @@
 {% block card %}
 
     <h1>Student Design Reviews</h1>
-    <b>Design Review groups</b>
+    {#    <b>Design Review groups</b>#}
+    {##}
+    {#    {% if groups %}#}
+    {#        <ul>#}
+    {#            {% for team in groups %}#}
+    {#                <li>{% for s in team %}#}
+    {#                    {{ s.name }},#}
+    {#                {% endfor %}</li>#}
+    {#            {% endfor %}#}
+    {#        </ul>#}
+    {##}
+    {#    {% else %}#}
+    {#        <h1>No Reviews available</h1>#}
+    {#    {% endif %}#}
 
-    {% if groups %}
-        <ul>
-            {% for team in groups %}
-                <li>{% for s in team %}
-                    {{ s.name }},
-                {% endfor %}</li>
+    <h2>Design Review Assignments</h2>
+    {% if reviews %}
+        <table>
+            <tr>
+                <th>Designer</th>
+                <th>Reviewer</th>
+                <th>Score</th>
+                <th>Page</th>
+            </tr>
+            {% for student in reviews %}
+                <tr><td><b>{{ student.0.name }}</b></td></tr>
+                {% for r in student.1 %}
+                    <tr>
+                        <td></td>
+                        <td>{{ r.designer.name }} </td>
+                        <td>{{ r.score }} </td>
+                        <td>{{ r.page }} </td>
+                        {#                    <td><a class="normal"#}
+                        {#                           href="/unc/review/{{ r.pk }}">Do Review</a>#}
+                        {#                    </td>#}
+                        {#                    <td><a class="normal"#}
+                        {#                           href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>#}
+                        {#                    </td>#}
+                        {#                    <td>{{ r.due }}</td>#}
+
+                    </tr>
+                {% endfor %}
             {% endfor %}
-        </ul>
-
+        </table>
     {% else %}
         <h1>No Reviews available</h1>
     {% endif %}
 
-    <b>Design Review assignments</b>
-    {% if reviews %}
+    <h2>Designer Scores</h2>
+    {% if designers %}
         <table>
             <tr>
-                <th></th>
                 <th>Designer</th>
                 <th>Reviewer</th>
+                <th>Score</th>
                 <th>Page</th>
-                <th>Due</th>
             </tr>
-            {% for r in reviews %}
-                <tr>
-                    <td><a class="normal"
-                           href="/unc/review/{{ r.pk }}">Do Review</a>
-                    </td>
-                    <td>{{ r.designer.name }} </td>
-                    <td>{{ r.reviewer.name }} </td>
-                    <td><a class="normal"
-                           href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>
-                    </td>
-                    <td>{{ r.due }}</td>
+            {% for student in designers %}
+                <tr><td><b>{{ student.0.name }}</b></td></tr>
+                {% for r in student.1 %}
+                    <tr>
+                        <td></td>
+                        <td>{{ r.reviewer.name }} </td>
+                        <td>{{ r.score }} </td>
+                        <td>{{ r.page }} </td>
+                        {#                    <td><a class="normal"#}
+                        {#                           href="/unc/review/{{ r.pk }}">Do Review</a>#}
+                        {#                    </td>#}
+                        {#                    <td><a class="normal"#}
+                        {#                           href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>#}
+                        {#                    </td>#}
+                        {#                    <td>{{ r.due }}</td>#}
 
-                </tr>
+                    </tr>
+                {% endfor %}
             {% endfor %}
         </table>
     {% else %}

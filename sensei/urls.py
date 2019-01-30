@@ -4,12 +4,15 @@ from .views import *
 
 urlpatterns = [
 
-    url(r'^register$',              UncRegister.as_view()),
-    url(r'^registered$',            UncRegistered.as_view()),
-    url(r'^reading$',               UncReading.as_view()),
-    url(r'reviews$',                UncReviews.as_view()),
-    url(r'review/(?P<pk>[\d]+)$',   UncEditReview.as_view()),
+    url(r'^register$', UncRegister.as_view()),
+    url(r'^registered$', UncRegistered.as_view()),
+    url(r'^reading$', UncReading.as_view()),
+    url(r'reviews$', UncReviews.as_view()),
+    url(r'review/(?P<pk>[\d]+)$', UncEditReview.as_view()),
+    url(r'feedback/(?P<pk>[\d]+)$', UncReviewFeedback.as_view()),
     url(r'^student/(?P<id>[\d]+)$', UncStudent.as_view()),
+    url(r'^url-question$', UncUrlGameQuestion.as_view()),
+    url(r'^url-answer$', UncUrlGameAnswer.as_view()),
 
     url(r'^guide/(?P<title>[\w/\-_.]*)$', GuideDoc.as_view()),
 
