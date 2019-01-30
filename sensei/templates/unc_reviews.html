@@ -19,7 +19,7 @@
     {#        <h1>No Reviews available</h1>#}
     {#    {% endif %}#}
 
-    <h2>Design Review assignments</h2>
+    <h2>Design Review Assignments</h2>
     {% if reviews %}
         <table>
             <tr>
@@ -28,12 +28,12 @@
                 <th>Score</th>
                 <th>Page</th>
             </tr>
-            {% for student in designers %}
+            {% for student in reviews %}
                 <tr><td><b>{{ student.0.name }}</b></td></tr>
                 {% for r in student.1 %}
                     <tr>
                         <td></td>
-                        <td>{{ r.reviewer.name }} </td>
+                        <td>{{ r.designer.name }} </td>
                         <td>{{ r.score }} </td>
                         <td>{{ r.page }} </td>
                         {#                    <td><a class="normal"#}
