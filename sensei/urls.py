@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^student/(?P<id>[\d]+)$', UncStudent.as_view()),
     url(r'^url-question$', UncUrlGameQuestion.as_view()),
     url(r'^url-answer$', UncUrlGameAnswer.as_view()),
+    url(r'^url-game-done$', UncUrlGameDone.as_view()),
 
     url(r'^guide/(?P<title>[\w/\-_.]*)$', GuideDoc.as_view()),
 

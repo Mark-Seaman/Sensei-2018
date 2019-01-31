@@ -23,23 +23,49 @@
             <input type="submit" value="Submit" class="form-btn">
         </form>
 
-        <p>Correct Answer: <b>{{ q.correct }}</b></p>
+        <p>Hint: <b>{{ q.correct }}</b></p>
     {% endif %}
 
 
     {% if a %}
         <h2>Answer</h2>
 
-        <p>Page Loading: <b>{{ a.page }}</b></p>
-        <p>URL: <b>{{ a.url }}</b></p>
-        <p>Type of URL: <b>{{ a.url_type }}</b></p>
+        <div class="box">
 
-        <p>Your Answer: <b>{{ a.answer }}</b></p>
-        <p>Correct Answer: <b>{{ a.correct }}</b></p>
+            <div class="pull-right">
+                {% if a.iscorrect %}
+                    <p class="answer-correct">Correct!</p>
+                    <p>
+                        <img class="image" src="/static/images/smiley/smiley1.jpg" alt="Happy Face">
+                    </p>
 
-        <a href="/unc/url-question" class="form-btn">Next Question</a>
+                {% else %}
+                    <p class="answer-incorrect">Wrong!</p>
+                    <p>
+                        <img class="image" src="/static/images/smiley/sad1.jpg" alt="Sad Face">
+                    </p>
+                {% endif %}
+            </div>
+            <div>
+                <p>Page Loading: </p>
+                <p><b>{{ a.page }}</b></p>
+                <p>URL: </p>
+                <p><b>{{ a.url }}</b></p>
+                <p>Type of URL: </p>
+                <p><b>{{ a.url_type }}</b></p>
 
-        <img src="/static/images/smiley/sad1.jpg">
+
+                <p>Your Answer: </p>
+                <p><b>{{ a.answer }}</b></p>
+                <p>Correct Answer: </p>
+                <p><b>{{ a.correct }}</b></p>
+            </div>
+
+        </div>
+
+        <a href="/unc/url-question?answered={{ answered }}&left={{ left }}" class="form-btn">Next Question</a>
+
+
     {% endif %}
 
     <h2>Score</h2>

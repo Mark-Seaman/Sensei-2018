@@ -120,10 +120,10 @@ li {
 
 img {
     max-width: 800px;
-    box-shadow: 2px 2px 5px gray;
-    border: 1px solid black;
-    margin: 2em;
-    padding: 2em;
+    /*box-shadow: 2px 2px 5px gray;*/
+    /*border: 1px solid black;*/
+    /*margin: 2em;*/
+    /*padding: 2em;*/
 }
 
 main {
@@ -214,6 +214,22 @@ td {
     border: 2px solid white;
     border-radius: 5px;
     width: 100px;
+}
+
+.image {
+    width: 100px;
+}
+
+.answer-correct {
+    font-size: 48px;
+    color: green;
+    text-align: left;
+}
+
+.answer-incorrect {
+    font-size: 48px;
+    color: red;
+    text-align: left;
 }
 
 .lesson-title {
