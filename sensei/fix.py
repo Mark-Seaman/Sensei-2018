@@ -24,6 +24,13 @@ def stud(id):
 def name(name):
     return Student.objects.filter(name__contains=name)
 
+def fix_reviews():
+    for r in Review.objects.filter(score__lte=5):
+        print(r.reviewer.name, r.designer.name,  r.score)
+        r.score = -1
+        r.save()
+
+fix_reviews()
 
 def fix_reviews():
     for r in Review.objects.filter(score__lt=5):
@@ -108,3 +115,14 @@ BACS 200
 Web Design and Development for Small Business
 '''
 
+
+#########################
+# URL Game
+from sensei.models import *
+from sensei.student import *
+
+def assign_url_game():
+    for s in students():
+        UrlGame.objects.create(student=s)
+
+assign_url_game()
