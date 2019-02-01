@@ -137,12 +137,14 @@ class UncStudent(TemplateView):
 
     def get_context_data(self, **kwargs):
         student_id = self.kwargs.get('id')
-        title = 'Student Dashboard'
+        s = Student.objects.get(pk=student_id)
+        game = UrlGame.objects.get(student=s)
         reading = student_scores(student_id)
         reviews = student_reviews(student_id)
         done = student_reviews_done(student_id)
         feedback = review_feedback(student_id)
-        return site_settings(title=title, student=student(student_id), reading=reading,
+        title = 'Student Dashboard'
+        return site_settings(title=title, student=student(student_id), game=game, reading=reading,
                              reviews=reviews, feedback=feedback, done=done)
 
 
