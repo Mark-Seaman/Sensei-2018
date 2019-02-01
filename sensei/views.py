@@ -5,7 +5,7 @@ from django.utils.timezone import now
 
 from tool.document import domain_doc, doc_html_text
 
-from .models import Review, Student
+from .models import Review, Student, UrlGame
 from .review import count_score, get_review, review_feedback, student_reviews, student_reviews_done
 from .sensei import course_lessons, slides_markdown
 from .student import student_scores, site_settings, student, student_totals, students, register_user_domain
@@ -162,49 +162,69 @@ class UncUrlGameAnswer(FormView):
     template_name = 'unc_urlgame.html'
 
     def get_context_data(self, **kwargs):
+        id = self.kwargs.get('id', '1')
+        student = Student.objects.get(pk=id)
+        game = UrlGame.objects.get(student=student)
+        # self.answered = self.request.GET.get('answered', "0")
+        # self.left = self.request.GET.get('left', "10")
+
+
         title = 'URL Crusher - Answer'
+
         self.answer = self.request.GET.get('answer', "None")
-        self.answered = self.request.GET.get('answered', "0")
-        self.left = self.request.GET.get('left', "10")
         self.page = self.request.GET.get('page', "None")
         self.url = self.request.GET.get('url', "None")
         self.url_type = self.request.GET.get('url_type', "None")
         self.correct = self.request.GET.get('correct', 'None')
         self.iscorrect = (self.request.GET.get('iscorrect') == u'True')
         self.image = self.request.GET.get('image')
+
         answer = dict(answer=self.answer, url=self.url, correct=self.correct, image=self.image,
                       page=self.page, url_type=self.url_type, iscorrect=self.iscorrect)
-        return site_settings(title=title, a=answer,
-                             answered=self.answered, left=self.left)
+        return site_settings(title=title, student=student, a=answer, answered=game.answered, left=game.left)
 
     def form_valid(self, form):
+        id = self.kwargs.get('id', '1')
+        student = Student.objects.get(pk=id)
+        game = UrlGame.objects.get(student=student)
+
         self.url = form.data.get('url')
         self.answer = form.data.get('answer')
-        self.answered = form.data.get('answered')
-        self.left = form.data.get('left')
+        # self.answered = form.data.get('answered')
+        # self.left = form.data.get('left')
         self.correct = form.data.get('correct')
         self.page = form.data.get('page')
         self.url_type = form.data.get('url_type')
-        self.answered = str(int(self.answered) + 1)
+
         self.iscorrect = (self.correct == self.answer)
         if self.iscorrect:
-            self.left = int(self.left) - 1
+            game.left = game.left - 1
         else:
-            self.left = 2
+            game.left = 2
+
+        # self.answered = str(int(self.answered) + 1)
+        game.answered = game.answered + 1
+        game.save()
+
         return super(UncUrlGameAnswer, self).form_valid(form)
 
     def get_success_url(self):
-        if self.left < 1:
-            parms = '&'.join([
-                "answered=%s" % self.answered,
-                "left=%s" % str(self.left),
-            ])
-            return '/unc/url-game-done?%s' % parms
+        id = self.kwargs.get('id', '1')
+        student = Student.objects.get(pk=id)
+        game = UrlGame.objects.get(student=student)
+
+        if game.left < 1:
+            # parms = '&'.join([
+            #     "answered=%s" % self.answered,
+            #     "left=%s" % str(self.left),
+            # ])
+            # return '/unc/url-game-done/%s?%s' % (id, parms)
+            return '/unc/url-game-done/%s' % id
         else:
             parms = '&'.join([
                 "answer=%s" % self.answer,
-                "answered=%s" % self.answered,
-                "left=%s" % str(self.left),
+                # "answered=%s" % self.answered,
+                # "left=%s" % str(self.left),
                 "url=%s" % self.url,
                 "correct=%s" % self.correct,
                 "page=%s" % self.page,
@@ -212,7 +232,7 @@ class UncUrlGameAnswer(FormView):
                 "image=%s" % url_feedback(self.answer, self.correct),
                 "iscorrect=%s" % self.iscorrect,
             ])
-            return '/unc/url-answer?%s' % parms
+            return '/unc/url-answer/%s?%s' % (id, parms)
 
 
 def url_feedback(answer, correct):
@@ -223,45 +243,27 @@ def url_feedback(answer, correct):
 
 
 class UncUrlGameQuestion(TemplateView):
-    # class UrlForm(Form):
-    #     url = forms.CharField()
-    #     correct = forms.CharField()
-    #     answered = forms.IntegerField()
-    #     left = forms.IntegerField()
-    #
-    # form_class = UrlForm
     template_name = 'unc_urlgame.html'
 
     def get_context_data(self, **kwargs):
-        title = 'URL Crusher - Question'
-        self.answered = self.request.GET.get('answered', "0")
-        self.left = self.request.GET.get('left', "3")
-        return site_settings(title=title, q=generate_url_question(), answered=self.answered,
-                             left=self.left)
+        id = self.kwargs.get('id', '1')
+        student = Student.objects.get(pk=id)
+        game = UrlGame.objects.get(student=student)
 
-    # def form_valid(self, form):
-    #     url = form.data.get('url')
-    #     self.answered = form.data.get('answered')
-    #     self.left = form.data.get('left')
-    #     correct = form.data.get('correct')
-    #     self.answered = str(int(self.answered) + 1)
-    #     if correct == url:
-    #         self.left = str(int(self.left) - 1)
-    #     else:
-    #         self.left = '3'
-    #     return super(UncUrlGameQuestion, self).form_valid(form)
-    #
-    # def get_success_url(self):
-    #     if self.left < 1:
-    #         return '/unc/url-game-done.html'
-    #     return '/unc/url-answer?answered=%s&left=%s' % (self.answered, self.left)
+        title = 'URL Crusher - Question'
+        # self.answered = self.request.GET.get('answered', "0")
+        # self.left = self.request.GET.get('left', "3")
+        return site_settings(title=title, student=student, q=generate_url_question(), answered=game.answered, left=game.left)
 
 
 class UncUrlGameDone(TemplateView):
     template_name = 'unc_urlgame_done.html'
 
     def get_context_data(self, **kwargs):
+        id = self.kwargs.get('id', '1')
+        student = Student.objects.get(pk=id)
         title = 'URL Crusher'
-        self.answered = self.request.GET.get('answered')
-        self.left = self.request.GET.get('left')
-        return site_settings(title=title, answered=self.answered, left=self.left)
+        # self.answered = self.request.GET.get('answered')
+        # self.left = self.request.GET.get('left')
+        game = UrlGame.objects.get(student=student)
+        return site_settings(title=title, student=student, answered=game.answered, left=game.left)

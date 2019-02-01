@@ -4,6 +4,7 @@
 {% block card %}
 
     <h1>{{ title }}</h1>
+    <p>Student: {{ student.name }}</p>
 
     {% if q %}
         <h2>Question</h2>
@@ -12,7 +13,7 @@
         <p>URL: <b>{{ q.url }}</b></p>
         <p>Type of URL: <b>{{ q.url_type }}</b></p>
 
-        <form action="/unc/url-answer" method="post"> {% csrf_token %}
+        <form action="/unc/url-answer/{{ student.pk }}" method="post"> {% csrf_token %}
             <input type="text" name="answer" placeholder="your URL answer" class="url-answer">
             <input type="hidden" name="answered" value="{{ answered }}">
             <input type="hidden" name="left" value="{{ left }}">
@@ -63,7 +64,7 @@
 
         </div>
 
-        <a href="/unc/url-question?answered={{ answered }}&left={{ left }}" class="form-btn">Next Question</a>
+        <a href="/unc/url-question/{{ student.pk }}?answered={{ answered }}&left={{ left }}" class="form-btn">Next Question</a>
 
 
     {% endif %}

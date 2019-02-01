@@ -115,3 +115,14 @@ BACS 200
 Web Design and Development for Small Business
 '''
 
+
+#########################
+# URL Game
+from sensei.models import *
+from sensei.student import *
+
+def assign_url_game():
+    for s in students():
+        UrlGame.objects.create(student=s)
+
+assign_url_game()
