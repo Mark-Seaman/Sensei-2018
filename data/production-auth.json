@@ -1324,6 +1324,33 @@
     },
     {
         "fields": {
+            "codename": "add_urlgame",
+            "content_type": 50,
+            "name": "Can add url game"
+        },
+        "model": "auth.permission",
+        "pk": 148
+    },
+    {
+        "fields": {
+            "codename": "change_urlgame",
+            "content_type": 50,
+            "name": "Can change url game"
+        },
+        "model": "auth.permission",
+        "pk": 149
+    },
+    {
+        "fields": {
+            "codename": "delete_urlgame",
+            "content_type": 50,
+            "name": "Can delete url game"
+        },
+        "model": "auth.permission",
+        "pk": 150
+    },
+    {
+        "fields": {
             "date_joined": "2019-01-08T21:37:13.680Z",
             "email": "Mark.B.Seaman@gmail.com",
             "first_name": "Mark",
