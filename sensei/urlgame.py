@@ -91,10 +91,10 @@ def random_path():
     directories = [
         "css",
         "images",
-        # "assets",
-        # "bacs200",
-        # "pages",
-        # "project",
+        "assets",
+        "bacs200",
+        "pages",
+        "project",
     ]
     return '/'.join([choice(directories) for d in range(randint(0, 2))])
 

@@ -147,7 +147,7 @@ class UncStudent(TemplateView):
 
 
 class UncUrlGameAnswer(FormView):
-    
+
     class UrlForm(Form):
         answer = forms.CharField()
         url = forms.CharField()
@@ -193,7 +193,7 @@ class UncUrlGameAnswer(FormView):
         if self.iscorrect:
             game.left = game.left - 1
         else:
-            game.left = 3
+            game.left = 10
         game.answered = game.answered + 1
         game.save()
 

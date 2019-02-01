@@ -71,4 +71,4 @@ class Requirements(models.Model):
 class UrlGame(models.Model):
     student   = models.ForeignKey(Student)
     answered   = models.IntegerField(default=0)
-    left       = models.IntegerField(default=3)
+    left       = models.IntegerField(default=10)
