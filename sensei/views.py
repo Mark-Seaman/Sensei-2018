@@ -55,7 +55,7 @@ class UncEditReview(UpdateView):
 
 
 def requirements():
-    return '''Page appears at correct URL, "bacs200/inspire.html"
+    return '''Page appears at correct URL, in folder "bacs200"
 WordPress blog is still visible at the top of the domain
 Article describes an inspirational figure
 Users can follow a hyperlink to learn more
