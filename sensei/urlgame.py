@@ -4,21 +4,25 @@ from random import choice, randint
 
 def generate_url_question():
     url_type = choice(['Relative', 'Absolute', 'Server'])
-    # url_type = 'Relative'
-    domain = random_domain()
+    d1 = random_domain()
+    d2 = random_domain()
+
     path = random_path()
-    page = join(domain, path, random_page())
+    page = join(d1, path, random_page())
     file_name = random_file()
     dir_name = random_path()
-    url = join(domain, dir_name, file_name)
+
     if url_type == 'Absolute':
-        domain = random_domain()
+        url = join(d2, dir_name, file_name)
+        correct = join(d2, dir_name, file_name)
     elif url_type == 'Server':
-        domain  = '/'
+        url = join(d1, dir_name, file_name)
+        correct = join('/', dir_name, file_name)
     else:
-        domain = ''
+        url = join(d1, dir_name, file_name)
         dir_name = relative_path(path, dir_name)
-    correct  = join(domain, dir_name, file_name)
+        correct = join(dir_name, file_name)
+
     return dict(page=page, url=url, url_type=url_type, correct=correct)
 
 
@@ -29,6 +33,9 @@ def relative_path(p1, p2):
     x1 = p1
     x2 = p2
     print('before', p1, p2)
+    if p1 == ['']:
+        x1 = []
+
     for i,x in enumerate(p1):
         if p1[i:] and p2[i:] and p1[i] == p2[i]:
             x1 = p1[i+1:]
@@ -36,9 +43,11 @@ def relative_path(p1, p2):
             print('same', x1, x2)
         else:
             break
+
     p1 = '/'.join(['..' for d in x1])
     p2 = '/'.join([d for d in x2])
     print('after', p1, p2)
+    print(p1+'/'+p2)
     return join(p1, p2)
 
 

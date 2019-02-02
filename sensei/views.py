@@ -195,7 +195,7 @@ class UncUrlGameAnswer(FormView):
         if self.iscorrect:
             game.left = game.left - 1
         else:
-            game.left = 10
+            game.left = 5
         game.answered = game.answered + 1
         game.save()
 
