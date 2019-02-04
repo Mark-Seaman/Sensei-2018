@@ -1416,7 +1416,7 @@
         "fields": {
             "expected": "Fri Jan 25 10:42:39 MST 2019\n",
             "name": "tst-time",
-            "output": "Sun Feb  3 07:00:10 MST 2019\n"
+            "output": "Mon Feb  4 07:00:10 MST 2019\n"
         },
         "model": "tool.test",
         "pk": 158
