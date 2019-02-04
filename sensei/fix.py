@@ -95,10 +95,15 @@ list_groups()
 
 # Create review assignment
 
+from sensei.models import *
 from sensei.review import *
-Review.objects.all().delete()
-print('Assign %d' % assign_reviews('bacs200/inspire.html', '2019-01-23'))
-print("%s reviews assigned" % len(Review.objects.all()))
+
+def clear_reviews():
+    Review.objects.all().delete()
+
+def assign_new_reviews():
+    print('Assign %d' % assign_reviews('bacs200/educate.html', '2019-02-04', '2'))
+    print("%s reviews assigned" % len(Review.objects.all()))
 
 
 #########################
