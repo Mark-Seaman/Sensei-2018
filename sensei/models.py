@@ -41,6 +41,11 @@ class Lesson(models.Model):
         return 'Lesson %02d. %s - %s' % (self.lesson, self.title, self.date)
 
 
+class Requirements(models.Model):
+    labels = models.TextField(default='NONE')
+    url = models.URLField()
+
+
 class Review(models.Model):
     reviewer    = models.ForeignKey(Student, editable=False)
     designer    = models.ForeignKey(Student, related_name='designer', default=1, editable=False)
@@ -48,7 +53,8 @@ class Review(models.Model):
     score       = models.IntegerField(default=-1)
     date        = models.DateTimeField(null=True, editable=False)
     due         = models.DateTimeField(editable=False)
-    requirements = models.TextField(default='NONE')
+    requirement_labels = models.ForeignKey(Requirements, default=1)
+    # requirements = models.TextField(default='NONE')
     requirement_1 = models.BooleanField(default=False)
     requirement_2 = models.BooleanField(default=False)
     requirement_3 = models.BooleanField(default=False)
@@ -61,11 +67,6 @@ class Review(models.Model):
     requirement_10 = models.BooleanField(default=False)
     notes       = models.TextField()
     #, validators=[MinLengthValidator(100)])
-
-
-class Requirements(models.Model):
-    labels = models.TextField(default='NONE')
-    url = models.URLField()
 
 
 class UrlGame(models.Model):
