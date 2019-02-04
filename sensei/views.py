@@ -139,12 +139,12 @@ class UncStudent(TemplateView):
         student_id = self.kwargs.get('id')
         s = Student.objects.get(pk=student_id)
         game = UrlGame.objects.get(student=s)
-        reading = student_scores(student_id)
+        # reading = student_scores(student_id), reading=reading,
         reviews = student_reviews(student_id)
         done = student_reviews_done(student_id)
         feedback = review_feedback(student_id)
         title = 'Student Dashboard'
-        return site_settings(title=title, student=student(student_id), game=game, reading=reading,
+        return site_settings(title=title, student=student(student_id), game=game,
                              reviews=reviews, feedback=feedback, done=done)
 
 

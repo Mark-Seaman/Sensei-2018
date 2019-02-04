@@ -55,7 +55,7 @@ from sensei.review import *
 
 def list_reviews():
     for r in Review.objects.all():
-        print(r.designer.name, r.page, r.due)
+        print(r.designer.name, r.page, r.due, r.requirement_labels.labels)
 
 
 def clear_reviews():
