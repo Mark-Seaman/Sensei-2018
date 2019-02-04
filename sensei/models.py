@@ -54,7 +54,7 @@ class Review(models.Model):
     date        = models.DateTimeField(null=True, editable=False)
     due         = models.DateTimeField(editable=False)
     requirement_labels = models.ForeignKey(Requirements, default=1)
-    # requirements = models.TextField(default='NONE')
+    requirements = models.TextField(default='NONE')
     requirement_1 = models.BooleanField(default=False)
     requirement_2 = models.BooleanField(default=False)
     requirement_3 = models.BooleanField(default=False)
