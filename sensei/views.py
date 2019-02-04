@@ -40,7 +40,10 @@ class UncEditReview(UpdateView):
     template_name = 'unc_review.html'
 
     def get_context_data(self, **kwargs):
-        kwargs = dict(title='Design Review', requirements=requirements())
+        pk = kwargs.get('pk')
+        review = get_review(pk)
+        requirements = review.split('\n')
+        kwargs = dict(title='Design Review', requirements=requirements)
         return super(UncEditReview, self).get_context_data(**kwargs)
 
     def form_valid(self, form):
@@ -54,18 +57,18 @@ class UncEditReview(UpdateView):
         # return '/unc/reviews'
 
 
-def requirements():
-    return '''Page appears at correct URL, in folder "bacs200"
-WordPress blog is still visible at the top of the domain
-Article describes an inspirational figure
-Users can follow a hyperlink to learn more
-Writing is compelling and well thought out
-Technical Requirements
-Title is set properly on the browser tab
-Page has appropriate headline
-Image is properly displayed
-Text content is properly formatted
-Page contains valid HTML'''.split('\n')
+# def requirements():
+#     return '''Page appears at correct URL, in folder "bacs200"
+# WordPress blog is still visible at the top of the domain
+# Article describes an inspirational figure
+# Users can follow a hyperlink to learn more
+# Writing is compelling and well thought out
+# Technical Requirements
+# Title is set properly on the browser tab
+# Page has appropriate headline
+# Image is properly displayed
+# Text content is properly formatted
+# Page contains valid HTML'''.split('\n')
 
 
 class UncReviewFeedback(TemplateView):
@@ -74,8 +77,9 @@ class UncReviewFeedback(TemplateView):
     def get_context_data(self, **kwargs):
         pk = kwargs.get('pk')
         review = get_review(pk)
+        requirements = review.split('\n')
         title = 'Design Review Feedback'
-        return site_settings(title=title, review=review, requirements=requirements())
+        return site_settings(title=title, review=review, requirements=requirements)
 
 
 class UncReading(TemplateView):
