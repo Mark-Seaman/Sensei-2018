@@ -42,7 +42,7 @@ class UncEditReview(UpdateView):
     def get_context_data(self, **kwargs):
         pk = self.kwargs.get('pk')
         review = get_review(pk)
-        requirements = review.labels.split('\n')
+        requirements = review.requirement_labels.labels.split('\n')
         kwargs = dict(title='Design Review', requirements=requirements)
         return super(UncEditReview, self).get_context_data(**kwargs)
 
@@ -77,7 +77,7 @@ class UncReviewFeedback(TemplateView):
     def get_context_data(self, **kwargs):
         pk = self.kwargs.get('pk')
         review = get_review(pk)
-        requirements = review.labels.split('\n')
+        requirements = review.requirement_labels.labels.split('\n')
         title = 'Design Review Feedback'
         return site_settings(title=title, review=review, requirements=requirements)
 
