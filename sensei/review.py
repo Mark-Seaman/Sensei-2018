@@ -6,10 +6,10 @@ from .models import Review
 from .student import students
 
 
-def assign_reviews(page, due):
+def assign_reviews(page, due, requirements):
     pairs = review_pairs(review_groups())
     for p in pairs:
-        create_review(p[0], p[1], page, due)
+        create_review(p[0], p[1], page, due, requirements)
     return len(pairs)
 
 
@@ -19,10 +19,11 @@ def count_score(r):
     return len([x for x in requirements if x])
 
 
-def create_review(reviewer, designer, page, due):
+def create_review(reviewer, designer, page, due, requirements):
     due = '%s 23:59' % due
     due = make_aware(datetime.strptime(due, "%Y-%m-%d %H:%M"))
-    return Review.objects.get_or_create(reviewer=reviewer, designer=designer, page=page, due=due)[0]
+    return Review.objects.get_or_create(reviewer=reviewer, designer=designer, page=page, due=due,
+                                        requirement_labels_id=requirements, requirements='NONE')[0]
 
 
 def get_review(id):
