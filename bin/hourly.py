@@ -64,7 +64,7 @@ daily_tasks = '''
           # x spiritual article
           # x seamanslog article
           x data backup
-          rm $p/log/django.log
+          # rm $p/log/django.log
       '''
 
 hourly_tasks = '''

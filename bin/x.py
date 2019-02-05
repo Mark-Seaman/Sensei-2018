@@ -18,6 +18,7 @@ from wordpress import wordpress_command
 
 def execute_command(cmd,args):
     chdir(environ['p'])
+    print('PWD = ' + environ['p'])
     if cmd == 'app':
         app_command(args)
 
