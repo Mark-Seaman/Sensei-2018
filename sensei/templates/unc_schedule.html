@@ -1,0 +1,27 @@
+{% extends "unc_theme.html" %}
+
+
+{% block page %}
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Lesson</th>
+            <th>Topic</th>
+            <th>Reading</th>
+            <th>Project</th>
+        </tr>
+
+        {% for topic in schedule %}
+            <tr>
+
+                {% for t in topic %}
+                    <td>{{ t }}</td>
+                {% endfor %}
+
+            </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock %}

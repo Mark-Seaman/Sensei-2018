@@ -1,9 +1,13 @@
-from csv import reader
-from django.utils.text import slugify
+from csv import reader, writer
+
 from glob import glob
 from os.path import exists, join
 from re import findall
+from traceback import format_exc
 
+from mybook.mybook import main_menu
+
+from tool.log import log, log_exception
 from hammer.settings import DOC_ROOT
 from tool.document import doc_html_text, read_markdown, text_to_html
 
@@ -81,7 +85,6 @@ def get_student_email(email):
 
 
 def domain_data(course):
-
     def domains(course):
         table = []
         path = guide_doc_path(join(course, 'students.csv'))
@@ -113,7 +116,6 @@ def register_students():
 
 
 def student_test_links(student):
-
     def url(student, page=''):
         return 'http://' + student.domain + page
 
@@ -140,7 +142,6 @@ def student_test_links(student):
 
 
 def lesson_cards(course, lesson):
-
     def fix_images(text):
         image_path = '/static/images/guide/' + course
         return text.replace('![](img/', '![](%s/' % image_path)
@@ -166,12 +167,11 @@ def lesson_cards(course, lesson):
         doc = 'Documents/guide/%s/lesson/%s-%s.md' % (course, lesson, 'Lesson')
         text = lesson_markdown(doc)
         tab_text = text.split('\n\n## ')
-        tabs = [card_text(card_title(x),  x) for x in tab_text]
+        tabs = [card_text(card_title(x), x) for x in tab_text]
         return tabs
 
 
 def lesson_data(course, lesson, text):
-
     def tab_choice(i, tab):
         return ('tab%d' % i, tab['title'], tab['text'], 'active' if i == 0 else '')
 
@@ -200,7 +200,7 @@ def link(url, title=None):
     url = '/guide%s' % url.replace('Lesson', title)
     lesson = findall('(\d\d)-Lesson', url)
     if lesson:
-        title = 'Lesson #'+lesson[0]
+        title = 'Lesson #' + lesson[0]
     return (title, url)
 
 
@@ -211,13 +211,12 @@ def make_link(href, text=None):
 
 
 def main_menu(course, page=None):
-
     def menu_active(page, menu_item):
         return 'class="active"' if page.startswith(menu_item) else ''
 
     def menu_entry(page, x):
         icon, label, url = x
-        return url, "zmdi-" + icon, label, menu_active('/'+page, url)
+        return url, "zmdi-" + icon, label, menu_active('/' + page, url)
 
     def menu_read(menu_file):
         menu_items = open(menu_file).read().split('\n')
@@ -232,14 +231,14 @@ def main_menu(course, page=None):
 
 def missing_page_info(title):
     # text = lesson_info(lesson)
-    return dict(title=title,  home=home_link(title))
+    return dict(title=title, home=home_link(title))
 
 
 def page_info(course, title):
     doc = 'guide/%s/%s.md' % (course, title)
     site = site_titles(course)
     menu = main_menu(course, doc)
-    return dict(site=site, menu=menu, title=title, page=doc, home=home_link(course+'/'+title))
+    return dict(site=site, menu=menu, title=title, page=doc, home=home_link(course + '/' + title))
 
 
 def read_file(course, doc):
@@ -253,45 +252,53 @@ def read_file(course, doc):
         return []
 
 
-def schedule_data(course, table):
-    def course_part_data(title, table, first, last):
-        return {'title': title, 'slug': slugify(title), 'table': table[first:last]}
+def schedule():
+    data_file = 'Documents/unc/bacs200/schedule.csv'
+    s = []
+    with open(data_file) as f:
+        for row in reader(f):
+            s.append(row)
+    return s[1:]
 
-    def lesson_link(lesson):
-        if not lesson:
-            return ''
-        return make_link("Lesson%02d" % int(lesson))
 
-    def set_links(table):
-        return [row[:3] + [lesson_link(row[3])] + row[4:] for row in table]
-
-    def course_parts(table, course):
-        if course == 'PhpApps':
-            p1 = course_part_data('Part 1 - Core', table, 0, 10)
-            p2 = course_part_data('Part 2 - Views', table, 10, 21)
-            p3 = course_part_data('Part 3 - Data', table, 21, 32)
-            p4 = course_part_data('Part 4 - JavaScript', table, 32, 50)
-            return [p1, p2, p3, p4]
-        else:
-            p1 = course_part_data('Part 1 - HTML', table, 0, 15)
-            p2 = course_part_data('Part 2 - CSS', table, 15, 30)
-            p3 = course_part_data('Part 3 - Design', table, 30, 50)
-            return [p1, p2, p3]
-
-    table = set_links(table)
-    return dict(parts=course_parts(table, course))
+# def schedule_data(course, table):
+#     def course_part_data(title, table, first, last):
+#         return {'title': title, 'slug': slugify(title), 'table': table[first:last]}
+#
+#     def lesson_link(lesson):
+#         if not lesson:
+#             return ''
+#         return make_link("Lesson%02d" % int(lesson))
+#
+#     def set_links(table):
+#         return [row[:3] + [lesson_link(row[3])] + row[4:] for row in table]
+#
+#     def course_parts(table, course):
+#         if course == 'PhpApps':
+#             p1 = course_part_data('Part 1 - Core', table, 0, 10)
+#             p2 = course_part_data('Part 2 - Views', table, 10, 21)
+#             p3 = course_part_data('Part 3 - Data', table, 21, 32)
+#             p4 = course_part_data('Part 4 - JavaScript', table, 32, 50)
+#             return [p1, p2, p3, p4]
+#         else:
+#             p1 = course_part_data('Part 1 - HTML', table, 0, 15)
+#             p2 = course_part_data('Part 2 - CSS', table, 15, 30)
+#             p3 = course_part_data('Part 3 - Design', table, 30, 50)
+#             return [p1, p2, p3]
+#
+#     table = set_links(table)
+#     return dict(parts=course_parts(table, course))
 
 
 def site_titles(course):
     if course == 'Index':
-        titles =join('Documents', 'guide', 'SiteTitle')
+        titles = join('Documents', 'guide', 'SiteTitle')
     else:
         titles = join('Documents', 'guide', course, 'SiteTitle')
     return open(titles).read().split('\n')
 
 
 def slide_content_data(course, lesson):
-
     def adjust_markdown_headings(markdown):
         markdown = markdown.replace('\n### ', '\n\n--\n\n#### ')
         markdown = markdown.replace('\n## ', '\n\n---\n\n![](img/Bear_Logo.png)\n\n### ')
@@ -318,7 +325,7 @@ def slides_markdown(page):
 
 
 def test_links(course):
-    pages = read_file(course,'Test')
+    pages = read_file(course, 'Test')
     return [link for link in pages]
 
 
@@ -339,5 +346,3 @@ def view_info(kwargs):
     settings = view_data(course, title, lesson)
     kwargs.update(settings)
     return kwargs
-
-
