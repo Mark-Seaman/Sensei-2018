@@ -15,6 +15,11 @@ def add_student(course, name, email, domain):
     Student.objects.create(course=course, name=name, email=email, domain=domain)
 
 
+def add_lesson(course, lesson, title, date):
+    url = 'https://shrinking-world.com/unc/bacs200/%02d' % int(lesson)
+    Lesson.objects.get_or_create(course__name=course, lesson=lesson, title=title, date=date, content=url)
+
+
 # def content_lessons(course):
 #     path = guide_doc_path(course + '/' + 'lesson/*-Lesson.md')
 #     files = glob(path)
