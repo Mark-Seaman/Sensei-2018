@@ -31,8 +31,7 @@ def email_command(options):
         elif cmd == 'template':
             send_template_message(args)
         elif cmd == 'test':
-            from notify import notify_test_email, notify_test_results
-            notify_test_results()
+            send_test_email()
         else:
             email_help()
 
@@ -82,9 +81,11 @@ def email_args(args, use_html=True):
                 )
 
 
-def send_support_request(title, text):
-    log('send_support_request (%s, %s)' % (title, text))
+def send_test_email():
     me = 'Mark.B.Seaman@gmail.com'
+    title = "Test Message"
+    text = 'This is a test message sent from MyBook Server.  Please respond'
+    log('send_test_message (%s, %s)' % (me, title))
     options = dict(subject=title, from_email=me, recipient_list=[me], message=text)
     send_mail(**options)
 

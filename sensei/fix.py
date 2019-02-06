@@ -121,6 +121,10 @@ Web Design and Development for Small Business
 '''
 
 
+from sensei.sensei import add_lesson
+add_lesson ('bacs200', '13', 'Test & Debug', '2019-02-06')
+
+
 #########################
 # URL Game
 from sensei.models import *

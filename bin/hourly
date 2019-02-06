@@ -10,13 +10,15 @@ fi
 
 
 {
+    cd $p
+
     echo `date` `id` " - $0 Started"
 
-    . $p/bin/bashrc
+    . $p/bin/bashrc-cron
     # . $p/bin/venv
 
-    python bin/x.py hourly run
+     python bin/x.py hourly run
 
     echo `date` " - $0 All done"
-} 2>&1 > $p/log/cron-hourly.log
+} # 2>&1 > $p/log/cron-hourly.log
 

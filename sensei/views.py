@@ -7,8 +7,8 @@ from tool.document import domain_doc, doc_html_text
 
 from .models import Review, Student, UrlGame
 from .review import count_score, get_review, review_feedback, student_reviews, student_reviews_done
-from .sensei import course_lessons, slides_markdown
-from .student import student_scores, site_settings, student, student_totals, students, register_user_domain
+from .sensei import course_lessons, schedule, slides_markdown
+from .student import site_settings, student, student_totals, students, register_user_domain
 from .urlgame import generate_url_question
 
 
@@ -125,6 +125,13 @@ class UncReviews(TemplateView):
         reviews = [(s, Review.objects.filter(reviewer=s.pk)) for s in students()]
         designers = [(s, review_feedback(s.pk)) for s in students()]
         return site_settings(title='Design Reviews', reviews=reviews, designers=designers)
+
+
+class UncSchedule(TemplateView):
+    template_name = 'unc_schedule.html'
+
+    def get_context_data(self, **kwargs):
+        return site_settings(title='BACS 200 Schedule', schedule=schedule())
 
 
 class UncSlidesDisplay(TemplateView):
