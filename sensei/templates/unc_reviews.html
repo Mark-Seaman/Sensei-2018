@@ -14,6 +14,7 @@
                 <th>Score</th>
                 <th>Page</th>
                 <th>Review</th>
+                <th>Date</th>
             </tr>
             {% for student in reviews %}
                 <tr>
@@ -28,11 +29,9 @@
                                href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>
                         </td>
                         <td><a class="normal"
-                               href="/unc/review/{{ r.pk }}">Do Review</a>
+                               href="/unc/review/{{ r.pk }}">Review</a>
                         </td>
-
-                        {#                    <td>{{ r.due }}</td>#}
-
+                        <td>{{ r.date }}</td>
                     </tr>
                 {% endfor %}
             {% endfor %}
@@ -50,6 +49,7 @@
                 <th>Score</th>
                 <th>Page</th>
                 <th>Review</th>
+                <th>Date</th>
             </tr>
             {% for student in designers %}
                 <tr>
@@ -64,11 +64,9 @@
                                href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>
                         </td>
                         <td><a class="normal"
-                               href="/unc/review/{{ r.pk }}">Do Review</a>
+                               href="/unc/review/{{ r.pk }}">Review</a>
                         </td>
-                        
-                        {#                    <td>{{ r.due }}</td>#}
-
+                        <td>{{ r.date }}</td>
                     </tr>
                 {% endfor %}
             {% endfor %}
