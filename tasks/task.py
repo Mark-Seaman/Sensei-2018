@@ -449,24 +449,3 @@ def save_monthly_reports(year):
     return reports
 
 
-#from task.models import Tasks
-
-def fix_tasks():
-    tasks = Task.objects.all()
-    for t in tasks:
-        if t.notes:
-            x = t.notes.encode('utf-8', 'ignore')
-            t.notes = x
-            t.save()
-
-
-def test_tasks():
-    tasks = Task.objects.all()
-    for t in tasks:
-        if t.notes:
-            x = t.notes.encode('utf-8', 'ignore')
-            t.notes = x
-            t.save()
-
-
-
