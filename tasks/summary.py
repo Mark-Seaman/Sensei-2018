@@ -21,7 +21,7 @@ def activity_summary(activity):
 
 
 def activities_work():
-    return ['WAM', 'Sign', 'Teach', 'Business', 'Tools', 'Hammer', 'Hire', 'Write', 'Aspire']
+    return ['WAM', 'Sign', 'UNC', 'Business', 'Tools', 'Hammer', 'Hire', 'Write', 'Aspire']
 
 
 def sort_activity(data):
