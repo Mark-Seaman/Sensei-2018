@@ -135,3 +135,15 @@ def assign_url_game():
         UrlGame.objects.create(student=s)
 
 assign_url_game()
+
+
+
+#################
+# Tasks
+
+def fix_tasks():
+    from tasks.models import Task
+    for t in Task.objects.filter(name='Teach'):
+        t.name = 'UNC'
+        t.save()
+    print(len(Task.objects.filter(name='Teach')))

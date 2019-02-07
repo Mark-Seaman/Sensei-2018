@@ -182,7 +182,7 @@ def time_summary(days):
 
 
 def work_types():
-    return 'Hire,Aspire,Business,Family,Teach,Tools,WAM,Sign,Write,Hammer'.split(',')
+    return 'Hire,Aspire,Business,Family,UNC,Tools,WAM,Sign,Write,Hammer'.split(',')
 
 
 def write_task_files(tlist):
