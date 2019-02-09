@@ -1266,9 +1266,9 @@ COPY public.auth_user (id, password, last_login, is_superuser, username, first_n
 24	pbkdf2_sha256$36000$6y9NqG741mmK$YAEAzyxhlMeeEEODkZBUgCp4/MSjhlzah+RBfRPOe/g=	\N	f	ward2974@bears.unco.edu	John	Warden	ward2974@bears.unco.edu	t	t	2019-01-10 00:51:52.082671+00
 25	pbkdf2_sha256$36000$lwayVhnlgQYa$OJQZPXvgnJSktQwSIL1Ppur9Og6Jf22fEj8N5hW/7k8=	\N	f	Skee4705@bears.unco.edu	Tyler	Skeen	Skee4705@bears.unco.edu	t	t	2019-01-10 01:05:18.534689+00
 26	pbkdf2_sha256$36000$qkWnIdKxVwFG$GTGxrdv02s5BJ77ovY6tvWCeYAoU4mAXFxSyqZCKy90=	\N	f	Spil6540@bears.unco.edu	Madi	Spillman	Spil6540@bears.unco.edu	t	t	2019-01-10 01:12:54.101671+00
-1	pbkdf2_sha256$36000$LFrdoiC0MqLf$EbceWAdEF48961SNuxHnTT+XTfO4K0EcRdYKKnjIqAI=	2019-02-06 17:48:21.066158+00	t	MarkSeaman	Mark	Seaman	Mark.B.Seaman@gmail.com	t	t	2019-01-08 21:37:13.680793+00
 28	pbkdf2_sha256$36000$3MqndyWkhww5$o5K9RvBAeUJY8x5ZlKVTR+rdLMqt8Q2ktoWlgY2xWkM=	\N	f	vand2653@bears.unco.edu	David	Vandiver	vand2653@bears.unco.edu	t	t	2019-01-10 01:27:28.115746+00
 29	pbkdf2_sha256$36000$WiQafQIDGhVB$Khlro1qR4Ep8SGdx2yew3vn03b6o3GMzy/1MTdlyvZM=	\N	f	donn8007@bears.unco.edu	Brian	Donnelly	donn8007@bears.unco.edu	t	t	2019-01-10 01:34:11.687002+00
+1	pbkdf2_sha256$36000$LFrdoiC0MqLf$EbceWAdEF48961SNuxHnTT+XTfO4K0EcRdYKKnjIqAI=	2019-02-07 21:15:13.160158+00	t	MarkSeaman	Mark	Seaman	Mark.B.Seaman@gmail.com	t	t	2019-01-08 21:37:13.680793+00
 31	pbkdf2_sha256$36000$IAig8tUmGGSJ$nx0gmLhguKqi98qVSnV4aNeFDhNo5J/ZoVdkM/GTE7g=	\N	f	meli2472@bears.unco.edu	Steven	Melick	meli2472@bears.unco.edu	t	t	2019-01-10 02:07:02.58351+00
 32	pbkdf2_sha256$36000$wMcY0HKViX3O$a3XloIfX0/H0qO8duHp5+ifAkmEA/v24JFC46EzLkL0=	\N	f	garc4179@bears.unco.edu	Samuel	Garcia	garc4179@bears.unco.edu	t	t	2019-01-10 03:30:25.334305+00
 34	pbkdf2_sha256$36000$T5qsJ3ljSmXQ$y4V3h06ok05OJWqPsjUuS3RysopFf21yHX00pqQ1U0Q=	\N	f	Muhu7108@bears.unco.edu	Khadijo	Muhumed	Muhu7108@bears.unco.edu	t	t	2019-01-10 03:41:19.813859+00
@@ -1727,6 +1727,7 @@ fxtxy2ar5wuq4rvhkxev67m5qe9ifkt5	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZ
 qpbvv9iv5p778xqttfswg77jzwpsju9g	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-07-13 16:09:38.116448+00
 hl8wofvmczz7wbsokihtnufrwmz39dr4	ZmMwZTI0YmE3NWFhNDY5NDIwNTBiN2ExMTcxZGUyN2YwZTAyYjYwYjp7Il9hdXRoX3VzZXJfaGFzaCI6IjE0MGNjYTRhN2ZjMmM4NWE4ODczNmE0MDQ1MzUzMmJlM2I4OWQ2MTUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2019-02-20 17:48:21.06894+00
 nho8478wfdu4l8hbz2n5ufhmv767z0kh	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-07-13 16:09:42.715795+00
+k5g79hfa311i7jf782kl5mqkn1f09vqq	ZmMwZTI0YmE3NWFhNDY5NDIwNTBiN2ExMTcxZGUyN2YwZTAyYjYwYjp7Il9hdXRoX3VzZXJfaGFzaCI6IjE0MGNjYTRhN2ZjMmM4NWE4ODczNmE0MDQ1MzUzMmJlM2I4OWQ2MTUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2019-02-21 21:15:13.163051+00
 y8ebs6jycwzbkus7bucnusmkf9mrxpxw	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-07-13 16:36:09.982353+00
 8jbyxmdp0yymj53isl2ilhwssnkiq4rr	ZGMxOGJmZjZlNWNhNzcxMjAxNDY3OWVjOTE4N2MyNjg0ZWZjNGQ2OTp7Il9hdXRoX3VzZXJfaGFzaCI6IjlhZjk4MmM2ZjJjOTJiOTFhMWU1YzY2YzQwNzNjYWJjZmFmZTFjYmIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=	2017-07-13 16:36:14.496532+00
 \.
@@ -1927,7 +1928,6 @@ COPY public.sensei_review (id, page, score, date, due, requirements, notes, desi
 197	bacs200/inspire.html	10	2019-01-27 22:12:24.160513+00	2019-01-24 06:59:00+00	NONE	She fixed all her problems	39	53	t	t	t	t	t	t	t	t	t	t	1
 317	bacs200/amuse.html	-1	\N	2019-01-29 06:59:00+00	NONE		52	40	f	f	f	f	f	f	f	f	f	f	1
 320	bacs200/amuse.html	-1	\N	2019-01-29 06:59:00+00	NONE		22	40	f	f	f	f	f	f	f	f	f	f	1
-324	bacs200/amuse.html	-1	\N	2019-01-29 06:59:00+00	NONE		40	47	f	f	f	f	f	f	f	f	f	f	1
 327	bacs200/amuse.html	-1	\N	2019-01-29 06:59:00+00	NONE		47	40	f	f	f	f	f	f	f	f	f	f	1
 331	bacs200/amuse.html	-1	\N	2019-01-29 06:59:00+00	NONE		4	2	f	f	f	f	f	f	f	f	f	f	1
 322	bacs200/amuse.html	0	2019-01-28 20:53:25.338909+00	2019-01-29 06:59:00+00	NONE	Web page can't be found.	40	52	f	f	f	f	f	f	f	f	f	f	1
@@ -1952,6 +1952,7 @@ COPY public.sensei_review (id, page, score, date, due, requirements, notes, desi
 321	bacs200/amuse.html	10	2019-02-04 22:05:59.45125+00	2019-01-29 06:59:00+00	NONE	I like it.	22	47	t	t	t	t	t	t	t	t	t	t	1
 318	bacs200/amuse.html	10	2019-02-04 22:08:04.155587+00	2019-01-29 06:59:00+00	NONE	Great.	52	47	t	t	t	t	t	t	t	t	t	t	1
 161	bacs200/inspire.html	10	2019-02-06 22:17:36.163806+00	2019-01-24 06:59:00+00	NONE	n/a; great work	5	4	t	t	t	t	t	t	t	t	t	t	1
+324	bacs200/amuse.html	0	2019-02-07 19:31:23.821674+00	2019-01-29 06:59:00+00	NONE	there is nothing.	40	47	f	f	f	f	f	f	f	f	f	f	1
 192	bacs200/inspire.html	8	2019-01-26 20:53:41.90675+00	2019-01-24 06:59:00+00	NONE	Missing a hyperlink to learn more. Hard to do since it is your father. I would talk with the professor to see how he wants you to proceed.\r\n\r\nAlso, add a picture of your dad. It will help make your story more connecting.	21	3	t	t	t	t	f	t	t	t	t	f	1
 149	bacs200/inspire.html	8	2019-01-27 18:01:11.869624+00	2019-01-24 06:59:00+00	NONE	the hyperlink lead you to google not to learn more about the inspirational figure. there is no title in the browser tab	12	37	t	t	t	t	f	t	t	f	t	t	1
 204	bacs200/inspire.html	10	2019-01-27 22:14:25.241218+00	2019-01-24 06:59:00+00	NONE	I thought the last part made up for his previous endeavors	29	53	t	t	t	t	t	t	t	t	t	t	1
@@ -2034,13 +2035,13 @@ COPY public.sensei_review (id, page, score, date, due, requirements, notes, desi
 174	bacs200/inspire.html	10	2019-01-30 21:27:21.959944+00	2019-01-24 06:59:00+00	NONE	Good page	42	38	t	t	t	t	t	t	t	t	t	t	1
 177	bacs200/inspire.html	10	2019-01-30 21:27:37.014015+00	2019-01-24 06:59:00+00	NONE	Good page	6	38	t	t	t	t	t	t	t	t	t	t	1
 206	bacs200/inspire.html	9	2019-01-30 22:17:51.591409+00	2019-01-24 06:59:00+00	NONE	No Title on browser tab	15	32	t	t	t	t	t	t	t	f	t	t	1
-196	bacs200/inspire.html	-1	\N	2019-01-24 06:59:00+00	NONE		39	47	f	f	f	f	f	f	f	f	f	f	1
-199	bacs200/inspire.html	-1	\N	2019-01-24 06:59:00+00	NONE		53	47	f	f	f	f	f	f	f	f	f	f	1
-202	bacs200/inspire.html	-1	\N	2019-01-24 06:59:00+00	NONE		29	47	f	f	f	f	f	f	f	f	f	f	1
 233	bacs200/inspire.html	10	2019-01-26 01:01:32.708513+00	2019-01-24 06:59:00+00	NONE	N/A. All requirements met	20	7	t	t	t	t	t	t	t	t	t	t	1
 236	bacs200/inspire.html	10	2019-01-26 02:39:08.418974+00	2019-01-24 06:59:00+00	NONE	Great job! Every requirement has been met.	7	20	t	t	t	t	t	t	t	t	t	t	1
 250	bacs200/inspire.html	10	2019-01-26 01:17:58.20354+00	2019-01-24 06:59:00+00	NONE	Everything seems to work, Great job!	52	28	t	t	t	t	t	t	t	t	t	t	1
 211	bacs200/inspire.html	10	2019-01-28 21:32:02.201346+00	2019-01-24 06:59:00+00	NONE	Inspiring	32	15	t	t	t	t	t	t	t	t	t	t	1
+196	bacs200/inspire.html	10	2019-02-07 19:32:01.09242+00	2019-01-24 06:59:00+00	NONE	I like it.	39	47	t	t	t	t	t	t	t	t	t	t	1
+199	bacs200/inspire.html	10	2019-02-07 19:32:24.114693+00	2019-01-24 06:59:00+00	NONE	I like it.	53	47	t	t	t	t	t	t	t	t	t	t	1
+202	bacs200/inspire.html	9	2019-02-07 19:33:14.940272+00	2019-01-24 06:59:00+00	NONE	I like it.	29	47	t	f	t	t	t	t	t	t	t	t	1
 225	bacs200/inspire.html	10	2019-01-29 05:03:33.074086+00	2019-01-24 06:59:00+00	NONE	Other than the domain name being slightly off, great job.	17	33	t	t	t	t	t	t	t	t	t	t	1
 214	bacs200/inspire.html	0	2019-01-28 21:32:25.042898+00	2019-01-24 06:59:00+00	NONE	i cant view your page it says error	2	15	f	f	f	f	f	f	f	f	f	f	1
 229	bacs200/inspire.html	0	2019-01-26 20:20:50.229247+00	2019-01-24 06:59:00+00	NONE	Hey, I am sorry to say that I got a 404 error when I was trying to open your page. Make sure you upload it to the correct place thru FileZilla and that it is under the correct URL. Good luck!	40	20	f	f	f	f	f	f	f	f	f	f	1
@@ -2230,11 +2231,6 @@ COPY public.sensei_review (id, page, score, date, due, requirements, notes, desi
 474	bacs200/educate.html	10	2019-02-05 05:43:17.150984+00	2019-02-05 06:59:00+00	NONE	I love how unique this one is!	13	33	t	t	t	t	t	t	t	t	t	t	2
 477	bacs200/educate.html	10	2019-02-05 05:44:23.289363+00	2019-02-05 06:59:00+00	NONE	I like the layout, but I won't have put that picture on the side of the page.	18	33	t	t	t	t	t	t	t	t	t	t	2
 431	bacs200/educate.html	9	2019-02-05 17:57:11.376574+00	2019-02-05 06:59:00+00	NONE	validator showed some errors otherwise great site and ted talk. Shake fold.	37	5	t	f	t	t	t	t	t	t	t	t	2
-499	bacs200/educate.html	-1	\N	2019-02-05 06:59:00+00	NONE		3	23	f	f	f	f	f	f	f	f	f	f	2
-502	bacs200/educate.html	-1	\N	2019-02-05 06:59:00+00	NONE		12	23	f	f	f	f	f	f	f	f	f	f	2
-505	bacs200/educate.html	-1	\N	2019-02-05 06:59:00+00	NONE		10	23	f	f	f	f	f	f	f	f	f	f	2
-510	bacs200/educate.html	-1	\N	2019-02-05 06:59:00+00	NONE		39	47	f	f	f	f	f	f	f	f	f	f	2
-516	bacs200/educate.html	-1	\N	2019-02-05 06:59:00+00	NONE		36	47	f	f	f	f	f	f	f	f	f	f	2
 496	bacs200/educate.html	10	2019-02-04 17:10:59.842488+00	2019-02-05 06:59:00+00	NONE	Good job.	23	3	t	t	t	t	t	t	t	t	t	t	2
 413	bacs200/educate.html	10	2019-02-04 18:55:08.77314+00	2019-02-05 06:59:00+00	NONE	nothing wrong, great job!	28	49	t	t	t	t	t	t	t	t	t	t	2
 423	bacs200/educate.html	10	2019-02-04 18:57:34.210608+00	2019-02-05 06:59:00+00	NONE	Every looks perfect, good job!	19	49	t	t	t	t	t	t	t	t	t	t	2
@@ -2280,6 +2276,10 @@ COPY public.sensei_review (id, page, score, date, due, requirements, notes, desi
 518	bacs200/educate.html	9	2019-02-05 14:56:31.295963+00	2019-02-05 06:59:00+00	NONE	Everything looks great, but did not meet the 250 word requirement.	47	16	t	t	t	t	t	f	t	t	t	t	2
 525	bacs200/educate.html	9	2019-02-05 19:26:30.239202+00	2019-02-05 06:59:00+00	NONE	Image is a bit big and article is a bit short. To size the picture, set the height and the width of the picture in the code until it looks proportionate	15	26	t	t	t	t	t	t	t	t	f	t	2
 528	bacs200/educate.html	10	2019-02-05 19:28:48.39278+00	2019-02-05 06:59:00+00	NONE	Compelling article and very well formatted nice job!	21	26	t	t	t	t	t	t	t	t	t	t	2
+510	bacs200/educate.html	10	2019-02-07 19:33:49.845885+00	2019-02-05 06:59:00+00	NONE	great work	39	47	t	t	t	t	t	t	t	t	t	t	2
+516	bacs200/educate.html	10	2019-02-07 19:34:11.466667+00	2019-02-05 06:59:00+00	NONE	great work	36	47	t	t	t	t	t	t	t	t	t	t	2
+502	bacs200/educate.html	9	2019-02-09 08:24:43.513908+00	2019-02-05 06:59:00+00	NONE	Good	12	23	t	t	t	t	t	t	f	t	t	t	2
+505	bacs200/educate.html	10	2019-02-09 08:25:09.839692+00	2019-02-05 06:59:00+00	NONE	Good	10	23	t	t	t	t	t	t	t	t	t	t	2
 485	bacs200/educate.html	10	2019-02-04 21:35:55.879801+00	2019-02-05 06:59:00+00	NONE	Well-done page	32	29	t	t	t	t	t	t	t	t	t	t	2
 428	bacs200/educate.html	1	2019-02-04 21:36:13.358962+00	2019-02-05 06:59:00+00	NONE	there is nothing there	5	37	t	f	f	f	f	f	f	f	f	f	2
 523	bacs200/educate.html	10	2019-02-04 21:36:45.602405+00	2019-02-05 06:59:00+00	NONE	Good page	15	38	t	t	t	t	t	t	t	t	t	t	2
@@ -2303,17 +2303,11 @@ COPY public.sensei_review (id, page, score, date, due, requirements, notes, desi
 424	bacs200/educate.html	10	2019-02-05 17:49:34.457219+00	2019-02-05 06:59:00+00	NONE	No problems with the site, looks good. \r\nCrazy that you can teleport information with these computers.	22	5	t	t	t	t	t	t	t	t	t	t	2
 434	bacs200/educate.html	10	2019-02-05 18:16:27.339617+00	2019-02-05 06:59:00+00	NONE	Looks great and so funny	11	5	t	t	t	t	t	t	t	t	t	t	2
 532	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		26	55	f	f	f	f	f	f	f	f	f	f	3
-533	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		26	47	f	f	f	f	f	f	f	f	f	f	3
-534	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		26	15	f	f	f	f	f	f	f	f	f	f	3
 535	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		55	26	f	f	f	f	f	f	f	f	f	f	3
-536	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		55	47	f	f	f	f	f	f	f	f	f	f	3
-537	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		55	15	f	f	f	f	f	f	f	f	f	f	3
 538	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		47	26	f	f	f	f	f	f	f	f	f	f	3
 539	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		47	55	f	f	f	f	f	f	f	f	f	f	3
-540	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		47	15	f	f	f	f	f	f	f	f	f	f	3
 541	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		15	26	f	f	f	f	f	f	f	f	f	f	3
 542	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		15	55	f	f	f	f	f	f	f	f	f	f	3
-543	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		15	47	f	f	f	f	f	f	f	f	f	f	3
 545	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		22	41	f	f	f	f	f	f	f	f	f	f	3
 546	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		22	5	f	f	f	f	f	f	f	f	f	f	3
 548	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		3	41	f	f	f	f	f	f	f	f	f	f	3
@@ -2325,6 +2319,12 @@ COPY public.sensei_review (id, page, score, date, due, requirements, notes, desi
 544	bacs200/index.html	10	2019-02-06 21:43:14.804917+00	2019-02-07 06:59:00+00	NONE	Looks fantastic! You went above what was asked of you and it looks great.	22	3	t	t	t	t	t	t	t	t	t	t	3
 557	bacs200/index.html	10	2019-02-07 00:01:15.760722+00	2019-02-07 06:59:00+00	NONE	Cute cat!	13	33	t	t	t	t	t	t	t	t	t	t	3
 554	bacs200/index.html	9	2019-02-07 02:17:06.994562+00	2019-02-07 06:59:00+00	NONE	Hey Joey, everything looks great on your home page. The only aspect still needed would be a link to your dashboard. Other than that, you're good!!! Nice job!	5	3	t	t	t	t	t	f	t	t	t	t	3
+533	bacs200/index.html	10	2019-02-07 19:34:24.381174+00	2019-02-07 06:59:00+00	NONE	great work	26	47	t	t	t	t	t	t	t	t	t	t	3
+536	bacs200/index.html	10	2019-02-07 19:34:51.292133+00	2019-02-07 06:59:00+00	NONE	great work	55	47	t	t	t	t	t	t	t	t	t	t	3
+543	bacs200/index.html	10	2019-02-07 19:35:08.542519+00	2019-02-07 06:59:00+00	NONE	great work	15	47	t	t	t	t	t	t	t	t	t	t	3
+534	bacs200/index.html	7	2019-02-08 23:40:05.065183+00	2019-02-07 06:59:00+00	NONE	not much their as you said.	26	15	t	t	t	f	f	t	t	t	f	t	3
+537	bacs200/index.html	0	2019-02-08 23:40:41.159596+00	2019-02-07 06:59:00+00	NONE	Page not found error	55	15	f	f	f	f	f	f	f	f	f	f	3
+540	bacs200/index.html	4	2019-02-08 23:42:33.577798+00	2019-02-07 06:59:00+00	NONE	missing a lot of stuff bro	47	15	t	t	f	f	f	t	t	f	f	f	3
 563	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		33	54	f	f	f	f	f	f	f	f	f	f	3
 566	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		25	54	f	f	f	f	f	f	f	f	f	f	3
 568	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		28	40	f	f	f	f	f	f	f	f	f	f	3
@@ -2336,24 +2336,15 @@ COPY public.sensei_review (id, page, score, date, due, requirements, notes, desi
 576	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		9	52	f	f	f	f	f	f	f	f	f	f	3
 578	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		52	40	f	f	f	f	f	f	f	f	f	f	3
 579	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		52	9	f	f	f	f	f	f	f	f	f	f	3
-581	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		42	45	f	f	f	f	f	f	f	f	f	f	3
 582	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		42	2	f	f	f	f	f	f	f	f	f	f	3
-584	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		4	45	f	f	f	f	f	f	f	f	f	f	3
 585	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		4	2	f	f	f	f	f	f	f	f	f	f	3
 588	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		45	2	f	f	f	f	f	f	f	f	f	f	3
-591	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		2	45	f	f	f	f	f	f	f	f	f	f	3
 592	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		20	38	f	f	f	f	f	f	f	f	f	f	3
 599	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		27	38	f	f	f	f	f	f	f	f	f	f	3
 602	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		29	38	f	f	f	f	f	f	f	f	f	f	3
 618	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		6	12	f	f	f	f	f	f	f	f	f	f	3
-619	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		19	6	f	f	f	f	f	f	f	f	f	f	3
 621	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		19	12	f	f	f	f	f	f	f	f	f	f	3
-622	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		18	6	f	f	f	f	f	f	f	f	f	f	3
 624	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		18	12	f	f	f	f	f	f	f	f	f	f	3
-625	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		12	6	f	f	f	f	f	f	f	f	f	f	3
-628	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		30	23	f	f	f	f	f	f	f	f	f	f	3
-630	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		30	32	f	f	f	f	f	f	f	f	f	f	3
-633	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		23	32	f	f	f	f	f	f	f	f	f	f	3
 565	bacs200/index.html	9	2019-02-06 21:20:45.96758+00	2019-02-07 06:59:00+00	NONE	The link to the dashboard is missing.	25	13	t	t	t	t	t	f	t	t	t	t	3
 562	bacs200/index.html	8	2019-02-06 21:22:32.059461+00	2019-02-07 06:59:00+00	NONE	You are missing some links, but other than that it looks good.	33	13	t	t	t	f	t	f	t	t	t	t	3
 559	bacs200/index.html	5	2019-02-06 21:24:19.366743+00	2019-02-07 06:59:00+00	NONE	The page is not personalized.	54	13	t	t	t	f	f	f	f	f	t	t	3
@@ -2386,15 +2377,15 @@ COPY public.sensei_review (id, page, score, date, due, requirements, notes, desi
 571	bacs200/index.html	0	2019-02-07 03:19:44.753396+00	2019-02-07 06:59:00+00	NONE	page not found error.	40	28	f	f	f	f	f	f	f	f	f	f	3
 577	bacs200/index.html	7	2019-02-07 03:23:26.306294+00	2019-02-07 06:59:00+00	NONE	missing links to projects.	52	28	t	f	t	f	t	f	t	t	t	t	3
 631	bacs200/index.html	3	2019-02-07 06:50:31.825279+00	2019-02-07 06:59:00+00	NONE	no links or anything	23	30	t	f	t	f	f	t	f	f	f	f	3
-635	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		17	23	f	f	f	f	f	f	f	f	f	f	3
-636	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		17	32	f	f	f	f	f	f	f	f	f	f	3
-638	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		32	23	f	f	f	f	f	f	f	f	f	f	3
-640	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		16	14	f	f	f	f	f	f	f	f	f	f	3
-647	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		10	14	f	f	f	f	f	f	f	f	f	f	3
-650	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		37	14	f	f	f	f	f	f	f	f	f	f	3
-654	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		7	53	f	f	f	f	f	f	f	f	f	f	3
-657	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		36	53	f	f	f	f	f	f	f	f	f	f	3
-660	bacs200/index.html	-1	\N	2019-02-07 06:59:00+00	NONE		21	53	f	f	f	f	f	f	f	f	f	f	3
+619	bacs200/index.html	9	2019-02-08 20:36:37.354099+00	2019-02-07 06:59:00+00	NONE	Great but no Wordpress	19	6	t	t	f	t	t	t	t	t	t	t	3
+622	bacs200/index.html	7	2019-02-08 20:37:31.888648+00	2019-02-07 06:59:00+00	NONE	The picture does not load. no Wordpress logo	18	6	t	t	f	t	f	t	t	t	f	t	3
+625	bacs200/index.html	9	2019-02-08 20:38:42.83037+00	2019-02-07 06:59:00+00	NONE	Awesome page. no Wordpress logo	12	6	t	t	f	t	t	t	t	t	t	t	3
+591	bacs200/index.html	0	2019-02-09 01:58:57.940677+00	2019-02-07 06:59:00+00	NONE	Page does not appear	2	45	f	f	f	f	f	f	f	f	f	f	3
+584	bacs200/index.html	10	2019-02-09 01:59:21.752266+00	2019-02-07 06:59:00+00	NONE	Great job	4	45	t	t	t	t	t	t	t	t	t	t	3
+581	bacs200/index.html	10	2019-02-09 01:59:39.815849+00	2019-02-07 06:59:00+00	NONE	Great job	42	45	t	t	t	t	t	t	t	t	t	t	3
+630	bacs200/index.html	10	2019-02-09 04:45:35.471888+00	2019-02-07 06:59:00+00	NONE	Website looks great!	30	32	t	t	t	t	t	t	t	t	t	t	3
+633	bacs200/index.html	2	2019-02-09 04:47:39.135895+00	2019-02-07 06:59:00+00	NONE	Not complete yet	23	32	t	f	t	f	f	f	f	f	f	f	3
+628	bacs200/index.html	10	2019-02-09 08:25:48.604127+00	2019-02-07 06:59:00+00	NONE	Good	30	23	t	t	t	t	t	t	t	t	t	t	3
 627	bacs200/index.html	9	2019-02-06 21:04:27.515926+00	2019-02-07 06:59:00+00	NONE	You have a beautiful page and it's almost perfect, but there are several validation errors in it. Fix those and it will be a ten out of ten for sure!	12	18	t	f	t	t	t	t	t	t	t	t	3
 617	bacs200/index.html	8	2019-02-06 21:08:54.885209+00	2019-02-07 06:59:00+00	NONE	You have several validation errors and most are related to image attributes. You also have yet to update it will links to all of our projects, but that is a pretty easy fix. Also while I like your photo I'm not positive it qualifies as a profile picture. I'm not going to count you off as that is something that needs clarification, but if the professor knocks you down for it just use a picture of yourself.	6	18	t	f	t	f	t	t	t	t	t	t	3
 596	bacs200/index.html	7	2019-02-06 21:43:42.527073+00	2019-02-07 06:59:00+00	NONE	just missing a picture and links to other pages	38	27	t	t	t	f	t	f	t	t	f	t	3
@@ -2429,6 +2420,13 @@ COPY public.sensei_review (id, page, score, date, due, requirements, notes, desi
 639	bacs200/index.html	7	2019-02-07 01:46:24.961589+00	2019-02-07 06:59:00+00	NONE	missing name, image, link to projects	32	17	t	t	t	f	f	t	t	t	f	t	3
 634	bacs200/index.html	3	2019-02-07 06:51:16.720187+00	2019-02-07 06:59:00+00	NONE	it only says hey	17	30	t	f	t	f	f	t	f	f	f	f	3
 637	bacs200/index.html	3	2019-02-07 06:52:09.029127+00	2019-02-07 06:59:00+00	NONE	this is just the layout.	32	30	t	f	t	f	f	t	f	f	f	f	3
+654	bacs200/index.html	10	2019-02-07 18:08:59.624185+00	2019-02-07 06:59:00+00	NONE	good job	7	53	t	t	t	t	t	t	t	t	t	t	3
+660	bacs200/index.html	9	2019-02-07 18:11:06.872585+00	2019-02-07 06:59:00+00	NONE	I didn't like to image choice	21	53	t	t	t	t	t	t	t	t	f	t	3
+640	bacs200/index.html	10	2019-02-08 23:36:16.980025+00	2019-02-07 06:59:00+00	NONE	Everything works, good job fam.	16	14	t	t	t	t	t	t	t	t	t	t	3
+647	bacs200/index.html	8	2019-02-08 23:39:23.778368+00	2019-02-07 06:59:00+00	NONE	Everything works, but you don't have a profile picture on your site.	10	14	t	t	t	t	f	t	t	t	f	t	3
+636	bacs200/index.html	2	2019-02-09 04:48:13.108656+00	2019-02-07 06:59:00+00	NONE	Not complete yet	17	32	t	f	t	f	f	f	f	f	f	f	3
+635	bacs200/index.html	9	2019-02-09 08:26:20.710037+00	2019-02-07 06:59:00+00	NONE	Good	17	23	t	t	t	t	f	t	t	t	t	t	3
+638	bacs200/index.html	5	2019-02-09 08:26:47.85048+00	2019-02-07 06:59:00+00	NONE	Good	32	23	t	f	t	f	f	t	f	t	f	t	3
 605	bacs200/index.html	8	2019-02-06 22:52:26.401703+00	2019-02-07 06:59:00+00	NONE	Good job overall -- always room for more design elements when we get to it, but good job overall.\r\n\r\nThe only thing is that your "BACS 200 Homepage" link results in 404 Page Not Found error, and your HTML isn't fully validated. It requires a fix on the image size and alt text for the image.\r\n\r\nOther than that, good job.	50	11	t	f	t	t	t	f	t	t	t	t	3
 608	bacs200/index.html	6	2019-02-06 22:55:59.740328+00	2019-02-07 06:59:00+00	NONE	Good start, however there are a few problems:\r\n You do not include links tot he work we've done in class; while the page does have your name it does not have your profile picture; it does not have a link to your BACS 200 Student Dashboard; and the HTML is not fully validated.\r\n\r\nThe HTML requires alt text for the image and a fix on the image size.\r\n\r\nGood start, but needs some work.	39	11	t	f	t	f	f	f	t	t	t	t	3
 551	bacs200/index.html	3	2019-02-07 02:14:35.206579+00	2019-02-07 06:59:00+00	NONE	Hey Dean, I see that you have your home page set up to have what was needed at the start of the class. We had to do a few other things to our home page. Provide links to all project work  \r\n -Show name and profile picture  \r\n - Link your home page to your dashboard page  \r\n -Title is set properly on the browser tab  \r\n -Page has appropriate headline  \r\n -Image is properly displayed (and reasonable size)  \r\n -Text content is properly formatted  \r\n\r\nThese are the other areas you were missing.\r\nGoodluck!!	41	3	t	t	t	f	f	f	f	f	f	f	3
@@ -2439,6 +2437,9 @@ COPY public.sensei_review (id, page, score, date, due, requirements, notes, desi
 564	bacs200/index.html	8	2019-02-07 04:29:11.128577+00	2019-02-07 06:59:00+00	NONE	Good job just make sure to add all the links to project work. Also make sure to link your student dashboard to the index page(#5). The validator showed that the picture width doesn't require px but still shows correctly. Overall good job!	33	25	t	t	t	f	t	f	t	t	t	t	3
 224	bacs200/inspire.html	10	2019-02-07 04:38:06.048512+00	2019-01-24 06:59:00+00	NONE	Great page. You do have some errors in your html with the image. You need to edit your source code and implement quotations around the URL for the image. Other than that every else checks out.	17	25	t	t	t	t	t	t	t	t	t	t	1
 227	bacs200/inspire.html	10	2019-02-07 04:40:48.652885+00	2019-01-24 06:59:00+00	NONE	I like your page a lot. Everything checks out except for your linked image. Make sure to add the alt="" attribute within the image html code or is shows as invalid in the validator.	33	25	t	t	t	t	t	t	t	t	t	t	1
+657	bacs200/index.html	10	2019-02-07 18:10:23.195366+00	2019-02-07 06:59:00+00	NONE	I like how you organized your projects	36	53	t	t	t	t	t	t	t	t	t	t	3
+650	bacs200/index.html	10	2019-02-08 23:37:41.734621+00	2019-02-07 06:59:00+00	NONE	Everything worked, good job fam. How'd you get the website to have a different color other than white?	37	14	t	t	t	t	t	t	t	t	t	t	3
+499	bacs200/educate.html	10	2019-02-09 08:24:03.390638+00	2019-02-05 06:59:00+00	NONE	Good	3	23	t	t	t	t	t	t	t	t	t	t	2
 \.
 
 
@@ -2518,46 +2519,46 @@ COPY public.sensei_urlgame (id, answered, "left", student_id) FROM stdin;
 30	0	3	40
 44	0	3	2
 20	31	0	21
-41	26	5	1
-32	20	5	38
-2	58	0	33
-22	58	0	49
+19	67	-3	17
+36	65	4	3
+29	90	0	28
 45	40	0	18
-1	15	-2	47
+32	48	0	38
 37	61	0	11
-9	47	0	4
-15	19	5	23
+28	39	1	27
+22	63	5	49
 7	14	0	15
 14	66	0	6
 5	25	10	41
-24	20	10	53
-12	20	9	14
+42	19	5	22
+11	54	5	16
+17	72	5	26
 10	26	5	5
-17	67	0	26
-42	14	0	22
 4	53	0	42
 43	28	-1	10
 23	8	-1	30
-33	65	0	37
-29	60	0	28
-36	42	0	3
+41	31	4	1
 38	34	10	19
-18	3	0	29
-28	25	-2	27
+18	14	5	29
+2	60	-2	33
 34	20	10	52
 16	20	8	9
-31	62	-2	13
 8	32	0	39
-19	23	10	17
-13	51	0	50
+26	56	5	45
+31	63	-3	13
 27	10	0	25
+33	103	1	37
 39	35	0	20
 40	15	0	36
-11	31	0	16
-26	55	5	45
+15	26	5	23
 3	32	5	54
 21	41	0	7
+1	35	0	47
+9	65	-1	4
 6	18	0	32
+12	21	8	14
+24	174	-2	53
+13	52	5	50
 35	79	0	12
 \.
 
@@ -2711,9 +2712,9 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3250	People	\n        pancakes with Lucy and Stacie\n        Cafe Athens with Garcias and Lucy\n        learn Dominoes game with Grandma	2018-03-31	6	f
 3868	WAM	    setup SSL on Web Server\n    generate SSL\n    read article outlining server setup\n    customize to our needs	2018-08-21	2	f
 3873	People	    dinner at Fonta's with Stacie	2018-08-22	2	f
-2920	Teach	\n        extend students.html\n        grade Ex1 and Ex2\n        give students feedback\n        setup Erick Ruvalcaba	2018-01-11	5	f
+3858	UNC	    first day of classes\n    final run-through of class materials\n    Kendall-Tobey\n    settle into office\n    BACS 200\n    BACS 350\n    meet with Robert & Noah\n    meet office mate - Oil & Gas Man\n    	2018-08-20	8	f
 2071	Hire	\n        create standalone email sender\n        debug send text, HTML, templates\n        investigate password reset\n        implement password reset views\n        implement John Klassen account logic\n        reconcile code changes with src command	2017-06-08	8	f
-3858	Teach	    first day of classes\n    final run-through of class materials\n    Kendall-Tobey\n    settle into office\n    BACS 200\n    BACS 350\n    meet with Robert & Noah\n    meet office mate - Oil & Gas Man\n    	2018-08-20	8	f
+3489	UNC	    build mapping of lessons to dates for BACS 350\n    create script to build class schedule\n    develop template for lessons\n    reconcile changes on server\n    write in Teaching Blog	2018-05-30	3	f
 2225	Fun	\n        drive home	2017-07-22	6	f
 2226	Grow	\n        personal reflections\n        think about goals for coming week\n        prayer time	2017-07-22	4	f
 2227	Church	\n        listen to Amazing Grace\n        think about social justice\n	2017-07-22	4	f
@@ -2726,32 +2727,31 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2230	People	\n        Stacie's birthday - Ambrosia\n	2017-07-23	5	f
 2255	Church	\n        church potluck\n        analyze giving records	2017-07-30	6	f
 2308	Fun	\n        London has Fallen\n        Edge of Eternity\n        Supergirl\n	2017-08-13	4	f
-3871	Tools	    	2018-08-22	0	f
 3673	Fun	    Travel Log: Day 0\n    Most extensive trip packing and planning\n    Forget drivers license and credit card\n    Rachel & Andrew drive to DIA\n    Nice meal at DIA\n    Cramped space on flight\n    Poor air circulation\n    Crying twins\n    Good food on plane\n    Headphones on plane\n    15 minutes of sleep during flight\n    Movie: All the Money\n    4 hours at Heathrow\n    5,000 steps	2018-07-07	7	f
 3482	Tools	    fix issues with MyBook redirect\n    fix github links on MyBook server\n    simplify MyBook code\n    create shortcuts for GitHub/GitBook/MyBook\n    container nesting (Author, Course, Part, Module, Lesson, Scorecard, Slides)\n    data for classroom (Section, Teacher, Student, Review, Score, Assignment, Group)	2018-05-29	3	f
-3489	Teach	    build mapping of lessons to dates for BACS 350\n    create script to build class schedule\n    develop template for lessons\n    reconcile changes on server\n    write in Teaching Blog	2018-05-30	3	f
-3507	Teach	    build mindmap of BACS 350\n    install Simple Mind on iMac\n    UNC Work Goals mind map\n    note - Create Presentations\n    capture mind maps in Evernote\n    setup new doc command	2018-06-01	6	f
+3507	UNC	    build mindmap of BACS 350\n    install Simple Mind on iMac\n    UNC Work Goals mind map\n    note - Create Presentations\n    capture mind maps in Evernote\n    setup new doc command	2018-06-01	6	f
+3870	UNC	    grade Lesson 1\n    improve Lesson 2\n    create Lesson 4\n    Chrome UNC login and bookmarks\n    Student name tags\n    teach Lesson 2\n    help 8 students\n    Stacie visit (meet Dan, Moe, Vish)\n    	2018-08-22	9	f
 3869	Grow	    4, 4, 3, 4\n    weight: 206.6	2018-08-22	0	f
-3870	Teach	    grade Lesson 1\n    improve Lesson 2\n    create Lesson 4\n    Chrome UNC login and bookmarks\n    Student name tags\n    teach Lesson 2\n    help 8 students\n    Stacie visit (meet Dan, Moe, Vish)\n    	2018-08-22	9	f
+3864	UNC	    help students with assignment 1\n    announcement - Where's my server\n    announcement - lesson 1 change\n    20 emails\n    update lessons 1 and 2\n    	2018-08-21	7	f
 3872	Fun	    Profit, Resident\n    	2018-08-22	3	f
-3864	Teach	    help students with assignment 1\n    announcement - Where's my server\n    announcement - lesson 1 change\n    20 emails\n    update lessons 1 and 2\n    	2018-08-21	7	f
-2670	Teach	\n        classes #36	2017-11-13	9	f
+2670	UNC	\n        classes #36	2017-11-13	9	f
+4012	UNC	    grading 200 exam\n    grading 350 exam\n    build solutions for 11\n    	2018-09-22	6	f
 2671	Fun	\n        Inhumans	2017-11-13	2	f
 2672	People	\n        talk with Stace\n	2017-11-13	2	f
 4015	People	    dinner with Stacie at Pelican Lakes	2018-09-22	2	f
 4002	Grow	    5, 3, 2, 3\n    weight: 208.4	2018-09-19	0	f
-4012	Teach	    grading 200 exam\n    grading 350 exam\n    build solutions for 11\n    	2018-09-22	6	f
+2674	UNC	\n        grading of Design Review	2017-11-14	9	f
 2080	Write	\n        creative writing class	2017-06-10	1	f
 2673	Grow	\n        5, 4, 4, 2	2017-11-14	0	f
-2674	Teach	\n        grading of Design Review	2017-11-14	9	f
+4017	UNC	    create map of zybooks lessons for 200/350\n    plan out lesson rhythms\n    350 Exam\n    200 Exam (start grading)\n    	2018-09-21	9	f
 2675	People	\n        Pelican Lakes - Rachel, Andrew, Christine	2017-11-14	3	f
 2676	Fun	\n        Inhumans, Librarians\n	2017-11-14	2	f
 4013	WAM	    remove extra users	2018-09-22	1	f
-4017	Teach	    create map of zybooks lessons for 200/350\n    plan out lesson rhythms\n    350 Exam\n    200 Exam (start grading)\n    	2018-09-21	9	f
 4014	Fun	    Hunger Games I\n    Enterprise\n    	2018-09-22	3	f
 4016	Grow	    3, 3, 2, 3\n    weight: 208.2	2018-09-21	0	f
 2081	Hire	\n        build general email functions for text, html, templates	2017-06-10	2	f
 2082	Fun	\n        Greeley Blues Jam\n	2017-06-10	10	f
+2920	UNC	\n        extend students.html\n        grade Ex1 and Ex2\n        give students feedback\n        setup Erick Ruvalcaba	2018-01-11	5	f
 2256	Fun	\n        Tomorrow People\n        John Adams\n        Amazing Race\n        Edge of Eternity\n	2017-07-30	6	f
 3513	Fun	    Profit\n    Animal Planet Earth	2018-06-04	4	f
 2029	People	\n        Memorial Day neighborhood party\n        Carcassonne with Andrew & Rachel	2017-05-29	4	f
@@ -2772,7 +2772,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2124	Grow	\n        3, 2, 3, 5\n        walk to Robin's Nest\n        decide to get counseling	2017-06-21	0	f
 2125	People	\n        discuss hurts and dysfunction with Stacie\n        lunch with Stacie - Robin's Nest	2017-06-21	2	f
 2926	People	\n        planning for River Cruise Trip\n        High Hops	2018-01-13	3	f
-2927	Teach	\n        grade quiz and ex3\n        outline week 2	2018-01-13	4	f
+2936	UNC	\n        create Lesson 4, 5	2018-01-15	2	f
 2928	Tools	\n        work on encryption logic	2018-01-13	5	f
 2929	Fun	\n        Enterprise, Profit\n	2018-01-13	2	f
 2299	Church	\n        lunch with Beilmans, discuss church issues	2017-08-10	2	f
@@ -2786,37 +2786,35 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2933	Tools	\n        work on system tests	2018-01-14	1	f
 2934	Fun	\n        Jumanji\n        Arrow, Flash\n	2018-01-14	5	f
 2935	Grow	\n        5, 4, 2, 2\n        nts	2018-01-15	1	f
-2936	Teach	\n        create Lesson 4, 5	2018-01-15	2	f
+3511	UNC	    build details of summer schedule into a mind map\n    update planning for summer	2018-06-04	1	f
 2937	Tools	\n        repair and test infrastructure\n        turn on WAM	2018-01-15	5	f
 3252	Church	\n        Easter Sunday\n        burritos at church	2018-04-01	4	f
 3253	People	\n        Easter celebration (Fleebees, Garcias)\n        Dominoes, Carcassonne\n	2018-04-01	10	f
 3254	Grow	\n        3, 1, 4, 5\n        Principles\n        chest pains	2018-04-02	3	f
 3874	Grow	    4, 3, 2, 2\n    weight: 207.8\n    wake up at 5	2018-08-23	0	f
 3510	Grow	    3, 3, 5, 5\n    walk to CR 13 - 13000 Steps - blister\n    read Activate Your Brain	2018-06-04	3	f
-3511	Teach	    build details of summer schedule into a mind map\n    update planning for summer	2018-06-04	1	f
+3880	UNC	    grade Lesson 2\n    build Quiz 1\n    write Pat about 422\n    set up directed study\n    Lesson 3\n    help Sean Miller\n    	2018-08-24	10	f
 3512	WAM	    plan out strategy for SLL on WAM\n    Investigate alternative paths for building new Droplet on Digital Ocean	2018-06-04	3	f
 3514	People	    Pelican Lakes lunch with Rachel\n    time with Stacie	2018-06-04	3	f
 3515	Grow	    5, 4, 5, 4\n    morning walk	2018-06-06	1	f
 3517	Fun	    ER, Profit	2018-06-06	4	f
-3931	Tools	    	2018-09-04	0	f
-3881	Tools	    	2018-08-24	0	f
 3879	Grow	    5, 2, 3, 4\n    weight: 208.2	2018-08-24	0	f
 340	People	\n        lunch at Romas	2016-04-14	1	f
-3880	Teach	    grade Lesson 2\n    build Quiz 1\n    write Pat about 422\n    set up directed study\n    Lesson 3\n    help Sean Miller\n    	2018-08-24	10	f
+3875	UNC	    grading on Lesson 1,2\n    get helper for 200\n    plan Lesson 4\n    prep Lesson 3\n    provide info for Directed Study	2018-08-23	5	f
 3882	Fun	    ER, Dance, Fraiser\n    	2018-08-24	3	f
 3883	People	    discuss classes with Stacie	2018-08-24	1	f
-3875	Teach	    grading on Lesson 1,2\n    get helper for 200\n    plan Lesson 4\n    prep Lesson 3\n    provide info for Directed Study	2018-08-23	5	f
+4079	UNC	    build review manager application\n    	2018-10-09	9	f
 3877	Fun	    Dance	2018-08-23	1	f
 3878	People	    dinner with Potters at Parry's Pizza and visit home	2018-08-23	3	f
 3933	People	    talk with Christine about life	2018-09-04	2	f
 3945	Business	    haircut\n    get new library card	2018-09-06	2	f
 4078	Grow	    3, 3, 1, 1\n    weight: 208.4\n    nap	2018-10-09	1	f
-4079	Teach	    build review manager application\n    	2018-10-09	9	f
 3929	Grow	    5, 2, 1, 4\n    weight: 208.2\n    walk to Pelican Joe's for lunch	2018-09-04	1	f
 3932	Fun	    Britannia\n    finish Turn series\n    nts 1\n    	2018-09-04	5	f
 4019	People	    visit with Rachel 	2018-09-21	2	f
 1596	Hire	\n        fix issue with payment keys on production\n        fix margins on PDF\n        deploy new repo on production server\n        create release branch for 2017-04-14\n        clean up old files from production server	2017-04-14	5	f
 1607	Fun	\n        Good Place\n	2017-04-14	4	f
+2927	UNC	\n        grade quiz and ex3\n        outline week 2	2018-01-13	4	f
 3518	People	    talk with Stacie about Metabolic research center\n    Romas with Stacie	2018-06-06	1	f
 2030	Grow	\n        3, 1, 3, 5\n        long walk dog park/library\n        skim book KaChing	2017-05-30	2	f
 2031	Tools	\n        fix tests\n        develop thot views\n        simplify menu loading code\n        change default menu for MyBook\n        rework workshop views\n        refine menu code for demo views	2017-05-30	4	f
@@ -2841,10 +2839,10 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2323	Grow	\n        5, 2, 3, 5	2017-08-15	0	f
 2233	Fun	\n        NCIS\n        Suits\n	2017-07-24	4	f
 2257	Grow	\n        5, 1, 3, 5	2017-07-31	1	f
-2324	Teach	\n        Send release for background check\n        get employment forms from UNC\n        ask about textbook, Bear ID, computer access	2017-08-15	3	f
-2682	Teach	\n        create take-home exams	2017-11-16	8	f
+2682	UNC	\n        create take-home exams	2017-11-16	8	f
+2317	UNC	\n        meet with Mehrgan & Carmayne\n        work with course materials for BACS 200\n        explore info about BACS 	2017-08-12	6	f
 2683	People	\n        Julio working on resume	2017-11-16	1	f
-2317	Teach	\n        meet with Mehrgan & Carmayne\n        work with course materials for BACS 200\n        explore info about BACS 	2017-08-12	6	f
+2319	UNC	\n        meet with Pat Seaton - agree to teach class\n        communicate about UNC Class (11 + facebook)\n        write to Wendy about Spiritual Things and Booknotes	2017-08-14	4	f
 2316	Fun	\n        Dance\n	2017-08-12	2	f
 2318	Grow	\n        4, 1, 3, 3	2017-08-14	0	f
 2325	Tools	\n        supply Digital Ocean with ID info\n        fix Fitbit software connect to phone	2017-08-15	2	f
@@ -2854,7 +2852,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2310	Fun	\n        Top Gun\n	2017-08-09	3	f
 2311	Business	\n        set up interview date	2017-08-10	1	f
 2312	Grow	\n        1, 2, 2, 3\n        attend GLS\n        talk with Tim Musslewhite	2017-08-10	6	f
-2319	Teach	\n        meet with Pat Seaton - agree to teach class\n        communicate about UNC Class (11 + facebook)\n        write to Wendy about Spiritual Things and Booknotes	2017-08-14	4	f
+2678	UNC	\n        class #37	2017-11-15	8	f
 2320	Tools	\n        contact Digital Ocean\n        research Amazon Lightsail	2017-08-14	4	f
 2684	Fun	\n        Black Panther\n        Librarians\n	2017-11-16	3	f
 2313	People	\n        talk with Jeff Lee\n        discuss talks with Stacie	2017-08-10	2	f
@@ -2862,7 +2860,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2314	Fun	\n        The Profit\n	2017-08-10	3	f
 2315	Grow	\n        5, 1, 1, 5	2017-08-12	0	f
 2677	Grow	\n        pray for Rachel\n        3, 3, 3, 4	2017-11-15	1	f
-2678	Teach	\n        class #37	2017-11-15	8	f
+3255	UNC	\n        Lesson 30 - Display Images\n        sign up for teaching BACS 200 - Fall 2018	2018-04-02	7	f
 2679	People	\n        Rachel meets with department chair	2017-11-15	2	f
 2680	Fun	\n        Black Panther\n        Librarians\n	2017-11-15	3	f
 2681	Grow	\n        pray for students\n        4, 3, 3, 2	2017-11-16	2	f
@@ -2870,7 +2868,6 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2939	People	\n        visit with Rachel\n	2018-01-15	1	f
 2940	Grow	\n        5, 3, 2, 2	2018-01-16	0	f
 2942	People	\n        Sol de Jalisco	2018-01-16	1	f
-3255	Teach	\n        Lesson 30 - Display Images\n        sign up for teaching BACS 200 - Fall 2018	2018-04-02	7	f
 3256	Fun	\n        Hawaii 50, NCIS	2018-04-02	2	f
 3257	People	\n        visit Lucy\n        time with Stacie\n    	2018-04-02	2	f
 4080	Fun	    Vikings\n    	2018-10-09	2	f
@@ -2878,6 +2875,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1959	Grow	\n        2, 1, \n        read Destiny\n        discuss personal growth with Stacie\n        get cold	2017-05-01	6	f
 1960	Business	\n        Shrinking World Partners meeting	2017-05-01	4	f
 1961	Tools	\n        automated testing\n        copy music repos O-T	2017-05-01	1	f
+2324	UNC	\n        Send release for background check\n        get employment forms from UNC\n        ask about textbook, Bear ID, computer access	2017-08-15	3	f
 2036	Grow	\n        4, 1, 3, 5\n        update personal goals\n        walk	2017-05-31	2	f
 663	Church	\N	2016-07-24	4	f
 2234	Grow	\n        5, 1, 4, 3\n        pray for relationships\n        write - Driven to Invent\n        think about engagement with Peter Runge and Greg McGutchen\n        walk at Windsor Lake\n        pray for Josiah\n        write in Journal\n        nap	2017-07-25	4	f
@@ -2908,29 +2906,29 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2261	Grow	\n        5, 1, 2, 5\n        walk	2017-08-01	2	f
 2329	Grow	\n        4, 3, 3, 4\n        walk around park	2017-08-16	1	f
 2330	Tools	\n        meet with Josiah on Kronos - Gene Server\n        prototype ideas in Jupiter notebook\n        choose name - Kronos - Gene Server	2017-08-16	6	f
-2331	Teach	\n        fill out forms for UNC	2017-08-16	1	f
+2335	UNC	\n        get setup at UNC\n        Bear ID\n        keys\n        classroom tour\n        computer configuration\n        read HTML & CSS	2017-08-17	10	f
 2332	Business	\n        research portfolio management at Fidelity	2017-08-16	1	f
 2333	Fun	\n        have fun\n	2017-08-16	5	f
 2334	Grow	\n        3, 3, 3, 5	2017-08-17	0	f
-2335	Teach	\n        get setup at UNC\n        Bear ID\n        keys\n        classroom tour\n        computer configuration\n        read HTML & CSS	2017-08-17	10	f
+2686	UNC	\n        try to contact Jose\n        final reviews	2017-11-17	8	f
 2336	People	\n        Palaminos	2017-08-17	2	f
 3262	People	\n        Stacie goes to SD\n        discuss life with Stacie	2018-04-04	2	f
 2685	Grow	\n        3, 5, 4, 5\n        personal reflection	2017-11-17	1	f
-2686	Teach	\n        try to contact Jose\n        final reviews	2017-11-17	8	f
+2689	UNC	\n        meet with Jose	2017-11-18	1	f
 2687	Fun	\n        Black Panther\n        Alias\n	2017-11-17	5	f
 2688	Grow	\n        3, 4, 4, 2\n        discuss business and personal plans with Stacie\n        fall asleep w/TV	2017-11-18	3	f
-2689	Teach	\n        meet with Jose	2017-11-18	1	f
+3265	UNC	\n        write Blog 7 - Find a Cause	2018-04-05	2	f
 2690	People	\n        lunch at Toast with Rachel and Stacie	2017-11-18	2	f
 3263	Fun	\n        Atomic Blond\n	2018-04-04	2	f
 2691	Tools	\n        rework email password on all devices\n        update Mac OS	2017-11-18	2	f
 3264	Grow	\n        2, 2, 4, 4\n        list chapters in Seaman's Guide to Life\n        night thinking (Principles of Life)\n        draft My Goals (Work & Connect)\n        create outline of Principle Life Goals from book\n        nap\n        walk\n        nts 4	2018-04-05	9	f
-3265	Teach	\n        write Blog 7 - Find a Cause	2018-04-05	2	f
+3261	UNC	\n        Lesson 31 - Photoshop\n        grade blog 5\n        good talk with Mehrgan\n        50th anniversary of MLK	2018-04-04	7	f
 3259	Fun	\n        Dragonfly\n	2018-04-03	2	f
 649	Grow	\n        walk	2016-07-20	1	f
 3260	Grow	\n        3, 3, 2, 4\n        walk on campus\n        sit-ups\n        start pain log\n        think about health\n        think about thoughtful disagreements\n        Principles	2018-04-04	3	f
-3261	Teach	\n        Lesson 31 - Photoshop\n        grade blog 5\n        good talk with Mehrgan\n        50th anniversary of MLK	2018-04-04	7	f
 2033	Hire	\n        create WordPress site\n        install theme code in WordPress\n        setup encryption on WordPress site	2017-05-30	4	f
 2034	People	\n        dinner on patio	2017-05-30	1	f
+2331	UNC	\n        fill out forms for UNC	2017-08-16	1	f
 2035	Fun	\n        Two Towers\n	2017-05-30	3	f
 2144	People	\n        Royal Nepal with Andrew and Rachel\n        Stacie and Christine to Toby Mac concert\n        plan trip to San Diego, Anaheim, and Flagstaff	2017-06-25	4	f
 2145	Fun	\n        Hawaii 50\n        visit library	2017-06-25	3	f
@@ -2938,7 +2936,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2147	Grow	\n        think about life and ministry\n        5, 1, 1, 2	2017-06-26	1	f
 2337	Fun	\n        Voyager\n	2017-08-17	2	f
 2338	Church	\n        leadership retreat	2017-08-18	7	f
-2339	Teach	\n        login to Canvas\n        set up computer for UNC\n        update syllabus\n        UNC email\n        update lesson #1 presentation	2017-08-18	4	f
+2944	UNC	\n        prep lesson 4\n        switch to PyCharm for content creation\n        teach lesson 4	2018-01-17	8	f
 1965	People	\n        go to Crooked Cup with Stacie\n        library	2017-05-02	2	f
 1966	Fun	\n        Turn\n        	2017-05-02	4	f
 1967	Grow	\n        4, 3	2017-05-03	2	f
@@ -2960,7 +2958,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2105	Tools	\n        debug selenium tests\n        use chromedriver\n        setup db.py on macbook\n        clean up and test menus, site titles, landing pages\n        Building_Software thot map	2017-06-16	4	f
 2247	Church	\n        analyze giving and spending for 2017\n        share findings with team\n        enter budget data into Church Dashboard\n        gather data from Todd's spreadsheet\n        build CSV importer\n        send email with updated numbers\n        create view to display church money data	2017-07-28	8	f
 3527	Fun	    So You Think You Can Dance\n    nts 3	2018-06-05	7	f
-2944	Teach	\n        prep lesson 4\n        switch to PyCharm for content creation\n        teach lesson 4	2018-01-17	8	f
+3521	UNC	    forward email from unc\n    update UNC automation\n    debug Sensei in new UNC repo	2018-06-07	2	f
 2693	Grow	\n        5, 5, 3, 4\n        time with Stacie\n        nap	2017-11-19	3	f
 2694	Church	\n        video of our Giving Talk	2017-11-19	4	f
 2262	Tools	\n        monthly rollover of To Do files\n        Weekly planning\n        try to get Digital Ocean 2-factor auth working	2017-08-01	4	f
@@ -2979,14 +2977,14 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3523	Fun	    travel headphones with patch chord\n    sleep phones - connect macbook & imac\n    listen to KWS\n    ER, Anthony Bordain	2018-06-07	4	f
 3524	People	    fix patio chair\n    meet with Josiah	2018-06-07	2	f
 3520	WAM	    register for Digital Ocean account using Godaddy contact info	2018-06-07	1	f
-3521	Teach	    forward email from unc\n    update UNC automation\n    debug Sensei in new UNC repo	2018-06-07	2	f
-3526	Teach	    email UNC colleagues about Teaching Tech\n    work on course map\n    dissatisfying class content	2018-06-05	3	f
+3526	UNC	    email UNC colleagues about Teaching Tech\n    work on course map\n    dissatisfying class content	2018-06-05	3	f
 3529	Grow	    3, 3, 4, 2\n    feeling sick\n    fear of future	2018-06-03	1	f
 4020	Grow	    5, 3, 4, 3\n    weight: 207.2\n    nap	2018-09-23	1	f
 2140	Church	\n        pray for church	2017-06-24	1	f
 2141	Fun	\n        Niki Heat\n        relax	2017-06-24	6	f
 2142	People	\n        visit with Stacie\n        Stacie & Christine to Women's breakfast\n        go to store with Stacie\n	2017-06-24	4	f
 2143	Grow	\n        5, 2, 1, 5\n        work on emotional growth\n        walk to library	2017-06-25	2	f
+2339	UNC	\n        login to Canvas\n        set up computer for UNC\n        update syllabus\n        UNC email\n        update lesson #1 presentation	2017-08-18	4	f
 2249	Grow	\n        5, 4, 2, 5	2017-07-29	0	f
 2347	Grow	\n        4, 2\n	2017-08-20	0	f
 2702	People	\n        Nardins @ Bent Fork\n        Carcassonne	2017-11-21	5	f
@@ -3000,7 +2998,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2701	Tools	\n        investigate jupyter2slides\n        install Reveal.JS\n        setup Tools directory on Uncle Ed\n        move scripts from BACS_200/scripts into Tools\n        setup class variable\n        script to build slide deck from Jupyter file	2017-11-21	7	f
 2703	Fun	\n        Black Widow\n	2017-11-21	1	f
 2704	Grow	\n        5, 5, 4, 2	2017-11-22	0	f
-2705	Teach	\n        help with CS 350 exam\n        read email\n        think about teaching in Spring	2017-11-22	2	f
+2343	UNC	\n        setup UNC office\n        setup office computer\n        build course syllabus, upload to canvas, send to Anne\n        create first three lectures\n        build first week on canvas	2017-08-19	5	f
 2706	Tools	\n        investigate extracting text from Power Point\n        install Pandoc on Unco.edu\n        enumerate methods for building presentations\n        debug scripts on Uncle Ed	2017-11-22	4	f
 2263	People	\n        lunch with Stacie at Cables\n        visit to Farr Library	2017-08-01	2	f
 2264	Fun	\n        browse library\n        John Adams\n        Suits	2017-08-01	5	f
@@ -3008,13 +3006,12 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2266	Grow	\n        4, 1, 3, 2	2017-08-02	0	f
 2267	Tools	\n        build workshop/app/DjangoCommand\n        create workshop/views.py code\n\n        fight with Digital Ocean	2017-08-02	6	f
 2342	Grow	\n        4, 2, 3, 3	2017-08-19	0	f
-2343	Teach	\n        setup UNC office\n        setup office computer\n        build course syllabus, upload to canvas, send to Anne\n        create first three lectures\n        build first week on canvas	2017-08-19	5	f
+2948	UNC	\n        grade ex4\n        contact poorly performing students\n        setup macbook for UNC work\n        create lesson 5, ex 5, quiz 2	2018-01-18	5	f
 2344	Church	\n        send out info about dashboard	2017-08-19	1	f
 2707	People	\n        Rachel & Andrew @ Romas\n        Carcassonne	2017-11-22	4	f
 2708	Fun	\n        Tinker, Tailor\n        library\n	2017-11-22	4	f
 2946	People	\n        Christine surgery \n        change flat tire in Bittersweet Park\n	2018-01-17	6	f
 2947	Grow	\n        3, 1, 3, 3	2018-01-18	0	f
-2948	Teach	\n        grade ex4\n        contact poorly performing students\n        setup macbook for UNC work\n        create lesson 5, ex 5, quiz 2	2018-01-18	5	f
 2949	People	\n        Christine surgery #2\n        wait at hospital\n        repair tire	2018-01-18	6	f
 3876	WAM	    get GoDaddy CRT\n    install on Digital Ocean web server\n    tighten security on server\n    request SSL certificate using CSR\n    document SSL setup\n    install SSL in NGINX config\n    debug web server config\n    make web server secure\n    minor UI improvements\n    capture log of engineering activities	2018-08-23	5	f
 3505	Business	    Stacie met with Women2Women\n    create plan for support	2018-05-30	2	f
@@ -3030,6 +3027,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2250	Tools	\n        a article to Seaman's Log\n        post articles from Seaman's Log on Facebook\n        show profile pict in Facebook excerpts\n        update logic in Book Notes\n        refactor Seaman's Log and Book Notes\n        show one excerpt in Book Notes page\n        debug char encoding issue\n        fix issue with thot doc	2017-07-29	8	f
 2151	Hire	\n        update production server to release 2017-06-23\n        testing on candidate PDF\n        create notifications log\n        view notification log\n        send request for assistance	2017-06-27	6	f
 2345	People	\n        Dave & Carol\n        Dinner at Andrew and Rachel's\n        help Stacie clean house\n	2017-08-19	8	f
+2705	UNC	\n        help with CS 350 exam\n        read email\n        think about teaching in Spring	2017-11-22	2	f
 2248	People	\n        Rachel & Andrew over\n        Carcassonne with Andrew\n	2017-07-28	4	f
 2346	People	\n        Dave & Carol\n        lunch at Pelican Lakes\n        Rachel & Andrew\n        Carcassone	2017-08-20	14	f
 2348	Grow	\n        5, 2, 2, 5	2017-08-21	0	f
@@ -3039,7 +3037,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2355	Grow	\n        3, 3, 4, 3\n        nap	2017-08-23	2	f
 2356	Tools	\n        Fix Digital Ocean auth	2017-08-23	1	f
 2357	People	\n        discuss visit with Stacie\n        discuss class and future with Stacie\n        plan camping trip\n        order bed	2017-08-23	3	f
-2358	Teach	\n        class #2 lecture\n        office hours\n        class prep\n        Classroom Setup notes	2017-08-23	5	f
+2380	UNC	\n        decide on class assignment approach\n        learn to use Dreamweaver\n        connect to FTP server (Filezilla, Dreamweaver)\n        prep Lecture #5, #6	2017-08-29	8	f
 2359	Fun	\n        Mr. Smith\n        Dance\n	2017-08-23	3	f
 2366	Fun	\n        camping trip to Covenant Heights\n	2017-08-25	8	f
 2367	Grow	\n        2, 1, 2, 5	2017-08-26	0	f
@@ -3050,30 +3048,30 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2370	Fun	\n        relax in mountains\n	2017-08-26	4	f
 2371	Grow	\n        4, 1\n        nap	2017-08-27	2	f
 2379	Grow	\n        2, 4, 4, 3\n        nap	2017-08-29	2	f
-2380	Teach	\n        decide on class assignment approach\n        learn to use Dreamweaver\n        connect to FTP server (Filezilla, Dreamweaver)\n        prep Lecture #5, #6	2017-08-29	8	f
+2349	UNC	\n        first class at UNC	2017-08-21	3	f
 2381	Tools	\n        evaluate Letsencrypt\n        fix  SLL certs on all domains\n        repair Who2Hire.us\n        update notes for SSL	2017-08-29	3	f
 2382	Fun	\n        Dance\n	2017-08-29	1	f
 2710	People	\n        Thanksgiving with Fleebees\n        tribute to Stacie	2017-11-23	5	f
 2712	Fun	\n        Iron Fist, Black Widow\n	2017-11-23	3	f
-2349	Teach	\n        first class at UNC	2017-08-21	3	f
+2353	UNC	\n        training on Canvas\n        build course in Canvas\n        prep for Wed class	2017-08-22	12	f
 2360	Grow	\n        4, 4, 2, 5\n        reflection time	2017-08-24	1	f
 2713	Grow	\n        5, 3, 2, 1	2017-11-24	0	f
 2361	People	\n        meeting with Josiah	2017-08-24	1	f
 2350	Fun	\n        solar eclipse\n        lunch at Romas\n        Arrival	2017-08-21	5	f
 2351	People	\n        visit about teaching college\n        visit with Dave & Carol\n	2017-08-21	6	f
 2352	Grow	\n        5, 2, 2, 4	2017-08-22	0	f
-2353	Teach	\n        training on Canvas\n        build course in Canvas\n        prep for Wed class	2017-08-22	12	f
+2363	UNC	\n        Design & Development\n        discussion ideas\n        Effective & Efficient\n        Software Workshop ideas\n        install Dropbox on UNC computer\n        explore textbook and CD\n        update lecture notes for Week 1 & Week 2\n	2017-08-24	9	f
 2362	Fun	\n        Alias	2017-08-24	3	f
 2372	Church	\n        Rachel Dawson leads worship\n        think about ministry passions\n        pray about my role in church	2017-08-27	6	f
 2373	People	\n        Rachel and Stacie at Egg & I\n        discuss teaching 	2017-08-27	2	f
 2374	Fun	\n        Vikings, Alias\n	2017-08-27	4	f
 2375	Grow	\n        3, 1, 4, 4	2017-08-28	0	f
-2363	Teach	\n        Design & Development\n        discussion ideas\n        Effective & Efficient\n        Software Workshop ideas\n        install Dropbox on UNC computer\n        explore textbook and CD\n        update lecture notes for Week 1 & Week 2\n	2017-08-24	9	f
+2365	UNC	\n        Lecture #3\n        follow up with students\n        use name tag\n        install Dreamweaver	2017-08-25	6	f
 2364	Grow	\n        3, 2, 2, 5	2017-08-25	0	f
-2365	Teach	\n        Lecture #3\n        follow up with students\n        use name tag\n        install Dreamweaver	2017-08-25	6	f
+2376	UNC	\n        lecture prep\n        Lecture #4\n        rebuild Canvas for course\n        follow up with students	2017-08-28	8	f
 2714	Tools	\n        create reusable slide creator	2017-11-24	1	f
 2715	People	\n        9-8 Thanksgiving with Rachel and Andrew	2017-11-24	11	f
-2376	Teach	\n        lecture prep\n        Lecture #4\n        rebuild Canvas for course\n        follow up with students	2017-08-28	8	f
+2722	UNC	\n        plan lessons for BACS 200 last week\n        create exercise templates and instructions	2017-11-26	4	f
 2377	People	\n        talk with Stacie	2017-08-28	2	f
 2716	Fun	\n        Big Bang\n	2017-11-24	2	f
 2717	Grow	\n        5, 2, 2, 3	2017-11-25	0	f
@@ -3082,12 +3080,11 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2719	Fun	\n        Silicon Valley\n        Profit, This is Us	2017-11-25	7	f
 2720	People	\n        Christmas lights\n        Christine treats @ Sol de Jalisco\n	2017-11-25	3	f
 2721	Grow	\n        4, 2, 3, 4\n        nap	2017-11-26	1	f
-2722	Teach	\n        plan lessons for BACS 200 last week\n        create exercise templates and instructions	2017-11-26	4	f
+2727	UNC	\n        teach class #39	2017-11-27	9	f
 2723	Church	\n        Rachel D. talk on Hope	2017-11-26	4	f
 2724	People	\n        turkey soup at Garcias\n        time with Stacie	2017-11-26	2	f
 2725	Fun	\n        Runaways, Big Bang\n	2017-11-26	3	f
 2726	Grow	\n        3, 4, 3, 5\n        talk with Stacie	2017-11-27	2	f
-2727	Teach	\n        teach class #39	2017-11-27	9	f
 2728	Fun	\n        Madam Sec\n	2017-11-27	3	f
 2729	Grow	\n        5, 5, 4, 2	2017-11-28	0	f
 2709	Grow	\n        5, 5, 2, 5\n        long walk	2017-11-23	2	f
@@ -3095,35 +3092,36 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2951	Grow	\n        5, 2, 2, 3	2018-01-19	0	f
 2269	Grow	\n        4, 2, 2, 5	2017-08-03	0	f
 2271	Church	\n        Dawson family & Garcias\n	2017-08-03	6	f
+2358	UNC	\n        class #2 lecture\n        office hours\n        class prep\n        Classroom Setup notes	2017-08-23	5	f
 2224	Church	\n        listen to Amazing Grace\n	2017-07-21	4	f
 1313	Fun	\n        This is Us, Goldbergs\n	2017-02-01	2	f
 111	Business	\n        Monthly meeting with Stacie & Eric	2016-02-08	4	f
 113	People	\n        Tomoko and Greg over for dinner	2016-02-08	4	f
 2383	Grow	\n        5, 5, 3, 4	2017-08-30	0	f
-2384	Teach	\n        Lecture #5\n        read HTML & CSS\n        use Aptana\n        create demo directory\n        follow up with students\n        grade assignment #3\n        Aaron Drury quiz	2017-08-30	8	f
+2387	UNC	\n        build HTML demo projects	2017-08-31	2	f
 2385	People	\n        Andrew and Rachel over for dinner\n        lunch at Zoes\n        Stacie visits my office	2017-08-30	4	f
 2386	Fun	\n        Dance, Profit\n	2017-08-30	2	f
-2387	Teach	\n        build HTML demo projects	2017-08-31	2	f
+2965	UNC	\n        student follow up\n	2018-01-21	1	f
 2388	Hire	\n        mid-night thinking about Who2Hire\n        install Yoast SEO on Who2Hire.us\n        discuss business plans with Stacie\n        explore SEO\n        think through marketing learning	2017-08-31	6	f
 2389	Grow	\n        3, 4, \n        nap\n        think about personal independence dysfunction\n        schedule Dr Kary\n        schedule Ehrlich	2017-08-31	2	f
 2390	Church	\n        church board meeting	2017-08-31	3	f
 2391	People	\n        unpack bed	2017-08-31	1	f
 2962	Grow	\n        5, 2, 3, 3\n        my heros\n        simpler life\n        personal reflection\n        thinking patterns & books\n        Learning patterns\n        read Focus\n        weekly rhythm	2018-01-21	5	f
-2965	Teach	\n        student follow up\n	2018-01-21	1	f
+2730	UNC	\n        grade take-home exam 200, 350\n        prep class #40	2017-11-28	9	f
 2736	Grow	\n        5, 4, 4, 2	2017-11-30	0	f
-2730	Teach	\n        grade take-home exam 200, 350\n        prep class #40	2017-11-28	9	f
+2734	UNC	\n        teach class #40	2017-11-29	9	f
 2731	People	\n        Pelican Lake with Christine 	2017-11-28	2	f
 2732	Fun	\n        Alias\n	2017-11-28	3	f
 1970	Church	\n        last SoKM\n	2017-05-03	4	f
 2042	Fun	\n        Return of the King	2017-05-31	4	f
 2733	Grow	\n        discuss life with Stacie\n        5, 5, 3, 5	2017-11-29	2	f
-2734	Teach	\n        teach class #40	2017-11-29	9	f
+2952	UNC	\n        Update lesson5 (lesson5, ex5, quiz2)\n         Build plans for Sensei Online Courses\n         Teach Lesson \n         Grade Quiz 	2018-01-19	6	f
 2735	Fun	\n        Legends of Tomorrow, Big Bang\n	2017-11-29	3	f
 2969	Fun	\n        Defenders, Victoria, Amazing Race\n	2018-01-22	5	f
 2953	People	\n        Christine comes home from hospital	2018-01-19	2	f
 2963	People	\n        Greek cooking\n        Rachel and Andrew\n        Carcassonne with Andrew\n        time with Stacie	2018-01-21	6	f
 2970	Grow	\n        5, 1, 3, 3	2018-01-23	0	f
-2952	Teach	\n        Update lesson5 (lesson5, ex5, quiz2)\n         Build plans for Sensei Online Courses\n         Teach Lesson \n         Grade Quiz 	2018-01-19	6	f
+2967	UNC	\n        create lesson 6\n        grade ex5\n        teach lesson 6	2018-01-22	6	f
 2959	Tools	\n        create todo and done notes for teaching tools\n        debug UNC scripts on Uncle Ed\n        Web Apps Lesson 1-3\n        build Django app on Uncle Ed	2018-01-20	3	f
 2960	Write	\n        Web Apps lesson plan	2018-01-20	2	f
 2966	Grow	\n        5, 2, 2, 2\n        weekly planning	2018-01-22	2	f
@@ -3134,17 +3132,14 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2954	Church	\n        volunteer appreciate night	2018-01-19	2	f
 2955	Tools	\n        create plan for Sensei Online Courses	2018-01-19	3	f
 2956	Fun	\n        Carcassonne\n	2018-01-19	1	f
-2967	Teach	\n        create lesson 6\n        grade ex5\n        teach lesson 6	2018-01-22	6	f
+3269	UNC	\n        Lesson 32 - Illustrator\n        grade blog 5	2018-04-06	5	f
 2968	People	\n        talk with Christine and Stacie\n        job query from John Dutton	2018-01-22	1	f
 2957	Grow	\n        walk to HOA meeting\n        get library book about Non-conventional People\n        5, 1, 3, 3	2018-01-20	1	f
 2972	Tools	\n        build Sensei prototype web server\n        update code repos and scripts\n        Uncle Ed Tools\n        fix bash shell prompt\n        build out WebApps lessons 1-5\n        create Sensei Online Courses tool	2018-01-23	7	f
-3936	Tools	    	2018-09-05	0	f
 2153	Tools	\n        fix issue with blank root parent\n        improve Thot UX\n        debug thot import	2017-06-27	3	f
 3268	Grow	\n        5, 4, 4, 3\n        nts 2\n        think about personal growth	2018-04-06	3	f
-3269	Teach	\n        Lesson 32 - Illustrator\n        grade blog 5	2018-04-06	5	f
 3270	Fun	\n        Homeland\n        Abertos\n    	2018-04-06	6	f
 3275	Church	    Anabeth & Amy	2018-04-08	4	f
-3938	People	    	2018-09-05	0	f
 3273	Fun	    Ghost in the Shell\n    Dragonfly	2018-04-07	4	f
 3937	Fun	    Britannia\n    nts 1\n    	2018-09-05	5	f
 3272	People	    talk with Stacie\n    Stacie returns\n    Andrew, Rachel, Christine	2018-04-07	5	f
@@ -3158,6 +3153,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2273	Business	\n        planning for Creative Leap	2017-08-04	2	f
 1311	People	\n        surgery for Stacie\n        Andrew over for Carcassonne	2017-02-01	4	f
 1312	Church	\n        cancel SoKM due to weather\n        5 traffic deaths in Weld 	2017-02-01	1	f
+2384	UNC	\n        Lecture #5\n        read HTML & CSS\n        use Aptana\n        create demo directory\n        follow up with students\n        grade assignment #3\n        Aaron Drury quiz	2017-08-30	8	f
 2154	Fun	\n        Amazing Race\n\n	2017-06-26	4	f
 2155	Fun	\n        setup new phone\n        Amazing Race\n	2017-06-27	3	f
 2156	Grow	\n        long walk\n        3, 3, 3, 5\n        reflect on joy/pain	2017-06-28	2	f
@@ -3180,13 +3176,13 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1975	WAM	\n        fix WAM email address	2017-05-05	1	f
 1976	Fun	\n        Guardians, Shield, Good Place	2017-05-05	3	f
 1977	People	\n        meet with Howells	2017-05-05	2	f
-2737	Teach	\n        grade take-home exam 200, 350\n        prep class #41\n        MCB faculty meeting\n        MCB Christmas party	2017-11-30	14	f
-2392	Teach	\n        lecture #6\n        first quiz\n        decide to retake quiz\n        start coding live in class	2017-09-01	7	f
+2392	UNC	\n        lecture #6\n        first quiz\n        decide to retake quiz\n        start coding live in class	2017-09-01	7	f
+2976	UNC	\n        create lesson7, ex7\n        teach lesson7	2018-01-24	6	f
 2393	Grow	\n        4, 1, 3, 3	2017-09-01	0	f
 2394	People	\n        birthday celebration\n        CB Potts	2017-09-01	3	f
 2395	Fun	\n        Hitman's Bodyguard\n	2017-09-01	4	f
 2975	Grow	\n        4, 2, 3, 3\n        read Originals	2018-01-24	2	f
-2976	Teach	\n        create lesson7, ex7\n        teach lesson7	2018-01-24	6	f
+2986	UNC	\n        teach8\n        ex8, lesson8	2018-01-26	8	f
 2983	Fun	\n        Victoria	2018-01-25	1	f
 2991	People	\n        Egg & I\n        game store\n        Andrew & Rachel	2018-01-27	5	f
 3539	People	    house cleaning\n    Anthony Bordain death\n    prepare grill for Andrew\n    transport grill to Andrew's\n    Cazadores\n    Davey and the Blue Dogs	2018-06-08	6	f
@@ -3196,10 +3192,9 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2984	Church	\n        church board meeting\n	2018-01-25	4	f
 145	Tools	\n        decide on using "Learning" task in Harvest\n        respond to Michael Uschold	2016-02-17	1	f
 2985	Grow	\n        4, 3, 3, 3	2018-01-26	0	f
-2986	Teach	\n        teach8\n        ex8, lesson8	2018-01-26	8	f
+3500	UNC	    create booknotes quotes from kindle highlights	2018-06-02	3	f
 2987	People	\n        Hirata's party	2018-01-26	2	f
 2988	Fun	\n        Victoria, Good Place, Turn\n	2018-01-26	4	f
-3500	Teach	    create booknotes quotes from kindle highlights	2018-06-02	3	f
 4085	Fun	    library\n    nts 2\n    Jack Ryan\n    Mr Robot\n    	2018-10-11	6	f
 3271	Grow	    3, 4\n    Great Organization = People + Culture\n    Openness and accepting reality\n    List of Problems\n    nts 2	2018-04-07	5	f
 2973	People	\n        cook Tadtziki & zuchini croquettes\n        Andrew and Rachel	2018-01-23	4	f
@@ -3210,14 +3205,9 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2981	Tools	\n        grade ex7\n        build Sensei tool\n        create plan for Uncle Ed computer\n        write plan for Uncle Ed Tools\n        build tools on Uncle Ed computer\n        debug 	2018-01-25	6	f
 2989	Grow	\n        4, 4, 3, 3\n        planning and goals	2018-01-27	1	f
 2990	Tools	\n        MyBook redirect and domain manager\n        simplify MyBook routing\n        renew SLL for who2hire.us\n        build new info app in MyBook\n        move history files to info	2018-01-27	5	f
-3536	Teach	    	2018-06-08	0	f
-3537	Tools	    	2018-06-08	0	f
-3538	Fun	    	2018-06-08	0	f
-3540	Church	    	2018-06-08	0	f
+4083	UNC	    present designer feedback\n    refactor dead code\n    	2018-10-11	7	f
 3534	Grow	    5, 5, 3, 5\n    walk 5.5 miles\n    13,000 steps\n    Habits	2018-06-08	4	f
-4083	Teach	    present designer feedback\n    refactor dead code\n    	2018-10-11	7	f
 3939	Business	    grout shower	2018-09-04	2	f
-4084	Tools	    	2018-10-11	0	f
 4011	Grow	    5, 3, 4, 5\n    11,000 steps\n    long walk\n    weight: 208.2	2018-09-22	2	f
 2277	Fun	\n        John Adams\n	2017-08-04	2	f
 2278	Grow	\n        4, 1, 1, 5\n        daily planning	2017-08-05	1	f
@@ -3225,6 +3215,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2979	Grow	\n        4, 2, 3, 3	2018-01-25	0	f
 2279	Business	\n        write to Greg about programming languages	2017-08-05	1	f
 2043	Fun	\n        Enterprise\n	2017-06-01	2	f
+2737	UNC	\n        grade take-home exam 200, 350\n        prep class #41\n        MCB faculty meeting\n        MCB Christmas party	2017-11-30	14	f
 1979	Grow	\n        5, 3, 2, 5\n        Walk to library\n        The Next 100 Years\n        Think about personal destiny	2017-05-06	7	f
 2045	Tools	\n        organize brain\n        create booknotes for EQ, Next100Years, Perfect, Requiem\n        build shrinking-world.com website	2017-06-02	5	f
 2161	Grow	\n        5, 4, 3, 5\n        walk to lunch\n        appreciate life	2017-06-30	2	f
@@ -3245,40 +3236,38 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2994	Church	\n        church business meeting\n	2018-01-28	4	f
 2396	Grow	\n        3, 4, 3, 4	2017-09-02	0	f
 2397	People	\n        birthday celebration & grease fire\n        disassemble bed\n        deliver bed to Garcias and assembly\n        assemble king bed\n	2017-09-02	8	f
-2398	Teach	\n        decide on Course Summary Web Demo\n        create Week 1, Week 2 web site\n        move code to FTP server\n        gain experience with Aptana\n	2017-09-02	6	f
+2739	UNC	\n        teach class #41\n        last day of classes\n        CIS department meeting	2017-12-01	10	f
 2399	Grow	\n        4, 4, 3, 2	2017-09-03	0	f
 2400	People	\n        lunch at Meeker's\n        tour Greeley Convention Center	2017-09-03	2	f
 2401	Church	\n        church service	2017-09-03	4	f
 2402	Fun	\n        Iron Man 1 & 2, Thor\n	2017-09-03	8	f
 2738	Grow	\n        5, 5, 3, 5	2017-12-01	0	f
-2739	Teach	\n        teach class #41\n        last day of classes\n        CIS department meeting	2017-12-01	10	f
+3551	UNC	    plan PHP lessons & apps\n    update BACS 350 content\n    build guide Django app\n    isolate guide from mybook logic	2018-06-15	5	f
 2740	People	\n        Big Fat Pastor with Rachel\n    	2017-12-01	4	f
 3285	Grow	    5, 2,\n    record personal beliefs about business\n    analyze pain for marketing success	2018-04-11	2	f
 3546	Grow	    5, 2, 3, 2\n    nap\n    video on foods to avoid	2018-06-10	3	f
 147	Grow	\n        Late night worry\n        	2016-02-17	1	f
 3549	Church	    talk to Chris Warren\n    talk to Clint and Mary Swain	2018-06-10	4	f
-3555	Church	    	2018-06-15	0	f
-3551	Teach	    plan PHP lessons & apps\n    update BACS 350 content\n    build guide Django app\n    isolate guide from mybook logic	2018-06-15	5	f
+3557	UNC	    first complete schedule for 350 class\n    update http://seamansguide.com/PhpApps/Schedule page\n    decide on Bluehost for BACS 200	2018-06-09	2	f
 3553	Fun	    Supergirl\n    Dragonfly	2018-06-15	2	f
-3557	Teach	    first complete schedule for 350 class\n    update http://seamansguide.com/PhpApps/Schedule page\n    decide on Bluehost for BACS 200	2018-06-09	2	f
+3290	UNC	    Lesson 35 - Beyond Websites	2018-04-12	5	f
 3558	Tools	    sync files onto macbook	2018-06-09	1	f
 3547	Fun	    Dragonfly	2018-06-10	1	f
-3290	Teach	    Lesson 35 - Beyond Websites	2018-04-12	5	f
+3294	UNC	    Lesson 35 - Publishing	2018-04-13	6	f
 2288	People	\n        lunch with Eric at Sol de Jalisco	2017-08-07	2	f
-3294	Teach	    Lesson 35 - Publishing	2018-04-13	6	f
-3286	Teach	    Lesson 34 - Design Review\n    All the Queens Horses	2018-04-11	7	f
+3286	UNC	    Lesson 34 - Design Review\n    All the Queens Horses	2018-04-11	7	f
+3282	UNC	    build design review groups pages	2018-04-10	5	f
 3288	Church	    small group	2018-04-11	3	f
 3554	People	    Anna's Graduation\n    Rachel sick at party	2018-06-15	4	f
 3291	People	    Stacie returns	2018-04-12	1	f
 3292	Fun	    Amazing Race, Homeland, Madam Sec	2018-04-12	5	f
 3281	Grow	    3, 1, 3, 5\n    Originals - Women's suffrage\n    tools for time tracking\n    nts 2	2018-04-10	4	f
-3282	Teach	    build design review groups pages	2018-04-10	5	f
+3542	UNC	    install XAMPP (not yet working)\n    decide on server strategy\n    write PHP Skills, HTML Skills	2018-06-12	2	f
 3283	People	    discuss coaching with Stacie	2018-04-10	1	f
 148	Grow	\n        talk about work life\n        thinking about expectations	2016-02-18	2	f
 3284	Fun	    Homeland	2018-04-10	4	f
-3542	Teach	    install XAMPP (not yet working)\n    decide on server strategy\n    write PHP Skills, HTML Skills	2018-06-12	2	f
+3279	UNC	    Lesson 33 - Teamwork	2018-04-09	7	f
 3278	Grow	    5, 2, 2, 4\n    walk\n    nts 3	2018-04-09	3	f
-3279	Teach	    Lesson 33 - Teamwork	2018-04-09	7	f
 3543	Church	    pack for trip\n    travel to Grand Junction\n    Abe Huber spoke on Living in Tents\n    regional conference	2018-06-12	11	f
 3280	Fun	    Homeland	2018-04-09	4	f
 3541	Grow	    4, 3, 3, 5\n    wake up at 5:00\n    walk over to garden	2018-06-12	1	f
@@ -3290,26 +3279,26 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2289	Tools	\n        design for Bio Workflow Manager	2017-08-07	2	f
 149	People	\n        dinner at Palominos	2016-02-18	2	f
 150	Fun	\n        TV\n	2016-02-18	2	f
-3552	Tools	    	2018-06-15	0	f
 2044	Grow	\n        5, 2, 3, 2	2017-06-02	0	f
 1978	Grow	\n        5, 3, 3, 2\n	2017-05-05	0	f
+2398	UNC	\n        decide on Course Summary Web Demo\n        create Week 1, Week 2 web site\n        move code to FTP server\n        gain experience with Aptana\n	2017-09-02	6	f
 2162	Fun	\n        Amazing Race, Castle\n        	2017-06-29	4	f
 2163	Tools	\n        create simple summary for app design: Wellbeing, Money, Aspire, MyBook\n        rework menu loading for all sites\n        remove dead code\n        start work on money app	2017-06-30	8	f
 2164	People	\n        lunch with Stacie at Senior Jalapeno	2017-06-30	2	f
 2741	Grow	\n        5, 4, 3, 3\n        brainstorm on tasks to do\n        review time logs	2017-12-02	2	f
 2742	Business	\n        discuss health insurance	2017-12-02	1	f
-2743	Teach	\n        grade BACS 200 websites	2017-12-02	8	f
+2750	UNC	\n        create two final exams\n        lunch at Romas	2017-12-04	9	f
 2744	Fun	\n        The Americans\n        Valerian\n	2017-12-02	3	f
 2745	Grow	\n        5, 4, 3, 4\n        nap\n        reflection	2017-12-03	2	f
 2746	Church	\n        Jenny - Peace	2017-12-03	4	f
 2747	People	\n        time with Stacie\n        lunch with Rachel at Doug's Day Diner	2017-12-03	4	f
 2748	Fun	\n        Legends, Madam Sec\n        Edge of Eternity\n        Black Widow\n	2017-12-03	4	f
 2749	Grow	\n        4, 4, 3, 3	2017-12-04	0	f
-2750	Teach	\n        create two final exams\n        lunch at Romas	2017-12-04	9	f
+2754	UNC	\n        no show special offer\n        BACS 200 course schedule\n        interact with students	2017-12-05	6	f
 2751	Church	\n        UNC finals outreach	2017-12-04	3	f
 2752	Fun	\n        Goldbergs, Librarians\n	2017-12-04	2	f
 2753	Grow	\n        4, 4, 3, 3	2017-12-05	0	f
-2754	Teach	\n        no show special offer\n        BACS 200 course schedule\n        interact with students	2017-12-05	6	f
+2405	UNC	\n        build week-3 demo site\n        build FTP site for HTML & CSS example code\n        build Tricks web site tree\n        create course roadmap	2017-09-04	7	f
 3952	Fun	    Westworld\n    	2018-09-07	5	f
 2886	Business	\n        review investments\n        sell $20,000 FSTVX\n        review 2017 finances\n    	2018-01-02	4	f
 3297	Grow	    4, 3, 3, 2\n    Time Effectiveness\n    explore biz and life goals with Stacie	2018-04-14	3	f
@@ -3317,7 +3306,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3561	Church	    write Church Benefits Principles	2018-06-09	1	f
 2403	Grow	\n        4, 4, 3, 3	2017-09-04	0	f
 2404	People	\n        discuss Josiah travel with Stacie\n        discuss career development with Christine\n        Facebook	2017-09-04	3	f
-2405	Teach	\n        build week-3 demo site\n        build FTP site for HTML & CSS example code\n        build Tricks web site tree\n        create course roadmap	2017-09-04	7	f
+3930	UNC	    clean up old file\n    optimize lesson creation\n    plan Lesson 7 200/350\n    build BACS_350 repo\n    create code tree for 350\n    	2018-09-04	4	f
 2406	Fun	\n        Avengers, Iron Man 3\n	2017-09-04	4	f
 2407	Grow	\n        3, 4, 3, 3	2017-09-05	0	f
 3953	Grow	    4, 4, 3, 5\n    weight: 206.4\n    nap	2018-09-09	2	f
@@ -3330,35 +3319,33 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2046	Hire	\n        who2hire.us website security\n        fix email at shrinking-world.com	2017-06-02	2	f
 3562	Grow	    4, 2, 3, 3\n    clean paper inbox	2018-06-11	1	f
 4018	Fun	    Good Place, Iron Fist, Proposal\n    mess with sound\n    	2018-09-21	3	f
-3930	Teach	    clean up old file\n    optimize lesson creation\n    plan Lesson 7 200/350\n    build BACS_350 repo\n    create code tree for 350\n    	2018-09-04	4	f
+3563	UNC	    meet Charmayne\n    write Teaching Tech - Lectures have little value\n    write Mehrgan\n    work out server strategy with Chris Vegter\n    organize schedule around textbook\n    update prep notes	2018-06-11	8	f
 3295	People	    discuss coaching with Stacie\n    life goals and embracing reality	2018-04-13	2	f
 3565	Fun	    ET, Dragonfly\n    Flash	2018-06-11	4	f
-3563	Teach	    meet Charmayne\n    write Teaching Tech - Lectures have little value\n    write Mehrgan\n    work out server strategy with Chris Vegter\n    organize schedule around textbook\n    update prep notes	2018-06-11	8	f
+3954	UNC	    rewrite lesson script code\n    build test process for both classes\n    	2018-09-09	4	f
 3566	Grow	    5, 3, 4, 3	2018-06-13	0	f
 3950	Grow	    3, 3, 1, 1\n    weight: 209.0\n    dizziness and early bed	2018-09-07	1	f
-3954	Teach	    rewrite lesson script code\n    build test process for both classes\n    	2018-09-09	4	f
+4003	UNC	    200-13 Forms\n    350-13 Building Apps, practice for exams, solutions\n    sign up for zyBooks\n    	2018-09-19	9	f
 3296	Fun	    Amazing Race, Justice League	2018-04-13	4	f
-3955	Tools	    	2018-09-09	0	f
-3956	Fun	    \n    	2018-09-09	0	f
 3567	Church	    regional conference\n    Daryl Evans\n    Abe Huber\n    Kirk Yamaguchi\n    Gabe Quintana\n    Phil Stroud	2018-06-13	14	f
-4003	Teach	    200-13 Forms\n    350-13 Building Apps, practice for exams, solutions\n    sign up for zyBooks\n    	2018-09-19	9	f
+4021	UNC	    build solutions for lesson 350-14    \n    	2018-09-23	3	f
 4086	People	    Andrew & Rachel watch This is Us	2018-10-11	1	f
-4021	Teach	    build solutions for lesson 350-14    \n    	2018-09-23	3	f
+4092	UNC	    basic template encoding\n    	2018-10-07	2	f
 151	Fun	\n        TV\n        	2016-02-19	4	f
 4090	People	    dinner at Rio\n    Kelli arrives at airport	2018-10-08	3	f
 152	Business	\n        family finances\n        create cornbread charts	2016-02-20	8	f
-4092	Teach	    basic template encoding\n    	2018-10-07	2	f
+3947	UNC	    think through Lesson 9\n    	2018-09-08	2	f
 4093	Fun	    Circle trilogy white\n    	2018-10-07	2	f
-3947	Teach	    think through Lesson 9\n    	2018-09-08	2	f
+4088	UNC	    talk with Christopher Maxwell\n        	2018-10-08	8	f
 3948	Fun	    Westworld (finish season 1)\n    Dance\n    	2018-09-08	8	f
 3949	People	    visit with Stacie	2018-09-08	3	f
 4087	Grow	    5, 3, 2, 3\n    weight: 207.2	2018-10-08	0	f
-4088	Teach	    talk with Christopher Maxwell\n        	2018-10-08	8	f
 4089	Fun	    Vikings, Circle\n    	2018-10-08	3	f
 4091	Grow	    4, 3, 3, 3\n    weight: 208	2018-10-07	0	f
 2047	People	\n        deep talk with Stacie\n        Cafe Athens	2017-06-02	3	f
 2048	Fun	\n        Wonder Woman\n        Barnes and Noble\n	2017-06-02	4	f
 2049	Grow	\n        5, 3, 2, 3\n        publish booknotes excerpts	2017-06-03	1	f
+2743	UNC	\n        grade BACS 200 websites	2017-12-02	8	f
 2055	Grow	\n        5, 2, 3, 4\n        walk to library	2017-06-05	0	f
 2423	Fun	\n        Hawaii 50, internet\n	2017-09-08	6	f
 2424	Grow	\n        4, 5\n        think about personal growth and teaching experience	2017-09-09	2	f
@@ -3369,13 +3356,13 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1187	Tools	\n        update plan for task manager\n        create monthly display of tasks\n        create weekly summary for tasks\n        simplify task queries using ORM\n        create task tests\n        build task dashboard\n        WAM message post\n        upgrade operating system on Mac\n        renew Goddady domains	2016-12-16	6	f
 1222	Write	\n        author scorecard\n        Writing Workbench\n        organize brain\n        publish Projects articles\n        publish Brain Spaces (Goal, Learn, Teach, Build)\n        Processing Ideas\n        Tools for Thinking\n        publish Project list\n        create Software/BestPractice	2016-12-24	6	f
 1244	People	\n        New Years party - Moras, Claudine, Rachel	2016-12-31	6	f
-2408	Teach	\n        decide on parts: HTML/CSS basics, Design, JavaScript\n        prep lecture #7, #8\n        work at library\n        FTP content to server	2017-09-05	8	f
+2412	UNC	\n        prepare for Lecture #7\n        Lecture #7\n        introduce live programming to class\n        troubleshoot FTP connections\n        hookup Instructor laptop\n        lunch and think at Santeramos	2017-09-06	7	f
 2409	People	\n        lunch at Romas with Christine and Stacie	2017-09-05	3	f
 2410	Fun	\n        Dance\n        Edge of Eternity\n\n	2017-09-05	3	f
 2411	Grow	\n        nap\n        4, 4, 2, 3	2017-09-06	2	f
-2412	Teach	\n        prepare for Lecture #7\n        Lecture #7\n        introduce live programming to class\n        troubleshoot FTP connections\n        hookup Instructor laptop\n        lunch and think at Santeramos	2017-09-06	7	f
+2426	UNC	\n        workflow model - build overview, send to Stacie	2017-09-09	2	f
 2425	Business	\n        buy INST stock\n        subscribe to Motley Fool	2017-09-09	2	f
-2426	Teach	\n        workflow model - build overview, send to Stacie	2017-09-09	2	f
+2417	UNC	\n        build framework for Workflow Model\n        create diagrams for workflow model\n        create evernote with workflow model description\n        setup website for class\n        setup Quiz #1 Retake	2017-09-07	6	f
 2995	People	\n        time with Stacie\n        Right Coast Pizza	2018-01-28	3	f
 2996	Fun	\n        Resident, This is Us, Shield	2018-01-28	4	f
 2997	Grow	\n        5, 2, 3, 2\n        build MarkSeaman/info/Projects - Grow, Build, Learn, Write	2018-01-29	2	f
@@ -3385,14 +3372,13 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2414	Fun	\n        Edge of Eternity\n        Guardians of Galaxy\n        Profit\n	2017-09-06	3	f
 2415	Grow	\n        4, 3, 4, 3	2017-09-07	0	f
 2416	Church	\n        give away Wii	2017-09-07	1	f
-2417	Teach	\n        build framework for Workflow Model\n        create diagrams for workflow model\n        create evernote with workflow model description\n        setup website for class\n        setup Quiz #1 Retake	2017-09-07	6	f
+4030	UNC	    200 15 - CSS Color\n    350 15 - Design Patterns\n    Meet about 250 class structure	2018-09-26	9	f
 3545	Church	    Abe Huber\n    Insurance meeting at conference\n    discuss financial numbers with Stacie\n    Phil Stroud\n    drive home\n    dinner at Pullmans in Glenwood	2018-06-14	14	f
 117	People	\n        Business with Stacie	2016-02-09	3	f
 3301	Fun	    use OverDrive to checkout eBooks\n    install Olive Tree app on Kindle Fire	2018-04-14	4	f
 4036	Fun	    TV installation and setup\n    Hunger Game IV	2018-09-25	6	f
 4094	People	    call Dad about Atheist email \n    Leslie and Lucy arrive\n    time with Stacie	2018-10-07	4	f
 4029	Grow	    5, 4, 5, 3\n    weight: 207	2018-09-26	0	f
-4031	Tools	    	2018-09-26	0	f
 2418	Business	\n        haircut\n        propane	2017-09-07	1	f
 4032	Fun	    Vikings\n    	2018-09-26	1	f
 4033	People	    Andrew and Rachel	2018-09-26	4	f
@@ -3402,9 +3388,9 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4028	People	    talk with Stacie	2018-09-24	1	f
 2420	Fun	\n        Hawaii 50, Dance\n	2017-09-07	3	f
 2421	Grow	\n        4, 5, 3, 3	2017-09-08	0	f
-4030	Teach	    200 15 - CSS Color\n    350 15 - Design Patterns\n    Meet about 250 class structure	2018-09-26	9	f
+2422	UNC	\n        setup Quiz\n        class #8\n        Quiz #1 retake\n        conflict with students\n        CIS meeting\n        announce homework due date extension	2017-09-08	8	f
 2419	People	\n        Josiah & Sam\n        Smash Burger with Stacie	2017-09-07	3	f
-2422	Teach	\n        setup Quiz\n        class #8\n        Quiz #1 retake\n        conflict with students\n        CIS meeting\n        announce homework due date extension	2017-09-08	8	f
+4382	UNC	    explore Repl.it\n    write draft of first lessons\n    build embedded Repl\n    create Repl: Simple Page, HTML and CSS\n    	2018-12-17	5	f
 2052	Grow	\n        5, 2, 2, 3\n        walk\n        pray for others\n        nap	2017-06-04	4	f
 2050	People	\n        HOA board BBQ\n        help Andrew build workbench	2017-06-03	9	f
 2051	Fun	\n        Vikings\n        Niki Heat\n	2017-06-03	4	f
@@ -3416,10 +3402,9 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4389	Church	    Ruby's first church service	2018-12-16	4	f
 4390	Fun	    Stargate: Continuum, Resident\n    	2018-12-16	4	f
 4381	Grow	    5, 3, 3, 2\n    weight: 207.4\n    Man's Search for Meaning	2018-12-17	2	f
-4382	Teach	    explore Repl.it\n    write draft of first lessons\n    build embedded Repl\n    create Repl: Simple Page, HTML and CSS\n    	2018-12-17	5	f
+4571	Grow	    5, 1, 1, 2\n    weight: 209.6	2019-01-28	0	f
 4384	Fun	    download Pentomino puzzles\n    GoT\n    	2018-12-17	3	f
 4385	People	    Lucy arrives\n    dinner with Lucy & Stacie\n    setup CPAP machine	2018-12-17	2	f
-4571	Grow	    5, 1, 1, 2\n    weight: 209.6	2019-01-28	0	f
 2169	Fun	\n        Regarding Henry\n        Timeless, Legends\n	2017-07-01	5	f
 2170	Grow	\n        3, 3, 3, 2\n        nap	2017-07-02	2	f
 2171	Church	\n        church service	2017-07-02	4	f
@@ -3432,7 +3417,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2428	Fun	\n        Vikings, internet	2017-09-09	4	f
 2429	People	\n        Andrew's birthday\n	2017-09-09	2	f
 2430	Grow	\n        4, 3, 4, 3\n        personal review\n        think about teaching experience	2017-09-10	2	f
-2431	Teach	\n        build week4 website\n        repair web server root page\n        build up Teacher web page\n        setup Google user for UNC\n        build index page for HTML examples\n        create links for web tricks\n        write Development Skills guide\n        review Quiz results\n        prep lecture\n        send announcement to students	2017-09-10	7	f
+2998	UNC	\n        Topics for Part 1 (week 1-5)\n        Lesson 9: \n            prep lesson, ex\n            grade quiz, ex\n            teach	2018-01-29	6	f
 2432	Fun	\n        Silicon Valley\n	2017-09-10	5	f
 2057	People	\n        meet with Jayden Howell	2017-06-05	2	f
 2058	Hire	\n        debug who2hire.us security settings for letsencrypt\n        update server setup notes	2017-06-05	6	f
@@ -3441,7 +3426,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2061	Grow	\n        5, 3, 3, 5\n        read EQ\n        read Essentialist\n        two long walks	2017-06-06	3	f
 2062	Tools	\n        improve booknotes\n        clean up websites\n        build rcp scripts\n        move docs around	2017-06-06	3	f
 3576	Fun	    100 Foot Journey\n    I Can Only Imagine	2018-06-16	4	f
-2998	Teach	\n        Topics for Part 1 (week 1-5)\n        Lesson 9: \n            prep lesson, ex\n            grade quiz, ex\n            teach	2018-01-29	6	f
+4049	UNC	    Plan lessons for week \n    	2018-09-30	1	f
 2063	Hire	\n        Stacie meets with John Klassen\n        discuss meeting and next steps	2017-06-06	5	f
 2064	Fun	\n        Madam Sec\n	2017-06-06	3	f
 2065	Grow	\n        3, 4, 4, 5\n        walk	2017-06-07	1	f
@@ -3450,16 +3435,14 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3000	Fun	\n        ER, Flash, Supergirl, Amazing Race\n	2018-01-29	4	f
 3001	Grow	\n        5, 2, \n        mid-night prayer\n        task planning	2018-01-30	3	f
 3002	Business	\n        gather pay stubs	2018-01-30	1	f
-4049	Teach	    Plan lessons for week \n    	2018-09-30	1	f
+3575	UNC	    build guide structure\n    add guide menu\n    add CSS to guide\n    Outline View\n    Schedule View\n    Lesson View	2018-06-16	6	f
 3573	Church	    church service	2018-06-17	4	f
 3574	Grow	    5, 3, 5, 3	2018-06-16	0	f
 3577	People	    clothes shopping\n    clean up patio	2018-06-16	3	f
-3575	Teach	    build guide structure\n    add guide menu\n    add CSS to guide\n    Outline View\n    Schedule View\n    Lesson View	2018-06-16	6	f
+3569	UNC	    create PHP lesson 2	2018-06-17	2	f
 3302	Grow	    5, 3, 2, 3\n    nap\n    time tracking summary view	2018-04-15	3	f
 3568	Grow	    5, 5, 2, 3	2018-06-17	0	f
-3569	Teach	    create PHP lesson 2	2018-06-17	2	f
-3570	Tools	    	2018-06-17	0	f
-3571	Fun	    	2018-06-17	0	f
+4042	UNC	    learn PHP - Arrays\n    build solutions for 350\n    	2018-09-29	8	f
 3572	People	    Father's Day lunch\n    call dad\n    Anna's wedding\n    drive to Estes park	2018-06-17	8	f
 2755	Hammer	\n        debug test across all three platforms\n        budget hours and score script\n        create summary for each month of 2016\n        update time history for 2016 Jan-May\n        move TODO_DIR to MarkSeaman/history	2016-10-05	2	f
 3578	Church	    discuss church involvement	2018-06-16	1	f
@@ -3469,9 +3452,8 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4039	Fun	    Judgement at Nurenberg\n    	2018-09-28	3	f
 4040	People	    Rachel and Andrew\n    Nordy's\n    Christine dislocated shoulder	2018-09-28	3	f
 4041	Grow	    5, 5, 2, 1\n    weight 205	2018-09-29	0	f
-4042	Teach	    learn PHP - Arrays\n    build solutions for 350\n    	2018-09-29	8	f
+4046	UNC	    Build solution directories\n    Document design patterns	2018-09-27	5	f
 4045	Grow	    5, 5, 5, 5\n    weight: 206\n    10,000 steps	2018-09-27	2	f
-4046	Teach	    Build solution directories\n    Document design patterns	2018-09-27	5	f
 4047	Fun	    Infinity War\n    	2018-09-27	3	f
 2168	Tools	\n        create money application\n        update all plans and project ideas\n        plan how to incorporate view refactoring into existing apps\n        create menu tester	2017-07-01	4	f
 2166	Grow	\n        4, 4, 2, 5\n        walk with Stacie to 257\n        read about Wellbeing\n        review relationships	2017-07-01	3	f
@@ -3481,6 +3463,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4044	People	    Send TV to Garcias	2018-09-29	2	f
 2167	People	\n        lunch with Stacie at Pelican Joes\n        reconnect with Larry Chapman\n        research Duncan Terry	2017-07-01	2	f
 118	Grow	\n        Quiet time\n\n	2016-02-09	1	f
+2431	UNC	\n        build week4 website\n        repair web server root page\n        build up Teacher web page\n        setup Google user for UNC\n        build index page for HTML examples\n        create links for web tricks\n        write Development Skills guide\n        review Quiz results\n        prep lecture\n        send announcement to students	2017-09-10	7	f
 2433	Grow	\n        5, 4, 3, 3	2017-09-11	0	f
 3004	People	\n        Pelican Lakes	2018-01-30	2	f
 3304	People	    El Cielo with Garcias and Christine	2018-04-15	2	f
@@ -3507,7 +3490,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1877	Tools	\n        re-purpose existing Digital Ocean Droplet to Hammer host\n        setup git repo and pandoc on Droplet\n        reassign floating IP	2016-04-25	3	f
 1881	Tools	\n        Create view to list the tasks\n        Build simplest possible view for tasks\n        Build task command script\n        Add tasks app to Hammer\n        Build functional test under tst\n        build tasks app in Django\n        Add task list and details views	2016-05-04	8	f
 2177	Tools	\n        email send is broken\n        build Advisor view\n        select review of random documents\n        advisor: doc selector\n        build excerpt view for booknotes\n        create base class for Aspire Views	2017-07-03	6	f
-2434	Teach	\n        homework help\n        lecture #9\n        help with homework after class\n        Zoe's email complaints\n        build homework guide doc\n        copy FTP files to Mac\n        create list of common problems\n        email students with guidance\n        set grades for Quiz #1	2017-09-11	11	f
+4535	Church	    meet Todd at Crooked Cup\n    discuss Webbs with Stacie	2019-01-19	2	f
 153	People	\n        Josiah and Sam\n        apologize to Todd & Jenny	2016-02-20	2	f
 155	Fun	\n        X-Men First Class\n	2016-02-20	3	f
 1130	Business	\n        develop Household Economics\n        create general spreadsheet for Budget, Investment, House\n        create simplified budget review process\n        discuss family finance with Stacie\n        resolve gross/net budget\n        build spreadsheet for tracking investments	2016-12-02	5	f
@@ -3518,47 +3501,43 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4399	Fun	    British Baking, Profit\n    	2018-12-19	2	f
 4400	People	    visit Rachel\n    Ruby now weighs 8 lb 2 oz	2018-12-19	2	f
 4536	People	    visit with Stacie & Lucy\n    Andrew & Rachel & Papa Murphy	2019-01-19	2	f
-4535	Church	    meet Todd at Crooked Cup\n    discuss Webbs with Stacie	2019-01-19	2	f
 156	Church	\N	2016-02-21	4	f
 3321	People	    discuss strategy for deeper connections\n    interact with Lynn on teaching\n    dinner with Stacie	2018-04-19	3	f
 3322	Fun	    Legends, Supergirl	2018-04-19	2	f
 2066	Tools	\n        clean up time data (write task_rename script)\n        improve tech, shrinking-world, mybook sites	2017-06-07	2	f
 802	People	\n        visit Pittick Mansion\n        Jory restaurant with Jen & Mark\n        drive to downtown Portland\n        Josiah and Sam meet up with PDS in London\n        Josiah calls to talk about house	2016-09-04	12	f
 2437	Grow	\n        5, 4, 5, 5	2017-09-12	1	f
-2438	Teach	\n        think about class\n        help students with homework	2017-09-12	6	f
+2447	UNC	\n        plan out homework strategy for class\n        build homework assignment web content\n        publish Exercise #1\n        build list of first 10 exercises	2017-09-14	5	f
 2439	People	\n        Sr Jalapenos\n        visit bike shop\n        look at grill repair	2017-09-12	3	f
 2440	Fun	\n        Legends, Fraiser, \n	2017-09-12	4	f
 2441	Grow	\n        5, 5, 3, 3\n        explore idea of Study Abroad\n        Standout Assessment Report	2017-09-13	4	f
 2442	People	\n        discuss career plans with Stacie	2017-09-13	2	f
-2443	Teach	\n        class #10\n        help students after class\n        meet with Merhgan & Charmayne\n        plan new class strategy	2017-09-13	4	f
+3307	UNC	    Lesson 36 - Web Hosting\n    CIS staff meeting	2018-04-16	8	f
 2444	Business	\n        maintenance on car	2017-09-13	1	f
 2445	Fun	\n        Profit\n	2017-09-13	3	f
 2446	Grow	\n        2, 4,\n        sleepless night processing new ideas\n        nap	2017-09-14	3	f
-2447	Teach	\n        plan out homework strategy for class\n        build homework assignment web content\n        publish Exercise #1\n        build list of first 10 exercises	2017-09-14	5	f
+3007	UNC	\n        lesson 10 - prep, teach, grade, assist\n        create students website page	2018-01-31	8	f
 3328	People	    Fondue with family\n    Rachel & Andrew\n    discuss life learnings with Andrew & Rachel\n    Carcassonne with Andrew	2018-04-21	4	f
-3307	Teach	    Lesson 36 - Web Hosting\n    CIS staff meeting	2018-04-16	8	f
+3310	UNC	    Grading\n    MCB Graduates	2018-04-17	4	f
 3309	Grow	    5, 2, 2, 3\n    Time Investment\n    Originals - revolutionaries, ideas to apply\n    Time scorecard - ROI for regular activities	2018-04-17	3	f
 3320	Tools	    learn about character encoding\n    update tools plans\n    create list of UNC Teaching tools	2018-04-19	4	f
 3005	Fun	\n        ER, Amazing Race, Resident, Goldbergs\n	2018-01-30	4	f
 3006	Grow	\n        5, 3, 3, 2\n        personal planning\n        Originals	2018-01-31	2	f
-3007	Teach	\n        lesson 10 - prep, teach, grade, assist\n        create students website page	2018-01-31	8	f
+3315	UNC	    Lesson 37 - App Hosting\n    work on Uncle Ed web page creation\n    Charmayne - help with BACS 350	2018-04-18	8	f
 3314	Grow	    5, 1, 3, 4\n    Calendar\n    Investments	2018-04-18	0	f
-3310	Teach	    Grading\n    MCB Graduates	2018-04-17	4	f
+3580	UNC	    email UNC colleagues\n    congrats Mehrgan\n    plan UNC day on Tues (tools, textbook, Uncle Ed, network)\n    write Software Dev Workflow\n    write Problem-solving Workflow	2018-06-18	4	f
 3311	Church	    Center for International Education (seminar)	2018-04-17	2	f
-3315	Teach	    Lesson 37 - App Hosting\n    work on Uncle Ed web page creation\n    Charmayne - help with BACS 350	2018-04-18	8	f
+3324	UNC	    Lesson 38 - Domain Hosting\n    text char encoding	2018-04-20	8	f
 3308	Fun	    Amazing Race, Shield	2018-04-16	3	f
-3580	Teach	    email UNC colleagues\n    congrats Mehrgan\n    plan UNC day on Tues (tools, textbook, Uncle Ed, network)\n    write Software Dev Workflow\n    write Problem-solving Workflow	2018-06-18	4	f
+3327	UNC	    build outline for last 3 lectures\n    learn new Python idioms	2018-04-21	2	f
 3582	Fun	    Think you can Dance 	2018-06-18	1	f
 3330	Grow	    5, 3, 3, 2\n    analyze time spent\n    learn new python tricks	2018-04-22	2	f
 3317	Fun	    Madam Sec, ER	2018-04-18	3	f
-3324	Teach	    Lesson 38 - Domain Hosting\n    text char encoding	2018-04-20	8	f
 3325	Fun	    Matrix	2018-04-20	3	f
 3323	Grow	    5, 3, 3, 3 \n    Principles - Life story, Two brains, Bridgewater	2018-04-20	3	f
-3581	Tools	    	2018-06-18	0	f
 3329	Fun	    Homeland	2018-04-21	3	f
 3326	Grow	    4, 3, 3, 1\n    discuss recent learning with Stacie\n    Mental Models notes\n    organize info in brain\n    nap	2018-04-21	5	f
 3584	Church	    health benefits\n    budget planning	2018-06-18	2	f
-3327	Teach	    build outline for last 3 lectures\n    learn new Python idioms	2018-04-21	2	f
 3316	People	    walk and dinner with Stacie at Sand Bar\n    discuss life opportunities\n    Stacie meets with John Klassen	2018-04-18	3	f
 3312	People	    Stacie phone call with Dave Chase team\n    Stacie meets with John Klassen\n    email Lynn Mora\n    email Joe Woodman	2018-04-17	2	f
 3313	Fun	    Amazing Race	2018-04-17	3	f
@@ -3578,6 +3557,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4370	People	    neighborhood party at Faye's\n    get Christmas tree\n    buy concrete for household project	2018-12-14	5	f
 4403	Fun	    GoT\n    	2018-12-21	2	f
 4434	Tools	    implement Rest Framework\n    install React\n    build React UI	2018-12-26	3	f
+2438	UNC	\n        think about class\n        help students with homework	2017-09-12	6	f
 4435	Fun	    Muppets Christmas Carol\n    	2018-12-26	4	f
 2181	Fun	\n        Read\n	2017-07-04	2	f
 2183	People	\n        Stacie's computer fails to upgrade drivers\n        meet Larry Chapman for lunch	2017-07-05	4	f
@@ -3585,16 +3565,16 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3339	People	    discuss business goals with Stacie\n    Joe Woodman	2018-04-24	4	f
 3346	Fun	    Profit, Madam Sec, Fraiser	2018-04-25	2	f
 3342	Grow	    4, 1, 1, 3\n    think about goals	2018-04-25	1	f
-3951	Teach	    prep Lesson 8\n    live programming subscribers app\n    image display\n    show class materials to Chris Newby\n    	2018-09-07	8	f
+2458	UNC	\n        build exercise 3	2017-09-17	3	f
 3331	Church	    community garden\n    church service	2018-04-22	6	f
 2457	People	\n        Greeley Feastival\n	2017-09-16	4	f
-2458	Teach	\n        build exercise 3	2017-09-17	3	f
+3344	UNC	    Lesson 40 - Project Tracking\n    follow up new tools - Github Desktop, Brackets\n    student council picnic	2018-04-25	7	f
 2459	Church	\n        church service	2017-09-17	4	f
 2460	People	\n        lunch with Rachel & Andrew at Mexicali	2017-09-17	2	f
 2461	Grow	\n        3, 4, 3, 3\n        nap	2017-09-17	2	f
 2462	Fun	\n        Winter Soldier\n	2017-09-17	3	f
 2463	Grow	\n        5, 4, 4, 5\n        thoughts about Dad\n        walk to UC and bookstore	2017-09-18	3	f
-2464	Teach	\n        class prep\n        class #12\n        help students\n        grading quiz #2	2017-09-18	8	f
+3319	UNC	    Web server down\n    query team about reviews in Canvas\n    contact Mehrgan about Originals	2018-04-19	1	f
 2465	Fun	\n        Ultron\n	2017-09-18	3	f
 2757	People	\n        Courtney graduation at Chop House	2017-09-30	4	f
 3003	Tools	\n        Notes - Build out Private Notes topics: Build,Teach\n        debug Django and script setup on Uncle Ed\n        remove Python installs from UNC Git repo\n        Pandoc on Uncle Ed, Slide Master	2018-01-30	4	f
@@ -3602,53 +3582,53 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3334	Grow	    5, 4, 1, 4\n    walk\n    Principles - heroes & philanthropy\n    organize brain notes (tags, TOC, folders)	2018-04-23	2	f
 3335	People	    time with Stacie	2018-04-23	1	f
 3345	Business	    discuss who2hire with Stacie\n    sell Whole Market investements; buy Motley Fool	2018-04-25	1	f
-3336	Teach	    Lesson 39 - Project Planning\n    Moe interview - class, lunch, dinner, summary\n    Design Review data structures\n    Brandon Williams\n    Michael Schott	2018-04-23	10	f
+4007	UNC	    200 - export grades, create exam, grading\n    350 - export grades, create exam, grading, Noah,Robert,Bryan\n    zbooks investigate lessons\n    	2018-09-20	8	f
 3337	Fun	    Fraiser, ER	2018-04-23	1	f
 3343	People	    dinner with Stacie at Hearth\n    walk together	2018-04-25	3	f
-3344	Teach	    Lesson 40 - Project Tracking\n    follow up new tools - Github Desktop, Brackets\n    student council picnic	2018-04-25	7	f
+4026	UNC	    200 - 14 - slides, zb assignment, release grades\n    350 - 14 - slides, zb assignment, release grades\n    first day with zybooks\n    	2018-09-24	8	f
 4100	People	    visit with Stacie on phone	2018-10-10	1	f
-3319	Teach	    Web server down\n    query team about reviews in Canvas\n    contact Mehrgan about Originals	2018-04-19	1	f
+4098	UNC	    introduce design reviews\n    pair programming in 350\n    office hours - Christina Richey, Jorge Rubio\n    talk with Vish	2018-10-10	8	f
 3341	Fun	    Fraiser, Turn	2018-04-24	2	f
 3338	Grow	    5, 2, 3, 2\n    sort through ideas\n    build index for topics about Fun\n    create note for Booknotes\n    create note for Thinking Tools\n    create Personal Growth index 	2018-04-24	5	f
 3946	Grow	    5, 2, 5, 3\n    walk	2018-09-08	1	f
 285	People	\n        Allegiant at Carmike Bistro\n        Alley Cat coffee shop	2016-03-30	4	f
-4007	Teach	    200 - export grades, create exam, grading\n    350 - export grades, create exam, grading, Noah,Robert,Bryan\n    zbooks investigate lessons\n    	2018-09-20	8	f
+4115	UNC	    posting data to same page\n    improve logging utility\n    	2018-10-12	8	f
 289	Fun	\n        \n\n# Tasks History     April 2016\n\n## April Objectives 2016\n\n    Balance with Work & Life (100-120 billable hours)\n    Family budget\n    HELOC (22,000 by 5-1)\n    Content with life\n\n    \n## Accomplishments\n	2016-03-31	5	f
-4026	Teach	    200 - 14 - slides, zb assignment, release grades\n    350 - 14 - slides, zb assignment, release grades\n    first day with zybooks\n    	2018-09-24	8	f
+2450	UNC	\n        prep for class\n        homework pivot\n        quiz #2\n        write exercise #2\n        setup Dropbox to sync files\n        work on FTP server permissions\n        plan strategy for exercises and in-class practice	2017-09-15	8	f
 4051	Church	    David Brooks, Whiteout\n    Drive to Denver to meet Susan and Gary Stokes	2018-09-30	8	f
 2448	Fun	\n        Dark Matter, Limitless, Last Man\n	2017-09-14	6	f
 4096	WAM	    testing and deploy\n    improve report\n    improve user list\n    restructure who gets notified	2018-10-06	5	f
-4098	Teach	    introduce design reviews\n    pair programming in 350\n    office hours - Christina Richey, Jorge Rubio\n    talk with Vish	2018-10-10	8	f
+2455	UNC	\n        create homework grading scripts\n        give feedback on exercise #1\n        look at quiz results\n        take exam	2017-09-16	6	f
 4099	Fun	    Britannia, Jack Ryan\n    dinner at Fontas\n    Tombs - audiobook\n    	2018-10-10	5	f
 4114	Grow	    5, 3, 3, 3\n    weight: 207.8	2018-10-12	0	f
-4115	Teach	    posting data to same page\n    improve logging utility\n    	2018-10-12	8	f
+3332	UNC	    Lesson 39 - Project planning\n    grading and review of progress	2018-04-22	4	f
 3340	Business	    Motley Fool investment seminar\n    research investments	2018-04-24	3	f
 2449	Grow	\n        5, 5	2017-09-15	0	f
-2450	Teach	\n        prep for class\n        homework pivot\n        quiz #2\n        write exercise #2\n        setup Dropbox to sync files\n        work on FTP server permissions\n        plan strategy for exercises and in-class practice	2017-09-15	8	f
 2453	People	\n        Andrew & Rachel (having difficulties)\n	2017-09-15	2	f
 2454	Grow	\n        4, 5, 2, 3	2017-09-16	0	f
 2451	Business	\n        discuss partnering strategy with Stacie	2017-09-15	2	f
 2452	Fun	\n        NCIS, Hawaii 50	2017-09-15	2	f
-2455	Teach	\n        create homework grading scripts\n        give feedback on exercise #1\n        look at quiz results\n        take exam	2017-09-16	6	f
 2182	Grow	\n        5, 1, 1, 3	2017-07-05	0	f
+3951	UNC	    prep Lesson 8\n    live programming subscribers app\n    image display\n    show class materials to Chris Newby\n    	2018-09-07	8	f
+2464	UNC	\n        class prep\n        class #12\n        help students\n        grading quiz #2	2017-09-18	8	f
+3336	UNC	    Lesson 39 - Project Planning\n    Moe interview - class, lunch, dinner, summary\n    Design Review data structures\n    Brandon Williams\n    Michael Schott	2018-04-23	10	f
 2456	Fun	\n        Iron Fist, Hawaii 50, Supergirl	2017-09-16	4	f
-3332	Teach	    Lesson 39 - Project planning\n    grading and review of progress	2018-04-22	4	f
 2184	Fun	\n        pack for trip\n        Amazing Race\n	2017-07-05	6	f
 3333	Fun	    Madam Sec, Shield, ER	2018-04-22	2	f
 2471	Business	\n        Tech Startup meeting in Denver	2017-09-20	6	f
 2473	Grow	\n        4, 3, 3, 4\n        personal reflection\n        walk medicine\n        talk with Stacie and life	2017-09-21	4	f
 2474	People	\n        meet with Josiah\n        date at Carrabbas	2017-09-21	3	f
-2475	Teach	\n        build class website\n        write Ex 4-6\n        create Ex list\n        post exercises on Canvas	2017-09-21	6	f
+2478	UNC	\n        prepare for class\n        give Exam #1\n        grade exam\n        capture lessons from first month of teaching\n        teaching insights	2017-09-22	7	f
 2476	Fun	\n        Profit\n\n	2017-09-21	1	f
 2477	Grow	\n        5, 3, 3, 2	2017-09-22	0	f
-2478	Teach	\n        prepare for class\n        give Exam #1\n        grade exam\n        capture lessons from first month of teaching\n        teaching insights	2017-09-22	7	f
+2759	UNC	\n        prepare #31\n            200 - write exam\n            350 - unit test, sessions, take home	2017-10-31	6	f
 2479	Tools	\n        investigate Visual Studio Code\n        Python 3.6	2017-09-22	3	f
 1566	People	\n        Shrinking World Celebration dinner at Melting Pot\n	2017-04-07	5	f
 2480	Church	\n        meet with Todd and Jenny about money communication	2017-09-22	1	f
 2481	Fun	\n        Days of Future Past\n	2017-09-22	3	f
 2482	Grow	\n        4, 3, \n        outline: Living in the Present\n        outline: Emotional Management\n        outline: Quality of Sleep\n        outline: Life Stages\n        walk to library\n        setup and use Hoopla	2017-09-23	6	f
 2483	People	\n        time with Stacie	2017-09-23	2	f
-2759	Teach	\n        prepare #31\n            200 - write exam\n            350 - unit test, sessions, take home	2017-10-31	6	f
+4038	UNC	    Lesson 16 - CSS Spacing, Build an app with MVC\n    	2018-09-28	8	f
 296	People	\n        lunch at El Cielo with Potters and Garcias\n        plan trip to Portland with Stacie	2016-04-03	5	f
 3960	People	    carpet project\n    leave early to avoid carpet conflict\n    	2018-09-10	1	f
 1309	Grow	\n        4, 1, 3, 2\n        reflection and personal planning and review	2017-02-01	1	f
@@ -3656,41 +3636,38 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3588	People	    time with Stacie\n    discuss life issues with Stacie	2018-06-19	2	f
 3318	Grow	    5, 2, 4, 4\n    ask for help on design review scoring\n    think about meaning (contribute, connect, understand)\n    walk to lunch at Pelican Jo's\n    organize info from Lynn	2018-04-19	4	f
 3008	People	\n        Andrew and Rachel - timeline game	2018-01-31	4	f
-3886	Tools	    	2018-08-25	0	f
 3587	Fun	    Vikings, Wrinkle in Time	2018-06-19	3	f
 3589	Church	    lunch with Todd at Rio\n    dramatic rain storm at Rio	2018-06-19	3	f
 3884	Grow	    4, 2, 4, 2\n    weight: 208.2	2018-08-25	0	f
 387	Business	\N	2016-04-28	3	f
-3885	Teach	    create script for guide outline, create\n    investigate teaching SQL\n    build outline for 350 - Lesson 4\n    grade quizzes and assigments\n    	2018-08-25	5	f
+3350	UNC	    Lesson 41 - Workflow\n    class archive download file\n    MCB Faculty meeting	2018-04-26	5	f
 3888	People	    Andrew & Rachel BBQ	2018-08-25	3	f
-4038	Teach	    Lesson 16 - CSS Spacing, Build an app with MVC\n    	2018-09-28	8	f
-3595	Church	    	2018-06-20	0	f
+3586	UNC	    work on teaching tools\n    install NetBeans & XAMPP unsuccessful\n    develop look and feel of Teaching website\n    write Charmayne about textbook\n    travel to UNC\n    sign up for BlueHost    	2018-06-19	6	f
 3593	Fun	    Supergirl, Dance, Profit, ER	2018-06-20	3	f
 3348	People	    MCB Dinner Party	2018-04-26	3	f
 3349	Church	    board meeting	2018-04-26	2	f
-3350	Teach	    Lesson 41 - Workflow\n    class archive download file\n    MCB Faculty meeting	2018-04-26	5	f
+3591	UNC	    work out student hosting of PHP and HTML\n    use Bluehost account	2018-06-20	2	f
 3887	Fun	    Profit, ER, Fraiser\n    	2018-08-25	2	f
 3594	People	    find out about Passport expiration	2018-06-20	1	f
 3585	Grow	    3, 3, 5, 3\n    order eyeglasses	2018-06-19	0	f
-3586	Teach	    work on teaching tools\n    install NetBeans & XAMPP unsuccessful\n    develop look and feel of Teaching website\n    write Charmayne about textbook\n    travel to UNC\n    sign up for BlueHost    	2018-06-19	6	f
+3959	UNC	    go to UNC early\n    archive grade book\n    rebuild grade weights to be more equitable\n    Testing\n    Jerone Jackson, Brittney Dinsmore\n    	2018-09-10	8	f
 3352	Grow	    5, 1, 3, 5\n    enjoy wonderful weather at UNC	2018-04-27	3	f
 3351	Fun	    ER, Goldbergs	2018-04-26	2	f
 2466	Grow	\n        4, 5, 4, 5\n        Dr. Kary\n        walk to library\n        think about life	2017-09-19	3	f
-3591	Teach	    work out student hosting of PHP and HTML\n    use Bluehost account	2018-06-20	2	f
-4103	Tools	    	2018-10-18	0	f
+2467	UNC	\n        create schedule for 30 exercises\n        think through long-term strategy\n        start building MyBook/UNC\n        write Exercise 3	2017-09-19	7	f
+3885	UNC	    create script for guide outline, create\n    investigate teaching SQL\n    build outline for 350 - Lesson 4\n    grade quizzes and assigments\n    	2018-08-25	5	f
 4106	Grow	    4, 3, 3, 3\n    weight: 207.8\n    bed at 8:30	2018-10-17	2	f
-3959	Teach	    go to UNC early\n    archive grade book\n    rebuild grade weights to be more equitable\n    Testing\n    Jerone Jackson, Brittney Dinsmore\n    	2018-09-10	8	f
+2470	UNC	\n        prep for class\n        class #13\n        help students after class\n        work on list of exercises	2017-09-20	5	f
 3347	Grow	    4, 1, 2, 3\n    interview for book Inevitable	2018-04-26	2	f
 2468	Fun	\n        Ant Man\n        movies from library\n	2017-09-19	4	f
 293	Grow	\n        Personal retreat\n        think about life goals and relationships\n        write notes\n            Life I Want\n            Band of Brothers	2016-04-02	3	f
 2472	Fun	\n        Supergirl\n	2017-09-20	1	f
 2469	Grow	\n        3, 4, 2, 4\n        nap	2017-09-20	2	f
 2186	People	\n        4th of July party	2017-07-04	6	f
-2467	Teach	\n        create schedule for 30 exercises\n        think through long-term strategy\n        start building MyBook/UNC\n        write Exercise 3	2017-09-19	7	f
-2470	Teach	\n        prep for class\n        class #13\n        help students after class\n        work on list of exercises	2017-09-20	5	f
+4102	UNC	    create diagram of templates for 350  \n    create Complex page lesson in 350\n    add render functions to views.php  \n    	2018-10-18	7	f
 4101	Grow	    4, 3, 3, 2\n    think about stress and growth	2018-10-18	2	f
+2475	UNC	\n        build class website\n        write Ex 4-6\n        create Ex list\n        post exercises on Canvas	2017-09-21	6	f
 2187	Tools	\n        explore Safari Books Online and Amazon for tech books\n        cancel Safari Books Online\n        work on system architecture (thot/App_Design)	2017-07-05	4	f
-4102	Teach	    create diagram of templates for 350  \n    create Complex page lesson in 350\n    add render functions to views.php  \n    	2018-10-18	7	f
 4104	Fun	    Resident, Profit\n    	2018-10-18	3	f
 2188	People	\n        drive to St George\n	2017-07-06	0	f
 2485	Church	\n        church service\n        staff meeting	2017-10-01	7	f
@@ -3714,20 +3691,20 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2779	Church	\n        Carlos and Leslie over for lunch\n        talk on Joy	2017-12-10	7	f
 2780	Fun	\n        Live Die Repeat\n	2017-12-10	4	f
 2781	Grow	\n        5, 3, 3, 2\n        celebrate successes\n            MediShare enrollment\n            Grade submission\n            Motley Fool investment strategy\n        think about the future	2017-12-11	3	f
-2782	Teach	\n        submit final grades\n        student interactions	2017-12-11	4	f
+2785	UNC	\n        archive all BACS Student files\n        check on grade posting	2017-12-12	1	f
 2783	Fun	\n        library\n        ER marathon\n        Supergirl	2017-12-11	4	f
 2784	People	\n        get Christmas tree\n	2017-12-11	3	f
-2785	Teach	\n        archive all BACS Student files\n        check on grade posting	2017-12-12	1	f
-3045	Teach	\n        give exam\n        student caught cheating	2018-02-09	4	f
+3045	UNC	\n        give exam\n        student caught cheating	2018-02-09	4	f
+3354	UNC	    all day at UNC\n    last day of class	2018-04-27	7	f
 3046	Fun	\n        Americans, Vikings, Flash\n	2018-02-09	5	f
 3353	People	    Dominoes, and Carcassonne	2018-04-27	3	f
 3360	Church	    Joe & Katie Woodman\n    church service\n    picnic	2018-04-29	7	f
 3359	Grow	    5, 2, 3, 2\n    nap	2018-04-29	2	f
 3598	People	    trip to passport center\n    time with Stacie	2018-06-25	5	f
-3354	Teach	    all day at UNC\n    last day of class	2018-04-27	7	f
+2762	UNC	\n        final in BACS 200\n        grade final\n        interact with students\n        calculate grades	2017-12-06	9	f
 2760	People	\n        Pelican Lakes w/Christine	2017-12-05	2	f
 2761	Fun	\n        Arrow, Explore\n	2017-12-05	6	f
-2762	Teach	\n        final in BACS 200\n        grade final\n        interact with students\n        calculate grades	2017-12-06	9	f
+3036	UNC	\n        Lesson 12	2018-02-07	8	f
 2763	Grow	\n        4, 4, 3, 1\n        talk with Stacie	2017-12-06	1	f
 2764	Fun	\n        Arrow\n	2017-12-06	4	f
 2765	Grow	\n        4, 4, 3, 2	2017-12-07	1	f
@@ -3735,7 +3712,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2767	People	\n        discuss events with Stacie	2017-12-07	3	f
 2768	Fun	\n        Legends, Arrow, Flash, Other Boleyn\n	2017-12-07	3	f
 3009	Grow	\n        4, 3, 3, 2	2018-02-01	0	f
-3036	Teach	\n        Lesson 12	2018-02-07	8	f
+3365	UNC	    ideas for Mehrgan's senior project classes	2018-04-30	3	f
 3037	People	\n        talk with Stacie about meeting with Karen	2018-02-07	1	f
 3038	Fun	\n        Profit, Goldbergs\n\n	2018-02-07	4	f
 3039	Grow	\n        5, 3, 3, 2\n        nts	2018-02-08	1	f
@@ -3754,15 +3731,15 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3357	People	    discuss summer desires\n    struggles with communication issues\n    visit Tom & John Bush\n    walk with Stacie\n    first grilling day	2018-04-28	5	f
 3364	Grow	    3, 2,\n    allergy problems\n    nap\n    discuss Master's degree with Stacie	2018-04-30	4	f
 3367	Fun	    Infinity War\n    Profit	2018-04-30	5	f
-3365	Teach	    ideas for Mehrgan's senior project classes	2018-04-30	3	f
+2766	UNC	\n        meet with Dean Allison\n        give final exam in CS 350\n        grade final & calculate grades\n        start on BACS 200 course outline	2017-12-07	7	f
 3366	Tools	    refactoring of MyBook app to create wiki app	2018-04-30	2	f
 3355	Fun	    Resident	2018-04-27	1	f
-2766	Teach	\n        meet with Dean Allison\n        give final exam in CS 350\n        grade final & calculate grades\n        start on BACS 200 course outline	2017-12-07	7	f
-2769	Teach	\n        create syllabus for BACS 200\n        update course outline \n        think about teaching tools\n        process plan for Spring	2017-12-08	4	f
+2769	UNC	\n        create syllabus for BACS 200\n        update course outline \n        think about teaching tools\n        process plan for Spring	2017-12-08	4	f
 2770	Grow	\n        4, 5, 3, 4\n        nap\n        breakfast burritos	2017-12-08	2	f
 2484	Grow	\n        4, 3, 4, 4	2017-10-01	0	f
+2782	UNC	\n        submit final grades\n        student interactions	2017-12-11	4	f
 3014	Grow	\n        5, 4, 3, 3\n        first visit to Looking Good barber shop	2018-02-02	2	f
-3015	Teach	\n        Prep and teach lesson 11	2018-02-02	8	f
+2498	UNC	\n        grade exercises 2-5\n        review student progress	2017-09-26	4	f
 3016	Fun	\n        Amazing Race, ER\n	2018-02-02	4	f
 3017	Grow	\n        5, 4, 3, 3\n        first visit to Looking Good barber shop	2018-02-03	2	f
 2198	People	\n        Carolina's italian food	2017-07-10	2	f
@@ -3778,23 +3755,23 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2495	People	\n        Bad Daddy with Stacie	2017-09-25	2	f
 2496	Fun	\n        Dance\n	2017-09-25	1	f
 2497	Grow	\n        5, 5, 4, 5	2017-09-26	1	f
-2498	Teach	\n        grade exercises 2-5\n        review student progress	2017-09-26	4	f
+2502	UNC	\n        class prep\n        class #16\n        help students with exercises\n        class prep for #17\n        lunch at Alberto's\n        create automation scripts\n        grade exercises	2017-09-27	10	f
 2499	People	\n        Estes Park with Stacie and Christine	2017-09-26	6	f
 2500	Fun	\n        Ben-Hur\n	2017-09-26	3	f
 2501	Grow	\n        4, 5, 3, 3	2017-09-27	0	f
-2502	Teach	\n        class prep\n        class #16\n        help students with exercises\n        class prep for #17\n        lunch at Alberto's\n        create automation scripts\n        grade exercises	2017-09-27	10	f
+2506	UNC	\n        build exercise 7 & 8\n        create CSS Property Templates\n            box\n            spacing\n            text\n            border\n            color\n        create CSS Sampler\n        create ideas for textbook and class server	2017-09-28	8	f
 2503	Church	\n        church board meeting	2017-09-27	3	f
 2504	Fun	\n        Dance\n	2017-09-27	1	f
 2505	Grow	\n        3, 5, 3, 3\n        walk to library\n        think about sustainability	2017-09-28	2	f
-2506	Teach	\n        build exercise 7 & 8\n        create CSS Property Templates\n            box\n            spacing\n            text\n            border\n            color\n        create CSS Sampler\n        create ideas for textbook and class server	2017-09-28	8	f
+2509	UNC	\n        request to teach 350\n        200: class #17\n        help students\n        meet with Mehrgan, Charmayne, Pat, Dean\n        agree to teach 350\n        MCB faculty meeting	2017-09-29	10	f
 2507	Fun	\n        Dance, Alias\n	2017-09-28	4	f
 2508	Grow	\n        3, 5, 3, 3	2017-09-29	0	f
-2509	Teach	\n        request to teach 350\n        200: class #17\n        help students\n        meet with Mehrgan, Charmayne, Pat, Dean\n        agree to teach 350\n        MCB faculty meeting	2017-09-29	10	f
+2513	UNC	\n        prioritize teaching time investment\n        write Embrace the Rhythm\n        UNC Teaching Schedule\n        Teaching 200 & 350	2017-09-30	5	f
 2510	People	\n        dinner Pueblo Villejo with Jackie & Julio	2017-09-29	2	f
 2511	Fun	\n        Dance\n	2017-09-29	2	f
 2512	Grow	\n        3, 3, 3, 3\n        nap\n        walk to library\n        think about career path and choices\n        write Flavors of Pain\n        read book on sleeping	2017-09-30	5	f
-2513	Teach	\n        prioritize teaching time investment\n        write Embrace the Rhythm\n        UNC Teaching Schedule\n        Teaching 200 & 350	2017-09-30	5	f
-3048	Teach	\n        grade exam	2018-02-10	4	f
+3048	UNC	\n        grade exam	2018-02-10	4	f
+2796	UNC	\n        read evaluations\n        update syllabus for BACS 200	2017-12-14	2	f
 3049	Write	\n        plan out investment teaching	2018-02-10	2	f
 2786	Grow	\n        5, 4, 2, 5\n        update time\n        walk\n        nap	2017-12-12	3	f
 2787	Tools	\n        build slide show using Reveal.JS\n        create text in HTML file\n        locate slide builder from 2013\n        experiment with different presentation tools	2017-12-12	3	f
@@ -3824,16 +3801,16 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3024	Church	\n        church service	2018-02-04	4	f
 3597	Fun	    Rick Steves videos	2018-06-25	6	f
 2795	Grow	\n        5, 4, 3, 2	2017-12-14	0	f
-2796	Teach	\n        read evaluations\n        update syllabus for BACS 200	2017-12-14	2	f
 2797	Tools	\n        create script for making slides\n        optimize slide maker	2017-12-14	3	f
 2798	People	\n        Cassie & Sam\n        Palominos with Stacie\n        time with Stacie	2017-12-14	3	f
-3612	Teach	    improve stylesheets used for class notes\n    create outline for first three lessons\n    build views around Learn,Plan,Build,Share	2018-06-22	7	f
+3015	UNC	\n        Prep and teach lesson 11	2018-02-02	8	f
+3814	UNC	    find Syllabus files\n    	2018-08-11	2	f
 3813	Grow	    5, 3, 1, 3\n    weight: 208.8	2018-08-11	0	f
-3814	Teach	    find Syllabus files\n    	2018-08-11	2	f
+2801	UNC	\n        create Class Content Plan	2017-12-15	4	f
 2799	Fun	\n        ER, Turn, Librarians\n	2017-12-14	6	f
 154	Grow	\n        personal growth\n        walk to park	2016-02-20	1	f
 2800	Grow	\n        4, 4, 2, 2	2017-12-15	0	f
-2801	Teach	\n        create Class Content Plan	2017-12-15	4	f
+2514	UNC	\n        grading of assignments\n        planning of class 10/4	2017-10-01	2	f
 2802	Tools	\n        create Archive for UNC Documents	2017-12-15	2	f
 2803	People	\n        Rachel at Lucky Fins\n        party at Faye Bell's	2017-12-15	3	f
 2804	Fun	\n        return Other Boleyn CDs\n        Barnes & Nobel\n        Best Buy\n        Explore tools\n        Profit\n	2017-12-15	5	f
@@ -3841,29 +3818,27 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2806	Tools	\n        upgrade PyCharm to 17.3.1\n        update OS on macbook (issue with password)	2017-12-16	2	f
 2807	Fun	\n        finish Other Boleyn\n        Legends\n	2017-12-16	4	f
 3602	Grow	    5, 3, 5, 2\n    emotional roller-coaster about WAM server rebuild\n    trouble going to sleep\n    too much work	2018-06-26	0	f
-2514	Teach	\n        grading of assignments\n        planning of class 10/4	2017-10-01	2	f
+2517	UNC	\n        200 class 18 (prep, meet, followup)\n        350 class 18 (prep, meet, followup)\n        meet with Dean to get class details\n        start with 350	2017-10-02	9	f
 2515	Tools	\n        update month for time tracking\n	2017-10-01	1	f
 2516	Grow	\n        4, 4, 3, 5	2017-10-02	0	f
 2200	Grow	\n        Slow Kingdom Coming\n        Emotional Journey	2017-07-11	2	f
-2517	Teach	\n        200 class 18 (prep, meet, followup)\n        350 class 18 (prep, meet, followup)\n        meet with Dean to get class details\n        start with 350	2017-10-02	9	f
+2520	UNC	\n        prep for 350 - outline of all lessons\n        build lecture for 350: Software Process\n        create master plan for course\n        prep for 200 - testing exercise, page quiz example	2017-10-03	9	f
 2518	Fun	\n        movies\n	2017-10-02	5	f
 2201	Church	\n        Vineyard Conference\n        Geno Olison\n        Chris Wright\n        discuss conference with team\n	2017-07-11	12	f
 2519	Grow	\n        3, 4, 3, 3\n        night work: lessons for 350	2017-10-03	0	f
-2520	Teach	\n        prep for 350 - outline of all lessons\n        build lecture for 350: Software Process\n        create master plan for course\n        prep for 200 - testing exercise, page quiz example	2017-10-03	9	f
+2523	UNC	\n        200 class 19 (prep, meet, follow up)\n        350 class 19 (prep, meet, follow up)\n        prep for meeting Dean\n        meet with Dean discuss admin	2017-10-04	8	f
 2521	Fun	\n        comics, Castle\n	2017-10-03	5	f
 2522	Grow	\n        3, 5, 3, 5\n        sleep disturbed by phone call from Dr Harris	2017-10-04	1	f
-2523	Teach	\n        200 class 19 (prep, meet, follow up)\n        350 class 19 (prep, meet, follow up)\n        prep for meeting Dean\n        meet with Dean discuss admin	2017-10-04	8	f
+2526	UNC	\n        outline for Project Plan\n        exercise for Project Plan\n        outline for Technology Plan\n        exercise for Technology Plan\n        200 - Usability exercise, create page quiz	2017-10-05	8	f
 2524	Fun	\n        movies\n	2017-10-04	5	f
 2525	Grow	\n        4, 5, 3, 4\n        walk to library\n        nap	2017-10-05	2	f
-2526	Teach	\n        outline for Project Plan\n        exercise for Project Plan\n        outline for Technology Plan\n        exercise for Technology Plan\n        200 - Usability exercise, create page quiz	2017-10-05	8	f
+3901	UNC	    build Tips & Tricks page\n    document top 16 tips\n    Quiz 1 - grades\n    Announcement for OneDrive\n    Announcement for Quiz retake\n    Lesson 5 prep\n    learn about PHP forms\n    email about Adjunct Qualifications\n    	2018-08-28	8	f
 2527	People	\n        talk with Christine\n        pizza with Christine	2017-10-05	1	f
 2528	Fun	\n        Dark Matter, Lion\n	2017-10-05	3	f
 3368	Grow	    3, 3,	2018-05-01	0	f
-3607	Church	    	2018-06-26	0	f
 3605	Fun	    Vikings	2018-06-26	2	f
 3903	Fun	    Anthony Bordain, ER, Fraiser\n    	2018-08-28	4	f
 3904	People	    lunch at Sand Bar with Christine, Rachel	2018-08-28	2	f
-3815	Tools	    	2018-08-11	0	f
 3610	People	    travel home\n    breakfast \n    dinner together	2018-06-24	6	f
 3606	People	    Andrew & Rachel - made dinner\n    argue with Stacie about WAM	2018-06-26	2	f
 3900	Grow	    3, 3, 3, 3\n    weight: 207.4\n    thinking at night (tips and tricks for 200)	2018-08-28	0	f
@@ -3872,34 +3847,30 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3055	People	\n        time with Stacie\n        lunch at Fat Alberts with Rachel\n	2018-02-11	3	f
 3056	Grow	\n        5, 3, 3, 3	2018-02-12	0	f
 3613	People	    drive to Winter Park\n    listen to Americans in Paris\n    eat at Aztec\n    pack for trip	2018-06-22	6	f
-3901	Teach	    build Tips & Tricks page\n    document top 16 tips\n    Quiz 1 - grades\n    Announcement for OneDrive\n    Announcement for Quiz retake\n    Lesson 5 prep\n    learn about PHP forms\n    email about Adjunct Qualifications\n    	2018-08-28	8	f
 3611	Grow	    5, 4, 3, 4\n    walk	2018-06-22	1	f
 3617	People	    meet with Josiah\n    Andrew & Rachel - movie & Parry's Pizza	2018-06-21	3	f
-3902	Tools	    	2018-08-28	0	f
 3614	Grow	    4, 4, 4, 5\n    walk 10000 steps\n    pick up prescriptions	2018-06-21	2	f
 3816	Fun	    Red\n    	2018-08-11	2	f
 3608	Grow	    3, 3, 3, 3\n    restless sleep in Winter part\n    read about SCARF	2018-06-24	2	f
-3603	Teach	    	2018-06-26	0	f
+4131	UNC	    create Music Manager exam\n    optimize template structure for 350\n    grade project designs and reviews\n    	2018-10-23	4	f
 3817	People	    inflate Unicorn\n    mount Unicorn at lake\n    Andrew & Rachel visit	2018-08-11	10	f
 4055	Church	    Vineyard Mission Conference stream	2018-10-03	3	f
-3604	Tools	    	2018-06-26	0	f
 4108	Fun	    Madam Sec, Good Place\n    	2018-10-17	3	f
 4105	People	    Palominos	2018-10-18	2	f
 4053	Grow	    4, 3, 2, 5\n    weight: 207.4	2018-10-03	0	f
 4109	People	    dinner with Stacie	2018-10-17	1	f
-4131	Teach	    create Music Manager exam\n    optimize template structure for 350\n    grade project designs and reviews\n    	2018-10-23	4	f
+4489	People	    Rachel & Andrew & Ruby\n    First day for Andrew back at work	2019-01-09	2	f
 3616	Fun	    movie: Ocean's 8\n    Dance	2018-06-21	5	f
 3818	Grow	    3, 2, 3, 2\n    weight: 208.2\n    10% Happiness\n    awake from 4-6; sleep till 9	2018-08-10	1	f
 3609	Fun	    listen to Americans in Paris\n    Blues from the Top	2018-06-24	6	f
 4258	Fun	    TV	2018-02-20	5	f
 4130	Grow	    5, 3, 3, 2\n    weight: 207.4\n    prepare for personal retreat\n    plan Life Journey Notebook	2018-10-23	2	f
-4489	People	    Rachel & Andrew & Ruby\n    First day for Andrew back at work	2019-01-09	2	f
 4453	Fun	    walk on beach\n    GoT\n    watch New Years Eve TV\n    	2018-12-31	4	f
 4454	People	    New Years Eve (party and TV)\n    Greek Town Taverna for late lunch\n    time with Stacie	2018-12-31	8	f
 2529	Grow	\n        4, 5, 4, 5	2017-10-06	0	f
 2531	Fun	\n        Ultron\n        Iron Fist\n	2017-10-06	6	f
 2532	Grow	\n        4, 5, 4, 5	2017-10-07	0	f
-2533	Teach	\n        prep Technology lecture 10/9\n        investigate Jupyter \n        200: Grade quiz (contact students with missing quiz)\n        350: outline Tech lectures (21, 22, 23), WordPress lite Project Plan \n        grading in 350 	2017-10-07	6	f
+2537	UNC	\n        200: prep 10/09, ex 11 - Project Plan\n        350\n            type Tech lectures (21, 22, 23)\n            type WordPress lite Project Plan \n            outline 10/09 - Learning\n            Word Press project plan\n            grade exam	2017-10-08	6	f
 2202	Church	\n        Vineyard Conference\n        meet with Langham project director\n        Rachel Conner\n        Chris Wright\n        Allen Hodges\n        party at house\n\n	2017-07-12	14	f
 2203	Church	\n        Vineyard Conference\n        meet with Langham project director\n	2017-07-13	14	f
 2204	Fun	\n        drive to Flagstaff	2017-07-14	7	f
@@ -3908,7 +3879,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2207	People	\n        high school reunion picnic\n        connect with Don, Diane, Birdie, Betty, Ed\n        discuss connections with Stacie\n        Greg & Kate	2017-07-15	13	f
 2534	People	\n        discuss Slovenia with Stacie\n        bike hoist project\n        grocery store\n        dinner - Christine job difficulties	2017-10-07	6	f
 2536	Grow	\n        4, 5, 4, 4\n        nap	2017-10-08	1	f
-2537	Teach	\n        200: prep 10/09, ex 11 - Project Plan\n        350\n            type Tech lectures (21, 22, 23)\n            type WordPress lite Project Plan \n            outline 10/09 - Learning\n            Word Press project plan\n            grade exam	2017-10-08	6	f
+2541	UNC	\n        200\n        class 21 - 10/09 - ex 11 - Project Plan\n        work with Evelyn Cruz\n        350\n        prep 21 - 10/09 - Learning - World Press\n        class 21 - 10/09 - Learning\n        350 name tags\n        Type in notes from brainstorm\n        Tools & Admin\n        Email\n        email Jim Reardon\n        shirt at bookstore\n        research teaching in Slovenia\n        contact Mehran to discuss Lithuania\n        request transcript from NAU	2017-10-09	8	f
 2538	Church	\n        church server\n        lunch at Nepal with John and Sue Marsden	2017-10-08	6	f
 2539	Fun	\n        TV\n	2017-10-08	1	f
 2540	Grow	\n        4, 5, 4, 5	2017-10-09	0	f
@@ -3919,47 +3890,46 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2212	People	\n        time with Stacie\n        Cafe Jose	2017-07-17	4	f
 2213	Tools	\n        prepare for meeting with Josiah\n        collaborate with Josiah\n        follow up	2017-07-17	4	f
 2214	Fun	\n        Tusmego\n        Sudoku\n        Gavin Stone\n        relax in Sedona\n        swimming\n	2017-07-17	6	f
-2541	Teach	\n        200\n        class 21 - 10/09 - ex 11 - Project Plan\n        work with Evelyn Cruz\n        350\n        prep 21 - 10/09 - Learning - World Press\n        class 21 - 10/09 - Learning\n        350 name tags\n        Type in notes from brainstorm\n        Tools & Admin\n        Email\n        email Jim Reardon\n        shirt at bookstore\n        research teaching in Slovenia\n        contact Mehran to discuss Lithuania\n        request transcript from NAU	2017-10-09	8	f
+2545	UNC	\n        prep #22	2017-10-10	10	f
 2542	People	\n        discuss Slovenia and teaching with Stacie	2017-10-09	2	f
 2543	Fun	\n        This is Us, Enterprise\n	2017-10-09	4	f
 2544	Grow	\n        5, 4, 4, 4	2017-10-10	0	f
-2545	Teach	\n        prep #22	2017-10-10	10	f
+2548	UNC	\n        class #22	2017-10-11	8	f
 2546	Fun	\n        Enterprise\n	2017-10-10	4	f
 2547	Grow	\n        3, 5, 3, 5	2017-10-11	0	f
-2548	Teach	\n        class #22	2017-10-11	8	f
+2552	UNC	\n        prep #23	2017-10-12	8	f
 2549	People	\n        Durama with Stacie\n        Pelican Lakes with Stacie	2017-10-11	2	f
 2535	Fun	\n        This is Us\n        Discuss Slovenia with Stacie (watch video)\n	2017-10-07	2	f
 2550	Fun	\n        Wonder Woman, Arrow\n	2017-10-11	4	f
 2551	Grow	\n        5, 4, 5, 4	2017-10-12	0	f
 2810	Tools	\n        build archive for UNC-2017, BACS_200, CS350\n        adapt to new UNC repo\n        build tests for archive, unc	2017-12-17	2	f
-2552	Teach	\n        prep #23	2017-10-12	8	f
+2557	UNC	\n        class #23	2017-10-13	8	f
 2560	People	\n        Swain's birthday party\n        lunch with Jesse at Hearth	2017-10-14	3	f
 2553	People	\n        time with Stacie	2017-10-12	2	f
 2554	Fun	\n        This is Us, Supergirl\n	2017-10-12	4	f
 2555	Grow	\n        5, 5, 4, 4	2017-10-13	0	f
 2556	People	\n        dinner with Stacie	2017-10-13	2	f
-2557	Teach	\n        class #23	2017-10-13	8	f
+3105	UNC	\n        grade ex 17	2018-02-24	5	f
 2558	Fun	\n        Castle\n	2017-10-13	4	f
 2559	Grow	\n        midnight sleep attempt\n        4, 4	2017-10-14	1	f
 2811	Church	\n        take out Gardeners	2017-12-17	4	f
 2812	People	\n        Mandy and JD\n	2017-12-17	7	f
 2808	People	\n        Andrew and Rachel drop presents off\n        awkward interaction (stress of Rachel's job)\n        Stacie and Rachel attend women's brunch\n        time with Stacie	2017-12-16	4	f
-3105	Teach	\n        grade ex 17	2018-02-24	5	f
+3108	UNC	\n        grade quiz 6\n        grade blog 1\n        generate new list of students\n        review grades\n        create design review groups	2018-02-25	6	f
 3029	Fun	\n        Vikings, This is Us, Sheild\n	2018-02-05	3	f
 3106	Fun	\n        Amazing Race\n        Parts Unknown\n        Two Weeks Notice	2018-02-24	5	f
 3107	Grow	\n        5, 5, 5, 4\n        walk to park\n        nts	2018-02-25	3	f
-3108	Teach	\n        grade quiz 6\n        grade blog 1\n        generate new list of students\n        review grades\n        create design review groups	2018-02-25	6	f
 3109	Fun	\n        Count of Monte Cristo, Mummy\n	2018-02-25	5	f
-3619	Teach	    	2018-06-27	0	f
+2562	UNC	\n        grade 200 exercises\n        outline Architecture\n	2017-10-14	7	f
 3618	Grow	    3, 5, 3, 5\n    10,000 steps	2018-06-27	2	f
 2561	Fun	\n        Good Place, Alias	2017-10-14	3	f
-2562	Teach	\n        grade 200 exercises\n        outline Architecture\n	2017-10-14	7	f
+3111	UNC	\n        prep and teach Lesson 19\n        sign up for meal ticket	2018-02-26	9	f
 3110	Grow	\n        5, 5, 4, 3	2018-02-26	0	f
-3111	Teach	\n        prep and teach Lesson 19\n        sign up for meal ticket	2018-02-26	9	f
 3113	Fun	\n        Victoria\n	2018-02-26	1	f
+2533	UNC	\n        prep Technology lecture 10/9\n        investigate Jupyter \n        200: Grade quiz (contact students with missing quiz)\n        350: outline Tech lectures (21, 22, 23), WordPress lite Project Plan \n        grading in 350 	2017-10-07	6	f
 2809	Grow	\n        3, 3, 2, 2\n        worry about Rachel	2017-12-17	1	f
 2572	Church	\n        Justice initiative - Rachel\n        great worship	2017-10-22	6	f
-2573	Teach	\n        grading (Israel)	2017-10-22	6	f
+2567	UNC	\n        350 #24 Arch (prep, class, grade)\n        200 #24 Tables (prep, ex, class, grade)\n        Dean Allison	2017-10-16	9	f
 2575	Grow	\n        4,4,5,2\n	2017-10-22	0	f
 3073	Grow	\n        4, 3, 3, 3	2018-02-16	0	f
 3075	Fun	\n        Legends	2018-02-16	2	f
@@ -3969,34 +3939,30 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3033	Church	\n        home group	2018-02-06	3	f
 3034	Fun	\n        Flash\n	2018-02-06	1	f
 3035	Grow	\n        5, 3, 3, 2\n        nts	2018-02-07	1	f
-3057	Teach	\n        teach Lesson 14	2018-02-12	5	f
+2570	UNC	\n        experiment with Jupyter and IDLE for coding exercise\n        build file formatters for exercise	2017-10-21	10	f
 3058	People	\n        discuss Originals	2018-02-12	1	f
 3070	Tools	\n        organize project notes and plans\n        work on Sensei Course for Software Practices	2018-02-15	6	f
 3061	Grow	\n        4, 3, 3, 3\n        nts	2018-02-13	1	f
-3062	Teach	\n        build templates for CSS (font, color, space, border)\n        grade ex14	2018-02-13	7	f
+3074	UNC	\n        create class schedule\n        Lesson 16 - Border & Spacing\n        prep Lesson 17	2018-02-16	9	f
 3063	People	\n        Pelican & Lakes & cherry pie\n        Josiah (discuss tech)	2018-02-13	4	f
 3114	Grow	\n        3, 4, 3, 2\n        nts	2018-02-27	3	f
 3621	Fun	    Profit, ER, Dragonfly	2018-06-27	5	f
 3620	WAM	    Digital Ocean new Droplet from WAM-2.2 Snapshot (with SSH key)\n    Hostname  WAM-2.2 (change from wam-2.2)\n    Park w2wweld.org\n    nslookup w2wweld.org\n    ssh django@w2wweld.org\n    modify db.py for hostname\n    data migrate\n    tst (approve all)\n    fix all tests\n    configure web servers\n    debug page loading 	2018-06-27	5	f
-3763	Teach	    add JS content to agenda for BASS 350\n    go to UNC\n    get keys for new office\n    lunch at Chiba Hut	2018-07-31	8	f
 3760	Fun	    Black\n    Trip log - day by day	2018-08-01	2	f
 3764	Fun	    You Tube with Stacie\n    Black	2018-07-31	2	f
 3761	People	    visit with Cassie	2018-08-01	2	f
 3622	People	    talk with Stacie	2018-06-27	2	f
-3623	Church	    	2018-06-27	0	f
 2563	Church	\n        Hunger initiative - Jenny\n        Rick Lehman\n        Swains at Rio	2017-10-15	6	f
 3067	People	\n        discuss live issues with Stacie	2018-02-14	1	f
 2564	People	\n        Stacie	2017-10-15	2	f
 3064	Fun	\n        Enterprise\n	2018-02-13	2	f
 3065	Grow	\n        3, 3, 3, 3	2018-02-14	0	f
-3066	Teach	\n        develop future lesson topics\n        plan out student projects blog project\n        Lesson 15 - Color\n        develop agenda for remaining lessons	2018-02-14	9	f
 3762	Grow	    5, 3, 3, 5\n    weight: 207.8	2018-07-31	0	f
 3068	Fun	\n        Profit\n	2018-02-14	4	f
 3069	Grow	\n        4, 3, 3, 3\n        Originals	2018-02-15	1	f
 2215	Tools	\n        design work for BioHammer\n        create thot doc for BioHammer	2017-07-18	4	f
 2565	Grow	\n        5,5,4,3\n        nap, reflect	2017-10-15	2	f
 2566	Fun	\n        Poldark\n        Gifted  \n	2017-10-15	4	f
-2567	Teach	\n        350 #24 Arch (prep, class, grade)\n        200 #24 Tables (prep, ex, class, grade)\n        Dean Allison	2017-10-16	9	f
 2574	Fun	\n        Circle, DS9	2017-10-22	2	f
 2813	Grow	\n        5, 2, 3, 1\n        nts	2017-12-18	3	f
 2814	Tools	\n        clean up archive file\n        build tests for archive (files, dirs, contents)\n        create plan for doc management	2017-12-18	2	f
@@ -4004,10 +3970,8 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3072	People	\n        Valentines Day\n        time with Stacie\n        Chop House\n	2018-02-15	5	f
 2568	Grow	\n        4,5,3,5	2017-10-16	0	f
 2569	Fun	\n        Arrow, Flash\n        library Other Boleyn\n	2017-10-16	5	f
-2570	Teach	\n        experiment with Jupyter and IDLE for coding exercise\n        build file formatters for exercise	2017-10-21	10	f
 2571	Fun	\n        Americans, Castle, Supergirl, Flash\n	2017-10-21	4	f
 3031	Tools	\n        create task history views for activity\n        rewrite ops code scripts\n        simplify deployment	2018-02-06	4	f
-3074	Teach	\n        create class schedule\n        Lesson 16 - Border & Spacing\n        prep Lesson 17	2018-02-16	9	f
 3059	Fun	\n        Profit, Supergirl	2018-02-12	5	f
 2815	People	\n        Mandy & JD visit\n        celebrate Christine passing test at Palominos	2017-12-18	4	f
 2216	Fun	\n        giant rain storm with lightning\n        swim\n        Niki Heat	2017-07-18	4	f
@@ -4017,27 +3981,27 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3060	Business	\n        SWS Partenership Meeting\n    	2018-02-12	3	f
 3765	Business	    battery died in car	2018-07-31	2	f
 3077	Grow	    4, 3, 3, 2\n    nightly prayer\n    aspire and review	2018-02-17	2	f
+2573	UNC	\n        grading (Israel)	2017-10-22	6	f
+3057	UNC	\n        teach Lesson 14	2018-02-12	5	f
+3062	UNC	\n        build templates for CSS (font, color, space, border)\n        grade ex14	2018-02-13	7	f
+3763	UNC	    add JS content to agenda for BASS 350\n    go to UNC\n    get keys for new office\n    lunch at Chiba Hut	2018-07-31	8	f
+3066	UNC	\n        develop future lesson topics\n        plan out student projects blog project\n        Lesson 15 - Color\n        develop agenda for remaining lessons	2018-02-14	9	f
 2583	People	\n        Josiah, Palominos	2017-10-19	3	f
 2584	Grow	\n        walk\n        5,5,2,3	2017-10-19	1	f
 2585	Fun	\n        Madam Sec, Fraiser\n	2017-10-19	2	f
-2586	Teach	\n        350 #26\n        200 #26	2017-10-20	8	f
 2587	Grow	\n        5,5,4,5\n        discuss spiritual growth and ministry with Stacie	2017-10-20	2	f
-2604	Teach	\n        Classes #29\n        Pat Seaton feedback\n        Commit to teach BACS200 in Spring	2017-10-27	8	f
 2605	People	\n        Stacie\n        Andrew & Rachel	2017-10-27	4	f
 2606	Fun	\n        Supergirl, DS9	2017-10-27	2	f
 2607	Grow	\n        4,5,3,5\n	2017-10-27	0	f
-2608	Teach	\n        350 grade exam\n        email about cheating	2017-10-28	6	f
 2609	Fun	\n        Edge of Eternity, Americans, This is Us	2017-10-28	6	f
 2817	Fun	\n        Goldbergs, Madam Sec\n	2017-12-18	3	f
 2818	Grow	\n        4, 3, 3, 2	2017-12-19	0	f
-2589	Teach	\n        200 Confront Israel\n        350 Meet with Seth & Jose\n        Turn down PM class\n        Candidate for PM	2017-10-23	8	f
 3820	Fun	    finish Black start Red\n    nts 2	2018-08-10	3	f
 2821	People	\n        Christmas shopping\n	2017-12-19	2	f
 3081	Grow	\n        5, 3, 2, 3\n        Fully Charged\n        walk\n        nap\n        personal planning	2018-02-18	4	f
 3082	Church	\n        Beilmans at White Out\n	2018-02-18	4	f
 3905	Grow	    4, 3, 3, 3\n    awake at night\n    think about credentials email from Anne and future at UNC	2018-08-29	0	f
 3375	Fun	    Turn, Enterprise, Blue Planet	2018-05-02	4	f
-3906	Teach	    teach Lesson 5 \n    technical problems with Bluehost File Manager\n    slides for Form posting\n    forgot Canvas links\n    get Bluehost working at UNC (login)\n    	2018-08-29	8	f
 3379	Fun	    Matrix III	2018-05-03	3	f
 2824	Tools	\n        build website generator in MyBook app\n        build lesson generator in MyBook app\n        create production lesson planning system\n        test and deploy slides and website	2017-12-20	8	f
 2610	Grow	\n        walk to library\n        4,4,2,4\n	2017-10-28	2	f
@@ -4045,9 +4009,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3370	People	    clean up house for Thornes\n    Thornes visit	2018-05-01	6	f
 3376	Grow	    3, 2, 3, 2\n    haircut\n    talk with Stacie	2018-05-03	2	f
 3378	People	    dinner with Stacie	2018-05-03	1	f
-3373	Teach	    communicate with students\n    contact Charmayne\n    learn about PHP\n    outline of PHP textbook	2018-05-02	3	f
 3374	People	    Ray & Billie Thorne\n    Egg & I	2018-05-02	7	f
-2819	Teach	\n        create class website\n        start on markdown formatter\n        start on lesson content	2017-12-19	3	f
 2822	Grow	\n        5, 3, 4, 2	2017-12-20	0	f
 2825	People	\n        Stacie meets with Karen\n        Discuss life choices	2017-12-20	2	f
 2820	Fun	\n        Star Wars 5\n        Shield, Crown, Enterprise	2017-12-19	9	f
@@ -4057,21 +4019,28 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3078	Tools	    include chapters in Sensei course\n    start on building chapter heading extractor\n    plan management of textbook in Sensei	2018-02-17	5	f
 3079	Fun	    Vikings\n    nts	2018-02-17	3	f
 3080	People	    game night with Fleebees	2018-02-17	4	f
+2586	UNC	\n        350 #26\n        200 #26	2017-10-20	8	f
+2604	UNC	\n        Classes #29\n        Pat Seaton feedback\n        Commit to teach BACS200 in Spring	2017-10-27	8	f
+2608	UNC	\n        350 grade exam\n        email about cheating	2017-10-28	6	f
+2589	UNC	\n        200 Confront Israel\n        350 Meet with Seth & Jose\n        Turn down PM class\n        Candidate for PM	2017-10-23	8	f
+3906	UNC	    teach Lesson 5 \n    technical problems with Bluehost File Manager\n    slides for Form posting\n    forgot Canvas links\n    get Bluehost working at UNC (login)\n    	2018-08-29	8	f
+3373	UNC	    communicate with students\n    contact Charmayne\n    learn about PHP\n    outline of PHP textbook	2018-05-02	3	f
+2819	UNC	\n        create class website\n        start on markdown formatter\n        start on lesson content	2017-12-19	3	f
+2614	UNC	\n        plan out CS350 schedule of topics\n        teach classes #30	2017-10-30	10	f
+2816	UNC	\n        build new BACS_200_2018 repo\n        start building website for class	2017-12-18	2	f
 2612	Grow	\n        discuss spiritual growth with Stacie\n        time off from UNC work\n        5, 3, 2, 2	2017-10-29	2	f
 2613	Fun	\n        Gravity\n	2017-10-29	4	f
-2614	Teach	\n        plan out CS350 schedule of topics\n        teach classes #30	2017-10-30	10	f
 2615	Grow	\n        5, 3, 1, 4	2017-10-30	0	f
 3010	Business	\n        buy NVDA stock\n        build Disrupters Dashboard\n        set goals for asset allocation	2018-02-01	2	f
-2816	Teach	\n        build new BACS_200_2018 repo\n        start building website for class	2017-12-18	2	f
 3097	Write	\n        work on paperback publishing of Leverage	2018-02-22	8	f
 3098	Church	\n        church board meeting	2018-02-22	4	f
 435	Fun	\n        Madam Sec, Flash\n	2016-05-12	2	f
 3100	Grow	\n        5, 3, 4, 3	2018-02-23	0	f
-3101	Teach	\n        Michael Pelosi interview (lecture, lunch, writeup)\n        Lesson 18 - Main Menu	2018-02-23	11	f
+3115	UNC	\n        grade ex 19\n        grade blog\n        fix quiz grade in Canvas\n        contact failing students	2018-02-27	5	f
 3102	Fun	\n        Amazing Race, Man on a Ledge\n    	2018-02-23	3	f
 3103	Grow	\n        4, 4, 4, 4\n        reflect and review	2018-02-24	2	f
 3104	People	\n        talk with Stacie\n        time with Stacie\n	2018-02-24	2	f
-3115	Teach	\n        grade ex 19\n        grade blog\n        fix quiz grade in Canvas\n        contact failing students	2018-02-27	5	f
+2829	UNC	\n        Class - build first week content (Lectures, Ex, Web)\n        UNC Email	2017-12-21	0	f
 3116	Business	\n        sort papers\n        FCIP - prototyping	2018-02-27	4	f
 3117	Fun	\n        Supergirl\n	2018-02-27	2	f
 2826	Fun	\n        Finish Edge of Eternity\n        ER, Voyager, Frasier\n	2017-12-20	4	f
@@ -4086,8 +4055,8 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3148	Grow	\n        4, 4, 3, 4	2018-03-07	0	f
 3151	Grow	\n        4, 3, 3, 2	2018-03-08	0	f
 3392	Grow	    too much spicy food\n    nap\n    discuss my insecurities with Stacie\n    2, 3, 5, 2	2018-05-07	3	f
-3627	Teach	    improve CSS and views for Seaman's Guides	2018-06-28	2	f
-3393	Teach	    develop BACS 350 topic schedule week by week\n    create lesson plan for first four weeks	2018-05-07	2	f
+3385	UNC	    submit final grades for BACS 200\n    MCB graduation reception\n    archive student results	2018-05-05	6	f
+3095	UNC	\n        Lesson 17 - Page Layout\n        prep for lesson 17\n        build course work on Sensei\n        create notes on hiring\n	2018-02-21	7	f
 3394	Tools	    design data models for Sensei\n    update Sensei UX\n    implement Task Export to files	2018-05-07	4	f
 3387	Fun	    Andrew & Rachel\n    Pitch Perfect\n    discuss Mary Wilson & Women to Women	2018-05-05	3	f
 3630	Church	    prepare for board meeting\n    meet with board\n    last board meeting\n    adopt healthcare benefits plan	2018-06-28	5	f
@@ -4096,7 +4065,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3085	Grow	\n        5, 2, 2, 3\n        Notes for Fully Charged\n        process ideas about personal growth	2018-02-19	5	f
 3086	Church	\n        think through White Out expenses	2018-02-19	1	f
 3087	Fun	\n        library\n        Parts Unknown	2018-02-19	4	f
-2829	Teach	\n        Class - build first week content (Lectures, Ex, Web)\n        UNC Email	2017-12-21	0	f
+3149	UNC	\n        Lesson 23 - Bootstrap UI	2018-03-07	10	f
 3088	Tools	\n        build book viewer\n	2018-02-19	4	f
 3395	Fun	    Dragonfly\n    Madam Sec, Profit, Legends	2018-05-07	5	f
 3384	Grow	    5, 4, 2, 3\n    sleep in\n    discuss female leadership with Stacie	2018-05-05	2	f
@@ -4105,7 +4074,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3388	Grow	    4, 2, 1, 4\n    nap	2018-05-06	1	f
 3099	Fun	\n        Profit, Amazing Race\n        	2018-02-22	2	f
 3389	Church	    church service	2018-05-06	4	f
-3385	Teach	    submit final grades for BACS 200\n    MCB graduation reception\n    archive student results	2018-05-05	6	f
+3091	UNC	    meet with interview candidate Vaibhav Anu\n    lunch with interview team	2018-02-20	8	f
 3383	Fun	    Legends, Death Cure	2018-05-04	3	f
 3391	Fun	    Avengers (2nd view)\n    work with Kindle on Comics	2018-05-06	5	f
 3596	Grow	    3, 3, 3, 5\n    restless night\n    thinking about emotional threat response and SCARF\n    nap\n    long walk	2018-06-25	3	f
@@ -4114,20 +4083,20 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3628	Fun	    visit library\n    Jurassic World	2018-06-28	5	f
 3822	Business	    cancel Host Gator account\n    clean house\n    grout sealer	2018-08-10	1	f
 3089	Grow	    4, 2, 3, 2	2018-02-20	0	f
+3627	UNC	    improve CSS and views for Seaman's Guides	2018-06-28	2	f
+3393	UNC	    develop BACS 350 topic schedule week by week\n    create lesson plan for first four weeks	2018-05-07	2	f
 2618	People	\n        Stacie Sol de Jalisco	2017-10-29	2	f
 2619	Church	\n        Pannera's with Smiths	2017-10-30	2	f
 3093	People	\n        discuss investments for kids	2018-02-21	2	f
 3094	Fun	\n        Amazing Race, Next Gen, Vikings	2018-02-21	5	f
-3095	Teach	\n        Lesson 17 - Page Layout\n        prep for lesson 17\n        build course work on Sensei\n        create notes on hiring\n	2018-02-21	7	f
 3092	Grow	\n        3, 2, 3, 3	2018-02-21	0	f
 3096	Grow	\n        5, 2, 3, 1	2018-02-22	0	f
 3150	Church	\n        lunch with Todd at UC\n        home group at Swain's\n    	2018-03-07	4	f
 2620	Grow	\n        3, 1, 4, 3\n        reflect and plan	2017-10-31	2	f
 2621	People	\n        Trick or Treat\n        fondue	2017-10-31	1	f
 2622	Fun	\n        Allied	2017-10-31	5	f
-3149	Teach	\n        Lesson 23 - Bootstrap UI	2018-03-07	10	f
 3090	People	    think about investments for kids	2018-02-20	1	f
-3091	Teach	    meet with interview candidate Vaibhav Anu\n    lunch with interview team	2018-02-20	8	f
+3101	UNC	\n        Michael Pelosi interview (lecture, lunch, writeup)\n        Lesson 18 - Main Menu	2018-02-23	11	f
 2841	People	\n        Rudys with Josiah clan\n	2017-12-24	4	f
 3390	People	    time with Stacie\n    lunch at Tres Marg	2018-05-06	4	f
 3356	Grow	    3, 2, 3, 4\n    household, work, and travel projects\n    plans and goals for summer\n    time budget\n    book quotes\n    life values and plans\n    nap & sleepless night\n    think through conflicts over control	2018-04-28	6	f
@@ -4142,15 +4111,12 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3823	Grow	    5, 2, 3, 5\n    weight: 208.8\n    	2018-08-12	0	f
 3824	Fun	    Red	2018-08-12	1	f
 3825	People	    Cazadore's with Josiah & Cassie\n    lake day with Unicorn and swimming\n    Andrew & Rachel\n    Nick Vujicic - Overcoming Hopelessness	2018-08-12	9	f
-3377	Teach	    write Chris Vegter about PHP server\n    Robert Carver in BACS 350 override\n    decide on Leverage Book Promotion\n    write letter to book recipients\n    weekly schedule for BACS 350\n    setup email signature for Outlook 360\n    create list of apps for PHP class\n    create sample schedule for PHP class	2018-05-03	8	f
-3911	Tools	    	2018-08-30	0	f
-3913	People	    	2018-08-30	0	f
+3819	UNC	    create special template views (show both HTML and PHP code)\n    build first few demos on website\n    PHP directory listing\n    create variable injection in PHP\n    	2018-08-10	5	f
 3826	Church	    Becky Olmstead\n    Josiah & Cassie	2018-08-12	4	f
 3369	Tools	    develop and debug wiki tool\n    begin document wiki project	2018-05-01	4	f
 3396	Grow	    pack for trip\n    prepare for conference\n    5, 5, 	2018-05-08	4	f
 3154	People	\n        meet with Lynn Mora\n    	2018-03-08	2	f
 3372	Grow	    2, 3, 3, 2\n    restless night out of our bed	2018-05-02	0	f
-3819	Teach	    create special template views (show both HTML and PHP code)\n    build first few demos on website\n    PHP directory listing\n    create variable injection in PHP\n    	2018-08-10	5	f
 2832	Church	\n        improve church dashboard	2017-12-21	3	f
 2837	Grow	\n        5, 3, 3, 2\n        read Tribe of Mentors\n        talk with Stacie about relationships\n        Lessons from 2017	2017-12-23	6	f
 2839	Grow	\n        4, 3, 3, 4\n        nap\n        read 10% Happiness, Well Being, Tribe of Mentors	2017-12-24	6	f
@@ -4158,24 +4124,25 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2838	People	\n        discuss Shrinking World Investment Fund with Josiah\n        visit Garcias\n        visit library\n	2017-12-23	8	f
 2623	Grow	\n        write about grace and emotional health\n        4, 4, 4, 5	2017-11-01	1	f
 2836	Fun	\n        Black Widow\n	2017-12-22	2	f
-3152	Teach	\n        grade ex23\n        grade blog #2\n        corrupted gradebook while bringing in exam	2018-03-08	6	f
 2626	Fun	\n        Flash, This is Us\n	2017-11-01	2	f
-3119	Teach	\n        Lesson 20 - Design Review\n        broken merge for slides show	2018-02-28	10	f
 3907	Fun	    ER, Fraiser, Dance\n    	2018-08-29	4	f
 2833	Fun	\n        Americans\n	2017-12-21	4	f
 2624	People	\n        discuss grace with Stace\n        time with Stacie	2017-11-01	2	f
-3910	Teach	    Announcement Drop Deadline\n    lessons - 350/200  6-10\n    grade 200 05\n    outline 200 06\n    CRUD in PHP\n    URL Quiz for 200\n    	2018-08-30	8	f
-2625	Teach	\n        200\n            gave exam\n            grade exam & decide on quiz for URL\n        350\n            make up exam\n            unit test exercise and lecture	2017-11-01	9	f
 3908	People	    Rudy BBQ take out\n    discuss UNC with Stacie	2018-08-29	2	f
 3153	Tools	\n        refactoring plans for MyBook\n        improve high level user flow for Sensei	2018-03-08	6	f
+3377	UNC	    write Chris Vegter about PHP server\n    Robert Carver in BACS 350 override\n    decide on Leverage Book Promotion\n    write letter to book recipients\n    weekly schedule for BACS 350\n    setup email signature for Outlook 360\n    create list of apps for PHP class\n    create sample schedule for PHP class	2018-05-03	8	f
+3152	UNC	\n        grade ex23\n        grade blog #2\n        corrupted gradebook while bringing in exam	2018-03-08	6	f
+3119	UNC	\n        Lesson 20 - Design Review\n        broken merge for slides show	2018-02-28	10	f
+3910	UNC	    Announcement Drop Deadline\n    lessons - 350/200  6-10\n    grade 200 05\n    outline 200 06\n    CRUD in PHP\n    URL Quiz for 200\n    	2018-08-30	8	f
+2625	UNC	\n        200\n            gave exam\n            grade exam & decide on quiz for URL\n        350\n            make up exam\n            unit test exercise and lecture	2017-11-01	9	f
 2627	Grow	\n        reflection\n        track time\n        4, 5, 3, 2	2017-11-02	2	f
 2834	Grow	\n        2, 2, 3, 2\n        Cassie wakes up at 2:00	2017-12-22	2	f
 2835	People	\n        work puzzle\n        play Carcassonne\n        discuss teaching tools with Josiah\n        Rachel and Andrew come over in evening	2017-12-22	10	f
 3758	Grow	    4, 1, 3, 5\n    weight: 207.8\n    sleep in\n    organize\n    	2018-08-01	1	f
-3759	Teach	    plan tasks before class\n    install NetBeans on Mac\n    use XAMPP on Mac\n    start building example code for 350	2018-08-01	6	f
-3779	Teach	    build slide show application\n    use slides from Spring as model\n    copy images for BACS 200 in spring\n    debug image loading\n    	2018-08-02	6	f
+3635	UNC	    unify and optimize CSS for Guide\n    think through branding\n    refactor view code to eliminate duplication	2018-06-30	3	f
+3773	UNC	    move office\n    talk with Mehrgan\n    talk with Anne\n 	2018-08-03	3	f
 3155	Grow	\n        4, 3, 3, 3	2018-03-09	0	f
-3156	Teach	\n        corrupted gradebook\n        exam	2018-03-09	6	f
+3397	UNC	    meet with Charmayne\n    work on class details	2018-05-08	2	f
 3157	Tools	\n        fix production who2hire by restarting nginx	2018-03-09	2	f
 3171	Tools	\n        card view\n        outline parsing algorithm	2018-03-12	6	f
 3158	People	\n        HP alumni lunch	2018-03-09	3	f
@@ -4186,32 +4153,27 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3769	Fun	    Black\n    Americans	2018-08-04	3	f
 3770	People	    subway sandwich\n    Andrew & Rachel - take out from Sol de Jalisco	2018-08-04	3	f
 3637	Fun	    nts 3\n    Last Jedi	2018-06-30	7	f
-3638	People	    	2018-06-30	0	f
 3771	Church	    baptism and picnic	2018-08-01	3	f
 3164	People	\n        games with Leaders	2018-03-10	3	f
 3165	Fun	\n        Thor: Ragnarok\n	2018-03-10	2	f
 3772	Grow	    5, 4, 4, 3\n    weight: 206.8\n    Ray Dalio's 1937 Article	2018-08-03	1	f
-3635	Teach	    unify and optimize CSS for Guide\n    think through branding\n    refactor view code to eliminate duplication	2018-06-30	3	f
-3773	Teach	    move office\n    talk with Mehrgan\n    talk with Anne\n 	2018-08-03	3	f
+2635	UNC	\n        200\n            Design Review planning\n            Design Review Checklist\n            Design Review tool for scoring\n            Adjust grades for proto\n            Assign review groups	2017-11-04	7	f
+2630	UNC	\n        Class #32\n        200: Exam review, Prototype, 20 people missing\n        350: system test, help Fayed	2017-11-03	9	f
 3774	WAM	    Basic testing\n    Fix issue with Login style\n    Fix issue with Director view not linking to correct case views\n    Improve overall spacing and borders for better appearance\n    Relayout tables in views to be more consistent	2018-08-03	4	f
 3633	Fun	    Profit\n    Last of Mohicans	2018-06-29	6	f
-3397	Teach	    meet with Charmayne\n    work on class details	2018-05-08	2	f
+3162	UNC	\n        grade exam	2018-03-10	3	f
 3398	Tools	    implement Task Import from files\n    simplify Task processing code\n    unify views\n    upgrade Pycharm on macbook\n    remove old history files from all machines\n    eliminate 1000 lines of code\n    fix all tests	2018-05-08	6	f
 3166	Grow	\n        Originals, Fully Charged\n        nap\n        4, 3, 4, 3	2018-03-11	3	f
 3167	People	\n        Meekers\n        time with Stacie	2018-03-11	3	f
 3775	Business	    Car repair\n    Haircut	2018-08-03	2	f
 3776	Fun	    Black\n    	2018-08-03	1	f
-3028	Teach	\n        lesson 12 - prep, ex, grade\n        teach about Forms\n        discuss faculty interview process with Mehrgan	2018-02-05	11	f
-2628	Teach	\n        200\n            grade exam\n            grade proto\n            review grades\n            url quiz\n        350\n            hosting prep\n            system test prep	2017-11-02	10	f
 3768	WAM	    save data from production\n    turn off old server\n    clone staging server\n    configure server\n    attempt to get SSL certificate\n    test server & data\n    release 2.2.1\n    	2018-08-04	8	f
 3168	Fun	\n        Avengers Civil War, Amazing Race	2018-03-11	4	f
 3169	Church	\n        church\n	2018-03-11	4	f
 2633	Grow	\n        4, 5, 2, 5\n	2017-11-03	0	f
 2634	Grow	\n        4, 3, 3, 2\n        personal review	2017-11-04	1	f
-2635	Teach	\n        200\n            Design Review planning\n            Design Review Checklist\n            Design Review tool for scoring\n            Adjust grades for proto\n            Assign review groups	2017-11-04	7	f
 3170	Grow	\n        reflection\n        haircut\n        3, 4, 4, 2	2018-03-12	2	f
 2629	Fun	\n        Flash\n	2017-11-02	2	f
-2630	Teach	\n        Class #32\n        200: Exam review, Prototype, 20 people missing\n        350: system test, help Fayed	2017-11-03	9	f
 2844	Grow	\n        5, 1, 3, 2	2017-12-26	0	f
 2845	People	\n        Three Wise Men role playing\n        group to Jumanji\n        Fleebees to meet Ben	2017-12-26	12	f
 2846	Fun	\n        Jumanji\n	2017-12-26	2	f
@@ -4223,18 +4185,21 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2842	Grow	\n        5, 2, 2, 1	2017-12-25	0	f
 2843	People	\n        open presents\n        finish Star Wars puzzle\n        Julio and Jackie for Christmas dinner\n        play games	2017-12-25	13	f
 3639	Church	    Beilman's BarBQ   	2018-06-30	2	f
-3636	Tools	    	2018-06-30	0	f
-3162	Teach	\n        grade exam	2018-03-10	3	f
 2632	Fun	\n        Entertainment Weekly	2017-11-03	1	f
 3767	Grow	    5, 4, 4, 3\n    weight: 206.4	2018-08-04	0	f
+3759	UNC	    plan tasks before class\n    install NetBeans on Mac\n    use XAMPP on Mac\n    start building example code for 350	2018-08-01	6	f
+3779	UNC	    build slide show application\n    use slides from Spring as model\n    copy images for BACS 200 in spring\n    debug image loading\n    	2018-08-02	6	f
+3156	UNC	\n        corrupted gradebook\n        exam	2018-03-09	6	f
+3028	UNC	\n        lesson 12 - prep, ex, grade\n        teach about Forms\n        discuss faculty interview process with Mehrgan	2018-02-05	11	f
+2628	UNC	\n        200\n            grade exam\n            grade proto\n            review grades\n            url quiz\n        350\n            hosting prep\n            system test prep	2017-11-02	10	f
 3163	Tools	\n        build card view (CSS, and view logic)	2018-03-10	4	f
 3175	Business	\n        update Personal Capital dashboard\n        review finances	2018-03-13	3	f
 3176	People	\n        visit Shiels	2018-03-13	3	f
 3121	Grow	\n        feeling sick\n        pass kidney stone\n        walk to Pelican Lakes\n        3, 3, 2, 3	2018-03-01	5	f
-3122	Teach	\n        repair slide show\n        prep Lesson 21\n        debug tabs and accordion	2018-03-01	7	f
+3125	UNC	\n        Lesson 21	2018-03-02	6	f
 3123	Fun	\n        Amazing Race\n	2018-03-01	2	f
 3124	Grow	\n        nap\n        bad sleep\n        1, 3, 4, 2	2018-03-02	2	f
-3125	Teach	\n        Lesson 21	2018-03-02	6	f
+2641	UNC	\n        200\n            create URL quiz\n            create canvas\n            class #33\n        350\n            class #33	2017-11-06	9	f
 3126	Business	\n        tax meeting with Diane Alexander	2018-03-02	1	f
 3127	People	\n        Fat Pastors	2018-03-02	3	f
 2847	Fun	\n        experiment with Ember\n	2017-12-25	1	f
@@ -4252,23 +4217,23 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2638	Church	\n        Todd - Generocity	2017-11-05	4	f
 2639	Fun	\n        Ragnarok with Rachel, Christine\n        Edge of Eternity\n        Limitless, NCIS, Poldark\n	2017-11-05	10	f
 2640	Grow	\n        write about life\n        3, 5, 4, 5	2017-11-06	2	f
-2641	Teach	\n        200\n            create URL quiz\n            create canvas\n            class #33\n        350\n            class #33	2017-11-06	9	f
+2644	UNC	\n        200 - build design review data form app	2017-11-07	9	f
 2642	Fun	\n        TV\n        	2017-11-06	3	f
 2643	Grow	\n        3, 5, 4, 5	2017-11-07	0	f
-2644	Teach	\n        200 - build design review data form app	2017-11-07	9	f
+2648	UNC	\n        200\n            class #34\n            grade URL quiz\n        350\n            class #34	2017-11-08	9	f
 2645	People	\n        Pelican Lakes with Stacie	2017-11-07	2	f
 2646	Fun	\n        TV\n	2017-11-07	3	f
 2647	Grow	\n        3, 4, 4, 5	2017-11-08	0	f
-2648	Teach	\n        200\n            class #34\n            grade URL quiz\n        350\n            class #34	2017-11-08	9	f
+2651	UNC	\n        200 - build design review data form app\n        grade design reviews	2017-11-09	9	f
 2649	Fun	\n        TV\n	2017-11-08	5	f
 2650	Grow	\n        3, 5, 4, 5	2017-11-09	0	f
-2651	Teach	\n        200 - build design review data form app\n        grade design reviews	2017-11-09	9	f
+2654	UNC	\n        200\n            grade design reviews\n            class #35\n        350\n            class #35	2017-11-10	9	f
 2653	Grow	\n        3, 5, 4, 5	2017-11-10	0	f
-2654	Teach	\n        200\n            grade design reviews\n            class #35\n        350\n            class #35	2017-11-10	9	f
+2658	UNC	\n        fix student selector on design review app	2017-11-11	2	f
 2655	People	\n        Cafe Athens with Julio	2017-11-10	3	f
 2656	Fun	\n        Edge of Eternity\n	2017-11-10	2	f
 2657	Grow	\n        3, 4, 3, 2	2017-11-11	0	f
-2658	Teach	\n        fix student selector on design review app	2017-11-11	2	f
+3381	UNC	    final exam\n    book give away\n    calculate final grades\n    meet with Pat Seaton, Paul B., Dean A., Jay	2018-05-04	8	f
 2659	Church	\n        rewrite Church money dashboard	2017-11-11	7	f
 3831	People	    Josiah & Cassie return to London\n    breakfast with Josiah & Cassie\n    dinner at Pelican Lakes with Stacie & Christine\n    neighbors use Unicorn float	2018-08-14	4	f
 3129	Grow	\n        4, 4, 4, 4\n        walk to library\n        reflection\n        nts	2018-03-03	3	f
@@ -4277,10 +4242,9 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3782	People	    time with Cassie\n    steaks for dinner with Stacie & Cassie	2018-08-02	2	f
 3592	WAM	    Get logged into GoDaddy\n    Setup DNS record to point to old production server\n    Work on Server configuration for WAM\n    Debug server configuration on WAM image\n    Load production data into WAM	2018-06-20	7	f
 3739	People	    Travel with Stacie\n    Visit with other travelers\n    	2018-07-20	7	f
-3381	Teach	    final exam\n    book give away\n    calculate final grades\n    meet with Pat Seaton, Paul B., Dean A., Jay	2018-05-04	8	f
+3641	UNC	    Order book for BACS 350 (bookstore)	2018-07-01	1	f
 3173	Grow	\n        nts\n        5, 3, 3, 3	2018-03-13	1	f
 4056	People	    dinner at Sol de Jalisco  \n    house cleaning  	2018-10-03	2	f
-3829	Tools	    	2018-08-14	0	f
 3400	Grow	    Activate Your Brain\n    prepare for conference\n    travel to Cleveland\n    5, 5, 5, 4	2018-05-09	14	f
 3827	Grow	    5, 2, 3, 2	2018-08-14	0	f
 3640	Grow	    5, 4, 3, 3\n    Same Different as Me	2018-07-01	3	f
@@ -4289,13 +4253,11 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3642	Tools	    improve MyBook Stylesheet	2018-07-01	2	f
 3645	Church	    church service\n    Chris Warren preached\n    lunch at Royal Nepal with Warrens	2018-07-01	6	f
 3644	People	    pack clothes for donation\n    prep for Europe trip\n    time with Stacie	2018-07-01	2	f
-3641	Teach	    Order book for BACS 350 (bookstore)	2018-07-01	1	f
-3643	Fun	    	2018-07-01	0	f
 4057	Grow	    5, 3, 3, 2\n    weight: 208.4	2018-10-01	0	f
 3961	Business	    prepare house for move	2018-09-09	3	f
-4199	Teach	    \n    	2018-11-17	0	f
 2660	Business	\n        mount trike in garage	2017-11-11	1	f
 3174	Tools	\n        card view	2018-03-13	3	f
+3122	UNC	\n        repair slide show\n        prep Lesson 21\n        debug tabs and accordion	2018-03-01	7	f
 2662	Grow	\n        bed at 8:00\n        4, 5, 3, 3	2017-11-12	2	f
 2661	Fun	\n        Inhumans\n	2017-11-11	4	f
 4200	Tools	    Fix old time records	2018-11-17	2	f
@@ -4303,7 +4265,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2664	Church	\n        Small group with Howells\n	2017-11-09	4	f
 3414	Fun	    explore Cleavland\n    Red Sparrow	2018-05-13	3	f
 3131	People	\n        lunch at Egg & I	2018-03-03	1	f
-3132	Teach	\n        create lesson plan for Bootstap\n        create tabs (raw, bootstrap, material)	2018-03-03	3	f
+4107	UNC	    prepare lesson slides\n    issues with Garret and Jessica	2018-10-17	8	f
 3133	Fun	\n        Star Trek, Voyage Home\n        check out Dragonfly audio\n	2018-03-03	5	f
 3134	Grow	\n        5, 4, 2, 3\n        think about 4 Questions to Change Your Life\n        nap	2018-03-04	3	f
 3178	Grow	\n        5, 3, 3, 2	2018-03-14	0	f
@@ -4311,27 +4273,24 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3181	Grow	\n        5, 3, 3, 4\n        personal renewal and reflection	2018-03-15	2	f
 3182	Fun	\n        hook up bluetooth transmitter\n        create scripts for loading music player\n        mess with music collection	2018-03-15	5	f
 767	Fun	\n        Sliders\n	2016-08-24	3	f
-4107	Teach	    prepare lesson slides\n    issues with Garret and Jessica	2018-10-17	8	f
-3785	Tools	    	2018-08-05	0	f
+4062	UNC	    build solution code\n    	2018-10-02	5	f
 2854	People	\n        Bryan & Corina visit\n        visit with Josiah & Sam	2017-12-28	4	f
 2855	Church	\n        church board meeting	2017-12-28	3	f
 2856	Fun	\n        Defenders\n        Crown\n	2017-12-28	4	f
 2857	Grow	\n        5, 1, 3, 2\n        visit library\n        read Sapiens\n        read Tools of Titans\n        nts	2017-12-29	5	f
 3834	People	    talk with Josiah\n    pancakes\n    Cassie and swimming\n    Josiah goes to CSU\n    discuss careers with Josiah\n    time with Stacie	2018-08-13	8	f
-4062	Teach	    build solution code\n    	2018-10-02	5	f
+3405	UNC	    ideas for teaching	2018-05-14	3	f
 3656	Church	    discuss message from Todd\n    write about church savings\n    review message from Stacie	2018-07-03	2	f
-3405	Teach	    ideas for teaching	2018-05-14	3	f
+3828	UNC	    finalize syllabi for 200 & 350\n    sign contract\n    visit new office\n    setup office\n    setup new computer system\n    copy files from existing system\n    talk with Vish & Dan\n    email Robert & Noah\n    	2018-08-14	7	f
 3407	Fun	    Rock and Roll Hall of Fame	2018-05-14	3	f
 3648	WAM	    solve Letsencrypt problems\n    test and fix staging server\n    improve CSS on WAM\n    relayout page banner 	2018-07-02	4	f
 3649	Fun	    Turn, ER, Dance, Fraiser	2018-07-02	4	f
-3921	People	    	2018-09-03	0	f
 3401	Grow	    PyCon Day 2\n    security keynote\n    3, 3, 3, 5	2018-05-12	8	f
-3828	Teach	    finalize syllabi for 200 & 350\n    sign contract\n    visit new office\n    setup office\n    setup new computer system\n    copy files from existing system\n    talk with Vish & Dan\n    email Robert & Noah\n    	2018-08-14	7	f
 4063	Fun	    Patriot Games\n    	2018-10-02	3	f
 3928	People	    Pelegrini's with Balls\n    breakfast at Severence Grill\n    Facebook	2018-09-01	6	f
 3653	WAM	    review progress from Stacie\n    fix issue with Bootstrap\n    create simpler Banner\n    redesign Director view logic	2018-07-03	4	f
 3654	Fun	    nts 1\n    Supergirl, Fraiser	2018-07-03	4	f
-3652	Teach	    	2018-07-03	0	f
+3647	UNC	    locate patent info online	2018-07-02	1	f
 3651	Grow	    5, 3, 4, 5\n    walk	2018-07-03	2	f
 3404	Grow	    3, 3, 3, 5	2018-05-14	0	f
 3406	People	    visit Sprints\n    Bill Tucker\n    travel from Cleavland to Houstin\n    ride to beach house	2018-05-14	8	f
@@ -4340,59 +4299,55 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3787	People	    lunch at Rio with Webbs, Balls, Garcias, Cassie\n    time with Cassie\n 	2018-08-05	4	f
 4060	People	    talk with Stacie	2018-10-01	2	f
 3917	Grow	    3, 1, 1, 4\n    walk\n    weight: 210.2	2018-09-03	1	f
-3647	Teach	    locate patent info online	2018-07-02	1	f
+3410	UNC	    ideas for teaching	2018-05-11	2	f
 3650	People	    lunch with Stacie at Pelican Lakes	2018-07-02	2	f
 3408	Grow	    PyCon Education Summit\n    Edu Blocks\n    Robots with visual learning\n    GitHub Classroom + Travis + GatorGrader\n    Mark @ Allegehney\n    Jupyter Hub\n    Winking Lizard\n    3, 3, 3, 5	2018-05-10	14	f
 4061	Grow	    5, 3, 3, 5\n    10,000 steps\n    weight: 207.4\n    Dr Kary - annual physical\n    medicine prescriptions	2018-10-02	4	f
 4064	People	    Stacie VMC live stream\n    lunch at Sandbar	2018-10-02	2	f
 3409	Grow	    PyCon Day 1\n    Expo opening\n    Harry Percival\n    Chris Wang\n    3, 3, 3, 5	2018-05-11	9	f
-3410	Teach	    ideas for teaching	2018-05-11	2	f
+3833	UNC	    edit syllabi for 350 and 200\n    get Stacie to help with syllabi\n    build class lesson content\n    screen shots for bluehost.com	2018-08-13	6	f
 3412	Grow	    PyCon day 3 \n    attend Sprint training session\n    3, 3, 3, 5	2018-05-13	9	f
 3832	Grow	    3, 3, 3, 4\n    weight: 207.8\n    sleep in till 9	2018-08-13	0	f
 3403	People	    Winking Lizard with 6 new people\n    Greg Dozier	2018-05-12	4	f
-3919	Tools	    	2018-09-03	0	f
-3833	Teach	    edit syllabi for 350 and 200\n    get Stacie to help with syllabi\n    build class lesson content\n    screen shots for bluehost.com	2018-08-13	6	f
-3402	Teach	    think about teaching	2018-05-12	2	f
+3402	UNC	    think about teaching	2018-05-12	2	f
+3918	UNC	    refactor views for lessons\n    	2018-09-03	3	f
 3922	Grow	    3, 3, 1, 2\n    nap	2018-09-02	1	f
 3923	Fun	    finish Turtles All The Way Down\n    Red\n    	2018-09-02	3	f
 3924	People	    Family Birthday celebration\n    Stacie prepares for trip\n    time with Stacie	2018-09-02	6	f
 3925	Church	    start Arrows series (On Target with God)\n    visit with people at church	2018-09-02	4	f
 3926	Grow	    3, 3, 2, 2\n    Happy Birthday!	2018-09-01	0	f
 3927	Fun	    movie: Mission Impossible - Fallout\n    home entertainment equipment\n    watch hot air balloons\n    	2018-09-01	8	f
-3918	Teach	    refactor views for lessons\n    	2018-09-03	3	f
 3920	Fun	    nts 4\n    Turn\n    finish Americans series	2018-09-03	10	f
 3655	People	    pack for trip	2018-07-03	1	f
-3784	Teach	    \n    	2018-08-05	0	f
-4201	Fun	    \n    	2018-11-17	0	f
 3413	People	    gave out two Leverage books\n    communicated with 7 people through email	2018-05-13	2	f
 3411	Fun	    TV	2018-05-11	3	f
+3132	UNC	\n        create lesson plan for Bootstap\n        create tabs (raw, bootstrap, material)	2018-03-03	3	f
 2858	People	\n        dinner at Outback with Josiah & Sam	2017-12-29	4	f
 2859	Tools	\n        simplify tests	2017-12-29	3	f
 2860	Fun	\n        King's Speech\n	2017-12-29	2	f
 2861	Grow	\n        5, 1, 4, 3\n        nts\n        Questions for Personal Reflection\n        Making Commitments for 2018	2017-12-30	3	f
 2862	People	\n        Cassie to Ft Collins Discovery Museum\n        read to Cassie	2017-12-30	4	f
-2863	Teach	\n        create schedule.md for BACS 200\n        create WebApps content directory\n        WebApps Course - build two levels of lesson plan (4 Parts, 48 Lessons)	2017-12-30	4	f
 2864	Fun	\n        Black Widow\n	2017-12-30	3	f
 2865	Grow	\n        5, 1, \n        personal reflection	2017-12-31	1	f
 2866	Tools	\n        create Documents-2017, MyBook-2017 archive repos\n        create Documents-2018, MyBook-2018 repos	2017-12-31	2	f
-3659	Teach	    	2018-07-04	0	f
+2667	UNC	\n        build designer score\n        class prep	2017-11-12	2	f
 3433	People	    Royal Wedding\n    bird building nest on back porch	2018-05-19	2	f
 3135	Church	\n        church service	2018-03-04	4	f
 3136	People	\n        Parry's Pizzeria\n        Palaminos Greeley\n        visit Garcias and play Carcassonne\n        time with Stacie\n	2018-03-04	7	f
 2665	Church	\n        Vineyard 101\n        Tape giving blurb	2017-11-12	7	f
 2666	People	\n        Rachel having difficulties	2017-11-12	1	f
-2667	Teach	\n        build designer score\n        class prep	2017-11-12	2	f
+3425	UNC	    course outline for 200	2018-05-17	3	f
 3137	Grow	\n        4, 3, 3, 3	2018-03-05	0	f
 3430	Fun	    Vikings, Legends	2018-05-20	3	f
 3943	Fun	    Westworld\n    nts 2\n    	2018-09-06	6	f
-3425	Teach	    course outline for 200	2018-05-17	3	f
+3139	UNC	\n        Lesson 22 - Bootstrap	2018-03-05	6	f
 3138	Business	\n        tax appointment	2018-03-05	2	f
-3139	Teach	\n        Lesson 22 - Bootstrap	2018-03-05	6	f
+3144	UNC	\n        Lesson 23 - Data Display	2018-03-06	5	f
 3140	People	\n        lunch with Eric and Stacie	2018-03-05	2	f
 3141	Fun	\n        Shield, ER, Amazing Race\n    	2018-03-05	4	f
 3142	Grow	\n        high winds during night\n        4, 3, 4, 2	2018-03-06	1	f
 3143	Business	\n        closing on refi	2018-03-06	1	f
-3144	Teach	\n        Lesson 23 - Data Display	2018-03-06	5	f
+3417	UNC	    course outline for 350\n    apps to create for 350\n    lesson plans\n    work on system call in PHP	2018-05-15	3	f
 3145	Tools	\n        upgrade cable modem and wireless networks	2018-03-06	1	f
 3146	Church	\n        talk with Todd	2018-03-06	1	f
 3147	Fun	\n        ER, Enterprise, Amazing Race\n    	2018-03-06	5	f
@@ -4402,33 +4357,29 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3186	Fun	\n        setup new Kindle Fire\n        watch Vikings on Fire with headphones	2018-03-16	3	f
 3435	Fun	    Madam Sec, Shield	2018-05-19	3	f
 3426	Fun	    Dragonfly	2018-05-17	4	f
-3660	Tools	    	2018-07-04	0	f
 3962	Grow	    5, 2, 2, 5\n    weight: 208.4\n    walk to library & Border restaurant	2018-09-12	2	f
 3944	People	    Josiah worried about checkpoint in program	2018-09-06	1	f
 3788	Church	    Mike Webb teaching	2018-08-05	4	f
-3417	Teach	    course outline for 350\n    apps to create for 350\n    lesson plans\n    work on system call in PHP	2018-05-15	3	f
+3421	UNC	    course outline for 200	2018-05-16	3	f
 3187	Church	\n        passover\n        processing church ideas (middle of night)\n	2018-03-16	5	f
 3432	Grow	    4, 1, 3, 2\n    prayer time\n    settle in from trip	2018-05-19	2	f
 3658	Grow	    4, 4, 3, 5\n    9,000 steps	2018-07-04	1	f
 3418	Fun	    Dragonfly	2018-05-15	4	f
 3662	People	    July 4th Party\n    Hirata, Warren, Bolowski, Mora, Garcia, Martinez, Fleebe\n    Stacie met with Shawn Barrio	2018-07-04	10	f
-3421	Teach	    course outline for 200	2018-05-16	3	f
-3663	Church	    	2018-07-04	0	f
+3429	UNC	    classroom content teaching tools\n    Learn, Plan, Build, Collab model for each lesson\n    Template for lesson content	2018-05-20	2	f
 3422	Fun	    Dragonfly\n    walk on beach at sunset\n    time in swimming pool	2018-05-16	4	f
 3423	Grow	    3, 3, 1, 5\n    Activate your Brain	2018-05-17	3	f
-3429	Teach	    classroom content teaching tools\n    Learn, Plan, Build, Collab model for each lesson\n    Template for lesson content	2018-05-20	2	f
+3963	UNC	    go to UNC at 8am\n    plan 350 Lesson 10\n    teach Lesson 10\n    Semantic Elements\n    conflict with Brian, Brittney\n    	2018-09-12	8	f
 3661	Fun	    work with photos\n    try out camera\n    create collection of photos on Mac	2018-07-04	3	f
-3963	Teach	    go to UNC at 8am\n    plan 350 Lesson 10\n    teach Lesson 10\n    Semantic Elements\n    conflict with Brian, Brittney\n    	2018-09-12	8	f
+3941	UNC	    build steps for Subscriber App\n    	2018-09-06	5	f
 3431	Church	    church service	2018-05-20	4	f
 3427	Grow	    3, 3, 1, 3\n    nap	2018-05-20	1	f
 3428	People	    Royal Wedding w/Stacie and Rachel	2018-05-20	2	f
 3940	Grow	    5, 2, 1, 2\n    weight: 209.0	2018-09-06	0	f
-3941	Teach	    build steps for Subscriber App\n    	2018-09-06	5	f
 3436	Grow	    2, 2, 2, 4\n    Activate your Brain\n    problems with digestion	2018-05-18	3	f
 3415	Grow	    3, 2, 2, 4\n    Thinking F & S	2018-05-15	3	f
 3437	People	    check out of condo\n    drop Lucy at airport\n    travel from Houston to Home	2018-05-18	11	f
 3789	Grow	    3, 4, 1, 5\n    weight: 206.6\n    13,000 steps	2018-08-06	2	f
-3942	Tools	    	2018-09-06	0	f
 3791	Tools	    restructure info views\n    build out UI for class website	2018-08-06	2	f
 3792	Fun	    Black\n    Americans	2018-08-06	3	f
 3419	Grow	    5, 2, 3, 4\n    Thinking F & S	2018-05-16	3	f
@@ -4436,9 +4387,10 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3189	People	\n        Rachel's 30th birthday\n        St. Patricks Party	2018-03-17	6	f
 3424	People	    visit with Lucy, Stacie, Christine\n    time with Stacie\n    Red Snapper	2018-05-17	4	f
 3190	Fun	\n        setup Kindle Fire\n        try to get Marvel Comics working\n	2018-03-17	2	f
+2863	UNC	\n        create schedule.md for BACS 200\n        create WebApps content directory\n        WebApps Course - build two levels of lesson plan (4 Parts, 48 Lessons)	2017-12-30	4	f
 3702	Fun	    Travel Log: Day 18 - London 3\n        Little sleep\n        Breakfast at Bridge Inn\n        Imperial War Museum\n        Virtual Reality tours of Victoria Falls, Petra\n        Look at trip photos\n        Hide in front of AC\n        Finally succumb to cold\n        Book final night a Premier Inn\n        Bus to Richmond\n        Italian restaurant\n        Cold shower before bed\n        Wet wash clothes all night\n        Cooled off by 5am\n        3,500 steps	2018-07-25	7	f
 3794	Grow	    5, 5, 2, 5\n    weight: 206.0\n    3,000 steps + carryover of exercise stars\n    browse Amazon wish list\n    start Whole New Mind	2018-08-07	1	f
-3968	Teach	    lunch at Toby-Kendell\n    teach Lesson 11\n    setup Apache on UNC computer\n    script for Apache setup	2018-09-14	8	f
+3790	UNC	    rework lesson display\n    create viable slide show\n    build menu for class views\n    Digital Measures\n    invite Mehrgan to dinner\n    check on computer setup\n    process UNC email\n    	2018-08-06	4	f
 3797	Fun	    organize brain \n    nts \n    	2018-08-07	2	f
 3793	People	    time with Stacie\n    Cassie to Windsor Lake with Andrew & Rachel\n    Stacie - meet with Todd & Jenny, W2W program team	2018-08-06	3	f
 3798	People	    Cassie, Christine, and Stacie go to movie\n    schedule Bill Hayes lunch	2018-08-07	2	f
@@ -4449,27 +4401,23 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3416	People	    visit with Lucy, Stacie, Christine\n    walk on beach with Stacie\n    time with Stacie\n    Red Snapper	2018-05-15	4	f
 3971	People	    Andrew & Rachel for dinner\n    Carcassonne\n    Talk with Stacie about feeling over-committed	2018-09-14	4	f
 3668	People	    Grand Circle boat will not go to Vienna\n    return awning after party	2018-07-05	1	f
-3669	Church	    	2018-07-05	0	f
-3666	Tools	    	2018-07-05	0	f
 3664	Grow	    5, 4, 3, 2	2018-07-05	0	f
-3665	Teach	    send email about Learn by Doing\n    create Schedule spreadsheet for BACS 200\n    approve registration for Noah Rolf\n    setup templates for BACS 200 class\n    review scheduled topic for BACS 200\n    learn about Flexible Box and Grid Layout\n    learn about SASS, Gulp, and Emmet\n    learn bootstrap grid layout\n    setup XAMPP on iMac	2018-07-05	9	f
+4070	UNC	    prep RWD lesson\n    prep Objects lesson\n    prep Bear Notes app\n    create object logging app\n    great talk with Moe\n    	2018-10-05	8	f
 3972	Fun	    Red	2018-09-10	2	f
 4068	People	    dinner with Stacie & Christine	2018-10-04	1	f
 3799	Business	    IRS letter Raymond James 2017/2016	2018-08-06	0	f
-3790	Teach	    rework lesson display\n    create viable slide show\n    build menu for class views\n    Digital Measures\n    invite Mehrgan to dinner\n    check on computer setup\n    process UNC email\n    	2018-08-06	4	f
+3989	UNC	    create solutions for 350 projects\n    	2018-09-16	4	f
 3967	Grow	    3, 3, 2, 4\n    weight: 208.0	2018-09-14	0	f
 4069	Grow	    5, 4, 3, 3\n    weight: 207	2018-10-05	0	f
-4070	Teach	    prep RWD lesson\n    prep Objects lesson\n    prep Bear Notes app\n    create object logging app\n    great talk with Moe\n    	2018-10-05	8	f
+3795	UNC	    update lesson slides & class web site\n    rebuild & refine guide theme\n    add bear logo to every page\n    merge and test changes\n    create proper class menus\n    create tabs for lessons\n    	2018-08-07	4	f
 4071	Fun	    Vikings\n    Father of the Bride\n    	2018-10-05	4	f
-4058	Teach	    200 17 - Page layout\n    350 17 - MVC pattern\n    depression over student performance	2018-10-01	8	f
+4074	UNC	    experiment with Regex\n    build demo code for search and replace\n    	2018-10-06	4	f
 3988	Grow	    5, 3, 2, 3\n    weight: 207.6\n    nap	2018-09-16	1	f
-3989	Teach	    create solutions for 350 projects\n    	2018-09-16	4	f
 3990	Church	    busyness	2018-09-16	4	f
 3991	Fun	    Gattaca\n    Setup TV system\n    	2018-09-16	3	f
 3992	People	    lunch at Fuzzy Tacos\n    time with Stacie	2018-09-16	2	f
 3964	Business	    carpet project	2018-09-12	2	f
 3965	People	    talk with Stacie	2018-09-12	2	f
-4075	Tools	    	2018-10-06	0	f
 3966	Fun	    Last 100 Years	2018-09-12	0	f
 4065	Grow	    4, 2, 4, 2\n    weight: 208.4\n    haircut\n    personal time	2018-10-04	1	f
 4067	Church	    Vineyard Missions Conference	2018-10-04	4	f
@@ -4480,8 +4428,6 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3195	Grow	\n        3, 4, 3, 3\n        weekly planning	2018-03-19	1	f
 4076	Fun	    ER, Good Place\n    	2018-10-06	4	f
 3193	People	\n        Doug's with Garcias and Christine\n        time with Stacie	2018-03-18	3	f
-3796	Tools	    	2018-08-07	0	f
-3795	Teach	    update lesson slides & class web site\n    rebuild & refine guide theme\n    add bear logo to every page\n    merge and test changes\n    create proper class menus\n    create tabs for lessons\n    	2018-08-07	4	f
 3969	Fun	    Red\n    	2018-09-14	1	f
 3657	Tools	    experiment with redirect logic for MyBook\n    renew SSL cert for app.Who2Hire.us	2018-07-03	1	f
 3646	Grow	    5, 3, 3, 5\n    write Good Stress/Bad Stress\n    Years of My Life (2017)\n    Time Investment\n    Thinking Patterns & Ideas\n    walk	2018-07-02	3	f
@@ -4489,14 +4435,16 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3192	Church	\n        Gabe Quintana\n        Daryl announced he is going to Bahamas\n        Prayed for Ben and Aubrey	2018-03-18	4	f
 4077	People	    dinner with Christine and Stacie	2018-10-06	1	f
 4072	People	    dinner with Stacie & Christine	2018-10-05	2	f
-4074	Teach	    experiment with Regex\n    build demo code for search and replace\n    	2018-10-06	4	f
-3196	Teach	\n        first day back\n        Lesson 24 - Organizing Info\n        CIS program meeting	2018-03-19	9	f
+3968	UNC	    lunch at Toby-Kendell\n    teach Lesson 11\n    setup Apache on UNC computer\n    script for Apache setup	2018-09-14	8	f
+3665	UNC	    send email about Learn by Doing\n    create Schedule spreadsheet for BACS 200\n    approve registration for Noah Rolf\n    setup templates for BACS 200 class\n    review scheduled topic for BACS 200\n    learn about Flexible Box and Grid Layout\n    learn about SASS, Gulp, and Emmet\n    learn bootstrap grid layout\n    setup XAMPP on iMac	2018-07-05	9	f
+4058	UNC	    200 17 - Page layout\n    350 17 - MVC pattern\n    depression over student performance	2018-10-01	8	f
+3845	UNC	    faculty staff meeting at UNC\n    	2018-08-17	5	f
 3197	Fun	\n        Fraiser	2018-03-19	1	f
 3198	People	\n        Fleebees publishing party\n	2018-03-19	3	f
 3199	Grow	\n        5, 3, 4, 2	2018-03-20	0	f
-3845	Teach	    faculty staff meeting at UNC\n    	2018-08-17	5	f
+3896	UNC	    slides for 350-Lesson 4\n    	2018-08-26	2	f
 3847	People	    dinner with Stacie	2018-08-17	3	f
-3896	Teach	    slides for 350-Lesson 4\n    	2018-08-26	2	f
+3890	UNC	    Lesson 4\n    Eleazar for office hours\n    meet with Chris Vegter about OneDrive\n    	2018-08-27	11	f
 3897	Fun	    Tomb Raider, Fantastic Beasts\n    Red\n    	2018-08-26	4	f
 3856	People	    Shrimp boil with Carmen & Jackie\n    time with Stacie\n    	2018-08-19	4	f
 3839	Grow	    5, 2, 2, 5\n    long walk	2018-08-16	1	f
@@ -4504,33 +4452,28 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3735	Fun	    Travel Log: Day 12 - Heidelberg\n        Breakfast - Don, Marg, Dave, Mich.\n        Bus to Heidelberg\n            Offenbach/Franfurt\n            American military in Germany\n            Udo's perspective and memories\n        Heidelberg\n            Walking tour with Udo\n            Student from University\n            Lunch Ravioli w/beef and spinach\n            Heidelberg castle\n            90 degree heat\n            Giant barrels\n            Pictures of valley\n        Bus to Rudesheim\n        Walk to restaraunt\n            Dinner with CO folks\n            Loud and slow\n            Leave early\n            Gelato in town\n            Buy map for castles\n            Buy teddy bear for Cassie\n        Finish Dragonfly in Amber\n        8,500 steps	2018-07-19	7	f
 3846	Fun	    Ant Man with Stacie\n    Red\n    	2018-08-17	4	f
 3889	Grow	    4, 3, 4, 4\n    weight: 207.4	2018-08-27	0	f
-3890	Teach	    Lesson 4\n    Eleazar for office hours\n    meet with Chris Vegter about OneDrive\n    	2018-08-27	11	f
+3836	UNC	    lesson content for HTML 1-3, PHP 1\n    copy files from Uncle Ed to OneDrive\n    create script to edit lesson files\n    debug 'pe' script\n    implement Next, Prev lesson buttons\n    setup images for PHP class\n    	2018-08-15	6	f
 3892	Fun	    Star Trek\n    ER\n    	2018-08-27	2	f
-3841	Tools	    	2018-08-16	0	f
 3898	People	    Chris & Elaine\n    time with Stacie	2018-08-26	3	f
 3835	Grow	    5, 2, 3, 2	2018-08-15	0	f
-3836	Teach	    lesson content for HTML 1-3, PHP 1\n    copy files from Uncle Ed to OneDrive\n    create script to edit lesson files\n    debug 'pe' script\n    implement Next, Prev lesson buttons\n    setup images for PHP class\n    	2018-08-15	6	f
 3838	People	    Chicken on patio with Stacie\n    deflate Unicorn float\n    Stacie massage	2018-08-15	3	f
 3852	Grow	    5, 3, 3, 3\n    weight: 207.8\n    nap	2018-08-19	1	f
-3671	Teach	    	2018-07-07	0	f
-3672	Tools	    	2018-07-07	0	f
 3670	Grow	    4, 1, 3, 5	2018-07-07	0	f
-3853	Teach	    \n    	2018-08-19	0	f
+3434	UNC	    investigate setup of PHP server\n    outline of first four lessons in PHP class\n    build list of all apps for 350\n    setup Digital Ocean account\n    investigate pytest on PHP account	2018-05-19	7	f
 3445	People	    walk with Stacie	2018-05-22	2	f
 3674	People	    Travel with Stacie	2018-07-07	7	f
 3443	Business	    Shrinking World Partners\n    schedule appointments\n    windshield repair\n    dentist\n    eye dr	2018-05-21	3	f
 3848	Grow	    3, 3, 3, 3\n    weight: 207.8\n    walk\n    nap\n    Activate your brain\n    wake up at 4am\n    discuss coaching with Stacie\n    capture ideas	2018-08-18	4	f
 3855	Fun	    Dance, ER\n    	2018-08-19	3	f
-3434	Teach	    investigate setup of PHP server\n    outline of first four lessons in PHP class\n    build list of all apps for 350\n    setup Digital Ocean account\n    investigate pytest on PHP account	2018-05-19	7	f
-3840	Teach	    build Canvas structure\n    create 350 images\n    create Exercises and content for PHP Lesson 2-3\n    	2018-08-16	9	f
+3840	UNC	    build Canvas structure\n    create 350 images\n    create Exercises and content for PHP Lesson 2-3\n    	2018-08-16	9	f
+3849	UNC	    create graphics for Canvas\n    publish classes in Canvas\n    install GIMP & learn to use it\n    meet with Chris Harris about CS350	2018-08-18	2	f
 3448	Fun	    The Post	2018-05-22	3	f
 3844	Grow	    4, 3, 3, 4\n    Activate your Brain\n    think about coaching	2018-08-17	2	f
-3675	Church	    	2018-07-07	0	f
 3439	Grow	    3, 1, 3, 5\n    walk to garden	2018-05-21	1	f
 3440	People	    walk to Pelican Lakes with Stacie\n    discuss chest pains with Stacie	2018-05-21	2	f
-3849	Teach	    create graphics for Canvas\n    publish classes in Canvas\n    install GIMP & learn to use it\n    meet with Chris Harris about CS350	2018-08-18	2	f
+3441	UNC	    work on strategy for class website\n    update todo list for class prep\n    create new repo for UNC-2018-Fall \n    start on new code for UNC repo\n    create class schedule	2018-05-21	5	f
 3850	Tools	    work with regular expressions in python\n    rewrite text.py and text_test.py	2018-08-18	3	f
-3441	Teach	    work on strategy for class website\n    update todo list for class prep\n    create new repo for UNC-2018-Fall \n    start on new code for UNC repo\n    create class schedule	2018-05-21	5	f
+3677	UNC	    create first four app exercises (Server, HTML++, Directory, Files)\n    show PHP Templates in Guide website\n    show HTML Templates in Guide website\n    debug use of PHP on iMac\n    build web-root and 3 exercises	2018-07-06	5	f
 3442	Fun	    Madam Sec, Goldbergs, Frasier	2018-05-21	3	f
 3679	Fun	    nts 1\n    reload music	2018-07-06	3	f
 3680	People	    pack for trip	2018-07-06	2	f
@@ -4545,45 +4488,39 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3895	Grow	    5, 3, 4, 3\n    weight: 207.8\n    nap	2018-08-26	1	f
 3837	Fun	    nts 1\n    Hawaii 50, Dance, ER, Librarians\n    	2018-08-15	5	f
 3854	Tools	    work on text.py and text_test.py	2018-08-19	3	f
-3677	Teach	    create first four app exercises (Server, HTML++, Directory, Files)\n    show PHP Templates in Guide website\n    show HTML Templates in Guide website\n    debug use of PHP on iMac\n    build web-root and 3 exercises	2018-07-06	5	f
-3891	Tools	    	2018-08-27	0	f
+2870	UNC	\n        build first three lessons for BACS 200\n        create standard lesson and ex layout	2017-01-01	4	f
 2871	Tools	\n        automate all web page creation	2017-01-01	2	f
-2870	Teach	\n        build first three lessons for BACS 200\n        create standard lesson and ex layout	2017-01-01	4	f
+3196	UNC	\n        first day back\n        Lesson 24 - Organizing Info\n        CIS program meeting	2018-03-19	9	f
 1692	People	\n        Andrew & Rachel move\n        Josiah	2017-01-15	2	f
 1697	Aspire	\n        count aspire documents (39 docs, 5K words)\n        track hours for Aspire projects\n        track files for Aspire projects\n        create report of all projects	2017-01-16	4	f
 1702	Hire	\n        Build production server\n        Create notes for building future servers\n        Rename droplet and create console access\n        Build code directories and version control\n        Debug automation and tests\n        Setup web server and static server	2017-01-17	6	f
 3690	People	    Cassie\n        Cassie sleeps for three hours on the plane\n        Cassie sleeps from 10pm to 2am at home\n        Stacie sleeps downstairs\n        At 6am Cassie is frantic\n        Rachel & Andrew entertain Cassie\n        	2018-07-28	4	f
-3688	Teach	    planning work to do\n    think about PHP apps\n    review textbook	2018-07-28	2	f
-3698	Teach	    review book on PHP\n    plan content of first sessions	2018-07-29	3	f
+3698	UNC	    review book on PHP\n    plan content of first sessions	2018-07-29	3	f
+3682	UNC	    create outline for exercises in 350\n        ex1\n        ex2\n        ex3\n    outline first 7 lessons in 350\n    review Murach PHP book chapter by chapter\n        build schedule for 24 lessons\n    send out email to colleagues\n        moving\n        schedule conflict\n        upcoming schedule\n    discover issue with JavaScript content	2018-07-30	6	f
 3700	People	    visit with Cassie	2018-07-29	2	f
-3682	Teach	    create outline for exercises in 350\n        ex1\n        ex2\n        ex3\n    outline first 7 lessons in 350\n    review Murach PHP book chapter by chapter\n        build schedule for 24 lessons\n    send out email to colleagues\n        moving\n        schedule conflict\n        upcoming schedule\n    discover issue with JavaScript content	2018-07-30	6	f
-3460	Church	    	2018-05-25	0	f
+3200	UNC	\n        interact with students	2018-03-20	3	f
 3684	Fun	    Record travel log of adventures	2018-07-30	3	f
-3200	Teach	\n        interact with students	2018-03-20	3	f
 3201	Tools	\n        update CardView, OutlineView, ContainerView\n        integrated multiple views into MyBook\n        build document reader for Knowledge.md	2018-03-20	4	f
 3202	Church	\n        record ideas for Church Board Meeting	2018-03-20	2	f
 3203	Fun	\n        Vikings, Amazing Race, ER, This is Us\n	2018-03-20	5	f
 3204	Grow	\n        5, 4, \n        walk\n        activity planning	2018-03-21	2	f
 3685	People	    Cassie to park\n    visit with Cassie\n    discuss church decision with Stacie	2018-07-30	3	f
-3692	Teach	    	2018-07-27	0	f
-3693	Tools	    	2018-07-27	0	f
+3801	UNC	    relayout schedule views for classes\n    build templates code views\n    work on UNCO-BACS.ORG website structure\n    show code templates source and live code\n    clean up dead code\n    	2018-08-08	6	f
 3452	Tools	    investigate nested project repos\n    rebuild vc script to accommodate multiple repos	2018-05-23	3	f
 3454	People	    time with Stacie\n    grill and dine with nesting bird 	2018-05-23	2	f
 3458	Fun	    Solo\n    Barnes & Noble\n    Dragonfly	2018-05-25	5	f
 3805	WAM	    call GoDaddy to learn how to get SSL\n    conference in Julie to get pin\n    think through next steps to debug SLL	2018-08-07	2	f
 3806	Church	    Church leaders meet at Beilmans	2018-08-07	3	f
 3695	People	    Travel with Stacie\n    Visit with other travelers\n    	2018-07-27	7	f
-3683	Tools	    	2018-07-30	0	f
 1065	Church	\n        small group\n	2016-11-15	4	f
 3697	Grow	    1, 1, 5, 1\n    rest and recover\n    weight: 211.8	2018-07-29	6	f
 3699	Fun	    Entertainment Weekly\n    Black	2018-07-29	3	f
-3686	Church	    	2018-07-30	0	f
 3689	Fun	    So you think you can dance\n    unload photos from camera	2018-07-28	4	f
-3801	Teach	    relayout schedule views for classes\n    build templates code views\n    work on UNCO-BACS.ORG website structure\n    show code templates source and live code\n    clean up dead code\n    	2018-08-08	6	f
+3456	UNC	    plan out essential class preparation\n    create summer work schedule\n    detailed plan for work to do	2018-05-25	4	f
 3802	Business	    grout shower	2018-08-08	2	f
 3803	Fun	    Black, 10% Happier	2018-08-08	2	f
 3804	People	    lunch with Bill Hayes at Roma's\n    Cassie goes to kid's movie with Christine\n    Stacie and Cassie go for trike ride	2018-08-08	3	f
-3456	Teach	    plan out essential class preparation\n    create summer work schedule\n    detailed plan for work to do	2018-05-25	4	f
+3451	UNC	    build class content\n    setup standard treatment of GitBook repos\n    guide - HtmlApps, PhpApps, PythonApps, Teaching\n    start writing Teaching Technology guide	2018-05-23	5	f
 3457	Tools	    deploy new repos	2018-05-25	1	f
 3459	People	    Josiah & Cassie\n    dinner at Cafe Athens	2018-05-25	4	f
 3687	Grow	    2, 1, 4, 1\n    weight: 214.6\n    sleep and rest\n    unpack and organize after trip\n    planning transition to real life	2018-07-28	4	f
@@ -4593,8 +4530,6 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3461	Grow	    5, 3, 1, 5\n    Dentist visit\n    If We can Keep It    	2018-05-24	2	f
 3462	Tools	    restructure loading of SiteTitle and Menu in MyBook online\n    run page test robot\n    simplify MyBook code	2018-05-24	3	f
 3463	People	    walk with Stacie\n    Rachel and Andrew	2018-05-24	5	f
-3451	Teach	    build class content\n    setup standard treatment of GitBook repos\n    guide - HtmlApps, PhpApps, PythonApps, Teaching\n    start writing Teaching Technology guide	2018-05-23	5	f
-3696	Church	    	2018-07-27	0	f
 3464	Church	    church board meeting\n    decision to resign from board	2018-05-24	3	f
 3465	Fun	    Vikings	2018-05-24	1	f
 3681	Grow	    2, 2, 1, 1\n    Weight: 208.6\n    develop time log	2018-07-30	2	f
@@ -4602,6 +4537,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2873	Work	\n        develop idea of writing scorecard\n        build initial scorecard snapshot 2016-12-30\n        write Web App Dimensions\n        App Development - project catalog	2017-01-01	3	f
 1647	Write	\n        A New Paradigm for Writers\n        create index of Ideas for Writing\n        clean up scripts and document structure\n        build World Class Software website\n        move tech docs to tech structure (tech/Index)\n        remove showcase files\n        create BestPractices Index\n        refactor Leverage & Projects content	2017-01-05	4	f
 1643	Hire	\n        Build candidate document view\n            upload UI\n            upload back-end\n            view docs UI \n            static server access to docs\n            show doc in browser\n            deploy\n            test	2017-01-04	5	f
+3688	UNC	    planning work to do\n    think about PHP apps\n    review textbook	2018-07-28	2	f
 3707	Grow	    4, 1, 3, 5	2018-07-16	0	f
 3709	People	    Travel with Stacie\n    Visit with other travelers\n    	2018-07-16	7	f
 3731	Grow	    4, 1, 3, 5	2018-07-26	0	f
@@ -4610,19 +4546,17 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3701	Grow	    4, 1, 3, 5	2018-07-25	0	f
 3706	People	    Travel with Stacie\n    Visit with other travelers\n    	2018-07-21	7	f
 3466	Grow	    5, 2, 3, 4	2018-05-28	0	f
-3467	Teach	    Teaching Tech - Introduction	2018-05-28	2	f
-3205	Teach	\n        Lesson 25 - Navigation\n        Faculty meeting\n        grade Ex 24\n        grade Blog 3	2018-03-21	9	f
+3205	UNC	\n        Lesson 25 - Navigation\n        Faculty meeting\n        grade Ex 24\n        grade Blog 3	2018-03-21	9	f
+3209	UNC	\n        Grade Blog 3	2018-03-22	3	f
 3206	People	\n        dinner with Stacie	2018-03-21	1	f
 3207	Fun	\n        Profit, Faiser\n	2018-03-21	2	f
 3208	Grow	\n        5, 4, 2, 2\n        pharmacy, buy burritos	2018-03-22	3	f
-3209	Teach	\n        Grade Blog 3	2018-03-22	3	f
 3210	Business	\n        Stacie meeting with TransUnion	2018-03-22	1	f
 3211	People	\n        Josiah and Sam	2018-03-22	1	f
 3212	Church	\n        plan for board meeting\n        board meeting\n        disagreement with Todd\n        revelation of personal failures in relationships\n	2018-03-22	6	f
 3468	Tools	    debug Github/GitBook interactions\n    restructure redirect code\n    build new tests for menu, site title, redirect\n    expand testing infrastructure	2018-05-28	5	f
 3469	Fun	    Battle for LA, Profit	2018-05-28	4	f
 3714	Fun	    Travel Log: Day 1\n    Arrive at Heathrow 11am\n    Short on sleep\n    4 hours at Heathrow\n    Deport for Vienna at 4pm\n    Arrive at 7pm\n    Trains to city center\n    Short walk to Hilton\n    Beatiful Hilton on the Danube\n    Dinner on the Danube - Goulash\n    Sound night's sleep till 4am\n    5,000 steps	2018-07-08	7	f
-3471	Church	    	2018-05-28	0	f
 1081	People	\n        lunch with Christine, Lucy, Rachel, Andrew at Tres Marg	2016-11-20	3	f
 3473	Tools	    Microplanning idea capture\n    move Leverage project to Mark-Seaman github\n    experiment with GitBook	2018-05-27	1	f
 3474	Fun	    Darkest Hour, ER\n    Dragonfly	2018-05-27	4	f
@@ -4655,14 +4589,15 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2876	Grow	\n        think about social dysfunction\n        discuss business constraints with Stacie\n        4, 1, 3, 2	2017-01-02	3	f
 2877	Fun	\n        Maze Runner II\n	2017-01-02	4	f
 2875	Write	\n        update task history content	2017-01-02	1	f
+3467	UNC	    Teaching Tech - Introduction	2018-05-28	2	f
 3480	Grow	    3, 2, 3, 4	2018-05-29	0	f
 3213	Grow	\n        sleepless night (I'm part of problem)\n        3, 2, 2, 3	2018-03-23	2	f
 2878	Grow	\n        5, 1, 3, 2\n        Tribe of Mentors\n        Mini Habits\n        discuss personal retreat with Stacie	2018-01-01	2	f
-2879	Teach	\n        build first three lessons for BACS 200\n        create standard lesson and ex layout	2018-01-01	4	f
+2883	UNC	\n        create Quiz #1\n        build class website\n        deploy and test	2018-01-02	3	f
 2880	Tools	\n        automate all web page creation	2018-01-01	2	f
 2881	People	\n        visit with Josiah\n	2018-01-01	6	f
 2882	Grow	\n        pay parking ticket\n        4, 1, 3, 2\n        nts\n        think about commitments for 2018	2018-01-02	3	f
-2883	Teach	\n        create Quiz #1\n        build class website\n        deploy and test	2018-01-02	3	f
+3214	UNC	\n        Lesson 26 - Dev Tools\n        faculty meeting	2018-03-23	6	f
 3228	Fun	\n        Vikings, Madam Sec\n	2018-03-26	4	f
 3229	Grow	\n        5, 3, 4, 2\n        nts	2018-03-27	3	f
 3230	Church	\n        think about church leadership\n        build slides for meeting with Todd\n        discuss church contribution with Stacie	2018-03-27	3	f
@@ -4672,9 +4607,8 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 130	Fun	\n        Scrubs, Arrow, Madam Sec\n	2016-02-12	4	f
 3483	Fun	    ER, Martin & Short\n    nts 2	2018-05-29	6	f
 3484	People	    Terry Scott at Coyote Grill	2018-05-29	2	f
-3485	Church	    	2018-05-29	0	f
 134	Church	\N	2016-02-14	4	f
-3214	Teach	\n        Lesson 26 - Dev Tools\n        faculty meeting	2018-03-23	6	f
+3995	UNC	    200 Lesson 12 - testing, Brittney Dinsmore\n    350 Lesson 12 - solutions/Apache/exam\n    	2018-09-17	9	f
 3215	Church	\n        meet with Todd	2018-03-23	2	f
 3216	Fun	\n        Fraiser, Amazing Race, ER\n	2018-03-23	4	f
 3737	Grow	    4, 1, 3, 5	2018-07-20	0	f
@@ -4689,14 +4623,13 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3809	Tools	    reduce git repos (Php, Html, Python, Teaching)	2018-08-09	1	f
 3810	Fun	    nts 2	2018-08-09	2	f
 3861	People	    Hearth with Stacie\n    discuss finances and household projects	2018-08-20	4	f
-3995	Teach	    200 Lesson 12 - testing, Brittney Dinsmore\n    350 Lesson 12 - solutions/Apache/exam\n    	2018-09-17	9	f
+4471	UNC	    none	2019-01-05	0	f
 3857	Grow	    4, 3, 3, 3	2018-08-20	0	f
 3860	Fun	    Dance, Profit\n    	2018-08-20	2	f
 3691	Grow	    4, 1, 3, 5\n    	2018-07-27	0	f
 3742	People	    Travel with Stacie\n    Visit with other travelers\n    	2018-07-11	7	f
 3740	Grow	    4, 1, 3, 5	2018-07-11	0	f
 3743	Grow	    4, 1, 3, 5	2018-07-12	0	f
-3859	Tools	    	2018-08-20	0	f
 3812	Business	    IRS forms for 2016/2017\n    Financial Review\n    discuss finances with Stacie	2018-08-09	2	f
 3996	Fun	    Jack Ryan, Vikings\n    	2018-09-17	4	f
 3994	Grow	    5, 2, 3, 4\n    weight: 208.4	2018-09-17	0	f
@@ -4719,10 +4652,10 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3233	People	\n        Pelican Lakes\n	2018-03-27	1	f
 4275	Grow	    5, 2, 3, 2\n    weight: 208.2	2018-11-23	0	f
 3224	Fun	\n        Vikings\n        Shield, Amazing Race, Goldbergs        \n	2018-03-25	3	f
-4468	Fun	    GoT\n    	2019-01-04	2	f
 4469	People	    travel home from Florida\n    unpack\n    visit with Rachel, Andrew, Ruby and Lucy\n    Andrew had promising job interview\n    he has made decision to switch jobs	2019-01-04	10	f
 4470	Grow	    3, 3, 1, 1\n    weight: 210\n    think about relationship problems\n    worry about the future\n    	2019-01-05	2	f
-4471	Teach	    none	2019-01-05	0	f
+4468	Fun	    GoT\n    	2019-01-04	2	f
+2879	UNC	\n        build first three lessons for BACS 200\n        create standard lesson and ex layout	2018-01-01	4	f
 181	Church	\N	2016-02-28	3	f
 198	Church	\N	2016-03-02	4	f
 163	Grow	\n        Conceptual model for balanced project work\n        Weekly review of results	2016-02-23	2	f
@@ -4916,14 +4849,14 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3234	Grow	\n        5, 4, 3, 2	2018-03-28	0	f
 322	People	\n        Josiah family	2016-04-10	1	f
 313	Grow	\n        long walk to enjoy the beautiful day\n        Margarita's and grilling	2016-04-07	2	f
+4500	UNC	    grading of reading and blog\n    build reading score import\n    fix student entries on domains\n    	2019-01-12	6	f
 4499	Grow	    3, 4, 3, 2\n    weight: 206.6\n    despair over job opportunities	2019-01-12	2	f
-4500	Teach	    grading of reading and blog\n    build reading score import\n    fix student entries on domains\n    	2019-01-12	6	f
 314	Fun	\n        Elementary\n        sign up for Hulu commercial-free\n	2016-04-07	3	f
-4485	Grow	    5, 3, 1, 1\n    weight: 208	2019-01-09	0	f
 4488	Fun	    Hawaii 50, GoT\n    	2019-01-09	4	f
 4490	Grow	    5, 1, 3, 2\n    weight: 209.2\n    think about life	2019-01-08	1	f
 4492	Fun	    Hawaii 50\n    baking show\n    ER\n    	2019-01-08	3	f
 4493	People	    Sol de Jalisco with Lucy & Christine\n    Andrew accepted new job (wait to give notice)	2019-01-08	2	f
+4485	Grow	    5, 3, 1, 1\n    weight: 208	2019-01-09	0	f
 376	People	\N	2016-04-25	1	f
 384	Grow	\N	2016-04-27	1	f
 404	Tools	\n        debug setting of styles in CSS\n        build tasks app in django\n        debug edit, add, and delete views\n        create reusable views\n        full user experience for tasks	2016-05-05	6	f
@@ -4961,9 +4894,9 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 371	Fun	\n        Quantico, Amazing Race\n	2016-04-23	2	f
 372	Church	\n        Todd featured Stacie & I in sermon	2016-04-24	4	f
 401	Tools	\n        update project plan and documents\n        build basic test runner\n        create database entries for diff tests\n        calculate test output differences from expected\n        show all failing test results\n        build data script for save, load, migrate\n        restructure command aliases \n        approve current test output (using tlike)\n        develop data management scripts	2016-05-03	8	f
-2888	Teach	\n        fix syllabus\n        deploy and test website\n        improve lessons 1-3\n        write Chris about FTP server	2018-01-03	3	f
 367	People	\n        Forgotten Roots	2016-04-22	3	f
 402	Fun	\n        Homeland\n	2016-05-03	6	f
+2888	UNC	\n        fix syllabus\n        deploy and test website\n        improve lessons 1-3\n        write Chris about FTP server	2018-01-03	3	f
 374	Grow	\n        nap\n        night thinking: Nowen (nature, time, people)\n        write about Mind Renewal\n        Retirement budget	2016-04-24	4	f
 403	Fun	\n        Quantico\n	2016-05-04	6	f
 416	Church	\N	2016-05-08	4	f
@@ -5080,7 +5013,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1365	Fun	\n        Dragonfly\n	2017-02-12	2	f
 503	Tools	\n        improve vc command\n        consolidate shell variables\n        update task command\n        prune old tests\n        streamline command automation	2016-06-08	8	f
 472	Sign	\n        notifications\n        cancelation workflow	2016-05-24	2	f
-3235	Teach	\n        grade Blog 4\n        Lesson 28 - UI Widgets	2018-03-28	7	f
+3235	UNC	\n        grade Blog 4\n        Lesson 28 - UI Widgets	2018-03-28	7	f
 554	Fun	\N	2016-06-22	1	f
 558	Fun	\N	2016-06-23	3	f
 573	Fun	\N	2016-06-29	3	f
@@ -5245,7 +5178,6 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2899	People	\n        Rick Tenuta funeral\n        talk with Stacie	2018-01-06	4	f
 2900	Fun	\n        Hobbit \n        newspaper\n	2018-01-06	4	f
 3236	Tools	\n        limit task history to one month	2018-03-28	1	f
-3498	Church	    	2018-05-31	0	f
 3997	People	    Christine insurance drama\n    grilled chicken	2018-09-17	1	f
 692	People	\n        lunch with Stacie at Romas\n	2016-08-01	2	f
 695	People	\n        bike ride with Stacie	2016-08-02	2	f
@@ -5306,7 +5238,6 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 800	People	\n        dinner at pub before church	2016-09-03	8	f
 801	Church	\n        visit SonRise\n         	2016-09-03	2	f
 3241	People	\n        discuss Who2Hire with Stacie	2018-03-29	1	f
-2894	Teach	\n        test out FTP server connection\n        fix links on website	2018-01-05	4	f
 749	Grow	\n        think about personal scorecard	2016-08-19	1	f
 752	People	\n        talk with Stacie	2016-08-20	2	f
 755	Tools	\n        create hours activity script\n        extract time summary from monthly data	2016-08-21	3	f
@@ -5347,6 +5278,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 751	Tools	\n        create hours script\n        create personal scorecard\n        create new doc summary format\n        build summaries for:\n            seamanslog, spiritual-things, collab, client, doc	2016-08-20	3	f
 748	People	\n        Rachel & Andrew (Carcasonne)	2016-08-19	1	f
 769	Tools	\n        add tests for app and cmd\n        refactor shell.show_files\n        improve doc summary\n        create app summary\n        update score\n        fix environment var on server	2016-08-25	6	f
+2894	UNC	\n        test out FTP server connection\n        fix links on website	2018-01-05	4	f
 808	Fun	\n        travel to airport\n        return home \n        Castle\n	2016-09-06	8	f
 810	People	\n        talk with Stacie\n        	2016-09-07	3	f
 811	Sign	\n        weekly meeting	2016-09-08	1	f
@@ -5621,7 +5553,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3866	Fun	    Hawaii 50, ER, Fraiser, Librarians\n    	2018-08-21	4	f
 1126	Church	\n        update Reflections in Spiritual Things	2016-12-01	1	f
 3867	People	    dinner with Stacie	2018-08-21	1	f
-3481	Teach	    work on ideas for lesson prep templates	2018-05-29	1	f
+4498	People	    Roma's takeout	2019-01-10	2	f
 4000	Fun	    buy TV at Best Buy\n    unpack sound system\n    Profit\n    	2018-09-18	4	f
 1082	Tools	\n        build time summary over multiple months\n        plan hours data import and views	2016-11-20	2	f
 4001	People	    dinner at Palominos	2018-09-18	2	f
@@ -5665,16 +5597,13 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1121	Write	\n        post Facebook articles\n        post blog article\n        publishing commitments	2016-11-30	1	f
 1122	People	\n        Lucy travels to Austin	2016-11-30	1	f
 1123	Fun	\n        Wars of the Roses\n        return library books\n        White Queen\n\n# Tasks History     December 2016\n    \n## Accomplishments\n	2016-11-30	3	f
-3865	Tools	    	2018-08-21	0	f
 1473	People	\n        Fat Pastor	2017-03-10	3	f
 1127	Grow	\n        5, 4, 3, 2\n        bible study\n        2000 years of Charisma\n        prioritize projects - monthly objectives	2016-12-01	4	f
 1128	Tools	\n        hours add script\n        create list of days for month\n        create import filter	2016-12-01	1	f
 1131	Tools	\n        build monthly summary for tasks\n        learn about advanced queries in Django\n        deploy Task Master on production\n        import all 2016 months into Task Master	2016-12-02	3	f
-4496	Tools	    	2019-01-10	0	f
-4613	Write	    	2019-02-03	0	f
-4555	Tools	    export monthly task data 2016-2018\n    update task export logic\n    	2019-01-21	2	f
+3481	UNC	    work on ideas for lesson prep templates	2018-05-29	1	f
 4512	Grow	    5, 2, 2, 3\n    weight: 208.2	2019-01-14	0	f
-4498	People	    Roma's takeout	2019-01-10	2	f
+4555	Tools	    export monthly task data 2016-2018\n    update task export logic\n    	2019-01-21	2	f
 1140	People	\n        Rio with Rachel and Andrew\n        Hang Christmas lights with Stacie	2016-12-04	4	f
 1141	Fun	\n        create notes for Wars of the Roses\n        Big Bang\n        Jungle Book\n	2016-12-04	5	f
 1143	Tools	\n        review project priorities	2016-12-05	1	f
@@ -5778,8 +5707,6 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1188	Church	\n        create five star rating display\n        figure out layout of pages using bootstrap layouts\n        create better score details page \n        improve scorecard view	2016-12-16	4	f
 2907	Grow	\n        5, 1, 3, 4\n        walk to Subway\n        nts	2018-01-09	3	f
 3503	People	    assemble grill\n    Biagi's with Diane & Greg Fleebe	2018-06-02	7	f
-3504	Church	    	2018-06-02	0	f
-3501	Tools	    	2018-06-02	0	f
 1190	Fun	\n        Castle\n	2016-12-16	2	f
 1192	Tools	\n        update score script\n        fix word counting script\n        expand editing tools for Seaman's Log	2016-12-17	2	f
 1189	Grow	\n        wake up at 4 AM\n        nap\n        3, 4, 4, 3	2016-12-16	2	f
@@ -6031,7 +5958,6 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1561	Hire	\n        release 2017-03-07\n        testing on production server\n        create new project directory structure\n        create new git repo\n        debug Who2Hire application code	2017-04-07	8	f
 2909	Fun	\n        Flash	2018-01-08	4	f
 2910	People	\n        talk with Stacie\n	2018-01-08	1	f
-2911	Teach	\n        fix FTP server\n        admit Erick into class\n        develop class schedule\n        create students page	2018-01-09	3	f
 2912	Tools	\n        organize brain content	2018-01-09	3	f
 3506	Grow	    4, 3, 1, 4\n    walk\n    start Power of Habit	2018-06-01	1	f
 1532	Tools	\n        build pages and menus for Software website\n        create Leverage pages\n        create Web Dev pages\n        create Best Practices pages	2017-03-29	2	f
@@ -6043,11 +5969,12 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1538	Hire	\n        build release 2017-03-31\n        roll production Django to 1.10.6\n        turn off DEBUG flag\n        review all issues	2017-03-31	6	f
 1539	People	\n        Nordy's with Stacie	2017-03-31	2	f
 1693	Aspire	\n        update writing scorecard\n        document implementation process	2017-01-15	2	f
+2911	UNC	\n        fix FTP server\n        admit Erick into class\n        develop class schedule\n        create students page	2018-01-09	3	f
 1554	Grow	\n        personal reflection\n        5, 3, 2, 2	2017-04-05	1	f
 1534	Church	\n        SoKM\n	2017-03-29	4	f
 1630	Business	\n        develop idea of writing scorecard\n        build initial scorecard snapshot 2016-12-30\n        write Web App Dimensions\n        App Development - project catalog	2017-01-01	3	f
 3248	Grow	\n        3, 1\n        start thinking about Principles (mid-night)\n        read Principles & get audio book	2018-03-31	4	f
-3245	Teach	\n        spend all day at UNC\n        Lesson 29 - Brain, Web Design Guidelines\n        talk with Carmayne and Mehrgan\n        grade blog 4\n        prep for Image lectures	2018-03-30	7	f
+2916	UNC	\n        develop lesson 2\n        campus emergency	2018-01-10	9	f
 1599	Hire	\n        fix payments	2017-04-15	1	f
 1601	Grow	\n        3, 4, 1, 3	2017-04-16	0	f
 1603	People	\n        Easter at Garcia's\n        walk with Rachel\n        Rachel and Andrews cat	2017-04-16	6	f
@@ -6090,7 +6017,6 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2914	Fun	\n        Amazing Race, Timeless\n	2018-01-09	3	f
 1628	Church	\n        baptism service\n        lunch with Matt & Amber Isborn at Royal Nepal	2017-01-01	6	f
 1695	Grow	\n        5, 5, 4, 3\n	2017-01-15	0	f
-2916	Teach	\n        develop lesson 2\n        campus emergency	2018-01-10	9	f
 2918	Fun	\n        Amazing Race, This is Us\n	2018-01-10	2	f
 2919	Grow	\n        5, 2, 4, 2\n        nts	2018-01-11	3	f
 2915	Grow	\n        4, 1, 3, 3	2018-01-10	0	f
@@ -6098,6 +6024,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3246	Fun	\n        learn about Vikings\n        look for books about Vikings	2018-03-30	2	f
 1629	People	\n        meet with Josiah	2017-01-01	1	f
 1639	Grow	\n        talk with Stacie about future ideas\n        visit library\n        Pelican Lakes for lunch\n        5, 2, 3, 3	2017-01-03	0	f
+3245	UNC	\n        spend all day at UNC\n        Lesson 29 - Brain, Web Design Guidelines\n        talk with Carmayne and Mehrgan\n        grade blog 4\n        prep for Image lectures	2018-03-30	7	f
 1632	Fun	\n        Perfect Pitch 2, Maze Runner\n        Mystery of Roanoke\n	2017-01-01	3	f
 1631	Grow	\n        nap\n        4, 2, 2, 2	2017-01-01	1	f
 3247	People	\n        visit with Lucy, Andrew, and Rachel\n    	2018-03-30	2	f
@@ -6146,15 +6073,14 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3508	Fun	    Black Panther	2018-06-01	3	f
 4112	Fun	    Finish Circle book\n    Mr Robot, Homeland\n    	2018-10-15	3	f
 4113	People	    Stacie returns home\n    visit with Leslie	2018-10-15	2	f
-4111	Teach	    help Cosme\n    	2018-10-15	8	f
+4611	Grow	    5, 4, 3, 3\n    weight: 206	2019-02-03	0	f
 1645	Fun	\n        Hot Pursuit, Kingdom Strange\n	2017-01-04	4	f
 1648	Grow	\n        wake up at 5:00 and start working\n        nap at 9:00\n        3, 2, 2, 3	2017-01-05	1	f
 1649	Fun	\n        Super Girl, Enterprise\n	2017-01-05	4	f
 1650	Hire	\n        work with Stacie on workflow\n        relayout team list and add views\n        deploy new code\n        build general display view with field table\n        add password to files\n        add question selector view\n        update Hiring Guru release plan\n        update Hiring Guru documentation	2017-01-06	5	f
-4524	Grow	    5, 2, 3, 3\n    weight: 208.2	2019-01-16	0	f
-4611	Grow	    5, 4, 3, 3\n    weight: 206	2019-02-03	0	f
-4612	Teach	    \n    	2019-02-03	0	f
+4111	UNC	    help Cosme\n    	2018-10-15	8	f
 4570	Business	    clean out inbox	2019-01-24	1	f
+4524	Grow	    5, 2, 3, 3\n    weight: 208.2	2019-01-16	0	f
 1703	Business	\n        FCIP	2017-01-17	4	f
 1704	Grow	\n        5, 5, 3, 2\n	2017-01-17	0	f
 1705	Aspire	\n        create history linked to reports\n        fix failing tests after setting up staging server\n        continue building project profiles and reports\n        formatted links in reports\n        simplify URL patterns	2017-01-18	5	f
@@ -6319,12 +6245,12 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1827	People	\n        Time with Stacie	2016-01-15	2	f
 1840	Business	\n        Invoice WAM	2016-01-19	0	f
 1924	People	\n        dinner with Courtney Peters	2016-12-01	0	f
-2908	Teach	\n        update lesson 1\n        teach lesson 1\n        request name tents\n        office hours\n        internet outage\n        investigate FTP permissions	2018-01-08	7	f
+4406	UNC	    plan out teaching prep\n    build unc classroom site\n    Classroom UX - style and navigation\n    shrinking-world.com/unc/bacs200\n    shrinking-world.com/unc/bacs350\n    rebuild seamansguide.com\n    	2018-12-20	4	f
 1819	Fun	\n        Enterprise, Last Man\n	2016-01-12	3	f
-4406	Teach	    plan out teaching prep\n    build unc classroom site\n    Classroom UX - style and navigation\n    shrinking-world.com/unc/bacs200\n    shrinking-world.com/unc/bacs350\n    rebuild seamansguide.com\n    	2018-12-20	4	f
 4407	Tools	    remove old code: guide, unc, aspire\n    prune old docs\n    fix tests	2018-12-20	2	f
 4408	Fun	    Last Kingdom, GoT\n    	2018-12-20	2	f
 4409	People	    visit with Stacie and Lucy\n    Stacie gets sick\n    attempt concrete project	2018-12-20	6	f
+2908	UNC	\n        update lesson 1\n        teach lesson 1\n        request name tents\n        office hours\n        internet outage\n        investigate FTP permissions	2018-01-08	7	f
 1878	Business	\n        meeting with Mike Hefty\n        discuss money management with Stacie\n        long-term care meeting	2016-04-28	3	f
 1880	Grow	\n\n    \n## Accomplishments\n	2016-04-30	0	f
 1897	Grow	\n        5, 1, 3, 2\n	2016-10-17	0	f
@@ -6385,7 +6311,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1952	Church	\n        discuss and pray about ministry\n        pray for Garcias\n        pray for Beilmans	2017-04-29	4	f
 1953	Hire	\n        fix botched release	2017-04-29	2	f
 3749	Grow	    4, 1, 3, 5	2018-07-22	0	f
-3494	Teach	    use SimpleMind to create mind maps\n    note - Wiki Workshop\n    note - Build your own Wiki\n    note - PHP Apps for BACS 350\n    check UNC email	2018-05-31	4	f
+3516	UNC	    create mind map of Python Apps Course content\n    create mind map of PHP Apps Course content\n    create note for lesson plan\n    good initial class map\n    investigate PHP server setup\n    investigate BlueHost\n    attempt to configure SSH on Windows 10\n    working lunch at Sr. Jalapeno	2018-06-06	8	f
 1926	Grow	\n        5, 5, 4, 3\n	2016-12-06	0	f
 1927	Grow	\n        3, 5, 4, 2	2016-12-08	0	f
 1928	Grow	\n        4, 5, 4, 1\n	2016-12-09	0	f
@@ -6410,46 +6336,42 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3748	People	    Travel with Stacie\n    Visit with other travelers\n    	2018-07-09	7	f
 3477	Grow	    3, 2, 2, 5\n    build map of essential goals\n    nap\n    exercise throughout day	2018-05-26	3	f
 1947	Church	\n        church board meeting	2017-04-28	3	f
-3449	Church	    	2018-05-22	0	f
 3757	People	    Travel with Stacie\n    Visit with other travelers\n    	2018-07-10	7	f
 3444	Grow	    3, 3, 3, 5\n    visit Eye Dr\n    If You Can Keep It\n    walk	2018-05-22	3	f
-3516	Teach	    create mind map of Python Apps Course content\n    create mind map of PHP Apps Course content\n    create note for lesson plan\n    good initial class map\n    investigate PHP server setup\n    investigate BlueHost\n    attempt to configure SSH on Windows 10\n    working lunch at Sr. Jalapeno	2018-06-06	8	f
+2923	UNC	\n        Build Lesson 3 (lecture, ex, quiz)\n        Build Mark.Seaman web directory	2018-01-12	11	f
 3751	People	    Travel with Stacie\n    Visit with other travelers\n    	2018-07-22	7	f
-2923	Teach	\n        Build Lesson 3 (lecture, ex, quiz)\n        Build Mark.Seaman web directory	2018-01-12	11	f
+3808	UNC	    add style to demo website\n    build navigation rules for demo code\n    add logo to website\n    clean up extra files\n    fix tests\n    	2018-08-09	6	f
 2924	Fun	\n        Amazing Race, Good Place, Fraiser\n	2018-01-12	3	f
 2925	Grow	\n        5, 4, 4, 2	2018-01-13	0	f
 3479	People	    household projects\n    get Trike down\n    figure out tire inflation\n    Ace Hardware\n    explore trip to Germany\n    Andrew and Rachel (Carcassonne, Bride and Prejudice)	2018-05-26	8	f
 3741	Fun	    Travel Log: Day 4 - Melk\n    Bus ride to Melk\n    Melk Abbey tour\n    Abbey garden walk\n    History of monastery\n    Reception hall optical illusion on ceiling\n    Library 100,000 books\n    Founded 1,000 years ago\n    Read about Wachau Valley\n    Dinner at hotel\n    Shower not fixed\n    8,000 steps\n    Talk about German Immigration crisis\n    Thinking about process of aging	2018-07-11	7	f
 3755	Grow	    4, 1, 3, 5	2018-07-10	0	f
 3495	Tools	    create i command\n    update export of task records for each month\n    note - MyBook Page Templates	2018-05-31	1	f
-3808	Teach	    add style to demo website\n    build navigation rules for demo code\n    add logo to website\n    clean up extra files\n    fix tests\n    	2018-08-09	6	f
+3446	UNC	    GitBook idea\n    discover GitBook web service\n    build personal publishing plan\n    prototype GitBook-MyBook workflow\n    schedule for BACS 350	2018-05-22	5	f
 3493	Grow	    5, 4, 3, 5\n    walk\n    set personal work priorities\n    listen to Originals while walking\n    clean out inbox\n    write note Prioritize\n    note: Mental Habits\n    create Today notes file\n    note - Finding meaning	2018-05-31	4	f
 3746	Grow	    4, 1, 3, 4	2018-07-09	0	f
-3446	Teach	    GitBook idea\n    discover GitBook web service\n    build personal publishing plan\n    prototype GitBook-MyBook workflow\n    schedule for BACS 350	2018-05-22	5	f
+3999	UNC	    200-13 forms\n    350-13 exam, building apps, solutions\n    	2018-09-18	6	f
 3752	Grow	    4, 1, 3, 5	2018-07-13	0	f
 4006	Grow	    5, 2, 3, 2\n    weight: 208.2	2018-09-20	0	f
 3754	People	    Travel with Stacie\n    Visit with other travelers	2018-07-13	7	f
 4009	Fun	    weird sound/video\n    	2018-09-20	2	f
 4004	Fun	    hook up sound\n    Animal Planet, ER\n    	2018-09-19	3	f
 4005	People	    visit with Rachel	2018-09-19	2	f
-4008	Tools	    	2018-09-20	0	f
 3998	Grow	    5, 3, 1, 5\n    weight: 208\n    walk 10,000 steps	2018-09-18	2	f
-3999	Teach	    200-13 forms\n    350-13 exam, building apps, solutions\n    	2018-09-18	6	f
-4066	Teach	    build updated schedule for 200 and 350 topics\n    publish updated schedule of topics\n    learn about caching\n    create object oriented design pattern\n    	2018-10-04	8	f
+4066	UNC	    build updated schedule for 200 and 350 topics\n    publish updated schedule of topics\n    learn about caching\n    create object oriented design pattern\n    	2018-10-04	8	f
 1948	People	\n        Pelegrini's with Stacie	2017-04-28	2	f
 1945	Grow	\n        5, 2, 2, 2\n        analysis of time spent for work and leisure 	2017-04-28	2	f
 1949	Fun	\n        Good Place, SHIELD\n	2017-04-28	2	f
 1950	Grow	\n        3, 2, 2, 3	2017-04-29	0	f
+3494	UNC	    use SimpleMind to create mind maps\n    note - Wiki Workshop\n    note - Build your own Wiki\n    note - PHP Apps for BACS 350\n    check UNC email	2018-05-31	4	f
 3750	Fun	    Travel Log: Day 15 - Amsterdam\n        Breakfast with Don & Margaret\n        Sailing into Amsterdam\n        Pay bill for ship\n        Canal boat tour\n            Canals & boating\n            Building architecture\n        Walking tour\n            Very hot & no rain (worst drought in 100 years)\n            Anne Frank house\n            Houseboats\n            Dutch East India Company \n            Red light district\n            Marijuana selfie at "Coffee house"\n            Bike hassards for tour groups\n            Lunch at restaurant\n            ATM search & gather existing money\n        Learn about "Small boat tours" from Grand Circle\n        Port talk\n            Captain's farewell\n            Disembarking process\n            Gratuities for crew and program directors\n        Dinner with Don, Dave, Margaret, Michelle\n            Fantastic fillet mignon\n        Pack luggage for pickup at 8am\n        9,500 steps	2018-07-22	7	f
 3708	Fun	    Travel Log: Day 9 - Bamberg\n        Bus to city center\n        Walking tour of Bamberg\n            History of Bamberg\n            Quaint streets from 1400s\n            Scenic overlook\n            Bishop's residence fortress\n            Town hall\n            Bakery with plum tort\n        Beer garden with Rauchbier\n            Scolding by bierfrau\n            Sit in outdoor courtyard\n            Forget refund on beer glass\n        Depart Bamberg to sail on Main river\n        Lunch with people from South Carolina and Texas\n        Nap\n        Galley tour\n        Dragonfly in Amber\n        Dinner with Keith and Elena\n        Disco night\n        Dance with Stacie\n        Stacie's birthday celebrated by crew\n        Elena got Stacie flowers\n        Crew dancing\n        Port talk - Rotherburg\n        9,000 steps	2018-07-16	7	f
 3934	Grow	    5, 1, 4, 3\n    weight: 209.2	2018-09-05	0	f
 3973	Grow	    5, 2, 1, 5\n    weight: 208.4\n    walk to library & Border restaurant	2018-09-11	2	f
-3974	Teach	    plan 350 Lesson 10\n    subscriber app requirements\n    Essential Skills\n    grade Lesson 9\n    write to students (Brittney, Jerone, Sarah)\n    	2018-09-11	8	f
 3975	Business	    carpet project	2018-09-11	2	f
 3976	People	    talk with Stacie	2018-09-11	2	f
 3977	Grow	    3, 2, 4, 2\n    weight: 208.6	2018-09-15	0	f
 3986	Business	    carpet project\n    	2018-09-13	1	f
-3978	Teach	    How to use Version Control\n    How to Setup Workflow\n    Install Brackets on Mac\n    Setup Apache on Mac\n    Create solution strategy for 350\n    Grade Lesson 8 & 9 & 10\n    Plan next week\n    	2018-09-15	7	f
 3711	Fun	    Travel Log: Day 10 - Rothenburg\n        Arrive in Wurzburg during breakfast\n        Breakfast with Don & Margaret\n        Fortress & bishop's house\n        Bus to Rothenburg with Hanas\n        Rothenburg \n            Walking tour with Hanas\n            Amazing medieval town with original houses\n            Take many photos\n            Chocolate shop\n            Buy coo-coo clock\n            Schneeballen - ball of fried cookie dough\n            Group lunch of meat and noodles\n            Many houses from 1400s\n            Economy collapsed in 1631\n            Town saved by mayor drinking challenge\n            Walk old town walls\n            Dinner Don, Margaret, Dave, Michelle\n        Hot bus ride back to ship\n        Glass blower demonstration\n        Wash clothes in sink\n        Buy T-shirts\n        9,000 steps	2018-07-17	7	f
 3723	Fun	    Travel Log: Day 16 - London\n        Leave ship\n            Breakfast on ship\n            Restless night\n            Luggage out at 8\n            Wait in lounge\n            Depart ship at 10:30\n        Meet Udo at Schipol airport\n        Travel to London\n            Long walk through airport\n            Lunch at airport\n            Fly to Gatwick\n            Long walk through airport\n            Train from Gatwick to Isleworth (including backtracking)\n        Bridge Inn\n        Dinner with Josiah family\n        London record heat\n        Hot and noisy night\n        12,000 steps\n        Sleep from 3-5am	2018-07-23	7	f
 3694	Fun	    Travel Log: Day 20 - Home\n        Wake up with thoughts of home\n        Breakfast at hotel\n        Pack for final leg\n        Sam and Cassie arrive at 9:30am\n        Taxi to Heathrow\n        Check in with Cassie & Sam\n        Flight delay of 40 mins\n        Wait for gate posting\n        Same terminal and trip out\n        Movie: Chappaquiddic, Downsizing\n        Listen to music with headphones\n        Travel with Cassie\n        2 hours to clear immigration (building anger)\n        Review UNC email in immigration line\n        Ride home with Rachel\n        Unpack and go to bed\n        5,000 steps	2018-07-27	7	f
@@ -6458,30 +6380,31 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3979	Tools	    renew Who2Hire.us cert\n    	2018-09-15	1	f
 3980	Business	    grout shower\n    fix bike valve	2018-09-15	1	f
 3981	Fun	    ER, Anthony Bordain\n    	2018-09-15	4	f
-3982	People	    	2018-09-15	0	f
 3983	Grow	    3, 3, 4, 5\n    weight: 209.6\n    sleepless night for stress	2018-09-13	0	f
-3984	Teach	    grade assignments\n    create Quiz Gettysburg\n    install XAMPP, NetBeans\n    visit with student at UC	2018-09-13	10	f
 3985	Fun	    Dance, Profit, ER\n    Last 100 Years	2018-09-13	3	f
+3974	UNC	    plan 350 Lesson 10\n    subscriber app requirements\n    Essential Skills\n    grade Lesson 9\n    write to students (Brittney, Jerone, Sarah)\n    	2018-09-11	8	f
+3978	UNC	    How to use Version Control\n    How to Setup Workflow\n    Install Brackets on Mac\n    Setup Apache on Mac\n    Create solution strategy for 350\n    Grade Lesson 8 & 9 & 10\n    Plan next week\n    	2018-09-15	7	f
+3984	UNC	    grade assignments\n    create Quiz Gettysburg\n    install XAMPP, NetBeans\n    visit with student at UC	2018-09-13	10	f
 3993	WAM	    remove old users and verify	2018-09-15	1	f
 4116	Fun	    Mr Robot\n    Homeland\n    Green Chili Fries\n    	2018-10-12	6	f
 4050	People	    time with Stacie\n    renew SSL\n    lunch at Royal Nepal	2018-09-30	3	f
 4117	Grow	    3, 4, 3, 1\n    weight: 206.4	2018-10-14	0	f
-4118	Teach	    wake up at 2:30 to work on template lesson\n    build template engine demo	2018-10-14	7	f
 4119	WAM	    investigate WAM cases	2018-10-14	1	f
 4120	Fun	    Circle\n    Homeland\n    	2018-10-14	4	f
 4121	People	    pizza with Andrew, Rachel, Christine	2018-10-14	2	f
 4122	Grow	    4, 3, 3, 5\n    weight: 207.8\n    get results from blood work\n    walk to Park and Neighborhood	2018-10-16	1	f
-4123	Teach	    use design review manager for grading\n    create scorecard for design reviews\n    create page templates\n    create Great Speeches assignment\n    	2018-10-16	8	f
 4124	Fun	    This is Us\n    	2018-10-16	4	f
 4125	People	    time with Stacie\n    Leslie returns to SD	2018-10-16	1	f
 4126	Grow	    5, 3, 3, 1\n    weight: 207.8	2018-10-13	0	f
-4127	Teach	    create logging template\n    debug solution 22\n    	2018-10-13	2	f
 4128	Fun	    Mr Robot\n    Homeland\n    nts 6\n    	2018-10-13	10	f
 4129	Business	    Fix toilet	2018-10-13	2	f
-3935	Teach	    improve Lesson 7\n    macbook power failure\n    return Uncle Ed computer\n    discuss curriculum with Chris Vegter and Bill Wilcox\n    Teach Lesson 7\n    help students with homework\n    setup git repo 350 on macbook\n    	2018-09-05	9	f
 4059	Fun	    Vikings\n    White\n    Farr library\n    Tombs - Clive Custler\n    	2018-10-01	4	f
-4035	Teach	    plan design review app\n    create student list (name, email, domain)\n    build Domains page\n    build Student Test page\n    grade zybook assignment\n    	2018-09-25	8	f
-4162	Teach	    prepare for complex page templates\n    meet with Chris Newby\n    version control quiz\n    extra credit assignment in 200\n    	2018-10-19	8	f
+4118	UNC	    wake up at 2:30 to work on template lesson\n    build template engine demo	2018-10-14	7	f
+4123	UNC	    use design review manager for grading\n    create scorecard for design reviews\n    create page templates\n    create Great Speeches assignment\n    	2018-10-16	8	f
+4127	UNC	    create logging template\n    debug solution 22\n    	2018-10-13	2	f
+3935	UNC	    improve Lesson 7\n    macbook power failure\n    return Uncle Ed computer\n    discuss curriculum with Chris Vegter and Bill Wilcox\n    Teach Lesson 7\n    help students with homework\n    setup git repo 350 on macbook\n    	2018-09-05	9	f
+4035	UNC	    plan design review app\n    create student list (name, email, domain)\n    build Domains page\n    build Student Test page\n    grade zybook assignment\n    	2018-09-25	8	f
+4150	UNC	    learn Error Handling and cookies in PHP\n    	2018-10-20	2	f
 4163	Fun	    Get Smart\n    	2018-10-19	2	f
 4182	Fun	    Resident, Good Place, Fixer Upper\n    	2018-11-02	4	f
 4142	People	    talk with Stacie about church board	2018-10-24	2	f
@@ -6499,8 +6422,9 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4183	People	    discuss healthcare options	2018-11-02	1	f
 4168	People	    talk with Stacie about retreat\n    Andrew & Rachel\n    voting	2018-10-29	3	f
 4153	Grow	    5, 3, 1, 5\n    weight: 207.4\n    11,000 steps\n    nap\n    work on bike tires\n    bike ride with Stacie\n    walk to lake\n    End of College	2018-10-21	5	f
+4162	UNC	    prepare for complex page templates\n    meet with Chris Newby\n    version control quiz\n    extra credit assignment in 200\n    	2018-10-19	8	f
 4157	Grow	    5, 3, 3, 5\n    personal retreat\n    hike in mountains\n    pray about dealing with emotions\n  	2018-10-28	8	f
-4150	Teach	    learn Error Handling and cookies in PHP\n    	2018-10-20	2	f
+4189	UNC	    build object datatype demo code\n    create templates and solutions\n    prep for 350 class\n    create tabs for review feedback\n    	2018-11-01	8	f
 4184	Grow	    5, 2, 2, 3\n    weight: 208.4	2018-10-31	0	f
 4186	Fun	    return to audiobooks to library\n    ER, Resident, This is Us\n    	2018-10-31	3	f
 4052	WAM	    work with Stacie\n    plan out next steps for WAM\n    fix numerous minor problems in WAM	2018-09-27	4	f
@@ -6509,43 +6433,40 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4149	Grow	    5, 5, 3, 5\n    weight: 206\n    walk to library\n    9500 steps\n    End of College	2018-10-20	1	f
 4152	People	    discuss teaching breakthroughs with Stacie\n    Rachel's baby shower	2018-10-20	9	f
 4188	Grow	    5, 1, 3, 3\n    weight: 209.4\n    walk	2018-11-01	1	f
-4189	Teach	    build object datatype demo code\n    create templates and solutions\n    prep for 350 class\n    create tabs for review feedback\n    	2018-11-01	8	f
+4193	UNC	    grade 350 exam\n    prep pair programming\n    	2018-10-30	8	f
 4190	Fun	    ER, Mr Robot, Resident\n    	2018-11-01	4	f
 4155	Fun	    Father of the Bride 2\n    	2018-10-21	3	f
 4156	People	   Right Coast Pizza \n   talk with Stacie	2018-10-21	2	f
-4171	Tools	    	2018-11-04	0	f
-4193	Teach	    grade 350 exam\n    prep pair programming\n    	2018-10-30	8	f
+4054	UNC	    200 18 - Page layout, ethics blog, grading\n    350 18 - App building live demo\n    meet with Robert Carver\n    Progress report for students	2018-10-03	9	f
 3958	Grow	    3, 3, 2, 3\n    weight: 207.8\n    lack of sleep waiting for carpet layer\n    Next 100 Years\n    Egg & I in Greeley	2018-09-10	3	f
 4154	Church	    learning to love others	2018-10-21	4	f
-4054	Teach	    200 18 - Page layout, ethics blog, grading\n    350 18 - App building live demo\n    meet with Robert Carver\n    Progress report for students	2018-10-03	9	f
+4196	UNC	    grade exams	2018-10-28	2	f
 4132	Tools	    change password on imac\n    change password on Blue Host\n    upgrade imac to Mojave (breaks XAMPP)\n    fix git problems\n    setup web server on macs	2018-10-23	4	f
 4133	Fun	    Mr Robot, This is Us, Fraiser\n    	2018-10-23	4	f
 4197	Church	    night of worship\n    Rick Omstead prayed for me	2018-10-28	3	f
 4136	Tools	    attempt to setup phpMyAdmin	2018-10-25	2	f
 4138	People	    lunch with Stacie at Stuffed Burger	2018-10-25	1	f
-4196	Teach	    grade exams	2018-10-28	2	f
+4166	UNC	    Stacie guest speaker in BACS200\n    lunch with Stacie at Tobey-Kendell	2018-10-29	7	f
 4137	Fun	    ER, Profit\n    	2018-10-25	5	f
 4169	Grow	    3, 2, 1, 3\n    weight: 208.2\n    nap	2018-11-04	1	f
-4166	Teach	    Stacie guest speaker in BACS200\n    lunch with Stacie at Tobey-Kendell	2018-10-29	7	f
-4185	Teach	    teach Images\n    pair programming \n    	2018-10-31	8	f
+4185	UNC	    teach Images\n    pair programming \n    	2018-10-31	8	f
+4160	UNC	    give two exams	2018-10-26	7	f
 4161	Grow	    5, 3, 4, 3\n    weight: 207.6\n    to bed at 8:30\n    	2018-10-19	2	f
-4160	Teach	    give two exams	2018-10-26	7	f
+4135	UNC	    prepare exams in both 200 and 350\n    	2018-10-25	2	f
 4134	Grow	    5, 3, 3, 3\n    weight: 207.6\n    build app for Journey Notebook\n    ready code for retreat	2018-10-25	4	f
-4135	Teach	    prepare exams in both 200 and 350\n    	2018-10-25	2	f
-4170	Teach	    \n    	2018-11-04	0	f
+4140	UNC	    teach Diagrams in 200\n    teach Cookies in 350\n    improve templates library	2018-10-24	8	f
 4146	Tools	    upgrade macbook to Mojave (breaks XAMPP)	2018-10-22	1	f
-4140	Teach	    teach Diagrams in 200\n    teach Cookies in 350\n    improve templates library	2018-10-24	8	f
+4175	UNC	    debug basic auth logic	2018-11-03	3	f
 4172	Fun	    Ghost Town, Salt-Fat, Mash\n    	2018-11-04	4	f
 4165	Grow	    5, 3, 3, 5\n    weight: 207.4	2018-10-29	0	f
 4143	Grow	    5, 3, 3, 5\n    personal retreat at LeCook Road\n    capture life events from 2010 to present\n    hike in mountains	2018-10-27	14	f
 4174	Grow	    5, 2, 2, 2\n    weight: 208.4\n    nap	2018-11-03	1	f
-4175	Teach	    debug basic auth logic	2018-11-03	3	f
+4145	UNC	    teach Lesson 26\n    students decide on Music Manager exam\n    frustrating talk with Richard Newmark\n    error handling\n    	2018-10-22	8	f
 4176	Tools	    enabled SSH on Bluehost\n    build deployment script for Bluehost	2018-11-03	3	f
 4177	Fun	    Mr Robot, Resident, Librarians\n    	2018-11-03	4	f
 4178	People	    Bonefish Grill with Potters	2018-11-03	3	f
 4144	Grow	    5, 3, 3, 5\n    weight: 207.4\n    Stacie books retreat cabin\n    think about retreat	2018-10-22	1	f
 4147	Fun	    ER, Profit, Goldbergs\n    visit Farr library\n    milkshake at Sonic\n    	2018-10-22	2	f
-4145	Teach	    teach Lesson 26\n    students decide on Music Manager exam\n    frustrating talk with Richard Newmark\n    error handling\n    	2018-10-22	8	f
 4195	People	    talk with Stacie about relationships\n    time with Stacie	2018-10-30	3	f
 4110	Grow	    5, 4, 2, 5\n    weight: 206.4\n    walk to Park (50 degrees)	2018-10-15	1	f
 4191	People	    talk with Stacie	2018-11-01	1	f
@@ -6553,17 +6474,17 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4273	Church	    Jonah	2018-11-18	4	f
 4218	Fun	    Mr Robot\n    	2018-11-09	2	f
 4202	People	    pick up Gary & Elen from airport\n    Museum of Science and History	2018-11-17	12	f
-4213	Teach	    Sensei planning documents\n    meet with Ben at Pelican Lakes\n    create slide show with PHP\n    	2018-11-15	8	f
+4260	UNC	    build Sensei lesson plans\n    create senseiapp architecture\n    write Git-1 and Web-1 lessons\n    	2018-11-22	8	f
 4206	People	    Andrew and Rachel\n    Carcassonne	2018-11-12	4	f
 4219	People	    Ben Fleebe over for dinner\n    Diane and Greg Fleebe	2018-11-09	2	f
 4214	Fun	    This is Us, Madam Sec, Profit, British Baking, Silicon Valley\n    	2018-11-15	5	f
 4242	Fun	    British Baking, ER\n    	2018-11-05	4	f
 4249	Grow	    4, 3, 3, 3\n    weight: 207.4	2018-11-10	0	f
-4260	Teach	    build Sensei lesson plans\n    create senseiapp architecture\n    write Git-1 and Web-1 lessons\n    	2018-11-22	8	f
-4232	Teach	    Sensei - ideas for design and projects\n    build Design Review app for 350\n    	2018-11-13	9	f
+4232	UNC	    Sensei - ideas for design and projects\n    build Design Review app for 350\n    	2018-11-13	9	f
+4263	UNC	    think about sensei project\n    	2018-11-21	2	f
 4231	Grow	    5, 5, 3, 2\n    weight: 206	2018-11-13	0	f
 4233	Fun	    ER, Enterprise, Mr Robot\n    	2018-11-13	5	f
-4263	Teach	    think about sensei project\n    	2018-11-21	2	f
+4216	UNC	    Notes App\n    design review of Teaching page\n    ssh on UNC computer\n    markdown in PHP pages\n    	2018-11-09	8	f
 4262	Grow	    4, 2, 4, 2\n    weight: 208.2	2018-11-21	0	f
 4268	People	    lunch at Thai restaurant\n    discuss teaching with Gary \n    High Hopps\n    Elen makes Spanish Tortilla	2018-11-19	9	f
 4267	Fun	    puzzle book\n    Fantastic Beasts movie	2018-11-19	5	f
@@ -6571,14 +6492,14 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4266	Grow	    5, 2, 3, 2\n    weight: 209.2	2018-11-19	0	f
 4238	Grow	    5, 1, 2, 3\n    weight: 209.2	2018-11-05	0	f
 4227	Grow	    5, 3, 1, 3\n    weight: 208	2018-11-16	0	f
-4216	Teach	    Notes App\n    design review of Teaching page\n    ssh on UNC computer\n    markdown in PHP pages\n    	2018-11-09	8	f
+4250	UNC	    build Notes app\n    	2018-11-10	3	f
 4265	People	    Hunt return home	2018-11-21	2	f
-4250	Teach	    build Notes app\n    	2018-11-10	3	f
+4228	UNC	    demonstrate Slide Shows using RevealJS\n    discuss end of semester\n    Jamari Logan visits office hours\n    think about Sensei approach\n    	2018-11-16	9	f
 4243	People	    election hopes	2018-11-05	1	f
 4205	Fun	    nts\n    	2018-11-12	1	f
-4228	Teach	    demonstrate Slide Shows using RevealJS\n    discuss end of semester\n    Jamari Logan visits office hours\n    think about Sensei approach\n    	2018-11-16	9	f
-4208	Teach	    blog for a cause\n    build Design Review app\n    	2018-11-14	6	f
-4204	Teach	    Design reviews of Brain app\n    WordPress setup\n    help Jessica Herold\n    	2018-11-12	9	f
+4208	UNC	    blog for a cause\n    build Design Review app\n    	2018-11-14	6	f
+4204	UNC	    Design reviews of Brain app\n    WordPress setup\n    help Jessica Herold\n    	2018-11-12	9	f
+4255	UNC	    grade assignments in 200/350\n    teach W3Schools\n    teach Auth\n    Fix issue with tabs in reviews\n    Calculations for review scores\n    	2018-11-07	8	f
 4221	Church	    church service	2018-11-04	4	f
 4239	Business	    plan Creative Leap meeting	2018-11-05	1	f
 4270	Fun	    puzzles book	2018-11-20	2	f
@@ -6587,7 +6508,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4271	People	    Carcassonne \n    discuss teaching with Gary \n    WeldWerx with Hunts\n    Meekers	2018-11-20	12	f
 4247	Fun	    Mr Robot, Silicon Valley\n    Solo - fell asleep\n    	2018-11-08	4	f
 4256	Fun	    Mr Robot, ER, Resident, Goldbergs\n    	2018-11-07	4	f
-4255	Teach	    grade assignments in 200/350\n    teach W3Schools\n    teach Auth\n    Fix issue with tabs in reviews\n    Calculations for review scores\n    	2018-11-07	8	f
+4245	UNC	    debug auth.php\n    	2018-11-08	4	f
 4212	Grow	    4, 3, 3, 5\n    weight: 208\n    steps: 9500 steps	2018-11-15	1	f
 4272	Grow	    5, 2, 3, 3\n    weight: 208.2\n    nap	2018-11-18	1	f
 4259	Grow	    5, 3, 1, 2\n    weight: 207.6	2018-11-22	0	f
@@ -6597,12 +6518,12 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4229	Fun	    read about Tutors\n    	2018-11-16	1	f
 4246	Business	    meet with Greg McCutchan\n    discuss with Stacie	2018-11-08	4	f
 4236	People	    talk with Stacie\n    election results	2018-11-06	2	f
-4245	Teach	    debug auth.php\n    	2018-11-08	4	f
+4240	UNC	    Adobe Illustrator\n    Object Pattern for apps\n    	2018-11-05	7	f
 4237	Business	    prepare for Creative Leap meeting\n    attend lecture on book publishing	2018-11-06	5	f
 4235	Fun	    Charade, British Baking\n    Silicon Valley\n    library\n    	2018-11-06	6	f
 4234	Grow	    5, 1, 4, 3\n    weight: 209.2\n    haircut	2018-11-06	1	f
 4253	People	    brunch at Egg & I\n    Vish and Sherry for dinner	2018-11-10	6	f
-4240	Teach	    Adobe Illustrator\n    Object Pattern for apps\n    	2018-11-05	7	f
+4223	UNC	    Ideas for Sensei Workshop project\n    	2018-11-11	2	f
 4252	Fun	    Mr Robot\n    	2018-11-10	2	f
 4241	Tools	    update mac	2018-11-05	1	f
 4274	People	    visit with Gary & Elen\n    High Hops\n    Profit\n    time with Stacie\n    Rio	2018-11-18	9	f
@@ -6610,7 +6531,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4209	Fun	    Tutors book from England\n    	2018-11-14	3	f
 4215	Grow	    4, 3, 1, 1\n    weight: 207.2	2018-11-09	0	f
 4210	People	    talk the Vish and Moe\n    Eric Fitzsimons\n    	2018-11-14	3	f
-4223	Teach	    Ideas for Sensei Workshop project\n    	2018-11-11	2	f
+4180	UNC	    cover Moe's classes\n    demo UPDATE logic\n    image story & Photoshop\n    build user auth demo\n    	2018-11-02	8	f
 4226	People	    time with Stacie	2018-11-11	1	f
 4261	People	    Thanksgiving celebration	2018-11-22	6	f
 4217	Tools	    meet with Ben Fleebe about teaching products	2018-11-09	2	f
@@ -6619,7 +6540,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4222	Grow	    5, 3, 3, 4\n    weight: 207.6\n    nap	2018-11-11	1	f
 4230	Church	    Dayspring Banquet	2018-11-16	4	f
 4251	Tools	    develop ideas for Sensei Shared Learning system	2018-11-10	3	f
-4180	Teach	    cover Moe's classes\n    demo UPDATE logic\n    image story & Photoshop\n    build user auth demo\n    	2018-11-02	8	f
+4213	UNC	    Sensei planning documents\n    meet with Ben at Pelican Lakes\n    create slide show with PHP\n    	2018-11-15	8	f
 4257	People	    discuss coaching with Stacie\n    election results	2018-11-07	2	f
 4264	Fun	    Silicon Valley (finish season 4)\n    nts 2\n    ER, Goldbergs\n    	2018-11-21	10	f
 1540	Tools	\n        set up seamanslog and spiritual websites\n        set up navigation between sites	2017-04-01	4	f
@@ -6627,29 +6548,28 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4298	People	    Pie at Fat Alberts	2018-12-03	2	f
 4296	Business	    schedule meeting with Matt\n    driveway repair	2018-12-03	1	f
 4323	Grow	    4, 3, 2, 3\n    weight: 208	2018-11-26	0	f
-4286	Teach	    Last day of class\n    Scheduled alternate final\n    share memory extra credit\n    talk with students\n    give early final	2018-11-30	8	f
-4324	Teach	    debug system for Design Review\n    teach Learning in 200\n    	2018-11-26	8	f
-4328	Teach	    setup up design reviews (final app reviews)\n    Jamari in office hours\n    talk with Vish\n    	2018-11-28	9	f
+4324	UNC	    debug system for Design Review\n    teach Learning in 200\n    	2018-11-26	8	f
+4328	UNC	    setup up design reviews (final app reviews)\n    Jamari in office hours\n    talk with Vish\n    	2018-11-28	9	f
+4276	UNC	    build up Sensei lessons\n    research LMS tools\n    build Github repo for Sensei-Workshop\n    create wiki	2018-11-23	4	f
 4329	Fun	    library visit\n    Mr Robot\n    historical fiction books\n    	2018-11-28	4	f
 4330	People	    talk with Stacie	2018-11-28	1	f
 4278	Fun	    Half-blood Prince\n    Resident\n    nts 1\n    	2018-11-23	5	f
-4276	Teach	    build up Sensei lessons\n    research LMS tools\n    build Github repo for Sensei-Workshop\n    create wiki	2018-11-23	4	f
+4300	UNC	    build design review sys for 350\n    prep lesson for design reviews\n    	2018-11-25	4	f
 4282	Business	    plans for Agent Match system\n    write up proposal\n    	2018-11-27	5	f
 4283	Fun	    nts 2\n    Mr Robot, GoT\n    	2018-11-27	6	f
 4284	People	    Christine to get car fixed\n    schedule with roof repair	2018-11-27	0	f
 4280	Grow	    3, 2, 2, 1\n    weight: 208	2018-11-27	0	f
 4287	Fun	    Enterprise, British Baking\n    	2018-11-30	3	f
-4300	Teach	    build design review sys for 350\n    prep lesson for design reviews\n    	2018-11-25	4	f
+4318	UNC	    350 grades\n    explore Code Mentor, CodePen, React\n    invite Ben to FCIP\n    attend FCIP with Ben\n    	2018-12-04	5	f
 4302	Fun	    Deathly Hallows\n    GoT\n    	2018-11-25	4	f
 4288	People	    Rachel's due date\n    Greeley Chop House - last class celebration	2018-11-30	3	f
 4307	Fun	    GoT\n    Mr Robot\n    IMDB Trailers\n    	2018-12-01	4	f
 4308	People	    breakfast at Warren's\n    Andrew and Rachel\n    discuss healthcare options with Stacie\n    sign up for Primary Care	2018-12-01	6	f
-4321	Fun	    \n    	2018-12-04	0	f
 4305	Grow	    5, 1, 3, 1\n    weight: 209.2\n    nap	2018-12-01	2	f
 4410	Grow	    5, 2, 2, 2\n    weight: 208.4	2018-12-23	0	f
 4413	Fun	    Last Kingdom\n    	2018-12-23	1	f
 4414	People	    Christmas dinner\n    Ruby feedings\n    	2018-12-23	8	f
-4318	Teach	    350 grades\n    explore Code Mentor, CodePen, React\n    invite Ben to FCIP\n    attend FCIP with Ben\n    	2018-12-04	5	f
+4314	UNC	    grading in 200	2018-11-24	4	f
 4319	Tools	    fix Menu on MyBook server\n    login for Meetup	2018-12-04	2	f
 4320	Business	    Isborn Security prep for meeting 12-6	2018-12-04	2	f
 4303	People	    Doug's Diner with Garcias and Potters\n    time with Stacie\n    	2018-11-25	2	f
@@ -6660,10 +6580,11 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4322	People	    Rachel in labor\n    discuss household projects\n    vigil at hospital	2018-12-04	5	f
 2025	Tools	\n        refactor menu and site titles on several websites\n        make list of web services to develop\n	2017-05-28	2	f
 4415	Grow	    5, 3, 2, 2\n    weight: 208.4	2018-12-22	0	f
+4286	UNC	    Last day of class\n    Scheduled alternate final\n    share memory extra credit\n    talk with students\n    give early final	2018-11-30	8	f
 4291	Fun	    Crazy Rich Asians\n    ER\n    	2018-12-02	4	f
 4289	Grow	    5, 2, 2, 3\n    weight: 208.6\n    nap	2018-12-02	2	f
 4313	Grow	    5, 3, 1, 1\n    weight: 207.6\n    bed at 8:30	2018-11-24	1	f
-4314	Teach	    grading in 200	2018-11-24	4	f
+4295	UNC	    create syllabus for BACS 200 - Spring 2019\n    schedule final review assignments\n    read "most import learning" feedback\n    grade final review in 350\n    	2018-12-03	5	f
 4317	Grow	    4, 2, 1, 1\n    weight: 208.8	2018-12-04	0	f
 1548	Hire	\n        learn how to create PDF file\n        install Latex on ubuntu servers\n        attempt to setup Latex on Macs\n        build Markdown file for report (title only)\n        convert Markdown to PDF\n        display PDF file in Who2Hire application\n        manage who2hire branch merges	2017-04-03	8	f
 4294	WAM	    build plan for WAM transition	2018-12-03	2	f
@@ -6672,16 +6593,14 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4285	Grow	    5, 2, 2, 4\n    weight: 208.2	2018-11-30	0	f
 4293	Grow	    5, 1, 2, 4\n    weight: 209.6\n    planning	2018-12-03	1	f
 4412	Tools	    build custom views\n    build doc display	2018-12-23	2	f
-4295	Teach	    create syllabus for BACS 200 - Spring 2019\n    schedule final review assignments\n    read "most import learning" feedback\n    grade final review in 350\n    	2018-12-03	5	f
-4306	Teach	    Planning on Sensei Workshop project\n    	2018-12-01	2	f
+4306	UNC	    Planning on Sensei Workshop project\n    	2018-12-01	2	f
+4281	UNC	    grading and student interaction\n    plan out finals	2018-11-27	3	f
 2019	Grow	\n        jetlag at sleeping patterns\n        think about non-sleeping activities\n        write about emotional triggers (5x5)\n        capture list of core emotions\n        plan most important activities\n        walk along river\n        brain purge\n        action priorities LPBT (7 each)	2017-05-27	8	f
 2026	Tools	\n        build basic thot view\n        refactor workshop demo views\n        refactor Menu & SiteTitle\n        create /thot/42 view\n        think about booknotes design\n        create new WordPress site with template	2017-05-29	0	f
 1587	Hire	\n        repair send mechanism\n        remove extra app code and scripts from Who2Hire\n        simplify bashrc-django \n        Issue 119. Disable notifications from staging\n        Issue 120. Landing page background color and other improvements\n        discuss User Guide with Stacie	2017-04-12	6	f
 4297	Church	    UNC Outreach	2018-12-03	3	f
 4326	People	    Sol de Jalisco   	2018-11-26	2	f
-4281	Teach	    grading and student interaction\n    plan out finals	2018-11-27	3	f
 4299	Grow	    5, 2, 3, 1\n    weight: 208.6	2018-11-25	0	f
-4411	Teach	    \n    	2018-12-23	0	f
 4292	People	    lunch with Potters\n    Rachel in waiting\n    time with Stacie	2018-12-02	4	f
 4309	Grow	    5, 3, 3, 2\n    weight: 208	2018-11-29	0	f
 4311	Fun	    Resident, Madam Sec, This is Us\n    	2018-11-29	5	f
@@ -6699,43 +6618,42 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3744	Fun	    Travel Log: Day 5 - Passau\n    Pack up from hotel\n    Last ones on yellow bus\n    Couple missing blue bus\n    Miles of forrest and farms\n    Austria is beautiful\n    Drive through Wachau Valley\n    Arrive in Passau\n    Walking tour of Passau\n    Bishops fortress in Passau overlooking town hall\n    High water in 2013 town hall under 10' of water\n    Lunch at restaurant\n    Udo discusses immigration issues\n    Cross into Germany\n    Use headphones for music\n    Arrive in Regensburg\n    Board ship and unpack\n    Safety briefing and port talk\n    Dinner on ship with Elena & Keith\n    Evening stroll in Regensburg\n    Unpack and explore\n    7,000 steps\n    Ships stuck in Regensburg	2018-07-12	7	f
 3705	Fun	    Travel Log: Day 14 - Cologne\n        Sleep in\n        Breakfast Keith & Elena\n        Dock in Cologne 9am\n        Walking tour \n            St Matthews\n            Town Hall\n            Allied bombing\n            JFK\n            Cologne Cathedral\n            Doughnuts & Beer\n            Lunch in Peters Brauhaus\n            Saugage and schnitzel\n            Roman Museum\n            Chocolate store\n        Disembarking procedure\n        Port talk\n            tipping and surveys\n            Netherlands\n            Crew show\n        Cruise through Dusseldorf at dinner\n        Heavy industry along the lower Rhine\n        9,000 steps	2018-07-21	7	f
 2197	Church	\n        drive to LA\n        first night of conference\n        keynote: Adam Russell\n        check in to house\n        visit with Alan & John Hodges	2017-07-10	10	f
-2494	Teach	\n        class prep #15\n        class #15 - exam feedback\n        install apps on podium PC\n        start on Jupyter notebook\n            Teaching BACS 200 \n            Web Dev\n        develop Web Dev notebook\n        create templates for page-layout \n            1-col\n            2-col\n            3-col\n            side-menu\n            top-menu	2017-09-25	11	f
-3615	Teach	    find better solution for FTP to Bluehost\n    create sample PHP files for app coding\n    think through teaching approach in BACS 350\n    work on lesson structure\n    refactor Guide Views around lessons (Learn, Plan, Build, Share)	2018-06-21	4	f
-2530	Teach	\n        200\n            Setup quiz \n            Ex 9, 10\n            Lecture 10/06\n            Extend quiz deadline\n        350\n            Lecture 10/06\n            PM slides\n            Lecture 10/06\n            Project Plan exercise\n        Tools & Admin\n            Slovenia	2017-10-06	8	f
-3371	Teach	    commit to teaching 350 in Fall\n    build wiki for Wiki Class Project\n    think about Senior project classes	2018-05-01	4	f
+3615	UNC	    find better solution for FTP to Bluehost\n    create sample PHP files for app coding\n    think through teaching approach in BACS 350\n    work on lesson structure\n    refactor Guide Views around lessons (Learn, Plan, Build, Share)	2018-06-21	4	f
+2530	UNC	\n        200\n            Setup quiz \n            Ex 9, 10\n            Lecture 10/06\n            Extend quiz deadline\n        350\n            Lecture 10/06\n            PM slides\n            Lecture 10/06\n            Project Plan exercise\n        Tools & Admin\n            Slovenia	2017-10-06	8	f
+3371	UNC	    commit to teaching 350 in Fall\n    build wiki for Wiki Class Project\n    think about Senior project classes	2018-05-01	4	f
 2037	Hire	\n        decide on urls for who2hire.us and app.who2hire.us\n        investigate encryption on WordPress site\n        rename domains for who2hire.us and app.who2hire.us\n        debug issues related to encryption\n        convert to use who2hire URL setting for server	2017-05-31	8	f
 1968	Tools	\n        update aspire/MyBook documents\n        setup Bootstraps and Blessings in MyBook\n        setup Leverage in MyBook\n        build author page and book page	2017-05-03	3	f
 2148	Tools	\n        remove extra CSS template libraries from MyBook\n        explore UI elements and techniques in Material\n        workshop views\n            template_derived\n            template_columns\n            template_content\n        create view to load custom templates\n        write ThotBook on Creativity\n        simplify plan.py and todo.py\n        plan new features for Time views\n        consolidate 1000Goals and ThotBook: Goals	2017-06-26	7	f
 2270	Tools	\n        create workshop/views.py code\n        support request for PipeScan\n        time tabs: Week, Month, Year\n        workshop tricks: DjangoApps, DjangoCommand, DjangoSettings, SecretSettings,\n             Parameters, QueryParameters, SimpleMatch, Accordion, Tabs, Icon\n        create new improved time summaries	2017-08-03	8	f
 4418	Fun	    Last Kingdom, GoT\n    	2018-12-22	2	f
 4419	People	    grocery and Christmas shopping\n    visit with Lucy and Stacie	2018-12-22	2	f
-4486	Teach	    Lesson 2 - Web Hosting - Bluehost Challenge\n    Upside down name tags\n    Tutor - Alex Bremerton\n    	2019-01-09	6	f
-4310	Teach	    planning\n    email\n    grade 350 final project\n    rebuild design review reporting\n    	2018-11-29	8	f
-4416	Teach	    meet with Ben Flebbe to discuss software tools\n    	2018-12-22	2	f
-4431	Church	    Lucy stays home from church with cold	2018-12-23	3	f
+4310	UNC	    planning\n    email\n    grade 350 final project\n    rebuild design review reporting\n    	2018-11-29	8	f
+4416	UNC	    meet with Ben Flebbe to discuss software tools\n    	2018-12-22	2	f
 4527	People	    buy food at Fontas\n    dinner with Stacie & Lucy	2019-01-16	2	f
+4431	Church	    Lucy stays home from church with cold	2018-12-23	3	f
 4526	Fun	    Resident, This is Us\n    GoT, Duty & Honor\n    	2019-01-16	4	f
+4486	UNC	    Lesson 2 - Web Hosting - Bluehost Challenge\n    Upside down name tags\n    Tutor - Alex Bremerton\n    	2019-01-09	6	f
 2594	Fun	\n        Orville, Poldark	2017-10-24	3	f
 2598	People	\n        Stacie	2017-10-25	2	f
 2599	Fun	\n        TV	2017-10-25	4	f
 2600	Grow	\n        5,5,4,5\n	2017-10-25	0	f
 410	Fun	\n        Scandal, Mad Men\n        Roku\n	2016-05-06	4	f
 2602	Grow	\n        4,5,3,2	2017-10-26	0	f
-2823	Teach	\n        Class - build first week content (Lectures, Ex, Web)	2017-12-20	0	f
+2576	UNC	\n        350 prep (#25)\n        200 prep (#25)	2017-10-17	8	f
 2603	Church	\n        board meeting\n	2017-10-26	4	f
-2576	Teach	\n        350 prep (#25)\n        200 prep (#25)	2017-10-17	8	f
+2579	UNC	\n        350.25 Design. grade Tech Plan\n        200.25 Forms, Homework rules, John Simon	2017-10-18	8	f
 2577	People	\n        Hearth with Stacie	2017-10-17	2	f
 2578	Fun	\n        TV\n	2017-10-17	4	f
-2579	Teach	\n        350.25 Design. grade Tech Plan\n        200.25 Forms, Homework rules, John Simon	2017-10-18	8	f
+2582	UNC	\n        200 Tabs, Accordion, Pizza Quiz\n        350 Data design, Back-end TDD\n        Jupyter + Django\n        350 Github repo	2017-10-19	8	f
 2580	Grow	\n        5,5,4,5\n        Beautiful day on campus\n        10000 steps	2017-10-18	2	f
 2581	Fun	\n        Elem. Fraiser\n	2017-10-18	4	f
-2582	Teach	\n        200 Tabs, Accordion, Pizza Quiz\n        350 Data design, Back-end TDD\n        Jupyter + Django\n        350 Github repo	2017-10-19	8	f
+3227	UNC	\n        Lesson 27 - Open Source Design Templates\n        define Blog 5 and design review groups\n        update master syllabus for BACS 200	2018-03-26	6	f
 3177	Fun	\n        Best Buy, Barnes and Noble\n        ER, Wonderful Houses\n        use new music player\n	2018-03-13	4	f
-3915	Teach	    breakfast with Moe\n    350 Lesson 6 - Database connection basic operations\n    200 Lesson 6 - Reading URLs\n    Chris Newby - graduation requirements\n    350 - Class conflict with Registrar office\n    discuss university conflicts with Stacie, Andrew, and Rachel\n    	2018-08-31	8	f
+2593	UNC	\n        350: #28 pair programming, Code CRUD Ex, write Exam, Jose\n        200: #28 Im Carousel, investigate cheating	2017-10-24	7	f
 3180	Fun	\n        setup SanDisk ClipJam device\n        investigate music players for Mac\n        load music onto Clip Jam\n        finish Heat Storm book\n        play with plastic building blocks\n        order Amazon Kindle Fire HD 10\n	2018-03-14	9	f
 3188	Grow	\n        3, 4, 2, 2\n        plan out Daily Tasks\n        think about church board steps\n        process conversation with Stacie\n        Wait But Why\n        Tribe of Mentors\n        think about daily task setup	2018-03-17	6	f
 3738	Fun	    Travel Log: Day 13 - Koblenz\n        Awake in Rudesheim\n        Castles of the Middle Rhine\n            Use maps to track castles\n        Stacie nap and massage\n        Lunch with Steve & Ilene\n        Walking tour in Koblenz\n            Ice cream lab\n            Eye roller on buildings\n            Local guide to tram\n            Separate from main group\n            Tram ride to Eisenbreitenburg\n            Wander around fortress\n            Stacie overheats\n            Sailors prepare ship\n            Koblenz at night\n        Dinner with Debbie & Charlie\n        Move to table with Dave & Don\n        Stace washes clothes\n        Sail from Koblenz\n        9,500 steps	2018-07-20	7	f
-3227	Teach	\n        Lesson 27 - Open Source Design Templates\n        define Blog 5 and design review groups\n        update master syllabus for BACS 200	2018-03-26	6	f
+2597	UNC	\n        350: #28\n        200: #28\n        Pat Seaton observation	2017-10-25	8	f
 128	Sign	\n        Setup code sharing with Sign team (push, branches)\n        Build script execution engine\n        Create command script for User\n        Create command script for Notify\n        Create command script for Chargify\n        Investigate design alternatives for Mandrill and Chargify\n        Debug and testing for command scripts\n        Create virtualenv for Python 3.4\n        Build script to set up new dev machine\n        Install django-extensions scripts	2016-02-12	8	f
 158	Grow	\n        Thinking through personal issues with being distracted at work\n        Build simple app for cornbread charts\n        Think about dashboard\n        Discussed work issues with Stacie\n        Read Integrity book	2016-02-21	6	f
 160	Sign	\n        read and experiment with forgot my password code\n        create change email logic to be patterned after the forgot my password (request, and change api calls)\n        build new Mandrill templates for Email Reset and Email Changed \n        create new notifier logic for sending email messages\n        convert change password logic to use simplified code\n        debug all new logic\n        run static analysis and fix all problems\n        create MVP-364 branch (10 new commits)	2016-02-22	10	f
@@ -6747,17 +6665,16 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2590	Fun	\n        Circle. Flash, Madam Sec	2017-10-23	4	f
 2591	Grow	\n        5,5,4,5\n        walk around golf course	2017-10-23	0	f
 2592	People	\n        Talk with Stacie\n	2017-10-23	2	f
-2593	Teach	\n        350: #28 pair programming, Code CRUD Ex, write Exam, Jose\n        200: #28 Im Carousel, investigate cheating	2017-10-24	7	f
+2601	UNC	\n        350: prep #29 write exam\n        200: prep #29 final project plan\n        Restructure doc management repos\n        Work on Github processes\n        work out pull request with multiple repos\n        move Jupyter notes	2017-10-26	10	f
 2595	Grow	\n        5,5,4,5\n        walk around golf course	2017-10-24	1	f
 2596	People	\n        Pelican Lakes\n\n	2017-10-24	3	f
-2597	Teach	\n        350: #28\n        200: #28\n        Pat Seaton observation	2017-10-25	8	f
-2601	Teach	\n        350: prep #29 write exam\n        200: prep #29 final project plan\n        Restructure doc management repos\n        Work on Github processes\n        work out pull request with multiple repos\n        move Jupyter notes	2017-10-26	10	f
+4420	UNC	    build plan for class prep\n    update notes for Sensei and BACS 200 sites	2018-12-21	3	f
 4277	Business	    meet with Matt Isborn\n    investigate solutions to personnel matching\n    	2018-11-23	3	f
 4203	Grow	    5, 3, 3, 4\n    weight: 207.6	2018-11-12	0	f
 4335	Grow	    1, 1, 1, 4\n    read Django and Rest\n    nap 	2018-12-05	4	f
+2823	UNC	\n        Class - build first week content (Lectures, Ex, Web)	2017-12-20	0	f
 4432	Grow	    3, 1, 1, 1\n    weight: 209.4\n    prayer during night\n    top fears\n    monthly objectives & personal review\n    nap	2018-12-26	4	f
 4334	People	    visit Rachel in hospital	2018-12-06	4	f
-4420	Teach	    build plan for class prep\n    update notes for Sensei and BACS 200 sites	2018-12-21	3	f
 369	Sign	\n        interactive debug with \n        echo subscription code in status\n        invoke chargify api to get all subscriptions\n        use the auth key withing the Chargify API call\n        return the active status code\n        set the UNVERIFIED status for new users\n        pass through customer reference value\n        improve logging\n        write initial request user function\n        debugging on user auth	2016-04-23	8	f
 408	Sign	\n        Cancel subscription from UI (first draft)\n        debugging on user registration workflow\n        build user.py script\n        build charify.py script\n        move code from registration.py to chargify.py\n        debug API for cancel subscription\n        debug API for update plan\n        work around for venue type setup bug	2016-05-06	8	f
 455	WAM	\n        Deployment on Staging Server\n        Test deployment to staging server\n        Consolidate docs on configuration\n        Automate web page loading\n        Rebuild PyCharm project\n        Revamped processing of switches of test acceleration\n        Create qt for export\n        Build an export script for cases to CSV\n        Create import of cases from CSV\n        Test round trip of data\n        Refactor case.py and case_script.py\n        Automated test of case logic	2016-05-19	8	f
@@ -6805,8 +6722,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1874	Sign	\n        setup iMac email to point to mark@signspan.com\n        organize documents for Confluence\n        process email\n        update JIRA issues status\n        MVP-352 - Fix issue with activate URL\n        setup iMac on VPN\n        write Payment System definition doc\n        write Payment System design doc\n        write User Administration requirements doc\n        update Subscriber Status doc with state machine\n        update Notification messages doc\n        learn about Mandrill templates\n        Scrum meeting	2016-02-18	8	f
 1083	Grow	\n        review time summary for last quarter\n        make decisions about current time investments\n        nap\n        4, 3, 3, 1	2016-11-20	2	f
 1089	Church	\n        church board meeting\n            demo of Church Dashboard\n            discuss Todd full time\n        create main menu\n        build Dashboard view\n        build Overview view\n        build Meetings and Meetings detail view\n        build Budget and Budget detail view\n        create automatic scoring\n        debug editing of records\n        data backup\n        create budget import mechanism	2016-11-22	11	f
-4367	Teach	    \n    	2018-12-14	0	f
-4433	Teach	    review UNC email\n    	2018-12-26	1	f
+4433	UNC	    review UNC email\n    	2018-12-26	1	f
 4365	Grow	    3, 3, 2, 4\n    weight: 208	2018-12-14	0	f
 4366	WAM	    follow up with remaining issues for transition	2018-12-14	2	f
 4369	Fun	    browse Bernard Cornwell books\n    	2018-12-14	1	f
@@ -6832,9 +6748,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4422	Tools	    Explore Codecademy\n    Try lessons for HTML, Git, Coding, Python, Git\n    debug pipenv context\n    	2018-12-24	4	f
 4423	Fun	    Last Kingdom\n    	2018-12-24	1	f
 4424	People	    open presents after church\n    meet with Josiah family\n    Garcia's out house	2018-12-24	5	f
-4427	Teach	    \n    	2018-12-25	0	f
 4425	Church	    Christmas Eve service\n    	2018-12-24	4	f
-4429	Fun	    \n    	2018-12-25	0	f
 4426	Grow	    4, 1, 1, 1\n    weight: 209.8\n    start getting cold\n    nap\n    prayer 	2018-12-25	2	f
 4428	Tools	    learn about Codecademy	2018-12-25	2	f
 4430	People	    hot cinnamon rolls\n    Christmas morning\n    Julio & Jackie's Christmas\n    conversation with Wade and Anna\n    time with Stacie\n    video with Josiah family\n    phone call with Dad\n    visit with Lucy	2018-12-25	10	f
@@ -6848,34 +6762,33 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4386	Grow	    3, 1, 4, 3\n    weight: 209.4\n    write project goals\n    nap\n    build planning system\n    prayer	2018-12-16	3	f
 4393	Tools	    build test pages for MyBook server\n    debug static server\n    debug page loading and redirect\n    simplify production code\n    build common test page format\n    rebuild lessons in HTML apps\n    remove images from HTML apps	2018-12-18	6	f
 4352	Grow	    5, 1, 2, 3\n    weight: 210	2018-12-08	0	f
-4380	Teach	    build ideas for teaching\n    	2018-12-15	2	f
+4387	UNC	    capture ideas for teaching tools - submitting assignments\n    	2018-12-16	1	f
 4394	Fun	    finish Lady Elizabeth audiobook\n    GoT	2018-12-18	2	f
 4395	People	    dinner with Beilmans at Pelegrini's\n    visit Ruby's house\n    discuss writing Life App notes\n    cleaning crew	2018-12-18	4	f
 4363	Business	    start writing user guide for Agent Match app\n    working session with Heidi\n    create initial tag list\n    setup Evernote account for Heidi\n    process to create Agent Profiles\n    process to search using tags and text\n    process to create index of matching agents\n    follow up after working session\n    	2018-12-11	6	f
+4380	UNC	    build ideas for teaching\n    	2018-12-15	2	f
+4338	UNC	    write proposal for Independent Study\n    	2018-12-12	2	f
 4331	Grow	    3, 1, 1, 2\n    weight: 211.4\n    wake at 4:00\n    think about the New Reformation\n    write about life motivation\n    write about Creativity and Commitments\n    record activities\n    talk with Stacie about work fulfillment	2018-12-06	3	f
 4341	Fun	    Star Trek Beyond\n    Madam Sec\n    	2018-12-12	4	f
 4344	Tools	    rebuild website content for exteriorbrain, shrinking-world, seaman-tech\n    world-class-software etc.\n    fix domain router\n    experiment with character encoding\n    update pandoc char encoding \n    build project pages on shrinking-world	2018-12-10	7	f
 4345	Church	    party at Beilman's new house\n    	2018-12-10	4	f
 4346	WAM	    prep for meeting with Nathan	2018-12-10	1	f
 4383	Tools	    create pages for UNC classes\n    work on 404 error handling	2018-12-17	2	f
-4353	Teach	    Investigate teaching tools\n        - Repl.it, CodePen, TiddlyWiki\n    	2018-12-08	6	f
+4358	UNC	    gave last final exam\n    grade both classes\n    submit final grades\n    started work on idea of independent study\n    	2018-12-07	4	f
 4356	People	    visit Garcias\n    Stacie stayed till 2am\n    Christine drove me home	2018-12-08	2	f
 4379	Fun	    Fraiser, Bean Holiday\n    nts 2\n    	2018-12-15	3	f
 4357	Grow	    5, 1, 2, 2\n    weight: 210.2\n    write New Reformation\n    enter notes	2018-12-07	2	f
 4359	Business	    Follow up on project plan\n    Investigate notes tools for Agent Match	2018-12-07	2	f
 4360	Fun	    Electric Dreams\n    	2018-12-07	3	f
-4387	Teach	    capture ideas for teaching tools - submitting assignments\n    	2018-12-16	1	f
 4362	Grow	    3, 1, 1, 5\n    Dr Visit intro visit to direct primary care\n    weight: 209.4\n    embrace personal brokenness (Narcissism)\n    Daily Examen app on phone	2018-12-11	4	f
-4338	Teach	    write proposal for Independent Study\n    	2018-12-12	2	f
 4350	People	    Right Coast Pizza\n    Visit Ruby	2018-12-09	4	f
-4358	Teach	    gave last final exam\n    grade both classes\n    submit final grades\n    started work on idea of independent study\n    	2018-12-07	4	f
 4361	People	    Rachel & Andrew leave the hospital with Ruby\n    Stacie helps with Ruby (home at 3:00)\n    Lets Andrew & Rachel both sleep	2018-12-07	3	f
 4391	Grow	    4, 3, 1, 2\n    weight: 207.4\n    haircut\n    	2018-12-18	2	f
+4353	UNC	    Investigate teaching tools\n        - Repl.it, CodePen, TiddlyWiki\n    	2018-12-08	6	f
 4339	Business	    Isborn\n        Build shared folders\n        Work with Heidi to get first three profiles\n        Reviewed solution with Matt\n        create consulting contract + send to Matt\n    	2018-12-12	5	f
 4342	People	    discuss Greg with Stacie	2018-12-12	1	f
 4347	Grow	    3, 1, 3, 2\n    weight: 209.6	2018-12-09	0	f
 4351	Church	    advent	2018-12-09	4	f
-4392	Teach	    \n    	2018-12-18	0	f
 4354	Business	    Isborn Security\n        Research tools for Agent Match platform (based on design requirements)\n        Build and share notes for project collaboration\n        Create Design Plan for initial implementation\n        Draft template for Agent Profiles	2018-12-08	4	f
 4376	Grow	    5, 2, 2, 4\n    weight: 208.4	2018-12-15	0	f
 4343	Grow	    5, 2, 1, 2\n    weight: 208.4\n    Dentist visit	2018-12-10	2	f
@@ -6885,7 +6798,6 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4402	Tools	    learn about pipenv\n    setup development for Rest\n    build Github repo for Rest API\n    learn about Django Rest API\n    record steps to build Rest API\n    update data models for Sensei Review App\n    update project planning notes for Sensei	2018-12-21	5	f
 4417	Tools	    learn about pipenv\n    setup Python3 with Django\n    create data models for Course, Lesson, Student\n    write docs for building Sensei app\n    debug context loading for pipenv on Rest and MyBook projects\n    pruned MyBook - aspire, cmd, doc	2018-12-22	8	f
 4442	Grow	    5, 1, 1, 1\n    weight: 209.8\n    personal planning\n    injure back moving couch\n    nap\n    Food:\n        coffee - 3 cups\n        toast with peanut butter\n        reuben \n        chips and salsa\n        cherry juice - 16 oz\n        stew - 1 bowl\n        pumpkin pie\n        english toffee	2018-12-28	2	f
-4443	Teach	    class prep (Lessons 1-3)\n    create reading assignments\n    create list of students for BACS200\n    create process for adding students\n    	2018-12-28	5	f
 4444	Tools	    manage length of hammer.log\n    improve web command\n    create class command	2018-12-28	1	f
 4445	Fun	    GoT\n    British baking, Yoyager\n    	2018-12-28	4	f
 4446	People	    take down tree\n    discuss trip arrangements with Stacie	2018-12-28	2	f
@@ -6893,15 +6805,20 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4449	Tools	    remove old database tables\n    attempt to import users for class	2018-12-29	3	f
 4451	People	    pack for trip\n    40th Anniversary\n    travel to Denver- check into Westin\n    bitter cold in Colorado\n    fire alarm at Westin\n    visit with Lucy\n    took Christmas tree to recycle\n    repair fitbit band	2018-12-29	6	f
 4450	Fun	    GoT\n    	2018-12-29	1	f
-4332	Teach	    ideas for Seaman's Guides\n    think about app architecture\n    plan first four weeks - BACS 200\n    	2018-12-06	1	f
+4443	UNC	    class prep (Lessons 1-3)\n    create reading assignments\n    create list of students for BACS200\n    create process for adding students\n    	2018-12-28	5	f
+4332	UNC	    ideas for Seaman's Guides\n    think about app architecture\n    plan first four weeks - BACS 200\n    	2018-12-06	1	f
+4438	UNC	    build Canvas content\n    refine lesson 1\n    	2018-12-27	2	f
 4401	Grow	    4, 2, 1, 1\n    weight: 208.4\n    Stacie gets a cold, sleep on couch 	2018-12-21	0	f
 4398	Tools	    move Projects into Archive\n    fix tests for Archive\n    build page tester\n    site title from domdoc\n    menu from domdoc\n    random selector in Spiritual Things\n    random selector in Seamans Log	2018-12-19	6	f
 4437	Grow	    4, 1, 1, 1\n    weight: 209.8\n    nap	2018-12-27	2	f
-4448	Teach	    \n    	2018-12-29	0	f
-4438	Teach	    build Canvas content\n    refine lesson 1\n    	2018-12-27	2	f
 4439	Tools	    work with Simple Mind app\n    optimize repo sync	2018-12-27	2	f
 4440	Fun	    Aquaman\n    GoT\n    Madam Sec, Goldbergs\n    	2018-12-27	6	f
 4441	People	    visit with Lucy	2018-12-27	2	f
+4462	Fun	    GoT\n    	2019-01-03	2	f
+4463	People	    dinner at Greek Town\n    lunch at IHOP\n    shuffleboard\n    walk on beach	2019-01-03	6	f
+4464	Grow	    5, 1, 3, 4	2019-01-02	0	f
+4465	Fun	    Kennedy Space Center\n    	2019-01-02	10	f
+4466	People	    dinner at Alfie's\n    talk with Stacie about the future \n    drive to KSC	2019-01-02	4	f
 4458	Grow	    3, 1, 1, 3\n    fever in early night	2018-12-30	2	f
 4459	Fun	    travel to Ormond Beach\n    GoT\n    	2018-12-30	2	f
 4460	People	    breakfast at airport\n    fly to Orlando\n    drive with Stacie Orlando-Ormond Beach\n    check into condo\n    dinner and Genevisies restaurant\n    dense fog in evening	2018-12-30	10	f
@@ -6909,62 +6826,49 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4456	Fun	    New Years Day\n    GoT\n    	2019-01-01	2	f
 4457	People	    breakfast of granola, berries\n    Demitri's Greek Food\n    discuss fond memories of 2018	2019-01-01	8	f
 4461	Grow	    3, 3, 1, 1\n    think about gratitude\n    record aspirations for New Year\n    discuss the future with Stacie\n    create Thankful List\n    record major events from 2018\n    	2019-01-03	6	f
-4462	Fun	    GoT\n    	2019-01-03	2	f
-4463	People	    dinner at Greek Town\n    lunch at IHOP\n    shuffleboard\n    walk on beach	2019-01-03	6	f
-4464	Grow	    5, 1, 3, 4	2019-01-02	0	f
-4465	Fun	    Kennedy Space Center\n    	2019-01-02	10	f
-4466	People	    dinner at Alfie's\n    talk with Stacie about the future \n    drive to KSC	2019-01-02	4	f
-4476	Teach	    \n    	2019-01-06	0	f
-4482	Tools	    	2019-01-07	0	f
+4475	Grow	    4, 2, 3, 2\n    weight: 208.2\n    nap\n    write - Age of Distraction	2019-01-06	2	f
+4477	Tools	    add slide show to UNC app\n    create tests for UNC files, docs, site\n    create issues page and test page\n    Slide Show Presenter\n    simplify view logic	2019-01-06	6	f
+4478	Fun	    GoT, Hawaii 50\n    	2019-01-06	3	f
+4479	People	    time with Stacie\n    visit with Christine, Lucy, Stacie	2019-01-06	3	f
 4467	Grow	    3, 1, 2, 5\n    create summary of 2018 events\n    early morning restlessness\n    worry over career, relationships, and disappointments	2019-01-04	2	f
 4472	Business	    analyze finances from 2018\n    12% decrease in life savings during 2018\n    capture income from tax returns (2010-2018)\n    summary of 2018	2019-01-05	5	f
 4473	Fun	    Outlaw King\n    GoT\n    	2019-01-05	3	f
 4474	People	    Andrew & Rachel\n    Papa Murphy's	2019-01-05	4	f
 4480	Grow	    3, 2, 1, 3\n    weight: 208.4\n    write - Quality Time with God	2019-01-07	1	f
-4481	Teach	    first day of class\n    excellent start to the semester\n    lunch with Moe, Vish, Dan, Mehrgan\n    Lesson 1 - Web Development\n    setup new computer at UNC\n    	2019-01-07	8	f
+4481	UNC	    first day of class\n    excellent start to the semester\n    lunch with Moe, Vish, Dan, Mehrgan\n    Lesson 1 - Web Development\n    setup new computer at UNC\n    	2019-01-07	8	f
 4483	Fun	    Hawaii 50\n    Profit\n    	2019-01-07	3	f
 4484	People	    visit with Stacie, Lucy	2019-01-07	2	f
-4475	Grow	    4, 2, 3, 2\n    weight: 208.2\n    nap\n    write - Age of Distraction	2019-01-06	2	f
-4477	Tools	    add slide show to UNC app\n    create tests for UNC files, docs, site\n    create issues page and test page\n    Slide Show Presenter\n    simplify view logic	2019-01-06	6	f
-4478	Fun	    GoT, Hawaii 50\n    	2019-01-06	3	f
-4479	People	    time with Stacie\n    visit with Christine, Lucy, Stacie	2019-01-06	3	f
 4491	Tools	    update design plans for Sensei Classroom app\n    rename app unc to sensei\n    rebuild database tables\n    create new data models\n    debug data for Course, Student, Lesson\n    automatic list of lessons	2019-01-08	8	f
-4501	Fun	    Beauty and the Beast\n    Avengers Graphic Novel\n    nts 2\n    	2019-01-12	4	f
-4502	People	    lunch with Ben Flebbe (discuss career challenges)\n    demos of training content	2019-01-12	2	f
-4495	Teach	    Project management Ninja\n    build reading score page\n    grade reading assignments\n    create student dashboard page\n    automated reading grader tool\n    links to student domains\n    	2019-01-10	6	f
 4497	Fun	    Windsor library\n    Tom Clancy audio book\n    Avengers graphic novel\n    Miss Congeniality\n    Deep Space 9\n    	2019-01-10	4	f
 4503	Grow	    5, 4, 1, 1\n    weight: 206.6\n    depressing whether\n    rumor about adjuncts\n    self-pity\n    car accident and meth head on way home\n    	2019-01-11	4	f
-4504	Teach	    Lesson 3 - WordPress\n    cleaning (all day at UNC)\n    	2019-01-11	7	f
+4504	UNC	    Lesson 3 - WordPress\n    cleaning (all day at UNC)\n    	2019-01-11	7	f
 4505	Fun	    Hawaii 50\n    Avengers Graphic Novel\n    	2019-01-11	2	f
 4506	People	    dinner with Lucy and Christine\n    called Chris Newby	2019-01-11	1	f
-4452	Grow	    5, 1, 2, 4\n    not feeling good in evening\n    constant back pain	2018-12-31	2	f
 4487	Tools	    Setup UNC Computer\n        Github & Repos\n        Brackets\n        Dev Workflow	2019-01-09	2	f
 4507	Grow	    5, 4, 2, 2\n    weight: 206.6\n    think through career goals\n    make decision to build course in order to get hired as trainer	2019-01-13	2	f
-4508	Teach	    realize limits of UNC\n    	2019-01-13	0	f
+4508	UNC	    realize limits of UNC\n    	2019-01-13	0	f
 4509	Fun	    try to use Marvel subscription\n    	2019-01-13	1	f
 4510	People	    Royal Nepal\n    Rachel & Andrew visit\n    Rachel takes nap	2019-01-13	3	f
 4511	Church	    church service	2019-01-13	4	f
-4513	Teach	    prep lesson 4 - Domains & Servers\n    outline lessons 5,6\n    Alex Schaffer in office hours\n    figure out how to publish WordPress\n    	2019-01-14	7	f
+4452	Grow	    5, 1, 2, 4\n    not feeling good in evening\n    constant back pain	2018-12-31	2	f
+4501	Fun	    Beauty and the Beast\n    Avengers Graphic Novel\n    nts 2\n    	2019-01-12	4	f
+4502	People	    lunch with Ben Flebbe (discuss career challenges)\n    demos of training content	2019-01-12	2	f
+4495	UNC	    Project management Ninja\n    build reading score page\n    grade reading assignments\n    create student dashboard page\n    automated reading grader tool\n    links to student domains\n    	2019-01-10	6	f
+4513	UNC	    prep lesson 4 - Domains & Servers\n    outline lessons 5,6\n    Alex Schaffer in office hours\n    figure out how to publish WordPress\n    	2019-01-14	7	f
 4514	Tools	    remove dead code (9000 lines left)	2019-01-14	2	f
 4515	Fun	    Avengers comic\n    Good Place, Goldbergs, Fraiser, Deep Space 9\n    	2019-01-14	3	f
 4516	People	    Chris Newby no show at Fuzzy's tacos\n    dinner with Lucy & Stacie\n    Rachel comes over for rest\n    Stacie works on Challenges for English Learners	2019-01-14	2	f
 4517	Write	    begin building Seaman's Guide content for courses\n        * Web Dev I,II,III\n        * Teaching Tech\n        * Software Practices\n    build plans for teaching content	2019-01-13	4	f
 4518	Grow	    4, 2, 2, 2\n    weight: 208.6\n    personal review	2019-01-15	1	f
-4519	Teach	    think about teaching at night\n    develop tutorial docs\n        SetupBluehost, SetupFileZilla, WebDev	2019-01-15	2	f
-4522	Tools	    	2019-01-15	0	f
+4519	UNC	    think about teaching at night\n    develop tutorial docs\n        SetupBluehost, SetupFileZilla, WebDev	2019-01-15	2	f
 4520	Write	    plan for developing a career in writing\n    publish Leverage content\n    fix content for BACS 350\n    generalize notes/slides\n   	2019-01-15	5	f
 4521	People	    Follow up - Chris Newby, Greg Brake, Larry Chapman, Todd\n    Christine's birthday - Right Coast Pizza	2019-01-15	4	f
 4523	Fun	    Fraiser, Deep Space 9	2019-01-15	2	f
 4373	Tools	    rebuild web pages with Senei/Documents\n    create new repos for Sensei and Documents-2019\n    Debug MyBook server with Documents-2019	2018-12-13	4	f
-4529	Teach	    \n    	2019-01-17	0	f
 4528	Grow	    5, 3, 2, 2\n    weight: 207.2\n    personal review\n    walk 5,000 steps	2019-01-17	2	f
 4530	Tools	   Who2Hire app SSL \n   renew SSL for MyBook domains\n   work on pipenv context	2019-01-17	2	f
 4531	Fun	    GoT, Avengers\n    	2019-01-17	2	f
 4532	People	    discuss training career strategy with Stacie & Christine\n    meet with Josiah fam\n    discuss Andrew's job change	2019-01-17	4	f
-4539	Teach	    \n    	2019-01-20	0	f
-4540	Write	    	2019-01-20	0	f
-4551	Teach	    \n    	2019-01-21	0	f
-4552	Write	    	2019-01-21	0	f
 4533	Grow	    4, 2, 2, 2\n    weight: 208.2\n    night watch: sadness\n    change smoke detector battery	2019-01-19	1	f
 4534	Tools	    update pipenv settings and testing	2019-01-19	2	f
 4537	Fun	    GoT\n    nts 3\n    Last Kingdom	2019-01-19	7	f
@@ -6976,76 +6880,86 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4550	Church	    write "Applying Truth"\n    write "Mistake or Sin?"	2019-01-21	2	f
 4553	People	    Shrimp Creole with Stacie & Lucy	2019-01-21	1	f
 4554	Fun	    nts 4\n    ER\n    Baking\n    Parts Unknown\n    GoT	2019-01-21	8	f
-4525	Teach	    tell Vish he inspires me\n    Diego Lovato - office hours\n    grade reading, project1, \n    create project2, prep5\n    Lesson 5 - URLs\n    	2019-01-16	8	f
+4525	UNC	    tell Vish he inspires me\n    Diego Lovato - office hours\n    grade reading, project1, \n    create project2, prep5\n    Lesson 5 - URLs\n    	2019-01-16	8	f
 4543	Write	    create new structure for Sensei Courses\n    publish full text of Leverage\n    	2019-01-17	4	f
 4544	Grow	    4, 3, 2, 4\n    weight: 207.6\n    night watch: four colors of pain	2019-01-18	1	f
-4545	Teach	    Lesson 6 - HTML template\n    Alex\n    	2019-01-18	8	f
+4545	UNC	    Lesson 6 - HTML template\n    Alex\n    	2019-01-18	8	f
 4546	Church	    volunteer appreciation dinner	2019-01-18	3	f
 4547	Fun	    GoT, Avengers	2019-01-18	2	f
+4556	Grow	    4, 3, 4, 2\n    weight: 207.2\n    think about Patience\n    think about fruit of the Spirit\n    organize info and write about emotions	2019-01-24	4	f
+4557	UNC	    projects for BACS 200\n    grade Project 2, Review	2019-01-24	2	f
+4558	Write	    add feedback display to Sensei app\n    add scoring to Sensei app	2019-01-24	4	f
 4559	People	    Stacie went to watch Ruby while Rachel shoveled driveway	2019-01-24	0	f
 4560	Fun	    GoT\n    ER, Profit	2019-01-24	3	f
 4561	Grow	    5, 3, 4, 4\n    weight: 208\n    write "Fruitful Night"	2019-01-23	1	f
-4562	Teach	    Lesson 7 - Basic HTML Elements\n    Gosha, Johnny, Heather, Saleh	2019-01-23	7	f
+4562	UNC	    Lesson 7 - Basic HTML Elements\n    Gosha, Johnny, Heather, Saleh	2019-01-23	7	f
 4563	Tools	    SSL expired on all systems\n    mad scramble for config of MyBook server\n    	2019-01-23	1	f
 4564	People	    dinner with Lucy & Stacie & Rachel & Christine	2019-01-23	1	f
 4565	Fun	    GoT\n    This is Us, Enterprise, Baking	2019-01-23	4	f
 4566	Grow	    4, 3, 3, 2\n    weight: 208	2019-01-22	0	f
-4567	Teach	    build design review application for BACS 200\n    	2019-01-22	9	f
+4567	UNC	    build design review application for BACS 200\n    	2019-01-22	9	f
 4568	People	    visit with Lucy & Stacie	2019-01-22	1	f
 4569	Fun	    Resident, Profit\n    Star Gate\n    GoT	2019-01-22	4	f
-4556	Grow	    4, 3, 4, 2\n    weight: 207.2\n    think about Patience\n    think about fruit of the Spirit\n    organize info and write about emotions	2019-01-24	4	f
-4557	Teach	    projects for BACS 200\n    grade Project 2, Review	2019-01-24	2	f
-4558	Write	    add feedback display to Sensei app\n    add scoring to Sensei app	2019-01-24	4	f
+4572	UNC	    Lesson 9 - HTML Templates, Images, Links\n    	2019-01-28	8	f
+4573	People	    Stacie takes Lucy to airport\n    	2019-01-28	0	f
+4574	Fun	    library - look at graphic novels\n    finish Duty & Honor\n    GoT\n    Madam Sec, Voyager\n    Killers	2019-01-28	6	f
+4575	Grow	    4, 1, 4, 2\n    weight: 209.6	2019-01-29	0	f
+4576	UNC	    create URL Crusher\n    	2019-01-29	10	f
+4578	People	    Andrew starting new job\n    Rachel and Ruby 	2019-01-29	2	f
+4579	Fun	    Anthony Bourdain\n    GoT	2019-01-29	2	f
+4580	Grow	    3, 2, 2, 3\n    weight: 208.4\n    woke up at 4:30\n    thinking about business failure\n    create revenue for SWS 2007-2018	2019-01-26	2	f
+4581	Write	    spend day at UNC office\n    setup UNC computer and record steps\n        install git bash\n        install python\n        setup pipenv and dev context\n        install pandoc\n        debug app\n    outline for Python Apps	2019-01-26	8	f
+4582	People	    Andrew & Rachels\n    breakfast at Epic Egg	2019-01-26	2	f
 4583	Fun	    GoT\n    Fraiser, Good Place	2019-01-26	2	f
 4584	Grow	    5, 3, 1, 1\n    weight: 207.2\n    mourning over business	2019-01-25	1	f
-4585	Teach	    Lesson 8 - HTML Workshop\n    11 stragglers on web publishing\n    first round of design reviews graded\n    	2019-01-25	8	f
+4585	UNC	    Lesson 8 - HTML Workshop\n    11 stragglers on web publishing\n    first round of design reviews graded\n    	2019-01-25	8	f
 4586	Business	    debate over accounting of Christine's payment of $20	2019-01-25	1	f
-4577	Write	    	2019-01-29	0	f
 4587	People	    interactions with Stacie	2019-01-25	0	f
 4588	Fun	    GoT\n    Uncle Nino	2019-01-25	4	f
 4589	Grow	    4, 2, 1, 3\n    weight: 208.4\n    nap\n    depression	2019-01-27	2	f
 4590	Write	    build content outline for HTML, PHP, Python	2019-01-27	2	f
 4591	People	    Andrew's last day at Peak View \n    Epic Egg\n    time with Stacie\n    ran into David Haining\n    Lucy's last day in CO\n    Ruby learning to smile	2019-01-27	6	f
 4592	Church	    Rachel D. taught on worship\n    tell Wayne and Lisa about my struggles	2019-01-27	4	f
-4572	Teach	    Lesson 9 - HTML Templates, Images, Links\n    	2019-01-28	8	f
-4573	People	    Stacie takes Lucy to airport\n    	2019-01-28	0	f
-4574	Fun	    library - look at graphic novels\n    finish Duty & Honor\n    GoT\n    Madam Sec, Voyager\n    Killers	2019-01-28	6	f
-4575	Grow	    4, 1, 4, 2\n    weight: 209.6	2019-01-29	0	f
-4576	Teach	    create URL Crusher\n    	2019-01-29	10	f
-4578	People	    Andrew starting new job\n    Rachel and Ruby 	2019-01-29	2	f
-4579	Fun	    Anthony Bourdain\n    GoT	2019-01-29	2	f
-4580	Grow	    3, 2, 2, 3\n    weight: 208.4\n    woke up at 4:30\n    thinking about business failure\n    create revenue for SWS 2007-2018	2019-01-26	2	f
-4581	Write	    spend day at UNC office\n    setup UNC computer and record steps\n        install git bash\n        install python\n        setup pipenv and dev context\n        install pandoc\n        debug app\n    outline for Python Apps	2019-01-26	8	f
-4582	People	    Andrew & Rachels\n    breakfast at Epic Egg	2019-01-26	2	f
-4607	Teach	    \n    	2019-02-02	0	f
-4608	Write	    	2019-02-02	0	f
 4593	Grow	    3, 3, 3, 1\n    weight: 207.6\n    deep depression\n    fitbit broken	2019-01-30	2	f
-4594	Teach	    Lesson 10 - Lists and Tables\n    embarrassing code problems in class \n    training seminar for Learning Theory\n    	2019-01-30	8	f
+4594	UNC	    Lesson 10 - Lists and Tables\n    embarrassing code problems in class \n    training seminar for Learning Theory\n    	2019-01-30	8	f
 4595	People	    Blue Apron dinner\n    hold Ruby	2019-01-30	1	f
 4596	Fun	    Ant Man and Wasp\n    Last Kingdom\n    Avengers GV	2019-01-30	3	f
-4597	Grow	    5, 4, 1, 1\n    weight: 206.4	2019-02-01	0	f
-4598	Teach	    Lesson 11 - Links\n    introduce URL Game to students\n    fix bug with URL Game\n    	2019-02-01	7	f
-4599	People	    discuss business, hopes, and dreams with Stacie\n    lunch with David Haining	2019-02-01	4	f
-4600	Fun	    At First Sight	2019-02-01	3	f
 4601	Grow	    2, 3, 1, 1\n    weight: 207.2\n    wakeful night\n    self-loathing and self-pity\n    mourning over lost years\n    haircut\n    write "Shrinking World - My Story"	2019-01-31	3	f
-4602	Teach	    build URL Game\n    	2019-01-31	4	f
+4602	UNC	    build URL Game\n    	2019-01-31	4	f
 4603	People	    lunch with Greg Brake at Cafe Athens	2019-01-31	3	f
 4604	Fun	    Resident, ER, Fraiser	2019-01-31	4	f
+4597	Grow	    5, 4, 1, 1\n    weight: 206.4	2019-02-01	0	f
+4598	UNC	    Lesson 11 - Links\n    introduce URL Game to students\n    fix bug with URL Game\n    	2019-02-01	7	f
+4599	People	    discuss business, hopes, and dreams with Stacie\n    lunch with David Haining	2019-02-01	4	f
+4600	Fun	    At First Sight	2019-02-01	3	f
 4605	Grow	    5, 3, 4, 4\n    weight: 207.6\n    think about life\n    virtue: Joy	2019-02-02	1	f
 4606	Business	    family finances\n    	2019-02-02	2	f
 4609	People	    time with Stacie\n    discuss money and career\n    discuss visit with Lisa\n    organize garage & christmas lights\n    	2019-02-02	4	f
 4610	Fun	    nts 3\n    Incredibles \n    finish GoT\n    buy things from Amazon (Andrew & household)\n    look at books (Django Design Patterns, Django 2)	2019-02-02	7	f
-4618	Write	    	2019-02-04	0	f
-4494	Grow	    5, 3, 5, 3\n    weight: 208\n    Dr Link	2019-01-10	2	f
 4616	Grow	    4, 3, 4, 3\n    weight: 207.2\n    anxious over class	2019-02-04	1	f
-4617	Teach	    Lesson 12 - Workflow\n    	2019-02-04	7	f
+4617	UNC	    Lesson 12 - Workflow\n    	2019-02-04	7	f
 4619	People	    Stacie meet with Andrew on job search\n    Ruby visit	2019-02-04	2	f
 4620	Fun	    Barnes and Noble\n    buy GoT Graphic Novel\n    Anthony Bourdain\n    Star Trek Discovery	2019-02-04	4	f
 4614	People	    Doug's with Garcias, Christine, Swains	2019-02-03	2	f
 4615	Fun	    Super Bowl\n    Setup CBS All Access\n    Star Trek Discovery	2019-02-03	8	f
 4621	Church	    Super Bowl - Community	2019-02-03	4	f
+4628	Grow	    5, 3, 1, 2\n    weight: 207.6\n    back and knee pain\n    icy drive to UNC\n    ideate	2019-02-06	2	f
+4629	UNC	    Lesson 13 - Test & Debug\n    	2019-02-06	6	f
+4630	Write	    read Django Best Practice	2019-02-06	2	f
+4631	Fun	    Star Trek Discovery	2019-02-06	4	f
+4632	Grow	    5, 1, 1, 1\n    weight: 209.6	2019-02-07	0	f
+4633	Write	    investigate training companies\n    browse contents of Django Packt books\n    export online courses\n    update career strategy\n    learn about python packaging	2019-02-07	5	f
+4634	People	    Josiah family	2019-02-07	1	f
+2408	UNC	\n        decide on parts: HTML/CSS basics, Design, JavaScript\n        prep lecture #7, #8\n        work at library\n        FTP content to server	2017-09-05	8	f
+2434	UNC	\n        homework help\n        lecture #9\n        help with homework after class\n        Zoe's email complaints\n        build homework guide doc\n        copy FTP files to Mac\n        create list of common problems\n        email students with guidance\n        set grades for Quiz #1	2017-09-11	11	f
+2443	UNC	\n        class #10\n        help students after class\n        meet with Merhgan & Charmayne\n        plan new class strategy	2017-09-13	4	f
+3612	UNC	    improve stylesheets used for class notes\n    create outline for first three lessons\n    build views around Learn,Plan,Build,Share	2018-06-22	7	f
+2494	UNC	\n        class prep #15\n        class #15 - exam feedback\n        install apps on podium PC\n        start on Jupyter notebook\n            Teaching BACS 200 \n            Web Dev\n        develop Web Dev notebook\n        create templates for page-layout \n            1-col\n            2-col\n            3-col\n            side-menu\n            top-menu	2017-09-25	11	f
+3915	UNC	    breakfast with Moe\n    350 Lesson 6 - Database connection basic operations\n    200 Lesson 6 - Reading URLs\n    Chris Newby - graduation requirements\n    350 - Class conflict with Registrar office\n    discuss university conflicts with Stacie, Andrew, and Rachel\n    	2018-08-31	8	f
+4636	Fun	    	2019-02-07	0	f
+4494	Grow	    5, 3, 5, 3\n    weight: 208\n    Dr Link	2019-01-10	2	f
 4622	Grow	    5, 3, 1, 1\n    weight: 207.6   \n    organize goals and objectives	2019-02-05	2	f
-4623	Teach	    schedule for BACS 200 topics \n   	2019-02-05	2	f
+4623	UNC	    schedule for BACS 200 topics \n   	2019-02-05	2	f
 4624	Write	    buy Django Best Practice\n    think about writing for Packt	2019-02-05	2	f
 4627	Tools	    cancel SendGrid\n    debug cron	2019-02-05	2	f
 4625	People	    lunch at Stuft Burger with Stacie	2019-02-05	2	f
@@ -7057,7 +6971,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 -- Name: tasks_task_id_seq; Type: SEQUENCE SET; Schema: public; Owner: django
 --
 
-SELECT pg_catalog.setval('public.tasks_task_id_seq', 4627, true);
+SELECT pg_catalog.setval('public.tasks_task_id_seq', 4636, true);
 
 
 --
@@ -7099,18 +7013,17 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 23	church-list	28, Greeley Vineyard, 2017-01-28, 2, 2, 4, 1\n29, Greeley Vineyard, 2017-02-04, 5, 2, 2, 1\n30, Greeley Vineyard, 2017-02-11, 4, 1, 4, 2\n31, Greeley Vineyard, 2017-02-18, 2, 1, 4, 1\n32, Greeley Vineyard, 2017-02-25, 1, 1, 5, 1\n33, Greeley Vineyard, 2017-03-04, 1, 1, 5, 1\n34, Greeley Vineyard, 2017-03-11, 1, 1, 5, 1\n35, Greeley Vineyard, 2017-03-18, 1, 1, 5, 1\n36, Greeley Vineyard, 2017-03-25, 1, 1, 5, 1\n37, Greeley Vineyard, 2017-04-01, 1, 1, 2, 1\n38, Greeley Vineyard, 2017-04-08, 1, 1, 5, 1\n39, Greeley Vineyard, 2017-04-15, 0, 0, 0, 0\n40, Greeley Vineyard, 2017-04-22, 0, 0, 0, 0\n41, Greeley Vineyard, 2017-04-29, 0, 0, 0, 0\n42, Greeley Vineyard, 2017-05-06, 0, 0, 0, 0\n43, Greeley Vineyard, 2017-05-13, 0, 0, 0, 0\n44, Greeley Vineyard, 2017-05-20, 0, 0, 0, 0\n45, Greeley Vineyard, 2017-05-27, 0, 0, 0, 0\n7, Greeley Vineyard, 2016-10-08, 2, 1, 3, 5\n8, Greeley Vineyard, 2016-10-15, 2, 5, 3, 5\n9, Greeley Vineyard, 2016-10-22, 2, 1, 3, 5\n10, Greeley Vineyard, 2016-10-29, 2, 1, 1, 1\n11, Greeley Vineyard, 2016-11-05, 5, 1, 2, 1\n12, Greeley Vineyard, 2016-11-12, 5, 1, 3, 1\n13, Greeley Vineyard, 2016-11-19, 3, 5, 3, 4\n15, Greeley Vineyard, 2016-11-26, 3, 5, 4, 1\n16, Greeley Vineyard, 2016-12-03, 2, 1, 4, 4\n21, Greeley Vineyard, 2016-12-10, 4, 1, 4, 3\n22, Greeley Vineyard, 2016-12-17, 1, 5, 4, 5\n23, Greeley Vineyard, 2016-12-24, 5, 5, 4, 3\n24, Greeley Vineyard, 2016-12-31, 4, 5, 4, 2\n25, Greeley Vineyard, 2017-01-07, 4, 5, 3, 1\n26, Greeley Vineyard, 2017-01-14, 3, 5, 5, 2\n27, Greeley Vineyard, 2017-01-21, 4, 1, 5, 2\n	28, Greeley Vineyard, 2017-01-28, 2, 2, 4, 1\n29, Greeley Vineyard, 2017-02-04, 5, 2, 2, 1\n30, Greeley Vineyard, 2017-02-11, 4, 1, 4, 2\n31, Greeley Vineyard, 2017-02-18, 2, 1, 4, 1\n32, Greeley Vineyard, 2017-02-25, 1, 1, 5, 1\n33, Greeley Vineyard, 2017-03-04, 1, 1, 5, 1\n34, Greeley Vineyard, 2017-03-11, 1, 1, 5, 1\n35, Greeley Vineyard, 2017-03-18, 1, 1, 5, 1\n36, Greeley Vineyard, 2017-03-25, 1, 1, 5, 1\n37, Greeley Vineyard, 2017-04-01, 1, 1, 2, 1\n38, Greeley Vineyard, 2017-04-08, 1, 1, 5, 1\n39, Greeley Vineyard, 2017-04-15, 0, 0, 0, 0\n40, Greeley Vineyard, 2017-04-22, 0, 0, 0, 0\n41, Greeley Vineyard, 2017-04-29, 0, 0, 0, 0\n42, Greeley Vineyard, 2017-05-06, 0, 0, 0, 0\n43, Greeley Vineyard, 2017-05-13, 0, 0, 0, 0\n44, Greeley Vineyard, 2017-05-20, 0, 0, 0, 0\n45, Greeley Vineyard, 2017-05-27, 0, 0, 0, 0\n7, Greeley Vineyard, 2016-10-08, 2, 1, 3, 5\n8, Greeley Vineyard, 2016-10-15, 2, 5, 3, 5\n9, Greeley Vineyard, 2016-10-22, 2, 1, 3, 5\n10, Greeley Vineyard, 2016-10-29, 2, 1, 1, 1\n11, Greeley Vineyard, 2016-11-05, 5, 1, 2, 1\n12, Greeley Vineyard, 2016-11-12, 5, 1, 3, 1\n13, Greeley Vineyard, 2016-11-19, 3, 5, 3, 4\n15, Greeley Vineyard, 2016-11-26, 3, 5, 4, 1\n16, Greeley Vineyard, 2016-12-03, 2, 1, 4, 4\n21, Greeley Vineyard, 2016-12-10, 4, 1, 4, 3\n22, Greeley Vineyard, 2016-12-17, 1, 5, 4, 5\n23, Greeley Vineyard, 2016-12-24, 5, 5, 4, 3\n24, Greeley Vineyard, 2016-12-31, 4, 5, 4, 2\n25, Greeley Vineyard, 2017-01-07, 4, 5, 3, 1\n26, Greeley Vineyard, 2017-01-14, 3, 5, 5, 2\n27, Greeley Vineyard, 2017-01-21, 4, 1, 5, 2\n
 94	doc-status	On branch master\nYour branch is up-to-date with 'origin/master'.\nnothing to commit, working directory clean\n	On branch master\nYour branch is up-to-date with 'origin/master'.\nnothing to commit, working directory clean\n
 135	booknotes-show	shell(x booknotes show) --> 12 lines (should be between 20 and 30)	shell(x booknotes show) --> 12 lines (should be between 20 and 30)
-11	app-classes	bin/__init__.py\n    \nbin/app.py\n    \nbin/booknotes.py\n    \nbin/chapter.py\n    \nbin/data.py\n    \nbin/days.py\n    \nbin/diagrams.py\n    \nbin/doc.py\n    \nbin/files.py\n    \nbin/hourly.py\n    \nbin/hours.py\n    \nbin/i.py\n    \nbin/life.py\n    \nbin/log.py\n    \nbin/music.py\n    \nbin/n.py\n    \nbin/ntsh.py\n    \nbin/ops.py\n    \nbin/resize.py\n    \nbin/shell.py\n    \nbin/switches.py\n    \nbin/text.py\n        pattern = r'class (.*)\\(.*\\)'\nbin/todo.py\n    \nbin/tool.py\n    \nbin/user.py\n    \nbin/vc.py\n    \nbin/web.py\n    \nbin/wordpress.py\n    \nbin/x.py\n    \nhammer/__init__.py\n    \nhammer/secret_settings.py\n    \nhammer/settings.py\n    \nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    class HealthConfig(AppConfig):\nhealth/health.py\n    \nhealth/models.py\n    class HealthScore(models.Model):\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    class HealthView(TemplateView):\n    class HealthList(ListView):\n    class HealthEdit(UpdateView):\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    class LifeConfig(AppConfig):\nlife/life.py\n    \nlife/models.py\n    class Year(models.Model):\n    class Aspect(models.Model):\n    class Experience(models.Model):\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n    class LifeView(TemplateView):\n    class ExperienceView(ListView):\n    class YearView(ListView):\n    class LifeAdd(LoginRequiredMixin, RedirectView):\n    class LifeEdit(UpdateView):\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    class MybookConfig(AppConfig):\nmybook/models.py\n    class Author(models.Model):\n    class Book(models.Model):\nmybook/mybook.py\n    \nmybook/mybook_views.py\n    class MyBookDocDisplay(TemplateView):\n    class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):\n    class BookNotes(MyBookDocDisplay):\n    class CardView(MyBookDocDisplay):\n    class OutlineView(MyBookDocDisplay):\n    class DailyTask(RedirectView):\n    # class SeamansLog(MyBookDocDisplay):\n    class SeamansLog(RedirectView):\n    class SpiritualSelect(RedirectView):\n    class TabsView(MyBookDocDisplay):\nmybook/outline.py\n    \nmybook/task.py\n    \nmybook/tests.py\n    \nmybook/urls.py\n    \nsensei/__init__.py\n    \nsensei/admin.py\n    \nsensei/apps.py\n    class SenseiConfig(AppConfig):\nsensei/fix.py\n    \nsensei/models.py\n    class Course(models.Model):\n    class Student(models.Model):\n    class Lesson(models.Model):\n    class Requirements(models.Model):\n    class Review(models.Model):\n    class UrlGame(models.Model):\nsensei/review.py\n    \nsensei/sensei.py\n    \nsensei/student.py\n    \nsensei/tests.py\n    \nsensei/urlgame.py\n    \nsensei/urls.py\n    \nsensei/views.py\n    class GuideDoc(TemplateView):\n    class UncDocDisplay(TemplateView):\n    class UncEditReview(UpdateView):\n    class UncReviewFeedback(TemplateView):\n    class UncReading(TemplateView):\n    class UncRegister(FormView):\n        class EditDocForm(Form):\n    class UncRegistered(ListView):\n    class UncReviews(TemplateView):\n    class UncSchedule(TemplateView):\n    class UncSlidesDisplay(TemplateView):\n    class UncStudent(TemplateView):\n    class UncUrlGameAnswer(FormView):\n        class UrlForm(Form):\n    class UncUrlGameQuestion(TemplateView):\n    class UncUrlGameDone(TemplateView):\nsuperuser/__init__.py\n    \nsuperuser/admin.py\n    \nsuperuser/admin_views.py\n    class AdminView(UserPassesTestMixin, TemplateView):\n    class DatabaseView(UserPassesTestMixin, TemplateView):\n    class DocView(UserPassesTestMixin, TemplateView):\n    class LogView(UserPassesTestMixin, TemplateView):\n    class MaterialView(TemplateView):\n    class SurrogateView(UserPassesTestMixin, TemplateView):\n    class TestView(UserPassesTestMixin, ListView):\n    class UsersView(UserPassesTestMixin, ListView):\nsuperuser/apps.py\n    class AdminConfig(AppConfig):\nsuperuser/initialize.py\n    \nsuperuser/models.py\n    class Administrator(models.Model):\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n    class Task (models.Model):\ntasks/summary.py\n    \ntasks/task.py\n    \ntasks/urls.py\n    \ntasks/views.py\n    class TaskBase(LoginRequiredMixin, ContextMixin):\n    class TaskDelete(DeleteView):\n    class TaskDetail(DetailView):\n    class TaskCreate(CreateView):\n    class TaskUpdate(TaskBase, UpdateView):\n    class TaskHome(TaskBase, TemplateView):\n    class TaskList(TaskBase, ListView):\n    class MyTime(TaskBase, TemplateView):\n    class TimeSummary(TaskBase, TemplateView):\n    class MissingDays(TaskBase, TemplateView):\n    class TaskImport(RedirectView):\n    class TaskExport(TaskBase, TemplateView):\ntest/__init__.py\n    \ntest/app_test.py\n    \ntest/archive_test.py\n    \ntest/booknotes_test.py\n    \ntest/css_test.py\n    \ntest/data_test.py\n    \ntest/doc_test.py\n    \ntest/health_test.py\n    \ntest/hourly_test.py\n    \ntest/i_test.py\n    \ntest/log_test.py\n    \ntest/ops_test.py\n    \ntest/page_test.py\n    \ntest/robot_test.py\n    \ntest/system_test.py\n    \ntest/text_test.py\n    \ntest/tst_test.py\n    \ntest/unc_test.py\n    \ntest/user_test.py\n    \ntest/vc_test.py\n    \ntest/wordpress_test.py\n    \ntool/__init__.py\n    \ntool/document.py\n    \ntool/domain.py\n    \ntool/email.py\n    \ntool/log.py\n    \ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n    class Command(BaseCommand):\ntool/models.py\n    class Test(models.Model):\n    class Page(models.Model):\ntool/notify.py\n    \ntool/page.py\n    \ntool/project.py\n    class ProjectList(ListView):\n    class ProjectDetail(DetailView):\n    class ProjectCreate(CreateView):\n    class ProjectUpdate(UpdateView):\n    class ProjectDelete(DeleteView):\ntool/robot.py\n    \ntool/tst.py\n    \ntool/urls.py\n    \ntool/user.py\n    \ntool/user_views.py\n    class UserList(ListView):\n    class UserCreate(CreateView):\n    class UserDetail(DetailView):\n    class UserEdit(UpdateView):\n    class UserDelete(DeleteView):\n	bin/__init__.py\n    \nbin/app.py\n    \nbin/booknotes.py\n    \nbin/chapter.py\n    \nbin/data.py\n    \nbin/days.py\n    \nbin/diagrams.py\n    \nbin/doc.py\n    \nbin/files.py\n    \nbin/hourly.py\n    \nbin/hours.py\n    \nbin/i.py\n    \nbin/life.py\n    \nbin/log.py\n    \nbin/music.py\n    \nbin/n.py\n    \nbin/ntsh.py\n    \nbin/ops.py\n    \nbin/resize.py\n    \nbin/shell.py\n    \nbin/switches.py\n    \nbin/text.py\n        pattern = r'class (.*)\\(.*\\)'\nbin/todo.py\n    \nbin/tool.py\n    \nbin/user.py\n    \nbin/vc.py\n    \nbin/web.py\n    \nbin/wordpress.py\n    \nbin/x.py\n    \nhammer/__init__.py\n    \nhammer/secret_settings.py\n    \nhammer/settings.py\n    \nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    class HealthConfig(AppConfig):\nhealth/health.py\n    \nhealth/models.py\n    class HealthScore(models.Model):\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    class HealthView(TemplateView):\n    class HealthList(ListView):\n    class HealthEdit(UpdateView):\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    class LifeConfig(AppConfig):\nlife/life.py\n    \nlife/models.py\n    class Year(models.Model):\n    class Aspect(models.Model):\n    class Experience(models.Model):\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n    class LifeView(TemplateView):\n    class ExperienceView(ListView):\n    class YearView(ListView):\n    class LifeAdd(LoginRequiredMixin, RedirectView):\n    class LifeEdit(UpdateView):\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    class MybookConfig(AppConfig):\nmybook/models.py\n    class Author(models.Model):\n    class Book(models.Model):\nmybook/mybook.py\n    \nmybook/mybook_views.py\n    class MyBookDocDisplay(TemplateView):\n    class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):\n    class BookNotes(MyBookDocDisplay):\n    class CardView(MyBookDocDisplay):\n    class OutlineView(MyBookDocDisplay):\n    class DailyTask(RedirectView):\n    # class SeamansLog(MyBookDocDisplay):\n    class SeamansLog(RedirectView):\n    class SpiritualSelect(RedirectView):\n    class TabsView(MyBookDocDisplay):\nmybook/outline.py\n    \nmybook/task.py\n    \nmybook/tests.py\n    \nmybook/urls.py\n    \nsensei/__init__.py\n    \nsensei/admin.py\n    \nsensei/apps.py\n    class SenseiConfig(AppConfig):\nsensei/fix.py\n    \nsensei/models.py\n    class Course(models.Model):\n    class Student(models.Model):\n    class Lesson(models.Model):\n    class Requirements(models.Model):\n    class Review(models.Model):\n    class UrlGame(models.Model):\nsensei/review.py\n    \nsensei/sensei.py\n    \nsensei/student.py\n    \nsensei/tests.py\n    \nsensei/urlgame.py\n    \nsensei/urls.py\n    \nsensei/views.py\n    class GuideDoc(TemplateView):\n    class UncDocDisplay(TemplateView):\n    class UncEditReview(UpdateView):\n    class UncReviewFeedback(TemplateView):\n    class UncReading(TemplateView):\n    class UncRegister(FormView):\n        class EditDocForm(Form):\n    class UncRegistered(ListView):\n    class UncReviews(TemplateView):\n    class UncSlidesDisplay(TemplateView):\n    class UncStudent(TemplateView):\n    class UncUrlGameAnswer(FormView):\n        class UrlForm(Form):\n    class UncUrlGameQuestion(TemplateView):\n    class UncUrlGameDone(TemplateView):\nsuperuser/__init__.py\n    \nsuperuser/admin.py\n    \nsuperuser/admin_views.py\n    class AdminView(UserPassesTestMixin, TemplateView):\n    class DatabaseView(UserPassesTestMixin, TemplateView):\n    class DocView(UserPassesTestMixin, TemplateView):\n    class LogView(UserPassesTestMixin, TemplateView):\n    class MaterialView(TemplateView):\n    class SurrogateView(UserPassesTestMixin, TemplateView):\n    class TestView(UserPassesTestMixin, ListView):\n    class UsersView(UserPassesTestMixin, ListView):\nsuperuser/apps.py\n    class AdminConfig(AppConfig):\nsuperuser/initialize.py\n    \nsuperuser/models.py\n    class Administrator(models.Model):\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n    class Task (models.Model):\ntasks/summary.py\n    \ntasks/task.py\n    \ntasks/urls.py\n    \ntasks/views.py\n    class TaskBase(LoginRequiredMixin, ContextMixin):\n    class TaskDelete(DeleteView):\n    class TaskDetail(DetailView):\n    class TaskCreate(CreateView):\n    class TaskUpdate(TaskBase, UpdateView):\n    class TaskHome(TaskBase, TemplateView):\n    class TaskList(TaskBase, ListView):\n    class MyTime(TaskBase, TemplateView):\n    class TimeSummary(TaskBase, TemplateView):\n    class MissingDays(TaskBase, TemplateView):\n    class TaskImport(RedirectView):\n    class TaskExport(TaskBase, TemplateView):\ntest/__init__.py\n    \ntest/app_test.py\n    \ntest/archive_test.py\n    \ntest/booknotes_test.py\n    \ntest/css_test.py\n    \ntest/data_test.py\n    \ntest/doc_test.py\n    \ntest/health_test.py\n    \ntest/hourly_test.py\n    \ntest/i_test.py\n    \ntest/log_test.py\n    \ntest/ops_test.py\n    \ntest/page_test.py\n    \ntest/robot_test.py\n    \ntest/system_test.py\n    \ntest/text_test.py\n    \ntest/tst_test.py\n    \ntest/unc_test.py\n    \ntest/user_test.py\n    \ntest/vc_test.py\n    \ntest/wordpress_test.py\n    \ntool/__init__.py\n    \ntool/document.py\n    \ntool/domain.py\n    \ntool/email.py\n    \ntool/log.py\n    \ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n    class Command(BaseCommand):\ntool/models.py\n    class Test(models.Model):\n    class Page(models.Model):\ntool/notify.py\n    \ntool/page.py\n    \ntool/project.py\n    class ProjectList(ListView):\n    class ProjectDetail(DetailView):\n    class ProjectCreate(CreateView):\n    class ProjectUpdate(UpdateView):\n    class ProjectDelete(DeleteView):\ntool/robot.py\n    \ntool/tst.py\n    \ntool/urls.py\n    \ntool/user.py\n    \ntool/user_views.py\n    class UserList(ListView):\n    class UserCreate(CreateView):\n    class UserDetail(DetailView):\n    class UserEdit(UpdateView):\n    class UserDelete(DeleteView):\n
 61	reuse-list	Tester\nNotes\nBook\nTechnology\nFrontEnd\nTest\nIndex\nPlanner\nApp\nHammerPrinciple\nScript\nContents\nBackEnd\nArchitecture\nPhotos\nTricks\n	Tester\nNotes\nBook\nTechnology\nFrontEnd\nTest\nIndex\nPlanner\nApp\nHammerPrinciple\nScript\nContents\nBackEnd\nArchitecture\nPhotos\nTricks\n
-178	page-sites	OK - https://markseaman.info\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nOK - https://app.who2hire.us/admin	OK - https://markseaman.info\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nOK - https://app.who2hire.us/admin
 139	thot-show	no output	no output
+178	page-sites	OK - https://markseaman.info\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nOK - https://app.who2hire.us/admin	OK - https://markseaman.info\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nOK - https://app.who2hire.us/admin
 91	doc-score	\nDoc Summary                       Files       Lines        Words\n\n    Documents                      1333       90603        477 K\n	\nDoc Summary                       Files       Lines        Words\n\n    Documents                      1333       90603        477 K\n
 141	mybook-menu-booknotes	('/brain', 'zmdi-library', 'Exterior Brain', None)\n('/booknotes', 'zmdi-home', 'Book Notes', 'class=active')	('/brain', 'zmdi-library', 'Exterior Brain', None)\n('/booknotes', 'zmdi-home', 'Book Notes', 'class=active')
 36	author-score	  10 - capture\n  40 - draft\n  90 - refine\n 160 - share\n 300 Total\n	  10 - capture\n  40 - draft\n  90 - refine\n 160 - share\n 300 Total\n
-136	booknotes-lines	shell(x booknotes content) --> 2711 lines (should be between 1500 and 1600)	shell(x booknotes content) --> 2711 lines (should be between 1500 and 1600)
 146	mybook-menu-software	('/software', 'zmdi-home', 'World Class Software', 'class=active')\n('/software/Leverage', 'zmdi-key', 'Leverage Principle', None)\n('/software/BestPractice', 'zmdi-face', 'Best Practice', None)	('/software', 'zmdi-home', 'World Class Software', 'class=active')\n('/software/Leverage', 'zmdi-key', 'Leverage Principle', None)\n('/software/BestPractice', 'zmdi-face', 'Best Practice', None)
+136	booknotes-lines	shell(x booknotes content) --> 2711 lines (should be between 1500 and 1600)	shell(x booknotes content) --> 2711 lines (should be between 1500 and 1600)
+75	opc-show	shell(x opc show) --> 42 lines (should be between 2200 and 2500)	shell(x opc show) --> 42 lines (should be between 2200 and 2500)
 115	page-list	shell(x page list) --> 2 lines (should be between 18 and 30)	shell(x page list) --> 2 lines (should be between 18 and 30)
 173	text-anchors	[('http://example.com', 'More Examples'), ('http://example2.com', 'Even More Examples')]	[('http://example.com', 'More Examples'), ('http://example2.com', 'Even More Examples')]
-75	opc-show	shell(x opc show) --> 42 lines (should be between 2200 and 2500)	shell(x opc show) --> 42 lines (should be between 2200 and 2500)
 174	text-div	<p></p>	<p></p>
 166	text-findall	### fix\n### test\n### extend\n### improve	### fix\n### test\n### extend\n### improve
 168	text-links	[('http://example.com', 'More Examples'), ('http://example2.com', 'Even More Examples')]	[('http://example.com', 'More Examples'), ('http://example2.com', 'Even More Examples')]
@@ -7118,65 +7031,66 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 154	archive-dirs	dirs(/home/django/Archive/MyBook-2017) --> 1 dirs (should be between 504 and 507)\ndirs(/home/django/Archive/Documents-2017) --> 1 dirs (should be between 108 and 108)\ndirs(/home/django/Archive/Documents-2016) --> 1 dirs (should be between 88 and 88)\ndirs(/home/django/Archive/Documents-2015) --> 1 dirs (should be between 250 and 250)\ndirs(/home/django/Archive/Documents-2014) --> 1 dirs (should be between 947 and 947)\ndirs(/home/django/Archive/UNC-2017) --> 1 dirs (should be between 3643 and 3645)\ndirs(/home/django/Archive/rcp) --> 1 dirs (should be between 800 and 960)\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\nPWD = /home/django/MyBook\n	dirs(/home/django/Archive/MyBook-2017) --> 1 dirs (should be between 504 and 507)\ndirs(/home/django/Archive/Documents-2017) --> 1 dirs (should be between 108 and 108)\ndirs(/home/django/Archive/Documents-2016) --> 1 dirs (should be between 88 and 88)\ndirs(/home/django/Archive/Documents-2015) --> 1 dirs (should be between 250 and 250)\ndirs(/home/django/Archive/Documents-2014) --> 1 dirs (should be between 947 and 947)\ndirs(/home/django/Archive/UNC-2017) --> 1 dirs (should be between 3643 and 3645)\ndirs(/home/django/Archive/rcp) --> 1 dirs (should be between 800 and 960)\n
 120	software-summary	    software                         68        5366         35 K\n	    software                         68        5366         35 K\n
 163	mybook-redirect	OK\nRedirect ('mybookonline.org', 'xxx', ''):  Expected: /mybook/xxx, Got: /missing/xxx\nOK\nRedirect ('mybookonline.org', 'mybook/Index', ''):  Expected: None, Got: /missing/mybook/Index\nOK\nOK\nOK\nRedirect ('mybookonline.org', 'brain', ''):  Expected: /mybook/brain, Got: /missing/brain\nRedirect ('exteriorbrain.org', 'brain', ''):  Expected: /brain/Index, Got: /missing/brain\nRedirect ('seamansguide.com', 'guide', ''):  Expected: /guide/Index, Got: None\nOK\nOK\nOK	OK\nRedirect ('mybookonline.org', 'xxx', ''):  Expected: /mybook/xxx, Got: /missing/xxx\nOK\nRedirect ('mybookonline.org', 'mybook/Index', ''):  Expected: None, Got: /missing/mybook/Index\nOK\nOK\nOK\nRedirect ('mybookonline.org', 'brain', ''):  Expected: /mybook/brain, Got: /missing/brain\nRedirect ('exteriorbrain.org', 'brain', ''):  Expected: /brain/Index, Got: /missing/brain\nRedirect ('seamansguide.com', 'guide', ''):  Expected: /guide/Index, Got: None\nOK\nOK\nOK
-40	system-host	Hostname: MyBook	Hostname: MyBook
 105	project-template	{% extends "tool_theme.html" %}\n\n{% block page_content %}\n\n    <div class="card">\n        <div class="card-header">\n            <a href="/project/">\n                <h2>Project Demo\n                    <small>Showcase for Projects</small>\n                </h2>\n            </a>\n\n            <p class="actions"> PROJECT DEMO </p>\n        </div>\n        <div class="card-body card-padding">\n\n            <div class="card" style="border: 2px solid teal; border-radius: 20px">\n\n                {% block topic_content %}\n                {% endblock %}\n\n            </div>\n\n        </div>\n    </div>\n\n{% endblock %}	{% extends "tool_theme.html" %}\n\n{% block page_content %}\n\n    <div class="card">\n        <div class="card-header">\n            <a href="/project/">\n                <h2>Project Demo\n                    <small>Showcase for Projects</small>\n                </h2>\n            </a>\n\n            <p class="actions"> PROJECT DEMO </p>\n        </div>\n        <div class="card-body card-padding">\n\n            <div class="card" style="border: 2px solid teal; border-radius: 20px">\n\n                {% block topic_content %}\n                {% endblock %}\n\n            </div>\n\n        </div>\n    </div>\n\n{% endblock %}
-14	app-list	bin/__init__.py\nbin/app.py\nbin/booknotes.py\nbin/chapter.py\nbin/data.py\nbin/days.py\nbin/diagrams.py\nbin/doc.py\nbin/files.py\nbin/hourly.py\nbin/hours.py\nbin/i.py\nbin/life.py\nbin/log.py\nbin/music.py\nbin/n.py\nbin/ntsh.py\nbin/ops.py\nbin/resize.py\nbin/shell.py\nbin/switches.py\nbin/text.py\nbin/todo.py\nbin/tool.py\nbin/user.py\nbin/vc.py\nbin/web.py\nbin/wordpress.py\nbin/x.py\nhammer/__init__.py\nhammer/secret_settings.py\nhammer/settings.py\nhammer/urls.py\nhammer/wsgi.py\nhealth/__init__.py\nhealth/admin.py\nhealth/apps.py\nhealth/health.py\nhealth/models.py\nhealth/tests.py\nhealth/urls.py\nhealth/views.py\nlife/__init__.py\nlife/admin.py\nlife/apps.py\nlife/life.py\nlife/models.py\nlife/tests.py\nlife/urls.py\nlife/views.py\nmybook/__init__.py\nmybook/admin.py\nmybook/apps.py\nmybook/models.py\nmybook/mybook.py\nmybook/mybook_views.py\nmybook/outline.py\nmybook/task.py\nmybook/tests.py\nmybook/urls.py\nsensei/__init__.py\nsensei/admin.py\nsensei/apps.py\nsensei/fix.py\nsensei/models.py\nsensei/review.py\nsensei/sensei.py\nsensei/student.py\nsensei/tests.py\nsensei/urlgame.py\nsensei/urls.py\nsensei/views.py\nsuperuser/__init__.py\nsuperuser/admin.py\nsuperuser/admin_views.py\nsuperuser/apps.py\nsuperuser/initialize.py\nsuperuser/models.py\nsuperuser/tests.py\nsuperuser/urls.py\ntasks/__init__.py\ntasks/models.py\ntasks/summary.py\ntasks/task.py\ntasks/urls.py\ntasks/views.py\ntest/__init__.py\ntest/app_test.py\ntest/archive_test.py\ntest/booknotes_test.py\ntest/css_test.py\ntest/data_test.py\ntest/doc_test.py\ntest/health_test.py\ntest/hourly_test.py\ntest/i_test.py\ntest/log_test.py\ntest/ops_test.py\ntest/page_test.py\ntest/robot_test.py\ntest/system_test.py\ntest/text_test.py\ntest/tst_test.py\ntest/unc_test.py\ntest/user_test.py\ntest/vc_test.py\ntest/wordpress_test.py\ntool/__init__.py\ntool/document.py\ntool/domain.py\ntool/email.py\ntool/log.py\ntool/management/__init__.py\ntool/management/commands/__init__.py\ntool/management/commands/scriptor.py\ntool/models.py\ntool/notify.py\ntool/page.py\ntool/project.py\ntool/robot.py\ntool/tst.py\ntool/urls.py\ntool/user.py\ntool/user_views.py\n	bin/__init__.py\nbin/app.py\nbin/booknotes.py\nbin/chapter.py\nbin/data.py\nbin/days.py\nbin/diagrams.py\nbin/doc.py\nbin/files.py\nbin/hourly.py\nbin/hours.py\nbin/i.py\nbin/life.py\nbin/log.py\nbin/music.py\nbin/n.py\nbin/ntsh.py\nbin/ops.py\nbin/resize.py\nbin/shell.py\nbin/switches.py\nbin/text.py\nbin/todo.py\nbin/tool.py\nbin/user.py\nbin/vc.py\nbin/web.py\nbin/wordpress.py\nbin/x.py\nhammer/__init__.py\nhammer/secret_settings.py\nhammer/settings.py\nhammer/urls.py\nhammer/wsgi.py\nhealth/__init__.py\nhealth/admin.py\nhealth/apps.py\nhealth/health.py\nhealth/models.py\nhealth/tests.py\nhealth/urls.py\nhealth/views.py\nlife/__init__.py\nlife/admin.py\nlife/apps.py\nlife/life.py\nlife/models.py\nlife/tests.py\nlife/urls.py\nlife/views.py\nmybook/__init__.py\nmybook/admin.py\nmybook/apps.py\nmybook/models.py\nmybook/mybook.py\nmybook/mybook_views.py\nmybook/outline.py\nmybook/task.py\nmybook/tests.py\nmybook/urls.py\nsensei/__init__.py\nsensei/admin.py\nsensei/apps.py\nsensei/fix.py\nsensei/models.py\nsensei/review.py\nsensei/sensei.py\nsensei/student.py\nsensei/tests.py\nsensei/urlgame.py\nsensei/urls.py\nsensei/views.py\nsuperuser/__init__.py\nsuperuser/admin.py\nsuperuser/admin_views.py\nsuperuser/apps.py\nsuperuser/initialize.py\nsuperuser/models.py\nsuperuser/tests.py\nsuperuser/urls.py\ntasks/__init__.py\ntasks/models.py\ntasks/summary.py\ntasks/task.py\ntasks/urls.py\ntasks/views.py\ntest/__init__.py\ntest/app_test.py\ntest/archive_test.py\ntest/booknotes_test.py\ntest/css_test.py\ntest/data_test.py\ntest/doc_test.py\ntest/health_test.py\ntest/hourly_test.py\ntest/i_test.py\ntest/log_test.py\ntest/ops_test.py\ntest/page_test.py\ntest/robot_test.py\ntest/system_test.py\ntest/text_test.py\ntest/tst_test.py\ntest/unc_test.py\ntest/user_test.py\ntest/vc_test.py\ntest/wordpress_test.py\ntool/__init__.py\ntool/document.py\ntool/domain.py\ntool/email.py\ntool/log.py\ntool/management/__init__.py\ntool/management/commands/__init__.py\ntool/management/commands/scriptor.py\ntool/models.py\ntool/notify.py\ntool/page.py\ntool/project.py\ntool/robot.py\ntool/tst.py\ntool/urls.py\ntool/user.py\ntool/user_views.py\n
+40	system-host	Hostname: MyBook	Hostname: MyBook
 84	task-week	no output	no output
 85	task-work	no output	no output
 49	seamanslog-summary	    seamanslog                       51        1897         17 K\n\n	    seamanslog                       51        1897         17 K\n\n
 103	project-import	\n\n        script to manage projects on servers\n\n        usage: x project command\n\n        command\n\n        List:\n            list                - list the configured project\n            get   name          - get a project by name lookup\n\n        Modify:\n            add     name user   - add a new project record\n            delete  name        - remove this project\n            edit    name value  - rename the project\n\n        I/O \n            import              - import all records from a file \n            export              - export all records to a file \n\n        \n	\n\n        script to manage projects on servers\n\n        usage: x project command\n\n        command\n\n        List:\n            list                - list the configured project\n            get   name          - get a project by name lookup\n\n        Modify:\n            add     name user   - add a new project record\n            delete  name        - remove this project\n            edit    name value  - rename the project\n\n        I/O \n            import              - import all records from a file \n            export              - export all records to a file \n\n        \n
-144	mybook-menu-list	Documents/Menu\nDocuments/info/Menu\nDocuments/aspire/Menu\nDocuments/seamanslog/Menu\nDocuments/Leverage/Menu\nDocuments/spiritual/Menu\nDocuments/MarkSeaman/Menu\nDocuments/guide/Teaching/Menu\nDocuments/guide/Menu\nDocuments/guide/HtmlApps/Menu\nDocuments/guide/PhpApps/Menu	Documents/Menu\nDocuments/info/Menu\nDocuments/aspire/Menu\nDocuments/seamanslog/Menu\nDocuments/Leverage/Menu\nDocuments/spiritual/Menu\nDocuments/MarkSeaman/Menu\nDocuments/guide/Teaching/Menu\nDocuments/guide/Menu\nDocuments/guide/HtmlApps/Menu\nDocuments/guide/PhpApps/Menu
-50	seamanslog-words	   439 seamanslog/TimeBudget\n   203 seamanslog/Opportunity\n   573 seamanslog/10000Days\n   411 seamanslog/ToolsSaveTime\n   547 seamanslog/LearningCurve\n   186 seamanslog/ImportantWork\n   439 seamanslog/UnfinishedBook\n   249 seamanslog/LifeWork\n   502 seamanslog/ReadToLearn\n     8 seamanslog/SiteTitle\n   409 seamanslog/DailyHabits\n   263 seamanslog/Commitments\n   246 seamanslog/ExpandContract\n     7 seamanslog/Menu\n   440 seamanslog/HabitualChange\n   605 seamanslog/WorkMindset\n   340 seamanslog/WritingWorkflow\n   307 seamanslog/WhyWork\n   487 seamanslog/Multitasking\n   324 seamanslog/Hitler\n   211 seamanslog/LowCostMyth\n   541 seamanslog/BusinessInvestment\n   341 seamanslog/ActToLearn\n   439 seamanslog/ScaledCommit\n   454 seamanslog/Strengths\n   356 seamanslog/Collaboration\n   614 seamanslog/WritingStages\n   490 seamanslog/PragmaticThinking\n   354 seamanslog/OneImprovement\n   420 seamanslog/Search\n   478 seamanslog/Career\n   344 seamanslog/ProcessingIdeas\n   284 seamanslog/YourBlogTopic\n    43 seamanslog/Index\n   223 seamanslog/LifeFun\n   109 seamanslog/LifeThatMatters\n    84 seamanslog/BiggestIdea\n   206 seamanslog/LifePeople\n   205 seamanslog/LifeGrow\n   332 seamanslog/NewYearsResolutions\n   262 seamanslog/Genetics\n   642 seamanslog/Invest20Percent\n   137 seamanslog/CreativeScore\n   326 seamanslog/RuthlessWithWaste\n   507 seamanslog/FoodAndSex\n   118 seamanslog/Pessimism\n   497 seamanslog/ComputerComplexity\n   360 seamanslog/Ideology\n   388 seamanslog/MaunaKea\n   192 seamanslog/Workforce\n   183 seamanslog/MyStory\n 17125\n	   439 seamanslog/TimeBudget\n   203 seamanslog/Opportunity\n   573 seamanslog/10000Days\n   411 seamanslog/ToolsSaveTime\n   547 seamanslog/LearningCurve\n   186 seamanslog/ImportantWork\n   439 seamanslog/UnfinishedBook\n   249 seamanslog/LifeWork\n   502 seamanslog/ReadToLearn\n     8 seamanslog/SiteTitle\n   409 seamanslog/DailyHabits\n   263 seamanslog/Commitments\n   246 seamanslog/ExpandContract\n     7 seamanslog/Menu\n   440 seamanslog/HabitualChange\n   605 seamanslog/WorkMindset\n   340 seamanslog/WritingWorkflow\n   307 seamanslog/WhyWork\n   487 seamanslog/Multitasking\n   324 seamanslog/Hitler\n   211 seamanslog/LowCostMyth\n   541 seamanslog/BusinessInvestment\n   341 seamanslog/ActToLearn\n   439 seamanslog/ScaledCommit\n   454 seamanslog/Strengths\n   356 seamanslog/Collaboration\n   614 seamanslog/WritingStages\n   490 seamanslog/PragmaticThinking\n   354 seamanslog/OneImprovement\n   420 seamanslog/Search\n   478 seamanslog/Career\n   344 seamanslog/ProcessingIdeas\n   284 seamanslog/YourBlogTopic\n    43 seamanslog/Index\n   223 seamanslog/LifeFun\n   109 seamanslog/LifeThatMatters\n    84 seamanslog/BiggestIdea\n   206 seamanslog/LifePeople\n   205 seamanslog/LifeGrow\n   332 seamanslog/NewYearsResolutions\n   262 seamanslog/Genetics\n   642 seamanslog/Invest20Percent\n   137 seamanslog/CreativeScore\n   326 seamanslog/RuthlessWithWaste\n   507 seamanslog/FoodAndSex\n   118 seamanslog/Pessimism\n   497 seamanslog/ComputerComplexity\n   360 seamanslog/Ideology\n   388 seamanslog/MaunaKea\n   192 seamanslog/Workforce\n   183 seamanslog/MyStory\n 17125\n
 179	log-length	Log Length OK	Log Length OK
 169	text-select-lines	<h3>fix</h3>\n<h3>test</h3>\n<h3>extend</h3>\n<h3>improve</h3>	<h3>fix</h3>\n<h3>test</h3>\n<h3>extend</h3>\n<h3>improve</h3>
+144	mybook-menu-list	Documents/Menu\nDocuments/info/Menu\nDocuments/aspire/Menu\nDocuments/seamanslog/Menu\nDocuments/Leverage/Menu\nDocuments/spiritual/Menu\nDocuments/MarkSeaman/Menu\nDocuments/guide/Teaching/Menu\nDocuments/guide/Menu\nDocuments/guide/HtmlApps/Menu\nDocuments/guide/PhpApps/Menu	Documents/Menu\nDocuments/info/Menu\nDocuments/aspire/Menu\nDocuments/seamanslog/Menu\nDocuments/Leverage/Menu\nDocuments/spiritual/Menu\nDocuments/MarkSeaman/Menu\nDocuments/guide/Teaching/Menu\nDocuments/guide/Menu\nDocuments/guide/HtmlApps/Menu\nDocuments/guide/PhpApps/Menu
+50	seamanslog-words	   439 seamanslog/TimeBudget\n   203 seamanslog/Opportunity\n   573 seamanslog/10000Days\n   411 seamanslog/ToolsSaveTime\n   547 seamanslog/LearningCurve\n   186 seamanslog/ImportantWork\n   439 seamanslog/UnfinishedBook\n   249 seamanslog/LifeWork\n   502 seamanslog/ReadToLearn\n     8 seamanslog/SiteTitle\n   409 seamanslog/DailyHabits\n   263 seamanslog/Commitments\n   246 seamanslog/ExpandContract\n     7 seamanslog/Menu\n   440 seamanslog/HabitualChange\n   605 seamanslog/WorkMindset\n   340 seamanslog/WritingWorkflow\n   307 seamanslog/WhyWork\n   487 seamanslog/Multitasking\n   324 seamanslog/Hitler\n   211 seamanslog/LowCostMyth\n   541 seamanslog/BusinessInvestment\n   341 seamanslog/ActToLearn\n   439 seamanslog/ScaledCommit\n   454 seamanslog/Strengths\n   356 seamanslog/Collaboration\n   614 seamanslog/WritingStages\n   490 seamanslog/PragmaticThinking\n   354 seamanslog/OneImprovement\n   420 seamanslog/Search\n   478 seamanslog/Career\n   344 seamanslog/ProcessingIdeas\n   284 seamanslog/YourBlogTopic\n    43 seamanslog/Index\n   223 seamanslog/LifeFun\n   109 seamanslog/LifeThatMatters\n    84 seamanslog/BiggestIdea\n   206 seamanslog/LifePeople\n   205 seamanslog/LifeGrow\n   332 seamanslog/NewYearsResolutions\n   262 seamanslog/Genetics\n   642 seamanslog/Invest20Percent\n   137 seamanslog/CreativeScore\n   326 seamanslog/RuthlessWithWaste\n   507 seamanslog/FoodAndSex\n   118 seamanslog/Pessimism\n   497 seamanslog/ComputerComplexity\n   360 seamanslog/Ideology\n   388 seamanslog/MaunaKea\n   192 seamanslog/Workforce\n   183 seamanslog/MyStory\n 17125\n	   439 seamanslog/TimeBudget\n   203 seamanslog/Opportunity\n   573 seamanslog/10000Days\n   411 seamanslog/ToolsSaveTime\n   547 seamanslog/LearningCurve\n   186 seamanslog/ImportantWork\n   439 seamanslog/UnfinishedBook\n   249 seamanslog/LifeWork\n   502 seamanslog/ReadToLearn\n     8 seamanslog/SiteTitle\n   409 seamanslog/DailyHabits\n   263 seamanslog/Commitments\n   246 seamanslog/ExpandContract\n     7 seamanslog/Menu\n   440 seamanslog/HabitualChange\n   605 seamanslog/WorkMindset\n   340 seamanslog/WritingWorkflow\n   307 seamanslog/WhyWork\n   487 seamanslog/Multitasking\n   324 seamanslog/Hitler\n   211 seamanslog/LowCostMyth\n   541 seamanslog/BusinessInvestment\n   341 seamanslog/ActToLearn\n   439 seamanslog/ScaledCommit\n   454 seamanslog/Strengths\n   356 seamanslog/Collaboration\n   614 seamanslog/WritingStages\n   490 seamanslog/PragmaticThinking\n   354 seamanslog/OneImprovement\n   420 seamanslog/Search\n   478 seamanslog/Career\n   344 seamanslog/ProcessingIdeas\n   284 seamanslog/YourBlogTopic\n    43 seamanslog/Index\n   223 seamanslog/LifeFun\n   109 seamanslog/LifeThatMatters\n    84 seamanslog/BiggestIdea\n   206 seamanslog/LifePeople\n   205 seamanslog/LifeGrow\n   332 seamanslog/NewYearsResolutions\n   262 seamanslog/Genetics\n   642 seamanslog/Invest20Percent\n   137 seamanslog/CreativeScore\n   326 seamanslog/RuthlessWithWaste\n   507 seamanslog/FoodAndSex\n   118 seamanslog/Pessimism\n   497 seamanslog/ComputerComplexity\n   360 seamanslog/Ideology\n   388 seamanslog/MaunaKea\n   192 seamanslog/Workforce\n   183 seamanslog/MyStory\n 17125\n
 132	wordpress-host	shell(x wordpress host) --> 13 lines (should be between 20 and 30)	shell(x wordpress host) --> 13 lines (should be between 20 and 30)
+131	app-url	Find all the URLs for the app\n\nhammer/urls.py\n\n    robots.txt$, RedirectView.as_view(url=staticfiles_storage.url('robots.txt'),  permanent=True)\n    favicon.ico$, RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'), permanent=True)\n    admin/, admin.site.urls\n    health/, include(health.urls)\n    health, include(health.urls)\n    life/, include(life.urls)\n    life, include(life.urls)\n    superuser/, include(superuser.urls)\n    superuser, include(superuser.urls)\n    task/, include(tasks.urls)\n    task, include(tasks.urls)\n    , include(tool.urls)\n    unc/, include(sensei.urls)\n    unc, include(sensei.urls)\n    , include(mybook.urls)\n\nhealth/urls.py\n\n    $, HealthView\n    history$, HealthList\n    url(r'(?P<pk>\\d+)$, HealthEdit)\n\nlife/urls.py\n\n    $, LifeView\n    experience$, ExperienceView\n    year/(?P<age>[-\\d]+)$, YearView\n    (?P<age>[-\\d]+)/(?P<aspect>[\\W\\w]+)/add$, LifeAdd\n    (?P<pk>\\d+)/edit$, LifeEdit\n\nmybook/urls.py\n\n    login, login, {'template_name': 'mybook_login.html'}\n    logout$, logout, {'next_page': '/login'}\n    info/(?P<title>[\\w/\\-_.]*)$, MyBookPrivateDoc\n    seamanslog$, SeamansLog\n    spiritual/(?P<title>[\\w\\-_.]*)$, SpiritualSelect\n    (?P<title>[\\w/\\-_.]*)$, MyBookDocDisplay\n\nsensei/urls.py\n\n    register$, UncRegister\n    registered$, UncRegistered\n    reading$, UncReading\n    url(r'reviews$, UncReviews),\n    url(r'review/(?P<pk>[\\d]+)$, UncEditReview),\n    schedule$, UncSchedule\n    url(r'feedback/(?P<pk>[\\d]+)$, UncReviewFeedback),\n    student/(?P<id>[\\d]+)$, UncStudent\n    url-question/(?P<id>[\\d]+)$, UncUrlGameQuestion\n    url-answer/(?P<id>[\\d]+)$, UncUrlGameAnswer\n    url-game-done/(?P<id>[\\d]+)$, UncUrlGameDone\n    guide/(?P<title>[\\w/\\-_.]*)$, GuideDoc\n    (?P<title>[\\w/\\-_.]*)/slides$, UncSlidesDisplay\n    (?P<title>[\\w/\\-_.]*)$, UncDocDisplay\n\nsuperuser/urls.py\n\n    $, AdminView\n    log, LogView\n    doc/(?P<doc>[\\w/\\-_.]+)$, DocView\n    material, MaterialView\n    test, TestView\n    users$, UsersView\n    surrogate/(?P<pk>\\d+)$, SurrogateView\n    database$, DatabaseView\n\ntasks/urls.py\n\n    add$, TaskCreate\n    url(r'(?P<pk>\\d+)/edit$, TaskUpdate\n    url(r'(?P<pk>\\d+)/delete$, TaskDelete\n    (?P<pk>\\d+)$, TaskDetail\n    import$, TaskImport\n    export$, TaskExport\n    $, TaskHome\n    summary$, TimeSummary\n    time$, MyTime\n    bad$, MissingDays\n    (?P<activity>[\\w\\d\\-\\.]*)$, TaskList\n\ntool/urls.py\n\n    user_add$, UserCreate\n    user_delete/(?P<pk>\\d+)$, UserDelete\n    user_detail/(?P<pk>\\d+)$, UserDetail\n    user_edit/(?P<pk>\\d+)$, UserEdit\n    user_list$, UserList\n	Find all the URLs for the app\n\nhammer/urls.py\n\n    robots.txt$, RedirectView.as_view(url=staticfiles_storage.url('robots.txt'),  permanent=True)\n    favicon.ico$, RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'), permanent=True)\n    admin/, admin.site.urls\n    health/, include(health.urls)\n    health, include(health.urls)\n    life/, include(life.urls)\n    life, include(life.urls)\n    superuser/, include(superuser.urls)\n    superuser, include(superuser.urls)\n    task/, include(tasks.urls)\n    task, include(tasks.urls)\n    , include(tool.urls)\n    unc/, include(sensei.urls)\n    unc, include(sensei.urls)\n    , include(mybook.urls)\n\nhealth/urls.py\n\n    $, HealthView\n    history$, HealthList\n    url(r'(?P<pk>\\d+)$, HealthEdit)\n\nlife/urls.py\n\n    $, LifeView\n    experience$, ExperienceView\n    year/(?P<age>[-\\d]+)$, YearView\n    (?P<age>[-\\d]+)/(?P<aspect>[\\W\\w]+)/add$, LifeAdd\n    (?P<pk>\\d+)/edit$, LifeEdit\n\nmybook/urls.py\n\n    login, login, {'template_name': 'mybook_login.html'}\n    logout$, logout, {'next_page': '/login'}\n    info/(?P<title>[\\w/\\-_.]*)$, MyBookPrivateDoc\n    seamanslog$, SeamansLog\n    spiritual/(?P<title>[\\w\\-_.]*)$, SpiritualSelect\n    (?P<title>[\\w/\\-_.]*)$, MyBookDocDisplay\n\nsensei/urls.py\n\n    register$, UncRegister\n    registered$, UncRegistered\n    reading$, UncReading\n    url(r'reviews$, UncReviews),\n    url(r'review/(?P<pk>[\\d]+)$, UncEditReview),\n    url(r'feedback/(?P<pk>[\\d]+)$, UncReviewFeedback),\n    student/(?P<id>[\\d]+)$, UncStudent\n    url-question/(?P<id>[\\d]+)$, UncUrlGameQuestion\n    url-answer/(?P<id>[\\d]+)$, UncUrlGameAnswer\n    url-game-done/(?P<id>[\\d]+)$, UncUrlGameDone\n    guide/(?P<title>[\\w/\\-_.]*)$, GuideDoc\n    (?P<title>[\\w/\\-_.]*)/slides$, UncSlidesDisplay\n    (?P<title>[\\w/\\-_.]*)$, UncDocDisplay\n\nsuperuser/urls.py\n\n    $, AdminView\n    log, LogView\n    doc/(?P<doc>[\\w/\\-_.]+)$, DocView\n    material, MaterialView\n    test, TestView\n    users$, UsersView\n    surrogate/(?P<pk>\\d+)$, SurrogateView\n    database$, DatabaseView\n\ntasks/urls.py\n\n    add$, TaskCreate\n    url(r'(?P<pk>\\d+)/edit$, TaskUpdate\n    url(r'(?P<pk>\\d+)/delete$, TaskDelete\n    (?P<pk>\\d+)$, TaskDetail\n    import$, TaskImport\n    export$, TaskExport\n    $, TaskHome\n    summary$, TimeSummary\n    time$, MyTime\n    bad$, MissingDays\n    (?P<activity>[\\w\\d\\-\\.]*)$, TaskList\n\ntool/urls.py\n\n    user_add$, UserCreate\n    user_delete/(?P<pk>\\d+)$, UserDelete\n    user_detail/(?P<pk>\\d+)$, UserDetail\n    user_edit/(?P<pk>\\d+)$, UserEdit\n    user_list$, UserList\n
 145	mybook-menu-mybook	('http://seaman-tech.com', 'zmdi-accounts-list', 'Shrinking World', None)\n('/mybook/Index', 'zmdi-home', 'Home', None)\n('/mybook/book_list', 'zmdi-local-library', 'Books', None)\n('/mybook/author_list', 'zmdi-face', 'Authors', None)	('http://seaman-tech.com', 'zmdi-accounts-list', 'Shrinking World', None)\n('/mybook/Index', 'zmdi-home', 'Home', None)\n('/mybook/book_list', 'zmdi-local-library', 'Books', None)\n('/mybook/author_list', 'zmdi-face', 'Authors', None)
 148	mybook-menu-swo	('/shrinking-world/Index', 'zmdi-home', 'Shrinking World', 'class=active')\n('/shrinking-world/Blog/Index', 'zmdi-library', 'Blog', None)\n('/shrinking-world/Staff', 'zmdi-accounts', 'Staff', None)\n('https://world-class-software.com/software/Index', 'zmdi-book', 'Training', None)	('/shrinking-world/Index', 'zmdi-home', 'Shrinking World', 'class=active')\n('/shrinking-world/Blog/Index', 'zmdi-library', 'Blog', None)\n('/shrinking-world/Staff', 'zmdi-accounts', 'Staff', None)\n('https://world-class-software.com/software/Index', 'zmdi-book', 'Training', None)
 69	hours-days	\n	\n
 51	score-list	\n        score Command\n\n        usage: x score COMMAND\n\n        COMMAND:\n\n            edit    - edit the scorecard\n            show    - show the doc content\n            update  - calculate the score\n            web     - show the remote scorecard\n\n        \n	\n        score Command\n\n        usage: x score COMMAND\n\n        COMMAND:\n\n            edit    - edit the scorecard\n            show    - show the doc content\n            update  - calculate the score\n            web     - show the remote scorecard\n\n        \n
+158	tst-time	Sat Feb  9 07:00:10 MST 2019\n	Tue Feb  5 11:13:57 MST 2019\n
+152	unc-files	files(/home/django/UNC) --> 1 files (should be between 170 and 180)	files(/home/django/UNC) --> 1 files (should be between 67 and 67)
+133	wordpress-list	wordpress list\nNo directory exists\n	wordpress list\nNo directory exists\n
 127	src-unique	manage.py\n__init__.py\nmybook/book.py\nmybook/book_views.py\nmybook/admin.py\nmybook/models.py\nmybook/urls.py\nmybook/task.py\nmybook/author.py\nmybook/mybook.py\nmybook/__init__.py\nmybook/info.py\nmybook/author_views.py\nmybook/outline.py\nmybook/tests.py\nmybook/mybook_views.py\nmybook/apps.py\nmybook/chapter.py\nconfig/x.py\ntest/mybook_test.py\ntest/seamanslog_test.py\ntest/text_test.py\ntest/doc_test.py\ntest/days_test.py\ntest/tst_test.py\ntest/user_test.py\ntest/ops_test.py\ntest/health_test.py\ntest/src_test.py\ntest/archive_test.py\ntest/cmd_test.py\ntest/page_test.py\ntest/node_test.py\ntest/email_test.py\ntest/system_test.py\ntest/booknotes_test.py\ntest/wordpress_test.py\ntest/unc_test.py\ntest/vc_test.py\ntest/i_test.py\ntest/app_test.py\ntest/music_test.py\ntest/robot_test.py\ntest/css_test.py\ntest/data_test.py\ntest/datatype_test.py\ntest/hourly_test.py\ntest/__init__.py\ntest/aspire_test.py\ntool/user.py\ntool/document.py\ntool/user_views.py\ntool/robot.py\ntool/models.py\ntool/urls.py\ntool/xxx_script.py\ntool/log.py\ntool/project.py\ntool/email.py\ntool/domain.py\ntool/notify.py\ntool/page.py\ntool/tst.py\ntool/__init__.py\ntool/xxx_views.py\ntool/xxx.py\ntool/management/__init__.py\ntool/management/commands/scriptor.py\ntool/management/commands/__init__.py\nhammer/urls.py\nhammer/settings.py\nhammer/__init__.py\nhammer/wsgi.py\nhammer/secret_settings.py\naspire/goal_views.py\naspire/project_views.py\naspire/client.py\naspire/admin.py\naspire/models.py\naspire/node.py\naspire/node_views.py\naspire/urls.py\naspire/project.py\naspire/role_views.py\naspire/role.py\naspire/aspire.py\naspire/client_views.py\naspire/doc.py\naspire/__init__.py\naspire/advisor_views.py\naspire/tests.py\naspire/apps.py\naspire/goal.py\naspire/views.py\nbin/cmd.py\nbin/book.py\nbin/user.py\nbin/switches.py\nbin/web.py\nbin/booknotes.py\nbin/days.py\nbin/faceblog.py\nbin/guide.py\nbin/src.py\nbin/vc.py\nbin/hours.py\nbin/text.py\nbin/shell.py\nbin/log.py\nbin/resize.py\nbin/datatype.py\nbin/data.py\nbin/page_tests.py\nbin/files.py\nbin/tool.py\nbin/remote_tests.py\nbin/ntsh.py\nbin/life.py\nbin/score.py\nbin/aspire.py\nbin/doc.py\nbin/hourly.py\nbin/todo.py\nbin/app.py\nbin/spiritual.py\nbin/x.py\nbin/n.py\nbin/__init__.py\nbin/archive.py\nbin/i.py\nbin/music.py\nbin/pandoc.py\nbin/ops.py\nbin/seamanslog.py\nbin/wordpress.py\nsensei/admin.py\nsensei/models.py\nsensei/__init__.py\nsensei/tests.py\nsensei/apps.py\nsensei/views.py\nunc/admin.py\nunc/review.py\nunc/models.py\nunc/sensei.py\nunc/urls.py\nunc/__init__.py\nunc/tests.py\nunc/apps.py\nunc/views.py\nlife/admin.py\nlife/models.py\nlife/urls.py\nlife/life.py\nlife/__init__.py\nlife/tests.py\nlife/apps.py\nlife/views.py\nhealth/health.py\nhealth/admin.py\nhealth/models.py\nhealth/urls.py\nhealth/__init__.py\nhealth/tests.py\nhealth/apps.py\nhealth/views.py\nsuperuser/admin.py\nsuperuser/models.py\nsuperuser/urls.py\nsuperuser/initialize.py\nsuperuser/admin_views.py\nsuperuser/__init__.py\nsuperuser/tests.py\nsuperuser/apps.py\ntasks/models.py\ntasks/urls.py\ntasks/task.py\ntasks/summary.py\ntasks/__init__.py\ntasks/views.py\nguide/urls.py\nguide/__init__.py\nguide/views.py\n	manage.py\n__init__.py\nmybook/book.py\nmybook/book_views.py\nmybook/admin.py\nmybook/models.py\nmybook/urls.py\nmybook/task.py\nmybook/author.py\nmybook/mybook.py\nmybook/__init__.py\nmybook/info.py\nmybook/author_views.py\nmybook/outline.py\nmybook/tests.py\nmybook/mybook_views.py\nmybook/apps.py\nmybook/chapter.py\nconfig/x.py\ntest/mybook_test.py\ntest/seamanslog_test.py\ntest/text_test.py\ntest/doc_test.py\ntest/days_test.py\ntest/tst_test.py\ntest/user_test.py\ntest/ops_test.py\ntest/health_test.py\ntest/src_test.py\ntest/archive_test.py\ntest/cmd_test.py\ntest/page_test.py\ntest/node_test.py\ntest/email_test.py\ntest/system_test.py\ntest/booknotes_test.py\ntest/wordpress_test.py\ntest/unc_test.py\ntest/vc_test.py\ntest/i_test.py\ntest/app_test.py\ntest/music_test.py\ntest/robot_test.py\ntest/css_test.py\ntest/data_test.py\ntest/datatype_test.py\ntest/hourly_test.py\ntest/__init__.py\ntest/aspire_test.py\ntool/user.py\ntool/document.py\ntool/user_views.py\ntool/robot.py\ntool/models.py\ntool/urls.py\ntool/xxx_script.py\ntool/log.py\ntool/project.py\ntool/email.py\ntool/domain.py\ntool/notify.py\ntool/page.py\ntool/tst.py\ntool/__init__.py\ntool/xxx_views.py\ntool/xxx.py\ntool/management/__init__.py\ntool/management/commands/scriptor.py\ntool/management/commands/__init__.py\nhammer/urls.py\nhammer/settings.py\nhammer/__init__.py\nhammer/wsgi.py\nhammer/secret_settings.py\naspire/goal_views.py\naspire/project_views.py\naspire/client.py\naspire/admin.py\naspire/models.py\naspire/node.py\naspire/node_views.py\naspire/urls.py\naspire/project.py\naspire/role_views.py\naspire/role.py\naspire/aspire.py\naspire/client_views.py\naspire/doc.py\naspire/__init__.py\naspire/advisor_views.py\naspire/tests.py\naspire/apps.py\naspire/goal.py\naspire/views.py\nbin/cmd.py\nbin/book.py\nbin/user.py\nbin/switches.py\nbin/web.py\nbin/booknotes.py\nbin/days.py\nbin/faceblog.py\nbin/guide.py\nbin/src.py\nbin/vc.py\nbin/hours.py\nbin/text.py\nbin/shell.py\nbin/log.py\nbin/resize.py\nbin/datatype.py\nbin/data.py\nbin/page_tests.py\nbin/files.py\nbin/tool.py\nbin/remote_tests.py\nbin/ntsh.py\nbin/life.py\nbin/score.py\nbin/aspire.py\nbin/doc.py\nbin/hourly.py\nbin/todo.py\nbin/app.py\nbin/spiritual.py\nbin/x.py\nbin/n.py\nbin/__init__.py\nbin/archive.py\nbin/i.py\nbin/music.py\nbin/pandoc.py\nbin/ops.py\nbin/seamanslog.py\nbin/wordpress.py\nsensei/admin.py\nsensei/models.py\nsensei/__init__.py\nsensei/tests.py\nsensei/apps.py\nsensei/views.py\nunc/admin.py\nunc/review.py\nunc/models.py\nunc/sensei.py\nunc/urls.py\nunc/__init__.py\nunc/tests.py\nunc/apps.py\nunc/views.py\nlife/admin.py\nlife/models.py\nlife/urls.py\nlife/life.py\nlife/__init__.py\nlife/tests.py\nlife/apps.py\nlife/views.py\nhealth/health.py\nhealth/admin.py\nhealth/models.py\nhealth/urls.py\nhealth/__init__.py\nhealth/tests.py\nhealth/apps.py\nhealth/views.py\nsuperuser/admin.py\nsuperuser/models.py\nsuperuser/urls.py\nsuperuser/initialize.py\nsuperuser/admin_views.py\nsuperuser/__init__.py\nsuperuser/tests.py\nsuperuser/apps.py\ntasks/models.py\ntasks/urls.py\ntasks/task.py\ntasks/summary.py\ntasks/__init__.py\ntasks/views.py\nguide/urls.py\nguide/__init__.py\nguide/views.py\n
 142	mybook-menu-brain	('/brain/Index', 'zmdi-home', 'Home', 'class=active')\n('/brain/Learn', 'zmdi-storage', 'Learn', None)\n('/brain/Plan', 'zmdi-accounts-alt', 'Plan', None)\n('/brain/Build', 'zmdi-comment-text-alt', 'Build', None)\n('/brain/Teach', 'zmdi-assignment-account', 'Teach', None)	('/brain/Index', 'zmdi-home', 'Home', 'class=active')\n('/brain/Learn', 'zmdi-storage', 'Learn', None)\n('/brain/Plan', 'zmdi-accounts-alt', 'Plan', None)\n('/brain/Build', 'zmdi-comment-text-alt', 'Build', None)\n('/brain/Teach', 'zmdi-assignment-account', 'Teach', None)
-158	tst-time	Thu Feb  7 07:00:10 MST 2019\n	Tue Feb  5 11:13:57 MST 2019\n
 100	days-month	no output	no output
-152	unc-files	files(/home/django/UNC) --> 1 files (should be between 67 and 67)	files(/home/django/UNC) --> 1 files (should be between 67 and 67)
-133	wordpress-list	wordpress list\nNo directory exists\n	wordpress list\nNo directory exists\n
+14	app-list	bin/__init__.py\nbin/app.py\nbin/booknotes.py\nbin/chapter.py\nbin/data.py\nbin/days.py\nbin/diagrams.py\nbin/doc.py\nbin/files.py\nbin/hourly.py\nbin/hours.py\nbin/i.py\nbin/life.py\nbin/log.py\nbin/music.py\nbin/n.py\nbin/ntsh.py\nbin/ops.py\nbin/resize.py\nbin/shell.py\nbin/switches.py\nbin/text.py\nbin/todo.py\nbin/tool.py\nbin/user.py\nbin/vc.py\nbin/web.py\nbin/wordpress.py\nbin/x.py\nhammer/__init__.py\nhammer/secret_settings.py\nhammer/settings.py\nhammer/urls.py\nhammer/wsgi.py\nhealth/__init__.py\nhealth/admin.py\nhealth/apps.py\nhealth/health.py\nhealth/models.py\nhealth/tests.py\nhealth/urls.py\nhealth/views.py\nlife/__init__.py\nlife/admin.py\nlife/apps.py\nlife/life.py\nlife/models.py\nlife/tests.py\nlife/urls.py\nlife/views.py\nmybook/__init__.py\nmybook/admin.py\nmybook/apps.py\nmybook/models.py\nmybook/mybook.py\nmybook/mybook_views.py\nmybook/outline.py\nmybook/task.py\nmybook/tests.py\nmybook/urls.py\nsensei/__init__.py\nsensei/admin.py\nsensei/apps.py\nsensei/fix.py\nsensei/models.py\nsensei/review.py\nsensei/sensei.py\nsensei/student.py\nsensei/tests.py\nsensei/urlgame.py\nsensei/urls.py\nsensei/views.py\nsuperuser/__init__.py\nsuperuser/admin.py\nsuperuser/admin_views.py\nsuperuser/apps.py\nsuperuser/initialize.py\nsuperuser/models.py\nsuperuser/tests.py\nsuperuser/urls.py\ntasks/__init__.py\ntasks/fix.py\ntasks/models.py\ntasks/summary.py\ntasks/task.py\ntasks/urls.py\ntasks/views.py\ntest/__init__.py\ntest/app_test.py\ntest/archive_test.py\ntest/booknotes_test.py\ntest/css_test.py\ntest/data_test.py\ntest/doc_test.py\ntest/health_test.py\ntest/hourly_test.py\ntest/i_test.py\ntest/log_test.py\ntest/ops_test.py\ntest/page_test.py\ntest/robot_test.py\ntest/system_test.py\ntest/text_test.py\ntest/tst_test.py\ntest/unc_test.py\ntest/user_test.py\ntest/vc_test.py\ntest/wordpress_test.py\ntool/__init__.py\ntool/document.py\ntool/domain.py\ntool/email.py\ntool/log.py\ntool/management/__init__.py\ntool/management/commands/__init__.py\ntool/management/commands/scriptor.py\ntool/models.py\ntool/notify.py\ntool/page.py\ntool/project.py\ntool/robot.py\ntool/tst.py\ntool/urls.py\ntool/user.py\ntool/user_views.py\n	bin/__init__.py\nbin/app.py\nbin/booknotes.py\nbin/chapter.py\nbin/data.py\nbin/days.py\nbin/diagrams.py\nbin/doc.py\nbin/files.py\nbin/hourly.py\nbin/hours.py\nbin/i.py\nbin/life.py\nbin/log.py\nbin/music.py\nbin/n.py\nbin/ntsh.py\nbin/ops.py\nbin/resize.py\nbin/shell.py\nbin/switches.py\nbin/text.py\nbin/todo.py\nbin/tool.py\nbin/user.py\nbin/vc.py\nbin/web.py\nbin/wordpress.py\nbin/x.py\nhammer/__init__.py\nhammer/secret_settings.py\nhammer/settings.py\nhammer/urls.py\nhammer/wsgi.py\nhealth/__init__.py\nhealth/admin.py\nhealth/apps.py\nhealth/health.py\nhealth/models.py\nhealth/tests.py\nhealth/urls.py\nhealth/views.py\nlife/__init__.py\nlife/admin.py\nlife/apps.py\nlife/life.py\nlife/models.py\nlife/tests.py\nlife/urls.py\nlife/views.py\nmybook/__init__.py\nmybook/admin.py\nmybook/apps.py\nmybook/models.py\nmybook/mybook.py\nmybook/mybook_views.py\nmybook/outline.py\nmybook/task.py\nmybook/tests.py\nmybook/urls.py\nsensei/__init__.py\nsensei/admin.py\nsensei/apps.py\nsensei/fix.py\nsensei/models.py\nsensei/review.py\nsensei/sensei.py\nsensei/student.py\nsensei/tests.py\nsensei/urlgame.py\nsensei/urls.py\nsensei/views.py\nsuperuser/__init__.py\nsuperuser/admin.py\nsuperuser/admin_views.py\nsuperuser/apps.py\nsuperuser/initialize.py\nsuperuser/models.py\nsuperuser/tests.py\nsuperuser/urls.py\ntasks/__init__.py\ntasks/models.py\ntasks/summary.py\ntasks/task.py\ntasks/urls.py\ntasks/views.py\ntest/__init__.py\ntest/app_test.py\ntest/archive_test.py\ntest/booknotes_test.py\ntest/css_test.py\ntest/data_test.py\ntest/doc_test.py\ntest/health_test.py\ntest/hourly_test.py\ntest/i_test.py\ntest/log_test.py\ntest/ops_test.py\ntest/page_test.py\ntest/robot_test.py\ntest/system_test.py\ntest/text_test.py\ntest/tst_test.py\ntest/unc_test.py\ntest/user_test.py\ntest/vc_test.py\ntest/wordpress_test.py\ntool/__init__.py\ntool/document.py\ntool/domain.py\ntool/email.py\ntool/log.py\ntool/management/__init__.py\ntool/management/commands/__init__.py\ntool/management/commands/scriptor.py\ntool/models.py\ntool/notify.py\ntool/page.py\ntool/project.py\ntool/robot.py\ntool/tst.py\ntool/urls.py\ntool/user.py\ntool/user_views.py\n
 162	days-schedule	Week 0 - Mon, 08-20\nWeek 1 - Mon, 08-27\nWeek 2 - Mon, 09-03\nWeek 3 - Mon, 09-10\nWeek 4 - Mon, 09-17\nWeek 5 - Mon, 09-24\nWeek 6 - Mon, 10-01\nWeek 7 - Mon, 10-08\nWeek 8 - Mon, 10-15\nWeek 9 - Mon, 10-22\nWeek 10 - Mon, 10-29\nWeek 11 - Mon, 11-05\nWeek 12 - Mon, 11-12\nWeek 13 - Mon, 11-19\nWeek 14 - Mon, 11-26\nWeek 15 - Mon, 12-03\n	Week 0 - Mon, 08-20\nWeek 1 - Mon, 08-27\nWeek 2 - Mon, 09-03\nWeek 3 - Mon, 09-10\nWeek 4 - Mon, 09-17\nWeek 5 - Mon, 09-24\nWeek 6 - Mon, 10-01\nWeek 7 - Mon, 10-08\nWeek 8 - Mon, 10-15\nWeek 9 - Mon, 10-22\nWeek 10 - Mon, 10-29\nWeek 11 - Mon, 11-05\nWeek 12 - Mon, 11-12\nWeek 13 - Mon, 11-19\nWeek 14 - Mon, 11-26\nWeek 15 - Mon, 12-03\n
-31	hourly-list	\nHourly Tasks\n\n\n          echo "PATH=" `path`\n          echo "env=" `env`\n          echo Python: `which python`\n          # git status\n          x tst\n          x tst list\n          x tst send\n      \n\nDaily Tasks\n\n\n          # x spiritual article\n          # x seamanslog article\n          x data backup\n          # rm $p/log/django.log\n      \n	\nHourly Tasks\n\n\n          echo "PATH=" `path`\n          echo "env=" `env`\n          echo Python: `which python`\n          # git status\n          x tst\n          x tst list\n          x tst send\n      \n\nDaily Tasks\n\n\n          # x spiritual article\n          # x seamanslog article\n          x data backup\n          rm $p/log/django.log\n      \n
 143	mybook-menu-leverage	('/software/Leverage/Index', 'zmdi-home', 'Home', 'class=active')\n('/software/Leverage/Part1', 'zmdi-storage', 'Leverage', None)\n('/software/Leverage/Part2', 'zmdi-accounts-alt', 'Development', None)\n('/software/Leverage/Part3', 'zmdi-assignment-account', 'Operations', None)\n('/software/Leverage/Part4', 'zmdi-comment-text-alt', 'People', None)	('/software/Leverage/Index', 'zmdi-home', 'Home', 'class=active')\n('/software/Leverage/Part1', 'zmdi-storage', 'Leverage', None)\n('/software/Leverage/Part2', 'zmdi-accounts-alt', 'Development', None)\n('/software/Leverage/Part3', 'zmdi-assignment-account', 'Operations', None)\n('/software/Leverage/Part4', 'zmdi-comment-text-alt', 'People', None)
 147	mybook-menu-spiritual	('/spiritual/Home', 'zmdi-home', 'Home', 'class=active')\n('/spiritual/inspire', 'zmdi-cloud-outline', 'Inspire', None)\n('/spiritual/prayers', 'zmdi-comment-outline', 'Pray', None)\n('/spiritual/bible', 'zmdi-local-library', 'Meditate', None)\n('/spiritual/reflect', 'zmdi-key', 'Reflect', None)\n('/spiritual/teaching', 'zmdi-face', 'Learn', None)	('/spiritual/Home', 'zmdi-home', 'Home', 'class=active')\n('/spiritual/inspire', 'zmdi-cloud-outline', 'Inspire', None)\n('/spiritual/prayers', 'zmdi-comment-outline', 'Pray', None)\n('/spiritual/bible', 'zmdi-local-library', 'Meditate', None)\n('/spiritual/reflect', 'zmdi-key', 'Reflect', None)\n('/spiritual/teaching', 'zmdi-face', 'Learn', None)
 41	system-ip	shell(ifconfig) --> 23 lines (should be between 51 and 69)	shell(ifconfig) --> 23 lines (should be between 51 and 69)
-42	system-pandoc	<h1 id="history-of-activity">History of Activity</h1>\n<p><a href="Today" class="uri">Today</a></p>\n<h2 id="section">2015</h2>\n<ul>\n<li><a href="2015-09">September</a></li>\n<li><a href="2015-10">October</a></li>\n<li><a href="2015-11">November</a></li>\n<li><a href="2015-12">December</a></li>\n</ul>\n<h2 id="section-1">2016</h2>\n<ul>\n<li><a href="2016-01">January</a></li>\n<li><a href="2016-02">February</a></li>\n<li><a href="2016-03">March</a></li>\n<li><a href="2016-04">April</a></li>\n<li><a href="2016-05">May</a></li>\n<li><a href="2016-06">June</a></li>\n<li><a href="2016-07">July</a></li>\n<li><a href="2016-08">August</a></li>\n<li><a href="2016-09">September</a></li>\n<li><a href="2016-10">October</a></li>\n<li><a href="2016-11">November</a></li>\n</ul>\n	<h1 id="history-of-activity">History of Activity</h1>\n<p><a href="Today" class="uri">Today</a></p>\n<h2 id="section">2015</h2>\n<ul>\n<li><a href="2015-09">September</a></li>\n<li><a href="2015-10">October</a></li>\n<li><a href="2015-11">November</a></li>\n<li><a href="2015-12">December</a></li>\n</ul>\n<h2 id="section-1">2016</h2>\n<ul>\n<li><a href="2016-01">January</a></li>\n<li><a href="2016-02">February</a></li>\n<li><a href="2016-03">March</a></li>\n<li><a href="2016-04">April</a></li>\n<li><a href="2016-05">May</a></li>\n<li><a href="2016-06">June</a></li>\n<li><a href="2016-07">July</a></li>\n<li><a href="2016-08">August</a></li>\n<li><a href="2016-09">September</a></li>\n<li><a href="2016-10">October</a></li>\n<li><a href="2016-11">November</a></li>\n</ul>\n
+11	app-classes	bin/__init__.py\n    \nbin/app.py\n    \nbin/booknotes.py\n    \nbin/chapter.py\n    \nbin/data.py\n    \nbin/days.py\n    \nbin/diagrams.py\n    \nbin/doc.py\n    \nbin/files.py\n    \nbin/hourly.py\n    \nbin/hours.py\n    \nbin/i.py\n    \nbin/life.py\n    \nbin/log.py\n    \nbin/music.py\n    \nbin/n.py\n    \nbin/ntsh.py\n    \nbin/ops.py\n    \nbin/resize.py\n    \nbin/shell.py\n    \nbin/switches.py\n    \nbin/text.py\n        pattern = r'class (.*)\\(.*\\)'\nbin/todo.py\n    \nbin/tool.py\n    \nbin/user.py\n    \nbin/vc.py\n    \nbin/web.py\n    \nbin/wordpress.py\n    \nbin/x.py\n    \nhammer/__init__.py\n    \nhammer/secret_settings.py\n    \nhammer/settings.py\n    \nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    class HealthConfig(AppConfig):\nhealth/health.py\n    \nhealth/models.py\n    class HealthScore(models.Model):\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    class HealthView(TemplateView):\n    class HealthList(ListView):\n    class HealthEdit(UpdateView):\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    class LifeConfig(AppConfig):\nlife/life.py\n    \nlife/models.py\n    class Year(models.Model):\n    class Aspect(models.Model):\n    class Experience(models.Model):\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n    class LifeView(TemplateView):\n    class ExperienceView(ListView):\n    class YearView(ListView):\n    class LifeAdd(LoginRequiredMixin, RedirectView):\n    class LifeEdit(UpdateView):\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    class MybookConfig(AppConfig):\nmybook/models.py\n    class Author(models.Model):\n    class Book(models.Model):\nmybook/mybook.py\n    \nmybook/mybook_views.py\n    class MyBookDocDisplay(TemplateView):\n    class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):\n    class BookNotes(MyBookDocDisplay):\n    class CardView(MyBookDocDisplay):\n    class OutlineView(MyBookDocDisplay):\n    class DailyTask(RedirectView):\n    # class SeamansLog(MyBookDocDisplay):\n    class SeamansLog(RedirectView):\n    class SpiritualSelect(RedirectView):\n    class TabsView(MyBookDocDisplay):\nmybook/outline.py\n    \nmybook/task.py\n    \nmybook/tests.py\n    \nmybook/urls.py\n    \nsensei/__init__.py\n    \nsensei/admin.py\n    \nsensei/apps.py\n    class SenseiConfig(AppConfig):\nsensei/fix.py\n    \nsensei/models.py\n    class Course(models.Model):\n    class Student(models.Model):\n    class Lesson(models.Model):\n    class Requirements(models.Model):\n    class Review(models.Model):\n    class UrlGame(models.Model):\nsensei/review.py\n    \nsensei/sensei.py\n    \nsensei/student.py\n    \nsensei/tests.py\n    \nsensei/urlgame.py\n    \nsensei/urls.py\n    \nsensei/views.py\n    class GuideDoc(TemplateView):\n    class UncDocDisplay(TemplateView):\n    class UncEditReview(UpdateView):\n    class UncReviewFeedback(TemplateView):\n    class UncReading(TemplateView):\n    class UncRegister(FormView):\n        class EditDocForm(Form):\n    class UncRegistered(ListView):\n    class UncReviews(TemplateView):\n    class UncSchedule(TemplateView):\n    class UncSlidesDisplay(TemplateView):\n    class UncStudent(TemplateView):\n    class UncUrlGameAnswer(FormView):\n        class UrlForm(Form):\n    class UncUrlGameQuestion(TemplateView):\n    class UncUrlGameDone(TemplateView):\nsuperuser/__init__.py\n    \nsuperuser/admin.py\n    \nsuperuser/admin_views.py\n    class AdminView(UserPassesTestMixin, TemplateView):\n    class DatabaseView(UserPassesTestMixin, TemplateView):\n    class DocView(UserPassesTestMixin, TemplateView):\n    class LogView(UserPassesTestMixin, TemplateView):\n    class MaterialView(TemplateView):\n    class SurrogateView(UserPassesTestMixin, TemplateView):\n    class TestView(UserPassesTestMixin, ListView):\n    class UsersView(UserPassesTestMixin, ListView):\nsuperuser/apps.py\n    class AdminConfig(AppConfig):\nsuperuser/initialize.py\n    \nsuperuser/models.py\n    class Administrator(models.Model):\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/fix.py\n    \ntasks/models.py\n    class Task (models.Model):\ntasks/summary.py\n    \ntasks/task.py\n    \ntasks/urls.py\n    \ntasks/views.py\n    class TaskBase(LoginRequiredMixin, ContextMixin):\n    class TaskDelete(DeleteView):\n    class TaskDetail(DetailView):\n    class TaskCreate(CreateView):\n    class TaskUpdate(TaskBase, UpdateView):\n    class TaskHome(TaskBase, TemplateView):\n    class TaskList(TaskBase, ListView):\n    class MyTime(TaskBase, TemplateView):\n    class TimeSummary(TaskBase, TemplateView):\n    class MissingDays(TaskBase, TemplateView):\n    class TaskImport(RedirectView):\n    class TaskExport(TaskBase, TemplateView):\ntest/__init__.py\n    \ntest/app_test.py\n    \ntest/archive_test.py\n    \ntest/booknotes_test.py\n    \ntest/css_test.py\n    \ntest/data_test.py\n    \ntest/doc_test.py\n    \ntest/health_test.py\n    \ntest/hourly_test.py\n    \ntest/i_test.py\n    \ntest/log_test.py\n    \ntest/ops_test.py\n    \ntest/page_test.py\n    \ntest/robot_test.py\n    \ntest/system_test.py\n    \ntest/text_test.py\n    \ntest/tst_test.py\n    \ntest/unc_test.py\n    \ntest/user_test.py\n    \ntest/vc_test.py\n    \ntest/wordpress_test.py\n    \ntool/__init__.py\n    \ntool/document.py\n    \ntool/domain.py\n    \ntool/email.py\n    \ntool/log.py\n    \ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n    class Command(BaseCommand):\ntool/models.py\n    class Test(models.Model):\n    class Page(models.Model):\ntool/notify.py\n    \ntool/page.py\n    \ntool/project.py\n    class ProjectList(ListView):\n    class ProjectDetail(DetailView):\n    class ProjectCreate(CreateView):\n    class ProjectUpdate(UpdateView):\n    class ProjectDelete(DeleteView):\ntool/robot.py\n    \ntool/tst.py\n    \ntool/urls.py\n    \ntool/user.py\n    \ntool/user_views.py\n    class UserList(ListView):\n    class UserCreate(CreateView):\n    class UserDetail(DetailView):\n    class UserEdit(UpdateView):\n    class UserDelete(DeleteView):\n	bin/__init__.py\n    \nbin/app.py\n    \nbin/booknotes.py\n    \nbin/chapter.py\n    \nbin/data.py\n    \nbin/days.py\n    \nbin/diagrams.py\n    \nbin/doc.py\n    \nbin/files.py\n    \nbin/hourly.py\n    \nbin/hours.py\n    \nbin/i.py\n    \nbin/life.py\n    \nbin/log.py\n    \nbin/music.py\n    \nbin/n.py\n    \nbin/ntsh.py\n    \nbin/ops.py\n    \nbin/resize.py\n    \nbin/shell.py\n    \nbin/switches.py\n    \nbin/text.py\n        pattern = r'class (.*)\\(.*\\)'\nbin/todo.py\n    \nbin/tool.py\n    \nbin/user.py\n    \nbin/vc.py\n    \nbin/web.py\n    \nbin/wordpress.py\n    \nbin/x.py\n    \nhammer/__init__.py\n    \nhammer/secret_settings.py\n    \nhammer/settings.py\n    \nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    class HealthConfig(AppConfig):\nhealth/health.py\n    \nhealth/models.py\n    class HealthScore(models.Model):\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    class HealthView(TemplateView):\n    class HealthList(ListView):\n    class HealthEdit(UpdateView):\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    class LifeConfig(AppConfig):\nlife/life.py\n    \nlife/models.py\n    class Year(models.Model):\n    class Aspect(models.Model):\n    class Experience(models.Model):\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n    class LifeView(TemplateView):\n    class ExperienceView(ListView):\n    class YearView(ListView):\n    class LifeAdd(LoginRequiredMixin, RedirectView):\n    class LifeEdit(UpdateView):\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    class MybookConfig(AppConfig):\nmybook/models.py\n    class Author(models.Model):\n    class Book(models.Model):\nmybook/mybook.py\n    \nmybook/mybook_views.py\n    class MyBookDocDisplay(TemplateView):\n    class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):\n    class BookNotes(MyBookDocDisplay):\n    class CardView(MyBookDocDisplay):\n    class OutlineView(MyBookDocDisplay):\n    class DailyTask(RedirectView):\n    # class SeamansLog(MyBookDocDisplay):\n    class SeamansLog(RedirectView):\n    class SpiritualSelect(RedirectView):\n    class TabsView(MyBookDocDisplay):\nmybook/outline.py\n    \nmybook/task.py\n    \nmybook/tests.py\n    \nmybook/urls.py\n    \nsensei/__init__.py\n    \nsensei/admin.py\n    \nsensei/apps.py\n    class SenseiConfig(AppConfig):\nsensei/fix.py\n    \nsensei/models.py\n    class Course(models.Model):\n    class Student(models.Model):\n    class Lesson(models.Model):\n    class Requirements(models.Model):\n    class Review(models.Model):\n    class UrlGame(models.Model):\nsensei/review.py\n    \nsensei/sensei.py\n    \nsensei/student.py\n    \nsensei/tests.py\n    \nsensei/urlgame.py\n    \nsensei/urls.py\n    \nsensei/views.py\n    class GuideDoc(TemplateView):\n    class UncDocDisplay(TemplateView):\n    class UncEditReview(UpdateView):\n    class UncReviewFeedback(TemplateView):\n    class UncReading(TemplateView):\n    class UncRegister(FormView):\n        class EditDocForm(Form):\n    class UncRegistered(ListView):\n    class UncReviews(TemplateView):\n    class UncSlidesDisplay(TemplateView):\n    class UncStudent(TemplateView):\n    class UncUrlGameAnswer(FormView):\n        class UrlForm(Form):\n    class UncUrlGameQuestion(TemplateView):\n    class UncUrlGameDone(TemplateView):\nsuperuser/__init__.py\n    \nsuperuser/admin.py\n    \nsuperuser/admin_views.py\n    class AdminView(UserPassesTestMixin, TemplateView):\n    class DatabaseView(UserPassesTestMixin, TemplateView):\n    class DocView(UserPassesTestMixin, TemplateView):\n    class LogView(UserPassesTestMixin, TemplateView):\n    class MaterialView(TemplateView):\n    class SurrogateView(UserPassesTestMixin, TemplateView):\n    class TestView(UserPassesTestMixin, ListView):\n    class UsersView(UserPassesTestMixin, ListView):\nsuperuser/apps.py\n    class AdminConfig(AppConfig):\nsuperuser/initialize.py\n    \nsuperuser/models.py\n    class Administrator(models.Model):\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n    class Task (models.Model):\ntasks/summary.py\n    \ntasks/task.py\n    \ntasks/urls.py\n    \ntasks/views.py\n    class TaskBase(LoginRequiredMixin, ContextMixin):\n    class TaskDelete(DeleteView):\n    class TaskDetail(DetailView):\n    class TaskCreate(CreateView):\n    class TaskUpdate(TaskBase, UpdateView):\n    class TaskHome(TaskBase, TemplateView):\n    class TaskList(TaskBase, ListView):\n    class MyTime(TaskBase, TemplateView):\n    class TimeSummary(TaskBase, TemplateView):\n    class MissingDays(TaskBase, TemplateView):\n    class TaskImport(RedirectView):\n    class TaskExport(TaskBase, TemplateView):\ntest/__init__.py\n    \ntest/app_test.py\n    \ntest/archive_test.py\n    \ntest/booknotes_test.py\n    \ntest/css_test.py\n    \ntest/data_test.py\n    \ntest/doc_test.py\n    \ntest/health_test.py\n    \ntest/hourly_test.py\n    \ntest/i_test.py\n    \ntest/log_test.py\n    \ntest/ops_test.py\n    \ntest/page_test.py\n    \ntest/robot_test.py\n    \ntest/system_test.py\n    \ntest/text_test.py\n    \ntest/tst_test.py\n    \ntest/unc_test.py\n    \ntest/user_test.py\n    \ntest/vc_test.py\n    \ntest/wordpress_test.py\n    \ntool/__init__.py\n    \ntool/document.py\n    \ntool/domain.py\n    \ntool/email.py\n    \ntool/log.py\n    \ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n    class Command(BaseCommand):\ntool/models.py\n    class Test(models.Model):\n    class Page(models.Model):\ntool/notify.py\n    \ntool/page.py\n    \ntool/project.py\n    class ProjectList(ListView):\n    class ProjectDetail(DetailView):\n    class ProjectCreate(CreateView):\n    class ProjectUpdate(UpdateView):\n    class ProjectDelete(DeleteView):\ntool/robot.py\n    \ntool/tst.py\n    \ntool/urls.py\n    \ntool/user.py\n    \ntool/user_views.py\n    class UserList(ListView):\n    class UserCreate(CreateView):\n    class UserDetail(DetailView):\n    class UserEdit(UpdateView):\n    class UserDelete(DeleteView):\n
+31	hourly-list	\nHourly Tasks\n\n\n          echo "PATH=" `path`\n          echo "env=" `env`\n          echo Python: `which python`\n          # git status\n          x tst\n          x tst list\n          x tst send\n      \n\nDaily Tasks\n\n\n          # x spiritual article\n          # x seamanslog article\n          x data backup\n          # rm $p/log/django.log\n      \n	\nHourly Tasks\n\n\n          echo "PATH=" `path`\n          echo "env=" `env`\n          echo Python: `which python`\n          # git status\n          x tst\n          x tst list\n          x tst send\n      \n\nDaily Tasks\n\n\n          # x spiritual article\n          # x seamanslog article\n          x data backup\n          rm $p/log/django.log\n      \n
 82	task-month	   Total      420\nChurch        110\nFun            82\nPeople         58\nHire           47\nGrow           41\nWrite          33\nBusiness       18\nTools          17\nWAM             8\nSign            6\n	   Total      420\nChurch        110\nFun            82\nPeople         58\nHire           47\nGrow           41\nWrite          33\nBusiness       18\nTools          17\nWAM             8\nSign            6\n
 28	table-to-text	    a          b          c         \n    1          2          3         \n    4          5          6         \n    7          8          9         	    a          b          c         \n    1          2          3         \n    4          5          6         \n    7          8          9         
-17	app-show	no output	no output
-15	app-score	\nCode Summary            Files     Lines\n\n    App                   218     16287\n	\nCode Summary            Files     Lines\n\n    App                   218     16287\n
-18	app-signature	bin/__init__.py\n    \nbin/app.py\n     app_command(options)\n     app_help()\n     app_functions(args)\n     app_classes(args)\n     app_signature(args)\n     app_search_code(files, search_function)\n         print_indented(outline)\n             app_print(filename, children)\n     app_directories()\n     app_path(topic=None)\n     app_score()\n     app_search(args)\n     app_show(args=None)\n     app_source(args=None)\n     app_summary(args=None)\n     kill_server()\n     app_urls()\n         simplify(url)\n     run_server()\nbin/booknotes.py\n     booknotes_command(options)\n     booknotes_help(args=None)\n     booknotes_content(args)\n     booknotes_doc_path(doc=None)\n     booknotes_edit(args)\n     booknotes_excerpt(args)\n         booknotes()\n         excerpt(note)\n     booknotes_list(args)\nbin/chapter.py\n     compare_chapter(c)\n     update_chapter(c)\n     chapters()\n     update_all_chapters()\nbin/data.py\n     data_command(options)\n     data_backup(host)\n     data_count(host)\n     data_help()\n     data_load(host)\n     data_migrate()\n     data_reset()\n     data_save(host)\n         save(server, app=None)\n     data_server()\n     data_sql(host)\n     data_tables()\n     data_prune_tables()\nbin/days.py\n     days_command(options)\n     days_help(args=None)\n     date_str(t)\n     day_str(t)\n     days_ago(date,days)\n     days_list(args)\n     days_month(args)\n     days_weeks(num_weeks)\n         days_ahead(date, days)\n         enumerate_weeks(today, days)\n         weekly_schedule(filename, days)\n     enumerate_days(today, days)\n     to_date(s)\n     to_day(s)\n     today()\nbin/diagrams.py\n    \nbin/doc.py\n     doc_command(options)\n     doc_help()\n     doc_content(args)\n     doc_count(dir)\n     doc_directories()\n     doc_edit(args)\n     doc_fix()\n     doc_length(args=None)\n     doc_list(args=None)\n     doc_path(doc=None)\n     doc_pick(args)\n     doc_random_select(directory)\n     doc_redirect(page)\n     doc_score(args)\n     doc_search(args)\n     doc_send(args)\n     doc_send_text(args)\n     doc_show(args=None)\n     doc_show_directory(dir=None)\n     doc_stats(args)\n     doc_summary(args=None)\n     fix_chars(text)\n     doc_test(args)\n     doc_word_count(directory)\n     doc_words(args=None)\n     list_documents(dir=None)\nbin/files.py\n     accumulate_new_lines(accumulator, f2)\n     count_files(directory)\n     create_directory(path)\n     delete_file(filename)\n     do_command(cmd, input=None)\n     encode_text(text, encoding='utf-8')\n     fix_chars(text)\n     grep(pattern,file)\n     is_writable(path)\n     list_files(directory)\n     list_dirs(directory)\n     path_name (relative_filename)\n     print_list(lst)\n     print_list2(lst)\n     read_input()\n     read_json(filename)\n     read_file(filename)\n     read_text(f)\n     recursive_list(d)\n     time_sort_file(d)\n     write_text(filename, text, append=None)\n     write_file(filename, lines, append=None)\nbin/hourly.py\n     hourly_command(options)\n     hourly_help(args=None)\n     hourly_doc_path(doc=None)\n     hourly_edit()\n     hourly_list()\n     hourly_run()\n         execute(cmd)\n     hourly_show()\nbin/hours.py\n    #  hours_command(options)\n    #  hours_help(args=None)\n    #  activities_work()\n    #  activities_work_client()\n    #  activities_work_nonpaid()\n    #  activities_play()\n    #  activities_public()\n    #  activities_private()\n    #  activities()\n    #  hours_activity(args)\n    #  hours_add(args)\n    #      enumerate_days(today, days)\n    #      to_date(s)\n    #      date_str(t)\n    #      day_str(t)\n    #      days_ago(date,days)\n    #      month_of_days(start)\n    #  hours_days(args)\n    #  hours_doc_path(args)\n    #  hours_edit(args)\n    #  hours_list(args)\n    #  hours_tasks(args)\n    #  append_tasks(events, lines)\n    #      task_text(lines, start, end)\n    #  hours_show(args)\n    #  hours_summary(args)\n    #  hours_work(args)\n    #  is_day(line)\n    #  is_activity(line)\n    #  is_task(line)\n    #  list_events(args)\n    #  list_tasks(text)\n    #  months()\n    #  print_activities(label, times)\n    #  print_days(times, num_days)\n    #  print_score(times)\n    #      show_score(label, activities, ideal_hours)\n    #  print_table(labels, table)\n    #  print_tasks(results, activity=None)\n    #  print_total_hours(results, activity=None)\n    #      select_activity(record, activity)\n    #  print_total(label, times, activities=None, grand_total=None)\n    #  print_totals(label, times, activities=None, grand_total=None)\n    #  print_work(times, num_days)\n    #  total_activity(filename, times={})\n    #  total_columns(table)\n    #  activity_list(filename)\n    #  total_work_days(filename)\n    #  total_days(filename)\n    #  total_time(times, activities=None)\nbin/i.py\n     i_command(options)\n     i_help(args=None)\n     doc_path()\n     i_add(args)\n     i_edit(args)\n     i_list(args)\nbin/life.py\n     life_command(options)\n     life_doc_path(doc=None)\n     life_edit(doc)\n     life_help(args=None)\n     life_list(args)\n     life_publish(args)\n     life_show(args)\n     life_todo(args)\n     life_web(args)\n     life_words(args)\nbin/log.py\n     log_path()\n     log_command(options)\n     log(label,value=None)\n     log_exception()\n     log_clear()\n     log_read()\nbin/music.py\n     music_command(options)\n     music_help(args=None)\n     list_albums(args)\n     list_collections(args)\n     list_du(args)\n     list_tracks(args)\n     music_copy()\n     music_doc_path(doc=None)\n     music_edit(doc)\n     music_collection(name)\n     music_load(args)\n     music_list(args)\n     music_show(args)\n     music_sync(args)\nbin/n.py\n    \nbin/ntsh.py\n     ntsh_command(argv)\n     commit()\n     clean()\n     convert(f1,f2)\n     convert_png(f1,f2)\n     help()\n     hide()\n     list_files(dirs)\n     new_name(name)\n     name(args)\n     notes()\n     reorder(name)\n     status()\n     view()\n     web(page='%s/notes/fav_list' % archive)\n     zip_open()\n     zip_close()\nbin/ops.py\n     ops_command(options)\n     ops_help(cmd=None, args=None)\n     ops_cmd(args)\n     ops_console()\n     ops_deploy()\n     ops_log()\n     ops_restart()\n     ops_root(server=host, cmd='')\n     ops_update(args)\n     remote_command(server, cmd, user='django')\nbin/resize.py\n     save_image_file(filename, image, width, height, imtype)\n     resize_jpeg(filename)\n     resize_png(filename)\n    #  create_thumbnails(infile, photo)\n    #  resize_test()\nbin/shell.py\n     banner(name)\n     check_dirs(path, min=0, max=0)\n     check_dir_list(path, dir_list)\n     check_files(path, min=0, max=0)\n     check_file_list(path, dir_list)\n     check_lines(label, lines, min=0, max=10)\n     check_shell_lines(cmd, min=0, max=10)\n     differences(answer, correct)\n     dir_list(path)\n     dir_tree_list(path)\n     file_tree_list(path, filetype=None)\n     file_list(path, filetype=None)\n     file_path(d='', f='')\n     filter_types(files, filetype=None)\n     hostname()\n     line_match(word, text)\n     line_exclude(word, text)\n     line_count(path)\n     limit_lines(shell_command, min=None, max=None)\n     read_file(path)\n     shell(cmd)\n         command_line(cmd)\n     word_count(text)\n     write_file(path, text)\nbin/switches.py\n     server_type()\n     server_host(server)\nbin/text.py\n     text_command(options)\n     text_help(args=None)\n     find_agents(text)\n     find_anchors(text)\n     find_classes(text)\n     find_functions(text)\n     find_links(text)\n         link(anchor)\n     find_quotes(text)\n     find_signatures(text)\n        pattern = r'(.*\\(.*\\))'\n     find_urls(text)\n     markdown_list_links(host, lines)\n     markdown_list_string(mylist)\n     text_join(text)\n     text_lines(text)\n     text_match(match_pattern, doc)\n     text_no_match(match_pattern, doc)\n     text_outline(text)\n     text_outline_string(outline, depth=0)\n     text_markdown(outline, depth=1)\n         text_body(lines)\n     text_replace(doc, match_pattern, replace_pattern)\n     text_title(text)\n     text_body(text)\n     match_lines(text, pattern)\n     match_pattern(text, pattern)\n     transform_matches(text, match_pattern, select_pattern)\nbin/todo.py\n     todo_command(options)\n     recent_dates(days=3)\n     edit_task_file(date)\nbin/tool.py\n     tool_command(options)\n     tool_edit(args)\n     tool_help(self)\n     tool_list()\n     tool_length()\n     tool_read(args)\nbin/user.py\n    \nbin/vc.py\n     vc_command(options)\n     vc_help(args=None)\n     git_cmd(cmd)\n     git_filter()\n     vc_commit(args)\n     vc_diff(args)\n     vc_dirs()\n     vc_log(args)\n     vc_pull(args)\n     vc_push(args)\n     vc_status(args)\nbin/web.py\n     web_command(args)\n     web_help()\n     web(page)\n     web_path(topic=None)\nbin/wordpress.py\n     wordpress_command(options)\n     wordpress_help(args=None)\n     wordpress_doc_path(doc=None)\n     wordpress_edit(doc)\n     wordpress_list(args)\n     wordpress_host(args)\n     wordpress_ssh(args)\nbin/x.py\n     execute_command(cmd,args)\n     command_help(cmd,args)\n     command_scriptor(cmd, args)\nhammer/__init__.py\n    \nhammer/secret_settings.py\n    #  database_init()\n     user_reset(name, email, password)\nhammer/settings.py\n         ip_addresses()\nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    \nhealth/health.py\n     health_command(options)\n     health_doc_path(doc=None)\n     health_edit(args)\n     health_help(args=None)\n     health_list(args)\n     health_score()\n        #  total(row)\n        #  print_bar(lag,lead,average)\n        #  print_score(row, score)\n     average (num_list)\n     health_import(args)\n     health_web()\nhealth/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    #  health_menu(page)\n     health_settings(page='home')\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n     health_scores(objects)\n         average(num_list)\n         five_star(rating)\n         scores(row)\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    \nlife/life.py\n     query_labels()\n     query_get(pk)\n     query_year(age)\n     query_experiences(age=None)\n     experiences_lookup_table(age=None)\nlife/models.py\n         __unicode__(self)\n         __unicode__(self)\n         __unicode__(self)\n         get_absolute_url(self)\n     initialize()\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    \nmybook/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         name(self)\n         fields(self)\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         fields(self)\nmybook/mybook.py\n     mybook_path(page)\n    #  mybook_random_select(directory)\n    #  mybook_redirect(host, page, user)\n    #  mybook_site(title)\n     mybook_site_title(title)\n         site_title_text(page)\n     mybook_content(author, title)\n     main_menu(menu, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu, page)\n         menu_text(page)\n     booknotes_excerpt(doc)\n         booknotes_doc_path(doc=None)\n         booknotes(doc)\n         excerpt(note)\nmybook/mybook_views.py\n     domain_menu(domain, page)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n    #      get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/outline.py\n     has_kids(text, depth)\n     outline(text)\n     parse_outline(text, tree, depth)\n     print_node(name, depth=1, char='    ')\n     seperator(depth)\n     split_text(text, sep)\n     title(text, depth)\n     read_cards(doc)\n     tabs_data(doc)\n         tab_choice(i,tab)\nmybook/task.py\n     tasks_monthly(year, month)\n     recent_months()\n     months_data_table()\n     tasks_data_table(days)\n     days_data_table(days)\n    #  task_list(task)\n    #  task_list(date)\nmybook/tests.py\n    \nmybook/urls.py\n    \nsensei/__init__.py\n    \nsensei/admin.py\n    \nsensei/apps.py\n    \nsensei/fix.py\n     fix_reading_names()\n     fix_email_names()\n     stud(id)\n     name(name)\n     fix_reviews()\n     fix_reviews()\n     list_reviews()\n     clear_reviews()\n     test_reviews()\n     test_groups()\n     list_groups()\n     clear_reviews()\n     assign_new_reviews()\n     assign_url_game()\nsensei/models.py\n         __str__(self)\n         __unicode__(self)\n         __str__(self)\nsensei/review.py\n     assign_reviews(page, due, requirements)\n     count_score(r)\n     create_review(reviewer, designer, page, due, requirements)\n     get_review(id)\n     review_feedback(student_id)\n     review_groups()\n     review_pairs(groups)\n     student_reviews(student_id)\n     student_reviews_done(student_id)\nsensei/sensei.py\n     add_student(course, name, email, domain)\n     add_lesson(course, lesson, title, date)\n     course_lessons(course, page)\n     home_link(title)\n     query_students(course, student=None)\n     get_student(id)\n     get_student_email(email)\n     link(url, title=None)\n     make_link(href, text=None)\n     schedule()\n     slide_content_data(course, lesson)\n         adjust_markdown_headings(markdown)\n         format_slides(course, lesson)\n     slides_markdown(page)\nsensei/student.py\n     delete_students()\n     export_students()\n     fix_images(text, image_path)\n     import_students()\n     list_students()\n     reading_scores_table()\n     reading_table(scores)\n     reading_scores()\n     register_user_domain(name, email, password, domain)\n     student_scores(student_id)\n     student_totals()\n     site_settings(**kwargs)\n     students()\n     student(id)\nsensei/tests.py\n    \nsensei/urlgame.py\n     generate_url_question()\n     relative_path(p1, p2)\n     random_page()\n     random_file()\n     random_domain()\n     random_path()\nsensei/urls.py\n    \nsensei/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         form_valid(self, form)\n         get_success_url(self)\n    #  requirements()\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         form_valid(self, form)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         form_valid(self, form)\n         get_success_url(self)\n     url_feedback(answer, correct)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\nsuperuser/__init__.py\n    \nsuperuser/admin.py\n     admin_print_list()\n     admin_list()\n     admin_table()\n     admin_detail(a)\n     admin_get(pk)\n     database_info()\n     get_detail_data()\n     is_superuser(user)\n     log_text()\n     requesting_user(user)\n     test_list()\n     test_labels()\n     test_results()\n     test_table()\n     test_text(t)\n     text_head(text, lines=3)\n     text_lines(lines, columns=30)\n     user_detail(user)\n     user_labels()\n     user_table(users)\nsuperuser/admin_views.py\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\nsuperuser/apps.py\n    \nsuperuser/initialize.py\n     user_reset(name, email, password)\nsuperuser/models.py\n         __unicode__(self)\n         as_row(self)\n         labels()\n         values(self)\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n         __unicode__(self)\n        #  get_absolute_url(self)\n         as_row(self)\n         labels()\ntasks/summary.py\n     activity_summary(activity)\n         active_tab(a, t)\n     activities_work()\n     sort_activity(data)\n     bad_days()\n     bad_days_data(days)\n     combine_work_tasks(table, total)\n     tasks_activity(activity)\n     task_activity_details(activity)\n     task_detail(task)\n     query_hours(task, days)\n     task_filter(tasks, activity)\n     time_data()\n     time_totals(totals)\n         time_total(totals, time)\n     percent(actual, total)\n     percent_totals(totals, subtotals)\n     review_totals(totals, subtotals)\n         percent_difference(actual, total, ideal)\n         task_percents(totals, task, index, ideals)\n     time_filter(tasks, days)\n     task_text_list(tasks)\n         format(t)\n     task_list(days=8)\n     time_summary(days)\n     work_types()\n     write_task_files(tlist)\n     task_import_files()\n         task_details(f)\n         read_task_file(f)\n         new_task(date, name, hours, notes)\ntasks/task.py\n     task_command(self, args)\n     task_help(self)\n     days_ago(days)\n     hourly_total(tasks)\n     monthly_hours_invested(task_type, year, month)\n     last_month_hours_invested(task_type)\n     tasks_last_month()\n     task_data_table()\n     monthly_totals(year, month)\n     full_totals()\n     print_summary(summary, start=None, end=None)\n     recent_weeks()\n     recent_months()\n     sort_totals(categories)\n     task_add(self, args)\n     task_delete(self, args)\n     task_details(query, hours)\n         record(name, hours, total)\n     task_doc_path(args)\n     task_edit(self, args)\n     task_get(self, args)\n     task_import(args)\n     task_history(args)\n         print_task_history(tasks)\n     task_list(self, args)\n     task_month(args)\n    #  task_read_events(args)\n     task_read_health(args)\n     task_rename(args)\n     task_set_name(args, task)\n     task_select(task_type=None, date=None, days=None)\n     task_summary(args)\n     task_totals()\n     task_types()\n     task_print_types()\n     task_web()\n     task_week(args)\n     task_work()\n     tasks_monthly(year, month)\n     tasks_weekly(year, month, day)\n     total_hours_invested(task_type)\n     weekly_hours_invested(task_type, year, month, day)\n     weekly_totals(year, month, day)\n     task_report(year, month)\n         query_month_tasks(year, month)\n         task_entry(task)\n     save_monthly_reports(year)\n         save_report(report, month)\n     fix_tasks()\n     test_tasks()\ntasks/urls.py\n    \ntasks/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\ntest/__init__.py\n    \ntest/app_test.py\n     app_classes_test()\n     app_functions_test()\n     app_list_test()\n     app_switches_test()\n     app_settings_test()\n     app_show_test()\n     app_signature_test()\n     app_url_test()\ntest/archive_test.py\n     archive_files_test()\n     archive_dirs_test()\n     archive_nts_test()\n     archive_repo_test()\n         list_archives()\ntest/booknotes_test.py\n     booknotes_list_test()\n     booknotes_lines_test()\ntest/css_test.py\n     css_mybook_test()\n     css_unc_test()\n     css_slides_test()\ntest/data_test.py\n     data_files_test()\n     data_save_test()\n     data_tables_test()\n     data_migrate_test()\ntest/doc_test.py\n    #  doc_test()\n    #  doc_help_test()\n    #  doc_search_test()\n    #  doc_scan_test()\n    #  doc_file_test()\n    #  doc_file_missing_test()\n    #  doc_consolidate()\n    #  doc_render_test()\n    #  doc_encoding_test()\ntest/health_test.py\n     health_list_test()\n     health_score_test()\ntest/hourly_test.py\n     hourly_list_test()\n     hourly_show_test()\ntest/i_test.py\n     i_list_test()\ntest/log_test.py\n     log_length_test()\ntest/ops_test.py\n    #  ops_git_pull_test()\n     ops_help_test()\n     ops_server_test()\n     ops_server_type_test()\n     ops_status_test()\ntest/page_test.py\n     check_page(url, min=1, max=1)\n     page_list_test()\n     page_text_test()\n     page_diff_test()\n     page_sites_test()\ntest/robot_test.py\n     robot_list_test()\n     robot_results_test()\n    #  robot_show_test()\ntest/system_test.py\n     system_bin_test()\n     system_cron_test()\n     system_disk_free_test ()\n     system_env_test()\n     system_files_count_test()\n     system_host_test()\n     system_ip_test()\n     system_pandoc_test()\n     system_python_files_test()\n     system_python_version_test()\n     system_python_virtualenv_test()\ntest/text_test.py\n     text_help_test()\n     text_match_test()\n     text_no_match_test()\n     text_agents_test()\n     text_outline_test()\n     text_markdown_test()\n     text_format_test()\n     text_round_trip_test()\n     text_grep_test()\n     text_findall_test()\n     text_functions_test()\n     text_select_lines_test()\n     text_url_test()\n     text_links_test()\n    #  text_transforms_test()\n    #      transform(test_case)\n     text_signatures_test()\n     text_anchors_test()\n     text_div_test()\ntest/tst_test.py\n     tst_test()\n     tst_time_test()\ntest/unc_test.py\n     check_page(url, min=1, max=1)\n     unc_files_test()\n     unc_docs_test()\n     unc_site_test()\ntest/user_test.py\n    #  user_import_test()\n    #  user_export_test()\n     user_list_test()\ntest/vc_test.py\n     vc_status_test()\n     vc_pull_test()\ntest/wordpress_test.py\n     wordpress_list_test()\n     wordpress_host_test()\ntool/__init__.py\n    \ntool/document.py\n     doc_cards(page)\n     doc_content(page)\n     doc_dir_exists(title)\n     doc_exists(title)\n     doc_html_text(page, image_path=None)\n     doc_link(title)\n     doc_path(page)\n     domain_doc(domain, page)\n     file_to_html(path, image_path=None)\n         fix_images(text)\n     markdown_to_html(markdown_path, html_path)\n     read_markdown(path)\n     text_to_html(text)\n     title(p1)\n     write_html_file(path, html)\ntool/domain.py\n     domain_title(domain)\n     domain_directory(domain)\ntool/email.py\n     email_command(options)\n     email_help()\n     email_args(args, use_html=True)\n     send_test_email()\n     send_file_email(args)\n     send_doc_email(args)\n     send_text_email(args)\n     send_html_email(args)\n     send_template_message(emailTo, title, template, data={})\ntool/log.py\n     log(text, value=None)\n     log_exception()\n     log_json(text, data)\n     log_file()\n     show_log()\n     log_notifications(title, recipients)\n     log_page(request, parms='')\ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n         add_arguments(self, parser)\n         handle(self, *args, **options)\n         help(self)\ntool/models.py\n    \ntool/notify.py\n     notify_test_results()\n     notify_test_email()\ntool/page.py\n     page_command(self, options)\n     page_help(self)\n     page_add(self, args)\n     page_delete(self, args)\n     page_diff(self, args)\n         show_diff(page)\n     page_expect(self, args)\n     page_html(self, args)\n         show_output(page)\n     page_like(self, args)\n         like_page(page)\n     page_list(self)\n     page_lookup(url)\n     page_reset(self)\n     page_results()\n     page_text(self, args)\n         show_output(page)            \ntool/project.py\n     project_add(self, args)\n     project_command(self, options)\n     project_delete(self, args)\n     project_get(self, args)\n     project_help(self)\n     project_list(self)\n     project_lookup(name)\ntool/robot.py\n     robot_command(options)\n     robot_help(args=None)\n     robot_doc_path(doc=None)\n     robot_fetch_page(url)\n     robot_get_page(browser, page)\n     robot_list()\n     robot_login(browser,page)\n     robot_results()\n     robot_run()\ntool/tst.py\n     tst_find()\n     get_module(modulename)\n     test_map(modulename)\n         test_entry(entry)\n         tests(module)\n     tst_command(self, args)\n     test_dictionary()\n         module_list(directory)\n         test_name(module)\n     tst_diff(test_name)\n     tst_edit(self, args)\n     tst_help(self)\n     tst_like(self,args)\n     tst_list(self,args)\n     tst_output(self,args)\n     tst_register(tests)\n     tst_results()\n         show_differences(t)\n     tst_run(self,args)\n         run_test(self,test_entry)\n     tst_send(self,args)\ntool/urls.py\n    \ntool/user.py\n     user_command(self, options)\n     user_help()\n     user_add(name, email, password='test')\n     user_delete(args)\n     user_export(self, args)\n     user_get(pk)\n     user_import(self, args)\n     user_list()\n     user_password(username, password)\n     user_lookup(name, email=None)\n     user_file_path(args)\n     user_fix_name(args)\n     show_users()\n     reset_passwords()\ntool/user_views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n	bin/__init__.py\n    \nbin/app.py\n     app_command(options)\n     app_help()\n     app_functions(args)\n     app_classes(args)\n     app_signature(args)\n     app_search_code(files, search_function)\n         print_indented(outline)\n             app_print(filename, children)\n     app_directories()\n     app_path(topic=None)\n     app_score()\n     app_search(args)\n     app_show(args=None)\n     app_source(args=None)\n     app_summary(args=None)\n     kill_server()\n     app_urls()\n         simplify(url)\n     run_server()\nbin/booknotes.py\n     booknotes_command(options)\n     booknotes_help(args=None)\n     booknotes_content(args)\n     booknotes_doc_path(doc=None)\n     booknotes_edit(args)\n     booknotes_excerpt(args)\n         booknotes()\n         excerpt(note)\n     booknotes_list(args)\nbin/chapter.py\n     compare_chapter(c)\n     update_chapter(c)\n     chapters()\n     update_all_chapters()\nbin/data.py\n     data_command(options)\n     data_backup(host)\n     data_count(host)\n     data_help()\n     data_load(host)\n     data_migrate()\n     data_reset()\n     data_save(host)\n         save(server, app=None)\n     data_server()\n     data_sql(host)\n     data_tables()\n     data_prune_tables()\nbin/days.py\n     days_command(options)\n     days_help(args=None)\n     date_str(t)\n     day_str(t)\n     days_ago(date,days)\n     days_list(args)\n     days_month(args)\n     days_weeks(num_weeks)\n         days_ahead(date, days)\n         enumerate_weeks(today, days)\n         weekly_schedule(filename, days)\n     enumerate_days(today, days)\n     to_date(s)\n     to_day(s)\n     today()\nbin/diagrams.py\n    \nbin/doc.py\n     doc_command(options)\n     doc_help()\n     doc_content(args)\n     doc_count(dir)\n     doc_directories()\n     doc_edit(args)\n     doc_fix()\n     doc_length(args=None)\n     doc_list(args=None)\n     doc_path(doc=None)\n     doc_pick(args)\n     doc_random_select(directory)\n     doc_redirect(page)\n     doc_score(args)\n     doc_search(args)\n     doc_send(args)\n     doc_send_text(args)\n     doc_show(args=None)\n     doc_show_directory(dir=None)\n     doc_stats(args)\n     doc_summary(args=None)\n     fix_chars(text)\n     doc_test(args)\n     doc_word_count(directory)\n     doc_words(args=None)\n     list_documents(dir=None)\nbin/files.py\n     accumulate_new_lines(accumulator, f2)\n     count_files(directory)\n     create_directory(path)\n     delete_file(filename)\n     do_command(cmd, input=None)\n     encode_text(text, encoding='utf-8')\n     fix_chars(text)\n     grep(pattern,file)\n     is_writable(path)\n     list_files(directory)\n     list_dirs(directory)\n     path_name (relative_filename)\n     print_list(lst)\n     print_list2(lst)\n     read_input()\n     read_json(filename)\n     read_file(filename)\n     read_text(f)\n     recursive_list(d)\n     time_sort_file(d)\n     write_text(filename, text, append=None)\n     write_file(filename, lines, append=None)\nbin/hourly.py\n     hourly_command(options)\n     hourly_help(args=None)\n     hourly_doc_path(doc=None)\n     hourly_edit()\n     hourly_list()\n     hourly_run()\n         execute(cmd)\n     hourly_show()\nbin/hours.py\n    #  hours_command(options)\n    #  hours_help(args=None)\n    #  activities_work()\n    #  activities_work_client()\n    #  activities_work_nonpaid()\n    #  activities_play()\n    #  activities_public()\n    #  activities_private()\n    #  activities()\n    #  hours_activity(args)\n    #  hours_add(args)\n    #      enumerate_days(today, days)\n    #      to_date(s)\n    #      date_str(t)\n    #      day_str(t)\n    #      days_ago(date,days)\n    #      month_of_days(start)\n    #  hours_days(args)\n    #  hours_doc_path(args)\n    #  hours_edit(args)\n    #  hours_list(args)\n    #  hours_tasks(args)\n    #  append_tasks(events, lines)\n    #      task_text(lines, start, end)\n    #  hours_show(args)\n    #  hours_summary(args)\n    #  hours_work(args)\n    #  is_day(line)\n    #  is_activity(line)\n    #  is_task(line)\n    #  list_events(args)\n    #  list_tasks(text)\n    #  months()\n    #  print_activities(label, times)\n    #  print_days(times, num_days)\n    #  print_score(times)\n    #      show_score(label, activities, ideal_hours)\n    #  print_table(labels, table)\n    #  print_tasks(results, activity=None)\n    #  print_total_hours(results, activity=None)\n    #      select_activity(record, activity)\n    #  print_total(label, times, activities=None, grand_total=None)\n    #  print_totals(label, times, activities=None, grand_total=None)\n    #  print_work(times, num_days)\n    #  total_activity(filename, times={})\n    #  total_columns(table)\n    #  activity_list(filename)\n    #  total_work_days(filename)\n    #  total_days(filename)\n    #  total_time(times, activities=None)\nbin/i.py\n     i_command(options)\n     i_help(args=None)\n     doc_path()\n     i_add(args)\n     i_edit(args)\n     i_list(args)\nbin/life.py\n     life_command(options)\n     life_doc_path(doc=None)\n     life_edit(doc)\n     life_help(args=None)\n     life_list(args)\n     life_publish(args)\n     life_show(args)\n     life_todo(args)\n     life_web(args)\n     life_words(args)\nbin/log.py\n     log_path()\n     log_command(options)\n     log(label,value=None)\n     log_exception()\n     log_clear()\n     log_read()\nbin/music.py\n     music_command(options)\n     music_help(args=None)\n     list_albums(args)\n     list_collections(args)\n     list_du(args)\n     list_tracks(args)\n     music_copy()\n     music_doc_path(doc=None)\n     music_edit(doc)\n     music_collection(name)\n     music_load(args)\n     music_list(args)\n     music_show(args)\n     music_sync(args)\nbin/n.py\n    \nbin/ntsh.py\n     ntsh_command(argv)\n     commit()\n     clean()\n     convert(f1,f2)\n     convert_png(f1,f2)\n     help()\n     hide()\n     list_files(dirs)\n     new_name(name)\n     name(args)\n     notes()\n     reorder(name)\n     status()\n     view()\n     web(page='%s/notes/fav_list' % archive)\n     zip_open()\n     zip_close()\nbin/ops.py\n     ops_command(options)\n     ops_help(cmd=None, args=None)\n     ops_cmd(args)\n     ops_console()\n     ops_deploy()\n     ops_log()\n     ops_restart()\n     ops_root(server=host, cmd='')\n     ops_update(args)\n     remote_command(server, cmd, user='django')\nbin/resize.py\n     save_image_file(filename, image, width, height, imtype)\n     resize_jpeg(filename)\n     resize_png(filename)\n    #  create_thumbnails(infile, photo)\n    #  resize_test()\nbin/shell.py\n     banner(name)\n     check_dirs(path, min=0, max=0)\n     check_dir_list(path, dir_list)\n     check_files(path, min=0, max=0)\n     check_file_list(path, dir_list)\n     check_lines(label, lines, min=0, max=10)\n     check_shell_lines(cmd, min=0, max=10)\n     differences(answer, correct)\n     dir_list(path)\n     dir_tree_list(path)\n     file_tree_list(path, filetype=None)\n     file_list(path, filetype=None)\n     file_path(d='', f='')\n     filter_types(files, filetype=None)\n     hostname()\n     line_match(word, text)\n     line_exclude(word, text)\n     line_count(path)\n     limit_lines(shell_command, min=None, max=None)\n     read_file(path)\n     shell(cmd)\n         command_line(cmd)\n     word_count(text)\n     write_file(path, text)\nbin/switches.py\n     server_type()\n     server_host(server)\nbin/text.py\n     text_command(options)\n     text_help(args=None)\n     find_agents(text)\n     find_anchors(text)\n     find_classes(text)\n     find_functions(text)\n     find_links(text)\n         link(anchor)\n     find_quotes(text)\n     find_signatures(text)\n        pattern = r'(.*\\(.*\\))'\n     find_urls(text)\n     markdown_list_links(host, lines)\n     markdown_list_string(mylist)\n     text_join(text)\n     text_lines(text)\n     text_match(match_pattern, doc)\n     text_no_match(match_pattern, doc)\n     text_outline(text)\n     text_outline_string(outline, depth=0)\n     text_markdown(outline, depth=1)\n         text_body(lines)\n     text_replace(doc, match_pattern, replace_pattern)\n     text_title(text)\n     text_body(text)\n     match_lines(text, pattern)\n     match_pattern(text, pattern)\n     transform_matches(text, match_pattern, select_pattern)\nbin/todo.py\n     todo_command(options)\n     recent_dates(days=3)\n     edit_task_file(date)\nbin/tool.py\n     tool_command(options)\n     tool_edit(args)\n     tool_help(self)\n     tool_list()\n     tool_length()\n     tool_read(args)\nbin/user.py\n    \nbin/vc.py\n     vc_command(options)\n     vc_help(args=None)\n     git_cmd(cmd)\n     git_filter()\n     vc_commit(args)\n     vc_diff(args)\n     vc_dirs()\n     vc_log(args)\n     vc_pull(args)\n     vc_push(args)\n     vc_status(args)\nbin/web.py\n     web_command(args)\n     web_help()\n     web(page)\n     web_path(topic=None)\nbin/wordpress.py\n     wordpress_command(options)\n     wordpress_help(args=None)\n     wordpress_doc_path(doc=None)\n     wordpress_edit(doc)\n     wordpress_list(args)\n     wordpress_host(args)\n     wordpress_ssh(args)\nbin/x.py\n     execute_command(cmd,args)\n     command_help(cmd,args)\n     command_scriptor(cmd, args)\nhammer/__init__.py\n    \nhammer/secret_settings.py\n    #  database_init()\n     user_reset(name, email, password)\nhammer/settings.py\n         ip_addresses()\nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    \nhealth/health.py\n     health_command(options)\n     health_doc_path(doc=None)\n     health_edit(args)\n     health_help(args=None)\n     health_list(args)\n     health_score()\n        #  total(row)\n        #  print_bar(lag,lead,average)\n        #  print_score(row, score)\n     average (num_list)\n     health_import(args)\n     health_web()\nhealth/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    #  health_menu(page)\n     health_settings(page='home')\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n     health_scores(objects)\n         average(num_list)\n         five_star(rating)\n         scores(row)\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    \nlife/life.py\n     query_labels()\n     query_get(pk)\n     query_year(age)\n     query_experiences(age=None)\n     experiences_lookup_table(age=None)\nlife/models.py\n         __unicode__(self)\n         __unicode__(self)\n         __unicode__(self)\n         get_absolute_url(self)\n     initialize()\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    \nmybook/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         name(self)\n         fields(self)\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         fields(self)\nmybook/mybook.py\n     mybook_path(page)\n    #  mybook_random_select(directory)\n    #  mybook_redirect(host, page, user)\n    #  mybook_site(title)\n     mybook_site_title(title)\n         site_title_text(page)\n     mybook_content(author, title)\n     main_menu(menu, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu, page)\n         menu_text(page)\n     booknotes_excerpt(doc)\n         booknotes_doc_path(doc=None)\n         booknotes(doc)\n         excerpt(note)\nmybook/mybook_views.py\n     domain_menu(domain, page)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n    #      get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/outline.py\n     has_kids(text, depth)\n     outline(text)\n     parse_outline(text, tree, depth)\n     print_node(name, depth=1, char='    ')\n     seperator(depth)\n     split_text(text, sep)\n     title(text, depth)\n     read_cards(doc)\n     tabs_data(doc)\n         tab_choice(i,tab)\nmybook/task.py\n     tasks_monthly(year, month)\n     recent_months()\n     months_data_table()\n     tasks_data_table(days)\n     days_data_table(days)\n    #  task_list(task)\n    #  task_list(date)\nmybook/tests.py\n    \nmybook/urls.py\n    \nsensei/__init__.py\n    \nsensei/admin.py\n    \nsensei/apps.py\n    \nsensei/fix.py\n     fix_reading_names()\n     fix_email_names()\n     stud(id)\n     name(name)\n     fix_reviews()\n     fix_reviews()\n     list_reviews()\n     clear_reviews()\n     test_reviews()\n     test_groups()\n     list_groups()\n     clear_reviews()\n     assign_new_reviews()\n     assign_url_game()\nsensei/models.py\n         __str__(self)\n         __unicode__(self)\n         __str__(self)\nsensei/review.py\n     assign_reviews(page, due, requirements)\n     count_score(r)\n     create_review(reviewer, designer, page, due, requirements)\n     get_review(id)\n     review_feedback(student_id)\n     review_groups()\n     review_pairs(groups)\n     student_reviews(student_id)\n     student_reviews_done(student_id)\nsensei/sensei.py\n     add_student(course, name, email, domain)\n     content_lessons(course)\n     course_lessons(course, page)\n     guide_doc_path(doc=None)\n     guide_file(course, doc)\n     guide_schedule(lesson)\n     home_link(title)\n     query_students(course, student=None)\n     get_student(id)\n     get_student_email(email)\n     domain_data(course)\n         domains(course)\n     read_student_list()\n     register_students()\n     student_test_links(student)\n         url(student, page='')\n     lesson_cards(course, lesson)\n         fix_images(text)\n         lesson_markdown(path)\n         card_text(tab_title, tab_text)\n         card_title(tab_text)\n     lesson_data(course, lesson, text)\n         tab_choice(i, tab)\n         lesson_tabs_data(course, lesson)\n     lesson_info(lesson)\n     link(url, title=None)\n     make_link(href, text=None)\n     main_menu(course, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu_file)\n     missing_page_info(title)\n     page_info(course, title)\n     read_file(course, doc)\n         no_blank_lines(text)\n     schedule_data(course, table)\n         course_part_data(title, table, first, last)\n         lesson_link(lesson)\n         set_links(table)\n         course_parts(table, course)\n     site_titles(course)\n     slide_content_data(course, lesson)\n         adjust_markdown_headings(markdown)\n         format_slides(course, lesson)\n     slides_markdown(page)\n     test_links(course)\n     view_info(kwargs)\n         view_data(course, title, lesson)\nsensei/student.py\n     delete_students()\n     export_students()\n     fix_images(text, image_path)\n     import_students()\n     list_students()\n     reading_scores_table()\n     reading_table(scores)\n     reading_scores()\n     register_user_domain(name, email, password, domain)\n     student_scores(student_id)\n     student_totals()\n     site_settings(**kwargs)\n     students()\n     student(id)\nsensei/tests.py\n    \nsensei/urlgame.py\n     generate_url_question()\n     relative_path(p1, p2)\n     random_page()\n     random_file()\n     random_domain()\n     random_path()\nsensei/urls.py\n    \nsensei/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         form_valid(self, form)\n         get_success_url(self)\n    #  requirements()\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         form_valid(self, form)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         form_valid(self, form)\n         get_success_url(self)\n     url_feedback(answer, correct)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\nsuperuser/__init__.py\n    \nsuperuser/admin.py\n     admin_print_list()\n     admin_list()\n     admin_table()\n     admin_detail(a)\n     admin_get(pk)\n     database_info()\n     get_detail_data()\n     is_superuser(user)\n     log_text()\n     requesting_user(user)\n     test_list()\n     test_labels()\n     test_results()\n     test_table()\n     test_text(t)\n     text_head(text, lines=3)\n     text_lines(lines, columns=30)\n     user_detail(user)\n     user_labels()\n     user_table(users)\nsuperuser/admin_views.py\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\nsuperuser/apps.py\n    \nsuperuser/initialize.py\n     user_reset(name, email, password)\nsuperuser/models.py\n         __unicode__(self)\n         as_row(self)\n         labels()\n         values(self)\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n         __unicode__(self)\n        #  get_absolute_url(self)\n         as_row(self)\n         labels()\ntasks/summary.py\n     activity_summary(activity)\n         active_tab(a, t)\n     activities_work()\n     sort_activity(data)\n     bad_days()\n     bad_days_data(days)\n     combine_work_tasks(table, total)\n     tasks_activity(activity)\n     task_activity_details(activity)\n     task_detail(task)\n     query_hours(task, days)\n     task_filter(tasks, activity)\n     time_data()\n     time_totals(totals)\n         time_total(totals, time)\n     percent(actual, total)\n     percent_totals(totals, subtotals)\n     review_totals(totals, subtotals)\n         percent_difference(actual, total, ideal)\n         task_percents(totals, task, index, ideals)\n     time_filter(tasks, days)\n     task_text_list(tasks)\n         format(t)\n     task_list(days=8)\n     time_summary(days)\n     work_types()\n     write_task_files(tlist)\n     task_import_files()\n         task_details(f)\n         read_task_file(f)\n         new_task(date, name, hours, notes)\ntasks/task.py\n     task_command(self, args)\n     task_help(self)\n     days_ago(days)\n     hourly_total(tasks)\n     monthly_hours_invested(task_type, year, month)\n     last_month_hours_invested(task_type)\n     tasks_last_month()\n     task_data_table()\n     monthly_totals(year, month)\n     full_totals()\n     print_summary(summary, start=None, end=None)\n     recent_weeks()\n     recent_months()\n     sort_totals(categories)\n     task_add(self, args)\n     task_delete(self, args)\n     task_details(query, hours)\n         record(name, hours, total)\n     task_doc_path(args)\n     task_edit(self, args)\n     task_get(self, args)\n     task_import(args)\n     task_history(args)\n         print_task_history(tasks)\n     task_list(self, args)\n     task_month(args)\n    #  task_read_events(args)\n     task_read_health(args)\n     task_rename(args)\n     task_set_name(args, task)\n     task_select(task_type=None, date=None, days=None)\n     task_summary(args)\n     task_totals()\n     task_types()\n     task_print_types()\n     task_web()\n     task_week(args)\n     task_work()\n     tasks_monthly(year, month)\n     tasks_weekly(year, month, day)\n     total_hours_invested(task_type)\n     weekly_hours_invested(task_type, year, month, day)\n     weekly_totals(year, month, day)\n     task_report(year, month)\n         query_month_tasks(year, month)\n         task_entry(task)\n     save_monthly_reports(year)\n         save_report(report, month)\n     fix_tasks()\n     test_tasks()\ntasks/urls.py\n    \ntasks/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\ntest/__init__.py\n    \ntest/app_test.py\n     app_classes_test()\n     app_functions_test()\n     app_list_test()\n     app_switches_test()\n     app_settings_test()\n     app_show_test()\n     app_signature_test()\n     app_url_test()\ntest/archive_test.py\n     archive_files_test()\n     archive_dirs_test()\n     archive_nts_test()\n     archive_repo_test()\n         list_archives()\ntest/booknotes_test.py\n     booknotes_list_test()\n     booknotes_lines_test()\ntest/css_test.py\n     css_mybook_test()\n     css_unc_test()\n     css_slides_test()\ntest/data_test.py\n     data_files_test()\n     data_save_test()\n     data_tables_test()\n     data_migrate_test()\ntest/doc_test.py\n    #  doc_test()\n    #  doc_help_test()\n    #  doc_search_test()\n    #  doc_scan_test()\n    #  doc_file_test()\n    #  doc_file_missing_test()\n    #  doc_consolidate()\n    #  doc_render_test()\n    #  doc_encoding_test()\ntest/health_test.py\n     health_list_test()\n     health_score_test()\ntest/hourly_test.py\n     hourly_list_test()\n     hourly_show_test()\ntest/i_test.py\n     i_list_test()\ntest/log_test.py\n     log_length_test()\ntest/ops_test.py\n    #  ops_git_pull_test()\n     ops_help_test()\n     ops_server_test()\n     ops_server_type_test()\n     ops_status_test()\ntest/page_test.py\n     check_page(url, min=1, max=1)\n     page_list_test()\n     page_text_test()\n     page_diff_test()\n     page_sites_test()\ntest/robot_test.py\n     robot_list_test()\n     robot_results_test()\n    #  robot_show_test()\ntest/system_test.py\n     system_bin_test()\n     system_cron_test()\n     system_disk_free_test ()\n     system_env_test()\n     system_files_count_test()\n     system_host_test()\n     system_ip_test()\n     system_pandoc_test()\n     system_python_files_test()\n     system_python_version_test()\n     system_python_virtualenv_test()\ntest/text_test.py\n     text_help_test()\n     text_match_test()\n     text_no_match_test()\n     text_agents_test()\n     text_outline_test()\n     text_markdown_test()\n     text_format_test()\n     text_round_trip_test()\n     text_grep_test()\n     text_findall_test()\n     text_functions_test()\n     text_select_lines_test()\n     text_url_test()\n     text_links_test()\n    #  text_transforms_test()\n    #      transform(test_case)\n     text_signatures_test()\n     text_anchors_test()\n     text_div_test()\ntest/tst_test.py\n     tst_test()\n     tst_time_test()\ntest/unc_test.py\n     check_page(url, min=1, max=1)\n     unc_files_test()\n     unc_docs_test()\n     unc_site_test()\ntest/user_test.py\n    #  user_import_test()\n    #  user_export_test()\n     user_list_test()\ntest/vc_test.py\n     vc_status_test()\n     vc_pull_test()\ntest/wordpress_test.py\n     wordpress_list_test()\n     wordpress_host_test()\ntool/__init__.py\n    \ntool/document.py\n     doc_cards(page)\n     doc_content(page)\n     doc_dir_exists(title)\n     doc_exists(title)\n     doc_html_text(page, image_path=None)\n     doc_link(title)\n     doc_path(page)\n     domain_doc(domain, page)\n     file_to_html(path, image_path=None)\n         fix_images(text)\n     markdown_to_html(markdown_path, html_path)\n     read_markdown(path)\n     text_to_html(text)\n     title(p1)\n     write_html_file(path, html)\ntool/domain.py\n     domain_title(domain)\n     domain_directory(domain)\ntool/email.py\n     email_command(options)\n     email_help()\n     email_args(args, use_html=True)\n     send_support_request(title, text)\n     send_file_email(args)\n     send_doc_email(args)\n     send_text_email(args)\n     send_html_email(args)\n     send_template_message(emailTo, title, template, data={})\ntool/log.py\n     log(text, value=None)\n     log_exception()\n     log_json(text, data)\n     log_file()\n     show_log()\n     log_notifications(title, recipients)\n     log_page(request, parms='')\ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n         add_arguments(self, parser)\n         handle(self, *args, **options)\n         help(self)\ntool/models.py\n    \ntool/notify.py\n     notify_test_results()\n     notify_test_email()\ntool/page.py\n     page_command(self, options)\n     page_help(self)\n     page_add(self, args)\n     page_delete(self, args)\n     page_diff(self, args)\n         show_diff(page)\n     page_expect(self, args)\n     page_html(self, args)\n         show_output(page)\n     page_like(self, args)\n         like_page(page)\n     page_list(self)\n     page_lookup(url)\n     page_reset(self)\n     page_results()\n     page_text(self, args)\n         show_output(page)            \ntool/project.py\n     project_add(self, args)\n     project_command(self, options)\n     project_delete(self, args)\n     project_get(self, args)\n     project_help(self)\n     project_list(self)\n     project_lookup(name)\ntool/robot.py\n     robot_command(options)\n     robot_help(args=None)\n     robot_doc_path(doc=None)\n     robot_fetch_page(url)\n     robot_get_page(browser, page)\n     robot_list()\n     robot_login(browser,page)\n     robot_results()\n     robot_run()\ntool/tst.py\n     tst_find()\n     get_module(modulename)\n     test_map(modulename)\n         test_entry(entry)\n         tests(module)\n     tst_command(self, args)\n     test_dictionary()\n         module_list(directory)\n         test_name(module)\n     tst_diff(test_name)\n     tst_edit(self, args)\n     tst_help(self)\n     tst_like(self,args)\n     tst_list(self,args)\n     tst_output(self,args)\n     tst_register(tests)\n     tst_results()\n         show_differences(t)\n     tst_run(self,args)\n         run_test(self,test_entry)\n     tst_send(self,args)\ntool/urls.py\n    \ntool/user.py\n     user_command(self, options)\n     user_help()\n     user_add(name, email, password='test')\n     user_delete(args)\n     user_export(self, args)\n     user_get(pk)\n     user_import(self, args)\n     user_list()\n     user_password(username, password)\n     user_lookup(name, email=None)\n     user_file_path(args)\n     user_fix_name(args)\n     show_users()\n     reset_passwords()\ntool/user_views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n
-134	booknotes-list	booknotes list\nExecution-quotes.html\nSiteTitle\nNext100Years\nThinking-quotes.html\nEssentialism\nOriginals-quotes.html\nPresentOverPerfect\nPrinciples-quotes.html\nActivateYourBrain-quotes.html\nEssentialism-quote.html\nIndex\nExecution\nIntegrity-quotes.html\nGoodIdeas-quotes.html\nIntegrity\nEQ\nTribeOfMentors-quotes.html\n	booknotes list\nExecution-quotes.html\nSiteTitle\nNext100Years\nThinking-quotes.html\nEssentialism\nOriginals-quotes.html\nPresentOverPerfect\nPrinciples-quotes.html\nActivateYourBrain-quotes.html\nEssentialism-quote.html\nIndex\nExecution\nIntegrity-quotes.html\nGoodIdeas-quotes.html\nIntegrity\nEQ\nTribeOfMentors-quotes.html\n
-13	app-html-files	no output	no output
-53	health-list	                                    Sleep   Weight      Eat  Exercise \n	                                    Sleep   Weight      Eat  Exercise \n
-24	church-show	no output	no output
 32	hourly-show	no output	no output
-52	score-show	shell(x score show) --> 15 lines (should be between 30 and 35)	shell(x score show) --> 15 lines (should be between 30 and 35)
-37	author-summary	no output	no output
-22	faceblog-show	no output	no output
-30	plan-show	no output	no output
+15	app-score	\nCode Summary            Files     Lines\n\n    App                   218     16287\n	\nCode Summary            Files     Lines\n\n    App                   218     16287\n
 38	system-disk-free	no output	no output
+13	app-html-files	no output	no output
+24	church-show	no output	no output
 39	system-files-count	no output	no output
+52	score-show	shell(x score show) --> 15 lines (should be between 30 and 35)	shell(x score show) --> 15 lines (should be between 30 and 35)
 44	system-python-files	no output	no output
 46	system-python-virtualenv	/usr/bin/python\n	/usr/bin/python\n
+37	author-summary	no output	no output
 172	text-agents	email: mark@shrinking-world.com, company: Shrinking World, user: Mark Seaman    \nemail: stacie@shrinking-world.com, company: Shrinking World, user: Stacie Seaman  	email: mark@shrinking-world.com, company: Shrinking World, user: Mark Seaman    \nemail: stacie@shrinking-world.com, company: Shrinking World, user: Stacie Seaman  
+22	faceblog-show	no output	no output
 8	text-no-match	no output	no output
+30	plan-show	no output	no output
 2	vc-status	no output	no output
-74	opc-list	\n        Command not found, opc ['list']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            book        # Work with book contents\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n	\n        Command not found, opc ['list']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            book        # Work with book contents\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n
 12	app-functions	no output	no output
 16	app-settings	"""\nDjango settings for Hammer project.\n\n"""\n\nfrom platform import node\nfrom os.path import dirname, join\n\n\nBASE_DIR = dirname(dirname(__file__))\nDOC_ROOT = join(BASE_DIR, 'Documents')\nLOG_DIR = join(BASE_DIR, 'log')\n\nif 'MCB15-3365' == node():\n    PANDOC_APP = 'pandoc.exe'\nelse:\n    PANDOC_APP = 'pandoc'\n\n\n# SECURITY WARNING: don't run with debug turned on in production!\nif 'MyBook' == node():\n    DEBUG = False\nelse:\n    DEBUG = True\n    ALLOWED_HOSTS = ['*']\nDEBUG = True\n\n\n# Application definition\nINSTALLED_APPS = [\n    # Django System\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.humanize',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n\n    # MyBook\n    'health',\n    'life',\n    'mybook',\n    'sensei',\n    'superuser',\n    'tasks',\n    'tool',\n]\n\nMIDDLEWARE_CLASSES = [\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\n\n# Loading templates\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [\n            join(BASE_DIR, "templates"),\n        ],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this\n                # list if you haven't customized them:\n                'django.contrib.auth.context_processors.auth',\n                'django.template.context_processors.debug',\n                'django.template.context_processors.i18n',\n                'django.template.context_processors.media',\n                'django.template.context_processors.static',\n                'django.template.context_processors.tz',\n                'django.contrib.messages.context_processors.messages',\n            ],\n        },\n    },\n]\n\nROOT_URLCONF = 'hammer.urls'\nLOGIN_URL='/login/'\nLOGIN_REDIRECT_URL = '/'\n\nWSGI_APPLICATION = 'hammer.wsgi.application'\n\nEMAIL_FROM = "mark.seaman@shrinking-world.com"\n\n\n# Secrets\nfrom .secret_settings import DATABASES, SECRET_KEY, EMAIL_HOST, EMAIL_PORT, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_USE_TLS\n\n\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',\n    },\n]\n\n\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'US/Mountain'\nUSE_I18N = False\nUSE_L10N = False\nUSE_TZ = True\n\n\n# Static server\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = (BASE_DIR + '/static', BASE_DIR + '/docs',)\n\nLOGGING = {\n\n    'version': 1,\n    'disable_existing_loggers': False,\n    'handlers': {\n         'hammer-file': {\n            'level': 'DEBUG',\n            'class': 'logging.FileHandler',\n            'filename': join(BASE_DIR, 'log', 'hammer.log'),\n        },\n        'console': {\n            'level': 'DEBUG',\n            'class': 'logging.StreamHandler',\n        },\n    },\n    'loggers': {\n         'tool': {\n            'handlers': ['hammer-file'],\n        },\n    },\n    'root': {'level': 'INFO'},\n}\n\n\n\nif 'MyBook' in node():\n\n    # Allow Django from all hosts. This snippet is installed from\n    # /var/lib/digitalocean/allow_hosts.py\n\n    import os\n    import netifaces\n\n    # Find out what the IP addresses are at run time\n    # This is necessary because otherwise Gunicorn will reject the connections\n    def ip_addresses():\n        ip_list = []\n        for interface in netifaces.interfaces():\n            addrs = netifaces.ifaddresses(interface)\n            for x in (netifaces.AF_INET, netifaces.AF_INET6):\n                if x in addrs:\n                    ip_list.append(addrs[x][0]['addr'])\n        return ip_list\n\n    # Discover our IP address\n    domains = [\n        'markseaman.info',\n        'markseaman.org',   \n        'seamanslog.com',\n        'seamansguide.com',\n        'shrinking-world.com',\n        'shrinking-world.org',\n        'spiritual-things.org',\n    ]\n    ALLOWED_HOSTS = domains + ip_addresses()\n\n\n	"""\nDjango settings for Hammer project.\n\n"""\n\nfrom platform import node\nfrom os.path import dirname, join\n\n\nBASE_DIR = dirname(dirname(__file__))\nDOC_ROOT = join(BASE_DIR, 'Documents')\nLOG_DIR = join(BASE_DIR, 'log')\n\nif 'MCB15-3365' == node():\n    PANDOC_APP = 'pandoc.exe'\nelse:\n    PANDOC_APP = 'pandoc'\n\n\n# SECURITY WARNING: don't run with debug turned on in production!\nif 'MyBook' == node():\n    DEBUG = False\nelse:\n    DEBUG = True\n    ALLOWED_HOSTS = ['*']\nDEBUG = True\n\n\n# Application definition\nINSTALLED_APPS = [\n    # Django System\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.humanize',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n\n    # MyBook\n    'health',\n    'life',\n    'mybook',\n    'sensei',\n    'superuser',\n    'tasks',\n    'tool',\n]\n\nMIDDLEWARE_CLASSES = [\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\n\n# Loading templates\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [\n            join(BASE_DIR, "templates"),\n        ],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this\n                # list if you haven't customized them:\n                'django.contrib.auth.context_processors.auth',\n                'django.template.context_processors.debug',\n                'django.template.context_processors.i18n',\n                'django.template.context_processors.media',\n                'django.template.context_processors.static',\n                'django.template.context_processors.tz',\n                'django.contrib.messages.context_processors.messages',\n            ],\n        },\n    },\n]\n\nROOT_URLCONF = 'hammer.urls'\nLOGIN_URL='/login/'\nLOGIN_REDIRECT_URL = '/'\n\nWSGI_APPLICATION = 'hammer.wsgi.application'\n\nEMAIL_FROM = "mark.seaman@shrinking-world.com"\n\n\n# Secrets\nfrom .secret_settings import DATABASES, SECRET_KEY, EMAIL_HOST, EMAIL_PORT, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_USE_TLS\n\n\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',\n    },\n]\n\n\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'US/Mountain'\nUSE_I18N = False\nUSE_L10N = False\nUSE_TZ = True\n\n\n# Static server\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = (BASE_DIR + '/static', BASE_DIR + '/docs',)\n\nLOGGING = {\n\n    'version': 1,\n    'disable_existing_loggers': False,\n    'handlers': {\n         'hammer-file': {\n            'level': 'DEBUG',\n            'class': 'logging.FileHandler',\n            'filename': join(BASE_DIR, 'log', 'hammer.log'),\n        },\n        'console': {\n            'level': 'DEBUG',\n            'class': 'logging.StreamHandler',\n        },\n    },\n    'loggers': {\n         'tool': {\n            'handlers': ['hammer-file'],\n        },\n    },\n    'root': {'level': 'INFO'},\n}\n\n\n\nif 'MyBook' in node():\n\n    # Allow Django from all hosts. This snippet is installed from\n    # /var/lib/digitalocean/allow_hosts.py\n\n    import os\n    import netifaces\n\n    # Find out what the IP addresses are at run time\n    # This is necessary because otherwise Gunicorn will reject the connections\n    def ip_addresses():\n        ip_list = []\n        for interface in netifaces.interfaces():\n            addrs = netifaces.ifaddresses(interface)\n            for x in (netifaces.AF_INET, netifaces.AF_INET6):\n                if x in addrs:\n                    ip_list.append(addrs[x][0]['addr'])\n        return ip_list\n\n    # Discover our IP address\n    domains = [\n        'markseaman.info',\n        'markseaman.org',   \n        'seamanslog.com',\n        'seamansguide.com',\n        'shrinking-world.com',\n        'shrinking-world.org',\n        'spiritual-things.org',\n    ]\n    ALLOWED_HOSTS = domains + ip_addresses()\n\n\n
+17	app-show	no output	no output
+18	app-signature	bin/__init__.py\n    \nbin/app.py\n     app_command(options)\n     app_help()\n     app_functions(args)\n     app_classes(args)\n     app_signature(args)\n     app_search_code(files, search_function)\n         print_indented(outline)\n             app_print(filename, children)\n     app_directories()\n     app_path(topic=None)\n     app_score()\n     app_search(args)\n     app_show(args=None)\n     app_source(args=None)\n     app_summary(args=None)\n     kill_server()\n     app_urls()\n         simplify(url)\n     run_server()\nbin/booknotes.py\n     booknotes_command(options)\n     booknotes_help(args=None)\n     booknotes_content(args)\n     booknotes_doc_path(doc=None)\n     booknotes_edit(args)\n     booknotes_excerpt(args)\n         booknotes()\n         excerpt(note)\n     booknotes_list(args)\nbin/chapter.py\n     compare_chapter(c)\n     update_chapter(c)\n     chapters()\n     update_all_chapters()\nbin/data.py\n     data_command(options)\n     data_backup(host)\n     data_count(host)\n     data_help()\n     data_load(host)\n     data_migrate()\n     data_reset()\n     data_save(host)\n         save(server, app=None)\n     data_server()\n     data_sql(host)\n     data_tables()\n     data_prune_tables()\nbin/days.py\n     days_command(options)\n     days_help(args=None)\n     date_str(t)\n     day_str(t)\n     days_ago(date,days)\n     days_list(args)\n     days_month(args)\n     days_weeks(num_weeks)\n         days_ahead(date, days)\n         enumerate_weeks(today, days)\n         weekly_schedule(filename, days)\n     enumerate_days(today, days)\n     to_date(s)\n     to_day(s)\n     today()\nbin/diagrams.py\n    \nbin/doc.py\n     doc_command(options)\n     doc_help()\n     doc_content(args)\n     doc_count(dir)\n     doc_directories()\n     doc_edit(args)\n     doc_fix()\n     doc_length(args=None)\n     doc_list(args=None)\n     doc_path(doc=None)\n     doc_pick(args)\n     doc_random_select(directory)\n     doc_redirect(page)\n     doc_score(args)\n     doc_search(args)\n     doc_send(args)\n     doc_send_text(args)\n     doc_show(args=None)\n     doc_show_directory(dir=None)\n     doc_stats(args)\n     doc_summary(args=None)\n     fix_chars(text)\n     doc_test(args)\n     doc_word_count(directory)\n     doc_words(args=None)\n     list_documents(dir=None)\nbin/files.py\n     accumulate_new_lines(accumulator, f2)\n     count_files(directory)\n     create_directory(path)\n     delete_file(filename)\n     do_command(cmd, input=None)\n     encode_text(text, encoding='utf-8')\n     fix_chars(text)\n     grep(pattern,file)\n     is_writable(path)\n     list_files(directory)\n     list_dirs(directory)\n     path_name (relative_filename)\n     print_list(lst)\n     print_list2(lst)\n     read_input()\n     read_json(filename)\n     read_file(filename)\n     read_text(f)\n     recursive_list(d)\n     time_sort_file(d)\n     write_text(filename, text, append=None)\n     write_file(filename, lines, append=None)\nbin/hourly.py\n     hourly_command(options)\n     hourly_help(args=None)\n     hourly_doc_path(doc=None)\n     hourly_edit()\n     hourly_list()\n     hourly_run()\n         execute(cmd)\n     hourly_show()\nbin/hours.py\n    #  hours_command(options)\n    #  hours_help(args=None)\n    #  activities_work()\n    #  activities_work_client()\n    #  activities_work_nonpaid()\n    #  activities_play()\n    #  activities_public()\n    #  activities_private()\n    #  activities()\n    #  hours_activity(args)\n    #  hours_add(args)\n    #      enumerate_days(today, days)\n    #      to_date(s)\n    #      date_str(t)\n    #      day_str(t)\n    #      days_ago(date,days)\n    #      month_of_days(start)\n    #  hours_days(args)\n    #  hours_doc_path(args)\n    #  hours_edit(args)\n    #  hours_list(args)\n    #  hours_tasks(args)\n    #  append_tasks(events, lines)\n    #      task_text(lines, start, end)\n    #  hours_show(args)\n    #  hours_summary(args)\n    #  hours_work(args)\n    #  is_day(line)\n    #  is_activity(line)\n    #  is_task(line)\n    #  list_events(args)\n    #  list_tasks(text)\n    #  months()\n    #  print_activities(label, times)\n    #  print_days(times, num_days)\n    #  print_score(times)\n    #      show_score(label, activities, ideal_hours)\n    #  print_table(labels, table)\n    #  print_tasks(results, activity=None)\n    #  print_total_hours(results, activity=None)\n    #      select_activity(record, activity)\n    #  print_total(label, times, activities=None, grand_total=None)\n    #  print_totals(label, times, activities=None, grand_total=None)\n    #  print_work(times, num_days)\n    #  total_activity(filename, times={})\n    #  total_columns(table)\n    #  activity_list(filename)\n    #  total_work_days(filename)\n    #  total_days(filename)\n    #  total_time(times, activities=None)\nbin/i.py\n     i_command(options)\n     i_help(args=None)\n     doc_path()\n     i_add(args)\n     i_edit(args)\n     i_list(args)\nbin/life.py\n     life_command(options)\n     life_doc_path(doc=None)\n     life_edit(doc)\n     life_help(args=None)\n     life_list(args)\n     life_publish(args)\n     life_show(args)\n     life_todo(args)\n     life_web(args)\n     life_words(args)\nbin/log.py\n     log_path()\n     log_command(options)\n     log(label,value=None)\n     log_exception()\n     log_clear()\n     log_read()\nbin/music.py\n     music_command(options)\n     music_help(args=None)\n     list_albums(args)\n     list_collections(args)\n     list_du(args)\n     list_tracks(args)\n     music_copy()\n     music_doc_path(doc=None)\n     music_edit(doc)\n     music_collection(name)\n     music_load(args)\n     music_list(args)\n     music_show(args)\n     music_sync(args)\nbin/n.py\n    \nbin/ntsh.py\n     ntsh_command(argv)\n     commit()\n     clean()\n     convert(f1,f2)\n     convert_png(f1,f2)\n     help()\n     hide()\n     list_files(dirs)\n     new_name(name)\n     name(args)\n     notes()\n     reorder(name)\n     status()\n     view()\n     web(page='%s/notes/fav_list' % archive)\n     zip_open()\n     zip_close()\nbin/ops.py\n     ops_command(options)\n     ops_help(cmd=None, args=None)\n     ops_cmd(args)\n     ops_console()\n     ops_deploy()\n     ops_log()\n     ops_restart()\n     ops_root(server=host, cmd='')\n     ops_update(args)\n     remote_command(server, cmd, user='django')\nbin/resize.py\n     save_image_file(filename, image, width, height, imtype)\n     resize_jpeg(filename)\n     resize_png(filename)\n    #  create_thumbnails(infile, photo)\n    #  resize_test()\nbin/shell.py\n     banner(name)\n     check_dirs(path, min=0, max=0)\n     check_dir_list(path, dir_list)\n     check_files(path, min=0, max=0)\n     check_file_list(path, dir_list)\n     check_lines(label, lines, min=0, max=10)\n     check_shell_lines(cmd, min=0, max=10)\n     differences(answer, correct)\n     dir_list(path)\n     dir_tree_list(path)\n     file_tree_list(path, filetype=None)\n     file_list(path, filetype=None)\n     file_path(d='', f='')\n     filter_types(files, filetype=None)\n     hostname()\n     line_match(word, text)\n     line_exclude(word, text)\n     line_count(path)\n     limit_lines(shell_command, min=None, max=None)\n     read_file(path)\n     shell(cmd)\n         command_line(cmd)\n     word_count(text)\n     write_file(path, text)\nbin/switches.py\n     server_type()\n     server_host(server)\nbin/text.py\n     text_command(options)\n     text_help(args=None)\n     find_agents(text)\n     find_anchors(text)\n     find_classes(text)\n     find_functions(text)\n     find_links(text)\n         link(anchor)\n     find_quotes(text)\n     find_signatures(text)\n        pattern = r'(.*\\(.*\\))'\n     find_urls(text)\n     markdown_list_links(host, lines)\n     markdown_list_string(mylist)\n     text_join(text)\n     text_lines(text)\n     text_match(match_pattern, doc)\n     text_no_match(match_pattern, doc)\n     text_outline(text)\n     text_outline_string(outline, depth=0)\n     text_markdown(outline, depth=1)\n         text_body(lines)\n     text_replace(doc, match_pattern, replace_pattern)\n     text_title(text)\n     text_body(text)\n     match_lines(text, pattern)\n     match_pattern(text, pattern)\n     transform_matches(text, match_pattern, select_pattern)\nbin/todo.py\n     todo_command(options)\n     recent_dates(days=3)\n     edit_task_file(date)\nbin/tool.py\n     tool_command(options)\n     tool_edit(args)\n     tool_help(self)\n     tool_list()\n     tool_length()\n     tool_read(args)\nbin/user.py\n    \nbin/vc.py\n     vc_command(options)\n     vc_help(args=None)\n     git_cmd(cmd)\n     git_filter()\n     vc_commit(args)\n     vc_diff(args)\n     vc_dirs()\n     vc_log(args)\n     vc_pull(args)\n     vc_push(args)\n     vc_status(args)\nbin/web.py\n     web_command(args)\n     web_help()\n     web(page)\n     web_path(topic=None)\nbin/wordpress.py\n     wordpress_command(options)\n     wordpress_help(args=None)\n     wordpress_doc_path(doc=None)\n     wordpress_edit(doc)\n     wordpress_list(args)\n     wordpress_host(args)\n     wordpress_ssh(args)\nbin/x.py\n     execute_command(cmd,args)\n     command_help(cmd,args)\n     command_scriptor(cmd, args)\nhammer/__init__.py\n    \nhammer/secret_settings.py\n    #  database_init()\n     user_reset(name, email, password)\nhammer/settings.py\n         ip_addresses()\nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    \nhealth/health.py\n     health_command(options)\n     health_doc_path(doc=None)\n     health_edit(args)\n     health_help(args=None)\n     health_list(args)\n     health_score()\n        #  total(row)\n        #  print_bar(lag,lead,average)\n        #  print_score(row, score)\n     average (num_list)\n     health_import(args)\n     health_web()\nhealth/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    #  health_menu(page)\n     health_settings(page='home')\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n     health_scores(objects)\n         average(num_list)\n         five_star(rating)\n         scores(row)\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    \nlife/life.py\n     query_labels()\n     query_get(pk)\n     query_year(age)\n     query_experiences(age=None)\n     experiences_lookup_table(age=None)\nlife/models.py\n         __unicode__(self)\n         __unicode__(self)\n         __unicode__(self)\n         get_absolute_url(self)\n     initialize()\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    \nmybook/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         name(self)\n         fields(self)\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         fields(self)\nmybook/mybook.py\n     mybook_path(page)\n    #  mybook_random_select(directory)\n    #  mybook_redirect(host, page, user)\n    #  mybook_site(title)\n     mybook_site_title(title)\n         site_title_text(page)\n     mybook_content(author, title)\n     main_menu(menu, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu, page)\n         menu_text(page)\n     booknotes_excerpt(doc)\n         booknotes_doc_path(doc=None)\n         booknotes(doc)\n         excerpt(note)\nmybook/mybook_views.py\n     domain_menu(domain, page)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n    #      get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/outline.py\n     has_kids(text, depth)\n     outline(text)\n     parse_outline(text, tree, depth)\n     print_node(name, depth=1, char='    ')\n     seperator(depth)\n     split_text(text, sep)\n     title(text, depth)\n     read_cards(doc)\n     tabs_data(doc)\n         tab_choice(i,tab)\nmybook/task.py\n     tasks_monthly(year, month)\n     recent_months()\n     months_data_table()\n     tasks_data_table(days)\n     days_data_table(days)\n    #  task_list(task)\n    #  task_list(date)\nmybook/tests.py\n    \nmybook/urls.py\n    \nsensei/__init__.py\n    \nsensei/admin.py\n    \nsensei/apps.py\n    \nsensei/fix.py\n     fix_reading_names()\n     fix_email_names()\n     stud(id)\n     name(name)\n     fix_reviews()\n     fix_reviews()\n     list_reviews()\n     clear_reviews()\n     test_reviews()\n     test_groups()\n     list_groups()\n     clear_reviews()\n     assign_new_reviews()\n     assign_url_game()\nsensei/models.py\n         __str__(self)\n         __unicode__(self)\n         __str__(self)\nsensei/review.py\n     assign_reviews(page, due, requirements)\n     count_score(r)\n     create_review(reviewer, designer, page, due, requirements)\n     get_review(id)\n     review_feedback(student_id)\n     review_groups()\n     review_pairs(groups)\n     student_reviews(student_id)\n     student_reviews_done(student_id)\nsensei/sensei.py\n     add_student(course, name, email, domain)\n     add_lesson(course, lesson, title, date)\n     course_lessons(course, page)\n     home_link(title)\n     query_students(course, student=None)\n     get_student(id)\n     get_student_email(email)\n     link(url, title=None)\n     make_link(href, text=None)\n     schedule()\n     slide_content_data(course, lesson)\n         adjust_markdown_headings(markdown)\n         format_slides(course, lesson)\n     slides_markdown(page)\nsensei/student.py\n     delete_students()\n     export_students()\n     fix_images(text, image_path)\n     import_students()\n     list_students()\n     reading_scores_table()\n     reading_table(scores)\n     reading_scores()\n     register_user_domain(name, email, password, domain)\n     student_scores(student_id)\n     student_totals()\n     site_settings(**kwargs)\n     students()\n     student(id)\nsensei/tests.py\n    \nsensei/urlgame.py\n     generate_url_question()\n     relative_path(p1, p2)\n     random_page()\n     random_file()\n     random_domain()\n     random_path()\nsensei/urls.py\n    \nsensei/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         form_valid(self, form)\n         get_success_url(self)\n    #  requirements()\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         form_valid(self, form)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         form_valid(self, form)\n         get_success_url(self)\n     url_feedback(answer, correct)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\nsuperuser/__init__.py\n    \nsuperuser/admin.py\n     admin_print_list()\n     admin_list()\n     admin_table()\n     admin_detail(a)\n     admin_get(pk)\n     database_info()\n     get_detail_data()\n     is_superuser(user)\n     log_text()\n     requesting_user(user)\n     test_list()\n     test_labels()\n     test_results()\n     test_table()\n     test_text(t)\n     text_head(text, lines=3)\n     text_lines(lines, columns=30)\n     user_detail(user)\n     user_labels()\n     user_table(users)\nsuperuser/admin_views.py\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\nsuperuser/apps.py\n    \nsuperuser/initialize.py\n     user_reset(name, email, password)\nsuperuser/models.py\n         __unicode__(self)\n         as_row(self)\n         labels()\n         values(self)\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/fix.py\n     fix_tasks_notes()\n     fix_tasks_name()\n     cleanup_records()\n     test_tasks()\ntasks/models.py\n         __unicode__(self)\n        #  get_absolute_url(self)\n         as_row(self)\n         labels()\ntasks/summary.py\n     activity_summary(activity)\n         active_tab(a, t)\n     activities_work()\n     sort_activity(data)\n     bad_days()\n     bad_days_data(days)\n     combine_work_tasks(table, total)\n     tasks_activity(activity)\n     task_activity_details(activity)\n     task_detail(task)\n     query_hours(task, days)\n     task_filter(tasks, activity)\n     time_data()\n     time_totals(totals)\n         time_total(totals, time)\n     percent(actual, total)\n     percent_totals(totals, subtotals)\n     review_totals(totals, subtotals)\n         percent_difference(actual, total, ideal)\n         task_percents(totals, task, index, ideals)\n     time_filter(tasks, days)\n     task_text_list(tasks)\n         format(t)\n     task_list(days=8)\n     time_summary(days)\n     work_types()\n     write_task_files(tlist)\n     task_import_files()\n         task_details(f)\n         read_task_file(f)\n         new_task(date, name, hours, notes)\ntasks/task.py\n     task_command(self, args)\n     task_help(self)\n     days_ago(days)\n     hourly_total(tasks)\n     monthly_hours_invested(task_type, year, month)\n     last_month_hours_invested(task_type)\n     tasks_last_month()\n     task_data_table()\n     monthly_totals(year, month)\n     full_totals()\n     print_summary(summary, start=None, end=None)\n     recent_weeks()\n     recent_months()\n     sort_totals(categories)\n     task_add(self, args)\n     task_delete(self, args)\n     task_details(query, hours)\n         record(name, hours, total)\n     task_doc_path(args)\n     task_edit(self, args)\n     task_get(self, args)\n     task_import(args)\n     task_history(args)\n         print_task_history(tasks)\n     task_list(self, args)\n     task_month(args)\n    #  task_read_events(args)\n     task_read_health(args)\n     task_rename(args)\n     task_set_name(args, task)\n     task_select(task_type=None, date=None, days=None)\n     task_summary(args)\n     task_totals()\n     task_types()\n     task_print_types()\n     task_web()\n     task_week(args)\n     task_work()\n     tasks_monthly(year, month)\n     tasks_weekly(year, month, day)\n     total_hours_invested(task_type)\n     weekly_hours_invested(task_type, year, month, day)\n     weekly_totals(year, month, day)\n     task_report(year, month)\n         query_month_tasks(year, month)\n         task_entry(task)\n     save_monthly_reports(year)\n         save_report(report, month)\ntasks/urls.py\n    \ntasks/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\ntest/__init__.py\n    \ntest/app_test.py\n     app_classes_test()\n     app_functions_test()\n     app_list_test()\n     app_switches_test()\n     app_settings_test()\n     app_show_test()\n     app_signature_test()\n     app_url_test()\ntest/archive_test.py\n     archive_files_test()\n     archive_dirs_test()\n     archive_nts_test()\n     archive_repo_test()\n         list_archives()\ntest/booknotes_test.py\n     booknotes_list_test()\n     booknotes_lines_test()\ntest/css_test.py\n     css_mybook_test()\n     css_unc_test()\n     css_slides_test()\ntest/data_test.py\n     data_files_test()\n     data_save_test()\n     data_tables_test()\n     data_migrate_test()\ntest/doc_test.py\n    #  doc_test()\n    #  doc_help_test()\n    #  doc_search_test()\n    #  doc_scan_test()\n    #  doc_file_test()\n    #  doc_file_missing_test()\n    #  doc_consolidate()\n    #  doc_render_test()\n    #  doc_encoding_test()\ntest/health_test.py\n     health_list_test()\n     health_score_test()\ntest/hourly_test.py\n     hourly_list_test()\n     hourly_show_test()\ntest/i_test.py\n     i_list_test()\ntest/log_test.py\n     log_length_test()\ntest/ops_test.py\n    #  ops_git_pull_test()\n     ops_help_test()\n     ops_server_test()\n     ops_server_type_test()\n     ops_status_test()\ntest/page_test.py\n     check_page(url, min=1, max=1)\n     page_list_test()\n     page_text_test()\n     page_diff_test()\n     page_sites_test()\ntest/robot_test.py\n     robot_list_test()\n     robot_results_test()\n    #  robot_show_test()\ntest/system_test.py\n     system_bin_test()\n     system_cron_test()\n     system_disk_free_test ()\n     system_env_test()\n     system_files_count_test()\n     system_host_test()\n     system_ip_test()\n     system_pandoc_test()\n     system_python_files_test()\n     system_python_version_test()\n     system_python_virtualenv_test()\ntest/text_test.py\n     text_help_test()\n     text_match_test()\n     text_no_match_test()\n     text_agents_test()\n     text_outline_test()\n     text_markdown_test()\n     text_format_test()\n     text_round_trip_test()\n     text_grep_test()\n     text_findall_test()\n     text_functions_test()\n     text_select_lines_test()\n     text_url_test()\n     text_links_test()\n    #  text_transforms_test()\n    #      transform(test_case)\n     text_signatures_test()\n     text_anchors_test()\n     text_div_test()\ntest/tst_test.py\n     tst_test()\n     tst_time_test()\ntest/unc_test.py\n     check_page(url, min=1, max=1)\n     unc_files_test()\n     unc_docs_test()\n     unc_site_test()\ntest/user_test.py\n    #  user_import_test()\n    #  user_export_test()\n     user_list_test()\ntest/vc_test.py\n     vc_status_test()\n     vc_pull_test()\ntest/wordpress_test.py\n     wordpress_list_test()\n     wordpress_host_test()\ntool/__init__.py\n    \ntool/document.py\n     doc_cards(page)\n     doc_content(page)\n     doc_dir_exists(title)\n     doc_exists(title)\n     doc_html_text(page, image_path=None)\n     doc_link(title)\n     doc_path(page)\n     domain_doc(domain, page)\n     file_to_html(path, image_path=None)\n         fix_images(text)\n     markdown_to_html(markdown_path, html_path)\n     read_markdown(path)\n     text_to_html(text)\n     title(p1)\n     write_html_file(path, html)\ntool/domain.py\n     domain_title(domain)\n     domain_directory(domain)\ntool/email.py\n     email_command(options)\n     email_help()\n     email_args(args, use_html=True)\n     send_test_email()\n     send_file_email(args)\n     send_doc_email(args)\n     send_text_email(args)\n     send_html_email(args)\n     send_template_message(emailTo, title, template, data={})\ntool/log.py\n     log(text, value=None)\n     log_exception()\n     log_json(text, data)\n     log_file()\n     show_log()\n     log_notifications(title, recipients)\n     log_page(request, parms='')\ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n         add_arguments(self, parser)\n         handle(self, *args, **options)\n         help(self)\ntool/models.py\n    \ntool/notify.py\n     notify_test_results()\n     notify_test_email()\ntool/page.py\n     page_command(self, options)\n     page_help(self)\n     page_add(self, args)\n     page_delete(self, args)\n     page_diff(self, args)\n         show_diff(page)\n     page_expect(self, args)\n     page_html(self, args)\n         show_output(page)\n     page_like(self, args)\n         like_page(page)\n     page_list(self)\n     page_lookup(url)\n     page_reset(self)\n     page_results()\n     page_text(self, args)\n         show_output(page)            \ntool/project.py\n     project_add(self, args)\n     project_command(self, options)\n     project_delete(self, args)\n     project_get(self, args)\n     project_help(self)\n     project_list(self)\n     project_lookup(name)\ntool/robot.py\n     robot_command(options)\n     robot_help(args=None)\n     robot_doc_path(doc=None)\n     robot_fetch_page(url)\n     robot_get_page(browser, page)\n     robot_list()\n     robot_login(browser,page)\n     robot_results()\n     robot_run()\ntool/tst.py\n     tst_find()\n     get_module(modulename)\n     test_map(modulename)\n         test_entry(entry)\n         tests(module)\n     tst_command(self, args)\n     test_dictionary()\n         module_list(directory)\n         test_name(module)\n     tst_diff(test_name)\n     tst_edit(self, args)\n     tst_help(self)\n     tst_like(self,args)\n     tst_list(self,args)\n     tst_output(self,args)\n     tst_register(tests)\n     tst_results()\n         show_differences(t)\n     tst_run(self,args)\n         run_test(self,test_entry)\n     tst_send(self,args)\ntool/urls.py\n    \ntool/user.py\n     user_command(self, options)\n     user_help()\n     user_add(name, email, password='test')\n     user_delete(args)\n     user_export(self, args)\n     user_get(pk)\n     user_import(self, args)\n     user_list()\n     user_password(username, password)\n     user_lookup(name, email=None)\n     user_file_path(args)\n     user_fix_name(args)\n     show_users()\n     reset_passwords()\ntool/user_views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n	bin/__init__.py\n    \nbin/app.py\n     app_command(options)\n     app_help()\n     app_functions(args)\n     app_classes(args)\n     app_signature(args)\n     app_search_code(files, search_function)\n         print_indented(outline)\n             app_print(filename, children)\n     app_directories()\n     app_path(topic=None)\n     app_score()\n     app_search(args)\n     app_show(args=None)\n     app_source(args=None)\n     app_summary(args=None)\n     kill_server()\n     app_urls()\n         simplify(url)\n     run_server()\nbin/booknotes.py\n     booknotes_command(options)\n     booknotes_help(args=None)\n     booknotes_content(args)\n     booknotes_doc_path(doc=None)\n     booknotes_edit(args)\n     booknotes_excerpt(args)\n         booknotes()\n         excerpt(note)\n     booknotes_list(args)\nbin/chapter.py\n     compare_chapter(c)\n     update_chapter(c)\n     chapters()\n     update_all_chapters()\nbin/data.py\n     data_command(options)\n     data_backup(host)\n     data_count(host)\n     data_help()\n     data_load(host)\n     data_migrate()\n     data_reset()\n     data_save(host)\n         save(server, app=None)\n     data_server()\n     data_sql(host)\n     data_tables()\n     data_prune_tables()\nbin/days.py\n     days_command(options)\n     days_help(args=None)\n     date_str(t)\n     day_str(t)\n     days_ago(date,days)\n     days_list(args)\n     days_month(args)\n     days_weeks(num_weeks)\n         days_ahead(date, days)\n         enumerate_weeks(today, days)\n         weekly_schedule(filename, days)\n     enumerate_days(today, days)\n     to_date(s)\n     to_day(s)\n     today()\nbin/diagrams.py\n    \nbin/doc.py\n     doc_command(options)\n     doc_help()\n     doc_content(args)\n     doc_count(dir)\n     doc_directories()\n     doc_edit(args)\n     doc_fix()\n     doc_length(args=None)\n     doc_list(args=None)\n     doc_path(doc=None)\n     doc_pick(args)\n     doc_random_select(directory)\n     doc_redirect(page)\n     doc_score(args)\n     doc_search(args)\n     doc_send(args)\n     doc_send_text(args)\n     doc_show(args=None)\n     doc_show_directory(dir=None)\n     doc_stats(args)\n     doc_summary(args=None)\n     fix_chars(text)\n     doc_test(args)\n     doc_word_count(directory)\n     doc_words(args=None)\n     list_documents(dir=None)\nbin/files.py\n     accumulate_new_lines(accumulator, f2)\n     count_files(directory)\n     create_directory(path)\n     delete_file(filename)\n     do_command(cmd, input=None)\n     encode_text(text, encoding='utf-8')\n     fix_chars(text)\n     grep(pattern,file)\n     is_writable(path)\n     list_files(directory)\n     list_dirs(directory)\n     path_name (relative_filename)\n     print_list(lst)\n     print_list2(lst)\n     read_input()\n     read_json(filename)\n     read_file(filename)\n     read_text(f)\n     recursive_list(d)\n     time_sort_file(d)\n     write_text(filename, text, append=None)\n     write_file(filename, lines, append=None)\nbin/hourly.py\n     hourly_command(options)\n     hourly_help(args=None)\n     hourly_doc_path(doc=None)\n     hourly_edit()\n     hourly_list()\n     hourly_run()\n         execute(cmd)\n     hourly_show()\nbin/hours.py\n    #  hours_command(options)\n    #  hours_help(args=None)\n    #  activities_work()\n    #  activities_work_client()\n    #  activities_work_nonpaid()\n    #  activities_play()\n    #  activities_public()\n    #  activities_private()\n    #  activities()\n    #  hours_activity(args)\n    #  hours_add(args)\n    #      enumerate_days(today, days)\n    #      to_date(s)\n    #      date_str(t)\n    #      day_str(t)\n    #      days_ago(date,days)\n    #      month_of_days(start)\n    #  hours_days(args)\n    #  hours_doc_path(args)\n    #  hours_edit(args)\n    #  hours_list(args)\n    #  hours_tasks(args)\n    #  append_tasks(events, lines)\n    #      task_text(lines, start, end)\n    #  hours_show(args)\n    #  hours_summary(args)\n    #  hours_work(args)\n    #  is_day(line)\n    #  is_activity(line)\n    #  is_task(line)\n    #  list_events(args)\n    #  list_tasks(text)\n    #  months()\n    #  print_activities(label, times)\n    #  print_days(times, num_days)\n    #  print_score(times)\n    #      show_score(label, activities, ideal_hours)\n    #  print_table(labels, table)\n    #  print_tasks(results, activity=None)\n    #  print_total_hours(results, activity=None)\n    #      select_activity(record, activity)\n    #  print_total(label, times, activities=None, grand_total=None)\n    #  print_totals(label, times, activities=None, grand_total=None)\n    #  print_work(times, num_days)\n    #  total_activity(filename, times={})\n    #  total_columns(table)\n    #  activity_list(filename)\n    #  total_work_days(filename)\n    #  total_days(filename)\n    #  total_time(times, activities=None)\nbin/i.py\n     i_command(options)\n     i_help(args=None)\n     doc_path()\n     i_add(args)\n     i_edit(args)\n     i_list(args)\nbin/life.py\n     life_command(options)\n     life_doc_path(doc=None)\n     life_edit(doc)\n     life_help(args=None)\n     life_list(args)\n     life_publish(args)\n     life_show(args)\n     life_todo(args)\n     life_web(args)\n     life_words(args)\nbin/log.py\n     log_path()\n     log_command(options)\n     log(label,value=None)\n     log_exception()\n     log_clear()\n     log_read()\nbin/music.py\n     music_command(options)\n     music_help(args=None)\n     list_albums(args)\n     list_collections(args)\n     list_du(args)\n     list_tracks(args)\n     music_copy()\n     music_doc_path(doc=None)\n     music_edit(doc)\n     music_collection(name)\n     music_load(args)\n     music_list(args)\n     music_show(args)\n     music_sync(args)\nbin/n.py\n    \nbin/ntsh.py\n     ntsh_command(argv)\n     commit()\n     clean()\n     convert(f1,f2)\n     convert_png(f1,f2)\n     help()\n     hide()\n     list_files(dirs)\n     new_name(name)\n     name(args)\n     notes()\n     reorder(name)\n     status()\n     view()\n     web(page='%s/notes/fav_list' % archive)\n     zip_open()\n     zip_close()\nbin/ops.py\n     ops_command(options)\n     ops_help(cmd=None, args=None)\n     ops_cmd(args)\n     ops_console()\n     ops_deploy()\n     ops_log()\n     ops_restart()\n     ops_root(server=host, cmd='')\n     ops_update(args)\n     remote_command(server, cmd, user='django')\nbin/resize.py\n     save_image_file(filename, image, width, height, imtype)\n     resize_jpeg(filename)\n     resize_png(filename)\n    #  create_thumbnails(infile, photo)\n    #  resize_test()\nbin/shell.py\n     banner(name)\n     check_dirs(path, min=0, max=0)\n     check_dir_list(path, dir_list)\n     check_files(path, min=0, max=0)\n     check_file_list(path, dir_list)\n     check_lines(label, lines, min=0, max=10)\n     check_shell_lines(cmd, min=0, max=10)\n     differences(answer, correct)\n     dir_list(path)\n     dir_tree_list(path)\n     file_tree_list(path, filetype=None)\n     file_list(path, filetype=None)\n     file_path(d='', f='')\n     filter_types(files, filetype=None)\n     hostname()\n     line_match(word, text)\n     line_exclude(word, text)\n     line_count(path)\n     limit_lines(shell_command, min=None, max=None)\n     read_file(path)\n     shell(cmd)\n         command_line(cmd)\n     word_count(text)\n     write_file(path, text)\nbin/switches.py\n     server_type()\n     server_host(server)\nbin/text.py\n     text_command(options)\n     text_help(args=None)\n     find_agents(text)\n     find_anchors(text)\n     find_classes(text)\n     find_functions(text)\n     find_links(text)\n         link(anchor)\n     find_quotes(text)\n     find_signatures(text)\n        pattern = r'(.*\\(.*\\))'\n     find_urls(text)\n     markdown_list_links(host, lines)\n     markdown_list_string(mylist)\n     text_join(text)\n     text_lines(text)\n     text_match(match_pattern, doc)\n     text_no_match(match_pattern, doc)\n     text_outline(text)\n     text_outline_string(outline, depth=0)\n     text_markdown(outline, depth=1)\n         text_body(lines)\n     text_replace(doc, match_pattern, replace_pattern)\n     text_title(text)\n     text_body(text)\n     match_lines(text, pattern)\n     match_pattern(text, pattern)\n     transform_matches(text, match_pattern, select_pattern)\nbin/todo.py\n     todo_command(options)\n     recent_dates(days=3)\n     edit_task_file(date)\nbin/tool.py\n     tool_command(options)\n     tool_edit(args)\n     tool_help(self)\n     tool_list()\n     tool_length()\n     tool_read(args)\nbin/user.py\n    \nbin/vc.py\n     vc_command(options)\n     vc_help(args=None)\n     git_cmd(cmd)\n     git_filter()\n     vc_commit(args)\n     vc_diff(args)\n     vc_dirs()\n     vc_log(args)\n     vc_pull(args)\n     vc_push(args)\n     vc_status(args)\nbin/web.py\n     web_command(args)\n     web_help()\n     web(page)\n     web_path(topic=None)\nbin/wordpress.py\n     wordpress_command(options)\n     wordpress_help(args=None)\n     wordpress_doc_path(doc=None)\n     wordpress_edit(doc)\n     wordpress_list(args)\n     wordpress_host(args)\n     wordpress_ssh(args)\nbin/x.py\n     execute_command(cmd,args)\n     command_help(cmd,args)\n     command_scriptor(cmd, args)\nhammer/__init__.py\n    \nhammer/secret_settings.py\n    #  database_init()\n     user_reset(name, email, password)\nhammer/settings.py\n         ip_addresses()\nhammer/urls.py\n    \nhammer/wsgi.py\n    \nhealth/__init__.py\n    \nhealth/admin.py\n    \nhealth/apps.py\n    \nhealth/health.py\n     health_command(options)\n     health_doc_path(doc=None)\n     health_edit(args)\n     health_help(args=None)\n     health_list(args)\n     health_score()\n        #  total(row)\n        #  print_bar(lag,lead,average)\n        #  print_score(row, score)\n     average (num_list)\n     health_import(args)\n     health_web()\nhealth/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\nhealth/tests.py\n    \nhealth/urls.py\n    \nhealth/views.py\n    #  health_menu(page)\n     health_settings(page='home')\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n     health_scores(objects)\n         average(num_list)\n         five_star(rating)\n         scores(row)\nlife/__init__.py\n    \nlife/admin.py\n    \nlife/apps.py\n    \nlife/life.py\n     query_labels()\n     query_get(pk)\n     query_year(age)\n     query_experiences(age=None)\n     experiences_lookup_table(age=None)\nlife/models.py\n         __unicode__(self)\n         __unicode__(self)\n         __unicode__(self)\n         get_absolute_url(self)\n     initialize()\nlife/tests.py\n    \nlife/urls.py\n    \nlife/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/__init__.py\n    \nmybook/admin.py\n    \nmybook/apps.py\n    \nmybook/models.py\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         name(self)\n         fields(self)\n         __unicode__(self)\n         get_absolute_url(self)\n         as_row(self)\n         labels()\n         values(self)\n         fields(self)\nmybook/mybook.py\n     mybook_path(page)\n    #  mybook_random_select(directory)\n    #  mybook_redirect(host, page, user)\n    #  mybook_site(title)\n     mybook_site_title(title)\n         site_title_text(page)\n     mybook_content(author, title)\n     main_menu(menu, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu, page)\n         menu_text(page)\n     booknotes_excerpt(doc)\n         booknotes_doc_path(doc=None)\n         booknotes(doc)\n         excerpt(note)\nmybook/mybook_views.py\n     domain_menu(domain, page)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n    #      get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\nmybook/outline.py\n     has_kids(text, depth)\n     outline(text)\n     parse_outline(text, tree, depth)\n     print_node(name, depth=1, char='    ')\n     seperator(depth)\n     split_text(text, sep)\n     title(text, depth)\n     read_cards(doc)\n     tabs_data(doc)\n         tab_choice(i,tab)\nmybook/task.py\n     tasks_monthly(year, month)\n     recent_months()\n     months_data_table()\n     tasks_data_table(days)\n     days_data_table(days)\n    #  task_list(task)\n    #  task_list(date)\nmybook/tests.py\n    \nmybook/urls.py\n    \nsensei/__init__.py\n    \nsensei/admin.py\n    \nsensei/apps.py\n    \nsensei/fix.py\n     fix_reading_names()\n     fix_email_names()\n     stud(id)\n     name(name)\n     fix_reviews()\n     fix_reviews()\n     list_reviews()\n     clear_reviews()\n     test_reviews()\n     test_groups()\n     list_groups()\n     clear_reviews()\n     assign_new_reviews()\n     assign_url_game()\nsensei/models.py\n         __str__(self)\n         __unicode__(self)\n         __str__(self)\nsensei/review.py\n     assign_reviews(page, due, requirements)\n     count_score(r)\n     create_review(reviewer, designer, page, due, requirements)\n     get_review(id)\n     review_feedback(student_id)\n     review_groups()\n     review_pairs(groups)\n     student_reviews(student_id)\n     student_reviews_done(student_id)\nsensei/sensei.py\n     add_student(course, name, email, domain)\n     content_lessons(course)\n     course_lessons(course, page)\n     guide_doc_path(doc=None)\n     guide_file(course, doc)\n     guide_schedule(lesson)\n     home_link(title)\n     query_students(course, student=None)\n     get_student(id)\n     get_student_email(email)\n     domain_data(course)\n         domains(course)\n     read_student_list()\n     register_students()\n     student_test_links(student)\n         url(student, page='')\n     lesson_cards(course, lesson)\n         fix_images(text)\n         lesson_markdown(path)\n         card_text(tab_title, tab_text)\n         card_title(tab_text)\n     lesson_data(course, lesson, text)\n         tab_choice(i, tab)\n         lesson_tabs_data(course, lesson)\n     lesson_info(lesson)\n     link(url, title=None)\n     make_link(href, text=None)\n     main_menu(course, page=None)\n         menu_active(page, menu_item)\n         menu_entry(page, x)\n         menu_read(menu_file)\n     missing_page_info(title)\n     page_info(course, title)\n     read_file(course, doc)\n         no_blank_lines(text)\n     schedule_data(course, table)\n         course_part_data(title, table, first, last)\n         lesson_link(lesson)\n         set_links(table)\n         course_parts(table, course)\n     site_titles(course)\n     slide_content_data(course, lesson)\n         adjust_markdown_headings(markdown)\n         format_slides(course, lesson)\n     slides_markdown(page)\n     test_links(course)\n     view_info(kwargs)\n         view_data(course, title, lesson)\nsensei/student.py\n     delete_students()\n     export_students()\n     fix_images(text, image_path)\n     import_students()\n     list_students()\n     reading_scores_table()\n     reading_table(scores)\n     reading_scores()\n     register_user_domain(name, email, password, domain)\n     student_scores(student_id)\n     student_totals()\n     site_settings(**kwargs)\n     students()\n     student(id)\nsensei/tests.py\n    \nsensei/urlgame.py\n     generate_url_question()\n     relative_path(p1, p2)\n     random_page()\n     random_file()\n     random_domain()\n     random_path()\nsensei/urls.py\n    \nsensei/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         form_valid(self, form)\n         get_success_url(self)\n    #  requirements()\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         form_valid(self, form)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         form_valid(self, form)\n         get_success_url(self)\n     url_feedback(answer, correct)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\nsuperuser/__init__.py\n    \nsuperuser/admin.py\n     admin_print_list()\n     admin_list()\n     admin_table()\n     admin_detail(a)\n     admin_get(pk)\n     database_info()\n     get_detail_data()\n     is_superuser(user)\n     log_text()\n     requesting_user(user)\n     test_list()\n     test_labels()\n     test_results()\n     test_table()\n     test_text(t)\n     text_head(text, lines=3)\n     text_lines(lines, columns=30)\n     user_detail(user)\n     user_labels()\n     user_table(users)\nsuperuser/admin_views.py\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\n         get_context_data(self, **kwargs)\n         test_func(self)\nsuperuser/apps.py\n    \nsuperuser/initialize.py\n     user_reset(name, email, password)\nsuperuser/models.py\n         __unicode__(self)\n         as_row(self)\n         labels()\n         values(self)\nsuperuser/tests.py\n    \nsuperuser/urls.py\n    \ntasks/__init__.py\n    \ntasks/models.py\n         __unicode__(self)\n        #  get_absolute_url(self)\n         as_row(self)\n         labels()\ntasks/summary.py\n     activity_summary(activity)\n         active_tab(a, t)\n     activities_work()\n     sort_activity(data)\n     bad_days()\n     bad_days_data(days)\n     combine_work_tasks(table, total)\n     tasks_activity(activity)\n     task_activity_details(activity)\n     task_detail(task)\n     query_hours(task, days)\n     task_filter(tasks, activity)\n     time_data()\n     time_totals(totals)\n         time_total(totals, time)\n     percent(actual, total)\n     percent_totals(totals, subtotals)\n     review_totals(totals, subtotals)\n         percent_difference(actual, total, ideal)\n         task_percents(totals, task, index, ideals)\n     time_filter(tasks, days)\n     task_text_list(tasks)\n         format(t)\n     task_list(days=8)\n     time_summary(days)\n     work_types()\n     write_task_files(tlist)\n     task_import_files()\n         task_details(f)\n         read_task_file(f)\n         new_task(date, name, hours, notes)\ntasks/task.py\n     task_command(self, args)\n     task_help(self)\n     days_ago(days)\n     hourly_total(tasks)\n     monthly_hours_invested(task_type, year, month)\n     last_month_hours_invested(task_type)\n     tasks_last_month()\n     task_data_table()\n     monthly_totals(year, month)\n     full_totals()\n     print_summary(summary, start=None, end=None)\n     recent_weeks()\n     recent_months()\n     sort_totals(categories)\n     task_add(self, args)\n     task_delete(self, args)\n     task_details(query, hours)\n         record(name, hours, total)\n     task_doc_path(args)\n     task_edit(self, args)\n     task_get(self, args)\n     task_import(args)\n     task_history(args)\n         print_task_history(tasks)\n     task_list(self, args)\n     task_month(args)\n    #  task_read_events(args)\n     task_read_health(args)\n     task_rename(args)\n     task_set_name(args, task)\n     task_select(task_type=None, date=None, days=None)\n     task_summary(args)\n     task_totals()\n     task_types()\n     task_print_types()\n     task_web()\n     task_week(args)\n     task_work()\n     tasks_monthly(year, month)\n     tasks_weekly(year, month, day)\n     total_hours_invested(task_type)\n     weekly_hours_invested(task_type, year, month, day)\n     weekly_totals(year, month, day)\n     task_report(year, month)\n         query_month_tasks(year, month)\n         task_entry(task)\n     save_monthly_reports(year)\n         save_report(report, month)\n     fix_tasks()\n     test_tasks()\ntasks/urls.py\n    \ntasks/views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_queryset(self)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_redirect_url(self, *args, **kwargs)\n         get_context_data(self, **kwargs)\ntest/__init__.py\n    \ntest/app_test.py\n     app_classes_test()\n     app_functions_test()\n     app_list_test()\n     app_switches_test()\n     app_settings_test()\n     app_show_test()\n     app_signature_test()\n     app_url_test()\ntest/archive_test.py\n     archive_files_test()\n     archive_dirs_test()\n     archive_nts_test()\n     archive_repo_test()\n         list_archives()\ntest/booknotes_test.py\n     booknotes_list_test()\n     booknotes_lines_test()\ntest/css_test.py\n     css_mybook_test()\n     css_unc_test()\n     css_slides_test()\ntest/data_test.py\n     data_files_test()\n     data_save_test()\n     data_tables_test()\n     data_migrate_test()\ntest/doc_test.py\n    #  doc_test()\n    #  doc_help_test()\n    #  doc_search_test()\n    #  doc_scan_test()\n    #  doc_file_test()\n    #  doc_file_missing_test()\n    #  doc_consolidate()\n    #  doc_render_test()\n    #  doc_encoding_test()\ntest/health_test.py\n     health_list_test()\n     health_score_test()\ntest/hourly_test.py\n     hourly_list_test()\n     hourly_show_test()\ntest/i_test.py\n     i_list_test()\ntest/log_test.py\n     log_length_test()\ntest/ops_test.py\n    #  ops_git_pull_test()\n     ops_help_test()\n     ops_server_test()\n     ops_server_type_test()\n     ops_status_test()\ntest/page_test.py\n     check_page(url, min=1, max=1)\n     page_list_test()\n     page_text_test()\n     page_diff_test()\n     page_sites_test()\ntest/robot_test.py\n     robot_list_test()\n     robot_results_test()\n    #  robot_show_test()\ntest/system_test.py\n     system_bin_test()\n     system_cron_test()\n     system_disk_free_test ()\n     system_env_test()\n     system_files_count_test()\n     system_host_test()\n     system_ip_test()\n     system_pandoc_test()\n     system_python_files_test()\n     system_python_version_test()\n     system_python_virtualenv_test()\ntest/text_test.py\n     text_help_test()\n     text_match_test()\n     text_no_match_test()\n     text_agents_test()\n     text_outline_test()\n     text_markdown_test()\n     text_format_test()\n     text_round_trip_test()\n     text_grep_test()\n     text_findall_test()\n     text_functions_test()\n     text_select_lines_test()\n     text_url_test()\n     text_links_test()\n    #  text_transforms_test()\n    #      transform(test_case)\n     text_signatures_test()\n     text_anchors_test()\n     text_div_test()\ntest/tst_test.py\n     tst_test()\n     tst_time_test()\ntest/unc_test.py\n     check_page(url, min=1, max=1)\n     unc_files_test()\n     unc_docs_test()\n     unc_site_test()\ntest/user_test.py\n    #  user_import_test()\n    #  user_export_test()\n     user_list_test()\ntest/vc_test.py\n     vc_status_test()\n     vc_pull_test()\ntest/wordpress_test.py\n     wordpress_list_test()\n     wordpress_host_test()\ntool/__init__.py\n    \ntool/document.py\n     doc_cards(page)\n     doc_content(page)\n     doc_dir_exists(title)\n     doc_exists(title)\n     doc_html_text(page, image_path=None)\n     doc_link(title)\n     doc_path(page)\n     domain_doc(domain, page)\n     file_to_html(path, image_path=None)\n         fix_images(text)\n     markdown_to_html(markdown_path, html_path)\n     read_markdown(path)\n     text_to_html(text)\n     title(p1)\n     write_html_file(path, html)\ntool/domain.py\n     domain_title(domain)\n     domain_directory(domain)\ntool/email.py\n     email_command(options)\n     email_help()\n     email_args(args, use_html=True)\n     send_support_request(title, text)\n     send_file_email(args)\n     send_doc_email(args)\n     send_text_email(args)\n     send_html_email(args)\n     send_template_message(emailTo, title, template, data={})\ntool/log.py\n     log(text, value=None)\n     log_exception()\n     log_json(text, data)\n     log_file()\n     show_log()\n     log_notifications(title, recipients)\n     log_page(request, parms='')\ntool/management/__init__.py\n    \ntool/management/commands/__init__.py\n    \ntool/management/commands/scriptor.py\n         add_arguments(self, parser)\n         handle(self, *args, **options)\n         help(self)\ntool/models.py\n    \ntool/notify.py\n     notify_test_results()\n     notify_test_email()\ntool/page.py\n     page_command(self, options)\n     page_help(self)\n     page_add(self, args)\n     page_delete(self, args)\n     page_diff(self, args)\n         show_diff(page)\n     page_expect(self, args)\n     page_html(self, args)\n         show_output(page)\n     page_like(self, args)\n         like_page(page)\n     page_list(self)\n     page_lookup(url)\n     page_reset(self)\n     page_results()\n     page_text(self, args)\n         show_output(page)            \ntool/project.py\n     project_add(self, args)\n     project_command(self, options)\n     project_delete(self, args)\n     project_get(self, args)\n     project_help(self)\n     project_list(self)\n     project_lookup(name)\ntool/robot.py\n     robot_command(options)\n     robot_help(args=None)\n     robot_doc_path(doc=None)\n     robot_fetch_page(url)\n     robot_get_page(browser, page)\n     robot_list()\n     robot_login(browser,page)\n     robot_results()\n     robot_run()\ntool/tst.py\n     tst_find()\n     get_module(modulename)\n     test_map(modulename)\n         test_entry(entry)\n         tests(module)\n     tst_command(self, args)\n     test_dictionary()\n         module_list(directory)\n         test_name(module)\n     tst_diff(test_name)\n     tst_edit(self, args)\n     tst_help(self)\n     tst_like(self,args)\n     tst_list(self,args)\n     tst_output(self,args)\n     tst_register(tests)\n     tst_results()\n         show_differences(t)\n     tst_run(self,args)\n         run_test(self,test_entry)\n     tst_send(self,args)\ntool/urls.py\n    \ntool/user.py\n     user_command(self, options)\n     user_help()\n     user_add(name, email, password='test')\n     user_delete(args)\n     user_export(self, args)\n     user_get(pk)\n     user_import(self, args)\n     user_list()\n     user_password(username, password)\n     user_lookup(name, email=None)\n     user_file_path(args)\n     user_fix_name(args)\n     show_users()\n     reset_passwords()\ntool/user_views.py\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n         get_context_data(self, **kwargs)\n
+74	opc-list	\n        Command not found, opc ['list']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            book        # Work with book contents\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n	\n        Command not found, opc ['list']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            book        # Work with book contents\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n
+134	booknotes-list	booknotes list\nExecution-quotes.html\nSiteTitle\nNext100Years\nThinking-quotes.html\nEssentialism\nOriginals-quotes.html\nPresentOverPerfect\nPrinciples-quotes.html\nActivateYourBrain-quotes.html\nEssentialism-quote.html\nIndex\nExecution\nIntegrity-quotes.html\nGoodIdeas-quotes.html\nIntegrity\nEQ\nTribeOfMentors-quotes.html\n	booknotes list\nExecution-quotes.html\nSiteTitle\nNext100Years\nThinking-quotes.html\nEssentialism\nOriginals-quotes.html\nPresentOverPerfect\nPrinciples-quotes.html\nActivateYourBrain-quotes.html\nEssentialism-quote.html\nIndex\nExecution\nIntegrity-quotes.html\nGoodIdeas-quotes.html\nIntegrity\nEQ\nTribeOfMentors-quotes.html\n
+53	health-list	                                    Sleep   Weight      Eat  Exercise \n	                                    Sleep   Weight      Eat  Exercise \n
 26	table-from-text	[['a', 'b', 'c'], ['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9']]	[['a', 'b', 'c'], ['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9']]
 27	table-sort	    b          92         3         \n    a          25         c         \n    c          8          9         \n    d          5          6         	    b          92         3         \n    a          25         c         \n    c          8          9         \n    d          5          6         
 35	author-drafts	no output	no output
 21	faceblog-list	faceblog command ['list']\nfaceblog list\nTimeBudget\nRandom\nOpportunity\n10000Days\nToolsSaveTime\nLearningCurve\nImportantWork\nUnfinishedBook\nLifeWork\nReadToLearn\nSiteTitle\nDailyHabits\nCommitments\nExpandContract\nMenu\nHabitualChange\nWorkMindset\nWritingWorkflow\nWhyWork\nMultitasking\nHitler\nLowCostMyth\nBusinessInvestment\nActToLearn\nScaledCommit\nStrengths\nCollaboration\nWritingStages\nPragmaticThinking\nOneImprovement\nSearch\nCareer\nProcessingIdeas\nYourBlogTopic\nIndex\nLifeFun\nLifeThatMatters\nBiggestIdea\nLifePeople\nLifeGrow\nNewYearsResolutions\nGenetics\nInvest20Percent\nCreativeScore\nRuthlessWithWaste\nFoodAndSex\nPessimism\nComputerComplexity\nIdeology\nMaunaKea\nWorkforce\nMyStory\n	faceblog command ['list']\nfaceblog list\nTimeBudget\nRandom\nOpportunity\n10000Days\nToolsSaveTime\nLearningCurve\nImportantWork\nUnfinishedBook\nLifeWork\nReadToLearn\nSiteTitle\nDailyHabits\nCommitments\nExpandContract\nMenu\nHabitualChange\nWorkMindset\nWritingWorkflow\nWhyWork\nMultitasking\nHitler\nLowCostMyth\nBusinessInvestment\nActToLearn\nScaledCommit\nStrengths\nCollaboration\nWritingStages\nPragmaticThinking\nOneImprovement\nSearch\nCareer\nProcessingIdeas\nYourBlogTopic\nIndex\nLifeFun\nLifeThatMatters\nBiggestIdea\nLifePeople\nLifeGrow\nNewYearsResolutions\nGenetics\nInvest20Percent\nCreativeScore\nRuthlessWithWaste\nFoodAndSex\nPessimism\nComputerComplexity\nIdeology\nMaunaKea\nWorkforce\nMyStory\n
 170	text-transforms	text_command\ntext_help\nfind_functions\n(.*)\\\nfind_links\nlink\nfind_urls\nmarkdown_list_links\nmarkdown_list_string\ntext_join\ntext_lines\ntext_match\ntext_no_match\ntext_outline\ntext_outline_string\ntext_markdown\ntext_body\ntext_replace\ntext_select\ntext_title\ntext_body\nmatch_lines\nmatch_pattern\ntransform_matches\ntext_command (options)\ntext_help (args=None)\nfind_functions (text)\n(.*)\\ (.*\\)\nfind_links (text)\nlink (anchor)\nfind_urls (text)\nmarkdown_list_links (host, lines)\nmarkdown_list_string (mylist)\ntext_join (text)\ntext_lines (text)\ntext_match (match_pattern, doc)\ntext_no_match (match_pattern, doc)\ntext_outline (text)\ntext_outline_string (outline, depth=0)\ntext_markdown (outline, depth=1)\ntext_body (lines)\ntext_replace (match_pattern, replace_pattern, doc)\ntext_select (selector, doc)\ntext_title (text)\ntext_body (text)\nmatch_lines (text, pattern)\nmatch_pattern (text, pattern)\ntransform_matches (text, match_pattern, select_pattern)	text_command\ntext_help\nfind_functions\n(.*)\\\nfind_links\nlink\nfind_urls\nmarkdown_list_links\nmarkdown_list_string\ntext_join\ntext_lines\ntext_match\ntext_no_match\ntext_outline\ntext_outline_string\ntext_markdown\ntext_body\ntext_replace\ntext_select\ntext_title\ntext_body\nmatch_lines\nmatch_pattern\ntransform_matches\ntext_command (options)\ntext_help (args=None)\nfind_functions (text)\n(.*)\\ (.*\\)\nfind_links (text)\nlink (anchor)\nfind_urls (text)\nmarkdown_list_links (host, lines)\nmarkdown_list_string (mylist)\ntext_join (text)\ntext_lines (text)\ntext_match (match_pattern, doc)\ntext_no_match (match_pattern, doc)\ntext_outline (text)\ntext_outline_string (outline, depth=0)\ntext_markdown (outline, depth=1)\ntext_body (lines)\ntext_replace (match_pattern, replace_pattern, doc)\ntext_select (selector, doc)\ntext_title (text)\ntext_body (text)\nmatch_lines (text, pattern)\nmatch_pattern (text, pattern)\ntransform_matches (text, match_pattern, select_pattern)
-66	ops-status	Ops Command - production status\n\n        ops production ['status']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n	Ops Command - production status\n\n        ops production ['status']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n
 48	seamanslog-show	no output	no output
+66	ops-status	Ops Command - production status\n\n        ops production ['status']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n	Ops Command - production status\n\n        ops production ['status']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n
 121	src-base	/home/django/Projects/Who2Hire\n	/home/django/Projects/Who2Hire\n
 122	src-changed	no output	no output
 123	src-common	no output	no output
@@ -7186,22 +7100,23 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 67	hours-activity	Activity for 2016-08\n\nTotal                       0   100%\n	Activity for 2016-08\n\nTotal                       0   100%\n
 33	staging-host	\n        Command not found, staging ['command', 'hostname']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n	\n        Command not found, staging ['command', 'hostname']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n
 45	system-python-version	sys.version_info(major=2, minor=7, micro=12, releaselevel='final', serial=0)	sys.version_info(major=2, minor=7, micro=12, releaselevel='final', serial=0)
-10	text-round-trip	0a1\n> \n10d10\n< \n15d14\n< \n21d19\n< \n23d20\n< \n25d21\n< \n27d22\n< \n29d23\n< \n31d24\n< \n33d25\n< \n35d26\n< \n39d29\n< \n42a33\n>     \n	0a1\n> \n10d10\n< \n15d14\n< \n21d19\n< \n23d20\n< \n25d21\n< \n27d22\n< \n29d23\n< \n31d24\n< \n33d25\n< \n35d26\n< \n39d29\n< \n42a33\n>     \n
 99	days-list	Days: 15, To: Wed, 03-01\nWed, 02-15\nThu, 02-16\nFri, 02-17\nSat, 02-18\nSun, 02-19\nMon, 02-20\nTue, 02-21\nWed, 02-22\nThu, 02-23\nFri, 02-24\nSat, 02-25\nSun, 02-26\nMon, 02-27\nTue, 02-28\nWed, 03-01\n	Days: 15, To: Wed, 03-01\nWed, 02-15\nThu, 02-16\nFri, 02-17\nSat, 02-18\nSun, 02-19\nMon, 02-20\nTue, 02-21\nWed, 02-22\nThu, 02-23\nFri, 02-24\nSat, 02-25\nSun, 02-26\nMon, 02-27\nTue, 02-28\nWed, 03-01\n
-185	system-bin	total 408\n-rw-rw-r-- 1 django django  5598 Dec 22 13:52 app.py\n-rw-rw-r-- 1 django django  7669 Dec 29 12:40 app.pyc\n-rw-rw-r-- 1 django django  3660 Jan 24 17:30 bash-alias\n-rw-rw-r-- 1 django django  3683 Dec 14 10:33 bash-django-profile\n-rwxrwxr-x 1 django django  2752 Dec 14 10:33 bash-prompt\n-rwxrwxr-x 1 django django   812 Jan 24 10:29 bashrc\n-rwxrwxr-x 1 django django   127 Dec 14 10:33 bashrc-blue\n-rw-rw-r-- 1 django django   687 Feb  5 16:46 bashrc-cron\n-rw-rw-r-- 1 django django   315 Jan 27 08:00 bashrc-win\n-rw-rw-r-- 1 django django   145 Jan 27 08:00 bashrc-win-pip\n-rw-rw-r-- 1 django django  2292 Dec 24 08:00 booknotes.py\n-rw-rw-r-- 1 django django  3250 Dec 29 12:40 booknotes.pyc\n-rw-rw-r-- 1 django django 14218 Dec 29 12:40 book.pyc\n-rwxrwxr-x 1 django django  1083 Jan 15 14:05 chapter.py\n-rwxrwxr-x 1 django django   156 Dec 14 10:33 cptree\n-rw-rw-r-- 1 django django  4042 Jan  9 08:01 data.py\n-rw-rw-r-- 1 django django  5435 Jan  9 08:06 data.pyc\n-rw-rw-r-- 1 django django  2933 Jan  8 14:27 days.py\n-rw-rw-r-- 1 django django  4186 Jan  8 14:27 days.pyc\n-rw-rw-r-- 1 django django   728 Jan  8 14:27 diagrams.py\n-rwxrwxr-x 1 django django   101 Dec 14 10:33 dj\n-rw-rw-r-- 1 django django  9282 Jan 15 15:42 doc.py\n-rw-rw-r-- 1 django django 10720 Dec 29 12:40 doc.pyc\n-rwxrwxr-x 1 django django   470 Dec 14 10:33 e\n-rwxrwxr-x 1 django django  4418 Dec 14 10:33 files.py\n-rw-rw-r-- 1 django django  6614 Dec 29 12:30 files.pyc\n-rwxrwxr-x 1 django django   340 Feb  5 16:46 hourly\n-rw-rw-r-- 1 django django  2223 Feb  5 16:46 hourly.py\n-rw-rw-r-- 1 django django  2962 Feb  5 17:00 hourly.pyc\n-rw-rw-r-- 1 django django 12486 Dec 14 10:33 hours.py\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 i\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 __init__.py\n-rw-rw-r-- 1 django django   122 Dec 29 12:30 __init__.pyc\n-rw-rw-r-- 1 django django   995 Dec 27 08:00 i.py\n-rw-rw-r-- 1 django django  1745 Dec 29 12:40 i.pyc\n-rwxrwxr-x 1 django django    36 Dec 14 10:33 lc\n-rw-rw-r-- 1 django django  2267 Dec 14 10:33 life.py\n-rw-rw-r-- 1 django django   937 Dec 14 10:33 log.py\n-rw-rw-r-- 1 django django  1787 Dec 29 12:40 log.pyc\n-rw-rw-r-- 1 django django  4624 Dec 14 10:33 music.py\n-rw-rw-r-- 1 django django  5942 Dec 29 12:40 music.pyc\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 n.py\n-rwxrwxr-x 1 django django  4237 Jan 22 08:49 ntsh.py\n-rw-rw-r-- 1 django django  2370 Jan 24 13:41 ops.py\n-rw-rw-r-- 1 django django  3422 Jan 24 13:54 ops.pyc\n-rw-r--r-- 1 django django  2029 Jan 15 13:20 pandoc.pyc\n-rwxrwxr-x 1 django django    78 Dec 14 10:33 path\n-rwxrwxr-x 1 django django   226 Dec 14 10:33 pe\n-rwxrwxr-x 1 django django    84 Dec 14 10:33 psg\n-rwxrwxr-x 1 django django   100 Jan 17 18:38 pshell\ndrwxrwxr-x 2 django django  4096 Dec 14 12:37 __pycache__\n-rwxrwxr-x 1 django django   137 Dec 14 10:33 rbg\n-rwxrwxr-x 1 django django  2296 Dec 14 10:33 resize.py\n-rw-rw-r-- 1 django django  4733 Dec 29 12:40 seamanslog.pyc\n-rwxrwxr-x 1 django django   442 Dec 14 10:33 setup-cron\n-rwxrwxr-x 1 django django   180 Dec 14 10:33 setup-simple\n-rw-rw-r-- 1 django django  5912 Dec 14 10:33 shell.py\n-rw-rw-r-- 1 django django  8154 Dec 29 12:30 shell.pyc\n-rw-rw-r-- 1 django django  1971 Jan 27 08:00 switches.py\n-rw-rw-r-- 1 django django  2207 Jan 27 08:00 switches.pyc\n-rw-rw-r-- 1 django django  5345 Dec 14 10:33 text.py\n-rw-rw-r-- 1 django django  7527 Dec 29 12:40 text.pyc\n-rw-rw-r-- 1 django django  1004 Jan 17 15:49 todo.py\n-rw-rw-r-- 1 django django  1531 Jan 17 18:38 todo.pyc\n-rw-rw-r-- 1 django django  1704 Dec 14 10:33 tool.py\n-rw-rw-r-- 1 django django  2377 Dec 29 12:40 tool.pyc\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 user.py\n-rw-rw-r-- 1 django django  2540 Jan 18 11:32 vc.py\n-rw-rw-r-- 1 django django  3769 Jan 18 11:35 vc.pyc\n-rw-rw-r-- 1 django django   272 Dec 23 06:56 venv\n-rw-rw-r-- 1 django django  1044 Jan  6 08:58 web.py\n-rw-r--r-- 1 django django  1569 Jan  6 08:58 web.pyc\n-rw-rw-r-- 2 django django   596 Dec 14 10:33 welcome\n-rw-rw-r-- 1 django django   246 Dec 14 10:33 welcome-blue\n-rw-rw-r-- 1 django django   132 Dec 17 07:32 welcome-imac\n-rw-rw-r-- 1 django django   231 Dec 14 10:33 welcome-macbook\n-rw-rw-r-- 2 django django   596 Dec 14 10:33 welcome-mybook\n-rw-rw-r-- 1 django django   624 Dec 14 10:33 welcome-production\n-rw-rw-r-- 1 django django   528 Dec 14 10:33 welcome-staging\n-rw-rw-r-- 1 django django  1605 Dec 14 10:33 wordpress.py\n-rw-rw-r-- 1 django django  2364 Dec 29 12:40 wordpress.pyc\n-rwxrwxr-x 1 django django  3377 Feb  6 08:40 x.py\n	total 404\n-rw-rw-r-- 1 django django  5598 Dec 22 13:52 app.py\n-rw-rw-r-- 1 django django  7669 Dec 29 12:40 app.pyc\n-rw-rw-r-- 1 django django  3660 Jan 24 17:30 bash-alias\n-rw-rw-r-- 1 django django  3683 Dec 14 10:33 bash-django-profile\n-rwxrwxr-x 1 django django  2752 Dec 14 10:33 bash-prompt\n-rwxrwxr-x 1 django django   812 Jan 24 10:29 bashrc\n-rwxrwxr-x 1 django django   127 Dec 14 10:33 bashrc-blue\n-rw-rw-r-- 1 django django   315 Jan 27 08:00 bashrc-win\n-rw-rw-r-- 1 django django   145 Jan 27 08:00 bashrc-win-pip\n-rw-rw-r-- 1 django django  2292 Dec 24 08:00 booknotes.py\n-rw-rw-r-- 1 django django  3250 Dec 29 12:40 booknotes.pyc\n-rw-rw-r-- 1 django django 14218 Dec 29 12:40 book.pyc\n-rwxrwxr-x 1 django django  1083 Jan 15 14:05 chapter.py\n-rwxrwxr-x 1 django django   156 Dec 14 10:33 cptree\n-rw-rw-r-- 1 django django  4042 Jan  9 08:01 data.py\n-rw-rw-r-- 1 django django  5435 Jan  9 08:06 data.pyc\n-rw-rw-r-- 1 django django  2933 Jan  8 14:27 days.py\n-rw-rw-r-- 1 django django  4186 Jan  8 14:27 days.pyc\n-rw-rw-r-- 1 django django   728 Jan  8 14:27 diagrams.py\n-rwxrwxr-x 1 django django   101 Dec 14 10:33 dj\n-rw-rw-r-- 1 django django  9282 Jan 15 15:42 doc.py\n-rw-rw-r-- 1 django django 10720 Dec 29 12:40 doc.pyc\n-rwxrwxr-x 1 django django   470 Dec 14 10:33 e\n-rwxrwxr-x 1 django django  4418 Dec 14 10:33 files.py\n-rw-rw-r-- 1 django django  6614 Dec 29 12:30 files.pyc\n-rwxrwxr-x 1 django django   321 Jan 25 09:10 hourly\n-rw-rw-r-- 1 django django  2221 Dec 14 10:33 hourly.py\n-rw-rw-r-- 1 django django  2960 Dec 29 12:40 hourly.pyc\n-rw-rw-r-- 1 django django 12486 Dec 14 10:33 hours.py\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 i\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 __init__.py\n-rw-rw-r-- 1 django django   122 Dec 29 12:30 __init__.pyc\n-rw-rw-r-- 1 django django   995 Dec 27 08:00 i.py\n-rw-rw-r-- 1 django django  1745 Dec 29 12:40 i.pyc\n-rwxrwxr-x 1 django django    36 Dec 14 10:33 lc\n-rw-rw-r-- 1 django django  2267 Dec 14 10:33 life.py\n-rw-rw-r-- 1 django django   937 Dec 14 10:33 log.py\n-rw-rw-r-- 1 django django  1787 Dec 29 12:40 log.pyc\n-rw-rw-r-- 1 django django  4624 Dec 14 10:33 music.py\n-rw-rw-r-- 1 django django  5942 Dec 29 12:40 music.pyc\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 n.py\n-rwxrwxr-x 1 django django  4237 Jan 22 08:49 ntsh.py\n-rw-rw-r-- 1 django django  2370 Jan 24 13:41 ops.py\n-rw-rw-r-- 1 django django  3422 Jan 24 13:54 ops.pyc\n-rw-r--r-- 1 django django  2029 Jan 15 13:20 pandoc.pyc\n-rwxrwxr-x 1 django django    78 Dec 14 10:33 path\n-rwxrwxr-x 1 django django   226 Dec 14 10:33 pe\n-rwxrwxr-x 1 django django    84 Dec 14 10:33 psg\n-rwxrwxr-x 1 django django   100 Jan 17 18:38 pshell\ndrwxrwxr-x 2 django django  4096 Dec 14 12:37 __pycache__\n-rwxrwxr-x 1 django django   137 Dec 14 10:33 rbg\n-rwxrwxr-x 1 django django  2296 Dec 14 10:33 resize.py\n-rw-rw-r-- 1 django django  4733 Dec 29 12:40 seamanslog.pyc\n-rwxrwxr-x 1 django django   442 Dec 14 10:33 setup-cron\n-rwxrwxr-x 1 django django   180 Dec 14 10:33 setup-simple\n-rw-rw-r-- 1 django django  5912 Dec 14 10:33 shell.py\n-rw-rw-r-- 1 django django  8154 Dec 29 12:30 shell.pyc\n-rw-rw-r-- 1 django django  1971 Jan 27 08:00 switches.py\n-rw-rw-r-- 1 django django  2207 Jan 27 08:00 switches.pyc\n-rw-rw-r-- 1 django django  5345 Dec 14 10:33 text.py\n-rw-rw-r-- 1 django django  7527 Dec 29 12:40 text.pyc\n-rw-rw-r-- 1 django django  1004 Jan 17 15:49 todo.py\n-rw-rw-r-- 1 django django  1531 Jan 17 18:38 todo.pyc\n-rw-rw-r-- 1 django django  1704 Dec 14 10:33 tool.py\n-rw-rw-r-- 1 django django  2377 Dec 29 12:40 tool.pyc\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 user.py\n-rw-rw-r-- 1 django django  2540 Jan 18 11:32 vc.py\n-rw-rw-r-- 1 django django  3769 Jan 18 11:35 vc.pyc\n-rw-rw-r-- 1 django django   272 Dec 23 06:56 venv\n-rw-rw-r-- 1 django django  1044 Jan  6 08:58 web.py\n-rw-r--r-- 1 django django  1569 Jan  6 08:58 web.pyc\n-rw-rw-r-- 2 django django   596 Dec 14 10:33 welcome\n-rw-rw-r-- 1 django django   246 Dec 14 10:33 welcome-blue\n-rw-rw-r-- 1 django django   132 Dec 17 07:32 welcome-imac\n-rw-rw-r-- 1 django django   231 Dec 14 10:33 welcome-macbook\n-rw-rw-r-- 2 django django   596 Dec 14 10:33 welcome-mybook\n-rw-rw-r-- 1 django django   624 Dec 14 10:33 welcome-production\n-rw-rw-r-- 1 django django   528 Dec 14 10:33 welcome-staging\n-rw-rw-r-- 1 django django  1605 Dec 14 10:33 wordpress.py\n-rw-rw-r-- 1 django django  2364 Dec 29 12:40 wordpress.pyc\n-rwxrwxr-x 1 django django  3340 Jan 15 15:42 x.py\n
+42	system-pandoc	<h1 id="history-of-activity">History of Activity</h1>\n<p><a href="Today" class="uri">Today</a></p>\n<h2 id="section">2015</h2>\n<ul>\n<li><a href="2015-09">September</a></li>\n<li><a href="2015-10">October</a></li>\n<li><a href="2015-11">November</a></li>\n<li><a href="2015-12">December</a></li>\n</ul>\n<h2 id="section-1">2016</h2>\n<ul>\n<li><a href="2016-01">January</a></li>\n<li><a href="2016-02">February</a></li>\n<li><a href="2016-03">March</a></li>\n<li><a href="2016-04">April</a></li>\n<li><a href="2016-05">May</a></li>\n<li><a href="2016-06">June</a></li>\n<li><a href="2016-07">July</a></li>\n<li><a href="2016-08">August</a></li>\n<li><a href="2016-09">September</a></li>\n<li><a href="2016-10">October</a></li>\n<li><a href="2016-11">November</a></li>\n</ul>\n	<h1 id="history-of-activity">History of Activity</h1>\n<p><a href="Today" class="uri">Today</a></p>\n<h2 id="section">2015</h2>\n<ul>\n<li><a href="2015-09">September</a></li>\n<li><a href="2015-10">October</a></li>\n<li><a href="2015-11">November</a></li>\n<li><a href="2015-12">December</a></li>\n</ul>\n<h2 id="section-1">2016</h2>\n<ul>\n<li><a href="2016-01">January</a></li>\n<li><a href="2016-02">February</a></li>\n<li><a href="2016-03">March</a></li>\n<li><a href="2016-04">April</a></li>\n<li><a href="2016-05">May</a></li>\n<li><a href="2016-06">June</a></li>\n<li><a href="2016-07">July</a></li>\n<li><a href="2016-08">August</a></li>\n<li><a href="2016-09">September</a></li>\n<li><a href="2016-10">October</a></li>\n<li><a href="2016-11">November</a></li>\n</ul>\n
+10	text-round-trip	0a1\n> \n10d10\n< \n15d14\n< \n21d19\n< \n23d20\n< \n25d21\n< \n27d22\n< \n29d23\n< \n31d24\n< \n33d25\n< \n35d26\n< \n39d29\n< \n42a33\n>     \n	0a1\n> \n10d10\n< \n15d14\n< \n21d19\n< \n23d20\n< \n25d21\n< \n27d22\n< \n29d23\n< \n31d24\n< \n33d25\n< \n35d26\n< \n39d29\n< \n42a33\n>     \n
 165	css	Error:  File not found /home/django/MyBook/static/mybook.css	Error:  File not found /home/django/MyBook/static/mybook.css
+185	system-bin	total 408\n-rw-rw-r-- 1 django django  5598 Dec 22 13:52 app.py\n-rw-rw-r-- 1 django django  7669 Dec 29 12:40 app.pyc\n-rw-rw-r-- 1 django django  3660 Jan 24 17:30 bash-alias\n-rw-rw-r-- 1 django django  3683 Dec 14 10:33 bash-django-profile\n-rwxrwxr-x 1 django django  2752 Dec 14 10:33 bash-prompt\n-rwxrwxr-x 1 django django   812 Jan 24 10:29 bashrc\n-rwxrwxr-x 1 django django   127 Dec 14 10:33 bashrc-blue\n-rw-rw-r-- 1 django django   687 Feb  5 16:46 bashrc-cron\n-rw-rw-r-- 1 django django   315 Jan 27 08:00 bashrc-win\n-rw-rw-r-- 1 django django   145 Jan 27 08:00 bashrc-win-pip\n-rw-rw-r-- 1 django django  2292 Dec 24 08:00 booknotes.py\n-rw-rw-r-- 1 django django  3250 Dec 29 12:40 booknotes.pyc\n-rw-rw-r-- 1 django django 14218 Dec 29 12:40 book.pyc\n-rwxrwxr-x 1 django django  1083 Jan 15 14:05 chapter.py\n-rwxrwxr-x 1 django django   156 Dec 14 10:33 cptree\n-rw-rw-r-- 1 django django  4042 Jan  9 08:01 data.py\n-rw-rw-r-- 1 django django  5435 Jan  9 08:06 data.pyc\n-rw-rw-r-- 1 django django  2933 Jan  8 14:27 days.py\n-rw-rw-r-- 1 django django  4186 Jan  8 14:27 days.pyc\n-rw-rw-r-- 1 django django   728 Jan  8 14:27 diagrams.py\n-rwxrwxr-x 1 django django   101 Dec 14 10:33 dj\n-rw-rw-r-- 1 django django  9282 Jan 15 15:42 doc.py\n-rw-rw-r-- 1 django django 10720 Dec 29 12:40 doc.pyc\n-rwxrwxr-x 1 django django   470 Dec 14 10:33 e\n-rwxrwxr-x 1 django django  4418 Dec 14 10:33 files.py\n-rw-rw-r-- 1 django django  6614 Dec 29 12:30 files.pyc\n-rwxrwxr-x 1 django django   340 Feb  5 16:46 hourly\n-rw-rw-r-- 1 django django  2223 Feb  5 16:46 hourly.py\n-rw-rw-r-- 1 django django  2962 Feb  5 17:00 hourly.pyc\n-rw-rw-r-- 1 django django 12486 Dec 14 10:33 hours.py\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 i\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 __init__.py\n-rw-rw-r-- 1 django django   122 Dec 29 12:30 __init__.pyc\n-rw-rw-r-- 1 django django   995 Dec 27 08:00 i.py\n-rw-rw-r-- 1 django django  1745 Dec 29 12:40 i.pyc\n-rwxrwxr-x 1 django django    36 Dec 14 10:33 lc\n-rw-rw-r-- 1 django django  2267 Dec 14 10:33 life.py\n-rw-rw-r-- 1 django django   937 Dec 14 10:33 log.py\n-rw-rw-r-- 1 django django  1787 Dec 29 12:40 log.pyc\n-rw-rw-r-- 1 django django  4624 Dec 14 10:33 music.py\n-rw-rw-r-- 1 django django  5942 Dec 29 12:40 music.pyc\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 n.py\n-rwxrwxr-x 1 django django  4237 Jan 22 08:49 ntsh.py\n-rw-rw-r-- 1 django django  2370 Jan 24 13:41 ops.py\n-rw-rw-r-- 1 django django  3422 Jan 24 13:54 ops.pyc\n-rw-r--r-- 1 django django  2029 Jan 15 13:20 pandoc.pyc\n-rwxrwxr-x 1 django django    78 Dec 14 10:33 path\n-rwxrwxr-x 1 django django   226 Dec 14 10:33 pe\n-rwxrwxr-x 1 django django    84 Dec 14 10:33 psg\n-rwxrwxr-x 1 django django   100 Jan 17 18:38 pshell\ndrwxrwxr-x 2 django django  4096 Dec 14 12:37 __pycache__\n-rwxrwxr-x 1 django django   137 Dec 14 10:33 rbg\n-rwxrwxr-x 1 django django  2296 Dec 14 10:33 resize.py\n-rw-rw-r-- 1 django django  4733 Dec 29 12:40 seamanslog.pyc\n-rwxrwxr-x 1 django django   442 Dec 14 10:33 setup-cron\n-rwxrwxr-x 1 django django   180 Dec 14 10:33 setup-simple\n-rw-rw-r-- 1 django django  5912 Dec 14 10:33 shell.py\n-rw-rw-r-- 1 django django  8154 Dec 29 12:30 shell.pyc\n-rw-rw-r-- 1 django django  1971 Jan 27 08:00 switches.py\n-rw-rw-r-- 1 django django  2207 Jan 27 08:00 switches.pyc\n-rw-rw-r-- 1 django django  5345 Dec 14 10:33 text.py\n-rw-rw-r-- 1 django django  7527 Dec 29 12:40 text.pyc\n-rw-rw-r-- 1 django django  1004 Jan 17 15:49 todo.py\n-rw-rw-r-- 1 django django  1531 Jan 17 18:38 todo.pyc\n-rw-rw-r-- 1 django django  1704 Dec 14 10:33 tool.py\n-rw-rw-r-- 1 django django  2377 Dec 29 12:40 tool.pyc\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 user.py\n-rw-rw-r-- 1 django django  2540 Jan 18 11:32 vc.py\n-rw-rw-r-- 1 django django  3769 Jan 18 11:35 vc.pyc\n-rw-rw-r-- 1 django django   272 Dec 23 06:56 venv\n-rw-rw-r-- 1 django django  1044 Jan  6 08:58 web.py\n-rw-r--r-- 1 django django  1569 Jan  6 08:58 web.pyc\n-rw-rw-r-- 2 django django   596 Dec 14 10:33 welcome\n-rw-rw-r-- 1 django django   246 Dec 14 10:33 welcome-blue\n-rw-rw-r-- 1 django django   132 Dec 17 07:32 welcome-imac\n-rw-rw-r-- 1 django django   231 Dec 14 10:33 welcome-macbook\n-rw-rw-r-- 2 django django   596 Dec 14 10:33 welcome-mybook\n-rw-rw-r-- 1 django django   624 Dec 14 10:33 welcome-production\n-rw-rw-r-- 1 django django   528 Dec 14 10:33 welcome-staging\n-rw-rw-r-- 1 django django  1605 Dec 14 10:33 wordpress.py\n-rw-rw-r-- 1 django django  2364 Dec 29 12:40 wordpress.pyc\n-rwxrwxr-x 1 django django  3377 Feb  6 08:40 x.py\n	total 404\n-rw-rw-r-- 1 django django  5598 Dec 22 13:52 app.py\n-rw-rw-r-- 1 django django  7669 Dec 29 12:40 app.pyc\n-rw-rw-r-- 1 django django  3660 Jan 24 17:30 bash-alias\n-rw-rw-r-- 1 django django  3683 Dec 14 10:33 bash-django-profile\n-rwxrwxr-x 1 django django  2752 Dec 14 10:33 bash-prompt\n-rwxrwxr-x 1 django django   812 Jan 24 10:29 bashrc\n-rwxrwxr-x 1 django django   127 Dec 14 10:33 bashrc-blue\n-rw-rw-r-- 1 django django   315 Jan 27 08:00 bashrc-win\n-rw-rw-r-- 1 django django   145 Jan 27 08:00 bashrc-win-pip\n-rw-rw-r-- 1 django django  2292 Dec 24 08:00 booknotes.py\n-rw-rw-r-- 1 django django  3250 Dec 29 12:40 booknotes.pyc\n-rw-rw-r-- 1 django django 14218 Dec 29 12:40 book.pyc\n-rwxrwxr-x 1 django django  1083 Jan 15 14:05 chapter.py\n-rwxrwxr-x 1 django django   156 Dec 14 10:33 cptree\n-rw-rw-r-- 1 django django  4042 Jan  9 08:01 data.py\n-rw-rw-r-- 1 django django  5435 Jan  9 08:06 data.pyc\n-rw-rw-r-- 1 django django  2933 Jan  8 14:27 days.py\n-rw-rw-r-- 1 django django  4186 Jan  8 14:27 days.pyc\n-rw-rw-r-- 1 django django   728 Jan  8 14:27 diagrams.py\n-rwxrwxr-x 1 django django   101 Dec 14 10:33 dj\n-rw-rw-r-- 1 django django  9282 Jan 15 15:42 doc.py\n-rw-rw-r-- 1 django django 10720 Dec 29 12:40 doc.pyc\n-rwxrwxr-x 1 django django   470 Dec 14 10:33 e\n-rwxrwxr-x 1 django django  4418 Dec 14 10:33 files.py\n-rw-rw-r-- 1 django django  6614 Dec 29 12:30 files.pyc\n-rwxrwxr-x 1 django django   321 Jan 25 09:10 hourly\n-rw-rw-r-- 1 django django  2221 Dec 14 10:33 hourly.py\n-rw-rw-r-- 1 django django  2960 Dec 29 12:40 hourly.pyc\n-rw-rw-r-- 1 django django 12486 Dec 14 10:33 hours.py\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 i\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 __init__.py\n-rw-rw-r-- 1 django django   122 Dec 29 12:30 __init__.pyc\n-rw-rw-r-- 1 django django   995 Dec 27 08:00 i.py\n-rw-rw-r-- 1 django django  1745 Dec 29 12:40 i.pyc\n-rwxrwxr-x 1 django django    36 Dec 14 10:33 lc\n-rw-rw-r-- 1 django django  2267 Dec 14 10:33 life.py\n-rw-rw-r-- 1 django django   937 Dec 14 10:33 log.py\n-rw-rw-r-- 1 django django  1787 Dec 29 12:40 log.pyc\n-rw-rw-r-- 1 django django  4624 Dec 14 10:33 music.py\n-rw-rw-r-- 1 django django  5942 Dec 29 12:40 music.pyc\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 n.py\n-rwxrwxr-x 1 django django  4237 Jan 22 08:49 ntsh.py\n-rw-rw-r-- 1 django django  2370 Jan 24 13:41 ops.py\n-rw-rw-r-- 1 django django  3422 Jan 24 13:54 ops.pyc\n-rw-r--r-- 1 django django  2029 Jan 15 13:20 pandoc.pyc\n-rwxrwxr-x 1 django django    78 Dec 14 10:33 path\n-rwxrwxr-x 1 django django   226 Dec 14 10:33 pe\n-rwxrwxr-x 1 django django    84 Dec 14 10:33 psg\n-rwxrwxr-x 1 django django   100 Jan 17 18:38 pshell\ndrwxrwxr-x 2 django django  4096 Dec 14 12:37 __pycache__\n-rwxrwxr-x 1 django django   137 Dec 14 10:33 rbg\n-rwxrwxr-x 1 django django  2296 Dec 14 10:33 resize.py\n-rw-rw-r-- 1 django django  4733 Dec 29 12:40 seamanslog.pyc\n-rwxrwxr-x 1 django django   442 Dec 14 10:33 setup-cron\n-rwxrwxr-x 1 django django   180 Dec 14 10:33 setup-simple\n-rw-rw-r-- 1 django django  5912 Dec 14 10:33 shell.py\n-rw-rw-r-- 1 django django  8154 Dec 29 12:30 shell.pyc\n-rw-rw-r-- 1 django django  1971 Jan 27 08:00 switches.py\n-rw-rw-r-- 1 django django  2207 Jan 27 08:00 switches.pyc\n-rw-rw-r-- 1 django django  5345 Dec 14 10:33 text.py\n-rw-rw-r-- 1 django django  7527 Dec 29 12:40 text.pyc\n-rw-rw-r-- 1 django django  1004 Jan 17 15:49 todo.py\n-rw-rw-r-- 1 django django  1531 Jan 17 18:38 todo.pyc\n-rw-rw-r-- 1 django django  1704 Dec 14 10:33 tool.py\n-rw-rw-r-- 1 django django  2377 Dec 29 12:40 tool.pyc\n-rw-rw-r-- 1 django django     0 Dec 14 10:33 user.py\n-rw-rw-r-- 1 django django  2540 Jan 18 11:32 vc.py\n-rw-rw-r-- 1 django django  3769 Jan 18 11:35 vc.pyc\n-rw-rw-r-- 1 django django   272 Dec 23 06:56 venv\n-rw-rw-r-- 1 django django  1044 Jan  6 08:58 web.py\n-rw-r--r-- 1 django django  1569 Jan  6 08:58 web.pyc\n-rw-rw-r-- 2 django django   596 Dec 14 10:33 welcome\n-rw-rw-r-- 1 django django   246 Dec 14 10:33 welcome-blue\n-rw-rw-r-- 1 django django   132 Dec 17 07:32 welcome-imac\n-rw-rw-r-- 1 django django   231 Dec 14 10:33 welcome-macbook\n-rw-rw-r-- 2 django django   596 Dec 14 10:33 welcome-mybook\n-rw-rw-r-- 1 django django   624 Dec 14 10:33 welcome-production\n-rw-rw-r-- 1 django django   528 Dec 14 10:33 welcome-staging\n-rw-rw-r-- 1 django django  1605 Dec 14 10:33 wordpress.py\n-rw-rw-r-- 1 django django  2364 Dec 29 12:40 wordpress.pyc\n-rwxrwxr-x 1 django django  3340 Jan 15 15:42 x.py\n
 107	budget-show	budget Show\nCategory           Ideal   Actual     Diff\n\nWork                  33       40        7\n\nGrow                  14       10        4\n\nPeople                21       20        1\n\nChurch                14       10        4\n\nFun                   16       20        4\n\n   Variance                             20\n	budget Show\nCategory           Ideal   Actual     Diff\n\nWork                  33       40        7\n\nGrow                  14       10        4\n\nPeople                21       20        1\n\nChurch                14       10        4\n\nFun                   16       20        4\n\n   Variance                             20\n
 86	datatype-list	\n        Command not found, datatype ['list']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            book        # Work with book contents\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n	\n        Command not found, datatype ['list']\n\n        usage: x cmd [args]\n\n        cmd\n\n            app         # Work with application code\n            aspire      # Set personal goals\n            author      # Manage writing content\n            book        # Work with book contents\n            booknotes   # Manage notes for reading\n            cmd         # Manage command scripts\n            collab      # Application collaborator\n            data        # Database scripting\n            doc         # Manage project documents\n            hourly      # Hourly command for maintence\n            hours       # Hours of invested time\n            log         # Manage logs\n            page        # Page Master app\n            plan        # Planning Script\n            ops         # Operations script\n            project     # Projects for clients\n            robot       # Web Robot using Selenium to fetch web pages\n            seamanslog  # Seaman's Log blog\n            spiritual   # Spiritual Things subscriber list\n            software    # Work with software training materials\n            src         # Manage source code\n            staging     # Manage server at Digital Ocean\n            task        # Task Master\n            thot        # Thot recorder\n            todo        # To do list command\n            tool        # Manage django tool scripts\n            tst         # Run tests with expected results\n            web         # Web pages\n            wordpress   # Work with wordpress server at Digital Ocean\n\n        Example: x staging ip\n                 x doc list\n                 x tst run\n        \n
-184	css-unc	Error:  File not found /home/django/MyBook/static/css/sensei.css	Error:  File not found /home/django/MyBook/static/css/sensei.css
 43	system-pip	Package              Version\n-------------------- -------\nacme                 0.4.1  \nchardet              2.3.0  \nConfigArgParse       0.10.0 \nconfigobj            5.0.6  \ncryptography         1.2.3  \nDjango               1.11   \ndjrill               2.1.0  \ndocopt               0.4.0  \nenum34               1.1.2  \nfuncsigs             0.4    \ngevent               1.1.0  \ngreenlet             0.4.9  \ngunicorn             19.4.5 \nidna                 2.0    \nipaddress            1.0.16 \nletsencrypt          0.4.1  \nmandrill             1.0.57 \nmock                 1.3.0  \nndg-httpsclient      0.4.0  \nnetifaces            0.10.4 \nparsedatetime        1.4    \npbr                  1.8.0  \npip                  18.1   \npsutil               3.4.2  \npsycopg2             2.6.1  \npyasn1               0.1.9  \nPyICU                1.9.2  \npyOpenSSL            0.15.1 \npyRFC3339            1.0    \npython-http-client   2.2.1  \npython2-pythondialog 3.3.0  \npytz                 2014.10\nrequests             2.13.0 \nselenium             3.4.1  \nsendgrid             4.2.0  \nsetuptools           20.7.0 \nsix                  1.10.0 \nSouth                1.0    \nsqlparse             0.1.18 \nstripe               1.51.0 \nurllib3              1.24.1 \nvirtualenv           15.0.1 \nwheel                0.29.0 \nzope.component       4.2.2  \nzope.event           4.2.0  \nzope.hookable        4.0.4  \nzope.interface       4.1.3  \n	Package              Version\n-------------------- -------\nacme                 0.4.1  \nchardet              2.3.0  \nConfigArgParse       0.10.0 \nconfigobj            5.0.6  \ncryptography         1.2.3  \nDjango               1.11   \ndjrill               2.1.0  \ndocopt               0.4.0  \nenum34               1.1.2  \nfuncsigs             0.4    \ngevent               1.1.0  \ngreenlet             0.4.9  \ngunicorn             19.4.5 \nidna                 2.0    \nipaddress            1.0.16 \nletsencrypt          0.4.1  \nmandrill             1.0.57 \nmock                 1.3.0  \nndg-httpsclient      0.4.0  \nnetifaces            0.10.4 \nparsedatetime        1.4    \npbr                  1.8.0  \npip                  18.1   \npsutil               3.4.2  \npsycopg2             2.6.1  \npyasn1               0.1.9  \nPyICU                1.9.2  \npyOpenSSL            0.15.1 \npyRFC3339            1.0    \npython-http-client   2.2.1  \npython2-pythondialog 3.3.0  \npytz                 2014.10\nrequests             2.13.0 \nselenium             3.4.1  \nsendgrid             4.2.0  \nsetuptools           20.7.0 \nsix                  1.10.0 \nSouth                1.0    \nsqlparse             0.1.18 \nstripe               1.51.0 \nurllib3              1.24.1 \nvirtualenv           15.0.1 \nwheel                0.29.0 \nzope.component       4.2.2  \nzope.event           4.2.0  \nzope.hookable        4.0.4  \nzope.interface       4.1.3  \n
 140	mybook-menu-aspire	('/aspire/', 'zmdi-home', 'Home', 'class=active')\n('/aspire/Work', 'zmdi-storage', 'Work', None)\n('/aspire/Grow', 'zmdi-accounts-alt', 'Grow', None)\n('/aspire/People', 'zmdi-comment-text-alt', 'People', None)\n('/aspire/Fun', 'zmdi-assignment-account', 'Fun', None)\n('/task/time/8', 'zmdi-time', 'Time', None)	('/aspire/', 'zmdi-home', 'Home', 'class=active')\n('/aspire/Work', 'zmdi-storage', 'Work', None)\n('/aspire/Grow', 'zmdi-accounts-alt', 'Grow', None)\n('/aspire/People', 'zmdi-comment-text-alt', 'People', None)\n('/aspire/Fun', 'zmdi-assignment-account', 'Fun', None)\n('/task/time/8', 'zmdi-time', 'Time', None)
+184	css-unc	Error:  File not found /home/django/MyBook/static/css/sensei.css	Error:  File not found /home/django/MyBook/static/css/sensei.css
 54	health-score	shell(x health score) --> 2 lines (should be between 10 and 80)	shell(x health score) --> 2 lines (should be between 10 and 80)
-63	ops-help	no output	no output
 55	music-list	shell(x music tracks) --> 3 lines (should be between 1000 and 1600)	shell(x music tracks) --> 3 lines (should be between 1000 and 1600)
 58	life-index	shell(x life show Index) --> 58 lines (should be between 60 and 70)	shell(x life show Index) --> 58 lines (should be between 60 and 70)
 59	life-list	life list\nPeople\nLife\nIndex\nGrowth\nWork\nExperience\nContents\n	life list\nPeople\nLife\nIndex\nGrowth\nWork\nExperience\nContents\n
 60	life-show	no output	no output
 57	node-self	shell(x node test) --> 26 lines (should be between 36 and 56)	shell(x node test) --> 26 lines (should be between 36 and 56)
+63	ops-help	no output	no output
 62	reuse-show	no output	no output
 70	hours-show	Error:  File not found /home/django/MyBook/Documents/info/days/2016-08\n	Error:  File not found /home/django/MyBook/Documents/info/days/2016-08\n
 81	task-import	shell(x task import) --> 1 lines (should be between 10 and 800)	shell(x task import) --> 1 lines (should be between 10 and 800)
@@ -7244,8 +7159,8 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 111	aspire-score	*                   Docs  Words\n* MyBook              23   2074\n* Aspire              27   7812\n* Software            14   2143\n* role                 4     61\n* Life                 3    514\n* Report             193  38194\n* Hire                15   4676\n* Write               34  10278\n* Fun                  3     70\n* Church               8   1630\n* Grow                10    596\n*   Total            334  68048\n	*                   Docs  Words\n* MyBook              23   2074\n* Aspire              27   7812\n* Software            14   2143\n* role                 4     61\n* Life                 3    514\n* Report             193  38194\n* Hire                15   4676\n* Write               34  10278\n* Fun                  3     70\n* Church               8   1630\n* Grow                10    596\n*   Total            334  68048\n
 117	software-list	Software list\nMenu\nIndex\nBestPractice/Management\nBestPractice/DevelopmentGoals\nBestPractice/RemainingTasks\nBestPractice/Guarantee\nBestPractice/Process\nBestPractice/FutureTasks\nBestPractice/Payment\nBestPractice/Assessment\nBestPractice/Technology\nBestPractice/Commitment\nBestPractice/EstimatingProjects\nBestPractice/Issues\nBestPractice/Clients\nBestPractice/People\nBestPractice/ReleaseChecklist\nBestPractice/BudgetHours\nBestPractice/Planning\nBestPractice/Engineering\nBestPractice/Productivity\nBestPractice/UserStories\nBestPractice/Index\nBestPractice/Contract\nBestPractice/Risk\nBestPractice/Views\nBestPractice/Experience\nBestPractice/Principles\nBestPractice/Tasks\nBestPractice/DataType\nBestPractice/EngineeringServices\nBestPractice/Proposal\nLeverage/Debt\nLeverage/Part3\nLeverage/Services\nLeverage/Deployment\nLeverage/AppendixC\nLeverage/Menu\nLeverage/Code\nLeverage/Monitoring\nLeverage/Technology\nLeverage/Learning\nLeverage/Knowledge\nLeverage/Part1\nLeverage/Planning\nLeverage/Part2\nLeverage/Part4\nLeverage/Test\nLeverage/Leverage\nLeverage/Preface\nLeverage/Cover\nLeverage/Release\nLeverage/Practices\nLeverage/Index\nLeverage/StartReading\nLeverage/AppendixB\nLeverage/Design\nLeverage/Teamwork\nLeverage/FrontMatter\nLeverage/ApplyingLeverage\nLeverage/Author\nLeverage/AppendixA\nLeverage/Proposal\nLeverage/Chapters\nClient/Today\nClient/Hire-ToDo\nClient/2016-10\nClient/Hire-Done\n	Software list\nMenu\nIndex\nBestPractice/Management\nBestPractice/DevelopmentGoals\nBestPractice/RemainingTasks\nBestPractice/Guarantee\nBestPractice/Process\nBestPractice/FutureTasks\nBestPractice/Payment\nBestPractice/Assessment\nBestPractice/Technology\nBestPractice/Commitment\nBestPractice/EstimatingProjects\nBestPractice/Issues\nBestPractice/Clients\nBestPractice/People\nBestPractice/ReleaseChecklist\nBestPractice/BudgetHours\nBestPractice/Planning\nBestPractice/Engineering\nBestPractice/Productivity\nBestPractice/UserStories\nBestPractice/Index\nBestPractice/Contract\nBestPractice/Risk\nBestPractice/Views\nBestPractice/Experience\nBestPractice/Principles\nBestPractice/Tasks\nBestPractice/DataType\nBestPractice/EngineeringServices\nBestPractice/Proposal\nLeverage/Debt\nLeverage/Part3\nLeverage/Services\nLeverage/Deployment\nLeverage/AppendixC\nLeverage/Menu\nLeverage/Code\nLeverage/Monitoring\nLeverage/Technology\nLeverage/Learning\nLeverage/Knowledge\nLeverage/Part1\nLeverage/Planning\nLeverage/Part2\nLeverage/Part4\nLeverage/Test\nLeverage/Leverage\nLeverage/Preface\nLeverage/Cover\nLeverage/Release\nLeverage/Practices\nLeverage/Index\nLeverage/StartReading\nLeverage/AppendixB\nLeverage/Design\nLeverage/Teamwork\nLeverage/FrontMatter\nLeverage/ApplyingLeverage\nLeverage/Author\nLeverage/AppendixA\nLeverage/Proposal\nLeverage/Chapters\nClient/Today\nClient/Hire-ToDo\nClient/2016-10\nClient/Hire-Done\n
 65	ops-server-type	Ops Command - production type\n\n        ops production ['type']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n	Ops Command - production type\n\n        ops production ['type']\n\n        usage: x ops COMMAND [ARGS]\n\n        COMMAND:\n\n            command - execute a single command on the remote server\n            console - login to production\n            deploy  - push all changes to staging server\n            log     - show the log on the production server\n            restart - restart the web server\n            root    - show the root console\n            update  - push all files to remote server\n\n        \n
-29	plan-list	plan list\nSiteTitle\nTo_Do_List\nMenu\nBio_Hammer/Index\nAdvisor/A_Better_Life\nAdvisor/Index\nGoals/Aspirations_(100%)\nGoals/Index\nGoals/Work_(40%)\nJournal/My_Future_Life\nJournal/Index\nWho2Hire/Index\nBuilding_Software/Django_templates\nBuilding_Software/Markdown_Formatter\nBuilding_Software/Database_initialization\nBuilding_Software/Code_generators\nBuilding_Software/Canonical_views\nBuilding_Software/Standard_Theme\nBuilding_Software/User_Registration\nBuilding_Software/Database_Migration\nBuilding_Software/Simple_Application\nBuilding_Software/JavaScript\nBuilding_Software/Command_scripts\nBuilding_Software/Index\nBuilding_Software/Material_Theme\nBuilding_Software/Standard_queries\nBuilding_Software/Django_App_Structure\nBuilding_Software/Database_connection\nBuilding_Software/Views\nBuilding_Software/CSS\nBuilding_Software/URLs\nBuilding_Software/Data_Models\nBuilding_Software/Import/Export\nThot_Recorder/Thot_System_Design_Notes\nThot_Recorder/Index\nCreativity/Creativity_Journal\nCreativity/Index\nApp_Design/Index\nApp_Design/Project_Milestones\nApp_Design/Money_App_Design\nWork_Modes/Index\nToDo/To_Do_List\nToDo/Urgent\nToDo/Index\n	plan list\nSiteTitle\nTo_Do_List\nMenu\nBio_Hammer/Index\nAdvisor/A_Better_Life\nAdvisor/Index\nGoals/Aspirations_(100%)\nGoals/Index\nGoals/Work_(40%)\nJournal/My_Future_Life\nJournal/Index\nWho2Hire/Index\nBuilding_Software/Django_templates\nBuilding_Software/Markdown_Formatter\nBuilding_Software/Database_initialization\nBuilding_Software/Code_generators\nBuilding_Software/Canonical_views\nBuilding_Software/Standard_Theme\nBuilding_Software/User_Registration\nBuilding_Software/Database_Migration\nBuilding_Software/Simple_Application\nBuilding_Software/JavaScript\nBuilding_Software/Command_scripts\nBuilding_Software/Index\nBuilding_Software/Material_Theme\nBuilding_Software/Standard_queries\nBuilding_Software/Django_App_Structure\nBuilding_Software/Database_connection\nBuilding_Software/Views\nBuilding_Software/CSS\nBuilding_Software/URLs\nBuilding_Software/Data_Models\nBuilding_Software/Import/Export\nThot_Recorder/Thot_System_Design_Notes\nThot_Recorder/Index\nCreativity/Creativity_Journal\nCreativity/Index\nApp_Design/Index\nApp_Design/Project_Milestones\nApp_Design/Money_App_Design\nWork_Modes/Index\nToDo/To_Do_List\nToDo/Urgent\nToDo/Index\n
 183	css-slides	/* ------------------------------\n    Elements\n------------------------------*/\n\np {\n    color: #F6B018;\n}\n\n/* ------------------------------\n    Class\n------------------------------*/\n\n.reveal a {\n    color: #F6B018;\n    background-color: #0E3D65;\n    padding: 10px;\n    margin: 10px;\n    border: 2px solid #F6B018;\n    border-radius: 30px;\n}\n\n.reveal a:hover {\n    color: #0E3D65;\n    background-color: #F6B018;\n}\n\n.reveal h1 {\n    text-transform: none;\n    font-size: 150%;\n    color: #0E3D65;\n    background-color: #F6B018;\n    border: 2px solid #0E3D65;\n}\n\n.reveal h2 {\n    color: green;\n    background-color: #F6B018;\n    border: 2px solid #0E3D65;\n    text-align: center;\n    font-size: 200%;\n    margin: 10px 20px;\n    padding: 10px 20px;\n    box-shadow: 2px 2px 5px gray;\n}\n\n.reveal h3,\n.reveal h4 {\n    text-transform: none;\n    font-size: 120%;\n    color: #0E3D65;\n}\n\n.reveal section img {\n    border: none;\n    max-width: 600px;\n    box-shadow: none;\n    text-align: center;\n    max-width: 80%;\n    max-height: 80%;\n}\n\n.reveal li {\n    color: #0E3D65;\n    font-size: 90%;\n}\n\n.reveal li li {\n    color: #F6B018;\n}\n\n.reveal p {\n    color: green;\n}\n\n.reveal pre {\n    background-color: #eee;\n    color: #444;\n    margin: 10px 100px;\n}\n\n.right {\n    float: right;\n}\n\n	/* ------------------------------\n    Elements\n------------------------------*/\n\np {\n    color: #F6B018;\n}\n\n/* ------------------------------\n    Class\n------------------------------*/\n\n.reveal a {\n    color: #F6B018;\n    background-color: #0E3D65;\n    padding: 10px;\n    margin: 10px;\n    border: 2px solid #F6B018;\n    border-radius: 30px;\n}\n\n.reveal a:hover {\n    color: #0E3D65;\n    background-color: #F6B018;\n}\n\n.reveal h1 {\n    text-transform: none;\n    font-size: 150%;\n    color: #0E3D65;\n    background-color: #F6B018;\n    border: 2px solid #0E3D65;\n}\n\n.reveal h2 {\n    color: green;\n    background-color: #F6B018;\n    border: 2px solid #0E3D65;\n    text-align: center;\n    font-size: 200%;\n    margin: 10px 20px;\n    padding: 10px 20px;\n    box-shadow: 2px 2px 5px gray;\n}\n\n.reveal h3,\n.reveal h4 {\n    text-transform: none;\n    font-size: 120%;\n    color: #0E3D65;\n}\n\n.reveal section img {\n    border: none;\n    max-width: 600px;\n    box-shadow: none;\n    text-align: center;\n    max-width: 80%;\n    max-height: 80%;\n}\n\n.reveal li {\n    color: #0E3D65;\n    font-size: 90%;\n}\n\n.reveal li li {\n    color: #F6B018;\n}\n\n.reveal p {\n    color: green;\n}\n\n.reveal pre {\n    background-color: #eee;\n    color: #444;\n    margin: 10px 100px;\n}\n\n.right {\n    float: right;\n}\n\n
+29	plan-list	plan list\nSiteTitle\nTo_Do_List\nMenu\nBio_Hammer/Index\nAdvisor/A_Better_Life\nAdvisor/Index\nGoals/Aspirations_(100%)\nGoals/Index\nGoals/Work_(40%)\nJournal/My_Future_Life\nJournal/Index\nWho2Hire/Index\nBuilding_Software/Django_templates\nBuilding_Software/Markdown_Formatter\nBuilding_Software/Database_initialization\nBuilding_Software/Code_generators\nBuilding_Software/Canonical_views\nBuilding_Software/Standard_Theme\nBuilding_Software/User_Registration\nBuilding_Software/Database_Migration\nBuilding_Software/Simple_Application\nBuilding_Software/JavaScript\nBuilding_Software/Command_scripts\nBuilding_Software/Index\nBuilding_Software/Material_Theme\nBuilding_Software/Standard_queries\nBuilding_Software/Django_App_Structure\nBuilding_Software/Database_connection\nBuilding_Software/Views\nBuilding_Software/CSS\nBuilding_Software/URLs\nBuilding_Software/Data_Models\nBuilding_Software/Import/Export\nThot_Recorder/Thot_System_Design_Notes\nThot_Recorder/Index\nCreativity/Creativity_Journal\nCreativity/Index\nApp_Design/Index\nApp_Design/Project_Milestones\nApp_Design/Money_App_Design\nWork_Modes/Index\nToDo/To_Do_List\nToDo/Urgent\nToDo/Index\n	plan list\nSiteTitle\nTo_Do_List\nMenu\nBio_Hammer/Index\nAdvisor/A_Better_Life\nAdvisor/Index\nGoals/Aspirations_(100%)\nGoals/Index\nGoals/Work_(40%)\nJournal/My_Future_Life\nJournal/Index\nWho2Hire/Index\nBuilding_Software/Django_templates\nBuilding_Software/Markdown_Formatter\nBuilding_Software/Database_initialization\nBuilding_Software/Code_generators\nBuilding_Software/Canonical_views\nBuilding_Software/Standard_Theme\nBuilding_Software/User_Registration\nBuilding_Software/Database_Migration\nBuilding_Software/Simple_Application\nBuilding_Software/JavaScript\nBuilding_Software/Command_scripts\nBuilding_Software/Index\nBuilding_Software/Material_Theme\nBuilding_Software/Standard_queries\nBuilding_Software/Django_App_Structure\nBuilding_Software/Database_connection\nBuilding_Software/Views\nBuilding_Software/CSS\nBuilding_Software/URLs\nBuilding_Software/Data_Models\nBuilding_Software/Import/Export\nThot_Recorder/Thot_System_Design_Notes\nThot_Recorder/Index\nCreativity/Creativity_Journal\nCreativity/Index\nApp_Design/Index\nApp_Design/Project_Milestones\nApp_Design/Money_App_Design\nWork_Modes/Index\nToDo/To_Do_List\nToDo/Urgent\nToDo/Index\n
 116	page-text	shell(x page text all) --> 1 lines (should be between 400 and 1000)	shell(x page text all) --> 1 lines (should be between 400 and 1000)
 4	text-functions	text_command\ntext_help\nfind_agents\nfind_anchors\nfind_classes\nfind_functions\nfind_links\nfind_quotes\nfind_signatures\nfind_urls\nmarkdown_list_links\nmarkdown_list_string\ntext_join\ntext_lines\ntext_match\ntext_no_match\ntext_outline\ntext_outline_string\ntext_markdown\ntext_replace\ntext_title\ntext_body\nmatch_lines\nmatch_pattern\ntransform_matches	text_command\ntext_help\nfind_agents\nfind_anchors\nfind_classes\nfind_functions\nfind_links\nfind_quotes\nfind_signatures\nfind_urls\nmarkdown_list_links\nmarkdown_list_string\ntext_join\ntext_lines\ntext_match\ntext_no_match\ntext_outline\ntext_outline_string\ntext_markdown\ntext_replace\ntext_title\ntext_body\nmatch_lines\nmatch_pattern\ntransform_matches
 129	robot-show	shell(x robot show) --> 2 lines (should be between 20 and 30)	shell(x robot show) --> 2 lines (should be between 20 and 30)
@@ -7254,10 +7169,9 @@ COPY public.tool_test (id, name, output, expected) FROM stdin;
 161	mybook-site-title	['Aspire', 'From Dreams to Reality']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n["Seaman's Guide", 'Learn New Skills']\n['Private Notes', 'Thinking Patterns and Best Practice']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n["Seaman's Log", 'Big Ideas & Deep Thoughts']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n['Spiritual Things', 'Daily Inspiration']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']	['Aspire', 'From Dreams to Reality']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n["Seaman's Guide", 'Learn New Skills']\n['Private Notes', 'Thinking Patterns and Best Practice']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n["Seaman's Log", 'Big Ideas & Deep Thoughts']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n['Spiritual Things', 'Daily Inspiration']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']\n['Shrinking World', 'Solutions to key problems']
 102	project-export	\n\n        script to manage projects on servers\n\n        usage: x project command\n\n        command\n\n        List:\n            list                - list the configured project\n            get   name          - get a project by name lookup\n\n        Modify:\n            add     name user   - add a new project record\n            delete  name        - remove this project\n            edit    name value  - rename the project\n\n        I/O \n            import              - import all records from a file \n            export              - export all records to a file \n\n        \n	\n\n        script to manage projects on servers\n\n        usage: x project command\n\n        command\n\n        List:\n            list                - list the configured project\n            get   name          - get a project by name lookup\n\n        Modify:\n            add     name user   - add a new project record\n            delete  name        - remove this project\n            edit    name value  - rename the project\n\n        I/O \n            import              - import all records from a file \n            export              - export all records to a file \n\n        \n
 186	system-env	mb=/home/django/Archive/MyBook-2018\nblue=uncobacs@unco-bacs.org\nmbw=/home/django/Archive/rcp/mbw\nmd=/home/django/Archive/Documents-2018\nSHLVL=1\ns=/home/django/Sensei\nOLDPWD=/home/django/MyBook\nHOME=/home/django\nunc=/home/django/UNC\nLOGNAME=django\n_=/usr/bin/python\nmacbook=markseaman@10.0.0.167\nPATH=/home/django/MyBook:/home/django/MyBook/bin:/bin:/sbin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:/usr/bin:/usr/local/mysql/bin\nimac=seaman@10.0.0.48\nLANG=en_US.UTF-8\nSHELL=/bin/sh\np=/home/django/MyBook\nCLICOLOR=true\nPWD=/home/django/MyBook\nDJANGO_SETTINGS_MODULE=hammer.settings\nTZ=US/Mountain\n	LESSOPEN=| /bin/lesspipe %s\nmb=/home/django/Archive/MyBook-2018\nMAIL=/var/mail/django\nSSH_CLIENT=73.169.123.42 65172 22\nUSER=django\nblue=uncobacs@unco-bacs.org\nmbw=/home/django/Archive/rcp/mbw\nmd=/home/django/Archive/Documents-2018\nSHLVL=1\ns=/home/django/Sensei\nOLDPWD=/home/django\nHOME=/home/django\nSSH_TTY=/dev/pts/0\nunc=/home/django/UNC\nLOGNAME=django\n_=/bin/sh\nXDG_SESSION_ID=70365\nTERM=xterm-256color\nmacbook=markseaman@10.0.0.167\nHISTCONTROL=ignoreboth\nPATH=/home/django/bin:/home/django/.local/bin:/home/django/MyBook:/home/django/MyBook/bin:/bin:/sbin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:/usr/bin:/usr/local/mysql/bin\nXDG_RUNTIME_DIR=/run/user/999\nimac=seaman@10.0.0.48\nLANG=en_US.UTF-8\nLS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:\nSHELL=/bin/bash\nLESSCLOSE=/bin/lesspipe %s %s\np=/home/django/MyBook\nCLICOLOR=true\nPWD=/home/django/MyBook\nSSH_CONNECTION=73.169.123.42 65172 138.68.234.96 22\nDJANGO_SETTINGS_MODULE=hammer.settings\nTZ=US/Mountain\n
-3	text-format	Work Activities\n    * These activities are critical to successful work.\n    * Balance the four activities for the best outcomes.\n    * This is a second paragraph\n    * of text.\n    Learn\n        * create deeper understanding of problem\n        * evaluate solution\n\n    Plan\n        * past history\n        * present tasks\n        * future priorities\n\n    Build\n        fix\n            list of known problems\n\n            issue tracking\n\n        test\n            test inventory\n\n            tests needed\n\n        extend\n\n        improve\n\n    Teach\n        * share what you know\n        * invite review\n	Work Activities\n    * These activities are critical to successful work.\n    * Balance the four activities for the best outcomes.\n    * This is a second paragraph\n    * of text.\n    Learn\n        * create deeper understanding of problem\n        * evaluate solution\n\n    Plan\n        * past history\n        * present tasks\n        * future priorities\n\n    Build\n        fix\n            list of known problems\n\n            issue tracking\n\n        test\n            test inventory\n\n            tests needed\n\n        extend\n\n        improve\n\n    Teach\n        * share what you know\n        * invite review\n
 118	software-show	no output	no output
 119	software-stats	no output	no output
-131	app-url	Find all the URLs for the app\n\nhammer/urls.py\n\n    robots.txt$, RedirectView.as_view(url=staticfiles_storage.url('robots.txt'),  permanent=True)\n    favicon.ico$, RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'), permanent=True)\n    admin/, admin.site.urls\n    health/, include(health.urls)\n    health, include(health.urls)\n    life/, include(life.urls)\n    life, include(life.urls)\n    superuser/, include(superuser.urls)\n    superuser, include(superuser.urls)\n    task/, include(tasks.urls)\n    task, include(tasks.urls)\n    , include(tool.urls)\n    unc/, include(sensei.urls)\n    unc, include(sensei.urls)\n    , include(mybook.urls)\n\nhealth/urls.py\n\n    $, HealthView\n    history$, HealthList\n    url(r'(?P<pk>\\d+)$, HealthEdit)\n\nlife/urls.py\n\n    $, LifeView\n    experience$, ExperienceView\n    year/(?P<age>[-\\d]+)$, YearView\n    (?P<age>[-\\d]+)/(?P<aspect>[\\W\\w]+)/add$, LifeAdd\n    (?P<pk>\\d+)/edit$, LifeEdit\n\nmybook/urls.py\n\n    login, login, {'template_name': 'mybook_login.html'}\n    logout$, logout, {'next_page': '/login'}\n    info/(?P<title>[\\w/\\-_.]*)$, MyBookPrivateDoc\n    seamanslog$, SeamansLog\n    spiritual/(?P<title>[\\w\\-_.]*)$, SpiritualSelect\n    (?P<title>[\\w/\\-_.]*)$, MyBookDocDisplay\n\nsensei/urls.py\n\n    register$, UncRegister\n    registered$, UncRegistered\n    reading$, UncReading\n    url(r'reviews$, UncReviews),\n    url(r'review/(?P<pk>[\\d]+)$, UncEditReview),\n    schedule$, UncSchedule\n    url(r'feedback/(?P<pk>[\\d]+)$, UncReviewFeedback),\n    student/(?P<id>[\\d]+)$, UncStudent\n    url-question/(?P<id>[\\d]+)$, UncUrlGameQuestion\n    url-answer/(?P<id>[\\d]+)$, UncUrlGameAnswer\n    url-game-done/(?P<id>[\\d]+)$, UncUrlGameDone\n    guide/(?P<title>[\\w/\\-_.]*)$, GuideDoc\n    (?P<title>[\\w/\\-_.]*)/slides$, UncSlidesDisplay\n    (?P<title>[\\w/\\-_.]*)$, UncDocDisplay\n\nsuperuser/urls.py\n\n    $, AdminView\n    log, LogView\n    doc/(?P<doc>[\\w/\\-_.]+)$, DocView\n    material, MaterialView\n    test, TestView\n    users$, UsersView\n    surrogate/(?P<pk>\\d+)$, SurrogateView\n    database$, DatabaseView\n\ntasks/urls.py\n\n    add$, TaskCreate\n    url(r'(?P<pk>\\d+)/edit$, TaskUpdate\n    url(r'(?P<pk>\\d+)/delete$, TaskDelete\n    (?P<pk>\\d+)$, TaskDetail\n    import$, TaskImport\n    export$, TaskExport\n    $, TaskHome\n    summary$, TimeSummary\n    time$, MyTime\n    bad$, MissingDays\n    (?P<activity>[\\w\\d\\-\\.]*)$, TaskList\n\ntool/urls.py\n\n    user_add$, UserCreate\n    user_delete/(?P<pk>\\d+)$, UserDelete\n    user_detail/(?P<pk>\\d+)$, UserDetail\n    user_edit/(?P<pk>\\d+)$, UserEdit\n    user_list$, UserList\n	Find all the URLs for the app\n\nhammer/urls.py\n\n    robots.txt$, RedirectView.as_view(url=staticfiles_storage.url('robots.txt'),  permanent=True)\n    favicon.ico$, RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'), permanent=True)\n    admin/, admin.site.urls\n    health/, include(health.urls)\n    health, include(health.urls)\n    life/, include(life.urls)\n    life, include(life.urls)\n    superuser/, include(superuser.urls)\n    superuser, include(superuser.urls)\n    task/, include(tasks.urls)\n    task, include(tasks.urls)\n    , include(tool.urls)\n    unc/, include(sensei.urls)\n    unc, include(sensei.urls)\n    , include(mybook.urls)\n\nhealth/urls.py\n\n    $, HealthView\n    history$, HealthList\n    url(r'(?P<pk>\\d+)$, HealthEdit)\n\nlife/urls.py\n\n    $, LifeView\n    experience$, ExperienceView\n    year/(?P<age>[-\\d]+)$, YearView\n    (?P<age>[-\\d]+)/(?P<aspect>[\\W\\w]+)/add$, LifeAdd\n    (?P<pk>\\d+)/edit$, LifeEdit\n\nmybook/urls.py\n\n    login, login, {'template_name': 'mybook_login.html'}\n    logout$, logout, {'next_page': '/login'}\n    info/(?P<title>[\\w/\\-_.]*)$, MyBookPrivateDoc\n    seamanslog$, SeamansLog\n    spiritual/(?P<title>[\\w\\-_.]*)$, SpiritualSelect\n    (?P<title>[\\w/\\-_.]*)$, MyBookDocDisplay\n\nsensei/urls.py\n\n    register$, UncRegister\n    registered$, UncRegistered\n    reading$, UncReading\n    url(r'reviews$, UncReviews),\n    url(r'review/(?P<pk>[\\d]+)$, UncEditReview),\n    url(r'feedback/(?P<pk>[\\d]+)$, UncReviewFeedback),\n    student/(?P<id>[\\d]+)$, UncStudent\n    url-question/(?P<id>[\\d]+)$, UncUrlGameQuestion\n    url-answer/(?P<id>[\\d]+)$, UncUrlGameAnswer\n    url-game-done/(?P<id>[\\d]+)$, UncUrlGameDone\n    guide/(?P<title>[\\w/\\-_.]*)$, GuideDoc\n    (?P<title>[\\w/\\-_.]*)/slides$, UncSlidesDisplay\n    (?P<title>[\\w/\\-_.]*)$, UncDocDisplay\n\nsuperuser/urls.py\n\n    $, AdminView\n    log, LogView\n    doc/(?P<doc>[\\w/\\-_.]+)$, DocView\n    material, MaterialView\n    test, TestView\n    users$, UsersView\n    surrogate/(?P<pk>\\d+)$, SurrogateView\n    database$, DatabaseView\n\ntasks/urls.py\n\n    add$, TaskCreate\n    url(r'(?P<pk>\\d+)/edit$, TaskUpdate\n    url(r'(?P<pk>\\d+)/delete$, TaskDelete\n    (?P<pk>\\d+)$, TaskDetail\n    import$, TaskImport\n    export$, TaskExport\n    $, TaskHome\n    summary$, TimeSummary\n    time$, MyTime\n    bad$, MissingDays\n    (?P<activity>[\\w\\d\\-\\.]*)$, TaskList\n\ntool/urls.py\n\n    user_add$, UserCreate\n    user_delete/(?P<pk>\\d+)$, UserDelete\n    user_detail/(?P<pk>\\d+)$, UserDetail\n    user_edit/(?P<pk>\\d+)$, UserEdit\n    user_list$, UserList\n
+3	text-format	Work Activities\n    * These activities are critical to successful work.\n    * Balance the four activities for the best outcomes.\n    * This is a second paragraph\n    * of text.\n    Learn\n        * create deeper understanding of problem\n        * evaluate solution\n\n    Plan\n        * past history\n        * present tasks\n        * future priorities\n\n    Build\n        fix\n            list of known problems\n\n            issue tracking\n\n        test\n            test inventory\n\n            tests needed\n\n        extend\n\n        improve\n\n    Teach\n        * share what you know\n        * invite review\n	Work Activities\n    * These activities are critical to successful work.\n    * Balance the four activities for the best outcomes.\n    * This is a second paragraph\n    * of text.\n    Learn\n        * create deeper understanding of problem\n        * evaluate solution\n\n    Plan\n        * past history\n        * present tasks\n        * future priorities\n\n    Build\n        fix\n            list of known problems\n\n            issue tracking\n\n        test\n            test inventory\n\n            tests needed\n\n        extend\n\n        improve\n\n    Teach\n        * share what you know\n        * invite review\n
 25	table-format	<table class="table table-hover">\n  <th class="palette-Teal-100 bg">X</th>\n  <th class="palette-Teal-100 bg">Y</th>\n  <th class="palette-Teal-100 bg">Z</th>\n  <tr>\n    <td>a</td>\n    <td>b</td>\n    <td>c</td>\n  </tr>\n  <tr>\n    <td>1</td>\n    <td>2</td>\n    <td>3</td>\n  </tr>\n  <tr>\n    <td>4</td>\n    <td>5</td>\n    <td>6</td>\n  </tr>\n  <tr>\n    <td>7</td>\n    <td>8</td>\n    <td>9</td>\n  </tr>\n</table>	<table class="table table-hover">\n  <th class="palette-Teal-100 bg">X</th>\n  <th class="palette-Teal-100 bg">Y</th>\n  <th class="palette-Teal-100 bg">Z</th>\n  <tr>\n    <td>a</td>\n    <td>b</td>\n    <td>c</td>\n  </tr>\n  <tr>\n    <td>1</td>\n    <td>2</td>\n    <td>3</td>\n  </tr>\n  <tr>\n    <td>4</td>\n    <td>5</td>\n    <td>6</td>\n  </tr>\n  <tr>\n    <td>7</td>\n    <td>8</td>\n    <td>9</td>\n  </tr>\n</table>
 9	text-outline	[['Work Activities', [['Learn', [], ['create deeper understanding of problem', 'evaluate solution', '']], ['Plan', [], ['past history', 'present tasks', 'future priorities', '']], ['Build', [['fix', [['list of known problems', [], []], ['issue tracking', [], []]], []], ['test', [['test inventory', [], []], ['tests needed', [], []]], []], ['extend', [], []], ['improve', [], ['']]], []], ['Teach', [], ['share what you know', 'invite review', '', '    ']]], ['', 'These activities are critical to successful work.', 'Balance the four activities for the best outcomes.', '', 'This is a second paragraph', 'of text.', '']]]	[['Work Activities', [['Learn', [], ['create deeper understanding of problem', 'evaluate solution', '']], ['Plan', [], ['past history', 'present tasks', 'future priorities', '']], ['Build', [['fix', [['list of known problems', [], []], ['issue tracking', [], []]], []], ['test', [['test inventory', [], []], ['tests needed', [], []]], []], ['extend', [], []], ['improve', [], ['']]], []], ['Teach', [], ['share what you know', 'invite review', '', '    ']]], ['', 'These activities are critical to successful work.', 'Balance the four activities for the best outcomes.', '', 'This is a second paragraph', 'of text.', '']]]
 47	seamanslog-list	TimeBudget\nOpportunity\n10000Days\nToolsSaveTime\nLearningCurve\nImportantWork\nUnfinishedBook\nLifeWork\nReadToLearn\nSiteTitle\nDailyHabits\nCommitments\nExpandContract\nMenu\nHabitualChange\nWorkMindset\nWritingWorkflow\nWhyWork\nMultitasking\nHitler\nLowCostMyth\nBusinessInvestment\nActToLearn\nScaledCommit\nStrengths\nCollaboration\nWritingStages\nPragmaticThinking\nOneImprovement\nSearch\nCareer\nProcessingIdeas\nYourBlogTopic\nIndex\nLifeFun\nLifeThatMatters\nBiggestIdea\nLifePeople\nLifeGrow\nNewYearsResolutions\nGenetics\nInvest20Percent\nCreativeScore\nRuthlessWithWaste\nFoodAndSex\nPessimism\nComputerComplexity\nIdeology\nMaunaKea\nWorkforce\nMyStory\n	TimeBudget\nOpportunity\n10000Days\nToolsSaveTime\nLearningCurve\nImportantWork\nUnfinishedBook\nLifeWork\nReadToLearn\nSiteTitle\nDailyHabits\nCommitments\nExpandContract\nMenu\nHabitualChange\nWorkMindset\nWritingWorkflow\nWhyWork\nMultitasking\nHitler\nLowCostMyth\nBusinessInvestment\nActToLearn\nScaledCommit\nStrengths\nCollaboration\nWritingStages\nPragmaticThinking\nOneImprovement\nSearch\nCareer\nProcessingIdeas\nYourBlogTopic\nIndex\nLifeFun\nLifeThatMatters\nBiggestIdea\nLifePeople\nLifeGrow\nNewYearsResolutions\nGenetics\nInvest20Percent\nCreativeScore\nRuthlessWithWaste\nFoodAndSex\nPessimism\nComputerComplexity\nIdeology\nMaunaKea\nWorkforce\nMyStory\n
