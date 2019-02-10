@@ -1,16 +1,15 @@
-#!/usr/bin/python
 from os import chdir, environ, listdir, mkdir, remove, rmdir, rename, system
 from os.path import exists, dirname, isdir, join
 from random import randint
 from sys import argv
-# from Pillow import Image
+from PIL import Image
 
 from files import recursive_list
 from shell import file_list
 
 
 base = join(environ['HOME'],'Archive/Documents-2016')
-archive = join(base,'ntsh')
+archive = join(environ['HOME'],'ntsh')
 cache = join(archive,'static/cache')
 mbw = join(environ['HOME'], 'Archive/rcp/mbw')
 
@@ -70,9 +69,9 @@ def convert(f1,f2):
 
 
 def convert_png(f1,f2):
-    print 'delete PNG File', f1, f2
-    # image = Image.open(f1)
-    # image.save (f2, 'JPEG')
+    print 'convert PNG File', f1, f2
+    image = Image.open(f1)
+    image.save (f2, 'JPEG')
     remove(f1)
 
 
@@ -171,12 +170,12 @@ def web(page='%s/notes/fav_list' % archive):
 
 
 def zip_open():
-    system('cd %s && mv .ntsh.opc .ntsh.zip && unzip .ntsh.zip && rm .ntsh.zip' % base)
-    print('cd '+archive)
+    system('mv %s/.ntsh.opc ~/.ntsh.zip && cd && unzip .ntsh.zip && rm .ntsh.zip' % base)
+    print('cd ~/ntsh')
 
 
 def zip_close():
-    system('cd %s && zip -r .ntsh.zip ntsh && rm -r ntsh && mv .ntsh.zip .ntsh.opc' % base)
+    system('cd && zip -r .ntsh.zip ntsh && rm -r ntsh && mv .ntsh.zip %s/.ntsh.opc' % base)
 
 
 

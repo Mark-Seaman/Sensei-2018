@@ -67,7 +67,7 @@ alias lesson='cd ~/Sensei/Documents/unc/bacs200 && ls -al'
 alias ll='ls -l'
 alias log='tail -99 $p/log/hammer.log'
 
-alias n=ntsh.py
+alias n='python $p/bin/ntsh.py'
 alias note='open /Applications/Evernote.app'
 
 alias ops='x ops'
