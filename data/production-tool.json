@@ -1416,7 +1416,7 @@
         "fields": {
             "expected": "Tue Feb  5 11:13:57 MST 2019\n",
             "name": "tst-time",
-            "output": "Sat Feb  9 07:00:10 MST 2019\n"
+            "output": "Sun Feb 10 07:00:10 MST 2019\n"
         },
         "model": "tool.test",
         "pk": 158
@@ -1605,7 +1605,7 @@
         "fields": {
             "expected": "Log Length OK",
             "name": "log-length",
-            "output": "Log Length OK"
+            "output": "Too Long Log - /home/django/MyBook/log/hammer.log, 5062 lines"
         },
         "model": "tool.test",
         "pk": 179
