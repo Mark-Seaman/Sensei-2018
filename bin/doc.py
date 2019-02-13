@@ -4,7 +4,7 @@ from random import choice
 
 from shell import file_path, file_tree_list, line_count, read_file, shell,  word_count, write_file, dir_list
 from log import log
-from tool.document import file_to_html
+# from tool.document import file_to_html
 
 
 # ----------------------------

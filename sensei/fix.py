@@ -124,6 +124,7 @@ Web Design and Development for Small Business
 from sensei.sensei import add_lesson
 add_lesson ('bacs200', '13', 'Test & Debug', '2019-02-06')
 add_lesson ('bacs200', '14', 'Cascading Stylesheets', '2019-02-11')
+add_lesson ('bacs200', '15', 'CSS Color', '2019-02-13')
 
 
 #########################
