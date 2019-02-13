@@ -34,22 +34,15 @@
         <h2>Reading Assignments</h2>
 
         <ul>
-            <li>Jan 25 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/1">Lesson
-                8. HTML doc structure (section 2.1)</a></li>
-            <li>Jan 28 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/2">Lesson
-                9. Basic tags (section 2.2)</a></li>
-            <li>Jan 30 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/3">Lesson
-                10. Comments (section 2.3)</a></li>
-            <li>Feb 1 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/4">Lesson
-                11. Lists (section 2.4)</a></li>
-            <li>Feb 4 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/5">Lesson
-                12. Tables (section 2.5)</a></li>
+
             <li>Feb 6 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/6">Lesson
                 13. Images (section 2.6)</a></li>
-            <li>Feb 11 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/7">Lesson
+            <li>Feb 8 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/7">Lesson
                 14. Links (section 2.7)</a></li>
-            <li>Feb 14 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/8">Lesson
+            <li>Feb 11 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/8">Lesson
                 15. Special Characters (section 2.8)</a></li>
+            <li>Feb 13 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/4/section/1">Lesson
+                15. CSS in HTML (section 4.1)</a></li>
         </ul>
 
 
@@ -62,8 +55,11 @@
 
     <h3>Projects</h3>
 
-    <p>#1 WordPress Blog - Due Jan 11 -
-        <a href="http://{{ student.domain }}">http://{{ student.domain }}</a>
+    <p>
+        #1 WordPress Blog - Due Jan 11 -
+        <a href="http://{{ student.domain }}">
+            http://{{ student.domain }}
+        </a>
     </p>
     <p>
         #2 Inspire - Due Jan 18 -
@@ -72,17 +68,24 @@
         </a>
     </p>
     <p>
-        #3 Amuse - Due Jan 25
+        #3 Amuse - Due Jan 25 -
         <a href="http://{{ student.domain }}/bacs200/amuse.html">
             http://{{ student.domain }}/bacs200/amuse.html
         </a>
     </p>
     <p>
-        #3 Educate - Due Feb 1
+        #4 Educate - Due Feb 1 -
         <a href="http://{{ student.domain }}/bacs200/educate.html">
             http://{{ student.domain }}/bacs200/educate.html
         </a>
     </p>
+    <p>
+        #5 Pets - Due Feb 15 -
+        <a href="http://{{ student.domain }}/bacs200/pets/index.html">
+            http://{{ student.domain }}/bacs200/pets/index.html
+        </a>
+    </p>
+
 
     <h3>Exercises</h3>
 
@@ -105,6 +108,7 @@
         </a>
     </p>
 
+
     <h3>HTML Validation</h3>
     <p>
         <a href="https://validator.w3.org/">Validate</a>
@@ -112,6 +116,7 @@
 
 
     <h2>Design Review assignments</h2>
+
     <p>Give feedback to your peers by the due date.</p>
 
     {% if reviews %}
@@ -130,8 +135,10 @@
                     </td>
                     <td>{{ r.designer.name }} </td>
                     <td>{{ r.reviewer.name }} </td>
-                    <td><a class="normal"
-                           href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>
+                    <td>
+                        <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
+                            {{ r.designer.domain }}/{{ r.page }}
+                        </a>
                     </td>
                     <td>{{ r.due }} </td>
                 </tr>
@@ -163,8 +170,9 @@
                     <td>{{ r.designer.name }} </td>
                     <td>{{ r.reviewer.name }} </td>
                     <td>
-                        <a class="normal"
-                           href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.designer.domain }}/{{ r.page }}</a>
+                        <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
+                            {{ r.designer.domain }}/{{ r.page }}
+                        </a>
                     </td>
                     <td>{{ r.score }}</td>
                     <td>{{ r.date }} </td>
