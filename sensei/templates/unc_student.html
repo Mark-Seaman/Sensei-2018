@@ -4,212 +4,213 @@
 {% block card %}
 
 
-    {% if student %}
+{% if student %}
 
-        <h1>Student Dashboard</h1>
-        <h2>{{ student.name }}</h2>
+<h1>Student Dashboard</h1>
+<h2>{{ student.name }}</h2>
 
-        <table>
-            <tr>
-                <td>Name</td>
-                <td>{{ student.name }}</td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td>{{ student.email }}</td>
-            </tr>
-            <tr>
-                <td>Domain</td>
-                <td>{{ student.domain }}</td>
-            </tr>
-        </table>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>{{ student.name }}</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>{{ student.email }}</td>
+    </tr>
+    <tr>
+        <td>Domain</td>
+        <td>{{ student.domain }}</td>
+    </tr>
+</table>
 
-        <h2>URL Game</h2>
+<h2>URL Game</h2>
 
-        <p>Questions Answered: <b>{{ game.answered }}</b></p>
-        <p>Questions Left to Answer <b>{{ game.left }}</b></p>
-        <p><a href="/unc/url-question/{{ student.pk }}">Play Game</a> </p>
-
-
-        <h2>Reading Assignments</h2>
-
-        <ul>
-
-            <li>Feb 6 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/6">Lesson
-                13. Images (section 2.6)</a></li>
-            <li>Feb 8 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/7">Lesson
-                Exam - Links (section 2.7)</a></li>
-            <li>Feb 11 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/8">Lesson
-                14. Special Characters (section 2.8)</a></li>
-            <li>Feb 13 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/4/section/1">Lesson
-                15. CSS in HTML (section 4.1)</a></li>
-        </ul>
+<p>Questions Answered: <b>{{ game.answered }}</b></p>
+<p>Questions Left to Answer <b>{{ game.left }}</b></p>
+<p><a href="/unc/url-question/{{ student.pk }}">Play Game</a> </p>
 
 
-    {% else %}
-        <h1>No Student data available</h1>
-    {% endif %}
+<h2>Reading Assignments</h2>
+
+<ul>
+
+    <li>Feb 6 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/6">Lesson
+            13. Images (section 2.6)</a></li>
+    <li>Feb 8 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/7">
+            Exam - Links (section 2.7)</a></li>
+    <li>Feb 11 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/2/section/8">Lesson
+            14. Special Characters (section 2.8)</a></li>
+    <li>Feb 13 - <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/4/section/1">Lesson
+            15. CSS in HTML (section 4.1)</a></li>
+</ul>
 
 
-    <h2>Web Pages for Testing</h2>
-
-    <h3>Projects</h3>
-
-    <p>
-        #1 WordPress Blog - Due Jan 11 -
-        <a href="http://{{ student.domain }}">
-            http://{{ student.domain }}
-        </a>
-    </p>
-    <p>
-        #2 Inspire - Due Jan 18 -
-        <a href="http://{{ student.domain }}/bacs200/inspire.html">
-            http://{{ student.domain }}/bacs200/inspire.html
-        </a>
-    </p>
-    <p>
-        #3 Amuse - Due Jan 25 -
-        <a href="http://{{ student.domain }}/bacs200/amuse.html">
-            http://{{ student.domain }}/bacs200/amuse.html
-        </a>
-    </p>
-    <p>
-        #4 Educate - Due Feb 1 -
-        <a href="http://{{ student.domain }}/bacs200/educate.html">
-            http://{{ student.domain }}/bacs200/educate.html
-        </a>
-    </p>
-    <p>
-        #5 Pets - Due Feb 15 -
-        <a href="http://{{ student.domain }}/bacs200/pets/index.html">
-            http://{{ student.domain }}/bacs200/pets/index.html
-        </a>
-    </p>
+{% else %}
+<h1>No Student data available</h1>
+{% endif %}
 
 
-    <h3>Exercises</h3>
+<h2>Web Pages for Testing</h2>
 
-    <p>
-        Home Page - Due Jan 28 -
-        <a href="http://{{ student.domain }}/bacs200/index.html">
-            http://{{ student.domain }}/bacs200/index.html
-        </a>
-    </p>
-    <p>
-        Animals - Due Jan 30 -
-        <a href="http://{{ student.domain }}/bacs200/animals.html">
-            http://{{ student.domain }}/bacs200/animals.html
-        </a>
-    </p>
-    <p>
-        Stylesheet - Due Feb 11 -
-        <a href="http://{{ student.domain }}/bacs200/stylesheet.html">
-            http://{{ student.domain }}/bacs200/stylesheet.html
-        </a>
-    </p>
+<h3>Projects</h3>
 
-
-    <h3>HTML Validation</h3>
-    <p>
-        <a href="https://validator.w3.org/">Validate</a>
-    </p>
-
-
-    <h2>Design Review assignments</h2>
-
-    <p>Give feedback to your peers by the due date.</p>
-
-    {% if reviews %}
-        <table>
-            <tr>
-                <th></th>
-                <th>Designer</th>
-                <th>Reviewer</th>
-                <th>Page</th>
-                <th>Due</th>
-            </tr>
-            {% for r in reviews %}
-                <tr>
-                    <td><a class="normal"
-                           href="/unc/review/{{ r.pk }}">Do Review</a>
-                    </td>
-                    <td>{{ r.designer.name }} </td>
-                    <td>{{ r.reviewer.name }} </td>
-                    <td>
-                        <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
-                            {{ r.designer.domain }}/{{ r.page }}
-                        </a>
-                    </td>
-                    <td>{{ r.due }} </td>
-                </tr>
-            {% endfor %}
-        </table>
-    {% else %}
-        <b>No Reviews to do</b>
-    {% endif %}
+<p>
+    #1 WordPress Blog - Due Jan 11 -
+    <a href="http://{{ student.domain }}">
+        http://{{ student.domain }}
+    </a>
+</p>
+<p>
+    #2 Inspire - Due Jan 18 -
+    <a href="http://{{ student.domain }}/bacs200/inspire.html">
+        http://{{ student.domain }}/bacs200/inspire.html
+    </a>
+</p>
+<p>
+    #3 Amuse - Due Jan 25 -
+    <a href="http://{{ student.domain }}/bacs200/amuse.html">
+        http://{{ student.domain }}/bacs200/amuse.html
+    </a>
+</p>
+<p>
+    #4 Educate - Due Feb 1 -
+    <a href="http://{{ student.domain }}/bacs200/educate.html">
+        http://{{ student.domain }}/bacs200/educate.html
+    </a>
+</p>
+<p>
+    #5 Pets - Due Feb 15 -
+    <a href="http://{{ student.domain }}/bacs200/pets/index.html">
+        http://{{ student.domain }}/bacs200/pets/index.html
+    </a>
+</p>
 
 
-    <h2>Design Reviews Done</h2>
-    <p>Design reviews that have been successfully completed</p>
+<h3>Exercises</h3>
 
-    {% if done %}
-        <table>
-            <tr>
-                <th></th>
-                <th>Designer</th>
-                <th>Reviewer</th>
-                <th>Page</th>
-                <th>Score</th>
-                <th>Date Reviewed</th>
-            </tr>
-            {% for r in done %}
-                <tr>
-                    <td>
-                        <a class="normal" href="/unc/review/{{ r.pk }}">Do Review</a>
-                    </td>
-                    <td>{{ r.designer.name }} </td>
-                    <td>{{ r.reviewer.name }} </td>
-                    <td>
-                        <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
-                            {{ r.designer.domain }}/{{ r.page }}
-                        </a>
-                    </td>
-                    <td>{{ r.score }}</td>
-                    <td>{{ r.date }} </td>
-                </tr>
-            {% endfor %}
-        </table>
-    {% else %}
-        <h1>No Reviews done</h1>
-    {% endif %}
+<p>
+    Home Page - Due Jan 28 -
+    <a href="http://{{ student.domain }}/bacs200/index.html">
+        http://{{ student.domain }}/bacs200/index.html
+    </a>
+</p>
+<p>
+    Animals - Due Jan 30 -
+    <a href="http://{{ student.domain }}/bacs200/animals.html">
+        http://{{ student.domain }}/bacs200/animals.html
+    </a>
+</p>
+<p>
+    Stylesheet - Due Feb 11 -
+    <a href="http://{{ student.domain }}/bacs200/stylesheet.html">
+        http://{{ student.domain }}/bacs200/stylesheet.html
+    </a>
+</p>
 
 
-    <h2>Design Review Feedback</h2>
-    <p>Feedback on your pages by your peers.</p>
+<h3>HTML Validation</h3>
+<p>
+    <a href="https://validator.w3.org/">Validate HTML</a>
+</p>
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/">Validate CSS</a>
+</p>
 
-    {% if feedback %}
-        <table>
-            <tr>
-                <th></th>
-                <th>Designer</th>
-                <th>Reviewer</th>
-                <th>Score</th>
-                <th>Reviewed</th>
-            </tr>
-            {% for r in feedback %}
-                <tr>
-                    <td><a class="normal"
-                           href="/unc/feedback/{{ r.pk }}">Feedback</a>
-                    </td>
-                    <td>{{ r.designer.name }} </td>
-                    <td>{{ r.reviewer.name }} </td>
-                    <td>{{ r.score }}</td>
-                    <td>{{ r.date }} </td>
-                </tr>
-            {% endfor %}
-        </table>
-    {% else %}
-        <h1>No Reviews feedback given</h1>
-    {% endif %}
+
+<h2>Design Review assignments</h2>
+
+<p>Give feedback to your peers by the due date.</p>
+
+{% if reviews %}
+<table>
+    <tr>
+        <th></th>
+        <th>Designer</th>
+        <th>Reviewer</th>
+        <th>Page</th>
+        <th>Due</th>
+    </tr>
+    {% for r in reviews %}
+    <tr>
+        <td><a class="normal" href="/unc/review/{{ r.pk }}">Do Review</a>
+        </td>
+        <td>{{ r.designer.name }} </td>
+        <td>{{ r.reviewer.name }} </td>
+        <td>
+            <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
+                {{ r.designer.domain }}/{{ r.page }}
+            </a>
+        </td>
+        <td>{{ r.due }} </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<b>No Reviews to do</b>
+{% endif %}
+
+
+<h2>Design Reviews Done</h2>
+<p>Design reviews that have been successfully completed</p>
+
+{% if done %}
+<table>
+    <tr>
+        <th></th>
+        <th>Designer</th>
+        <th>Reviewer</th>
+        <th>Page</th>
+        <th>Score</th>
+        <th>Date Reviewed</th>
+    </tr>
+    {% for r in done %}
+    <tr>
+        <td>
+            <a class="normal" href="/unc/review/{{ r.pk }}">Do Review</a>
+        </td>
+        <td>{{ r.designer.name }} </td>
+        <td>{{ r.reviewer.name }} </td>
+        <td>
+            <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
+                {{ r.designer.domain }}/{{ r.page }}
+            </a>
+        </td>
+        <td>{{ r.score }}</td>
+        <td>{{ r.date }} </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h1>No Reviews done</h1>
+{% endif %}
+
+
+<h2>Design Review Feedback</h2>
+<p>Feedback on your pages by your peers.</p>
+
+{% if feedback %}
+<table>
+    <tr>
+        <th></th>
+        <th>Designer</th>
+        <th>Reviewer</th>
+        <th>Score</th>
+        <th>Reviewed</th>
+    </tr>
+    {% for r in feedback %}
+    <tr>
+        <td><a class="normal" href="/unc/feedback/{{ r.pk }}">Feedback</a>
+        </td>
+        <td>{{ r.designer.name }} </td>
+        <td>{{ r.reviewer.name }} </td>
+        <td>{{ r.score }}</td>
+        <td>{{ r.date }} </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h1>No Reviews feedback given</h1>
+{% endif %}
 
 {% endblock %}
