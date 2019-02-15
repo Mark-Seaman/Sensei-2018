@@ -1,6 +1,8 @@
 from os.path import join
 from random import choice, randint
 
+from .models import UrlGame
+
 
 def generate_url_question():
     url_type = choice(['Relative', 'Absolute', 'Server'])
@@ -106,4 +108,9 @@ def random_path():
         "project",
     ]
     return '/'.join([choice(directories) for d in range(randint(0, 2))])
+
+
+def reset_questions_left():
+    for game in UrlGame.objects.all():
+        print(game.student.name, game.answered, game.left)
 
