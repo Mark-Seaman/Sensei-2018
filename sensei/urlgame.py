@@ -113,4 +113,6 @@ def random_path():
 def reset_questions_left():
     for game in UrlGame.objects.all():
         print(game.student.name, game.answered, game.left)
+        game.left = 10
+        game.save()
 
