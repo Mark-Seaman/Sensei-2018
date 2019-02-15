@@ -54,21 +54,6 @@ class UncEditReview(UpdateView):
     def get_success_url(self):
         student_id = self.object.reviewer.pk
         return '/unc/student/%s' % student_id
-        # return '/unc/reviews'
-
-
-# def requirements():
-#     return '''Page appears at correct URL, in folder "bacs200"
-# WordPress blog is still visible at the top of the domain
-# Article describes an inspirational figure
-# Users can follow a hyperlink to learn more
-# Writing is compelling and well thought out
-# Technical Requirements
-# Title is set properly on the browser tab
-# Page has appropriate headline
-# Image is properly displayed
-# Text content is properly formatted
-# Page contains valid HTML'''.split('\n')
 
 
 class UncReviewFeedback(TemplateView):
@@ -150,7 +135,6 @@ class UncStudent(TemplateView):
         student_id = self.kwargs.get('id')
         s = Student.objects.get(pk=student_id)
         game = UrlGame.objects.get(student=s)
-        # reading = student_scores(student_id), reading=reading,
         reviews = student_reviews(student_id)
         done = student_reviews_done(student_id)
         feedback = review_feedback(student_id)
