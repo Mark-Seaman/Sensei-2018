@@ -186,7 +186,15 @@ def shell(cmd):
 
     cmd = command_line(cmd)
     text = Popen(cmd.split(), stdout=PIPE).stdout.read()
-    return text #.decode(encoding='UTF-8')
+    return text.decode(encoding='UTF-8')
+
+
+def shell_pipe(command, stdin):
+    p = Popen(command, stdin=PIPE, stdout=PIPE)
+    (out, error) = p.communicate(input=stdin.encode('utf-8'))
+    if error:
+        return error.decode('utf-8') + out.decode('utf-8')
+    return out.decode('utf-8')
 
 
 def word_count(text):

@@ -1,11 +1,8 @@
-from genericpath import exists
-from os import mkdir
-from subprocess import Popen, PIPE
-
 from django.http import Http404
+from os import mkdir
 from os.path import exists, isdir, isfile, join, dirname
 
-from bin.shell import read_file
+from bin.shell import read_file, shell_pipe
 from hammer.settings import BASE_DIR, PANDOC_APP
 from tool.log import log
 
@@ -104,10 +101,7 @@ def read_markdown(path):
 
 
 def text_to_html(text):
-    p = Popen(PANDOC_APP, stdin=PIPE, stdout=PIPE)
-    # text = text.encode('UTF-8')
-    # return p.communicate(text)[0].decode('UTF-8')
-    return p.communicate(text)[0]
+    return shell_pipe(PANDOC_APP, text)
 
 
 def title(p1):
