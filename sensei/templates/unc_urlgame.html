@@ -10,9 +10,9 @@
 <h2>Question</h2>
 
 <p>When Loading Page </p>
-<p><b>&nbsp;&nbsp;&nbsp;&nbsp;{{ q.page }}</b></p>
+<p><b>{{ q.page }}</b></p>
 <p>What is the <b>{{ q.url_type }} URL</b> for the href that points to</p>
-<p><b>&nbsp;&nbsp;&nbsp;{{ q.url }}</b></p>
+<p><b>{{ q.url }}</b></p>
 
 <form action="/unc/url-answer/{{ student.pk }}" method="post"> {% csrf_token %}
     <input type="text" name="answer" placeholder="your URL answer" class="url-answer">
@@ -56,9 +56,9 @@
         <p><b>{{ a.url }}</b></p>
 
         <p>Your Answer: </p>
-        <p><b>&nbsp;&nbsp;&nbsp;{{ a.answer }}</b></p>
+        <p><b>{{ a.answer }}</b></p>
         <p>Correct Answer: </p>
-        <p><b>&nbsp;&nbsp;&nbsp;{{ a.correct }}</b></p>
+        <p><b>{{ a.correct }}</b></p>
     </div>
 
 </div>
