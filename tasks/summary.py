@@ -11,7 +11,7 @@ def activity_summary(activity):
 
     if activity == 'Work':
         activities = work_types()
-        activity = 'Teach'
+        activity = 'UNC'
     else:
         activities = [activity]
 
