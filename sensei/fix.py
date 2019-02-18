@@ -102,9 +102,24 @@ def clear_reviews():
     Review.objects.all().delete()
 
 def assign_new_reviews():
-    print('Assign %d' % assign_reviews('bacs200/index.html', '2019-02-06', '3'))
+
+    print('Assign %d' % assign_reviews('bacs200/pets/index.html', '2019-02-18', '4'))
     print("%s reviews assigned" % len(Review.objects.all()))
 
+
+def create_requirements():
+    labels = '''Page exists at URL
+Page is Valid HTML 
+Page is Valid CSS
+Stylesheet and overall appearance
+Hyperlinks
+Body
+Header
+Main
+Footer
+Image'''
+    url = 'https://shrinking-world.com/unc/bacs200/projects/06'
+    return Requirements.objects.create(labels=labels, url=url)
 
 #########################
 # Create Course
