@@ -34,7 +34,7 @@ Grow 0
     3, 3, 1, 1
     weight: 20x
 
-Teach 0
+UNC 0
     
     
 Write 0
