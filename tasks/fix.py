@@ -35,5 +35,8 @@ def test_tasks():
             t.notes = x
             t.save()
 
+from tasks.models import *
 
-
+def list_tasks(date):
+    for t in Task.objects.filter(date=date):
+        print ('%s %s' % (t.name, t.hours))
