@@ -20,7 +20,7 @@ class Course(models.Model):
 
 
 class Student(models.Model):
-    course  = models.ForeignKey(Course, default=1)
+    course  = models.ForeignKey(Course, on_delete=models.CASCADE, default=1)
     name    = models.CharField(max_length=100)
     email   = models.CharField(max_length=40)
     domain  = models.CharField(max_length=100)
@@ -35,7 +35,7 @@ class Lesson(models.Model):
     title = models.CharField(max_length=40)
     content = models.CharField(max_length=200)
     date = models.DateField()
-    course = models.ForeignKey(Course, default=1)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, default=1)
 
     def __str__(self):
         return 'Lesson %02d. %s - %s' % (self.lesson, self.title, self.date)
@@ -47,13 +47,13 @@ class Requirements(models.Model):
 
 
 class Review(models.Model):
-    reviewer    = models.ForeignKey(Student, editable=False)
-    designer    = models.ForeignKey(Student, related_name='designer', default=1, editable=False)
+    reviewer    = models.ForeignKey(Student, on_delete=models.CASCADE, editable=False)
+    designer    = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='designer', default=1, editable=False)
     page        = models.CharField(max_length=100, editable=False)
     score       = models.IntegerField(default=-1)
     date        = models.DateTimeField(null=True, editable=False)
     due         = models.DateTimeField(editable=False)
-    requirement_labels = models.ForeignKey(Requirements, default=1)
+    requirement_labels = models.ForeignKey(Requirements, on_delete=models.CASCADE, default=1)
     requirements = models.TextField(default='NONE')
     requirement_1 = models.BooleanField(default=False)
     requirement_2 = models.BooleanField(default=False)
@@ -70,6 +70,8 @@ class Review(models.Model):
 
 
 class UrlGame(models.Model):
-    student   = models.ForeignKey(Student)
+    student   = models.ForeignKey(Student, on_delete=models.CASCADE)
     answered   = models.IntegerField(default=0)
     left       = models.IntegerField(default=10)
+
+

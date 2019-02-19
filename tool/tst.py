@@ -3,8 +3,8 @@ from os import chdir, environ, listdir, system
 from os.path import join
 
 from bin.shell import differences, banner, shell
-from log import log
-from models import Test
+from .log import log
+from .models import Test
 
 
 def tst_find():

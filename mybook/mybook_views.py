@@ -4,8 +4,8 @@ from os import listdir
 from os.path import join
 from random import choice
 
-from mybook import booknotes_excerpt, main_menu, mybook_site_title
-from outline import outline, read_cards, tabs_data
+from .mybook import booknotes_excerpt, main_menu, mybook_site_title
+from .outline import outline, read_cards, tabs_data
 from tool.document import doc_html_text, domain_doc
 
 

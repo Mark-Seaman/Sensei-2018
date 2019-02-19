@@ -7,7 +7,6 @@ verify_ssl = true
 
 [packages]
 django = "==1.11.20"
-selenium = "*"
 
 [requires]
 python_version = "3.7"

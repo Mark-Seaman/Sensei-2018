@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from django.contrib.auth.views import login, logout
 
-from mybook_views import BookNotes, MyBookDocDisplay, MyBookPrivateDoc, SeamansLog, SpiritualSelect
+from .mybook_views import BookNotes, MyBookDocDisplay, MyBookPrivateDoc, SeamansLog, SpiritualSelect
 
 urlpatterns = [
 

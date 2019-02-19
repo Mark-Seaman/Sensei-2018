@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 #    Organization
 
 class Author(models.Model):
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     organization = models.CharField(max_length=100)
 
     def __unicode__(self):
@@ -48,7 +48,7 @@ class Author(models.Model):
 #      hours
 
 class Book(models.Model):
-    author    = models.ForeignKey(Author, editable=False)
+    author    = models.ForeignKey(Author, on_delete=models.CASCADE, editable=False)
     title     = models.CharField(max_length=100)
     doc       = models.CharField(max_length=300)
     published = models.CharField(max_length=300, null=True, blank=True, default=None)

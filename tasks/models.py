@@ -11,8 +11,8 @@ class Task (models.Model):
     date     = models.DateField (default=now)
     hours    = models.IntegerField (default=0)
     done     = models.BooleanField (default=False)
-    # project  = models.ForeignKey (Project)
-    # client   = models.ForeignKey (User)
+    # project  = models.ForeignKey (Project, on_delete=models.CASCADE)
+    # client   = models.ForeignKey (User, on_delete=models.CASCADE)
 
     def __unicode__(self):
         return self.name + ', ' + str(self.date)

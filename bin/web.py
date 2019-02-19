@@ -5,8 +5,6 @@ from os.path import  join
 from platform import node
 from sys import argv
 
-from switches import APP_PORT
-
 
 def web_command(args):
     '''Execute all of the web specific webs'''

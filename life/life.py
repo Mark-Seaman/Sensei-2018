@@ -1,4 +1,4 @@
-from models import Aspect, Experience
+from .models import Aspect, Experience
 
 
 def query_labels():

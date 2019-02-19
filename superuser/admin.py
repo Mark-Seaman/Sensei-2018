@@ -4,7 +4,7 @@ from os.path import join
 from hammer.settings import BASE_DIR
 from tool.tst import tst_diff
 from tool.models import Test
-from models import Administrator
+from .models import Administrator
 
 
 def admin_print_list():
