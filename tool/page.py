@@ -1,7 +1,8 @@
 from bin.shell import banner, differences
 from bin.switches import TEST_PAGES
-from log import log
-from models import Page
+
+from .log import log
+from .models import Page
 
 
 # ------------------------------

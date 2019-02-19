@@ -1,13 +1,14 @@
 from os import environ, system
 from os.path import join
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+# from selenium import webdriver
+# from selenium.webdriver.common.keys import Keys
 from time import sleep
 
-from models import Page
-from log import log_exception
-from page import page_results
 from hammer.secret_settings import username, password
+
+from .models import Page
+from .log import log_exception
+from .page import page_results
 
 
 # ------------------------------
