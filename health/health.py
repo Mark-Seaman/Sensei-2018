@@ -1,14 +1,11 @@
-from csv import reader
 from os import environ, system
 from os.path import join
-from traceback import format_exc
-
 from django.contrib.auth.models import User
 
-from bin.shell import banner, file_tree_list, read_file
 from bin.web import web
-from models import HealthScore
 from tasks.task import task_read_health
+
+from .models import HealthScore
 
 
 def health_command(options):
