@@ -14,9 +14,10 @@ def tst_find():
         for t in tests[m]:
             print('   %s' % t[0])
 
+m = ''
 
 def get_module(modulename):
-    exec ('import test.%s; m = test.%s' % (modulename, modulename))
+    exec ('import test.%s; global m; m = test.%s' % (modulename, modulename))
     return m
 
 

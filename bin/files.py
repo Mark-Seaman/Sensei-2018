@@ -75,7 +75,7 @@ def fix_chars(text):
 # Run a grep command and capture output
 def grep(pattern,file):
     p = Popen(["grep", pattern, file ], stdout=PIPE)
-    return p.stdout.read()
+    return p.stdout.read().decode('utf-8')
 
 
 # Check if this file is writable
