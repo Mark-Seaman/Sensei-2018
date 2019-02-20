@@ -1,7 +1,7 @@
 from django.views.generic import ListView, UpdateView
 from django.views.generic.base import TemplateView
 
-from models import HealthScore
+from .models import HealthScore
 from tool.document import doc_html_text
 from tool.log import log
 from mybook.mybook import main_menu

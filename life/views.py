@@ -1,8 +1,8 @@
 from django.views.generic import RedirectView, ListView, TemplateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from life import query_labels, query_get, query_year, query_experiences
-from models import Experience
+from .life import query_labels, query_get, query_year, query_experiences
+from .models import Experience
 from tool.log import log
 
 

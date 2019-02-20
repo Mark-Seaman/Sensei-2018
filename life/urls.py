@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from views import ExperienceView, LifeAdd, LifeEdit, LifeView, YearView
+from .views import ExperienceView, LifeAdd, LifeEdit, LifeView, YearView
 
 urlpatterns = (
 

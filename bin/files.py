@@ -5,14 +5,13 @@ from os.path    import isfile, isdir, join, dirname, exists
 from sys        import stdin
 from subprocess import Popen,PIPE
 from json       import loads
-from string     import rstrip
 
 
 # Gather new lines
 def accumulate_new_lines(accumulator, f2):
     d = dirname(accumulator)
     if not exists(d):
-        print 'Make directory', d
+        print ('Make directory', d)
         mkdir(d)
     a1 = read_file(accumulator)
     a2 = read_file(f2)
@@ -23,7 +22,7 @@ def accumulate_new_lines(accumulator, f2):
 
 # Print the count and directory name
 def count_files(directory):
-    print len(list_files(directory)), directory
+    print (len(list_files(directory)), directory)
 
 
 # Create the directory if needed
@@ -102,15 +101,15 @@ def path_name (relative_filename):
 # Print a flat list
 def print_list(lst):
     for f in lst:
-        print f
+        print (f)
 
 
 # Print a list two levels deep
 def print_list2(lst):
     for v in lst:
         for f in v:
-            print f,
-        print
+            print (f,)
+        print ()
 
 
 # Read the input as lines of text

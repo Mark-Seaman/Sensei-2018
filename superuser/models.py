@@ -9,8 +9,8 @@ from django.db import models
 #     user
 
 class Administrator(models.Model):
-    surrogate = models.ForeignKey(User, related_name='+', null=True)
-    user      = models.ForeignKey(User)
+    surrogate = models.ForeignKey(User, on_delete=models.CASCADE, related_name='+', null=True)
+    user      = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __unicode__(self):
         return self.user.username

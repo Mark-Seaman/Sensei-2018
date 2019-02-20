@@ -23,7 +23,7 @@ class Aspect(models.Model):
 
 class Experience(models.Model):
     age = models.IntegerField(editable=False)
-    aspect = models.ForeignKey(Aspect, editable=False)
+    aspect = models.ForeignKey(Aspect, on_delete=models.CASCADE, editable=False)
     summary = models.TextField()
 
     def __unicode__(self):

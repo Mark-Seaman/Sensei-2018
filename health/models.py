@@ -14,7 +14,7 @@ from django.contrib.auth.models import User
 #     exercise
 
 class HealthScore(models.Model):
-    user      = models.ForeignKey(User, editable=False)
+    user      = models.ForeignKey(User, on_delete=models.CASCADE, editable=False)
     date      = models.DateField(editable=False)
     sleep     = models.IntegerField()
     weight    = models.IntegerField()
