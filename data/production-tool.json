@@ -1416,7 +1416,7 @@
         "fields": {
             "expected": "Tue Feb  5 11:13:57 MST 2019\n",
             "name": "tst-time",
-            "output": "Tue Feb 19 07:00:11 MST 2019\n"
+            "output": "Wed Feb 20 07:00:10 MST 2019\n"
         },
         "model": "tool.test",
         "pk": 158
@@ -1470,7 +1470,7 @@
         "fields": {
             "expected": "Ideas for Today (brainstorm --> decisions --> actions)\n\n-----------------------------------------\n\nWork\n\n    Plan\n        gather work in progress\n        use GTD\n        1000 goals\n        \n    Build\n        update Django and Python libraries\n        establish new standard programming context\n        limit log file\n        test private notes \n        create pycharm project for Rest\n        optimize ideas script\n\n    Learn\n        create Writers Notebook\n        continue life story\n        Organize evernotes\n\n    Teach\n        create classroom software for BACS 200\n        student registration\n        Select notes for writing topics\n        Seamans Guide to Python Apps\n\nPeople\n\n    follow up\n        Greg Brake\n        Chris Newby\n        Moe, Mehrgan\n\n    Church\n        application notes - thoughts on humility\n        perfectionism\n        overcoming negative feelings\n            turning on the light\n            receiving grace\n            Fear, Anger, Sadness, Shame\n        trust is confidence in character, competence, and compassion\n\nFun\n\n    capture regular TV series to watch\n    vinyl records\n\nGrow\n\n    prayer time\n    organize brain notes\n    think about emotional development\n    establish writing habit\n    analyze finances 2014-2018\n\nCron broken on imac\n\n",
             "name": "i-list",
-            "output": "Ideas for Today (brainstorm --> decisions --> actions)\n\n-----------------------------------------\n\nWork\n\n    Plan\n        gather work in progress\n        use GTD\n        1000 goals\n        \n    Build\n        update Django and Python libraries\n        establish new standard programming context\n        limit log file\n        test private notes \n        create pycharm project for Rest\n        optimize ideas script\n        find broken links\n\n    Learn\n        create Writers Notebook\n        continue life story\n        Organize evernotes\n\n    Teach\n        create classroom software for BACS 200\n        student registration\n        Select notes for writing topics\n        Seamans Guide to Python Apps\n\nPeople\n\n    follow up\n        Greg Brake\n        Chris Newby\n        Moe, Mehrgan\n\n    Church\n        application notes - thoughts on humility\n        perfectionism\n        overcoming negative feelings\n            turning on the light\n            receiving grace\n            Fear, Anger, Sadness, Shame\n        trust is confidence in character, competence, and compassion\n\nFun\n\n    capture regular TV series to watch\n    vinyl records\n\nGrow\n\n    prayer time\n    organize brain notes\n    think about emotional development\n    establish writing habit\n    analyze finances 2014-2018\n\nCron broken on imac\nautomatic redirect for dir to dir/Index\nnot outbound email\n\n"
+            "output": "Ideas for Today \n\nbrainstorm --> decisions --> actions\nCron broken on imac\nautomatic redirect for dir to dir/Index\nnot outbound email\n\n"
         },
         "model": "tool.test",
         "pk": 164
@@ -1596,7 +1596,7 @@
         "fields": {
             "expected": "OK - https://markseaman.info\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nOK - https://who2hire.us\nOK - https://app.who2hire.us/admin",
             "name": "page-sites",
-            "output": "OK - https://markseaman.info\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nshell(curl -s https://who2hire.us) --> 345 lines (should be between 338 and 338)\nshell(curl -s https://app.who2hire.us/admin) --> 367 lines (should be between 324 and 324)"
+            "output": "OK - https://markseaman.info\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nshell(curl -s https://who2hire.us) --> 345 lines (should be between 338 and 338)\nOK - https://app.who2hire.us/admin"
         },
         "model": "tool.test",
         "pk": 178
