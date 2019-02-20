@@ -143,6 +143,9 @@ add_lesson ('bacs200', '15', 'CSS Color', '2019-02-13')
 add_lesson ('bacs200', '16', 'CSS Spacing & Borders', '2019-02-15')
 add_lesson ('bacs200', '17', 'Page Layout', '2019-02-18')
 
+from sensei.sensei import add_lesson
+add_lesson ('bacs200', '18', 'Page Structure', '2019-02-20')
+
 
 #########################
 # URL Game
