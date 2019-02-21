@@ -158,5 +158,8 @@ def assign_url_game():
 
 assign_url_game()
 
+def url_game_results():
+    for u in UrlGame.objects.all():
+        print(u.student.name, u.answered, u.left)
 
-
+url_game_results()
