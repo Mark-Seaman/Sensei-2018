@@ -1,6 +1,6 @@
 from re import compile, findall, search
 
-from shell import read_file
+# from .shell import read_file
 
 
 # ------------------------------
@@ -103,7 +103,7 @@ def text_lines(text):
 
 def text_match(match_pattern, doc):
     matches = []
-    text = read_file(doc)
+    text = open(doc).read()
     for line in text.split('\n'):
         match = search(r'^(%s)$' % match_pattern, line)
         if match:
@@ -112,7 +112,7 @@ def text_match(match_pattern, doc):
             
 
 def text_no_match(match_pattern, doc):
-    text = read_file(doc)
+    text = open(doc).read()
     for line in text_lines(text):
         match = search(r'^.*(%s).*$' % match_pattern, line)
         if not match:
@@ -181,7 +181,7 @@ def text_markdown(outline, depth=1):
 
 
 def text_replace(doc, match_pattern, replace_pattern):
-    text = read_file(doc)
+    text = open(doc).read()
     text = compile(match_pattern).sub(replace_pattern, text)
     print(text)
 

@@ -14,8 +14,8 @@ def unc_files_test():
 
 
 def unc_docs_test():
-    path = join(environ['HOME'], 'Sensei', 'Documents', 'sensei')
-    return check_files(path, 57, 57)
+    path = join(environ['HOME'], 'Sensei', 'Documents', 'unc')
+    return check_files(path, 80, 90)
 
 
 def unc_site_test():
