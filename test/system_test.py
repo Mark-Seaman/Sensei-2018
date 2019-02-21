@@ -43,6 +43,10 @@ def system_pandoc_test():
     return shell('pandoc  -t html %s' % TEST_DOC)
 
 
+def system_pipenv_test():
+    return open('hammer/Pipfile').read()
+
+
 def system_python_files_test():
     files = file_tree_list(environ['p'], '.py')
     return check_lines('Python file list', '\n'.join(files), 130, 150)
@@ -53,4 +57,5 @@ def system_python_version_test():
 
 
 def system_python_virtualenv_test():
-        return shell ('which python')
+    return shell ('which python') + '\n' + shell ('python --version')
+

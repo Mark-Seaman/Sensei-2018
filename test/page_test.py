@@ -30,7 +30,7 @@ def page_sites_test():
         check_page('https://spiritual-things.org',  190, 400),
 
         check_page('https://who2hire.us',           338, 338),
-        check_page('https://app.who2hire.us/admin', 367, 367),
+        check_page('https://app.who2hire.us/admin', 385, 385),
 
     ] 
     return '\n'.join(pages)
