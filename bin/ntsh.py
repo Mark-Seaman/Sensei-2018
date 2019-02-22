@@ -69,7 +69,7 @@ def convert(f1,f2):
 
 
 def convert_png(f1,f2):
-    print 'convert PNG File', f1, f2
+    print ('convert PNG File', f1, f2)
     image = Image.open(f1)
     image.save (f2, 'JPEG')
     remove(f1)
