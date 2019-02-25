@@ -1416,7 +1416,7 @@
         "fields": {
             "expected": "Thu Feb 21 15:04:24 MST 2019\n",
             "name": "tst-time",
-            "output": "Sun Feb 24 07:00:10 MST 2019\n"
+            "output": "Mon Feb 25 07:00:10 MST 2019\n"
         },
         "model": "tool.test",
         "pk": 158
@@ -1596,7 +1596,7 @@
         "fields": {
             "expected": "OK - https://markseaman.info\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nshell(curl -s https://who2hire.us) --> 345 lines (should be between 338 and 338)\nshell(curl -s https://app.who2hire.us/admin) --> 385 lines (should be between 367 and 367)",
             "name": "page-sites",
-            "output": "OK - https://markseaman.info\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nshell(curl -s https://who2hire.us) --> 345 lines (should be between 338 and 338)\nshell(curl -s https://app.who2hire.us/admin) --> 382 lines (should be between 385 and 385)"
+            "output": "OK - https://markseaman.info\nOK - https://markseaman.org\nOK - https://seamansguide.com\nOK - https://seamanslog.com\nOK - https://shrinking-world.com\nOK - https://spiritual-things.org\nshell(curl -s https://who2hire.us) --> 345 lines (should be between 338 and 338)\nOK - https://app.who2hire.us/admin"
         },
         "model": "tool.test",
         "pk": 178
@@ -1614,7 +1614,7 @@
         "fields": {
             "expected": "files(/home/django/Sensei/Documents/unc) --> 1 files (should be between 80 and 90)",
             "name": "unc-docs",
-            "output": "files(/home/django/Sensei/Documents/unc) --> 1 files (should be between 80 and 90)"
+            "output": "files(/home/django/Sensei/Documents/unc) --> 1 files (should be between 80 and 100)"
         },
         "model": "tool.test",
         "pk": 180
