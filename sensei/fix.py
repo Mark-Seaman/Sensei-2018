@@ -103,7 +103,7 @@ def clear_reviews():
 
 def assign_new_reviews():
 
-    print('Assign %d' % assign_reviews('bacs200/pets/index.html', '2019-02-18', '4'))
+    print('Assign %d' % assign_reviews('bacs200/wanted.html', '2019-02-25', '4'))
     print("%s reviews assigned" % len(Review.objects.all()))
 
 
