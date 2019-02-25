@@ -1416,7 +1416,7 @@
         "fields": {
             "expected": "Thu Feb 21 15:04:24 MST 2019\n",
             "name": "tst-time",
-            "output": "Sat Feb 23 07:00:09 MST 2019\n"
+            "output": "Sun Feb 24 07:00:10 MST 2019\n"
         },
         "model": "tool.test",
         "pk": 158
@@ -1470,7 +1470,7 @@
         "fields": {
             "expected": "Ideas for Today \n\nbrainstorm --> decisions --> actions\nCron broken on imac\nautomatic redirect for dir to dir/Index\nnot outbound email\nBrackets save all\n\n",
             "name": "i-list",
-            "output": "Ideas for Today \n\nbrainstorm --> decisions --> actions\nCron broken on imac\nautomatic redirect for dir to dir/Index\nnot outbound email\nBrackets save all\n\n"
+            "output": "Ideas for Today \n\nbrainstorm --> decisions --> actions\nCron broken on imac\nautomatic redirect for dir to dir/Index\nnot outbound email\nBrackets save all\npercent round off\n\n"
         },
         "model": "tool.test",
         "pk": 164
