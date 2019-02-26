@@ -32,7 +32,7 @@ def web(page):
     if 'iMac' in node() or 'mac' in node():
         system('open -a "Google Chrome" '+url)
     else:
-        system('rbg google-chrome '+url)
+        system('start chrome '+url)
 
 
 def web_path(topic=None):
