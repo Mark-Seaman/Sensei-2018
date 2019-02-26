@@ -1808,7 +1808,7 @@
             "is_active": true,
             "is_staff": true,
             "is_superuser": false,
-            "last_login": null,
+            "last_login": "2019-02-26T00:21:54.798Z",
             "last_name": "Melick",
             "password": "pbkdf2_sha256$36000$IAig8tUmGGSJ$nx0gmLhguKqi98qVSnV4aNeFDhNo5J/ZoVdkM/GTE7g=",
             "user_permissions": [],
