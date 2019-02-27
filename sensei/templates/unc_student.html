@@ -220,6 +220,7 @@
         <th></th>
         <th>Designer</th>
         <th>Reviewer</th>
+        <th>Page</th>
         <th>Score</th>
         <th>Reviewed</th>
     </tr>
@@ -229,6 +230,11 @@
         </td>
         <td>{{ r.designer.name }} </td>
         <td>{{ r.reviewer.name }} </td>
+        <td>
+            <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
+                {{ r.designer.domain }}/{{ r.page }}
+            </a>
+        </td>
         <td>{{ r.score }}</td>
         <td>{{ r.date }} </td>
     </tr>
