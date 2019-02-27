@@ -146,8 +146,8 @@ def site_settings(**kwargs):
     return settings
 
 
-def students():
-    return Student.objects.all().order_by('email')
+def students(course='1'):
+    return Student.objects.filter(course_id=course).order_by('email')
 
 
 def student(id):

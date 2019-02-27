@@ -62,7 +62,7 @@ def make_link(href, text=None):
     return '<a href="%s">%s</a>' % (href, text)
 
 
-def schedule():
+def schedule(course='1'):
     data_file = 'Documents/unc/bacs200/schedule.csv'
     s = []
     with open(data_file) as f:

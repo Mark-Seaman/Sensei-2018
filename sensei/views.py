@@ -67,11 +67,11 @@ class UncReviewFeedback(TemplateView):
         return site_settings(title=title, review=review, requirements=requirements)
 
 
-class UncReading(TemplateView):
-    template_name = 'unc_reading.html'
-
-    def get_context_data(self, **kwargs):
-        return site_settings(title='Reading Scores', students=student_totals())
+# class UncReading(TemplateView):
+#     template_name = 'unc_reading.html'
+#
+#     def get_context_data(self, **kwargs):
+#         return site_settings(title='Reading Scores', students=student_totals())
 
 
 class UncRegister(FormView):
@@ -99,16 +99,17 @@ class UncRegistered(ListView):
     model = Student
 
     def get_context_data(self, **kwargs):
-        students = Student.objects.all().order_by('email')
-        return site_settings(title='BACS 200 - Registered Domains', students=students)
+        course = '1'
+        return site_settings(title='BACS 200 - Registered Domains', students=students(course))
 
 
 class UncReviews(TemplateView):
     template_name = 'unc_reviews.html'
 
     def get_context_data(self, **kwargs):
-        reviews = [(s, Review.objects.filter(reviewer=s.pk)) for s in students()]
-        designers = [(s, review_feedback(s.pk)) for s in students()]
+        course = '1'
+        reviews = [(s, Review.objects.filter(reviewer=s.pk)) for s in students(course)]
+        designers = [(s, review_feedback(s.pk)) for s in students(course)]
         return site_settings(title='Design Reviews', reviews=reviews, designers=designers)
 
 
@@ -116,7 +117,8 @@ class UncSchedule(TemplateView):
     template_name = 'unc_schedule.html'
 
     def get_context_data(self, **kwargs):
-        return site_settings(title='BACS 200 Schedule', schedule=schedule())
+        course = '1'
+        return site_settings(title='BACS 200 Schedule', schedule=schedule(course))
 
 
 class UncSlidesDisplay(TemplateView):
