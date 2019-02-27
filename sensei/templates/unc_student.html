@@ -160,11 +160,15 @@
     <tr>
         <td><a class="normal" href="/unc/review/{{ r.pk }}">Do Review</a>
         </td>
-        <td>{{ r.designer.name }} </td>
-        <td>{{ r.reviewer.name }} </td>
+        <td>
+            <a class="normal" href="/unc/student/{{ r.designer.pk }}">{{ r.designer.name }}</a>
+        </td>
+        <td>
+            <a class="normal" href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>
+        </td>
         <td>
             <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
-                {{ r.designer.domain }}/{{ r.page }}
+                {{ r.page }}
             </a>
         </td>
         <td>{{ r.due }} </td>
@@ -194,11 +198,15 @@
         <td>
             <a class="normal" href="/unc/review/{{ r.pk }}">Do Review</a>
         </td>
-        <td>{{ r.designer.name }} </td>
-        <td>{{ r.reviewer.name }} </td>
+        <td>
+            <a class="normal" href="/unc/student/{{ r.designer.pk }}">{{ r.designer.name }}</a>
+        </td>
+        <td>
+            <a class="normal" href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>
+        </td>
         <td>
             <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
-                {{ r.designer.domain }}/{{ r.page }}
+                {{ r.page }}
             </a>
         </td>
         <td>{{ r.score }}</td>
@@ -228,11 +236,15 @@
     <tr>
         <td><a class="normal" href="/unc/feedback/{{ r.pk }}">Feedback</a>
         </td>
-        <td>{{ r.designer.name }} </td>
-        <td>{{ r.reviewer.name }} </td>
+        <td>
+            <a class="normal" href="/unc/student/{{ r.designer.pk }}">{{ r.designer.name }}</a>
+        </td>
+        <td>
+            <a class="normal" href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>
+        </td>
         <td>
             <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
-                {{ r.designer.domain }}/{{ r.page }}
+                {{ r.page }}
             </a>
         </td>
         <td>{{ r.score }}</td>
