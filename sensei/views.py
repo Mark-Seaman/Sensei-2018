@@ -103,6 +103,15 @@ class UncRegistered(ListView):
         return site_settings(title='BACS 200 - Registered Domains', students=students(course))
 
 
+class UncStudents(ListView):
+    template_name = 'unc_registered.html'
+    model = Student
+
+    def get_context_data(self, **kwargs):
+        course = self.kwargs.get(id, '1')
+        return site_settings(title='BACS 200 - Registered Domains', students=students(course))
+
+
 class UncReviews(TemplateView):
     template_name = 'unc_reviews.html'
 
