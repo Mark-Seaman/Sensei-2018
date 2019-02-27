@@ -117,7 +117,7 @@ class UncSchedule(TemplateView):
     template_name = 'unc_schedule.html'
 
     def get_context_data(self, **kwargs):
-        course = '1'
+        course = self.kwargs.get(id, '1')
         return site_settings(title='BACS 200 Schedule', schedule=schedule(course))
 
 

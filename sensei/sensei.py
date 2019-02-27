@@ -3,7 +3,7 @@ from re import findall
 
 from tool.document import  read_markdown
 
-from .models import  Lesson, Student
+from .models import  Course, Lesson, Student
 from .student import fix_images
 
 
@@ -38,6 +38,10 @@ def query_students(course, student=None):
     return s
 
 
+def get_course(id):
+    return Course.objects.get(pk=id)
+
+
 def get_student(id):
     return Student.objects.get(pk=id)
 
@@ -63,7 +67,8 @@ def make_link(href, text=None):
 
 
 def schedule(course='1'):
-    data_file = 'Documents/unc/bacs200/schedule.csv'
+    course = get_course(course).name
+    data_file = 'Documents/unc/%s/schedule.csv' % course
     s = []
     with open(data_file) as f:
         for row in reader(f):

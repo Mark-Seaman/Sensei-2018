@@ -4,7 +4,7 @@ from .views import *
 
 urlpatterns = [
 
-    url(r'^schedule$', UncSchedule.as_view()),
+    url(r'^schedule/(?P<id>[\d]+)$', UncSchedule.as_view()),
 
     url(r'^register$', UncRegister.as_view()),
     url(r'^registered$', UncRegistered.as_view()),
