@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import Form
-from django.views.generic import FormView, ListView, TemplateView, UpdateView
+from django.views.generic import FormView, ListView, RedirectView, TemplateView, UpdateView
 from django.utils.timezone import now
 
 from tool.document import domain_doc, doc_html_text
@@ -94,13 +94,8 @@ class UncRegister(FormView):
         return super(UncRegister, self).form_valid(form)
 
 
-class UncRegistered(ListView):
-    template_name = 'unc_registered.html'
-    model = Student
-
-    def get_context_data(self, **kwargs):
-        course = '1'
-        return site_settings(title='BACS 200 - Registered Domains', students=students(course))
+class UncRegistered(RedirectView):
+    url = '/unc/students/1'
 
 
 class UncStudents(ListView):
