@@ -1,0 +1,5 @@
+# If not running interactively, return
+[ -z "$PS1" ] && return
+
+# Load the project profile
+[ -f ~/Sensei/bin/bashrc ] && . ~/Sensei/bin/bashrc
