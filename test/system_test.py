@@ -3,8 +3,13 @@ from os import environ
 from os.path import join
 from sys import version_info
 
-from bin.shell import check_lines, check_shell_lines, file_tree_list, line_match, shell
+from bin.shell import check_lines, check_shell_lines, file_tree_list, line_match, read_file, shell
 from bin.switches import TEST_DOC
+
+
+def system_bashrc_test():
+    home = environ['HOME']
+    return shell('cat %s/.bashrc %s/.profile' %(home, home))
 
 
 def system_bin_test():
