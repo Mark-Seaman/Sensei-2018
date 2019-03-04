@@ -117,10 +117,12 @@ Menu template'''
     url = 'https://shrinking-world.com/unc/bacs200/projects/07'
     return Requirements.objects.create(labels=labels, url=url)
 
+create_requirements()
+
 
 def list_requirements():
     for r in Requirements.objects.all():
-        print('%s %s \n %s' % (r.pk, r.url, r.requirements))
+        print('%s %s \n %s' % (r.pk, r.url, r.labels))
         
         
         
@@ -131,6 +133,7 @@ def assign_new_reviews():
     print('Assign %d' % assign_reviews('bacs200/templates/index.html', '2019-03-04', '5'))
     print("%s reviews assigned" % len(Review.objects.all()))
 
+assign_new_reviews()
 
 
 #########################
