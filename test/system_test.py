@@ -27,7 +27,7 @@ def system_disk_free_test ():
 
 
 def system_env_test():
-    return shell('env')
+    return "Environment Context contains %d variables" % len(shell('env').split('\n'))
 
     
 def system_files_count_test():
