@@ -65,7 +65,7 @@ alias l='ls -al'
 alias le='less'
 alias lesson='cd ~/Sensei/Documents/unc/bacs200 && ls -al'
 alias ll='ls -l'
-alias log='tail -50 $p/log/*.log'
+alias log='ll $p/log; tail -50 $p/log/cron-hourly.log; tail -50 $p/log/cron-errors.log; tail -50 $p/log/hammer.log'
 
 alias n='python $p/bin/ntsh.py'
 alias note='open /Applications/Evernote.app'

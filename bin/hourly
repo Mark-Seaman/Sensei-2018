@@ -20,6 +20,7 @@ echo `date` `id` " - $0 Started"        >> $p/log/cron-hourly.log
 if [ `hostname` == 'MyBook' ]
 then
     # Use the system python
+    cd $p
     python manage.py scriptor tst 2>&1 > $p/log/cron-errors.log
 else
     # Use the pipenv python
