@@ -1,9 +1,8 @@
 from platform import node
 from os import environ
-from os.path import join
 from sys import version_info
 
-from bin.shell import check_lines, check_shell_lines, file_tree_list, line_match, read_file, shell
+from bin.shell import check_lines, check_shell_lines, file_tree_list, shell
 from bin.switches import TEST_DOC
 
 
@@ -62,5 +61,5 @@ def system_python_version_test():
 
 
 def system_python_virtualenv_test():
-    return shell ('which python') + '\n' + shell ('python --version')
+    return shell ('which python')
 
