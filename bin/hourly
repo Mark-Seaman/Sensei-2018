@@ -8,17 +8,14 @@ else
     export p=$HOME/Sensei
 fi
 
+echo '--------------------------------' >> $p/log/cron-hourly.log
 
-{
-    cd $p
+echo `date` `id` " - $0 Started" >> $p/log/cron-hourly.log
 
-    echo `date` `id` " - $0 Started"
+cd $p/hammer
+pipenv run python ../manage.py scriptor tst
 
-    . $p/bin/bashrc-cron
-    # . $p/bin/venv
+echo `date` `id` " - $0 Done"    >> $p/log/cron-hourly.log
 
-     python bin/x.py hourly run
-
-    echo `date` " - $0 All done"
-} # 2>&1 > $p/log/cron-hourly.log
+echo '--------------------------------' >> $p/log/cron-hourly.log
 
