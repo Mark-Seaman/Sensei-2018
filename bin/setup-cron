@@ -2,7 +2,7 @@
 # Setup the crontab with regular tasks
 
 cat <<EOF | crontab
-0  *  *  * * ~/Projects/MyBook/bin/hourly 2>&1 > ~/Projects/MyBook/log/cron-errors.log
+0  *  *  * * ~/MyBook/bin/hourly 2>&1 > ~/MyBook/log/cron-errors.log
 # 30 6  *  * * ~/Projects/MyBook/bin/daily 2>&1 > ~/Projects/MyBook/log/cron-errors.log
 # 20 7  *  * 1 ~/Projects/MyBook/bin/weekly 2>&1 > ~/Projects/MyBook/log/cron-errors.log
 # 10 10 1  * * ~/Projects/MyBook/bin/monthly 2>&1 > ~/Projects/MyBook/log/cron-errors.log
