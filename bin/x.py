@@ -4,7 +4,6 @@ from sys import argv
 from app import app_command
 from booknotes import booknotes_command
 from data import data_command
-from hourly import hourly_command
 from i import i_command
 from music import music_command
 from ops import ops_command
@@ -37,9 +36,6 @@ def execute_command(cmd,args):
     elif cmd == 'hire':
         command_scriptor(cmd, args)
     
-    elif cmd == 'hourly':
-        hourly_command(args)
-
     elif cmd=='i':
         i_command(args)
     

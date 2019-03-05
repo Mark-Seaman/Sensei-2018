@@ -8,14 +8,26 @@ else
     export p=$HOME/Sensei
 fi
 
+
 echo '--------------------------------' >> $p/log/cron-hourly.log
+echo `date` `id` " - $0 Started"        >> $p/log/cron-hourly.log
 
-echo `date` `id` " - $0 Started" >> $p/log/cron-hourly.log
 
-cd $p/hammer
-pipenv run python ../manage.py scriptor tst
+if [ `hostname` == 'MyBook' ]
+then
+    # Use the system python
+    python ../manage.py scriptor tst
+else
+    # Use the pipenv python
 
-echo `date` `id` " - $0 Done"    >> $p/log/cron-hourly.log
+    # Path variable
+    export PATH=$p:$p/bin:/bin:/sbin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:/usr/bin:/usr/local/mysql/bin
 
+    cd $p/hammer
+    pipenv run python ../manage.py scriptor tst
+fi
+
+
+echo `date` `id` " - $0 Done"           >> $p/log/cron-hourly.log
 echo '--------------------------------' >> $p/log/cron-hourly.log
 
