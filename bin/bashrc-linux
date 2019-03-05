@@ -1,0 +1,5 @@
+# If not running interactively, return
+[ -z "$PS1" ] && return
+
+# Load the project profile
+[ -f ~/MyBook/bin/bashrc ] && . ~/MyBook/bin/bashrc

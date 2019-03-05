@@ -113,5 +113,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. ~/MyBook/bin/bashrc-server
+. ~/MyBook/bin/bashrc
 

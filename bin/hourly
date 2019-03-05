@@ -9,6 +9,10 @@ else
 fi
 
 
+# Path variable
+export PATH=$p:$p/bin:/bin:/sbin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:/usr/bin:/usr/local/mysql/bin
+
+
 echo '--------------------------------' >> $p/log/cron-hourly.log
 echo `date` `id` " - $0 Started"        >> $p/log/cron-hourly.log
 
@@ -16,14 +20,9 @@ echo `date` `id` " - $0 Started"        >> $p/log/cron-hourly.log
 if [ `hostname` == 'MyBook' ]
 then
     # Use the system python
-    . ~/.profile
     python manage.py scriptor tst 2>&1 > $p/log/cron-errors.log
 else
     # Use the pipenv python
-
-    # Path variable
-    export PATH=$p:$p/bin:/bin:/sbin:/usr/local/sbin:/usr/local/bin:/opt/local/bin:/usr/bin:/usr/local/mysql/bin
-
     cd $p/hammer
     pipenv run python ../manage.py scriptor tst 2>&1 > $p/log/cron-errors.log
 fi

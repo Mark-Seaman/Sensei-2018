@@ -65,7 +65,7 @@ alias l='ls -al'
 alias le='less'
 alias lesson='cd ~/Sensei/Documents/unc/bacs200 && ls -al'
 alias ll='ls -l'
-alias log='tail -99 $p/log/hammer.log'
+alias log='tail -50 $p/log/*.log'
 
 alias n='python $p/bin/ntsh.py'
 alias note='open /Applications/Evernote.app'
@@ -76,14 +76,10 @@ alias p='python'
 alias page='x page'
 alias pages='b $p/Documents'
 alias plan='b ~/Sensei/Documents/info'
-alias project='x project'
 alias psh='cd $s/hammer && pipenv shell'
-alias prs='cd ~/Rest/library && pipenv shell'
 alias pt='cd $p/bin && python page_tests.py'
 alias pull='vc pull'
 alias push='vc push'
-
-alias question='x hire question'
 
 alias r=reset
 alias rc='. ~/Rest/bashrc'
