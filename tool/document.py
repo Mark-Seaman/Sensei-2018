@@ -93,11 +93,15 @@ def markdown_to_html(markdown_path, html_path):
 
 
 def read_markdown(path):
-    bad_files = ['.DS_Store', '.jpg', '.jpeg', '.png', '.gif']
-    for x in bad_files:
-        if x in path:
-            return "No Markdown File: "+ path
-    return open(path).read()
+    try:
+        bad_files = ['.DS_Store', '.jpg', '.jpeg', '.png', '.gif']
+        for x in bad_files:
+            if x in path:
+                return "No Markdown File: "+ path
+        return open(path).read()
+    except:
+        print('Found bad document: %s' % path)
+        return 'Found bad document: %s' % path
 
 
 def text_to_html(text):

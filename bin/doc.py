@@ -2,9 +2,9 @@ from os import environ, listdir
 from os.path import join, isfile, exists, isdir
 from random import choice
 
-from shell import file_path, file_tree_list, line_count, read_file, shell,  word_count, write_file, dir_list
-from log import log
-# from tool.document import file_to_html
+from .shell import file_path, file_tree_list, line_count, read_file, shell,  word_count, write_file, dir_list
+from tool.log import log
+from tool.document import file_to_html
 
 
 # ----------------------------
@@ -118,6 +118,7 @@ def doc_fix():
             text = file_to_html(filepath)
             open('/tmp/doc_test','w').write(text)
         except:
+            print('Found bad document: %s' % filepath)
             text = open(filepath).read()
             text = fix_chars(text)
             text = text.decode(encoding='UTF-8').encode('ascii', 'ignore')
