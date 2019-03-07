@@ -1,8 +1,9 @@
 from os import chdir, environ, listdir, walk
 from os.path import join, exists, isdir
 from platform import node
-from subprocess import Popen, PIPE
 from re import split
+from subprocess import Popen, PIPE
+from sys import version_info
 
 
 def banner(name):
@@ -191,14 +192,16 @@ def shell(cmd):
 
 def shell_pipe(command, stdin):
     p = Popen(command, stdin=PIPE, stdout=PIPE)
-    # (out, error) = p.communicate(input=stdin.encode('utf-8'))
-    # if error:
-    #     return error.decode('utf-8') + out.decode('utf-8')
-    # return out.decode('utf-8')
-    (out, error) = p.communicate(input=stdin)
-    if error:
-        return error + out
-    return out
+    if version_info.major == 3:
+        (out, error) = p.communicate(input=stdin.encode('utf-8'))
+        if error:
+            return error.decode('utf-8') + out.decode('utf-8')
+        return out.decode('utf-8')
+    else:
+        (out, error) = p.communicate(input=stdin)
+        if error:
+            return error + out
+        return out
 
 
 def word_count(text):
