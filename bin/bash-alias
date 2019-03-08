@@ -113,6 +113,7 @@ alias update='x ops update'
 alias vc='x vc'
 alias ve='. ~/Sensei/bin/venv'
 
+alias walk='e $s/Documents/spiritual/walkabout/Index; web http://spiritual-things.org/walkabout'
 alias web='x web'
 alias who2hire='. $HOME/Projects/Who2Hire/bin/bashrc'
 alias wp='x wordpress '
