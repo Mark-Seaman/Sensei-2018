@@ -163,9 +163,10 @@ add_lesson ('bacs200', '20', 'Page Template', '2019-02-25')
 add_lesson ('bacs200', '21', 'Bootstrap', '2019-02-27')
 add_lesson ('bacs200', '22', 'Forms', '2019-03-01')
 add_lesson ('bacs200', '23', 'Tab Views', '2019-03-04')
+add_lesson ('bacs200', '24', 'Accordion Views', '2019-03-06')
 
 from sensei.sensei import add_lesson
-add_lesson ('bacs200', '24', 'Accordion Views', '2019-03-06')
+add_lesson ('bacs200', '25', 'Carousel Views', '2019-03-08')
 
 
 #########################
