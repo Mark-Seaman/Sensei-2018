@@ -67,7 +67,7 @@ alias lesson='cd ~/Sensei/Documents/unc/bacs200 && ls -al'
 alias ll='ls -l'
 alias log='ll $p/log; tail -50 $p/log/cron-hourly.log; tail -50 $p/log/cron-errors.log; tail -50 $p/log/hammer.log'
 
-alias n='python $p/bin/ntsh.py'
+alias n='cd $p && python bin/ntsh.py'
 alias note='open /Applications/Evernote.app'
 
 alias ops='x ops'
@@ -142,6 +142,7 @@ function commit {
 
 function d {
     d=$1
+    [ "$1" == "" ] && d="$p"
     [ "$1" == "books" ] && d="$p/Documents/booknotes"
     [ "$1" == "htdocs" ] && d="/Applications/XAMPP/xamppfiles/htdocs"
     echo $d && cd $d && ls -al
