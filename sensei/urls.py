@@ -6,7 +6,7 @@ urlpatterns = [
 
     url(r'^schedule/(?P<id>[\d]+)$', UncSchedule.as_view()),
     url(r'^students/(?P<id>[\d]+)$', UncStudents.as_view()),
-    url(r'^tabs/(?P<id>[\d]+)$', UncTabs.as_view()),
+    url(r'^dashboard/(?P<id>[\d]+)$', UncDashboard.as_view()),
 
     url(r'^register$', UncRegister.as_view()),
     url(r'^registered$', UncRegistered.as_view()),
