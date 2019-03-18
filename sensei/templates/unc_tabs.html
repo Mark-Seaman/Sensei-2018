@@ -19,44 +19,41 @@
     <!-- Main -->
     <main class="page">
 
-        <h1>Bootstrap - Getting Started</h1>
+        <h1>Tabs View Example</h1>
+        <p><a href="bootstrap.html">BACS 200 - Bootstrap Templates</a></p>
+        <p>This code demostrates the use of the Bootstrap tab display.</p>
         <hr>
 
-        <h2>Finding Bootstrap Website</h2>
 
-        <p>Google "Bootstrap" and visit website</p>
-        <p>A Seaman's Guide to Bootstrap</p>
-        <p>Get started in less than three minutes.</p>
-        <ul>
-            <li>Go to the website</li>
-            <li>Copy code from "Starter template" section</li>
-            <li>Paste the code into a new file</li>
-        </ul>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="tab-1" href="#nav-1" aria-controls="nav-1" aria-selected="true" role="tab" data-toggle="tab">
+                    Home
+                </a>
+                <a class="nav-item nav-link" id="tab-2" href="#nav-2" aria-controls="nav-2" aria-selected="false" role="tab" data-toggle="tab">
+                    Profile
+                </a>
+                <a class="nav-item nav-link" id="tab-3" href="#nav-3" aria-controls="nav-3" aria-selected="false" role="tab" data-toggle="tab">
+                    Learn More
+                </a>
+            </div>
+        </nav>
 
-        <hr>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-1" aria-labelledby="tab-1" role="tabpanel">
+                <h3>HOME</h3>
+                <p>Some content for home tab</p>
+            </div>
+            <div class="tab-pane fade" id="nav-2" aria-labelledby="tab-2" role="tabpanel">
+                <h3>ABOUT US</h3>
+                <p>Some content about us.</p>
+            </div>
+            <div class="tab-pane fade" id="nav-3" aria-labelledby="tab-3" role="tabpanel">
+                <h3>MORE INFO</h3>
+                <p>Some content for more info.</p>
+            </div>
+        </div>
 
-        <h2>Official Bootstrap Website</h2>
-
-        <ul>
-            <li><a href="https://getbootstrap.com">Official Bootstrap Website</a></li>
-            <li><a href="https://getbootstrap.com/docs/4.3/examples/">Bootstrap Examples</a></li>
-            <li><a href="https://getbootstrap.com/docs/4.3/components/">Bootstrap Components</a></li>
-        </ul>
-
-        <hr>
-
-        <h2>BACS 200 - Bootstrap Templates</h2>
-        <p>These templates help you with common tasks.</p>
-        <ul>
-            <li><a href="bootstrap.html">Getting Started with Bootstrap</a> </li>
-            <li><a href="bootstrap-cards.html">Cards</a> </li>
-            <li><a href="bootstrap-tabs.html">Tabs</a> </li>
-            <li><a href="bootstrap-accordion.html">Accordion</a> </li>
-            <li><a href="bootstrap-alert.html">Alerts</a> </li>
-            <li><a href="bootstrap-jumbo.html">Jumbotron</a> </li>
-            <li><a href="bootstrap-carousel.html">Carousel</a> </li>
-            <li><a href="bootstrap-marketing.html">Marketing</a> </li>
-        </ul>
 
     </main>
 
