@@ -28,29 +28,55 @@
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active" id="tab-1" href="#nav-1" aria-controls="nav-1" aria-selected="true" role="tab" data-toggle="tab">
-                    Home
+                    Student
                 </a>
                 <a class="nav-item nav-link" id="tab-2" href="#nav-2" aria-controls="nav-2" aria-selected="false" role="tab" data-toggle="tab">
-                    Profile
+                    Reading
                 </a>
                 <a class="nav-item nav-link" id="tab-3" href="#nav-3" aria-controls="nav-3" aria-selected="false" role="tab" data-toggle="tab">
-                    Learn More
+                    Projects
                 </a>
             </div>
         </nav>
 
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-1" aria-labelledby="tab-1" role="tabpanel">
-                <h3>HOME</h3>
-                <p>Some content for home tab</p>
+                {% if student %}
+                <h3>{{ student }}</h3>
+
+                <h1>Student Dashboard</h1>
+                <h2>{{ student.name }}</h2>
+
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td>{{ student.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>{{ student.email }}</td>
+                    </tr>
+                    <tr>
+                        <td>Domain</td>
+                        <td>{{ student.domain }}</td>
+                    </tr>
+                </table>
+
+                <h2>URL Game</h2>
+
+                <p>Questions Answered: <b>{{ game.answered }}</b></p>
+                <p>Questions Left to Answer <b>{{ game.left }}</b></p>
+                <p><a href="/unc/url-question/{{ student.pk }}">Play Game</a> </p>
+
+                {% end-if %}
             </div>
             <div class="tab-pane fade" id="nav-2" aria-labelledby="tab-2" role="tabpanel">
-                <h3>ABOUT US</h3>
-                <p>Some content about us.</p>
+                <h3>READING</h3>
+                <p>reading info.</p>
             </div>
             <div class="tab-pane fade" id="nav-3" aria-labelledby="tab-3" role="tabpanel">
-                <h3>MORE INFO</h3>
-                <p>Some content for more info.</p>
+                <h3>PROJECTS</h3>
+                <p>project info.</p>
             </div>
         </div>
 
