@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,13 @@
     <meta name="author" content="">
 
     {% if title %}
-        <title>{{ title }}</title>
+    <title>{{ title }}</title>
     {% endif %}
 
     <!-- Vendor CSS -->
     <link href="/static/material/vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
-    <link href="/static/material/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css"
-          rel="stylesheet">
-    <link href="/static/material/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css"
-          rel="stylesheet">
+    <link href="/static/material/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="/static/material/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <link href="/static/material/vendors/bower_components/google-material-color/dist/palette.css" rel="stylesheet">
 
     <!-- CSS -->
@@ -26,13 +25,10 @@
     <link rel="shortcut icon" type="image/png" href="/static/images/unc/favicon.ico">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
     <!-- UNC Styles -->
-    <link href="/static/css/unc.css?v=3" rel="stylesheet">
+    <link href="/static/css/unc.css?v=4" rel="stylesheet">
 
     {% block stylesheet %}{% endblock %}
 </head>
@@ -63,36 +59,36 @@
 
             {% block user %}
 
-                {% if user.is_authenticated and user.is_staff %}
+            {% if user.is_authenticated and user.is_staff %}
 
-                    <p>Logged In as <b>{{ user.username }}</b>.
-                    </p>
-                    <p>
-                        <a href="/password_change">Change password</a>
-                    </p>
-                    <div class="user-btn">
-                        <a href="/logout">
-                            <i class="zmdi zmdi-lock"></i><span>Log Out</span>
-                        </a>
-                    </div>
+            <p>Logged In as <b>{{ user.username }}</b>.
+            </p>
+            <p>
+                <a href="/password_change">Change password</a>
+            </p>
+            <div class="user-btn">
+                <a href="/logout">
+                    <i class="zmdi zmdi-lock"></i><span>Log Out</span>
+                </a>
+            </div>
 
-                {% else %}
+            {% else %}
 
-                    <button class="user-btn">
-                        <a href="/login/?next=/mybook/">
-                            <i class="zmdi zmdi-lock"></i><span>Log In</span>
-                        </a>
-                    </button>
+            <button class="user-btn">
+                <a href="/login/?next=/mybook/">
+                    <i class="zmdi zmdi-lock"></i><span>Log In</span>
+                </a>
+            </button>
 
-                    {% if not hide_signup %}
-                        <button class="user-btn">
-                            <a href="/signup">
-                                <i class="zmdi zmdi-key"></i><span>Sign Up</span>
-                            </a>
-                        </button>
-                    {% endif %}
+            {% if not hide_signup %}
+            <button class="user-btn">
+                <a href="/signup">
+                    <i class="zmdi zmdi-key"></i><span>Sign Up</span>
+                </a>
+            </button>
+            {% endif %}
 
-                {% endif %}
+            {% endif %}
 
             {% endblock %}
         </div>
@@ -114,51 +110,51 @@
 
             <ul class="main-menu">
                 {% for m in menu %}
-                    <li {{ m.3 }}>
-                        <a href="{{ m.0 }}"><i class="zmdi {{ m.1 }}"></i> {{ m.2 }} </a>
-                    </li>
+                <li {{ m.3 }}>
+                    <a href="{{ m.0 }}"><i class="zmdi {{ m.1 }}"></i> {{ m.2 }} </a>
+                </li>
                 {% endfor %}
             </ul>
 
         </aside>
 
         {% block content %}
-            <section id="content">
-                <div class="container">
+        <section id="content">
+            <div class="container">
 
-                    {% block card %}
+                {% block card %}
 
-                        <div class="card">
+                <div class="card">
 
-                            <div class="card-header ch-alt">
-                                <h1>{{ title }}</h1>
-                            </div>
+                    <div class="card-header ch-alt">
+                        <h1>{{ title }}</h1>
+                    </div>
 
-                            <div class="card-body card-padding">
+                    <div class="card-body card-padding">
 
-                                {% block page %}
-                                {% endblock %}
+                        {% block page %}
+                        {% endblock %}
 
-                            </div>
-                        </div>
-
-                    {% endblock %}
-
+                    </div>
                 </div>
-            </section>
+
+                {% endblock %}
+
+            </div>
+        </section>
         {% endblock %}
 
     </section>
 
 
     {% block footer %}
-        <footer>
-            {% if not photo %}
-                <a href="http://shrinking-world.com" target="_blank">
-                    Powered by Shrinking World &copy; 2019
-                </a>
-            {% endif %}
-        </footer>
+    <footer>
+        {% if not photo %}
+        <a href="http://shrinking-world.com" target="_blank">
+            Powered by Shrinking World &copy; 2019
+        </a>
+        {% endif %}
+    </footer>
     {% endblock %}
 
 
