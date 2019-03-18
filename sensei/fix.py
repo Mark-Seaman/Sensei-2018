@@ -104,17 +104,17 @@ def clear_reviews():
 from sensei.models import *
 
 def create_requirements():
-    labels = '''Page exists at URL
-Page is Valid HTML & CSS & No Bad Links
-Styles for: Home, Project Pages
-Source code matches the requirements
-Master Page template
-Header template
-Main template
-Footer template
-Article template
-Menu template'''
-    url = 'https://shrinking-world.com/unc/bacs200/projects/07'
+    labels = '''Page is located at correct URL (bacs200/projects/webdev.html)
+Pages validates HTML and CSS and links
+Tabs work properly
+All links work properly
+Other pages are working properly
+Page has great visual appearance
+Page contains multiple tabs
+Page shows content for each week
+Each lesson has serveral bullet points
+Study guide covers the class so far'''
+    url = 'https://shrinking-world.com/unc/bacs200/projects/08'
     return Requirements.objects.create(labels=labels, url=url)
 
 create_requirements()
@@ -130,7 +130,7 @@ from sensei.review import *
 
 def assign_new_reviews():
 
-    print('Assign %d' % assign_reviews('bacs200/templates/index.html', '2019-03-04', '5'))
+    print('Assign %d' % assign_reviews('bacs200/projects/webdev.html', '2019-03-18', '6'))
     print("%s reviews assigned" % len(Review.objects.all()))
 
 assign_new_reviews()
@@ -164,9 +164,10 @@ add_lesson ('bacs200', '21', 'Bootstrap', '2019-02-27')
 add_lesson ('bacs200', '22', 'Forms', '2019-03-01')
 add_lesson ('bacs200', '23', 'Tab Views', '2019-03-04')
 add_lesson ('bacs200', '24', 'Accordion Views', '2019-03-06')
+add_lesson ('bacs200', '25', 'Carousel Views', '2019-03-08')
 
 from sensei.sensei import add_lesson
-add_lesson ('bacs200', '25', 'Carousel Views', '2019-03-08')
+add_lesson ('bacs200', '26', 'Organizing Info', '2019-03-18')
 
 
 #########################
