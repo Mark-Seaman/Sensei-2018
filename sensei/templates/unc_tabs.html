@@ -18,13 +18,10 @@
 
     <!-- Main -->
     <main class="page">
-
-        <h1>Tabs View Example</h1>
-        <p><a href="bootstrap.html">BACS 200 - Bootstrap Templates</a></p>
-        <p>This code demostrates the use of the Bootstrap tab display.</p>
-        <hr>
+        <h1>Student Dashboard</h1>
 
 
+        <!-- Tabs -->
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active" id="tab-1" href="#nav-1" aria-controls="nav-1" aria-selected="true" role="tab" data-toggle="tab">
@@ -42,9 +39,7 @@
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-1" aria-labelledby="tab-1" role="tabpanel">
                 {% if student %}
-                <h3>{{ student }}</h3>
 
-                <h1>Student Dashboard</h1>
                 <h2>{{ student.name }}</h2>
 
                 <table>
@@ -58,7 +53,17 @@
                     </tr>
                     <tr>
                         <td>Domain</td>
-                        <td>{{ student.domain }}</td>
+                        <td>
+                            <a href="http://{{ student.domain }}" target="_blank">{{ student.domain }}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Home</td>
+                        <td>
+                            <a href="http://{{ student.domain }}/bacs200/index.html" target="_blank">
+                                bacs200/index.html
+                            </a>
+                        </td>
                     </tr>
                 </table>
 
@@ -71,12 +76,130 @@
                 {% endif %}
             </div>
             <div class="tab-pane fade" id="nav-2" aria-labelledby="tab-2" role="tabpanel">
-                <h3>READING</h3>
-                <p>reading info.</p>
+                <h2>Reading Assignments</h2>
+
+                <ul>
+                    <li>March 6 -
+                        <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/3/section/5">
+                            Lesson 24. Audio and Video (section 3.5)
+                        </a>
+                    </li>
+
+                    <li>March 8 -
+                        <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/3/section/6">
+                            Lesson 25. Script tag (section 3.6)
+                        </a>
+                    </li>
+
+                    <li>March 18 -
+                        <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/3/section/7">
+                            Lesson 26. Developer guidelines (section 3.7)
+                        </a>
+                    </li>
+
+                    <li>March 20 -
+                        <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/6/section/1">
+                            Lesson 27. JavaScript (6.1)
+                        </a>
+                    </li>
+                </ul>
+
+
             </div>
             <div class="tab-pane fade" id="nav-3" aria-labelledby="tab-3" role="tabpanel">
                 <h3>PROJECTS</h3>
-                <p>project info.</p>
+                <h2>Web Pages for Testing</h2>
+
+                <h3>Projects</h3>
+
+                <p>
+                    #1 WordPress Blog - Due Jan 11 -
+                    <a href="http://{{ student.domain }}">
+                        http://{{ student.domain }}
+                    </a>
+                </p>
+                <p>
+                    #2 Inspire - Due Jan 18 -
+                    <a href="http://{{ student.domain }}/bacs200/projects/inspire.html">
+                        http://{{ student.domain }}/bacs200/projects/inspire.html
+                    </a>
+                </p>
+                <p>
+                    #3 Amuse - Due Jan 25 -
+                    <a href="http://{{ student.domain }}/bacs200/projects/amuse.html">
+                        http://{{ student.domain }}/bacs200/projects/amuse.html
+                    </a>
+                </p>
+                <p>
+                    #4 Educate - Due Feb 1 -
+                    <a href="http://{{ student.domain }}/bacs200/projects/educate.html">
+                        http://{{ student.domain }}/bacs200/projects/educate.html
+                    </a>
+                </p>
+                <p>
+                    #5 Pets - Due Feb 15 -
+                    <a href="http://{{ student.domain }}/bacs200/projects/pets/index.html">
+                        http://{{ student.domain }}/bacs200/projects/pets/index.html
+                    </a>
+                </p>
+                <p>
+                    #6 Wanted - Due Feb 22 -
+                    <a href="http://{{ student.domain }}/bacs200/projects/wanted.html">
+                        http://{{ student.domain }}/bacs200/projects/wanted.html
+                    </a>
+                </p>
+                <p>
+                    #7 Page Template - Due March 1 -
+                    <a href="http://{{ student.domain }}/bacs200/templates/index.html">
+                        http://{{ student.domain }}/bacs200/templates/index.html
+                    </a>
+                </p>
+                <p>
+                    #8 Page Template - Due March 8 -
+                    <a href="http://{{ student.domain }}/bacs200/projects/webdev.html">
+                        http://{{ student.domain }}/bacs200/projects/webdev.html
+                    </a>
+                </p>
+                <p>
+                    #9 Vacation Marketing - Due March 22 -
+                    <a href="http://{{ student.domain }}/bacs200/projects/vacation.html">
+                        http://{{ student.domain }}/bacs200/projects/vacation.html
+                    </a>
+                </p>
+
+                <h3>Exercises</h3>
+
+                <p>
+                    Home Page - Due Jan 28 -
+                    <a href="http://{{ student.domain }}/bacs200/index.html">
+                        http://{{ student.domain }}/bacs200/index.html
+                    </a>
+                </p>
+                <p>
+                    Animals - Due Jan 30 -
+                    <a href="http://{{ student.domain }}/bacs200/animals.html">
+                        http://{{ student.domain }}/bacs200/animals.html
+                    </a>
+                </p>
+                <p>
+                    Stylesheet - Due Feb 11 -
+                    <a href="http://{{ student.domain }}/bacs200/stylesheet.html">
+                        http://{{ student.domain }}/bacs200/stylesheet.html
+                    </a>
+                </p>
+
+
+                <h3>HTML Validation</h3>
+                <p>
+                    <a href="https://validator.w3.org/">Validate HTML</a>
+                </p>
+                <p>
+                    <a href="http://jigsaw.w3.org/css-validator/">Validate CSS</a>
+                </p>
+                <p>
+                    <a href="https://validator.w3.org/checklink">Validate Links</a>
+                </p>
+
             </div>
         </div>
 
