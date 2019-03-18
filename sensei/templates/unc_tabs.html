@@ -18,7 +18,7 @@
 
     <!-- Main -->
     <main class="page">
-        <h1>Student Dashboard</h1>
+        <h1>Student Dashboard - {{ student.name }}</h1>
 
 
         <!-- Tabs -->
@@ -43,7 +43,7 @@
             <div class="tab-pane fade show active" id="nav-1" aria-labelledby="tab-1" role="tabpanel">
                 {% if student %}
 
-                <h2>{{ student.name }}</h2>
+                <h2>Contact Info</h2>
 
                 <table>
                     <tr>
@@ -112,10 +112,7 @@
 
             </div>
             <div class="tab-pane fade" id="nav-3" aria-labelledby="tab-3" role="tabpanel">
-                <h3>PROJECTS</h3>
-                <h2>Web Pages for Testing</h2>
-
-                <h3>Projects</h3>
+                <h2>Project Pages</h2>
 
                 <p>
                     #1 WordPress Blog - Due Jan 11 -
@@ -172,7 +169,7 @@
                     </a>
                 </p>
 
-                <h3>Exercises</h3>
+                <h2>Exercises</h2>
 
                 <p>
                     Home Page - Due Jan 28 -
@@ -194,7 +191,7 @@
                 </p>
 
 
-                <h3>HTML Validation</h3>
+                <h2>Validation</h2>
                 <p>
                     <a href="https://validator.w3.org/">Validate HTML</a>
                 </p>
@@ -206,6 +203,8 @@
                 </p>
 
             </div>
+
+
             <div class="tab-pane fade" id="nav-4" aria-labelledby="tab-4" role="tabpanel">
                 <h3>Design Reviews</h3>
                 <h2>Design Review assignments</h2>
