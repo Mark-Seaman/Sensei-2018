@@ -55,7 +55,11 @@ class UncEditReview(UpdateView):
         student_id = self.object.reviewer.pk
         return '/unc/student/%s' % student_id
 
-
+    
+class UncTabs(TemplateView):
+    template_name = 'unc_tabs.html'
+    
+    
 class UncReviewFeedback(TemplateView):
     template_name = 'unc_feedback.html'
 
