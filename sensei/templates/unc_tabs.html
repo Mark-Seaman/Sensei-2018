@@ -206,6 +206,121 @@
             </div>
             <div class="tab-pane fade" id="nav-4" aria-labelledby="tab-4" role="tabpanel">
                 <h3>Design Reviews</h3>
+                <h2>Design Review assignments</h2>
+
+                <p>Give feedback to your peers by the due date.</p>
+
+                {% if reviews %}
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Designer</th>
+                        <th>Reviewer</th>
+                        <th>Page</th>
+                        <th>Due</th>
+                    </tr>
+                    {% for r in reviews %}
+                    <tr>
+                        <td><a class="normal" href="/unc/review/{{ r.pk }}">Do Review</a>
+                        </td>
+                        <td>
+                            <a class="normal" href="/unc/student/{{ r.designer.pk }}">{{ r.designer.name }}</a>
+                        </td>
+                        <td>
+                            <a class="normal" href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>
+                        </td>
+                        <td>
+                            <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
+                                {{ r.page }}
+                            </a>
+                        </td>
+                        <td>{{ r.due }} </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                {% else %}
+                <b>No Reviews to do</b>
+                {% endif %}
+
+
+                <h2>Design Reviews Done</h2>
+                <p>Design reviews that have been successfully completed</p>
+
+                {% if done %}
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Designer</th>
+                        <th>Reviewer</th>
+                        <th>Page</th>
+                        <th>Score</th>
+                        <th>Date Reviewed</th>
+                    </tr>
+                    {% for r in done %}
+                    <tr>
+                        <td>
+                            <a class="normal" href="/unc/review/{{ r.pk }}">Do Review</a>
+                        </td>
+                        <td>
+                            <a class="normal" href="/unc/student/{{ r.designer.pk }}">{{ r.designer.name }}</a>
+                        </td>
+                        <td>
+                            <a class="normal" href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>
+                        </td>
+                        <td>
+                            <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
+                                {{ r.page }}
+                            </a>
+                        </td>
+                        <td>{{ r.score }}</td>
+                        <td>{{ r.date }} </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                {% else %}
+                <h1>No Reviews done</h1>
+                {% endif %}
+
+
+                <h2>Design Review Feedback</h2>
+                <p>Feedback on your pages by your peers.</p>
+
+                {% if feedback %}
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Designer</th>
+                        <th>Reviewer</th>
+                        <th>Page</th>
+                        <th>Score</th>
+                        <th>Reviewed</th>
+                    </tr>
+                    {% for r in feedback %}
+                    <tr>
+                        <td><a class="normal" href="/unc/feedback/{{ r.pk }}">Feedback</a>
+                        </td>
+                        <td>
+                            <a class="normal" href="/unc/student/{{ r.designer.pk }}">{{ r.designer.name }}</a>
+                        </td>
+                        <td>
+                            <a class="normal" href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>
+                        </td>
+                        <td>
+                            <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
+                                {{ r.page }}
+                            </a>
+                        </td>
+                        <td>{{ r.score }}</td>
+                        <td>{{ r.date }} </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                {% else %}
+                <h1>No Reviews feedback given</h1>
+                {% endif %}
+
+                {% endblock %}
+
             </div>
         </div>
 
