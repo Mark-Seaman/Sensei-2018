@@ -82,11 +82,12 @@ def email_args(args, use_html=True):
 
 
 def send_test_email():
-    me = 'Mark.B.Seaman@gmail.com'
+    from_me = 'uncobacs@unco-bacs.org'
+    to_me = 'Mark.B.Seaman@gmail.com'
     title = "Test Message"
     text = 'This is a test message sent from MyBook Server.  Please respond'
-    log('send_test_message (%s, %s)' % (me, title))
-    options = dict(subject=title, from_email=me, recipient_list=[me], message=text)
+    log('send_test_message (%s, %s)' % (to_me, title))
+    options = dict(subject=title, from_email=from_me, recipient_list=[to_me], message=text)
     send_mail(**options)
 
 
