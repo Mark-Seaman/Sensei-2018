@@ -3,11 +3,10 @@ from django.forms import Form
 from django.views.generic import FormView, ListView, RedirectView, TemplateView, UpdateView
 from django.utils.timezone import now
 
-from sensei.review import query_reviewers, query_designers, url_feedback
 from tool.document import domain_doc, doc_html_text
 
 from .models import Review, Student, UrlGame
-from .review import count_score, get_review, review_feedback, student_reviews, student_reviews_done
+from .review import count_score, get_review, query_reviewers, query_designers, review_feedback, student_reviews, student_reviews_done, url_feedback
 from .sensei import course_lessons, schedule, slides_markdown
 from .student import site_settings, student, students, register_user_domain
 from .urlgame import generate_url_question
