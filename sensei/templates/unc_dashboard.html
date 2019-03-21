@@ -1,346 +1,359 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-    <title>BACS 200 - Bootstrap Templates</title>
+    <head>
+        <title>BACS 200 - Bootstrap Templates</title>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="https://www.unco.edu/favicon.ico">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="https://www.unco.edu/favicon.ico">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/css/blog.css">
-    <!--    <link rel="stylesheet" href="/static/css/uncobacs.css">-->
-</head>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/blog.css">
+        <!--    <link rel="stylesheet" href="/static/css/uncobacs.css">-->
+    </head>
 
-<body>
+    <body>
 
-    <!-- Header -->
+        <!-- Header -->
 
-    <header>
-        <img class="header_logo" src="http://unco-bacs.org/bacs200/images/Bear_Logo.png" alt="Bear Logo">
-        <div>
-            <h1>{{ site.0 }}</h1>
-            <h2><a href="/unc/bacs200/">BACS 200</a></h2>
-        </div>
-    </header>
-
-    <!-- Main -->
-    <main class="page">
-        <h1>Student Dashboard - {{ student.name }}</h1>
-
-
-        <!-- Tabs -->
-        <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="tab-1" href="#nav-1" aria-controls="nav-1" aria-selected="true" role="tab" data-toggle="tab">
-                    Student
-                </a>
-                <a class="nav-item nav-link" id="tab-2" href="#nav-2" aria-controls="nav-2" aria-selected="false" role="tab" data-toggle="tab">
-                    Reading
-                </a>
-                <a class="nav-item nav-link" id="tab-3" href="#nav-3" aria-controls="nav-3" aria-selected="false" role="tab" data-toggle="tab">
-                    Projects
-                </a>
-                <a class="nav-item nav-link" id="tab-4" href="#nav-4" aria-controls="nav-4" aria-selected="false" role="tab" data-toggle="tab">
-                    Reviews
-                </a>
+        <header>
+            <img src="/static/images/unc/Bear.100.png" alt="Bear Logo">
+            <div>
+                <h1>{{ site.0 }}</h1>
+                <h2><a href="/unc/bacs200/">BACS 200</a></h2>
             </div>
-        </nav>
+        </header>
 
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-1" aria-labelledby="tab-1" role="tabpanel">
-                {% if student %}
+        <!-- Main -->
+        <main class="page">
+            <h1>Student Dashboard - {{ student.name }}</h1>
 
-                <h2>Contact Info</h2>
 
-                <table>
-                    <tr>
-                        <td>Name</td>
-                        <td>{{ student.name }}</td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td>{{ student.email }}</td>
-                    </tr>
-                    <tr>
-                        <td>Domain</td>
-                        <td>
-                            <a href="http://{{ student.domain }}" target="_blank">{{ student.domain }}</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Home</td>
-                        <td>
-                            <a href="http://{{ student.domain }}/bacs200/index.html" target="_blank">
-                                bacs200/index.html
+            <!-- Tabs -->
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="tab-1" href="#nav-1" aria-controls="nav-1"
+                       aria-selected="true" role="tab" data-toggle="tab">
+                        Student
+                    </a>
+                    <a class="nav-item nav-link" id="tab-2" href="#nav-2" aria-controls="nav-2" aria-selected="false"
+                       role="tab" data-toggle="tab">
+                        Reading
+                    </a>
+                    <a class="nav-item nav-link" id="tab-3" href="#nav-3" aria-controls="nav-3" aria-selected="false"
+                       role="tab" data-toggle="tab">
+                        Projects
+                    </a>
+                    <a class="nav-item nav-link" id="tab-4" href="#nav-4" aria-controls="nav-4" aria-selected="false"
+                       role="tab" data-toggle="tab">
+                        Reviews
+                    </a>
+                </div>
+            </nav>
+
+            <div class="pane">
+
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-1" aria-labelledby="tab-1" role="tabpanel">
+                        {% if student %}
+
+                            <h2>Contact Info</h2>
+
+                            <table>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>{{ student.name }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>{{ student.email }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Domain</td>
+                                    <td>
+                                        <a href="http://{{ student.domain }}" target="_blank">{{ student.domain }}</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Home</td>
+                                    <td>
+                                        <a href="http://{{ student.domain }}/bacs200/index.html" target="_blank">
+                                            bacs200/index.html
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <h2>URL Game</h2>
+
+                            <p>Questions Answered: <b>{{ game.answered }}</b></p>
+                            <p>Questions Left to Answer <b>{{ game.left }}</b></p>
+                            <p><a href="/unc/url-question/{{ student.pk }}">Play Game</a></p>
+
+                        {% endif %}
+                    </div>
+                    <div class="tab-pane fade" id="nav-2" aria-labelledby="tab-2" role="tabpanel">
+                        <h2>Reading Assignments</h2>
+
+                        <ul>
+                            <li>March 6 -
+                                <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/3/section/5">
+                                    Lesson 24. Audio and Video (section 3.5)
+                                </a>
+                            </li>
+
+                            <li>March 8 -
+                                <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/3/section/6">
+                                    Lesson 25. Script tag (section 3.6)
+                                </a>
+                            </li>
+
+                            <li>March 18 -
+                                <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/3/section/7">
+                                    Lesson 26. Developer guidelines (section 3.7)
+                                </a>
+                            </li>
+
+                            <li>March 20 -
+                                <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/6/section/1">
+                                    Lesson 27. JavaScript (6.1)
+                                </a>
+                            </li>
+                        </ul>
+
+                        View full <a href='/unc/bacs200/Zybooks'>Reading Schedule</a>
+
+
+                    </div>
+                    <div class="tab-pane fade" id="nav-3" aria-labelledby="tab-3" role="tabpanel">
+                        <h2>Project Pages</h2>
+
+                        <p>
+                            #1 WordPress Blog - Due Jan 11 -
+                            <a href="http://{{ student.domain }}">
+                                http://{{ student.domain }}
                             </a>
-                        </td>
-                    </tr>
-                </table>
-
-                <h2>URL Game</h2>
-
-                <p>Questions Answered: <b>{{ game.answered }}</b></p>
-                <p>Questions Left to Answer <b>{{ game.left }}</b></p>
-                <p><a href="/unc/url-question/{{ student.pk }}">Play Game</a> </p>
-
-                {% endif %}
-            </div>
-            <div class="tab-pane fade" id="nav-2" aria-labelledby="tab-2" role="tabpanel">
-                <h2>Reading Assignments</h2>
-
-                <ul>
-                    <li>March 6 -
-                        <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/3/section/5">
-                            Lesson 24. Audio and Video (section 3.5)
-                        </a>
-                    </li>
-
-                    <li>March 8 -
-                        <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/3/section/6">
-                            Lesson 25. Script tag (section 3.6)
-                        </a>
-                    </li>
-
-                    <li>March 18 -
-                        <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/3/section/7">
-                            Lesson 26. Developer guidelines (section 3.7)
-                        </a>
-                    </li>
-
-                    <li>March 20 -
-                        <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/6/section/1">
-                            Lesson 27. JavaScript (6.1)
-                        </a>
-                    </li>
-                </ul>
-
-                View full <a href='/unc/bacs200/Zybooks'>Reading Schedule</a>
-
-
-            </div>
-            <div class="tab-pane fade" id="nav-3" aria-labelledby="tab-3" role="tabpanel">
-                <h2>Project Pages</h2>
-
-                <p>
-                    #1 WordPress Blog - Due Jan 11 -
-                    <a href="http://{{ student.domain }}">
-                        http://{{ student.domain }}
-                    </a>
-                </p>
-                <p>
-                    #2 Inspire - Due Jan 18 -
-                    <a href="http://{{ student.domain }}/bacs200/projects/inspire.html">
-                        http://{{ student.domain }}/bacs200/projects/inspire.html
-                    </a>
-                </p>
-                <p>
-                    #3 Amuse - Due Jan 25 -
-                    <a href="http://{{ student.domain }}/bacs200/projects/amuse.html">
-                        http://{{ student.domain }}/bacs200/projects/amuse.html
-                    </a>
-                </p>
-                <p>
-                    #4 Educate - Due Feb 1 -
-                    <a href="http://{{ student.domain }}/bacs200/projects/educate.html">
-                        http://{{ student.domain }}/bacs200/projects/educate.html
-                    </a>
-                </p>
-                <p>
-                    #5 Pets - Due Feb 15 -
-                    <a href="http://{{ student.domain }}/bacs200/projects/pets/index.html">
-                        http://{{ student.domain }}/bacs200/projects/pets/index.html
-                    </a>
-                </p>
-                <p>
-                    #6 Wanted - Due Feb 22 -
-                    <a href="http://{{ student.domain }}/bacs200/projects/wanted.html">
-                        http://{{ student.domain }}/bacs200/projects/wanted.html
-                    </a>
-                </p>
-                <p>
-                    #7 Page Template - Due March 1 -
-                    <a href="http://{{ student.domain }}/bacs200/templates/index.html">
-                        http://{{ student.domain }}/bacs200/templates/index.html
-                    </a>
-                </p>
-                <p>
-                    #8 Page Template - Due March 8 -
-                    <a href="http://{{ student.domain }}/bacs200/projects/webdev.html">
-                        http://{{ student.domain }}/bacs200/projects/webdev.html
-                    </a>
-                </p>
-                <p>
-                    #9 Vacation Marketing - Due March 22 -
-                    <a href="http://{{ student.domain }}/bacs200/projects/vacation.html">
-                        http://{{ student.domain }}/bacs200/projects/vacation.html
-                    </a>
-                </p>
-
-                <h2>Exercises</h2>
-
-                <p>
-                    Home Page - Due Jan 28 -
-                    <a href="http://{{ student.domain }}/bacs200/index.html">
-                        http://{{ student.domain }}/bacs200/index.html
-                    </a>
-                </p>
-                <p>
-                    Animals - Due Jan 30 -
-                    <a href="http://{{ student.domain }}/bacs200/animals.html">
-                        http://{{ student.domain }}/bacs200/animals.html
-                    </a>
-                </p>
-                <p>
-                    Stylesheet - Due Feb 11 -
-                    <a href="http://{{ student.domain }}/bacs200/stylesheet.html">
-                        http://{{ student.domain }}/bacs200/stylesheet.html
-                    </a>
-                </p>
-
-
-                <h2>Validation</h2>
-                <p>
-                    <a href="https://validator.w3.org/">Validate HTML</a>
-                </p>
-                <p>
-                    <a href="http://jigsaw.w3.org/css-validator/">Validate CSS</a>
-                </p>
-                <p>
-                    <a href="https://validator.w3.org/checklink">Validate Links</a>
-                </p>
-
-            </div>
-
-
-            <div class="tab-pane fade" id="nav-4" aria-labelledby="tab-4" role="tabpanel">
-                <h2>Design Reviews Pending</h2>
-
-                <p>Give feedback to your peers by the due date.</p>
-
-                {% if reviews %}
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>Designer</th>
-                        <th>Reviewer</th>
-                        <th>Page</th>
-                        <th>Due</th>
-                    </tr>
-                    {% for r in reviews %}
-                    <tr>
-                        <td><a class="normal" href="/unc/review/{{ r.pk }}">Do Review</a>
-                        </td>
-                        <td>
-                            <a class="normal" href="/unc/student/{{ r.designer.pk }}">{{ r.designer.name }}</a>
-                        </td>
-                        <td>
-                            <a class="normal" href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>
-                        </td>
-                        <td>
-                            <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
-                                {{ r.page }}
+                        </p>
+                        <p>
+                            #2 Inspire - Due Jan 18 -
+                            <a href="http://{{ student.domain }}/bacs200/projects/inspire.html">
+                                http://{{ student.domain }}/bacs200/projects/inspire.html
                             </a>
-                        </td>
-                        <td>{{ r.due }} </td>
-                    </tr>
-                    {% endfor %}
-                </table>
-                {% else %}
-                <b>No Reviews to do</b>
-                {% endif %}
-
-
-                <h2>Design Reviews Done</h2>
-                <p>Design reviews that have been successfully completed</p>
-
-                {% if done %}
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>Designer</th>
-                        <th>Reviewer</th>
-                        <th>Page</th>
-                        <th>Score</th>
-                        <th>Date Reviewed</th>
-                    </tr>
-                    {% for r in done %}
-                    <tr>
-                        <td>
-                            <a class="normal" href="/unc/review/{{ r.pk }}">Do Review</a>
-                        </td>
-                        <td>
-                            <a class="normal" href="/unc/student/{{ r.designer.pk }}">{{ r.designer.name }}</a>
-                        </td>
-                        <td>
-                            <a class="normal" href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>
-                        </td>
-                        <td>
-                            <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
-                                {{ r.page }}
+                        </p>
+                        <p>
+                            #3 Amuse - Due Jan 25 -
+                            <a href="http://{{ student.domain }}/bacs200/projects/amuse.html">
+                                http://{{ student.domain }}/bacs200/projects/amuse.html
                             </a>
-                        </td>
-                        <td>{{ r.score }}</td>
-                        <td>{{ r.date }} </td>
-                    </tr>
-                    {% endfor %}
-                </table>
-                {% else %}
-                <h1>No Reviews done</h1>
-                {% endif %}
-
-
-                <h2>Design Review Feedback</h2>
-                <p>Feedback on your pages by your peers.</p>
-
-                {% if feedback %}
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>Designer</th>
-                        <th>Reviewer</th>
-                        <th>Page</th>
-                        <th>Score</th>
-                        <th>Reviewed</th>
-                    </tr>
-                    {% for r in feedback %}
-                    <tr>
-                        <td><a class="normal" href="/unc/feedback/{{ r.pk }}">Feedback</a>
-                        </td>
-                        <td>
-                            <a class="normal" href="/unc/student/{{ r.designer.pk }}">{{ r.designer.name }}</a>
-                        </td>
-                        <td>
-                            <a class="normal" href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>
-                        </td>
-                        <td>
-                            <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
-                                {{ r.page }}
+                        </p>
+                        <p>
+                            #4 Educate - Due Feb 1 -
+                            <a href="http://{{ student.domain }}/bacs200/projects/educate.html">
+                                http://{{ student.domain }}/bacs200/projects/educate.html
                             </a>
-                        </td>
-                        <td>{{ r.score }}</td>
-                        <td>{{ r.date }} </td>
-                    </tr>
-                    {% endfor %}
-                </table>
-                {% else %}
-                <h1>No Reviews feedback given</h1>
-                {% endif %}
+                        </p>
+                        <p>
+                            #5 Pets - Due Feb 15 -
+                            <a href="http://{{ student.domain }}/bacs200/projects/pets/index.html">
+                                http://{{ student.domain }}/bacs200/projects/pets/index.html
+                            </a>
+                        </p>
+                        <p>
+                            #6 Wanted - Due Feb 22 -
+                            <a href="http://{{ student.domain }}/bacs200/projects/wanted.html">
+                                http://{{ student.domain }}/bacs200/projects/wanted.html
+                            </a>
+                        </p>
+                        <p>
+                            #7 Page Template - Due March 1 -
+                            <a href="http://{{ student.domain }}/bacs200/templates/index.html">
+                                http://{{ student.domain }}/bacs200/templates/index.html
+                            </a>
+                        </p>
+                        <p>
+                            #8 Page Template - Due March 8 -
+                            <a href="http://{{ student.domain }}/bacs200/projects/webdev.html">
+                                http://{{ student.domain }}/bacs200/projects/webdev.html
+                            </a>
+                        </p>
+                        <p>
+                            #9 Vacation Marketing - Due March 22 -
+                            <a href="http://{{ student.domain }}/bacs200/projects/vacation.html">
+                                http://{{ student.domain }}/bacs200/projects/vacation.html
+                            </a>
+                        </p>
 
+                        <h2>Exercises</h2>
+
+                        <p>
+                            Home Page - Due Jan 28 -
+                            <a href="http://{{ student.domain }}/bacs200/index.html">
+                                http://{{ student.domain }}/bacs200/index.html
+                            </a>
+                        </p>
+                        <p>
+                            Animals - Due Jan 30 -
+                            <a href="http://{{ student.domain }}/bacs200/animals.html">
+                                http://{{ student.domain }}/bacs200/animals.html
+                            </a>
+                        </p>
+                        <p>
+                            Stylesheet - Due Feb 11 -
+                            <a href="http://{{ student.domain }}/bacs200/stylesheet.html">
+                                http://{{ student.domain }}/bacs200/stylesheet.html
+                            </a>
+                        </p>
+
+
+                        <h2>Validation</h2>
+                        <p>
+                            <a href="https://validator.w3.org/">Validate HTML</a>
+                        </p>
+                        <p>
+                            <a href="http://jigsaw.w3.org/css-validator/">Validate CSS</a>
+                        </p>
+                        <p>
+                            <a href="https://validator.w3.org/checklink">Validate Links</a>
+                        </p>
+
+                    </div>
+
+
+                    <div class="tab-pane fade" id="nav-4" aria-labelledby="tab-4" role="tabpanel">
+                        <h2>Design Reviews Pending</h2>
+
+                        <p>Give feedback to your peers by the due date.</p>
+
+                        {% if reviews %}
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <th>Designer</th>
+                                    <th>Reviewer</th>
+                                    <th>Page</th>
+                                    <th>Due</th>
+                                </tr>
+                                {% for r in reviews %}
+                                    <tr>
+                                        <td><a class="normal" href="/unc/review/{{ r.pk }}">Do Review</a>
+                                        </td>
+                                        <td>
+                                            <a class="normal"
+                                               href="/unc/student/{{ r.designer.pk }}">{{ r.designer.name }}</a>
+                                        </td>
+                                        <td>
+                                            <a class="normal"
+                                               href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>
+                                        </td>
+                                        <td>
+                                            <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
+                                                {{ r.page }}
+                                            </a>
+                                        </td>
+                                        <td>{{ r.due }} </td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        {% else %}
+                            <b>No Reviews to do</b>
+                        {% endif %}
+
+
+                        <h2>Design Reviews Done</h2>
+                        <p>Design reviews that have been successfully completed</p>
+
+                        {% if done %}
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <th>Designer</th>
+                                    <th>Reviewer</th>
+                                    <th>Page</th>
+                                    <th>Score</th>
+                                    <th>Date Reviewed</th>
+                                </tr>
+                                {% for r in done %}
+                                    <tr>
+                                        <td>
+                                            <a class="normal" href="/unc/review/{{ r.pk }}">Do Review</a>
+                                        </td>
+                                        <td>
+                                            <a class="normal"
+                                               href="/unc/student/{{ r.designer.pk }}">{{ r.designer.name }}</a>
+                                        </td>
+                                        <td>
+                                            <a class="normal"
+                                               href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>
+                                        </td>
+                                        <td>
+                                            <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
+                                                {{ r.page }}
+                                            </a>
+                                        </td>
+                                        <td>{{ r.score }}</td>
+                                        <td>{{ r.date }} </td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        {% else %}
+                            <h1>No Reviews done</h1>
+                        {% endif %}
+
+
+                        <h2>Design Review Feedback</h2>
+                        <p>Feedback on your pages by your peers.</p>
+
+                        {% if feedback %}
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <th>Designer</th>
+                                    <th>Reviewer</th>
+                                    <th>Page</th>
+                                    <th>Score</th>
+                                    <th>Reviewed</th>
+                                </tr>
+                                {% for r in feedback %}
+                                    <tr>
+                                        <td><a class="normal" href="/unc/feedback/{{ r.pk }}">Feedback</a>
+                                        </td>
+                                        <td>
+                                            <a class="normal"
+                                               href="/unc/student/{{ r.designer.pk }}">{{ r.designer.name }}</a>
+                                        </td>
+                                        <td>
+                                            <a class="normal"
+                                               href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>
+                                        </td>
+                                        <td>
+                                            <a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">
+                                                {{ r.page }}
+                                            </a>
+                                        </td>
+                                        <td>{{ r.score }}</td>
+                                        <td>{{ r.date }} </td>
+                                    </tr>
+                                {% endfor %}
+                            </table>
+                        {% else %}
+                            <h1>No Reviews feedback given</h1>
+                        {% endif %}
+
+                    </div>
+                </div>
             </div>
-        </div>
 
 
-    </main>
+        </main>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
-</body>
+    </body>
 
 </html>

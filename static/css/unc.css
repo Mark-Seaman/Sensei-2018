@@ -92,6 +92,7 @@ header h2 {
 header img {
     margin: 0px;
     border: none;
+    float: right;
 }
 
 i {
@@ -243,6 +244,10 @@ td {
     border: 1px solid black;
     margin: 40px;
     padding: 50px;
+}
+
+.tab-pane .active {
+    background-color: #0d3349;
 }
 
 .url-answer {
