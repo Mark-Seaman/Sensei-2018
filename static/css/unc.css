@@ -56,7 +56,6 @@ header {
     background-color: #0E3D65;
     color: #F6B018;
     width: 100%;
-    border: 1px solid green;
 }
 
 header a {
@@ -89,25 +88,6 @@ header h2 {
     box-shadow: none;
 }
 
-/*header img {*/
-    /*background: white url("/static/images/unc/bacs200/Bear_Logo.png") no-repeat;*/
-    /*border-radius: 20px;*/
-    /*border: 10px solid white;*/
-    /*box-shadow: none;*/
-    /*margin: 0px;*/
-    /*padding: 0px;*/
-    /*height: 115px;*/
-    /*width: 115px;*/
-/*}*/
-
-header .logo-text {
-    font-size: 18px;
-    font-weight: bolder;
-    color: #F6B018;
-    text-align: center;
-    box-shadow: none;
-}
-
 i {
     padding: 0px;
     margin: 10px;
@@ -120,10 +100,7 @@ li {
 
 img {
     max-width: 800px;
-    /*box-shadow: 2px 2px 5px gray;*/
-    /*border: 1px solid black;*/
-    /*margin: 2em;*/
-    /*padding: 2em;*/
+    margin: 2em;
 }
 
 main {
@@ -281,15 +258,6 @@ td {
 /* ------------------------------
     ID
 ------------------------------*/
-
-#content a {
-    /*color: #0E3D65;*/
-    /*background-color: white;*/
-    /*padding: 10px;*/
-    /*margin: 10px;*/
-    /*border: 3px solid #0E3D65;*/
-    /*border-radius: 30px;*/
-}
 
 #content a.normal {
     color: green;
