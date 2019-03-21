@@ -89,16 +89,16 @@ header h2 {
     box-shadow: none;
 }
 
-header img {
-    background: white url("/static/images/unc/bacs200/Bear_Logo.png") no-repeat;
-    border-radius: 20px;
-    border: 10px solid white;
-    box-shadow: none;
-    margin: 0px;
-    padding: 0px;
-    height: 115px;
-    width: 115px;
-}
+/*header img {*/
+    /*background: white url("/static/images/unc/bacs200/Bear_Logo.png") no-repeat;*/
+    /*border-radius: 20px;*/
+    /*border: 10px solid white;*/
+    /*box-shadow: none;*/
+    /*margin: 0px;*/
+    /*padding: 0px;*/
+    /*height: 115px;*/
+    /*width: 115px;*/
+/*}*/
 
 header .logo-text {
     font-size: 18px;
