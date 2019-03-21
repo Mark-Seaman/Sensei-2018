@@ -1,35 +1,40 @@
-{% extends "unc_theme.html" %}
+{% extends "unc_bacs_theme.html" %}
 
 
-{% block content %}
+{% block main %}
 
     {% if students %}
         <h2>Student Domains</h2>
-        <table class="lesson-table">
+        <div class="center">
 
-            <tr>
-                <th>Student</th>
-                <th>Dashboard</th>
-                <th>Domain</th>
-                <th>Home</th>
-            </tr>
-            {% for student in students %}
+            <table class="table table-hover lesson-table center">
 
                 <tr>
-                    <td>{{ student.name }}</td>
-
-                    <td>
-                        <a href="/unc/student/{{ student.id }}" target="_blank">Student</a>
-                    </td>
-                    <td>
-                        <a href="/unc/student-old/{{ student.id }}" target="_blank">Old Student Dashboard</a>
-                    </td>
-
+                    <th>Student</th>
+                    <th>Dashboard</th>
+                    <th>Old</th>
+                    <th>Home</th>
                 </tr>
+                {% for student in students %}
 
-            {% endfor %}
+                    <tr>
+                        <td>{{ student.name }}</td>
 
-        </table>
+                        <td>
+                            <a href="/unc/student/{{ student.id }}" target="_blank">Student</a>
+                        </td>
+                        <td>
+                            <a href="/unc/student-old/{{ student.id }}" target="_blank">Old Student Dashboard</a>
+                        </td>
+                        <td>
+                            <a href="http://{{ student.domain }}/bacs200/" target="_blank">{{ student.domain }}/bacs200/</a>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+
+            </table>
+        </div>
 
     {% else %}
         <h1>No Student Domains registered</h1>

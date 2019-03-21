@@ -139,7 +139,7 @@ def student_totals():
 
 def site_settings(**kwargs):
     doc = kwargs.get('doc', 'unc/bacs200')
-    site = mybook_site_title(doc)
+    site = ('UNC Digital Classroom', 'BACS 200 - Intro Web Dev', '/unc/bacs200/')
     menu = main_menu(site, doc)
     settings = dict(site=site, menu=menu)
     settings.update(kwargs)
