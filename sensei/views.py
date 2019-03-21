@@ -3,12 +3,13 @@ from django.forms import Form
 from django.views.generic import FormView, ListView, RedirectView, TemplateView, UpdateView
 from django.utils.timezone import now
 
+from sensei.review import query_reviewers, query_designers, url_feedback
 from tool.document import domain_doc, doc_html_text
 
 from .models import Review, Student, UrlGame
 from .review import count_score, get_review, review_feedback, student_reviews, student_reviews_done
 from .sensei import course_lessons, schedule, slides_markdown
-from .student import site_settings, student, student_totals, students, register_user_domain
+from .student import site_settings, student, students, register_user_domain
 from .urlgame import generate_url_question
 
 
@@ -127,8 +128,8 @@ class UncReviews(TemplateView):
 
     def get_context_data(self, **kwargs):
         course = '1'
-        reviews = [(s, Review.objects.filter(reviewer=s.pk)) for s in students(course)]
-        designers = [(s, review_feedback(s.pk)) for s in students(course)]
+        reviews = query_reviewers(course)
+        designers = query_designers(course)
         return site_settings(title='Design Reviews', reviews=reviews, designers=designers)
 
 
@@ -234,13 +235,6 @@ class UncUrlGameAnswer(FormView):
                 "iscorrect=%s" % self.iscorrect,
             ])
             return '/unc/url-answer/%s?%s' % (id, parms)
-
-
-def url_feedback(answer, correct):
-    if answer == correct:
-        return 'smiley1.jpg'
-    else:
-        return 'sad1.jpg'
 
 
 class UncUrlGameQuestion(TemplateView):

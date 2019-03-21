@@ -2,6 +2,9 @@ from django.utils.timezone import make_aware
 from datetime import datetime
 from random import shuffle
 
+from sensei.models import Review
+from sensei.student import students
+
 from .models import Review
 from .student import students
 
@@ -66,3 +69,22 @@ def student_reviews_done(student_id):
     return Review.objects.filter(reviewer=student_id).exclude(score=-1)
 
 
+def review_score(student_id):
+    return Review.objects.filter(reviewer=student_id)
+
+
+def query_reviewers(course):
+    all_students = students(course)
+    return [(s, review_score(s.pk)) for s in all_students]
+
+
+def query_designers(course):
+    all_students = students(course)
+    return [(s, review_feedback(s.pk)) for s in all_students]
+
+
+def url_feedback(answer, correct):
+    if answer == correct:
+        return 'smiley1.jpg'
+    else:
+        return 'sad1.jpg'
