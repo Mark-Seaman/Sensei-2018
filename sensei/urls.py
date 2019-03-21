@@ -6,14 +6,10 @@ urlpatterns = [
 
     url(r'^schedule/(?P<id>[\d]+)$', UncSchedule.as_view()),
     url(r'^students/(?P<id>[\d]+)$', UncStudents.as_view()),
-    # url(r'^dashboard/(?P<id>[\d]+)$', UncDashboard.as_view()),
 
     url(r'^register$', UncRegister.as_view()),
     url(r'^registered$', UncRegistered.as_view()),
     url(r'^reviews$', UncReviews.as_view()),
-
-    # url(r'^reading$', UncReading.as_view()),
-    # url(r'^guide/(?P<title>[\w/\-_.]*)$', GuideDoc.as_view()),
 
     url(r'^review/(?P<pk>[\d]+)$', UncEditReview.as_view()),
     url(r'^feedback/(?P<pk>[\d]+)$', UncReviewFeedback.as_view()),

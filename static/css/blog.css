@@ -20,6 +20,28 @@ footer {
     padding: 2em;
 }
 
+h1 {
+    margin: 20px;
+    padding: 30px;
+    color: #F6B018;
+    background-color: #0E3D65;
+    border: 5px solid #F6B018;
+    text-align: center;
+    font-size: 300%;
+    box-shadow: 2px 2px 5px gray;
+}
+
+h2 {
+    color: #0E3D65;
+    background-color: #F6B018;
+    border: 2px solid #0E3D65;
+    text-align: center;
+    font-size: 200%;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 5px gray;
+}
+
 header {
     border: 5px solid #F6B018;
     background-color: #0E3D65;
@@ -38,25 +60,23 @@ header a:hover {
 
 header h1 {
     color: #F6B018;
-    font-size: 200%;
+    font-size: 300%;
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
 header h2 {
     color: white;
     font-size: 120%;
+    background-color: #0E3D65;
+    box-shadow: none;
 }
 
 header img {
     float: right;
 }
 
-h1 {
-    color: #F6B018;
-}
-
-h2 {
-    color: #0E3D65;
-}
 
 hr {
     border: 4px solid #F6B018;

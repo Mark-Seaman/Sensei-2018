@@ -19,21 +19,6 @@ class GuideDoc(TemplateView):
         title = self.kwargs.get('title')
         return site_settings(title=title, doc='guide')
 
-
-# class UncDashboard(TemplateView):
-#     template_name = 'unc_dashboard.html'
-#
-#     def get_context_data(self, **kwargs):
-#         student_id = self.kwargs.get('id')
-#         s = Student.objects.get(pk=student_id)
-#         game = UrlGame.objects.get(student=s)
-#         reviews = student_reviews(student_id)
-#         done = student_reviews_done(student_id)
-#         feedback = review_feedback(student_id)
-#         title = 'Student Dashboard'
-#         return site_settings(title=title, student=student(student_id), game=game,
-#                              reviews=reviews, feedback=feedback, done=done)
-
     
 class UncDocDisplay(TemplateView):
     template_name = 'unc_doc.html'

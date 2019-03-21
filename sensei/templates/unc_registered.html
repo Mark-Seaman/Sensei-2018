@@ -3,50 +3,37 @@
 
 {% block content %}
 
-{% if students %}
-<h2>Student Domains</h2>
-<table class="lesson-table">
+    {% if students %}
+        <h2>Student Domains</h2>
+        <table class="lesson-table">
 
-    <tr>
-        <th>Student</th>
-        <th>Dashboard</th>
-        <th>Domain</th>
-        <th>Home</th>
-    </tr>
-    {% for student in students %}
+            <tr>
+                <th>Student</th>
+                <th>Dashboard</th>
+                <th>Domain</th>
+                <th>Home</th>
+            </tr>
+            {% for student in students %}
 
-    <tr>
-        <td>{{ student.name }}</td>
+                <tr>
+                    <td>{{ student.name }}</td>
 
+                    <td>
+                        <a href="/unc/student/{{ student.id }}" target="_blank">Student</a>
+                    </td>
+                    <td>
+                        <a href="/unc/student-old/{{ student.id }}" target="_blank">Old Student Dashboard</a>
+                    </td>
 
-        <td>
-            <a href="/unc/student/{{ student.id }}" target="_blank">Student</a>
-        </td>
-        <td>
-            <a href="/unc/student-old/{{ student.id }}" target="_blank">Old Student Dashboard</a>
-        </td>
-<!--
-<td>
-            <a href="/unc/dashboard/{{ student.id }}" target="_blank">Dashboard</a>
-        </td>
-<td>
-    <a href="http://{{ student.domain }}" target="_blank">{{ student.domain }}</a>
-</td>
-<td>
-    <a href="http://{{ student.domain }}/bacs200/index.html" target="_blank">
-        bacs200/index.html
-    </a>
-</td>
--->
-    </tr>
+                </tr>
 
-    {% endfor %}
+            {% endfor %}
 
-</table>
+        </table>
 
-{% else %}
-<h1>No Student Domains registered</h1>
-{% endif %}
+    {% else %}
+        <h1>No Student Domains registered</h1>
+    {% endif %}
 
 
 {% endblock %}
