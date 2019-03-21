@@ -18,7 +18,7 @@ urlpatterns = [
     url(r'^review/(?P<pk>[\d]+)$', UncEditReview.as_view()),
     url(r'^feedback/(?P<pk>[\d]+)$', UncReviewFeedback.as_view()),
     url(r'^student/(?P<id>[\d]+)$', UncStudent.as_view()),
-
+    url(r'^student-old/(?P<id>[\d]+)$', UncStudentOld.as_view()),
 
     url(r'^url-question/(?P<id>[\d]+)$', UncUrlGameQuestion.as_view()),
     url(r'^url-answer/(?P<id>[\d]+)$', UncUrlGameAnswer.as_view()),
