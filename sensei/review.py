@@ -2,9 +2,6 @@ from django.utils.timezone import make_aware
 from datetime import datetime
 from random import shuffle
 
-from sensei.models import Review
-from sensei.student import students
-
 from .models import Review
 from .student import students
 
