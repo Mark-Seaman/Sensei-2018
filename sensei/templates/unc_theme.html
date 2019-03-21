@@ -41,16 +41,6 @@
 
     <header id="header" class="media">
 
-        <div class="pull-left h-logo">
-            <div class="menu-collapse" data-ma-action="sidebar-open" data-ma-target="main-menu">
-                <div class="mc-wrap">
-                    <div class="mcw-line top palette-White bg"></div>
-                    <div class="mcw-line center palette-White bg"></div>
-                    <div class="mcw-line bottom palette-White bg"></div>
-                </div>
-            </div>
-        </div>
-
         <div class="pull-left">
             <a href="/unc/bacs200">
                 <h1>{{ site.0 }}</h1>
@@ -94,9 +84,20 @@
                 {% endif %}
 
             {% endblock %}
+        
+        </div>
 
-            <div class="pull-right">
-                <img src="/static/images/unc/Bear.100.png" alt="UNC Bear Logo">
+        <div class="pull-right">
+            <img src="/static/images/unc/Bear.100.png" alt="UNC Bear Logo">
+        </div>
+
+        <div class="h-logo">
+            <div class="menu-collapse" data-ma-action="sidebar-open" data-ma-target="main-menu">
+                <div class="mc-wrap">
+                    <div class="mcw-line top palette-White bg"></div>
+                    <div class="mcw-line center palette-White bg"></div>
+                    <div class="mcw-line bottom palette-White bg"></div>
+                </div>
             </div>
         </div>
 

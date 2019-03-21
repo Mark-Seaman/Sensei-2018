@@ -52,10 +52,11 @@ h3 {
 }
 
 header {
-    border: 2px solid white;
     background-color: #0E3D65;
     color: #F6B018;
     width: 100%;
+    padding: 0px;
+    margin: 0px;
 }
 
 header a {
@@ -69,23 +70,28 @@ header a:hover {
 
 header h1 {
     border: none;
-    padding-top: 0px;
-    padding-bottom: 0px;
     font-size: 200%;
+    text-align: left;
+    padding: 0px;
+    margin: 10px;
 }
 
 header h2 {
     color: white;
     background-color: #0E3D65;
     border: none;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
     font-size: 120%;
     text-align: left;
     width: 100%;
     box-shadow: none;
+    padding: 0px;
+    margin: 10px;
+
+}
+
+header img {
+    margin: 0px;
+    border: none;
 }
 
 i {
@@ -101,6 +107,7 @@ li {
 img {
     max-width: 800px;
     margin: 2em;
+    border: 1px solid gray;
 }
 
 main {
@@ -137,6 +144,10 @@ td {
 /* ------------------------------
     Class
 ------------------------------*/
+
+.border {
+    border: 1px solid gray;
+}
 
 .box {
     box-shadow: -2px -2px 5px gray;
