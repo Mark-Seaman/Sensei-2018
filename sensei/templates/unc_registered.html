@@ -5,36 +5,34 @@
 
     {% if students %}
         <h2>Student Domains</h2>
-        <div class="center">
 
-            <table class="table table-hover lesson-table center">
+        <table class="table table-hover lesson-table">
+
+            <tr>
+                <th>Student</th>
+                <th>Dashboard</th>
+                <th>Old</th>
+                <th>Home</th>
+            </tr>
+            {% for student in students %}
 
                 <tr>
-                    <th>Student</th>
-                    <th>Dashboard</th>
-                    <th>Old</th>
-                    <th>Home</th>
+                    <td>{{ student.name }}</td>
+
+                    <td>
+                        <a href="/unc/student/{{ student.id }}" target="_blank">Student</a>
+                    </td>
+                    <td>
+                        <a href="/unc/student-old/{{ student.id }}" target="_blank">Old Student Dashboard</a>
+                    </td>
+                    <td>
+                        <a href="http://{{ student.domain }}/bacs200/" target="_blank">{{ student.domain }}/bacs200/</a>
+                    </td>
                 </tr>
-                {% for student in students %}
 
-                    <tr>
-                        <td>{{ student.name }}</td>
+            {% endfor %}
 
-                        <td>
-                            <a href="/unc/student/{{ student.id }}" target="_blank">Student</a>
-                        </td>
-                        <td>
-                            <a href="/unc/student-old/{{ student.id }}" target="_blank">Old Student Dashboard</a>
-                        </td>
-                        <td>
-                            <a href="http://{{ student.domain }}/bacs200/" target="_blank">{{ student.domain }}/bacs200/</a>
-                        </td>
-                    </tr>
-
-                {% endfor %}
-
-            </table>
-        </div>
+        </table>
 
     {% else %}
         <h1>No Student Domains registered</h1>
