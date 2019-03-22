@@ -1,5 +1,6 @@
 from django.conf.urls import url
 
+from .urlgame import UncUrlGameAnswer, UncUrlGameQuestion, UncUrlGameDone
 from .views import *
 
 urlpatterns = [
@@ -8,7 +9,7 @@ urlpatterns = [
     url(r'^students/(?P<id>[\d]+)$', UncStudents.as_view()),
 
     url(r'^register$', UncRegister.as_view()),
-    url(r'^registered$', UncRegistered.as_view()),
+    url(r'^registered$', UncStudentDomains.as_view()),
     url(r'^reviews$', UncReviews.as_view()),
 
     url(r'^review/(?P<pk>[\d]+)$', UncEditReview.as_view()),
