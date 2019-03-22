@@ -77,14 +77,14 @@
 
                 <!-- Panel {{ student.0.pk }} -->
                 <div class="card">
-                    <div class="card-header" id="heading-{{ student.0.pk }}">
+                    <div class="card-header" id="heading-d{{ student.0.pk }}">
                         <button class="btn btn-selector" type="button" data-toggle="collapse"
-                                data-target="#pane-{{ student.0.pk }}"
-                                aria-expanded="true" aria-controls="pane-{{ student.0.pk }}">
+                                data-target="#pane-d{{ student.0.pk }}"
+                                aria-expanded="true" aria-controls="pane-d{{ student.0.pk }}">
                             <b>{{ student.0.name }} - Reviews done {{ student.2 }}</b>
                         </button>
                     </div>
-                    <div id="pane-{{ student.0.pk }}" class="collapse" aria-labelledby="heading-{{ student.0.pk }}"
+                    <div id="pane-d{{ student.0.pk }}" class="collapse" aria-labelledby="heading-d{{ student.0.pk }}"
                          data-parent="#my-accordion">
                         <div class="card-body">
                             <h3>Reviews Done</h3>
@@ -92,8 +92,8 @@
                             <table class="table table-hover">
 
                                 <tr>
-                                    <th>Reviewer</th>
                                     <th>Designer</th>
+                                    <th>Reviewer</th>
                                     <th>Score</th>
                                     <th>Page</th>
                                     <th>Review</th>
