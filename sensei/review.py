@@ -30,6 +30,20 @@ def get_review(id):
     return Review.objects.get(pk=id)
 
 
+def query_reviewers(course):
+    all_students = students(course)
+    return [reviewer_score(s) for s in all_students]
+
+
+def query_designers(course):
+    all_students = students(course)
+    return [(s, review_feedback(s.pk)) for s in all_students]
+
+
+def projects ():
+    return len(Review.objects.all().distinct('due'))
+
+
 def review_feedback(student_id):
     return Review.objects.filter(designer=student_id).exclude(score=-1)
 
@@ -66,18 +80,13 @@ def student_reviews_done(student_id):
     return Review.objects.filter(reviewer=student_id).exclude(score=-1)
 
 
-def review_score(student_id):
-    return Review.objects.filter(reviewer=student_id)
-
-
-def query_reviewers(course):
-    all_students = students(course)
-    return [(s, review_score(s.pk)) for s in all_students]
-
-
-def query_designers(course):
-    all_students = students(course)
-    return [(s, review_feedback(s.pk)) for s in all_students]
+def reviewer_score(student):
+    student_id = student.pk
+    reviews = student_reviews_done(student_id)
+    not_done = student_reviews(student_id)
+    assigned = len(reviews) + len(not_done)
+    points = 10 * 8 * len(reviews) / assigned
+    return (student, reviews, "%d of %d, %d" % (len(reviews),assigned, points))
 
 
 def url_feedback(answer, correct):
