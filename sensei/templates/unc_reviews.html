@@ -69,39 +69,99 @@
         <h1>No Reviews available</h1>
     {% endif %}
 
-    {#    <h2>Designer Scores</h2>#}
-    {#    {% if designers %}#}
-    {#        <table class="table table-hover">#}
-    {#            <tr>#}
-    {#                <th>Designer</th>#}
-    {#                <th>Reviewer</th>#}
-    {#                <th>Score</th>#}
-    {#                <th>Page</th>#}
-    {#                <th>Review</th>#}
-    {#                <th>Date</th>#}
-    {#            </tr>#}
-    {#            {% for student in designers %}#}
-    {#                <tr>#}
-    {#                    <td><b>{{ student.0.name }}</b></td>#}
-    {#                </tr>#}
-    {#                {% for r in student.1 %}#}
-    {#                    <tr>#}
-    {#                        <td></td>#}
-    {#                        <td>#}
-    {#                            <a class="normal" href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>#}
-    {#                        </td>#}
-    {#                        <td>{{ r.score }} </td>#}
-    {#                        <td><a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.page }}</a>#}
-    {#                        </td>#}
-    {#                        <td><a class="normal" href="/unc/review/{{ r.pk }}">Review</a>#}
-    {#                        </td>#}
-    {#                        <td>{{ r.date }}</td>#}
-    {#                    </tr>#}
-    {#                {% endfor %}#}
-    {#            {% endfor %}#}
-    {#        </table>#}
-    {#    {% else %}#}
-    {#        <h1>No Reviews available</h1>#}
-    {#    {% endif %}#}
+    <h2>Designer Scores</h2>
+    {% if designers %}
+
+        <div class="accordion" id="my-accordion">
+            {% for student in reviews %}
+
+                <!-- Panel {{ student.0.pk }} -->
+                <div class="card">
+                    <div class="card-header" id="heading-{{ student.0.pk }}">
+                        <button class="btn btn-selector" type="button" data-toggle="collapse"
+                                data-target="#pane-{{ student.0.pk }}"
+                                aria-expanded="true" aria-controls="pane-{{ student.0.pk }}">
+                            <b>{{ student.0.name }} - Reviews done {{ student.2 }}</b>
+                        </button>
+                    </div>
+                    <div id="pane-{{ student.0.pk }}" class="collapse" aria-labelledby="heading-{{ student.0.pk }}"
+                         data-parent="#my-accordion">
+                        <div class="card-body">
+                            <h3>Reviews Done</h3>
+
+                            <table class="table table-hover">
+
+                                <tr>
+                                    <th>Reviewer</th>
+                                    <th>Designer</th>
+                                    <th>Score</th>
+                                    <th>Page</th>
+                                    <th>Review</th>
+                                    <th>Date</th>
+                                </tr>
+                                <tr>
+                                    <td><b>{{ student.0.name }}</b></td>
+                                </tr>
+                                {% for r in student.1 %}
+                                    <tr>
+
+                                        <td></td>
+                                        <td>
+                                            <a class="normal"
+                                               href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>
+                                        </td>
+                                        <td>{{ r.score }} </td>
+                                        <td><a class="normal"
+                                               href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.page }}</a>
+                                        </td>
+                                        <td><a class="normal" href="/unc/review/{{ r.pk }}">Review</a>
+                                        </td>
+                                        <td>{{ r.date }}</td>
+
+
+                                    </tr>
+                                {% endfor %}
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+
+        {#        <table class="table table-hover">#}
+        {#            <tr>#}
+        {#                <th>Designer</th>#}
+        {#                <th>Reviewer</th>#}
+        {#                <th>Score</th>#}
+        {#                <th>Page</th>#}
+        {#                <th>Review</th>#}
+        {#                <th>Date</th>#}
+        {#            </tr>#}
+        {#            {% for student in designers %}#}
+        {#                <tr>#}
+        {#                    <td><b>{{ student.0.name }}</b></td>#}
+        {#                </tr>#}
+        {#                {% for r in student.1 %}#}
+        {#                    <tr>#}
+        {#                        <td></td>#}
+        {#                        <td>#}
+        {#                            <a class="normal" href="/unc/student/{{ r.reviewer.pk }}">{{ r.reviewer.name }}</a>#}
+        {#                        </td>#}
+        {#                        <td>{{ r.score }} </td>#}
+        {#                        <td><a class="normal" href="http://{{ r.designer.domain }}/{{ r.page }}">{{ r.page }}</a>#}
+        {#                        </td>#}
+        {#                        <td><a class="normal" href="/unc/review/{{ r.pk }}">Review</a>#}
+        {#                        </td>#}
+        {#                        <td>{{ r.date }}</td>#}
+        {#                    </tr>#}
+        {#                {% endfor %}#}
+        {#            {% endfor %}#}
+        {#        </table>#}
+    {% else %}
+        <h1>No Reviews available</h1>
+    {% endif %}
 
 {% endblock %}
