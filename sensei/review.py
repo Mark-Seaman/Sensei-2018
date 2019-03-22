@@ -49,7 +49,7 @@ def query_designers(course):
     def designer_summary(student):
         student_id = student.pk
         reviews = review_feedback(student_id)
-        scores = ','.join([str(r.score) for r in reviews])
+        scores = ','.join([str(r.score) for r in reviews if r.page=='bacs200/projects/webdev.html'])
         return student, reviews, "%d reviews, scores: %s" % (len(reviews), scores)
 
     all_students = students(course)
