@@ -37,7 +37,7 @@
 
                     <h2>Contact Info</h2>
 
-                    <table>
+                    <table class="table table-hover">
                         <tr>
                             <td>Name</td>
                             <td>{{ student.name }}</td>
@@ -100,7 +100,29 @@
                     <li>March 22 -
                         No Reading due
                     </li>
+
+                    <li>March 25 -
+                        <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/9/section/1">
+                            Lesson 28. Mobile websites (9.1)
+                        </a>
+                    </li>
+                    <li>March 27 -
+                        <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/9/section/2">
+                            Lesson 29. Mobile development tools (9.2)
+                        </a>
+                    </li>
+                    <li>March 29 -
+                        <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/9/section/3">
+                            Lesson 29. Viewport (9.3)
+                        </a>
+                    </li>
+                    <li>April 1 -
+                        <a href="https://learn.zybooks.com/zybook/UNCOBACS200SeamanSpring2019/chapter/9/section/4">
+                            Lesson 30. Fluid Layouts (9.4)
+                        </a>
+                    </li>
                 </ul>
+
 
                 View full <a href='/unc/bacs200/Zybooks'>Reading Schedule</a>
 
@@ -206,7 +228,7 @@
                 <p>Give feedback to your peers by the due date.</p>
 
                 {% if reviews %}
-                    <table>
+                    <table class="table table-hover">
                         <tr>
                             <th></th>
                             <th>Designer</th>
@@ -244,7 +266,7 @@
                 <p>Design reviews that have been successfully completed</p>
 
                 {% if done %}
-                    <table>
+                    <table class="table table-hover">
                         <tr>
                             <th></th>
                             <th>Designer</th>
@@ -285,7 +307,7 @@
                 <p>Feedback on your pages by your peers.</p>
 
                 {% if feedback %}
-                    <table>
+                    <table class="table table-hover">
                         <tr>
                             <th></th>
                             <th>Designer</th>
