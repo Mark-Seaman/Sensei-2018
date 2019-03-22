@@ -14,18 +14,16 @@
                 <!-- Panel {{ student.0.pk }} -->
                 <div class="card">
                     <div class="card-header" id="heading-{{ student.0.pk }}">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse"
-                                    data-target="#pane-{{ student.0.pk }}"
-                                    aria-expanded="true" aria-controls="pane-{{ student.0.pk }}">
-                                <h3>{{ student.0.name }}</h3>
-                            </button>
-                        </h2>
+                        <button class="btn btn-selector" type="button" data-toggle="collapse"
+                                data-target="#pane-{{ student.0.pk }}"
+                                aria-expanded="true" aria-controls="pane-{{ student.0.pk }}">
+                            <b>{{ student.0.name }}</b>
+                        </button>
                     </div>
                     <div id="pane-{{ student.0.pk }}" class="collapse" aria-labelledby="heading-{{ student.0.pk }}"
                          data-parent="#my-accordion">
                         <div class="card-body">
-                            <h3>Student - {{ student.0.name }}</h3>
+                            <h3>Reviews Done</h3>
 
                             <table class="table table-hover">
 
