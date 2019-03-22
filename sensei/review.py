@@ -31,11 +31,27 @@ def get_review(id):
 
 
 def query_reviewers(course):
+
+    def reviewer_summary(student):
+        student_id = student.pk
+        reviews = student_reviews_done(student_id)
+        not_done = student_reviews(student_id)
+        assigned = len(reviews) + len(not_done)
+        points = 10 * 8 * len(reviews) / assigned
+        return student, reviews, "%d of %d, %d" % (len(reviews), assigned, points)
+
     all_students = students(course)
     return [reviewer_summary(s) for s in all_students]
 
 
 def query_designers(course):
+
+    def designer_summary(student):
+        student_id = student.pk
+        reviews = review_feedback(student_id)
+        scores = ','.join([r.score for r in reviews])
+        return student, reviews, "%d reviews, scores: %s" % (len(reviews), scores)
+
     all_students = students(course)
     return [designer_summary(s) for s in all_students]
 
@@ -80,19 +96,6 @@ def student_reviews_done(student_id):
     return Review.objects.filter(reviewer=student_id).exclude(score=-1)
 
 
-def reviewer_summary(student):
-    student_id = student.pk
-    reviews = student_reviews_done(student_id)
-    not_done = student_reviews(student_id)
-    assigned = len(reviews) + len(not_done)
-    points = 10 * 8 * len(reviews) / assigned
-    return student, reviews, "%d of %d, %d" % (len(reviews),assigned, points)
-
-
-def designer_summary(student):
-    student_id = student.pk
-    reviews = review_feedback(student_id)
-    return student, reviews, "%d reviews" % (len(reviews))
 
 
 def url_feedback(answer, correct):
