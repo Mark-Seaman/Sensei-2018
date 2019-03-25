@@ -1,4 +1,88 @@
 
+#########################
+# Create Course
+
+'''
+Title:  UNC BACS 200 - Web Dev for Small Business
+
+Description:
+University of Northern Colorado
+Monfort College of Business
+Business Administration Computer Science
+BACS 200
+Web Design and Development for Small Business
+'''
+
+
+from sensei.sensei import add_lesson
+add_lesson ('bacs200', '13', 'Test & Debug', '2019-02-06')
+add_lesson ('bacs200', '14', 'Cascading Stylesheets', '2019-02-11')
+add_lesson ('bacs200', '15', 'CSS Color', '2019-02-13')
+add_lesson ('bacs200', '16', 'CSS Spacing & Borders', '2019-02-15')
+add_lesson ('bacs200', '17', 'Page Layout', '2019-02-18')
+add_lesson ('bacs200', '18', 'Page Structure', '2019-02-20')
+add_lesson ('bacs200', '19', 'Menus', '2019-02-22')
+add_lesson ('bacs200', '20', 'Page Template', '2019-02-25')
+add_lesson ('bacs200', '21', 'Bootstrap', '2019-02-27')
+add_lesson ('bacs200', '22', 'Forms', '2019-03-01')
+add_lesson ('bacs200', '23', 'Tab Views', '2019-03-04')
+add_lesson ('bacs200', '24', 'Accordion Views', '2019-03-06')
+add_lesson ('bacs200', '25', 'Carousel Views', '2019-03-08')
+add_lesson ('bacs200', '26', 'Organizing Info', '2019-03-18')
+add_lesson ('bacs200', '27', 'Documentation Tools', '2019-03-20')
+
+
+from sensei.sensei import add_lesson
+add_lesson ('bacs200', '28', 'Business Blog', '2019-03-25')
+
+
+#########################
+# Create review assignment
+
+from sensei.models import *
+from sensei.review import *
+
+
+def clear_reviews():
+    Review.objects.all().delete()
+
+
+from sensei.models import *
+
+
+def create_requirements():
+    labels = '''Page is located at correct URL (bacs200/projects/vacation.html)
+All pages validate HTML and CSS and links
+All JavaScript widgets work
+All links work properly
+Other pages are working properly
+Page has great visual appearance
+Marketing message is clear and compelling
+Page shows marketing carousel with photos
+Page shows products
+Page shows activities
+'''
+    url = 'https://shrinking-world.com/unc/bacs200/projects/09'
+    return Requirements.objects.create(labels=labels, url=url)
+
+
+create_requirements()
+
+
+def list_requirements():
+    for r in Requirements.objects.all():
+        print('%s %s \n %s' % (r.pk, r.url, r.labels))
+
+
+from sensei.review import *
+
+
+def assign_new_reviews():
+    print('Assign %d' % assign_reviews('bacs200/projects/vacation.html', '2019-03-25', '7'))
+    print("%s reviews assigned" % len(Review.objects.all()))
+
+
+assign_new_reviews()
 
 #########################
 # Fix student records
@@ -93,82 +177,7 @@ def list_groups():
 list_groups()
 
 
-# Create review assignment
 
-from sensei.models import *
-from sensei.review import *
-
-def clear_reviews():
-    Review.objects.all().delete()
-
-from sensei.models import *
-
-def create_requirements():
-    labels = '''Page is located at correct URL (bacs200/projects/webdev.html)
-Pages validates HTML and CSS and links
-Tabs work properly
-All links work properly
-Other pages are working properly
-Page has great visual appearance
-Page contains multiple tabs
-Page shows content for each week
-Each lesson has serveral bullet points
-Study guide covers the class so far'''
-    url = 'https://shrinking-world.com/unc/bacs200/projects/08'
-    return Requirements.objects.create(labels=labels, url=url)
-
-create_requirements()
-
-
-def list_requirements():
-    for r in Requirements.objects.all():
-        print('%s %s \n %s' % (r.pk, r.url, r.labels))
-        
-        
-        
-from sensei.review import *
-
-def assign_new_reviews():
-
-    print('Assign %d' % assign_reviews('bacs200/projects/webdev.html', '2019-03-18', '6'))
-    print("%s reviews assigned" % len(Review.objects.all()))
-
-assign_new_reviews()
-
-
-#########################
-# Create Course
-
-'''
-Title:  UNC BACS 200 - Web Dev for Small Business
-
-Description:
-University of Northern Colorado
-Monfort College of Business
-Business Administration Computer Science
-BACS 200
-Web Design and Development for Small Business
-'''
-
-
-from sensei.sensei import add_lesson
-add_lesson ('bacs200', '13', 'Test & Debug', '2019-02-06')
-add_lesson ('bacs200', '14', 'Cascading Stylesheets', '2019-02-11')
-add_lesson ('bacs200', '15', 'CSS Color', '2019-02-13')
-add_lesson ('bacs200', '16', 'CSS Spacing & Borders', '2019-02-15')
-add_lesson ('bacs200', '17', 'Page Layout', '2019-02-18')
-add_lesson ('bacs200', '18', 'Page Structure', '2019-02-20')
-add_lesson ('bacs200', '19', 'Menus', '2019-02-22')
-add_lesson ('bacs200', '20', 'Page Template', '2019-02-25')
-add_lesson ('bacs200', '21', 'Bootstrap', '2019-02-27')
-add_lesson ('bacs200', '22', 'Forms', '2019-03-01')
-add_lesson ('bacs200', '23', 'Tab Views', '2019-03-04')
-add_lesson ('bacs200', '24', 'Accordion Views', '2019-03-06')
-add_lesson ('bacs200', '25', 'Carousel Views', '2019-03-08')
-add_lesson ('bacs200', '26', 'Organizing Info', '2019-03-18')
-
-from sensei.sensei import add_lesson
-add_lesson ('bacs200', '27', 'Documentation Tools', '2019-03-20')
 
 
 #########################
