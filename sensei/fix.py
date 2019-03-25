@@ -43,10 +43,6 @@ from sensei.models import *
 from sensei.review import *
 
 
-def clear_reviews():
-    Review.objects.all().delete()
-
-
 from sensei.models import *
 
 
@@ -76,13 +72,16 @@ def list_requirements():
 
 from sensei.review import *
 
-
 def assign_new_reviews():
     print('Assign %d' % assign_reviews('bacs200/projects/vacation.html', '2019-03-25', '7'))
     print("%s reviews assigned" % len(Review.objects.all()))
 
 
 assign_new_reviews()
+
+
+
+
 
 #########################
 # Fix student records
