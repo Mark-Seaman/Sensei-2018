@@ -22,7 +22,7 @@
         {% if lessons %}
             <h2>Lessons</h2>
             <div class="box">
-                <table class="lesson-table">
+                <table class="table table-hover lesson-table">
                     {% for lesson in lessons %}
                         <tr>
                             <td>{{ lesson.date }} - Lesson {{ lesson.lesson }} - <b>{{ lesson.title }}</b></td>
