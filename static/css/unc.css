@@ -155,6 +155,7 @@ td {
     background-color: white;
     margin: 40px;
     padding: 20px;
+    width: 100%;
 }
 
 .btn {
@@ -285,4 +286,3 @@ td {
 #s-main-menu li {
     margin: 0px;
 }
-
