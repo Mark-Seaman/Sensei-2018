@@ -30,10 +30,11 @@ add_lesson ('bacs200', '24', 'Accordion Views', '2019-03-06')
 add_lesson ('bacs200', '25', 'Carousel Views', '2019-03-08')
 add_lesson ('bacs200', '26', 'Organizing Info', '2019-03-18')
 add_lesson ('bacs200', '27', 'Documentation Tools', '2019-03-20')
+add_lesson ('bacs200', '28', 'Business Blog', '2019-03-25')
 
 
 from sensei.sensei import add_lesson
-add_lesson ('bacs200', '28', 'Business Blog', '2019-03-25')
+add_lesson ('bacs200', '29', 'Photoshop', '2019-03-27')
 
 
 #########################
