@@ -1,9 +1,10 @@
 from django.http import Http404
 from os import mkdir
 from os.path import exists, isdir, isfile, join, dirname
+from platform import node
 
 from bin.shell import read_file, shell_pipe
-from hammer.settings import BASE_DIR, PANDOC_APP
+from hammer.settings import BASE_DIR
 from tool.log import log
 
 
@@ -13,7 +14,7 @@ def doc_cards(page):
     else:
         text = 'No Document found, %s' % page
     text = text.split('\n## ')
-    results =[]
+    results = []
     for i, t in enumerate(text):
         t = t.split('\n')
         title = t[0]
@@ -34,12 +35,12 @@ def doc_dir_exists(title):
 
 
 def doc_exists(title):
-    log('doc_exists',title)
+    log('doc_exists', title)
     path = doc_path(title)
     if exists(path) and isfile(path):
         return path
-    elif exists(path+'.md'):
-        return path+'.md'
+    elif exists(path + '.md'):
+        return path + '.md'
     elif isdir(path) and exists(join(path, 'Index')):
         return join(path, 'Index')
     elif isdir(path) and exists(join(path, 'Index.md')):
@@ -62,11 +63,16 @@ def doc_path(page):
 
 
 def domain_doc(domain, page):
-    if   domain == 'spiritual-things.org':    d = 'spiritual'
-    elif domain == 'markseaman.org':          d = 'MarkSeaman'
-    elif domain == 'markseaman.info':         d = 'info'
-    elif domain == 'seamanslog.com':          d = 'seamanslog'
-    elif domain == 'seamansguide.com':        d = 'guide'
+    if domain == 'spiritual-things.org':
+        d = 'spiritual'
+    elif domain == 'markseaman.org':
+        d = 'MarkSeaman'
+    elif domain == 'markseaman.info':
+        d = 'info'
+    elif domain == 'seamanslog.com':
+        d = 'seamanslog'
+    elif domain == 'seamansguide.com':
+        d = 'guide'
     else:
         return page
 
@@ -97,7 +103,7 @@ def read_markdown(path):
         bad_files = ['.DS_Store', '.jpg', '.jpeg', '.png', '.gif']
         for x in bad_files:
             if x in path:
-                return "No Markdown File: "+ path
+                return "No Markdown File: " + path
         return open(path).read()
     except:
         print('Found bad document: %s' % path)
@@ -105,6 +111,14 @@ def read_markdown(path):
 
 
 def text_to_html(text):
+    if 'MCB15-3365' == node():
+        PANDOC_APP = 'pandoc.exe'
+    elif 'Marks-iMac.local' == node():
+        PANDOC_APP = '/usr/local/bin/pandoc'
+    elif 'seaman-macbook.local' == node():
+        PANDOC_APP = '/usr/local/bin/pandoc'
+    else:
+        PANDOC_APP = 'pandoc'
     return shell_pipe(PANDOC_APP, text)
 
 
