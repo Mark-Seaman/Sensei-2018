@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b1c7c23-5c5a-4bc1-bbb1-8cdeb8f69710" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Documents/info/days/2019-03-29" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/info/days/2019-03-29" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensei/review.py" beforeDir="false" afterPath="$PROJECT_DIR$/sensei/review.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/unc/bacs200/30" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/unc/bacs200/30" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensei/fix.py" beforeDir="false" afterPath="$PROJECT_DIR$/sensei/fix.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensei/templates/unc_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/sensei/templates/unc_dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensei/templates/unc_registered.html" beforeDir="false" afterPath="$PROJECT_DIR$/sensei/templates/unc_registered.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensei/templates/unc_student.html" beforeDir="false" afterPath="$PROJECT_DIR$/sensei/templates/unc_student.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,11 +52,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sensei/review.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="602">
               <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sensei/fix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="836">
+              <caret line="38" selection-start-line="36" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sensei/templates/unc_student.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="776">
+              <caret line="160" selection-start-line="160" selection-end-line="160" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sensei/templates/unc_dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="232" column="28" selection-start-line="232" selection-start-column="28" selection-end-line="232" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sensei/templates/unc_registered.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -82,6 +122,10 @@
         <option value="$PROJECT_DIR$/hammer/settings.py" />
         <option value="$PROJECT_DIR$/tool/document.py" />
         <option value="$PROJECT_DIR$/sensei/review.py" />
+        <option value="$PROJECT_DIR$/sensei/fix.py" />
+        <option value="$PROJECT_DIR$/sensei/templates/unc_student.html" />
+        <option value="$PROJECT_DIR$/sensei/templates/unc_dashboard.html" />
+        <option value="$PROJECT_DIR$/sensei/templates/unc_registered.html" />
       </list>
     </option>
   </component>
@@ -108,6 +152,18 @@
               <item name="Sensei" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sensei" type="462c0819:PsiDirectoryNode" />
               <item name="sensei" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sensei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sensei" type="462c0819:PsiDirectoryNode" />
+              <item name="sensei" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sensei" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sensei" type="462c0819:PsiDirectoryNode" />
+              <item name="sensei" type="462c0819:PsiDirectoryNode" />
+              <item name="fix.py" type="8704e2dd:PyFileNode" />
             </path>
             <path>
               <item name="Sensei" type="b2602c69:ProjectViewProjectNode" />
@@ -168,12 +224,12 @@
       <option name="presentableId" value="Default" />
       <updated>1544813350958</updated>
       <workItem from="1553791135655" duration="710000" />
-      <workItem from="1553806531099" duration="2831000" />
+      <workItem from="1553806531099" duration="3503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3555000" />
+    <option name="totallyTimeSpent" value="4227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -270,6 +326,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="602">
           <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sensei/fix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="38" selection-start-line="36" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sensei/templates/unc_student.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="160" selection-start-line="160" selection-end-line="160" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sensei/templates/unc_dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="232" column="28" selection-start-line="232" selection-start-column="28" selection-end-line="232" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sensei/templates/unc_registered.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
