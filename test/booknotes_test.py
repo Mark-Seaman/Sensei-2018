@@ -10,4 +10,4 @@ def booknotes_list_test():
 
 
 def booknotes_lines_test():
-    return check_shell_lines('x booknotes content', 1500, 1600)
+    return check_shell_lines('x booknotes content', 2700, 2800)

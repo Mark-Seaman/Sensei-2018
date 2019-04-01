@@ -159,7 +159,7 @@ def text_anchors_test():
 
 
 def text_div_test():
-    text = read_file("Documents/booknotes/ActivateYourBrain-quotes.html")
+    text = read_file("Documents/MarkSeaman/booknotes/ActivateYourBrain-quotes.html")
     matches = find_quotes(text)
     return '<p>' + '</p>\n\n<p>'.join(matches) + '</p>'
 
