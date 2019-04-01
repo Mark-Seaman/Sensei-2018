@@ -65,9 +65,16 @@ def review_feedback(student_id):
 
 
 def review_groups():
+
+    def is_active(s):
+        return s.name != 'Test Student' and s.name != 'Emily Wadell' and s.name != 'Desmond Ortiz'
+
+    def active_students():
+        return [s for s in students() if is_active(s)]
+
     groups = []
     num = 8
-    s = [s for s in students() if s.name != 'Test Student']
+    s = active_students()
     shuffle(s)
     x = 0
     while s[x:x + num]:

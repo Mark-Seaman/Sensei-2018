@@ -66,7 +66,7 @@ def list_students():
 
     print('list_students')
     for s in Student.objects.all():
-        print(str(s))
+        print(str(s.pk) + str(s))
 
 
 def reading_scores_table():

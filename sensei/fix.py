@@ -32,39 +32,18 @@ add_lesson ('bacs200', '26', 'Organizing Info', '2019-03-18')
 add_lesson ('bacs200', '27', 'Documentation Tools', '2019-03-20')
 add_lesson ('bacs200', '28', 'Business Blog', '2019-03-25')
 add_lesson ('bacs200', '29', 'Photoshop', '2019-03-27')
+add_lesson ('bacs200', '30', 'Illustrator', '2019-03-29')
 
 
 from sensei.sensei import add_lesson
-add_lesson ('bacs200', '30', 'Illustrator', '2019-03-29')
+add_lesson ('bacs200', '31', 'W3Schools', '2019-04-01')
 
 
 #########################
 # Create review assignment
 
-from sensei.models import *
-from sensei.review import *
-
 
 from sensei.models import *
-
-
-def create_requirements():
-    labels = '''Page is located at correct URL (bacs200/projects/vacation.html)
-All pages validate HTML and CSS and links
-All JavaScript widgets work
-All links work properly
-Other pages are working properly
-Page has great visual appearance
-Marketing message is clear and compelling
-Page shows marketing carousel with photos
-Page shows products
-Page shows activities
-'''
-    url = 'https://shrinking-world.com/unc/bacs200/projects/09'
-    return Requirements.objects.create(labels=labels, url=url)
-
-
-create_requirements()
 
 
 def list_requirements():
@@ -74,14 +53,28 @@ def list_requirements():
 
 from sensei.review import *
 
-def assign_new_reviews():
-    print('Assign %d' % assign_reviews('bacs200/projects/vacation.html', '2019-03-25', '7'))
+def assign_new_reviews(project, requirements):
+    req = Requirements.objects.create(labels=requirements, url=project)
+    print('Assign %d' % assign_reviews('', '2019-04-01', req.pk))
     print("%s reviews assigned" % len(Review.objects.all()))
 
 
-assign_new_reviews()
+# Project #10
+requirements = '''Page is located at correct URL
+Page has valid HTML and CSS and links
+All links work properly
+Other pages are working properly
+Visual appearance
+Professional article with good content
+Message is clear and compelling
+Page has appropriate links to other pages
+Looks professional
+Good titles and photos
+'''
 
+assign_new_reviews('https://shrinking-world.com/unc/bacs200/projects/10', requirements)
 
+list_requirements()
 
 
 
@@ -127,7 +120,7 @@ fix_reviews()
 # Export all the students to a file
 
 from sensei.student import *
-
+list_students()
 export_students()
 
 
@@ -170,6 +163,8 @@ def test_groups():
 
 test_groups()
 
+
+from sensei.review import *
 
 def list_groups():
     for g in review_groups():
