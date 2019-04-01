@@ -43,19 +43,14 @@ add_lesson ('bacs200', '31', 'W3Schools', '2019-04-01')
 # Create review assignment
 
 
+
+
 from sensei.models import *
-
-
-def list_requirements():
-    for r in Requirements.objects.all():
-        print('%s %s \n %s' % (r.pk, r.url, r.labels))
-
-
 from sensei.review import *
 
 def assign_new_reviews(project, requirements):
     req = Requirements.objects.create(labels=requirements, url=project)
-    print('Assign %d' % assign_reviews('', '2019-04-01', req.pk))
+    print('Assign %d' % assign_reviews('index.php', '2019-04-01', req.pk))
     print("%s reviews assigned" % len(Review.objects.all()))
 
 
@@ -73,6 +68,12 @@ Good titles and photos
 '''
 
 assign_new_reviews('https://shrinking-world.com/unc/bacs200/projects/10', requirements)
+
+def list_requirements():
+    for r in Requirements.objects.all():
+        print('%s %s \n %s' % (r.pk, r.url, r.labels))
+
+
 
 list_requirements()
 
@@ -103,9 +104,9 @@ def name(name):
     return Student.objects.filter(name__contains=name)
 
 def fix_reviews():
-    for r in Review.objects.filter(score__lte=5):
-        print(r.reviewer.name, r.designer.name,  r.score)
-        r.score = -1
+    for r in Review.objects.filter(page=''):
+        print(r.reviewer.name, r.designer.name,  r.page, r.score)
+        r.page = 'index.php'
         r.save()
 
 fix_reviews()
