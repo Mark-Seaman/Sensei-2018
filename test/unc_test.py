@@ -10,12 +10,12 @@ def check_page(url, min=1, max=1):
 
 def unc_files_test():
     path = join(environ['HOME'], 'UNC')
-    return check_files(path, 190, 200)
+    return check_files(path, 190, 210)
 
 
 def unc_docs_test():
     path = join(environ['HOME'], 'Sensei', 'Documents', 'unc')
-    return check_files(path, 80, 100)
+    return check_files(path, 80, 110)
 
 
 def unc_site_test():

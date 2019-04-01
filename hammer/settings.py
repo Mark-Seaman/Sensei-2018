@@ -11,10 +11,6 @@ BASE_DIR = dirname(dirname(__file__))
 DOC_ROOT = join(BASE_DIR, 'Documents')
 LOG_DIR = join(BASE_DIR, 'log')
 
-if 'MCB15-3365' == node():
-    PANDOC_APP = 'pandoc.exe'
-else:
-    PANDOC_APP = 'pandoc'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
