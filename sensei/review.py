@@ -67,7 +67,8 @@ def review_feedback(student_id):
 def review_groups():
 
     def is_active(s):
-        return s.name != 'Test Student' and s.name != 'Emily Wadell' and s.name != 'Desmond Ortiz'
+        return s.name != 'Test Student' and s.name != 'Emily Wadell' and s.name != 'Desmond Ortiz' \
+               and s.name != 'Aliesha Robbins'and s.name != 'Dean Bennett'
 
     def active_students():
         return [s for s in students() if is_active(s)]
