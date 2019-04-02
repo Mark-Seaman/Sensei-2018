@@ -1,7 +1,7 @@
 from os import chdir, environ, system
 from os.path import exists, join
 
-from shell import shell
+from shell import shell_script
 
 
 # ------------------------------
@@ -52,13 +52,30 @@ def vc_help(args=None):
 # Functions
 
 def git_cmd(cmd):
-    system(cmd + git_filter())
+    print(git_filter(shell_script(cmd)))
 
 
-def git_filter():
-    x = ['"up to date"', 'up-to-date', 'nothing', '"no changes"', 
-        '"branch master"', '"git add"', '"git checkout"']
-    return '|grep -v ' + '|grep -v '.join(x)
+def git_filter(text):
+
+    def ok(line):
+        filters = [
+            '"up to date"',
+            'up-to-date',
+            'nothing',
+            '"no changes"',
+            'branch master',
+            'origin/master',
+            'git add',
+            'git checkout'
+        ]
+        for f in filters:
+            if f in line:
+                return False
+        return True
+
+    text = text.split('\n')
+    text = [line for line in text if ok(line)]
+    return '\n'.join(text)
 
 
 def vc_commit(args):

@@ -1,4 +1,4 @@
-from os import chdir, environ, listdir, walk
+from os import chdir, environ, listdir, system, walk
 from os.path import join, exists, isdir
 from platform import node
 from re import split
@@ -190,7 +190,7 @@ def shell(cmd):
     return text.decode(encoding='UTF-8')
 
 
-def shell_pipe(command, stdin):
+def shell_pipe(command, stdin=''):
     p = Popen(command, stdin=PIPE, stdout=PIPE)
     if version_info.major == 3:
         (out, error) = p.communicate(input=stdin.encode('utf-8'))
@@ -200,8 +200,18 @@ def shell_pipe(command, stdin):
     else:
         (out, error) = p.communicate(input=stdin)
         if error:
-            return error + out
+            return "**stderr**\n" + error + out
         return out
+
+
+def shell_script(command):
+    from os import chmod
+    from stat import S_IRWXU
+    script = '/tmp/shell_script'
+    with open(script, 'w') as f:
+        f.write("#!/bin/bash\n\n" + command)
+    chmod(script, S_IRWXU)
+    return shell_pipe(script)
 
 
 def word_count(text):
