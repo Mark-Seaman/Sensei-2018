@@ -66,7 +66,8 @@ def git_filter(text):
             'branch master',
             'origin/master',
             'git add',
-            'git checkout'
+            'git checkout',
+            'publish your local',
         ]
         for f in filters:
             if f in line:
@@ -116,8 +117,8 @@ def vc_pull(args):
 
 def vc_push(args):
     for d in vc_dirs():
-        cmd = 'echo push %s && cd %s && git pull %s; git push'
-        git_cmd(cmd % (d, d, git_filter()))
+        cmd = 'echo push %s && cd %s && git pull; git push'
+        git_cmd(cmd % (d, d))
 
 
 def vc_status(args):

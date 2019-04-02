@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b1c7c23-5c5a-4bc1-bbb1-8cdeb8f69710" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/shell.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/shell.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/vc.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/vc.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,10 +24,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/shell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
+            <state relative-caret-position="1107">
               <caret line="202" column="36" selection-start-line="202" selection-start-column="36" selection-end-line="202" selection-end-column="36" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
@@ -38,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/vc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="581">
+              <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -87,8 +85,8 @@
         <option value="$PROJECT_DIR$/sensei/student.py" />
         <option value="$PROJECT_DIR$/sensei/review.py" />
         <option value="$PROJECT_DIR$/sensei/fix.py" />
-        <option value="$PROJECT_DIR$/bin/vc.py" />
         <option value="$PROJECT_DIR$/bin/shell.py" />
+        <option value="$PROJECT_DIR$/bin/vc.py" />
       </list>
     </option>
   </component>
@@ -197,12 +195,12 @@
       <option name="presentableId" value="Default" />
       <updated>1544813350958</updated>
       <workItem from="1553791135655" duration="710000" />
-      <workItem from="1553806531099" duration="10898000" />
+      <workItem from="1553806531099" duration="11089000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11622000" />
+    <option name="totallyTimeSpent" value="11813000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -221,7 +219,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32919708" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32919708" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -354,22 +352,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/vc.py">
+    <entry file="file://$PROJECT_DIR$/bin/shell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="1107">
+          <caret line="202" column="36" selection-start-line="202" selection-start-column="36" selection-end-line="202" selection-end-column="36" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/shell.py">
+    <entry file="file://$PROJECT_DIR$/bin/vc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="202" column="36" selection-start-line="202" selection-start-column="36" selection-end-line="202" selection-end-column="36" />
+        <state relative-caret-position="581">
+          <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
