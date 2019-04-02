@@ -173,7 +173,10 @@ def read_file(path):
     if not exists(path):
         return 'Error:  File not found %s' % path
     try:
-        return open(path).read() # .decode(encoding='UTF-8').encode('ascii', 'ignore')
+        if version_info.major == 3:
+            return open(path).read()
+        else:
+            return open(path).read().decode(encoding='UTF-8').encode('ascii', 'ignore')
     except:
         return '**error**: Bad file read, %s' % path
 
