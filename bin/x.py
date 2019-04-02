@@ -1,7 +1,7 @@
 from os import chdir, environ, system
 from sys import argv
 
-from app import app_command
+# from app import app_command
 from booknotes import booknotes_command
 from data import data_command
 from i import i_command
@@ -18,10 +18,11 @@ from wordpress import wordpress_command
 def execute_command(cmd,args):
     chdir(environ['p'])
     # print('PWD = ' + environ['p'])
-    if cmd == 'app':
-        app_command(args)
-
-    elif cmd == 'booknotes':
+    # if cmd == 'app':
+    #     app_command(args)
+    #
+    # el
+    if cmd == 'booknotes':
         booknotes_command(args)
     
     elif cmd == 'email':

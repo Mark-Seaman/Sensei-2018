@@ -1,11 +1,12 @@
 from os import environ, listdir, system
 from os.path import join, isdir
 from re import compile
+from sys import argv
 
-from shell import shell, file_tree_list, read_file, line_count
-from log import log
-from switches import APP_DIR, APP_PORT
-from text import text_match, find_classes, find_functions, find_signatures
+from .shell import shell, file_tree_list, read_file, line_count
+from .log import log
+from .switches import APP_DIR, APP_PORT
+from .text import text_match, find_classes, find_functions, find_signatures
 
 
 # ----------------------------------
@@ -19,7 +20,7 @@ def app_command(options):
         args = options[1:]
 
         if cmd == 'classes':
-            app_classes(args)
+            print(app_classes(args))
 
         elif cmd == 'dirs':
             print ('\n'.join(app_directories()))
@@ -28,7 +29,7 @@ def app_command(options):
             shell('e %s' % app_path(APP_DIR + '/' + args[0] + '.py'))
 
         elif cmd == 'functions':
-            app_functions(args)
+            print(app_functions(args))
 
         elif cmd == 'kill':
             kill_server()
@@ -52,7 +53,7 @@ def app_command(options):
             print(app_show(args))
 
         elif cmd == 'signature':
-            app_signature(args)
+            print(app_signature(args))
 
         elif cmd == 'summary':
             app_summary(args)
@@ -94,32 +95,29 @@ def app_help():
 # Command Functions
 
 
-def app_functions(args):
+def app_functions(args=None):
     files = app_source(args)
-    app_search_code(files, lambda text: find_functions(text))
+    return app_search_code(files, lambda text: find_functions(text))
 
 
-def app_classes(args):
+def app_classes(args=None):
     files = app_source(args)
-    app_search_code(files, lambda text: find_classes(text))
+    return app_search_code(files, lambda text: find_classes(text))
 
 
-def app_signature(args):
+def app_signature(args=None):
     files = app_source(args)
-    app_search_code(files, lambda text: find_signatures(text))
+    return app_search_code(files, lambda text: find_signatures(text))
 
 
 def app_search_code(files, search_function):
-    def print_indented(outline):
-        def app_print(filename, children):
-            print('%s' % filename)
-            for x in children:
-                print('    ' + x)
-
-        for filename in outline:
-            app_print(filename[0], filename[1])
-
-    print_indented([(f, search_function(read_file(f))) for f in files])
+    output = []
+    for f in files:
+        output.append('\n' + f)
+        code = search_function(read_file(f))
+        for p in code:
+            output.append('    ' + p)
+    return '\n'.join(output)
 
 
 def app_directories():
@@ -197,13 +195,15 @@ def app_urls():
         url = url.replace('.as_view()', '')
         return url
 
-    print('Find all the URLs for the app')
+    # print('Find all the URLs for the app')
+    output = ''
     for s in app_source():
         m = text_match('^ *url\(.*', s)
         if m:
             m = [simplify(url) for url in m]
-            print('\n' + s + '\n')
-            print('\n'.join(m))
+            output += '\n' + s + '\n'
+            output += '\n'.join(m)
+    return output
 
 
 def run_server():
@@ -214,3 +214,7 @@ def run_server():
             # echo x web http://127.0.0.1:%s/;
            ''' % (APP_PORT, APP_PORT))
 
+
+if __name__ == '__main__':
+    print ('app script')
+    print(app_command(argv[1:]))

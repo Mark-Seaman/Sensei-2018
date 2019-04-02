@@ -1,7 +1,7 @@
 #!/bin/bash
 # MyBook Aliases
 
-alias app='x app'
+alias app='p bin/app.py'
 
 alias b='brackets'
 alias bl='cd $p/bin && ls *.py'
@@ -72,7 +72,7 @@ alias note='open /Applications/Evernote.app'
 
 alias ops='x ops'
 
-alias p='python'
+alias p='cd $p && python'
 alias page='x page'
 alias pages='b $p/Documents'
 alias plan='b ~/Sensei/Documents/info'

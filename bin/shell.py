@@ -153,6 +153,10 @@ def line_count(path):
     return len(read_file(path).split('\n'))
 
 
+def lines(text):
+    return text.split('\n')
+
+
 def limit_lines(shell_command, min=None, max=None):
     '''Limit the lines to a certain number or echo all the output'''
     text = shell (shell_command)
@@ -169,7 +173,7 @@ def read_file(path):
     if not exists(path):
         return 'Error:  File not found %s' % path
     try:
-        return open(path).read().decode(encoding='UTF-8').encode('ascii', 'ignore')
+        return open(path).read() # .decode(encoding='UTF-8').encode('ascii', 'ignore')
     except:
         return '**error**: Bad file read, %s' % path
 

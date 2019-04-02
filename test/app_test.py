@@ -1,21 +1,19 @@
-from os import environ
-
-from os.path import join
-
-from bin.shell import  file_tree_list, read_file, shell, check_shell_lines, check_lines
+from bin.app import *
+from bin.shell import check_lines
 from bin.switches import BASE_DIR
 
 
+
 def app_classes_test():
-    return shell('x app classes')
+    return app_classes()
 
 
 def app_functions_test():
-    return check_shell_lines('x app functions', 120, 130)
+    return check_lines('App Functions', app_functions(), 120, 130)
 
 
 def app_list_test():
-    return shell('x app list')
+    return check_lines('App Source Files', '\n'.join(app_source()))
 
 
 def app_switches_test():
@@ -27,13 +25,12 @@ def app_settings_test():
 
 
 def app_show_test():
-    return check_shell_lines('x app show', 9000, 10000)
+    return check_lines('App Source Code', app_show(), 9000, 10000)
 
 
 def app_signature_test():
-    return shell('x app signature')
+    return check_lines('Function Signatures', app_signature(), 9000, 10000)
 
 
 def app_url_test():
-    return shell('x app urls')
-
+    return check_lines('Function Signatures', app_urls())
