@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/bin/shell.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1118">
-              <caret line="214" column="14" selection-start-line="214" selection-start-column="14" selection-end-line="214" selection-end-column="14" />
+              <caret line="214" lean-forward="true" selection-start-line="214" selection-end-line="214" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -195,12 +195,12 @@
       <option name="presentableId" value="Default" />
       <updated>1544813350958</updated>
       <workItem from="1553791135655" duration="710000" />
-      <workItem from="1553806531099" duration="11642000" />
+      <workItem from="1553806531099" duration="11693000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12366000" />
+    <option name="totallyTimeSpent" value="12417000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -365,7 +365,7 @@
     <entry file="file://$PROJECT_DIR$/bin/shell.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1118">
-          <caret line="214" column="14" selection-start-line="214" selection-start-column="14" selection-end-line="214" selection-end-column="14" />
+          <caret line="214" lean-forward="true" selection-start-line="214" selection-end-line="214" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>

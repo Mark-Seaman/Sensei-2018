@@ -211,8 +211,7 @@ def shell_script(command):
     with open(script, 'w') as f:
         f.write("#!/bin/bash\n\n" + command)
     chmod(script, S_IRWXU)
-    shell_pipe(script)
-    return 'OK'
+    return shell_pipe(script)
 
 
 def word_count(text):
