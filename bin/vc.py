@@ -62,7 +62,7 @@ def git_filter(text):
             'up to date',
             'up-to-date',
             'nothing',
-            '"no changes"',
+            'no changes',
             'branch master',
             'origin/master',
             'git add',
