@@ -1,13 +1,12 @@
 from os import environ, system
 from os.path import join
-
-from shell import banner, file_tree_list, read_file
+from sys import argv
 
 
 # ------------------------------
 # Command Interpreter
 
-def i_command(options):
+def idea_command(options):
     if options:
         cmd = options[0]
         args = options[1:]
@@ -53,4 +52,7 @@ def i_list(args):
     i_add(args)
     print (open(doc_path()).read())
 
-    
+
+if __name__ == '__main__':
+    print ('idea script')
+    print(idea_command(argv[1:]))

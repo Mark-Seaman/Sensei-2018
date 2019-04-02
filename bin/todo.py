@@ -1,7 +1,9 @@
-from days import days_ago
 from datetime import datetime
 from os.path import exists
 from os import environ, system, chdir
+from sys import argv
+
+from days import days_ago
 
 
 def todo_command(options):
@@ -52,3 +54,7 @@ def edit_task_file(date):
         open(f, 'w').write(task_default % datetime.now().strftime("%A"))
     system('e %s' % f)
 
+
+if __name__ == '__main__':
+    print ('To Do script')
+    print(todo_command(argv[1:]))

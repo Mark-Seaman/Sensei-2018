@@ -3,11 +3,9 @@ from sys import argv
 
 from booknotes import booknotes_command
 from data import data_command
-from i import i_command
 from music import music_command
 from ops import ops_command
 from text import text_command
-from todo import todo_command
 from vc import vc_command
 from web import web_command
 from wordpress import wordpress_command
@@ -30,9 +28,6 @@ def execute_command(cmd,args):
     
     elif cmd == 'hire':
         command_scriptor(cmd, args)
-    
-    elif cmd=='i':
-        i_command(args)
     
     elif cmd == 'log':
         log_command(args)
@@ -57,10 +52,7 @@ def execute_command(cmd,args):
     
     elif cmd == 'text':
         text_command(args)
-    
-    elif cmd == 'todo':
-        todo_command(args)
-    
+
     elif cmd == 'tst':
         command_scriptor(cmd, args)
     
