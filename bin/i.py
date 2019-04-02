@@ -13,7 +13,7 @@ def idea_command(options):
         if cmd=='edit':
             i_edit(args)
         elif cmd=='list':
-            i_list(args)
+            return i_list(args)
         else:
             i_list(options)
     else:
@@ -50,7 +50,7 @@ def i_edit(args):
 
 def i_list(args):
     i_add(args)
-    print (open(doc_path()).read())
+    return open(doc_path()).read()
 
 
 if __name__ == '__main__':
