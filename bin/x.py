@@ -1,7 +1,6 @@
 from os import chdir, environ, system
 from sys import argv
 
-# from app import app_command
 from booknotes import booknotes_command
 from data import data_command
 from i import i_command
@@ -9,7 +8,6 @@ from music import music_command
 from ops import ops_command
 from text import text_command
 from todo import todo_command
-from tool import tool_command
 from vc import vc_command
 from web import web_command
 from wordpress import wordpress_command
@@ -17,11 +15,7 @@ from wordpress import wordpress_command
 
 def execute_command(cmd,args):
     chdir(environ['p'])
-    # print('PWD = ' + environ['p'])
-    # if cmd == 'app':
-    #     app_command(args)
-    #
-    # el
+
     if cmd == 'booknotes':
         booknotes_command(args)
     
@@ -66,9 +60,6 @@ def execute_command(cmd,args):
     
     elif cmd == 'todo':
         todo_command(args)
-    
-    elif cmd == 'tool':
-        tool_command(args)
     
     elif cmd == 'tst':
         command_scriptor(cmd, args)

@@ -4,7 +4,6 @@ from re import compile
 from sys import argv
 
 from .shell import shell, file_tree_list, read_file, line_count
-from .log import log
 from .switches import APP_DIR, APP_PORT
 from .text import text_match, find_classes, find_functions, find_signatures
 
@@ -14,7 +13,6 @@ from .text import text_match, find_classes, find_functions, find_signatures
 
 def app_command(options):
     '''Execute all of the app specific apps'''
-    log('app command output %s' % options)
     if options:
         cmd = options[0]
         args = options[1:]
@@ -62,7 +60,8 @@ def app_command(options):
             shell('e %s' % app_path('templates/%s.html' % args[0]))
 
         elif cmd == 'urls':
-            app_urls()
+            print(app_urls())
+
         else:
             print('No app command found, ' + cmd)
             app_help()
@@ -201,7 +200,7 @@ def app_urls():
         m = text_match('^ *url\(.*', s)
         if m:
             m = [simplify(url) for url in m]
-            output += '\n' + s + '\n'
+            output += '\n\n' + s + '\n'
             output += '\n'.join(m)
     return output
 

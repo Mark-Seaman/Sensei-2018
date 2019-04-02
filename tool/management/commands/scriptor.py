@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 import traceback
 
+from bin.app import app_command
 from bin.shell import banner
 from health.health import health_command
 from tasks.task import task_command
@@ -24,7 +25,10 @@ class Command(BaseCommand):
             args = options['script'][1:]
             log('SCRIPTOR: %s %s' % (cmd, args))
 
-            if cmd == 'email':
+            if cmd == 'app':
+                app_command(args)
+
+            elif cmd == 'email':
                 email_command(args)
 
             elif cmd == 'help':

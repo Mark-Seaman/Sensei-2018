@@ -3,13 +3,12 @@ from bin.shell import check_lines
 from bin.switches import BASE_DIR
 
 
-
 def app_classes_test():
     return app_classes()
 
 
 def app_functions_test():
-    return check_lines('App Functions', app_functions(), 120, 130)
+    return check_lines('App Functions', app_functions(), 850, 860)
 
 
 def app_list_test():
@@ -29,8 +28,8 @@ def app_show_test():
 
 
 def app_signature_test():
-    return check_lines('Function Signatures', app_signature(), 9000, 10000)
+    return check_lines('Function Signatures', app_signature(), 1100, 1200)
 
 
 def app_url_test():
-    return check_lines('Function Signatures', app_urls())
+    return check_lines('Function Signatures', app_urls(), 80, 90)
