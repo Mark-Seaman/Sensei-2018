@@ -59,7 +59,7 @@ def git_filter(text):
 
     def ok(line):
         filters = [
-            '"up to date"',
+            'up to date',
             'up-to-date',
             'nothing',
             '"no changes"',
@@ -68,6 +68,8 @@ def git_filter(text):
             'git add',
             'git checkout',
             'publish your local',
+            'insertions(+)',
+            'ing objects:',
         ]
         for f in filters:
             if f in line:
