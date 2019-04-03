@@ -95,8 +95,13 @@ li {
 /* ----------------------------------------------- */
 /* Classes */
 
+.card {
+    padding: 20px;
+}
+
 .lesson-table {
     margin: 5%;
+    padding: 5%;
 }
 
 .page {
