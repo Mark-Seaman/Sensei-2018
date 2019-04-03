@@ -15,7 +15,7 @@ def idea_command(options):
         elif cmd=='list':
             return i_list(args)
         else:
-            i_list(options)
+            return i_list(options)
     else:
         i_help()
 
