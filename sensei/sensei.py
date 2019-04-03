@@ -19,7 +19,7 @@ def add_lesson(course, lesson, title, date):
 def course_lessons(course, page):
     if not course.startswith('bacs'):
         return []
-    if page == course or page == '%s/Index' % course:
+    if page == course or page == '%s/Index' % course or page == '%s/Lessons' % course:
         return [x for x in Lesson.objects.filter(course__name=course).order_by('date')][-4:]
     else:
         return []

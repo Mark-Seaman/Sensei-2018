@@ -16,10 +16,6 @@
 
     <body>
 
-        <!-- Nav -->
-        {% block menu %}
-        {% endblock %}
-
         <!-- Header -->
         <header>
             <img src="/static/images/unc/Bear.100.png" alt="Bear Logo">
@@ -28,6 +24,12 @@
                 <h2><a href="{{ site.2 }}">{{ site.1 }}</a></h2>
             </div>
         </header>
+
+
+        <!-- Nav -->
+        {% block menu %}
+        {% endblock %}
+
 
         <!-- Main -->
         <main class="page">
