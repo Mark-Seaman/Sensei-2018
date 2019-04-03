@@ -14,6 +14,9 @@ Web Design and Development for Small Business
 '''
 
 
+#########################
+# Lessons
+
 from sensei.sensei import add_lesson
 add_lesson ('bacs200', '13', 'Test & Debug', '2019-02-06')
 add_lesson ('bacs200', '14', 'Cascading Stylesheets', '2019-02-11')
@@ -33,47 +36,45 @@ add_lesson ('bacs200', '27', 'Documentation Tools', '2019-03-20')
 add_lesson ('bacs200', '28', 'Business Blog', '2019-03-25')
 add_lesson ('bacs200', '29', 'Photoshop', '2019-03-27')
 add_lesson ('bacs200', '30', 'Illustrator', '2019-03-29')
-
-
-from sensei.sensei import add_lesson
 add_lesson ('bacs200', '31', 'W3Schools', '2019-04-01')
 
 
+from sensei.sensei import add_lesson
+add_lesson ('bacs200', '32', 'Development Workflow', '2019-04-03')
+
+
 #########################
-# Create review assignment
-
-
-
+# Review assignment
 
 from sensei.models import *
 from sensei.review import *
 
-def assign_new_reviews(project, requirements):
-    req = Requirements.objects.create(labels=requirements, url=project)
-    print('Assign %d' % assign_reviews('index.php', '2019-04-01', req.pk))
+def assign_new_reviews():
+
+    # Project #11
+    requirements = '''Description of how to implement the feature
+HTML listing
+CSS listing
+JavaScript listing
+Easy to reproduce the result
+Page is located at proper URL
+Page must validate (HTML, CSS, links)
+Visual Appearance (no issues)
+Link to W3Schools demo
+Use source code widget for HTML display
+'''
+    project_url = 'https://shrinking-world.com/unc/bacs200/projects/11'
+    req = Requirements.objects.create(labels=requirements, url=project_url)
+    print('Assign %d' % assign_reviews('bacs200/projects/skill.html', '2019-04-03', req.pk))
     print("%s reviews assigned" % len(Review.objects.all()))
 
 
-# Project #10
-requirements = '''Page is located at correct URL
-Page has valid HTML and CSS and links
-All links work properly
-Other pages are working properly
-Visual appearance
-Professional article with good content
-Message is clear and compelling
-Page has appropriate links to other pages
-Looks professional
-Good titles and photos
-'''
+assign_new_reviews()
 
-assign_new_reviews('https://shrinking-world.com/unc/bacs200/projects/10', requirements)
 
 def list_requirements():
     for r in Requirements.objects.all():
         print('%s %s \n %s' % (r.pk, r.url, r.labels))
-
-
 
 list_requirements()
 
