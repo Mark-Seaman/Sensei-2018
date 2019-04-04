@@ -37,8 +37,9 @@ def query_reviewers(course):
         reviews = student_reviews_done(student_id)
         not_done = student_reviews(student_id)
         assigned = len(reviews) + len(not_done)
-        points = 10 * 9 * len(reviews) / assigned
-        return student, reviews, "%d of %d, %d" % (len(reviews), assigned, points)
+        rounds = 11
+        points = 10 * rounds * len(reviews) / assigned
+        return student, reviews, "%d done of %d assigned, score = %d" % (len(reviews), assigned, points)
 
     all_students = students(course)
     return [reviewer_summary(s) for s in all_students]
