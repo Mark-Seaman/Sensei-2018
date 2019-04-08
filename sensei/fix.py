@@ -38,10 +38,11 @@ add_lesson ('bacs200', '29', 'Photoshop', '2019-03-27')
 add_lesson ('bacs200', '30', 'Illustrator', '2019-03-29')
 add_lesson ('bacs200', '31', 'W3Schools', '2019-04-01')
 add_lesson ('bacs200', '32', 'Development Workflow', '2019-04-03')
+add_lesson ('bacs200', '33', 'Design Guide', '2019-04-05')
 
 
 from sensei.sensei import add_lesson
-add_lesson ('bacs200', '33', 'Design Guide', '2019-04-05')
+add_lesson ('bacs200', '34', 'Professional Image', '2019-04-08')
 
 
 #########################
@@ -53,20 +54,20 @@ from sensei.review import *
 def assign_new_reviews():
 
     # Project #11
-    requirements = '''Description of how to implement the feature
-HTML listing
-CSS listing
-JavaScript listing
-Easy to reproduce the result
-Page is located at proper URL
+    requirements = '''Page exists - top level blog
+Article for initial business topic
+Article for design guide
+Page exists at "bacs200"
+Page exists - skill.html 
+Teach a trick
+Apply 3 tricks from others
 Page must validate (HTML, CSS, links)
 Visual Appearance (no issues)
 Link to W3Schools demo
-Use source code widget for HTML display
 '''
     project_url = 'https://shrinking-world.com/unc/bacs200/projects/11'
     req = Requirements.objects.create(labels=requirements, url=project_url)
-    print('Assign %d' % assign_reviews('bacs200/projects/skill.html', '2019-04-03', req.pk))
+    print('Assign %d' % assign_reviews('bacs200/projects/skill.html', '2019-04-08', req.pk))
     print("%s reviews assigned" % len(Review.objects.all()))
 
 
