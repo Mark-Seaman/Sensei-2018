@@ -39,10 +39,11 @@ add_lesson ('bacs200', '30', 'Illustrator', '2019-03-29')
 add_lesson ('bacs200', '31', 'W3Schools', '2019-04-01')
 add_lesson ('bacs200', '32', 'Development Workflow', '2019-04-03')
 add_lesson ('bacs200', '33', 'Design Guide', '2019-04-05')
+add_lesson ('bacs200', '34', 'Professional Image', '2019-04-08')
 
 
 from sensei.sensei import add_lesson
-add_lesson ('bacs200', '34', 'Professional Image', '2019-04-08')
+add_lesson ('bacs200', '35', 'Learning Skills', '2019-04-10')
 
 
 #########################
