@@ -40,7 +40,7 @@ def system_host_test():
 
 
 def system_ip_test():
-    return check_shell_lines ('ifconfig', 45, 65)
+    return check_shell_lines ('ifconfig', 45, 70)
 
 
 def system_pandoc_test():
