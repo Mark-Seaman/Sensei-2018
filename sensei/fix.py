@@ -56,11 +56,20 @@ from sensei.review import *
 def assign_new_reviews():
 
     # Project #11
-    requirements = '''
+    requirements = '''Page Exists at correct URL
+Page can be used in marketing efforts
+Clear professional identity
+Clear skills and experience
+Clear strengths
+Includes carousel
+Great images
+Titles, favicon, supporting text
+Good page layout
+Valid HTML & CSS
 '''
-    project_url = 'https://shrinking-world.com/unc/bacs200/projects/11'
+    project_url = 'https://shrinking-world.com/unc/bacs200/projects/12'
     req = Requirements.objects.create(labels=requirements, url=project_url)
-    print('Assign %d' % assign_reviews('bacs200/projects/skill.html', '2019-04-08', req.pk))
+    print('Assign %d' % assign_reviews('bacs200/projects/pro/index.html', '2019-04-15', req.pk))
     print("%s reviews assigned" % len(Review.objects.all()))
 
 
