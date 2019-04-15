@@ -40,10 +40,11 @@ add_lesson ('bacs200', '31', 'W3Schools', '2019-04-01')
 add_lesson ('bacs200', '32', 'Development Workflow', '2019-04-03')
 add_lesson ('bacs200', '33', 'Design Guide', '2019-04-05')
 add_lesson ('bacs200', '34', 'Professional Image', '2019-04-08')
+add_lesson ('bacs200', '35', 'Learning Skills', '2019-04-10')
 
 
 from sensei.sensei import add_lesson
-add_lesson ('bacs200', '35', 'Learning Skills', '2019-04-10')
+add_lesson ('bacs200', '36', 'Non-profit Contribution', '2019-04-15')
 
 
 #########################
@@ -55,16 +56,7 @@ from sensei.review import *
 def assign_new_reviews():
 
     # Project #11
-    requirements = '''Page exists - top level blog
-Article for initial business topic
-Article for design guide
-Page exists at "bacs200"
-Page exists - skill.html 
-Teach a trick
-Apply 3 tricks from others
-Page must validate (HTML, CSS, links)
-Visual Appearance (no issues)
-Link to W3Schools demo
+    requirements = '''
 '''
     project_url = 'https://shrinking-world.com/unc/bacs200/projects/11'
     req = Requirements.objects.create(labels=requirements, url=project_url)
