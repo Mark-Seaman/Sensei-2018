@@ -1,0 +1,17 @@
+#!/bin/bash
+# Copy files to Unco-bacs.org
+
+# UNC Bacs Website
+u='uncobacs@unco-bacs.org'
+b2='~/public_html/bacs200'
+a2='~/public_html/bacs200/lesson'
+
+# Local BACS Website
+b1="$HOME/UNC/bacs200/public_html/bacs200"
+a1="$HOME/UNC/bacs200/public_html/bacs200/UNC-BACS200-2019-Spring"
+
+# Copy both file trees
+rsync --exclude .git -auv $b1/ $u:$b2
+rsync --exclude .git -auv $a1/ $u:$a2
+
+ssh $u
