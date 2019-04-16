@@ -16,7 +16,6 @@ def domain_menu(domain, page):
 
 
 class MyBookDocDisplay(TemplateView):
-    template_name = 'mybook_public.html'
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
@@ -26,20 +25,26 @@ class MyBookDocDisplay(TemplateView):
         menu = main_menu(site, domdoc)
         return dict(site=site, title=title, text=text, menu=menu)
 
+    def get_template_names(self):
+        title = self.kwargs.get('title')
+        if title.startswith('spiritual'):
+            return ['spiritual_theme.html']
+        else:
+            return ['mybook_public.html']
+
 
 class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
     pass
 
 
 class BookNotes(MyBookDocDisplay):
-
     template_name = 'mybook_public.html'
 
     def get_context_data(self, **kwargs):
-        title = join('booknotes', self.kwargs.get('title','Index'))
+        title = join('booknotes', self.kwargs.get('title', 'Index'))
         photo = 'MarkSeaman.100.png'
-        excerpt,url = booknotes_excerpt(self.kwargs.get('title'))
-        kwargs = dict(title=title, photo=photo, text=excerpt, readmore=(url,url), excerpt=excerpt)
+        excerpt, url = booknotes_excerpt(self.kwargs.get('title'))
+        kwargs = dict(title=title, photo=photo, text=excerpt, readmore=(url, url), excerpt=excerpt)
         return super(BookNotes, self).get_context_data(**kwargs)
 
 
@@ -95,7 +100,7 @@ class SpiritualSelect(RedirectView):
     def get_redirect_url(self, *args, **kwargs):
         title = kwargs.get('title')
         if not title:
-            title = choice(['reflect', 'teaching', 'prayers', 'bible'])
+            title = choice(['reflect', 'teaching', 'prayers', 'bible', 'walkabout'])
         files = listdir(join('Documents', 'spiritual', title))
         file = choice(files)
         return '/spiritual/%s/%s' % (title, file)
@@ -109,5 +114,3 @@ class TabsView(MyBookDocDisplay):
         tabs = tabs_data(doc)
         kwargs = dict(title=tabs[0][1], doc=doc, tabs=tabs)
         return super(TabsView, self).get_context_data(**kwargs)
-
-
