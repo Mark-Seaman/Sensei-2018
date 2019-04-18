@@ -127,7 +127,7 @@ p {
     margin: 20px;
 }
 
-.nav-link.active {
+.nav-bar .active>.nav-link {
     color: red;
     font-weight: bolder;
 }
