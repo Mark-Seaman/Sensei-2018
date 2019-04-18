@@ -7,7 +7,7 @@ from tool.document import domain_doc, doc_html_text
 
 from .models import Lesson, Review, Student, UrlGame
 from .review import count_score, get_review, query_reviewers, query_designers, review_feedback, student_reviews, student_reviews_done
-from .sensei import course_lessons, get_course, schedule, slides_markdown
+from .sensei import course_lessons, get_course_name, schedule, slides_markdown
 from .student import site_settings, student, students, register_user_domain
 
 
