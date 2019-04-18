@@ -128,6 +128,6 @@ p {
 }
 
 .navbar-nav .active>.nav-link {
-    color: red;
-    font-weight: bolder;
+    box-shadow: 2px 2px 5px black;
+    font-weight: bold;
 }
