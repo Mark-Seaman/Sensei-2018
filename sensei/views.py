@@ -56,7 +56,7 @@ class UncLessonList(ListView):
         course = get_course_name(self.kwargs.get('course'))
         title = "Lessons for %s" % course.name
         lessons = Lesson.objects.filter(course=course).order_by('date')
-        return dict (title=title, lessons=lessons)
+        return site_settings(title=title, lessons=lessons)
 
 
 class UncRegister(FormView):
