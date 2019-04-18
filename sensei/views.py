@@ -5,23 +5,10 @@ from django.utils.timezone import now
 
 from tool.document import domain_doc, doc_html_text
 
-from .models import Review, Student, UrlGame
+from .models import Lesson, Review, Student, UrlGame
 from .review import count_score, get_review, query_reviewers, query_designers, review_feedback, student_reviews, student_reviews_done
-from .sensei import course_lessons, schedule, slides_markdown
+from .sensei import course_lessons, get_course, schedule, slides_markdown
 from .student import site_settings, student, students, register_user_domain
-
-
-# class GuideDoc(TemplateView):
-#     template_name = 'guide_doc.html'
-#
-#     def get_context_data(self, **kwargs):
-#         title = self.kwargs.get('title')
-#         return site_settings(title=title, doc='guide')
-# class UncReading(TemplateView):
-#     template_name = 'unc_reading.html'
-#
-#     def get_context_data(self, **kwargs):
-#         return site_settings(title='Reading Scores', students=student_totals())
 
 
     
@@ -60,7 +47,17 @@ class UncEditReview(UpdateView):
         student_id = self.object.reviewer.pk
         return '/unc/student/%s' % student_id
 
-    
+
+class UncLessonList(ListView):
+    model = Lesson
+    template_name = 'unc_lesson_list.html'
+    context_object_name = 'lessons'
+
+    def get_context_data(self, **kwargs):
+        course = get_course(self.kwargs.get('course_id', '1'))
+        course_lessons(course.name, course.name)
+
+
 class UncRegister(FormView):
     class EditDocForm(Form):
         name = forms.CharField()
