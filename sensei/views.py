@@ -47,6 +47,9 @@ class UncEditReview(UpdateView):
         student_id = self.object.reviewer.pk
         return '/unc/student/%s' % student_id
 
+# def menu_select(item):
+#     m = dict(lesson_active='', student_active='', resource_active='', project_active='')
+#     m[item] = 'active'
 
 class UncLessonList(ListView):
     model = Lesson
@@ -56,7 +59,7 @@ class UncLessonList(ListView):
         course = get_course_name(self.kwargs.get('course'))
         title = "Lessons for %s" % course.name
         lessons = Lesson.objects.filter(course=course).order_by('date')
-        return site_settings(title=title, lessons=lessons)
+        return site_settings(lesson_active='active', title=title, lessons=lessons)
 
 
 class UncRegister(FormView):
@@ -87,7 +90,7 @@ class UncReviewFeedback(TemplateView):
         review = get_review(pk)
         requirements = review.requirement_labels.labels.split('\n')
         title = 'Design Review Feedback'
-        return site_settings(title=title, review=review, requirements=requirements)
+        return site_settings(student_active='active', title=title, review=review, requirements=requirements)
 
 
 class UncReviews(TemplateView):
@@ -97,7 +100,7 @@ class UncReviews(TemplateView):
         course = '1'
         reviews = query_reviewers(course)
         designers = query_designers(course)
-        return site_settings(title='Design Reviews', reviews=reviews, designers=designers)
+        return site_settings(student_active='active', title='Design Reviews', reviews=reviews, designers=designers)
 
 
 class UncSchedule(TemplateView):
@@ -128,7 +131,8 @@ class UncStudent(TemplateView):
         done = student_reviews_done(student_id)
         feedback = review_feedback(student_id)
         title = 'Student Dashboard'
-        return site_settings(title=title, student=student(student_id), game=game,
+        return site_settings(student_active='active',
+                             title=title, student=student(student_id), game=game,
                              reviews=reviews, feedback=feedback, done=done)
 
 
@@ -142,7 +146,9 @@ class UncStudents(ListView):
 
     def get_context_data(self, **kwargs):
         course = self.kwargs.get(id, '1')
-        return site_settings(title='BACS 200 - Student Domains', students=students(course))
+        return site_settings(student_active='active',
+                             title='BACS 200 - Student Domains',
+                             students=students(course))
 
 
 
