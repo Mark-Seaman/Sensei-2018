@@ -126,3 +126,8 @@ p {
 .pane * {
     margin: 20px;
 }
+
+.nav-link.active {
+    color: red;
+    font-weight: bolder;
+}
