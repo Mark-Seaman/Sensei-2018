@@ -127,12 +127,9 @@ p {
     margin: 20px;
 }
 
-.navbar-nav li.nav-item.active {
-    box-shadow: 2px 2px 5px black;
+.navbar-nav .nav-item.active {
+    /*box-shadow: 2px 2px 5px black;*/
     font-weight: bold;
 }
 
-/*.navbar-nav .active>.nav-link {*/
-    /*!*font-weight: bold;*!*/
-/*}*/
 
