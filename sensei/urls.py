@@ -5,7 +5,7 @@ from .views import *
 
 urlpatterns = [
 
-    url(r'^xlesson/(?P<course_id>[\d]+)$', UncLessonList.as_view()),
+    url(r'^(?P<course>[-_ \w]+)/lesson/$', UncLessonList.as_view()),
 
     url(r'^schedule/(?P<id>[\d]+)$', UncSchedule.as_view()),
     url(r'^students/(?P<id>[\d]+)$', UncStudents.as_view()),

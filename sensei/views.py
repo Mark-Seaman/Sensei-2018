@@ -51,11 +51,11 @@ class UncEditReview(UpdateView):
 class UncLessonList(ListView):
     model = Lesson
     template_name = 'unc_lesson_list.html'
-    context_object_name = 'lessons'
 
     def get_context_data(self, **kwargs):
-        course = get_course(self.kwargs.get('course_id', '1'))
-        course_lessons(course.name, course.name)
+        course = get_course(self.kwargs.get('course'))
+        lessons = [] # course_lessons(course.name, course.name)
+        return dict (lessons=lessons, course=course)
 
 
 class UncRegister(FormView):
