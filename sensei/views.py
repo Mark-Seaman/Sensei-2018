@@ -53,7 +53,7 @@ class UncLessonList(ListView):
     template_name = 'unc_lesson_list.html'
 
     def get_context_data(self, **kwargs):
-        course = get_course(self.kwargs.get('course'))
+        course = get_course_name(self.kwargs.get('course'))
         lessons = [] # course_lessons(course.name, course.name)
         return dict (lessons=lessons, course=course)
 

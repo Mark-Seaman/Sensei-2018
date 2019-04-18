@@ -44,6 +44,10 @@ def get_course(id):
     return Course.objects.get(pk=id)
 
 
+def get_course_name(name):
+    return Course.objects.get(name=name)
+
+
 def get_student(id):
     return Student.objects.get(pk=id)
 
