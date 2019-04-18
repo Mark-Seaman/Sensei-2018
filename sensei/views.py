@@ -54,7 +54,7 @@ class UncLessonList(ListView):
 
     def get_context_data(self, **kwargs):
         course = get_course_name(self.kwargs.get('course'))
-        lessons = [] # course_lessons(course.name, course.name)
+        lessons = course_lessons(course.name, course.name)
         return dict (lessons=lessons, course=course)
 
 
