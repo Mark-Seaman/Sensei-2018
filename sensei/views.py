@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import Form
-from django.views.generic import FormView, ListView, RedirectView, TemplateView, UpdateView
+from django.views.generic import DetailView, FormView, ListView, RedirectView, TemplateView, UpdateView
 from django.utils.timezone import now
 
 from tool.document import domain_doc, doc_html_text
@@ -22,7 +22,7 @@ class UncDocDisplay(TemplateView):
         doc = domain_doc(self.request.get_host(), 'unc/' + title)
         title = 'Lesson %s' % title[-2:] if title[-3:-2] == '/' else 'UNC BACS %s' % course[-3:]
         text = doc_html_text(doc, '/static/images/unc/%s' % course)
-        return site_settings(title=title, text=text, lessons=lessons)
+        return site_settings(lesson_active='active', title=title, text=text, lessons=lessons)
 
 
 class UncEditReview(UpdateView):
@@ -47,9 +47,11 @@ class UncEditReview(UpdateView):
         student_id = self.object.reviewer.pk
         return '/unc/student/%s' % student_id
 
-# def menu_select(item):
-#     m = dict(lesson_active='', student_active='', resource_active='', project_active='')
-#     m[item] = 'active'
+
+class UncLessonDetail(DetailView):
+    model = Lesson
+    template_name = 'unc_lesson_details.html'
+
 
 class UncLessonList(ListView):
     model = Lesson
@@ -108,7 +110,7 @@ class UncSchedule(TemplateView):
 
     def get_context_data(self, **kwargs):
         course = self.kwargs.get(id, '1')
-        return site_settings(title='BACS 200 Schedule', schedule=schedule(course))
+        return site_settings(resource_active='active', title='BACS 200 Schedule', schedule=schedule(course))
 
 
 class UncSlidesDisplay(TemplateView):
