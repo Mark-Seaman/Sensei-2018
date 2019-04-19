@@ -37,7 +37,7 @@ def query_reviewers(course):
         reviews = student_reviews_done(student_id)
         not_done = student_reviews(student_id)
         assigned = len(reviews) + len(not_done)
-        rounds = 11
+        rounds = 12
         points = 10 * rounds * len(reviews) / assigned
         return student, reviews, "%d done of %d assigned, score = %d" % (len(reviews), assigned, points)
 
@@ -49,8 +49,8 @@ def query_designers(course):
 
     def designer_summary(student):
         student_id = student.pk
-        reviews = review_feedback(student_id).filter(page='bacs200/projects/skill.html')
-        scores = ','.join([str(r.score) for r in reviews if r.page=='bacs200/projects/skill.html'])
+        reviews = review_feedback(student_id).filter(page='bacs200/projects/pro/index.html')
+        scores = ','.join([str(r.score) for r in reviews if r.page=='bacs200/projects/pro/index.html'])
         return student, reviews, "%d reviews, scores: %s" % (len(reviews), scores)
 
     all_students = students(course)
@@ -103,8 +103,6 @@ def student_reviews(student_id):
 
 def student_reviews_done(student_id):
     return Review.objects.filter(reviewer=student_id).exclude(score=-1)
-
-
 
 
 def url_feedback(answer, correct):
