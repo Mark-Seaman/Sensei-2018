@@ -10,7 +10,7 @@ def check_page(url, min=1, max=1):
 
 def unc_files_test():
     path = join(environ['HOME'], 'UNC')
-    return check_files(path, 250, 300)
+    return check_files(path, 300, 350)
 
 
 def unc_docs_test():
