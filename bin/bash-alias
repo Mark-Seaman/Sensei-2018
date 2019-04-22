@@ -103,7 +103,7 @@ alias tst='x tst'
 
 alias u='cd ..; l'
 export unc="$HOME/UNC"
-alias unc=". $unc/bashrc"
+alias unc=". $unc/.bashrc"
 alias user='x user'
 alias update='x ops update'
 
