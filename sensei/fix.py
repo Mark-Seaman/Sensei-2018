@@ -45,10 +45,11 @@ add_lesson ('bacs200', '36', 'Non-profit Contribution', '2019-04-15')
 add_lesson ('bacs200', '37', 'Project Management', '2019-04-17')
 add_lesson ('bacs200', '38', 'Teamwork', '2019-04-19')
 add_lesson ('bacs200', '39', 'Email Marketing', '2019-04-22')
+add_lesson ('bacs200', '40', 'Your Career', '2019-04-24')
 
 
 from sensei.sensei import add_lesson
-add_lesson ('bacs200', '40', 'Your Career', '2019-04-24')
+add_lesson ('bacs200', '41', 'Moving Forward', '2019-04-26')
 
 
 #########################
