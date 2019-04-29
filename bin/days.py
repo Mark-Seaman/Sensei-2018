@@ -84,7 +84,7 @@ def days_month(args):
 
 
 # Save the Mondays in a file for some number of weeks
-def days_weeks(num_weeks):
+def days_weeks(start, num_weeks):
 
     def days_ahead(date, days):
         day = date + timedelta(days=days)
@@ -98,14 +98,12 @@ def days_weeks(num_weeks):
                 x.append(day_str(day))
         return x
 
-    def weekly_schedule(filename, days):
-        with open(filename, 'w') as f:
-            start = '2018-08-20'
-            for i, d in enumerate(enumerate_weeks(to_date(start), days)):
-                f.write('Week %s - %s\n' % (i, d))
-                print('Week %s - %s\n' % (i+1, d))
+    def weekly_schedule(days):
+        start = '2019-04-29'
+        for i, d in enumerate(enumerate_weeks(to_date(start), days)):
+            print('Week %s - %s\n' % (i+1, d))
 
-    weekly_schedule('Documents/sensei/schedule.csv', int(num_weeks)*7)
+    weekly_schedule(int(num_weeks)*7)
 
 
 # List all of the days before today
@@ -126,4 +124,10 @@ def to_day(s):
 # Today's date as string
 def today():
     return date_str(datetime.now())
+
+
+if __name__ == '__main__':
+    start = '2019-04-29'
+    num_weeks = 17
+    days_weeks(start, num_weeks)
 
