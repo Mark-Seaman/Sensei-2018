@@ -12,7 +12,7 @@ def app_functions_test():
 
 
 def app_list_test():
-    return check_lines('App Source Files', '\n'.join(app_source()))
+    return check_lines('App Source Files', '\n'.join(app_source()), 120, 140)
 
 
 def app_switches_test():
