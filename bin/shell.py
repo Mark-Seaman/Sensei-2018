@@ -197,6 +197,14 @@ def shell(cmd):
     return text.decode(encoding='UTF-8')
 
 
+def shell_file_list(path='.'):
+    files = shell_script('find %s'%(path)).split('\n')
+    # Filter the big directories
+    return [f for f in files \
+            if not '/.git/' in f \
+            and not '/node_modules/' in f]
+
+
 def shell_pipe(command, stdin=''):
     p = Popen(command, stdin=PIPE, stdout=PIPE)
     if version_info.major == 3:
