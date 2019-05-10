@@ -27,6 +27,9 @@ header h1 {
 
 header h2 {
     color: white;
+    background-color: inherit;
+    box-shadow: none;
+    border: none;
 }
 
 h1 {
@@ -34,7 +37,7 @@ h1 {
 }
 
 h2 {
-    background-color: #FFE0B2;
+    background-color: yellow;
     border: 1px solid dodgerblue;
     box-shadow: 2px 2px 5px black;
     color: dodgerblue;
@@ -42,6 +45,7 @@ h2 {
 
 h3 {
     color: darkgreen;
+    text-size: 120%;
 }
 
 main {
