@@ -171,13 +171,12 @@ ul ul {
 
 
 .logo {
-    border: none;
-    width: 220px;
-    height: 100px;
-    background: white url("/static/images/SWS_Globe_small.jpg") no-repeat;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px gray;
+    float: right;
+}
 
+.logo img {
+    border-radius: 20px;
+    box-shadow: -2px -2px 6px black;
 }
 
 
