@@ -30,6 +30,7 @@ header h2 {
     background-color: inherit;
     box-shadow: none;
     border: none;
+    text-align: left;
 }
 
 h1 {
@@ -52,7 +53,7 @@ h3 {
 main {
     margin: 3em;
     padding: 2em;
-    border: solid 1px #eee;
+    /*border: solid 1px #eee;*/
 }
 
 
