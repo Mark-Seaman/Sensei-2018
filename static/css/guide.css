@@ -36,11 +36,11 @@ header h2 {
 }
 
 h1 {
-    border-bottom: 2px solid dodgerblue;
+    /*border-bottom: 2px solid dodgerblue;*/
     color: dodgerblue;
     padding: 20px;
     text-align: center;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 4px grey;
 }
 
 h2 {
