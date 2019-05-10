@@ -82,23 +82,32 @@
 
             {% block content %}
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 content">
+                <section id="content">
+                    <div class="container">
 
-                            <div class="page">
-                                {% if text %}
-                                    {% autoescape off %}
-                                        <p>{{ text }}</p>
-                                    {% endautoescape %}
-                                {% else %}
-                                    <h2>No document found. {{ doc }}</h2>
-                                {% endif %}
+                        {% block card %}
+
+                            <div class="card">
+
+                                <div class="card-body card-padding">
+
+                                    {% block page %}
+                                        {% if text %}
+                                            {% autoescape off %}
+                                                <p>{{ text }}</p>
+                                            {% endautoescape %}
+                                        {% else %}
+                                            <h2>No document found. {{ doc }}</h2>
+                                        {% endif %}
+                                    {% endblock %}
+
+                                </div>
                             </div>
 
-                        </div>
+                        {% endblock %}
+
                     </div>
-                </div>
+                </section>
 
             {% endblock %}
 
