@@ -15,6 +15,15 @@ def domain_menu(domain, page):
     return main_menu(site, domdoc)
 
 
+def theme(domain):
+    if domain == 'spiritual-things.org':
+        return 'spiritual_theme.html'
+    elif domain == 'seamansguide.com':
+        return 'guide_theme.html'
+    else:
+        return 'mybook_public.html'
+
+
 class MyBookDocDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
@@ -27,10 +36,8 @@ class MyBookDocDisplay(TemplateView):
 
     def get_template_names(self):
         title = self.kwargs.get('title')
-        if title.startswith('spiritual'):
-            return ['spiritual_theme.html']
-        else:
-            return ['mybook_public.html']
+        return [theme(self.request.get_host())]
+
 
 
 class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
