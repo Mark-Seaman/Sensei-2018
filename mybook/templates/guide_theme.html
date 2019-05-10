@@ -12,85 +12,51 @@
     </head>
 
     <body>
-    
+
         <header>
-            {% block banner %}
-
-                <div class="pull-left">
-                    <a href="/">
-                        <h1>Seaman's Guide</h1>
-                        <h2>Best Practices for Software Development</h2>
-                    </a>
-                </div>
-
-            {% endblock %}
-
+            <a href="/">
+                <h1>Seaman's Guide</h1>
+                <h2>Best Practices for Software Development</h2>
+            </a>
         </header>
 
-        <!-- Javascript Libraries -->
-        <section id="main">
+        {% block content %}
+            <section id="content">
+                <div class="container">
 
-            <aside id="s-main-menu" class="sidebar">
+                    {% block card %}
 
-                <div class="smm-header">
-                    <i class="zmdi zmdi-long-arrow-left" data-ma-action="sidebar-close"></i>
-                </div>
+                        <div class="card brd-20">
 
-                {% block menu %}
-
-                    <ul class="main-menu">
-                        {% for m in menu %}
-                            <li {{ m.3 }}>
-                                <a href="{{ m.0 }}"><i class="zmdi {{ m.1 }}"></i> {{ m.2 }} </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-
-                {% endblock %}
-
-            </aside>
-
-            {% block content %}
-                <section id="content">
-                    <div class="container">
-
-                        {% block card %}
-
-                            <div class="card brd-20">
-
-                                <div class="card-header ch-alt">
-                                    <h1>{{ title }}</h1>
-                                </div>
-
-                                <div class="card-body card-padding">
-
-                                    {% if text %}
-                                        {% autoescape off %}
-                                            <p>{{ text }}</p>
-                                        {% endautoescape %}
-                                    {% else %}
-                                        <h2>No document found. {{ doc }}</h2>
-                                    {% endif %}
-
-                                </div>
+                            <div class="card-header ch-alt">
+                                <h1>{{ title }}</h1>
                             </div>
 
-                        {% endblock %}
+                            <div class="card-body card-padding">
 
-                    </div>
-                </section>
-            {% endblock %}
+                                {% if text %}
+                                    {% autoescape off %}
+                                        <p>{{ text }}</p>
+                                    {% endautoescape %}
+                                {% else %}
+                                    <h2>No document found. {{ doc }}</h2>
+                                {% endif %}
 
+                            </div>
+                        </div>
 
-            {% block footer %}
-                <div class="footer">
-                    <a href="http://shrinking-world.com">
-                        <div class="logo-text">Copyright &copy; 2019 Shrinking World</div>
-                    </a>
+                    {% endblock %}
+
                 </div>
-            {% endblock %}
+            </section>
+        {% endblock %}
 
-        </section>
+
+        <footer>
+            <a href="http://shrinking-world.com">
+                <div class="logo-text">Copyright &copy; 2019 Shrinking World</div>
+            </a>
+        </footer>
 
     </body>
 
