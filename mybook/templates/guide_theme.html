@@ -23,18 +23,19 @@
         </header>
 
 
-        {% block content %}
+        <main>
+            {% block content %}
 
-            {% if text %}
-                {% autoescape off %}
-                    <p>{{ text }}</p>
-                {% endautoescape %}
-            {% else %}
-                <h2>No document found. {{ doc }}</h2>
-            {% endif %}
+                {% if text %}
+                    {% autoescape off %}
+                        <p>{{ text }}</p>
+                    {% endautoescape %}
+                {% else %}
+                    <h2>No document found. {{ doc }}</h2>
+                {% endif %}
 
-        {% endblock %}
-
+            {% endblock %}
+        </main>
 
         <footer>
             <a href="http://shrinking-world.com">
