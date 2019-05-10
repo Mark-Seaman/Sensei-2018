@@ -3,21 +3,24 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Page Demo</title>
+        <title>{{ title }}</title>
         <base href="/">
-
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/guide.css">
     </head>
 
     <body>
 
         <header>
-            <a href="/">
-                <h1>Seaman's Guide</h1>
+            <div class="logo">
+                <img src="{{ logo }}">
+            </div>
+            <div class="titles">
+                <h1>Shrinking World Training</h1>
                 <h2>Best Practices for Software Development</h2>
-            </a>
+            </div>
         </header>
 
         {% block content %}

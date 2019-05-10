@@ -1,15 +1,24 @@
-/* -----------------------------
-    E L E M E N T S
------------------------------ */
+/* You can add global styles to this file, and also import other style files */
 
-body {
-    font-size: 20px;
+/* --------------------------
+        E L E M E N T S
+*/
+
+footer {
+    color: darkgrey;
+    padding: 2em;
+    text-align: center;
+    padding: 10px;
+    border: solid 1px grey;
 }
 
-
 header {
-    background-color: #333;
-    border: 1px solid yellow;
+    background-color: blue;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px black;
+    height: 200px;
+    margin: 2em;
+    padding: 3em;
 }
 
 header h1 {
@@ -17,49 +26,44 @@ header h1 {
 }
 
 header h2 {
-    color: yellow;
-}
-
-header img {
-    background: white url("/static/images/SWS_Globe_small.jpg") no-repeat;
-    border-radius: 20px;
-    border: none;
-    margin: 0px;
-    padding: 0px;
-    height: 100px;
-    width: 225px;
-}
-
-
-/* -----------------------------
-    C L A S S E S
------------------------------ */
-
-.border {
-    border: 1px solid white;
-}
-
-.header {
-    width: 100%;
-}
-
-.user-btn {
-    color: white;
-    background-color: #333;
-    padding: 5px;
-    margin: 5px;
-    border: 2px solid white;
-    border-radius: 5px;
-    width: 180px;
-}
-
-.user-btn a {
     color: white;
 }
 
+main h1 {
+    color: green;
+}
 
-.user-info {
-    background-color: #333;
-    padding: 1em;
+main {
+    padding: 2em;
+    border: solid 1px #eee;
+}
+
+
+/* --------------------------
+        C L A S S E S
+*/
+
+
+.card {
     margin: 1em;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.card-header {
+    background-color: #d0e0ff;
+}
+
+.content {
+    background-color: #eee;
+    box-shadow: 2px 2px 6px black;
+    padding: 2em;
+}
+
+.logo {
+    float: right;
+}
+
+.logo img {
+    border-radius: 20px;
+    box-shadow: -2px -2px 6px black;
 }
