@@ -23,6 +23,7 @@ header {
 
 header h1 {
     color: yellow;
+    box-shadow: none;
 }
 
 header h2 {
@@ -35,6 +36,8 @@ header h2 {
 
 h1 {
     color: dodgerblue;
+    border-bottom: 2px solid dodgerblue;
+    box-shadow: 2px 2px 5px black;
 }
 
 h2 {
