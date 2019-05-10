@@ -37,17 +37,16 @@ h1 {
 }
 
 h2 {
-    /*background-color: yellow;*/
     border: 1px solid dodgerblue;
     box-shadow: 2px 2px 5px black;
     color: dodgerblue;
+    text-align: center;
+    padding: 20px;
 }
 
 h3 {
     color: darkgreen;
     text-size: 120%;
-    text-align: center;
-    padding: 20px;
 }
 
 main {
