@@ -24,6 +24,7 @@ header {
 header h1 {
     color: yellow;
     box-shadow: none;
+    text-align: left;
 }
 
 header h2 {
@@ -35,9 +36,11 @@ header h2 {
 }
 
 h1 {
-    color: dodgerblue;
     border-bottom: 2px solid dodgerblue;
-    box-shadow: 2px 2px 5px black;
+    color: dodgerblue;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
 }
 
 h2 {
