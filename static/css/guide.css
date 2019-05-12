@@ -50,19 +50,19 @@ h2 {
     box-shadow: 2px 2px 5px black;
     background-color: #dddddd;
     color: dodgerblue;
+    margin: 2em;
     text-align: center;
     padding: 20px;
 }
 
 h3 {
-    color: darkgreen;
+    color: #444444;
     text-size: 120%;
 }
 
 main {
     margin: 3em;
     padding: 2em;
-    /*border: solid 1px #eee;*/
 }
 
 
