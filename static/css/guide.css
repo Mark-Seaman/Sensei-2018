@@ -33,6 +33,7 @@ header h2 {
     background-color: inherit;
     box-shadow: none;
     border: none;
+    margin: inherit;
     text-align: left;
     padding: 0;
 }
