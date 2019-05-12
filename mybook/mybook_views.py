@@ -18,6 +18,8 @@ def domain_menu(domain, page):
 def theme(domain):
     if domain == 'spiritual-things.org':
         return 'spiritual_theme.html'
+    elif domain == 'markseaman.org':
+        return 'seaman_theme.html'
     elif domain == 'seamansguide.com':
         return 'guide_theme.html'
     else:
