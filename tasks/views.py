@@ -15,10 +15,10 @@ from .task import save_monthly_reports
 class TaskBase(LoginRequiredMixin, ContextMixin):
     def get_context_data(self, **kwargs):
         kwargs = super(TaskBase, self).get_context_data(**kwargs)
-        text = doc_html_text("info/Aspire.md")
+        # text = doc_html_text("info/Aspire.md")
         kwargs.update({
             'site': ('Time Accounting', 'Intentional Living'),
-            'text': text,
+            # 'text': text,
             'aspire_menu': True,
         })
         return kwargs
