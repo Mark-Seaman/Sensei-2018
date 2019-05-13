@@ -18,6 +18,7 @@ class TaskBase(LoginRequiredMixin, ContextMixin):
         kwargs.update({
             'site': ('Time Accounting', 'Intentional Living'),
             'aspire_menu': True,
+            'past': True,
         })
         return kwargs
 
@@ -104,7 +105,8 @@ class MyTime(TaskBase, TemplateView):
             'data_month': time_summary(31),
             'data_year': time_summary(366),
             'bad_days': bad_days(),
-            'text': doc_html_text('info/Accomplished.md')
+            'text': doc_html_text('info/Accomplished.md'),
+            'past': True,
         })
         return kwargs
 
@@ -117,7 +119,6 @@ class TimeSummary(TaskBase, TemplateView):
         kwargs = super(TimeSummary, self).get_context_data(**kwargs)
         kwargs.update({
             'title': 'Time Invested',
-            'time_data': time_data(),
         })
         return kwargs
 
