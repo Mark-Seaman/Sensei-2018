@@ -17,8 +17,7 @@ class TaskBase(LoginRequiredMixin, ContextMixin):
         kwargs = super(TaskBase, self).get_context_data(**kwargs)
         kwargs.update({
             'site': ('Time Accounting', 'Intentional Living'),
-            'aspire_menu': True,
-            'past': True,
+            'menu': [True, False, False, False],
         })
         return kwargs
 
@@ -59,18 +58,6 @@ class TaskUpdate(TaskBase, UpdateView):
 # --------------------------
 # Summary
 
-# # Home
-# class TaskHome(TaskBase, TemplateView):
-#     template_name = 'task_theme.html'
-#
-#     def get_context_data(self, **kwargs):
-#         context = super(TaskHome, self).get_context_data(**kwargs)
-#         context.update({
-#             'title': 'Aspire Task History',
-#             'text': doc_html_text('info/Accomplished.md'),
-#         })
-#         return context
-
 
 # List
 class TaskList(TaskBase, ListView):
@@ -106,7 +93,6 @@ class MyTime(TaskBase, TemplateView):
             'data_year': time_summary(366),
             'bad_days': bad_days(),
             'text': doc_html_text('info/Accomplished.md'),
-            'past': True,
         })
         return kwargs
 
