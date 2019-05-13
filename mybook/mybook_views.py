@@ -36,14 +36,14 @@ class MyBookDocDisplay(TemplateView):
         title = self.kwargs.get('title', 'Index')
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
-        site = mybook_site_title(domdoc)
-        menu = main_menu(site, domdoc)
+        # site = mybook_site_title(domdoc)
+        # menu = main_menu(site, domdoc)
         present = (title == 'info/Aspire.md')
         future = not present
-        return dict(site=site, title=title, text=text, menu=menu, present=present, future=future)
+        return dict(title=title, text=text, present=present, future=True)
 
     def get_template_names(self):
-        title = self.kwargs.get('title')
+        # title = self.kwargs.get('title')
         return [theme(self.request.get_host())]
 
 
