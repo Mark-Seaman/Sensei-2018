@@ -66,7 +66,7 @@ class TaskHome(TaskBase, TemplateView):
         context = super(TaskHome, self).get_context_data(**kwargs)
         context.update({
             'title': 'Aspire Task History',
-            'text': doc_html_text('info/Aspire.md'),
+            'text': doc_html_text('info/Accomplished.md'),
         })
         return context
 
