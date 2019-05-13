@@ -40,7 +40,8 @@ class MyBookDocDisplay(TemplateView):
         # menu = main_menu(site, domdoc)
         present = (title == 'info/Aspire.md')
         future = not present
-        return dict(title=title, text=text, present=present, future=True)
+        menu = [ False, True, False, False]
+        return dict(title=title, text=text, menu=menu)
 
     def get_template_names(self):
         # title = self.kwargs.get('title')
