@@ -104,6 +104,7 @@ class MyTime(TaskBase, TemplateView):
             'data_month': time_summary(31),
             'data_year': time_summary(366),
             'bad_days': bad_days(),
+            'text': doc_html_text('info/Accomplished.md')
         })
         return kwargs
 
