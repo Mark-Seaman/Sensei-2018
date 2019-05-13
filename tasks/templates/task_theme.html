@@ -1,92 +1,90 @@
-{% extends "seaman_theme.html" %}
+<!doctype html>
+<html lang="en">
 
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/guide.css">
+    </head>
 
-{% block libs %}
+    <body>
 
-{% endblock %}
-
-
-{% block user %}
-    <div class="pull-right">
-
-        {% if user.is_authenticated and user.is_staff %}
-
-            <p class="htext">
-                Logged in as,
-                <strong>{% firstof user.first_name user.username %}</strong>.
-                <!-- <a href="/password_change">Change password</a> -->
-                <a class="hlink" href="/hire/logout">Log out</a>
-            </p>
-
-        {% else %}
-
-            <p class="htext">You are not logged in.
-                <a class="hlink" href="/hire/login/?next=/hire/"><b>Login</b></a>
-            </p>
-
-        {% endif %}
-
-    </div>
-{% endblock %}
-
-
-{% block menu %}
-    <aside id="s-main-menu" class="sidebar">
-
-        <div class="smm-header">
-            <i class="zmdi zmdi-long-arrow-left" data-ma-action="sidebar-close"></i>
-        </div>
-
-        <ul class="smm-alerts">
-            <li data-user-alert="sua-tasks" data-ma-action="sidebar-open" data-ma-target="user-alerts">
-                <i class="zmdi zmdi-view-list-alt"></i>
-            </li>
-        </ul>
-
-        <ul class="main-menu">
-            {% for m in settings.menu %}
-                <li {{ m.3 }}>
-                    <a href="{{ m.0 }}"><i class="zmdi {{ m.1 }}"></i> {{ m.2 }} </a>
-                </li>
-            {% endfor %}
-        </ul>
-
-
-    </aside>
-{% endblock %}
-
-
-{% block content %}
-    <section id="content">
-        <div class="container">
-
-            <div class="row">
-                <div class="card">
-                    <div class="card-header ch-alt">
-                        <h1>{{ title }}</h1>
-                    </div>
-
-                    <div class="card-body card-padding">
-
-                        {% block page %}
-                        {% endblock %}
-
-                    </div>
-                </div>
-
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+            <a class="navbar-brand" href="#">Aspire</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/task/time">Past <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/info/">Present</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/info/Aspire.md">Future</a>
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div>
-        </div>
-    </section>
-{% endblock %}
+        </nav>
+
+        <header>
+            <div class="logo">
+                <img src="/static/images/SWS_Logo_200.jpg">
+            </div>
+            <div class="titles">
+                <h1>Mark Seaman</h1>
+                <h2>Inventor - Teacher - Writer</h2>
+            </div>
+        </header>
 
 
-{% block footer %}
-    <footer id="footer">
+        <main>
+        
+            {% block content %}
+                <section id="content">
+                    <div class="container">
 
-        <a href="http://shrinking-world.com">
-            {# <img src="/static/SWS_Globe_small.jpg"> #}
-            <p>Copyright &copy; 2016 Shrinking World Solutions, Inc.</p>
-        </a>
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-header ch-alt">
+                                    <h1>{{ title }}</h1>
+                                </div>
 
-    </footer>
-{% endblock %}
+                                <div class="card-body card-padding">
+
+                                    {% block page %}
+                                    {% endblock %}
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            {% endblock %}
+
+        </main>
+
+        <footer>
+            <a href="http://shrinking-world.com">
+                <div class="logo-text">Copyright &copy; 2019 Shrinking World</div>
+            </a>
+        </footer>
+
+    </body>
+
+</html>
+
+
+
+
