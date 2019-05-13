@@ -2,14 +2,13 @@
 
 {% block page %}
 
-    <p>
+    <div class="card">
         <a class="btn btn-primary" href="import">Import</a>
         <a class="btn btn-primary" href="summary">Summary</a>
         {% if bad_days %}
             <a class="btn btn-primary" href="bad">Missing</a>
         {% endif %}
-
-    </p>
+    </div>
 
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">

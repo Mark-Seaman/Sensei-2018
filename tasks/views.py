@@ -17,10 +17,11 @@ class TaskBase(LoginRequiredMixin, ContextMixin):
     def get_context_data(self, **kwargs):
         kwargs = super(TaskBase, self).get_context_data(**kwargs)
         kwargs.update({
-            'site': mybook_site_title('info'),
+            'site': ('Time Accounting', 'Intentional Living'),
             'title': "No title set",
             'menu': main_menu('info','info/Index'),
             'text': 'Task Base',
+            'aspire_menu': True,
         })
         return kwargs
 
