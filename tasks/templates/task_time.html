@@ -36,15 +36,13 @@
 
 {% block content %}
 
-    <div class="card">
-        <div>
-            <a class="btn btn-primary" href="import">Import</a>
-            <a class="btn btn-primary" href="summary">Summary</a>
-            {% if bad_days %}
-                <a class="btn btn-primary" href="bad">Missing</a>
-            {% endif %}
-        </div>
-    </div>
+    <a class="btn btn-primary" href="import">Import</a> &nbsp;
+    <a class="btn btn-primary" href="summary">Summary</a> &nbsp;
+    {% if bad_days %}
+        <a class="btn btn-primary" href="bad">Missing</a> &nbsp;
+    {% endif %}
+    <br>
+    <br>
 
     {#    {% if text %}#}
     {#        {% autoescape off %}#}

@@ -19,7 +19,7 @@ footer {
 header {
     background-color: dodgerblue;
     border-radius: 20px;
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 2px 2px 5px grey;
     height: 200px;
     margin: 2em;
     padding: 3em;
@@ -52,7 +52,7 @@ h1 {
 h2 {
     border: 1px solid dodgerblue;
     border-radius: 20px;
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 2px 2px 4px grey;
     color: dodgerblue;
     margin: 2em;
     text-align: center;
