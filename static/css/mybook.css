@@ -185,6 +185,12 @@ ul ul {
     margin-top: 50px;
 }
 
+.page {
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px grey;
+    padding: 2em;
+}
+
 .panel {
     background-color: #eeeeee;
     box-shadow: 2px 2px 5px grey;
