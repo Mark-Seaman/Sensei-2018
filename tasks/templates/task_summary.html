@@ -4,12 +4,15 @@
 
 
     <div class="card">
-        <a class="btn btn-primary" href="import">Import</a>
-        <a class="btn btn-primary" href="export">Export</a>
-        <a class="btn btn-primary" href="time">Summary</a>
-        {% if bad_days %}
-            <a class="btn-primary" href="bad">Missing</a>
-        {% endif %}
+        <div>
+            <a class="btn btn-primary" href="import">Import</a>
+            <a class="btn btn-primary" href="export">Export</a>
+            <a class="btn btn-primary" href="time">Summary</a>
+            {% if bad_days %}
+                <a class="btn-primary" href="bad">Missing</a>
+            {% endif %}
+
+        </div>
     </div>
 
     <div class="page">

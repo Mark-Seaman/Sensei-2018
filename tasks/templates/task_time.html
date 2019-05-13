@@ -3,11 +3,13 @@
 {% block page %}
 
     <div class="card">
-        <a class="btn btn-primary" href="import">Import</a>
-        <a class="btn btn-primary" href="summary">Summary</a>
-        {% if bad_days %}
-            <a class="btn btn-primary" href="bad">Missing</a>
-        {% endif %}
+        <div>
+            <a class="btn btn-primary" href="import">Import</a>
+            <a class="btn btn-primary" href="summary">Summary</a>
+            {% if bad_days %}
+                <a class="btn btn-primary" href="bad">Missing</a>
+            {% endif %}
+        </div>
     </div>
 
     <nav>
@@ -58,6 +60,7 @@
 
         </div>
         <div class="tab-pane fade" id="nav-2" aria-labelledby="tab-2" role="tabpanel">
+
             <h3>Last Month</h3>
             <p>Total hours spent for the previous month.</p>
 
@@ -83,11 +86,12 @@
                 {% endfor %}
 
             </table>
+
         </div>
         <div class="tab-pane fade" id="nav-3" aria-labelledby="tab-3" role="tabpanel">
+
             <h3>Last Year</h3>
             <p>Total hours spent for the previous year.</p>
-
 
             <table class="table table-hover p-20">
 
@@ -111,6 +115,7 @@
                 {% endfor %}
 
             </table>
+
         </div>
     </div>
 
