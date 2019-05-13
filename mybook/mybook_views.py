@@ -27,7 +27,7 @@ def theme(domain):
     elif domain == 'seamansguide.com':
         return 'guide_theme.html'
     else:
-        return 'mybook_theme.html'
+        return 'seaman_theme.html'
 
 
 class MyBookDocDisplay(TemplateView):
@@ -57,7 +57,7 @@ class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
 
 
 class BookNotes(MyBookDocDisplay):
-    template_name = 'mybook_theme.html'
+    template_name = 'seaman_theme.html'
 
     def get_context_data(self, **kwargs):
         title = join('booknotes', self.kwargs.get('title', 'Index'))
