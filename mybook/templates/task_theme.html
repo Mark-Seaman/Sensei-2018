@@ -41,6 +41,14 @@
 
     <div class="page">
 
+         {% if text %}
+            {% autoescape off %}
+                <p>{{ text }}</p>
+            {% endautoescape %}
+        {% else %}
+            <h2>No document found. {{ doc }}</h2>
+        {% endif %}
+
         {% block page %}
         {% endblock %}
 
