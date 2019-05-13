@@ -36,11 +36,7 @@ class MyBookDocDisplay(TemplateView):
         title = self.kwargs.get('title', 'Index')
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
-        # site = mybook_site_title(domdoc)
-        # menu = main_menu(site, domdoc)
-        present = (title == 'info/Aspire.md')
-        future = not present
-        menu = [ False, True, False, False]
+        menu = [False, True, False, False]
         return dict(title=title, text=text, menu=menu)
 
     def get_template_names(self):
@@ -55,8 +51,11 @@ class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
         title = self.kwargs.get('title', 'Index')
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
-        site = mybook_site_title(domdoc)
-        return dict(site=site, title=title, text=text, aspire_menu=True)
+        past = title.startswith('task/')
+        present = (title == 'info/Aspire.md')
+        future = not present and not past
+        menu = [past, present, future, False]
+        return dict(title=title, text=text, menu=menu)
 
 
 class BookNotes(MyBookDocDisplay):
