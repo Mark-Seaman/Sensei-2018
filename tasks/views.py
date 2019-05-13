@@ -58,17 +58,17 @@ class TaskUpdate(TaskBase, UpdateView):
 # --------------------------
 # Summary
 
-# Home
-class TaskHome(TaskBase, TemplateView):
-    template_name = 'task_theme.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(TaskHome, self).get_context_data(**kwargs)
-        context.update({
-            'title': 'Aspire Task History',
-            'text': doc_html_text('info/Accomplished.md'),
-        })
-        return context
+# # Home
+# class TaskHome(TaskBase, TemplateView):
+#     template_name = 'task_theme.html'
+#
+#     def get_context_data(self, **kwargs):
+#         context = super(TaskHome, self).get_context_data(**kwargs)
+#         context.update({
+#             'title': 'Aspire Task History',
+#             'text': doc_html_text('info/Accomplished.md'),
+#         })
+#         return context
 
 
 # List

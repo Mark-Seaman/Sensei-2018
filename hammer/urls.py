@@ -36,7 +36,6 @@ urlpatterns = [
 
     # Task
     url(r'^task/',      include(tasks.urls)),
-    url(r'^task',       include(tasks.urls)),
 
     # Tool
     url(r'^',           include(tool.urls)),

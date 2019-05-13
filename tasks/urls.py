@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from tasks.views import TaskHome, TaskDetail, TaskCreate, TaskList, TaskUpdate, TaskDelete, TaskExport, TaskImport, MyTime, TimeSummary, MissingDays
+from tasks.views import TaskDetail, TaskCreate, TaskList, TaskUpdate, TaskDelete, TaskExport, TaskImport, MyTime, TimeSummary, MissingDays
 
 urlpatterns = [
 
@@ -16,7 +16,7 @@ urlpatterns = [
     url(r'^export$',                TaskExport.as_view()),
 
     # Time Summary
-    url(r'^$',                          TaskHome.as_view()),
+    # url(r'^$',                          TaskHome.as_view()),
     url(r'^summary$',                   TimeSummary.as_view()),
     url(r'^time$',                      MyTime.as_view()),
     url(r'^bad$',                       MissingDays.as_view()),
