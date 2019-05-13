@@ -47,7 +47,13 @@ class MyBookDocDisplay(TemplateView):
 
 
 class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
-    pass
+
+    def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title', 'Index')
+        domdoc = domain_doc(self.request.get_host(), title)
+        text = doc_html_text(domdoc, '/static/images')
+        site = mybook_site_title(domdoc)
+        return dict(site=site, title=title, text=text, aspire_menu=True)
 
 
 class BookNotes(MyBookDocDisplay):
