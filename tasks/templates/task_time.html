@@ -2,7 +2,7 @@
 
 {% block page %}
 
-    <div class="card">
+    <div class="card" style="margin: 50%">
         <div>
             <a class="btn btn-primary" href="import">Import</a>
             <a class="btn btn-primary" href="summary">Summary</a>
@@ -11,6 +11,15 @@
             {% endif %}
         </div>
     </div>
+
+    {% if text %}
+        {% autoescape off %}
+            <p>{{ text }}</p>
+        {% endautoescape %}
+    {% else %}
+        <h2>No document found. {{ doc }}</h2>
+    {% endif %}
+
 
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">

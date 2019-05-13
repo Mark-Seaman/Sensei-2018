@@ -4,7 +4,6 @@ from django.views.generic import DetailView, ListView, RedirectView, TemplateVie
 from django.views.generic.base import ContextMixin
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
-from mybook.mybook import main_menu, mybook_site_title
 from tasks.models import Task
 from tool.document import doc_html_text
 from .summary import time_data, time_summary, bad_days_data, bad_days, activity_summary, task_activity_details, \
@@ -16,14 +15,14 @@ from .task import save_monthly_reports
 class TaskBase(LoginRequiredMixin, ContextMixin):
     def get_context_data(self, **kwargs):
         kwargs = super(TaskBase, self).get_context_data(**kwargs)
+        text = doc_html_text("Document/info/Aspire.md")
         kwargs.update({
             'site': ('Time Accounting', 'Intentional Living'),
-            'title': "No title set",
-            'menu': main_menu('info','info/Index'),
-            'text': 'Task Base',
+            'text': text,
             'aspire_menu': True,
         })
         return kwargs
+
 
 # --------------------------
 # Records
@@ -45,7 +44,7 @@ class TaskDetail(DetailView):
 # Create
 class TaskCreate(CreateView):
     model = Task
-    fields = ['name', 'date', 'notes','hours','done']
+    fields = ['name', 'date', 'notes', 'hours', 'done']
     template_name = 'task_edit.html'
     success_url = reverse_lazy('task_list')
 
@@ -53,7 +52,7 @@ class TaskCreate(CreateView):
 # Update
 class TaskUpdate(TaskBase, UpdateView):
     model = Task
-    fields = ['name', 'date', 'notes','hours','done']
+    fields = ['name', 'date', 'notes', 'hours', 'done']
     template_name = 'task_edit.html'
     success_url = reverse_lazy('task_list')
 
@@ -160,4 +159,3 @@ class TaskExport(TaskBase, TemplateView):
         report = save_monthly_reports('2018')
         kwargs.update(dict(title='Export Tasks', days=days, report=report))
         return kwargs
-
