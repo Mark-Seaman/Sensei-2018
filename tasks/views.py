@@ -60,14 +60,13 @@ class TaskUpdate(TaskBase, UpdateView):
 
 # Home
 class TaskHome(TaskBase, TemplateView):
-    template_name = 'mybook_public.html'
+    template_name = 'task_theme.html'
 
     def get_context_data(self, **kwargs):
         context = super(TaskHome, self).get_context_data(**kwargs)
         context.update({
             'title': 'Aspire Task History',
-            'labels': Task.labels()[1:],
-            'text': doc_html_text('aspire/Task'),
+            'text': doc_html_text('info/Aspire.md'),
         })
         return context
 
