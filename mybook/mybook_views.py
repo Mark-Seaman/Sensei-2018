@@ -23,7 +23,7 @@ def theme(domain):
     elif domain == 'markseaman.info':
         return 'task_theme.html'
     elif domain == 'seamanslog.com':
-        return 'seaman_theme.html'
+        return 'log_theme.html'
     elif domain == 'seamansguide.com':
         return 'guide_theme.html'
     else:
