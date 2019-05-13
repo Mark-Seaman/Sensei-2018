@@ -40,6 +40,8 @@
                     </form>
                 </div>
             </nav>
+        {% else %}
+            <h1>Shrinking World Menu</h1>
         {% endif %}
 
 
@@ -67,12 +69,12 @@
 
                             <div class="page">
                                 {% if text %}
-                                {% autoescape off %}
-                                    <p>{{ text }}</p>
-                                {% endautoescape %}
-                            {% else %}
-                                <h2>No document found. {{ doc }}</h2>
-                            {% endif %}
+                                    {% autoescape off %}
+                                        <p>{{ text }}</p>
+                                    {% endautoescape %}
+                                {% else %}
+                                    <h2>No document found. {{ doc }}</h2>
+                                {% endif %}
                             </div>
 
                         </div>
@@ -85,9 +87,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
 
             {% endblock %}
         </main>
