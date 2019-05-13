@@ -4,6 +4,10 @@
         E L E M E N T S
 */
 
+* {
+    text-size: 18px;
+}
+
 footer {
     color: darkgrey;
     padding: 2em;
