@@ -11,6 +11,111 @@
 
     </p>
 
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="tab-1" href="#nav-1" aria-controls="nav-1" aria-selected="true"
+               role="tab" data-toggle="tab">
+                WEEK
+            </a>
+            <a class="nav-item nav-link" id="tab-2" href="#nav-2" aria-controls="nav-2" aria-selected="false" role="tab"
+               data-toggle="tab">
+                MONTH
+            </a>
+            <a class="nav-item nav-link" id="tab-3" href="#nav-3" aria-controls="nav-3" aria-selected="false" role="tab"
+               data-toggle="tab">
+                YEAR
+            </a>
+        </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-1" aria-labelledby="tab-1" role="tabpanel">
+
+            <h3>Week</h3>
+            <p>Total hours spent for the previous week.</p>
+
+            <table class="table table-hover p-20">
+
+                {% for label in data_week.labels %}
+                    <th>{{ label }}</th>
+                {% endfor %}
+
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>{{ data_week.total }} Hours</strong></td>
+                </tr>
+
+                {% for row in data_week.table %}
+                    <tr>
+                        <td><a href="/task/{{ row.0 }}">{{ row.0 }}</a></td>
+                        <td>{{ row.1 }} hours</td>
+                        {% if row.2 %}
+                            <td>{{ row.2 }}%</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+
+            </table>
+
+        </div>
+        <div class="tab-pane fade" id="nav-2" aria-labelledby="tab-2" role="tabpanel">
+            <h3>MONTH</h3>
+            <p>Total hours spent for the previous month.</p>
+
+            <table class="table table-hover p-20">
+
+                {% for label in data_month.labels %}
+                    <th>{{ label }}</th>
+                {% endfor %}
+
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>{{ data_month.total }} Hours</strong></td>
+                </tr>
+
+                {% for row in data_month.table %}
+                    <tr>
+                        <td><a href="/task/{{ row.0 }}">{{ row.0 }}</a></td>
+                        <td>{{ row.1 }} hours</td>
+                        {% if row.2 %}
+                            <td>{{ row.2 }}%</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+        <div class="tab-pane fade" id="nav-3" aria-labelledby="tab-3" role="tabpanel">
+            <h3>YEAR</h3>
+            <p>Total hours spent for the previous year.</p>
+
+
+            <table class="table table-hover p-20">
+
+                {% for label in data_year.labels %}
+                    <th>{{ label }}</th>
+                {% endfor %}
+
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>{{ data_year.total }} Hours</strong></td>
+                </tr>
+
+                {% for row in data_year.table %}
+                    <tr>
+                        <td><a href="/task/{{ row.0 }}">{{ row.0 }}</a></td>
+                        <td>{{ row.1 }} hours</td>
+                        {% if row.2 %}
+                            <td>{{ row.2 }}%</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+
+            </table>
+        </div>
+    </div>
+
+
     <div role="tabpanel">
 
         <ul class="tab-nav" role="tablist">
@@ -27,85 +132,14 @@
 
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="week">
-                <p>Total hours spent for the previous week.</p>
-
-                <table class="table table-hover p-20">
-
-                    {% for label in data_week.labels %}
-                        <th>{{ label }}</th>
-                    {% endfor %}
-
-                    <tr>
-                        <td><strong>Total</strong></td>
-                        <td><strong>{{ data_week.total }} Hours</strong></td>
-                    </tr>
-
-                    {% for row in data_week.table %}
-                        <tr>
-                            <td><a href="/task/{{ row.0 }}">{{ row.0 }}</a></td>
-                            <td>{{ row.1 }} hours</td>
-                            {% if row.2 %}
-                                <td>{{ row.2 }}%</td>
-                            {% endif %}
-                        </tr>
-                    {% endfor %}
-
-                </table>
 
             </div>
             <div role="tabpanel" class="tab-pane" id="month">
-                <p>Total hours spent for the previous month.</p>
 
-                <table class="table table-hover p-20">
-
-                    {% for label in data_month.labels %}
-                        <th>{{ label }}</th>
-                    {% endfor %}
-
-                    <tr>
-                        <td><strong>Total</strong></td>
-                        <td><strong>{{ data_month.total }} Hours</strong></td>
-                    </tr>
-
-                    {% for row in data_month.table %}
-                        <tr>
-                            <td><a href="/task/{{ row.0 }}">{{ row.0 }}</a></td>
-                            <td>{{ row.1 }} hours</td>
-                            {% if row.2 %}
-                                <td>{{ row.2 }}%</td>
-                            {% endif %}
-                        </tr>
-                    {% endfor %}
-
-                </table>
 
             </div>
             <div role="tabpanel" class="tab-pane" id="year">
-                <p>Total hours spent for the previous year.</p>
 
-
-                <table class="table table-hover p-20">
-
-                    {% for label in data_year.labels %}
-                        <th>{{ label }}</th>
-                    {% endfor %}
-
-                    <tr>
-                        <td><strong>Total</strong></td>
-                        <td><strong>{{ data_year.total }} Hours</strong></td>
-                    </tr>
-
-                    {% for row in data_year.table %}
-                        <tr>
-                            <td><a href="/task/{{ row.0 }}">{{ row.0 }}</a></td>
-                            <td>{{ row.1 }} hours</td>
-                            {% if row.2 %}
-                                <td>{{ row.2 }}%</td>
-                            {% endif %}
-                        </tr>
-                    {% endfor %}
-
-                </table>
 
             </div>
         </div>
