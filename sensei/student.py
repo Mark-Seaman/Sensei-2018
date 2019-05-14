@@ -3,11 +3,8 @@ from traceback import format_exc
 
 from django.contrib.auth.models import User
 
-from mybook.mybook import mybook_site_title, main_menu
-
 from .models import Student
 from tool.log import log, log_exception
-# from tool.user import user_add
 
 
 def delete_students():
@@ -140,8 +137,7 @@ def student_totals():
 def site_settings(**kwargs):
     doc = kwargs.get('doc', 'unc/bacs200')
     site = ('UNC Digital Classroom', 'BACS 200 - Intro Web Dev', '/unc/bacs200/')
-    menu = main_menu(site, doc)
-    settings = dict(site=site, menu=menu)
+    settings = dict(site=site)
     settings.update(kwargs)
     return settings
 
