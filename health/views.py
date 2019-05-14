@@ -4,7 +4,6 @@ from django.views.generic.base import TemplateView
 from .models import HealthScore
 from tool.document import doc_html_text
 from tool.log import log
-from mybook.mybook import main_menu
 
 
 # def health_menu(page):
@@ -22,7 +21,6 @@ def health_settings(page='home'):
         'subtitle': 'What you measure improves',
         'label': '',
         'color': 'teal',
-        'menu': main_menu('health', 'health/'+page),
         'footer': True,
     }
 
