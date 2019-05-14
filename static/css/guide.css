@@ -42,6 +42,10 @@ header h2 {
     padding: 0;
 }
 
+hr {
+    border: 3px solid dodgerblue;
+}
+
 h1 {
     color: dodgerblue;
     padding: 20px;
@@ -71,8 +75,10 @@ main {
 
 pre {
     border: 1px solid grey;
-    border-left: 3px solid blue;
+    border-left: 3px solid dodgerblue;
+    padding: 10px 20px;
 }
+
 
 /* --------------------------
         C L A S S E S
