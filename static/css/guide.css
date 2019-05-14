@@ -69,6 +69,10 @@ main {
     padding: 2em;
 }
 
+pre {
+    border-left: 2px solid blue;
+    border: 1px solid grey;
+}
 
 /* --------------------------
         C L A S S E S
