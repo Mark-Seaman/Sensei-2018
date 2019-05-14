@@ -30,6 +30,13 @@ def theme(domain):
         return 'mybook_theme.html'
 
 
+class DomainRedirect(RedirectView):
+
+    def get_redirect_url(self, *args, **kwargs):
+        return '/%s' % domain_doc(self.request.get_host())
+
+
+
 class MyBookDocDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
