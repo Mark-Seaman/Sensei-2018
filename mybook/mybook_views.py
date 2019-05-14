@@ -16,6 +16,7 @@ class DomainRedirect(RedirectView):
 
 
 class MyBookRandom(RedirectView):
+    permanent = False
 
     def get_redirect_url(self, *args, **kwargs):
         title = self.kwargs.get('title')
