@@ -20,7 +20,7 @@ urlpatterns = [
     url(r'^spiritual/(?P<title>[\w\-_.]*)$',    SpiritualSelect.as_view()),
 
     # Documents
+    url(r'^',                                   DomainRedirect.as_view()),
     url(r'^(?P<title>[\w/\-_.]*)/Random$',      MyBookRandom.as_view()),
     url(r'^(?P<title>[\w/\-_.]*)$',             MyBookDocDisplay.as_view()),
-    url(r'^',                                   DomainRedirect.as_view()),
 ]

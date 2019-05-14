@@ -4,30 +4,9 @@ from os import listdir
 from os.path import join
 from random import choice
 
-from .mybook import booknotes_excerpt, main_menu, mybook_site_title
+from .mybook import booknotes_excerpt, theme
 from .outline import outline, read_cards, tabs_data
 from tool.document import doc_html_text, domain_doc
-
-
-def domain_menu(domain, page):
-    domdoc = domain_doc(domain, page)
-    site = mybook_site_title(domdoc)
-    return main_menu(site, domdoc)
-
-
-def theme(domain):
-    if domain == 'spiritual-things.org':
-        return 'spiritual_theme.html'
-    elif domain == 'markseaman.org':
-        return 'log_theme.html'
-    elif domain == 'markseaman.info':
-        return 'task_theme.html'
-    elif domain == 'seamanslog.com':
-        return 'log_theme.html'
-    elif domain == 'seamansguide.com':
-        return 'guide_theme.html'
-    else:
-        return 'mybook_theme.html'
 
 
 class DomainRedirect(RedirectView):
