@@ -93,7 +93,7 @@ def ops_root(server=host, cmd=''):
 def ops_update(args):
     vc_commit(args)
     ops_deploy()
-    web('http://shrinking-world.com/Test')
+    web('http://MarkSeaman.info/info/Test')
 
 
 def remote_command(server, cmd, user='django'):

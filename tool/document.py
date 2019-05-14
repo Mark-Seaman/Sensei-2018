@@ -73,6 +73,8 @@ def domain_doc(domain, page):
         d = 'seamanslog'
     elif domain == 'seamansguide.com':
         d = 'guide'
+    elif domain == 'shrinking-world.com':
+        d = 'shrinkingworld'
     else:
         return page
 
