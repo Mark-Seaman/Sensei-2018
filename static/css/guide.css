@@ -74,8 +74,10 @@ main {
 }
 
 pre {
-    border: 1px solid grey;
+    border: 1px solid dodgerblue;
     border-left: 3px solid dodgerblue;
+    border-right: 3px solid dodgerblue;
+    margin-left: 3em;
     padding: 10px 20px;
 }
 
