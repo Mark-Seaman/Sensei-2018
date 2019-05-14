@@ -12,7 +12,7 @@ from tool.document import doc_html_text, domain_doc
 class DomainRedirect(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
-        return '/%s/' % domain_doc(self.request.get_host())
+        return '/%s/' % domain_doc(self.request.get_host(),'')
 
 
 class MyBookRandom(RedirectView):
