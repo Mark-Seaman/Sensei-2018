@@ -102,11 +102,13 @@ class DailyTask(RedirectView):
 
 
 class SeamansLog(RedirectView):
+    permanent = False
+    url = '/seamanslog/Random'
 
-    def get_redirect_url(self, *args, **kwargs):
-        files = listdir(join('Documents', 'seamanslog'))
-        file = choice(files)
-        return '/seamanslog/%s' % (file)
+    # def get_redirect_url(self, *args, **kwargs):
+    #     files = listdir(join('Documents', 'seamanslog'))
+    #     file = choice(files)
+    #     return  % (file)
 
 
 class SpiritualSelect(RedirectView):
