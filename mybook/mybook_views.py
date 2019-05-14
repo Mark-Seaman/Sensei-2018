@@ -33,8 +33,16 @@ def theme(domain):
 class DomainRedirect(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
-        return '/%s' % domain_doc(self.request.get_host())
+        return '/%s/' % domain_doc(self.request.get_host())
 
+
+class MyBookRandom(RedirectView):
+
+    def get_redirect_url(self, *args, **kwargs):
+        title = self.kwargs.get('title')
+        files = listdir(join('Documents', title))
+        file = choice(files)
+        return '/%s/%s' % (title, file)
 
 
 class MyBookDocDisplay(TemplateView):
