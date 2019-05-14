@@ -15,6 +15,7 @@ class DomainRedirect(RedirectView):
         return '/%s/' % domain_doc(self.request.get_host(),'')
 
 
+
 class MyBookRandom(RedirectView):
     permanent = False
 
@@ -23,6 +24,7 @@ class MyBookRandom(RedirectView):
         files = listdir(join('Documents', title))
         file = choice(files)
         return '/%s/%s' % (title, file)
+
 
 
 class MyBookDocDisplay(TemplateView):
