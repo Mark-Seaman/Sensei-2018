@@ -78,11 +78,17 @@ def get_menu(title):
         ]
     elif title.startswith('Leverage'):
         return "Shrinking World", [
-            dict(url='https://shrinking-world.com/Leverage',       label='Book',        active=' active'),
-            dict(url='https://shrinking-world.com/Leverage/Part1', label='Leverage',    active=''),
+            dict(url='https://shrinking-world.com/Leverage', label='Book', active=' active'),
+            dict(url='https://shrinking-world.com/Leverage/Part1', label='Leverage', active=''),
             dict(url='https://shrinking-world.com/Leverage/Part2', label='Development', active=''),
-            dict(url='https://shrinking-world.com/Leverage/Part3', label='Devops',      active=''),
-            dict(url='https://shrinking-world.com/Leverage/Part4', label='People',      active=''),
+            dict(url='https://shrinking-world.com/Leverage/Part3', label='Devops', active=''),
+            dict(url='https://shrinking-world.com/Leverage/Part4', label='People', active=''),
+        ]
+    elif title.startswith('guide'):
+        return "Seaman's Guide", [
+            dict(url='https://shrinking-world.com', label='Shrinking World', active=''),
+            dict(url='https://shrinking-world.com/unc/', label='UNC Courses', active=''),
+            dict(url='https://markseaman.org', label='Mark Seaman', active=''),
         ]
     else:
         return 'Shrinking World', [
