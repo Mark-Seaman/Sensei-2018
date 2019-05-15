@@ -1,0 +1,21 @@
+{% extends "mybook_theme.html" %}
+
+
+{% block content %}
+
+    <div class="card" brd-20>
+
+        <div class="card-header ch-alt">
+            <h1>Page: {{ title }}</h1>
+        </div>
+
+        <div class="card-body card-padding">
+
+            {% for item in list %}
+                <p>{{ item }}</p>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}

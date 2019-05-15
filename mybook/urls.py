@@ -19,6 +19,7 @@ urlpatterns = [
 
     # Seaman's Log
     url(r'^seamanslog/Index$',                  SeamansLog.as_view()),
+    url(r'^seamanslog/List$',                   DocList.as_view()),
 
     # Spiritual
     url(r'^spiritual/Index$',                   SpiritualDoc.as_view()),

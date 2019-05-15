@@ -1,5 +1,4 @@
-from django.http import Http404
-from os import mkdir
+from os import mkdir, listdir
 from os.path import exists, isdir, isfile, join, dirname
 from platform import node
 
@@ -50,6 +49,7 @@ def doc_exists(title):
 def doc_html_text(page, image_path=None):
     doc = doc_exists(page)
     if not doc:
+        # from django.http import Http404
         # raise Http404("DocDisplay - Document does not exist")
         return "<h1>Missing Document</h1><p>We are sorry, but the document you were looking for could not be found.</p>"
     return file_to_html(doc, image_path)
@@ -57,6 +57,10 @@ def doc_html_text(page, image_path=None):
 
 def doc_link(title):
     return title.replace('.md', '')
+
+
+def doc_list(title):
+    return listdir(doc_path(title))
 
 
 def doc_path(page):

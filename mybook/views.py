@@ -4,11 +4,23 @@ from os import listdir
 from os.path import join
 from random import choice
 
-from tool.document import doc_html_text, domain_doc
+from tool.document import doc_html_text, doc_list, domain_doc
 from tool.log import log_page
 
 from .mybook import booknotes_excerpt, theme
 from .outline import outline, read_cards, tabs_data
+
+
+class DocList(TemplateView):
+    template_name = 'mybook_list.html'
+
+    def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title', 'Index')
+        log_page(self.request, title)
+        list = doc_list(title)
+        menu = self.get_menu()
+        return dict(title=title, list=list, menu=menu)
+
 
 
 class DomainRedirect(RedirectView):
