@@ -44,8 +44,11 @@ class MyBookDocDisplay(TemplateView):
 
     def get_menu(self):
         return [
-            dict(url='https://shrinking-world.com', label='Shrinking World', active='active'),
+            dict(url='https://seamanslog.com',      label='Blog',               active=' active'),
+            dict(url='https://shrinking-world.com', label='Shrinking World',    active=''),
+            dict(url='https://markseaman.org',      label='Mark Seaman',        active=''),
         ]
+
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
