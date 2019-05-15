@@ -13,7 +13,7 @@ from tool.log import log_page
 class DomainRedirect(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
-        return '/%s/' % domain_doc(self.request.get_host(),'')
+        return '/%s' % domain_doc(self.request.get_host(),'Index')
 
 
 
