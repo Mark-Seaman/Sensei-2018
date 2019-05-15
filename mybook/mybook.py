@@ -98,9 +98,6 @@ def get_menu(title):
         ]
 
 
-
-'''
-
 def theme(domain):
     if domain == 'spiritual-things.org':
         return 'spiritual_theme.html'
