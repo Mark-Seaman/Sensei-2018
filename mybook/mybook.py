@@ -47,31 +47,25 @@ def booknotes_excerpt(doc):
 
 def get_menu(title):
     if title.startswith('info'):
-        return 'Mark ', [
+        return 'ASPIRE ', [
             dict(url='https://seamanslog.com', label='Blog', active=''),
             dict(url='https://shrinking-world.com', label='Shrinking World', active=''),
             dict(url='https://markseaman.org', label='Mark Seaman', active=' active'),
         ]
     elif title.startswith('markseaman'):
-        return 'Mark ', [
+        return 'Mark Seaman ', [
             dict(url='https://seamanslog.com', label='Blog', active=''),
             dict(url='https://shrinking-world.com', label='Shrinking World', active=''),
             dict(url='https://markseaman.org', label='Mark Seaman', active=' active'),
         ]
     elif title.startswith('seamanslog'):
         index = ' active' if (title == 'seamanslog/Index') else ''
+        listing = ' active' if (title == 'seamanslog/List') else ''
+        reading = (not index and not listing)
         return "Seaman's Log", [
             dict(url='https://seamanslog.com/seamanslog/Index', label='Blog', active=index),
-            dict(url='https://seamanslog.com/seamanslog/List', label='Articles', active=''),
-            dict(url='https://seamanslog.com/seamanslog/Random', label='Read', active=''),
-            dict(url='https://markseaman.org', label='Mark Seaman', active=''),
-        ]
-    elif title.startswith('spiritual'):
-        index = ' active' if (title == 'spiritual/Index') else ''
-        return "Spiritual Things", [
-            dict(url='https://seamanslog.com/seamanslog/Index', label='A', active=index),
-            dict(url='https://seamanslog.com/seamanslog/List', label='B', active=''),
-            dict(url='https://seamanslog.com/seamanslog/Random', label='C', active=''),
+            dict(url='https://seamanslog.com/seamanslog/List', label='Articles', active=listing),
+            dict(url='https://seamanslog.com/seamanslog/Random', label='Read', active=reading),
             dict(url='https://markseaman.org', label='Mark Seaman', active=''),
         ]
     elif title.startswith('shrinkingworld'):

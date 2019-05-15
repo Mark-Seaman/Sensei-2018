@@ -24,7 +24,7 @@ def spiritual_menu(title):
     menu_items = [dict(url='/spiritual/'+i[0], label=i[1], active=is_active(title,i[0])) for i in spiritual()]
 
     return "Spiritual Things", menu_items
-    
+
     # return "Spiritual Things", [
     #     dict(url='/spiritual/Index', label='Home', active=is_active(title,'Index')),
     #     dict(url='/spiritual/reflect', label='Reflect', active=is_active(title,'reflect')),
