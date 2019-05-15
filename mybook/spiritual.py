@@ -9,62 +9,30 @@ from tool.log import log_page
 
 
 def spiritual():
-    return ['reflect', 'bible', 'teaching', 'walkabout', 'prayers']
+    return [('Index', 'Home'),
+            ('reflect', 'Reflect'),
+            ('bible', 'Meditate'),
+            ('teaching', 'Learn'),
+            ('walkabout', 'Journey'),
+            ('prayers', 'Pray')]
 
 
 def spiritual_menu(title):
     def is_active(title, topic):
         return ' active' if title.startswith(topic) else ''
 
-    return "Spiritual Things", [
-        dict(url='/spiritual/Index', label='Home', active=is_active(title,'Index')),
-        dict(url='/spiritual/reflect', label='Reflect', active=is_active(title,'reflect')),
-        dict(url='/spiritual/prayers', label='Pray', active=is_active(title, 'prayers')),
-        dict(url='/spiritual/bible', label='Meditate', active=is_active(title, 'bible')),
-        dict(url='/spiritual/teaching', label='Learn', active=is_active(title, 'teaching')),
-        dict(url='/spiritual/walkabout', label='Journey', active=is_active(title, 'walkabout')),
-    ]
+    menu_items = [dict(url='/spiritual/'+i[0], label=i[1], active=is_active(title,i[0])) for i in spiritual()]
 
-'''
-{% block menu %}
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-
-        <a class="navbar-brand" href="#">Spiritual Things</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item{% if menu.0 %} active{% endif %}">
-                    <a class="nav-link" href="">Home</a>
-                </li>
-                <li class="nav-item{% if menu.1 %} active{% endif %}">
-                    <a class="nav-link" href="">Reflect</a>
-                </li>
-                <li class="nav-item{% if menu.2 %} active{% endif %}">
-                    <a class="nav-link" href="/spiritual/bible">Mediate</a>
-                </li>
-                <li class="nav-item{% if menu.3 %} active{% endif %}">
-                    <a class="nav-link" href="/spiritual/teaching">Learn</a>
-                </li>
-                <li class="nav-item{% if menu.4 %} active{% endif %}">
-                    <a class="nav-link" href="/spiritual/walkabout">Journey</a>
-                </li>
-                <li class="nav-item{% if menu.5 %} active{% endif %}">
-                    <a class="nav-link" href="/spiritual/prayers">Pray</a>
-                </li>
-            </ul>
-        </div>
-
-    </nav>
-
-{% endblock %}
-'''
+    return "Spiritual Things", menu_items
+    
+    # return "Spiritual Things", [
+    #     dict(url='/spiritual/Index', label='Home', active=is_active(title,'Index')),
+    #     dict(url='/spiritual/reflect', label='Reflect', active=is_active(title,'reflect')),
+    #     dict(url='/spiritual/prayers', label='Pray', active=is_active(title, 'prayers')),
+    #     dict(url='/spiritual/bible', label='Meditate', active=is_active(title, 'bible')),
+    #     dict(url='/spiritual/teaching', label='Learn', active=is_active(title, 'teaching')),
+    #     dict(url='/spiritual/walkabout', label='Journey', active=is_active(title, 'walkabout')),
+    # ]
 
 
 class SpiritualDoc(TemplateView):
