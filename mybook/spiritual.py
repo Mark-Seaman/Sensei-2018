@@ -15,9 +15,10 @@ def spiritual_menu(title):
     return [title == 'Index'] + [title.startswith(i) for i in spiritual()]
 
 
-class SpiritualDoc(TemplateView):
+class SpiritualDoc(TemplateView, RedirectView):
     template_name = 'spiritual_theme.html'
-
+    url = '/spiritual/Missing'
+    
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
         domdoc = domain_doc(self.request.get_host(), title)
