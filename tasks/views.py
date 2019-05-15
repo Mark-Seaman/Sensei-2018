@@ -19,7 +19,8 @@ class TaskBase(LoginRequiredMixin, ContextMixin):
         kwargs = super(TaskBase, self).get_context_data(**kwargs)
         kwargs.update({
             'site': ('Time Accounting', 'Intentional Living'),
-            'menu': get_menu('task')
+            'menu': get_menu('task'),
+            'aspire_menu': True,
         })
         return kwargs
 
