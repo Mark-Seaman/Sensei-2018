@@ -81,6 +81,7 @@ def get_menu(title):
             dict(url='https://shrinking-world.com/Leverage/', label='Leverage', active=''),
             dict(url='https://seamansguide.com', label='Guide', active=''),
             dict(url='https://seamanslog.com', label="Seaman's Log", active=''),
+        ]
     else:
         return 'Shrinking World', [
             dict(url='https://seamanslog.com',      label='Blog',               active=''),
