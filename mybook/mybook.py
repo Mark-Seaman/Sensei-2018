@@ -45,6 +45,14 @@ def booknotes_excerpt(doc):
     return excerpt(doc), 'http://markseaman.org/MarkSeaman/booknotes/%s' % doc
 
 
+def get_menu(title):
+    return 'Mark ', [
+        dict(url='https://seamanslog.com',      label='Blog',               active=''),
+        dict(url='https://shrinking-world.com', label='Shrinking World',    active=''),
+        dict(url='https://markseaman.org',      label='Mark Seaman',        active=' active'),
+    ]
+
+
 def theme(domain):
     if domain == 'spiritual-things.org':
         return 'spiritual_theme.html'

@@ -7,7 +7,7 @@ from random import choice
 from tool.document import doc_html_text, doc_list, domain_doc
 from tool.log import log_page
 
-from .mybook import booknotes_excerpt, theme
+from .mybook import booknotes_excerpt, get_menu, theme
 from .outline import outline, read_cards, tabs_data
 
 
@@ -42,20 +42,12 @@ class MyBookRandom(RedirectView):
 
 class MyBookDocDisplay(TemplateView):
 
-    def get_menu(self):
-        return [
-            dict(url='https://seamanslog.com',      label='Blog',               active=' active'),
-            dict(url='https://shrinking-world.com', label='Shrinking World',    active=''),
-            dict(url='https://markseaman.org',      label='Mark Seaman',        active=''),
-        ]
-
-
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
         domdoc = domain_doc(self.request.get_host(), title)
         log_page(self.request, domdoc)
         text = doc_html_text(domdoc, '/static/images')
-        menu = self.get_menu()
+        menu = get_menu(title)
         return dict(title=title, text=text, menu=menu, url=self.request.get_raw_uri())
 
     def get_template_names(self):
