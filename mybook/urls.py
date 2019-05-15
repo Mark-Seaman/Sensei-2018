@@ -23,6 +23,7 @@ urlpatterns = [
     # Spiritual
     url(r'^spiritual/Index$',                   SpiritualDoc.as_view()),
     url(r'^spiritual/(?P<title>[\w\-_.]*)$',    SpiritualSelect.as_view()),
+    url(r'^spiritual/(?P<title>[\w/\-_.]*)$',   SpiritualDoc.as_view()),
 
     # Documents
     url(r'^$',                                  DomainRedirect.as_view()),
