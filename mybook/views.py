@@ -15,7 +15,7 @@ class DocList(TemplateView):
     template_name = 'mybook_list.html'
 
     def get_context_data(self, **kwargs):
-        title = self.kwargs.get('title', 'Index')
+        title = self.request.path
         log_page(self.request, title)
         list = doc_list(title)
         menu = self.get_menu()
