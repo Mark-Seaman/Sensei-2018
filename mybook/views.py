@@ -111,25 +111,9 @@ class DailyTask(RedirectView):
         return '/info/daily/%s' % choice(listdir(path))
 
 
-# class SeamansLog(MyBookDocDisplay):
-#
-#     def get_context_data(self, **kwargs):
-#         title = join('seamanslog', self.kwargs['title'])
-#         photo = 'MarkSeaman.100.png'
-#         url = join('https://seamanslog.com', self.request.path[1:])
-#         readmore = url, url
-#         kwargs = dict(title=title, photo=photo, readmore=readmore)
-#         return super(SeamansLog, self).get_context_data(**kwargs)
-
-
 class SeamansLog(RedirectView):
     permanent = False
     url = '/seamanslog/Random'
-
-    # def get_redirect_url(self, *args, **kwargs):
-    #     files = listdir(join('Documents', 'seamanslog'))
-    #     file = choice(files)
-    #     return  % (file)
 
 
 class TabsView(MyBookDocDisplay):
