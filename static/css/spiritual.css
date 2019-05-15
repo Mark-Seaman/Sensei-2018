@@ -4,6 +4,7 @@ a {
 
 h1, h2, h3 {
     color: purple;
+    box-shadow: none;
 }
 
 header {
@@ -11,5 +12,5 @@ header {
 }
 
 hr {
-    color: purple;
+    border: 3px solid purple;
 }
