@@ -4,7 +4,7 @@ from random import choice
 
 from django.views.generic import TemplateView, RedirectView
 
-from tool.document import domain_doc, doc_html_text
+from tool.document import domain_doc, doc_exists, doc_html_text
 
 
 def spiritual():
@@ -17,14 +17,20 @@ def spiritual_menu(title):
 
 class SpiritualDoc(TemplateView, RedirectView):
     template_name = 'spiritual_theme.html'
-    url = '/spiritual/Missing'
-    
+
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
         menu = spiritual_menu(title)
         return dict(title=title, text=text, menu=menu)
+
+    def get_redirect_url(self, *args, **kwargs):
+        url = '/spiritual/Missing'
+        title = self.kwargs.get('title', 'Index')
+        domdoc = domain_doc(self.request.get_host(), title)
+        if not doc_exists(domdoc):
+            return url
 
 
 class SpiritualMissing(TemplateView):
