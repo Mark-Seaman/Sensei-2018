@@ -66,8 +66,23 @@ def get_menu(title):
             dict(url='https://seamanslog.com/seamanslog/Random', label='Read', active=''),
             dict(url='https://markseaman.org', label='Mark Seaman', active=''),
         ]
+    elif title.startswith('spiritual'):
+        index = ' active' if (title == 'spiritual/Index') else ''
+        return "Spiritual Things", [
+            dict(url='https://seamanslog.com/seamanslog/Index', label='A', active=index),
+            dict(url='https://seamanslog.com/seamanslog/List', label='B', active=''),
+            dict(url='https://seamanslog.com/seamanslog/Random', label='C', active=''),
+            dict(url='https://markseaman.org', label='Mark Seaman', active=''),
+        ]
+    elif title.startswith('shrinkingworld'):
+        index = ' active' if (title == 'seamanslog/Index') else ''
+        return "Shrinking World", [
+            dict(url='https://shrinking-world.com/', label='Training Center', active=index),
+            dict(url='https://shrinking-world.com/Leverage/', label='Leverage', active=''),
+            dict(url='https://seamansguide.com', label='Guide', active=''),
+            dict(url='https://seamanslog.com', label="Seaman's Log", active=''),
     else:
-        return 'Mark ', [
+        return 'Shrinking World', [
             dict(url='https://seamanslog.com',      label='Blog',               active=''),
             dict(url='https://shrinking-world.com', label='Shrinking World',    active=''),
             dict(url='https://markseaman.org',      label='Mark Seaman',        active=' active'),
