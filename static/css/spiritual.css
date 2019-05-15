@@ -1,4 +1,15 @@
+a {
+    color: purple;
+}
+
+h1, h2, h3 {
+    color: purple;
+}
+
 header {
     background-color: purple;
 }
 
+hr {
+    color: purple;
+}
