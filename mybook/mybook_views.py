@@ -114,6 +114,18 @@ class SeamansLog(RedirectView):
     #     return  % (file)
 
 
+
+class SpiritualDoc(TemplateView):
+    template_name = 'spiritual_theme.html'
+
+    def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title', 'Index')
+        domdoc = domain_doc(self.request.get_host(), title)
+        text = doc_html_text(domdoc, '/static/images')
+        menu = [True, False, False, False, False]
+        return dict(title=title, text=text, menu=menu)
+
+
 class SpiritualSelect(RedirectView):
     permanent = False
 
