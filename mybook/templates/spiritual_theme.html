@@ -1,135 +1,51 @@
-<!DOCTYPE html>
-<html>
-    <head xmlns="http://www.w3.org/1999/html">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        {% if title %}
-            <title>{{ title }}</title>
-        {% endif %}
-
-        <!-- Vendor CSS -->
-        <link href="/static/material/vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
-        <link href="/static/material/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css"
-              rel="stylesheet">
-        <link href="/static/material/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css"
-              rel="stylesheet">
-        <link href="/static/material/vendors/bower_components/google-material-color/dist/palette.css" rel="stylesheet">
-
-        <!-- CSS -->
-        <link href="/static/material/css/app.min.1.css" rel="stylesheet">
-        <link href="/static/material/css/app.min.2.css" rel="stylesheet">
-
-        <link rel="shortcut icon" type="image/png" href="/static/favicon.ico"/>
-
-        <link href="/static/css/mybook.css" rel="stylesheet">
-        <link href="/static/css/spiritual.css" rel="stylesheet">
-
-        {% block stylesheet %}{% endblock %}
-    </head>
-
-    <body data-ma-header="purple-400">
-
-        <header id="header" class="media">
-
-            <div class="pull-left h-logo">
-
-                <div class="menu-collapse" data-ma-action="sidebar-open" data-ma-target="main-menu">
-                    <div class="mc-wrap">
-                        <div class="mcw-line top palette-White bg"></div>
-                        <div class="mcw-line center palette-White bg"></div>
-                        <div class="mcw-line bottom palette-White bg"></div>
-                    </div>
-                </div>
-            </div>
-
-            {% block banner %}
-
-                <div class="pull-left">
-                    <a href="/">
-                        <h1>Spiritual Things</h1>
-                        <h2>Daily Inspiration</h2>
-                    </a>
-                </div>
-
-            {% endblock %}
-
-        </header>
-
-        <!-- Javascript Libraries -->
-        <section id="main">
-
-            <aside id="s-main-menu" class="sidebar">
-
-                <div class="smm-header">
-                    <i class="zmdi zmdi-long-arrow-left" data-ma-action="sidebar-close"></i>
-                </div>
-
-                {% block menu %}
-
-                    <ul class="main-menu">
-                        {% for m in menu %}
-                            <li {{ m.3 }}>
-                                <a href="{{ m.0 }}"><i class="zmdi {{ m.1 }}"></i> {{ m.2 }} </a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-
-                {% endblock %}
-
-            </aside>
-
-            {% block content %}
-
-                <section id="content">
-                    <div class="container">
-
-                        {% block card %}
-
-                            <div class="card">
-
-                                <div class="card-body card-padding">
-
-                                    {% block page %}
-                                        {% if text %}
-                                            {% autoescape off %}
-                                                <p>{{ text }}</p>
-                                            {% endautoescape %}
-                                        {% else %}
-                                            <h2>No document found. {{ doc }}</h2>
-                                        {% endif %}
-                                    {% endblock %}
-
-                                </div>
-                            </div>
-
-                        {% endblock %}
-
-                    </div>
-                </section>
-
-            {% endblock %}
+{% extends "seaman_theme.html" %}
 
 
-            {% block footer %}
-                <div class="footer">
-                    <a href="http://shrinking-world.com">
-                        <div class="logo-text">Copyright &copy; 2019 Shrinking World</div>
-                    </a>
-                </div>
-            {% endblock %}
+{% block menu %}
 
-        </section>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
 
-        <script src="/static/material/vendors/bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="/static/material/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="/static/material/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="/static/material/vendors/bower_components/Waves/dist/waves.min.js"></script>
-        <script src="/static/material/vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <a class="navbar-brand" href="#">Aspire</a>
 
-        <script src="/static/material/js/functions.js"></script>
-        <script src="/static/material/js/actions.js"></script>
-        <script src="/static/material/vendors/fileinput/fileinput.min.js"></script>
-    </body>
-</html>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item{% if menu.0 %} active{% endif %}">
+                    <a class="nav-link" href="/spiritual/prayers">Pray</a>
+                </li>
+                <li class="nav-item{% if menu.1 %} active{% endif %}">
+                    <a class="nav-link" href="/spiritual/reflect">Reflect</a>
+                </li>
+                <li class="nav-item{% if menu.2 %} active{% endif %}">
+                    <a class="nav-link" href="/spiritual/bible">Mediate</a>
+                </li>
+                <li class="nav-item{% if menu.3 %} active{% endif %}">
+                    <a class="nav-link" href="/spiritual/teaching">Learn</a>
+                </li>
+                <li class="nav-item{% if menu.4 %} active{% endif %}">
+                    <a class="nav-link" href="/spiritual/walkabout">Journey</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+{% endblock %}
+
+
+{% block header %}
+
+    <header>
+        <div class="titles">
+            <h1>Spiritual Things</h1>
+            <h2>Daily Inspiration</h2>
+        </div>
+    </header>
+
+{% endblock %}
+
