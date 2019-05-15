@@ -60,7 +60,9 @@ def doc_link(title):
 
 
 def doc_list(title):
-    return listdir(doc_path(title))
+    d = doc_path(title)
+    files = listdir(d)
+    return [(f, '%s/%s' % (d,f)) for f in files]
 
 
 def doc_path(page):
