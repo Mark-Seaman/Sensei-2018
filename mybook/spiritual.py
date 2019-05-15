@@ -5,6 +5,7 @@ from random import choice
 from django.views.generic import TemplateView, RedirectView
 
 from tool.document import domain_doc, doc_exists, doc_html_text
+from tool.log import log_page
 
 
 def spiritual():
@@ -26,10 +27,13 @@ class SpiritualDoc(TemplateView, RedirectView):
         return dict(title=title, text=text, menu=menu)
 
     def get_redirect_url(self, *args, **kwargs):
+        log_page(self.request)
         url = '/spiritual/Missing'
-        title = self.kwargs.get('title', 'Index')
+        title = self.kwargs.get('title')
         domdoc = domain_doc(self.request.get_host(), title)
+        log('domdoc = %s' % domdoc)
         if not doc_exists(domdoc):
+            log('redirect to Missing')
             return url
 
 
