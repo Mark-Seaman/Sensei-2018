@@ -62,10 +62,11 @@ class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
         title = self.kwargs.get('title', 'Index')
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
-        past = title.startswith('task/')
-        present = (title == 'info/Aspire.md')
-        future = not present and not past
-        menu = [past, present, future, False]
+        menu = get_menu('info/'+title)
+        # past = title.startswith('task/')
+        # present = (title == 'info/Aspire.md')
+        # future = not present and not past
+        # menu = [past, present, future, False]
         return dict(title=title, text=text, menu=menu, aspire_menu=True)
 
 

@@ -47,8 +47,12 @@ def booknotes_excerpt(doc):
 
 def get_menu(title):
     if title.startswith('info'):
+        time = ' active' if (title == 'task') else ''
+        future = ' active' if (title == 'info/Aspire.md') else ''
         return 'ASPIRE ', [
-            dict(url='https://seamanslog.com', label='Blog', active=''),
+            dict(url='/task/time', label='Past', active=time),
+            dict(url='/info', label='Present', active=(not future)),
+            dict(url='/info/Aspire.md', label='Future', active=future),
             dict(url='https://shrinking-world.com', label='Shrinking World', active=''),
             dict(url='https://markseaman.org', label='Mark Seaman', active=' active'),
         ]
