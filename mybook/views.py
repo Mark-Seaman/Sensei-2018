@@ -19,7 +19,7 @@ class DocList(TemplateView):
         log_page(self.request, title)
         doclist = doc_list(title)
         menu = [False, True, False, False]
-        return dict(title=title, list=doclist, menu=menu)
+        return dict(title=title, list=doclist, menu=menu, url=self.request.get_raw_uri())
 
 
 
@@ -52,7 +52,7 @@ class MyBookDocDisplay(TemplateView):
         log_page(self.request, domdoc)
         text = doc_html_text(domdoc, '/static/images')
         menu = self.get_menu()
-        return dict(title=title, text=text, menu=menu)
+        return dict(title=title, text=text, menu=menu, url=self.request.get_raw_uri())
 
     def get_template_names(self):
         # title = self.kwargs.get('title')

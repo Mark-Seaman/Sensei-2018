@@ -85,6 +85,13 @@
                         {% else %}
                             <h2>No document found. {{ doc }}</h2>
                         {% endif %}
+
+                        {% if url %}
+                            <hr>
+                            <p><a href="{{ url }}">Read More</a> </p>
+                        {% endif %}
+
+
                     </div>
                 </div>
 
