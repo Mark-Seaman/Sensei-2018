@@ -12,7 +12,9 @@
         <div class="card-body card-padding">
 
             {% for item in list %}
-                <p><b>{{ item.0 }}</b>{{ item.1 }}</p>
+                <p>
+                    <a href="{{ item.0 }}">{{ item.1 }}</a>
+                </p>
             {% endfor %}
 
         </div>
