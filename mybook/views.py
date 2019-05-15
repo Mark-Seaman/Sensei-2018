@@ -17,8 +17,9 @@ class DocList(TemplateView):
     def get_context_data(self, **kwargs):
         title = self.request.path[1:-5]
         log_page(self.request, title)
-        list = doc_list(title)
-        return dict(title=title, list=list)
+        doclist = doc_list(title)
+        menu = [False, True, False, False]
+        return dict(title=title, list=doclist, menu=menu)
 
 
 
