@@ -59,10 +59,9 @@ def doc_link(title):
     return title.replace('.md', '')
 
 
-def doc_list(title):
-    d = doc_path(title)
-    files = listdir(d)
-    return [(f, (title(doc_path('%s/%s') % (title,f)))) for f in files]
+def doc_list(docdir):
+    files = listdir(doc_path(docdir))
+    return [(f, (title(doc_path('%s/%s') % (docdir,f)))) for f in files]
 
 
 def doc_path(page):
