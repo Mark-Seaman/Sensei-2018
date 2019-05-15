@@ -18,8 +18,7 @@ class DocList(TemplateView):
         title = self.request.path[1:-5]
         log_page(self.request, title)
         list = doc_list(title)
-        menu = self.get_menu()
-        return dict(title=title, list=list, menu=menu)
+        return dict(title=title, list=list)
 
 
 
