@@ -96,7 +96,8 @@ def get_menu(title):
             dict(url='https://shrinking-world.com', label='Shrinking World',    active=''),
             dict(url='https://markseaman.org',      label='Mark Seaman',        active=' active'),
         ]
-'''
+
+
 
 '''
 
