@@ -18,7 +18,7 @@ urlpatterns = [
     url(r'^info/(?P<title>[\w/\-_.]*)$',        MyBookPrivateDoc.as_view()),
 
     # Seaman's Log
-    url(r'^seamanslog/Index$',                  SeamansLog.as_view()),
+    url(r'^seamanslog$',                        SeamansLog.as_view()),
     url(r'^seamanslog/List$',                   DocList.as_view()),
 
     # Spiritual
