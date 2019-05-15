@@ -7,6 +7,7 @@ from random import choice
 from .mybook import booknotes_excerpt, theme
 from .outline import outline, read_cards, tabs_data
 from tool.document import doc_html_text, domain_doc
+from tool.log import log_page
 
 
 class DomainRedirect(RedirectView):
@@ -29,11 +30,15 @@ class MyBookRandom(RedirectView):
 
 class MyBookDocDisplay(TemplateView):
 
+    def get_menu(self):
+        return [False, True, False, False]
+
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
         domdoc = domain_doc(self.request.get_host(), title)
+        log_page(self.request, domdoc)
         text = doc_html_text(domdoc, '/static/images')
-        menu = [False, True, False, False]
+        menu = self.get_menu()
         return dict(title=title, text=text, menu=menu)
 
     def get_template_names(self):
@@ -112,34 +117,6 @@ class SeamansLog(RedirectView):
     #     files = listdir(join('Documents', 'seamanslog'))
     #     file = choice(files)
     #     return  % (file)
-
-
-def spiritual():
-    return ['reflect', 'bible', 'teaching', 'walkabout', 'prayers']
-
-
-class SpiritualDoc(TemplateView):
-    template_name = 'spiritual_theme.html'
-
-    def get_context_data(self, **kwargs):
-        title = self.kwargs.get('title', 'Index')
-        domdoc = domain_doc(self.request.get_host(), title)
-        text = doc_html_text(domdoc, '/static/images')
-        menu = [title == 'Index'] + [title.startswith(i) for i in spiritual()]
-        #menu = [True, False, False, False, False]
-        return dict(title=title, text=text, menu=menu)
-
-
-class SpiritualSelect(RedirectView):
-    permanent = False
-
-    def get_redirect_url(self, *args, **kwargs):
-        title = kwargs.get('title')
-        if not title:
-            title = choice(['reflect', 'teaching', 'prayers', 'bible', 'walkabout'])
-        files = listdir(join('Documents', 'spiritual', title))
-        file = choice(files)
-        return '/spiritual/%s/%s' % (title, file)
 
 
 class TabsView(MyBookDocDisplay):
