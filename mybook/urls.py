@@ -1,8 +1,8 @@
 from django.conf.urls import url
 from django.contrib.auth.views import login, logout
 
-from .mybook_views import BookNotes, DomainRedirect, MyBookDocDisplay, MyBookPrivateDoc, MyBookRandom, SeamansLog
-from .spiritual import SpiritualDoc, SpiritualMissing, SpiritualSelect
+from .views import BookNotes, DomainRedirect, MyBookDocDisplay, MyBookPrivateDoc, MyBookRandom, SeamansLog
+from .spiritual import SpiritualDoc, SpiritualSelect
 
 urlpatterns = [
 
@@ -18,11 +18,10 @@ urlpatterns = [
     url(r'^info/(?P<title>[\w/\-_.]*)$',        MyBookPrivateDoc.as_view()),
 
     # Seaman's Log
-    url(r'^seamanslog$',                        SeamansLog.as_view()),
+    url(r'^seamanslog/Index$',                  SeamansLog.as_view()),
 
     # Spiritual
     url(r'^spiritual/Index$',                   SpiritualDoc.as_view()),
-    url(r'^spiritual/Missing$',                 SpiritualMissing.as_view()),
     url(r'^spiritual/(?P<title>[\w\-_.]*)$',    SpiritualSelect.as_view()),
     url(r'^spiritual/(?P<title>[\w/\-_.]*)$',   SpiritualDoc.as_view()),
 

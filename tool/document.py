@@ -51,7 +51,7 @@ def doc_html_text(page, image_path=None):
     doc = doc_exists(page)
     if not doc:
         # raise Http404("DocDisplay - Document does not exist")
-        return "We are sorry but the document you were looking for could not be found."
+        return "<h1>Missing Document</h1><p>We are sorry, but the document you were looking for could not be found.</p>"
     return file_to_html(doc, image_path)
 
 

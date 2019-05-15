@@ -4,10 +4,11 @@ from os import listdir
 from os.path import join
 from random import choice
 
-from .mybook import booknotes_excerpt, theme
-from .outline import outline, read_cards, tabs_data
 from tool.document import doc_html_text, domain_doc
 from tool.log import log_page
+
+from .mybook import booknotes_excerpt, theme
+from .outline import outline, read_cards, tabs_data
 
 
 class DomainRedirect(RedirectView):
