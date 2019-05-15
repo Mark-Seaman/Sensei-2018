@@ -46,12 +46,35 @@ def booknotes_excerpt(doc):
 
 
 def get_menu(title):
-    return 'Mark ', [
-        dict(url='https://seamanslog.com',      label='Blog',               active=''),
-        dict(url='https://shrinking-world.com', label='Shrinking World',    active=''),
-        dict(url='https://markseaman.org',      label='Mark Seaman',        active=' active'),
-    ]
+    if title.startswith('info'):
+        return 'Mark ', [
+            dict(url='https://seamanslog.com', label='Blog', active=''),
+            dict(url='https://shrinking-world.com', label='Shrinking World', active=''),
+            dict(url='https://markseaman.org', label='Mark Seaman', active=' active'),
+        ]
+    elif title.startswith('markseaman'):
+        return 'Mark ', [
+            dict(url='https://seamanslog.com', label='Blog', active=''),
+            dict(url='https://shrinking-world.com', label='Shrinking World', active=''),
+            dict(url='https://markseaman.org', label='Mark Seaman', active=' active'),
+        ]
+    elif title.startswith('seamanslog'):
+        index = ' active' if (title == 'seamanslog/Index') else ''
+        return "Seaman's Log", [
+            dict(url='https://seamanslog.com/seamanslog/Index', label='Blog', active=index),
+            dict(url='https://seamanslog.com/seamanslog/List', label='Articles', active=''),
+            dict(url='https://seamanslog.com/seamanslog/Random', label='Read', active=''),
+            dict(url='https://markseaman.org', label='Mark Seaman', active=''),
+        ]
+    else:
+        return 'Mark ', [
+            dict(url='https://seamanslog.com',      label='Blog',               active=''),
+            dict(url='https://shrinking-world.com', label='Shrinking World',    active=''),
+            dict(url='https://markseaman.org',      label='Mark Seaman',        active=' active'),
+        ]
+'''
 
+'''
 
 def theme(domain):
     if domain == 'spiritual-things.org':
