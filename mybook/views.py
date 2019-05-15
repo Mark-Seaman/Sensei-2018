@@ -40,11 +40,12 @@ class MyBookRandom(RedirectView):
         return '/%s/%s' % (title, file)
 
 
-
 class MyBookDocDisplay(TemplateView):
 
     def get_menu(self):
-        return [False, True, False, False]
+        return [
+            dict(url='https://shrinking-world.com', label='Shrinking World', active='active'),
+        ]
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
