@@ -51,10 +51,10 @@ def get_menu(title):
         future = ' active' if (title == 'info/Aspire.md') else ''
         return 'ASPIRE ', [
             dict(url='/task/time', label='Past', active=time),
-            dict(url='/info', label='Present', active=(not future)),
+            dict(url='/info', label='Present', active=(not future and not time)),
             dict(url='/info/Aspire.md', label='Future', active=future),
             dict(url='https://shrinking-world.com', label='Shrinking World', active=''),
-            dict(url='https://markseaman.org', label='Mark Seaman', active=' active'),
+            dict(url='https://markseaman.org', label='Mark Seaman', active=''),
         ]
     elif title.startswith('markseaman'):
         return 'Mark Seaman ', [
