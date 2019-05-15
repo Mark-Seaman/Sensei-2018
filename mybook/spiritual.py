@@ -26,15 +26,15 @@ class SpiritualDoc(TemplateView, RedirectView):
         menu = spiritual_menu(title)
         return dict(title=title, text=text, menu=menu)
 
-    def get_redirect_url(self, *args, **kwargs):
-        log_page(self.request)
-        url = '/spiritual/Missing'
-        title = self.kwargs.get('title')
-        domdoc = domain_doc(self.request.get_host(), title)
-        log('domdoc = %s' % domdoc)
-        if not doc_exists(domdoc):
-            log('redirect to Missing')
-            return url
+    # def get_redirect_url(self, *args, **kwargs):
+    #     log_page(self.request)
+    #     url = '/spiritual/Missing'
+    #     title = self.kwargs.get('title')
+    #     domdoc = domain_doc(self.request.get_host(), title)
+    #     log('domdoc = %s' % domdoc)
+    #     if not doc_exists(domdoc):
+    #         log('redirect to Missing')
+    #         return url
 
 
 class SpiritualMissing(TemplateView):
