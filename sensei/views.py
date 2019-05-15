@@ -19,7 +19,7 @@ class UncDocDisplay(TemplateView):
         title = self.kwargs.get('title')
         course = title[:7]
         lessons = course_lessons(course, title)
-        doc = domain_doc(self.request.get_host(), 'unc/' + title)
+        doc = 'unc/' + title #domain_doc(self.request.get_host(), )
         title = 'Lesson %s' % title[-2:] if title[-3:-2] == '/' else 'UNC BACS %s' % course[-3:]
         text = doc_html_text(doc, '/static/images/unc/%s' % course)
         return site_settings(lesson_active='active', title=title, text=text, lessons=lessons)
