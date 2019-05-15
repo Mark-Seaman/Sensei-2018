@@ -6,6 +6,8 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 from tasks.models import Task
 from tool.document import doc_html_text
+from mybook.mybook import get_menu
+
 from .summary import time_data, time_summary, bad_days_data, bad_days, activity_summary, task_activity_details, \
     task_list, write_task_files, task_import_files
 from .task import save_monthly_reports
@@ -17,7 +19,7 @@ class TaskBase(LoginRequiredMixin, ContextMixin):
         kwargs = super(TaskBase, self).get_context_data(**kwargs)
         kwargs.update({
             'site': ('Time Accounting', 'Intentional Living'),
-            'menu': [True, False, False, False],
+            'menu': get_menu('task')
         })
         return kwargs
 
