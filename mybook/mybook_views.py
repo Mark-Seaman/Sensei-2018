@@ -115,7 +115,7 @@ class SeamansLog(RedirectView):
 
 
 def spiritual():
-    return ['reflect', 'teaching', 'prayers', 'bible', 'walkabout']
+    return ['reflect', 'bible', 'teaching', 'walkabout', 'prayers']
 
 
 class SpiritualDoc(TemplateView):
@@ -125,7 +125,7 @@ class SpiritualDoc(TemplateView):
         title = self.kwargs.get('title', 'Index')
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
-        menu = [title.startswith(i) for i in spiritual()]
+        menu = [title == 'Index'] + [title.startswith(i) for i in spiritual()]
         #menu = [True, False, False, False, False]
         return dict(title=title, text=text, menu=menu)
 
