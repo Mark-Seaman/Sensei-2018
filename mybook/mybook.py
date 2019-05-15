@@ -46,7 +46,7 @@ def booknotes_excerpt(doc):
 
 
 def get_menu(title):
-    if title.startswith('info'):
+    if title.startswith('info') or title.startswith('task'):
         time = ' active' if (title == 'task') else ''
         future = ' active' if (title == 'info/Aspire.md') else ''
         return 'ASPIRE ', [
