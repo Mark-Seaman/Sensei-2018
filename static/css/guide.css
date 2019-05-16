@@ -21,24 +21,25 @@ header {
     border-radius: 20px;
     box-shadow: 2px 2px 5px grey;
     margin: 2em;
-    padding: 3em;
+    padding: 2em;
+    text-align: center;
 }
 
 header h1 {
-    color: yellow;
-    box-shadow: none;
-    text-align: center;
-    padding: 0;
+    /*color: yellow;*/
+    /*box-shadow: none;*/
+    /*text-align: center;*/
+    /*padding: 0;*/
 }
 
 header h2 {
-    color: white;
-    background-color: inherit;
-    box-shadow: none;
-    border: none;
-    margin: inherit;
-    text-align: left;
-    padding: 0;
+    /*color: white;*/
+    /*background-color: inherit;*/
+    /*box-shadow: none;*/
+    /*border: none;*/
+    /*margin: inherit;*/
+    /*text-align: left;*/
+    /*padding: 0;*/
 }
 
 hr {
@@ -102,12 +103,12 @@ pre {
 }
 
 .logo {
-    float: right;
+    /*float: right;*/
 }
 
 .logo img {
-    border-radius: 20px;
-    box-shadow: -2px -2px 6px black;
+    /*border-radius: 20px;*/
+    /*box-shadow: -2px -2px 6px black;*/
 }
 
 .nav-brand {
