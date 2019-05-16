@@ -119,7 +119,7 @@ def theme(domain):
 
 def header_info(domain):
     if domain == 'spiritual-things.org':
-        return dict(title='Spiritual Things', subtitle='Daily Inspiration', logo=None)
+        return dict(title='Spiritual Things', subtitle='Daily Inspiration', logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
     elif domain == 'markseaman.org':
         return dict(title='Mark Seaman', subtitle='Inventor - Teacher - Writer', logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
     elif domain == 'markseaman.info':

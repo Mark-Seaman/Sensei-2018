@@ -7,6 +7,8 @@ from django.views.generic import TemplateView, RedirectView
 from tool.document import domain_doc, doc_html_text
 from tool.log import log_page
 
+from .mybook import header_info
+
 
 def spiritual():
     return [('Index', 'Home'),
@@ -44,7 +46,7 @@ class SpiritualDoc(TemplateView):
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
         menu = spiritual_menu(title)
-        return dict(title=title, text=text, menu=menu)
+        return dict(title=title, text=text, menu=menu, header=header_info(self.request.get_host()))
 
 
 class SpiritualSelect(RedirectView):
