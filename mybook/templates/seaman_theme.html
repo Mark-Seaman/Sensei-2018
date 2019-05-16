@@ -51,10 +51,9 @@
 
         {% block header %}
 
-            <header>
-                <div class="container">
-                    <div class="row">
-
+            <div class="container">
+                <div class="row">
+                    <header>
                         <div class="col-xs-10">
                             <h1>{{ header.title }}</h1>
                             <h2>{{ header.subtitle }}</h2>
@@ -63,10 +62,9 @@
                             <img class="img-rounded img-responsive" src="{{ header.logo }}"
                                  alt="{{ header.logo_text }}">
                         </div>
-
-                    </div>
+                    </header>
                 </div>
-            </header>
+            </div>
 
         {% endblock %}
 
