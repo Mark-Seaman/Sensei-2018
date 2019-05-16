@@ -19,6 +19,10 @@ def spiritual():
             ('prayers', 'Pray')]
 
 
+def spiritual_header():
+    return dict(title='Spiritual Things', subtitle='Daily Inspiration', logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
+
+
 def spiritual_menu(title):
     def is_active(title, topic):
         return ' active' if title.startswith(topic) else ''
@@ -46,7 +50,7 @@ class SpiritualDoc(TemplateView):
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
         menu = spiritual_menu(title)
-        return dict(title=title, text=text, menu=menu, header=header_info(self.request.get_host()))
+        return dict(title=title, text=text, menu=menu, header=spiritual_header())
 
 
 class SpiritualSelect(RedirectView):

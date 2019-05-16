@@ -63,7 +63,7 @@ class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
         menu = get_menu('info/'+title)
-        return dict(title=title, text=text, menu=menu, aspire_menu=True)
+        return dict(title=title, text=text, menu=menu, aspire_menu=True, header=header_info(self.request.get_host()))
 
 
 class BookNotes(MyBookDocDisplay):
