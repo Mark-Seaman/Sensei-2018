@@ -103,7 +103,8 @@ pre {
 }
 
 .logo {
-    float: right;
+    /*float: right;*/
+    margin: 2em;
 }
 
 .logo img {
