@@ -26,17 +26,17 @@ header {
 }
 
 header h1 {
-    /*color: yellow;*/
-    /*box-shadow: none;*/
-    /*text-align: center;*/
+    color: yellow;
+    box-shadow: none;
+    text-align: center;
     /*padding: 0;*/
 }
 
 header h2 {
-    /*color: white;*/
+    color: white;
     /*background-color: inherit;*/
-    /*box-shadow: none;*/
-    /*border: none;*/
+    box-shadow: none;
+    border: none;
     /*margin: inherit;*/
     /*text-align: left;*/
     /*padding: 0;*/
