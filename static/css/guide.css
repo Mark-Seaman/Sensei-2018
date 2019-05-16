@@ -27,7 +27,7 @@ header {
 header h1 {
     color: yellow;
     box-shadow: none;
-    text-align: left;
+    text-align: center;
     padding: 0;
 }
 
@@ -68,7 +68,7 @@ h3 {
 }
 
 main {
-    margin: 3em;
+    margin: 1em;
     padding: 2em;
 }
 
