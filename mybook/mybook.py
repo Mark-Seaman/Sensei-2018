@@ -123,7 +123,7 @@ def header_info(domain):
                     logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
 
     elif domain == 'markseaman.info':
-        return dict(title='My Brain', subtitle=' - Private notes and secrets',
+        return dict(title='My Brain', subtitle='Private notes and secrets',
                     logo="/static/images/SWS_Logo_200.jpg", logo_text='Shrinking World Solutions')
 
     elif domain == 'seamanslog.com':
