@@ -21,6 +21,10 @@ class TaskBase(LoginRequiredMixin, ContextMixin):
             'site': ('Time Accounting', 'Intentional Living'),
             'menu': get_menu('task'),
             'aspire_menu': True,
+            'header': dict(title='My Brain',
+                           subtitle='Private notes and secrets',
+                           logo="/static/images/SWS_Logo_200.jpg",
+                           logo_text='Shrinking World Solutions'),
         })
         return kwargs
 
