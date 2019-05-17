@@ -18,7 +18,6 @@ class TaskBase(LoginRequiredMixin, ContextMixin):
     def get_context_data(self, **kwargs):
         kwargs = super(TaskBase, self).get_context_data(**kwargs)
         kwargs.update({
-            'site': ('Time Accounting', 'Intentional Living'),
             'menu': get_menu('task'),
             'aspire_menu': True,
             'header': dict(title='My Brain',
@@ -99,7 +98,7 @@ class MyTime(TaskBase, TemplateView):
             'data_month': time_summary(31),
             'data_year': time_summary(366),
             'bad_days': bad_days(),
-            'text': doc_html_text('info/Accomplished.md'),
+            'text': doc_html_text('info/Done.md'),
         })
         return kwargs
 
