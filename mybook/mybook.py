@@ -118,16 +118,27 @@ def theme(domain):
 
 
 def header_info(domain):
-    if domain == 'spiritual-things.org':
-        return dict(title='Spiritual Things', subtitle='Daily Inspiration', logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
-    elif domain == 'markseaman.org':
-        return dict(title='Mark Seaman', subtitle='Inventor - Teacher - Writer', logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
+    if domain == 'markseaman.org':
+        return dict(title='Mark Seaman', subtitle='Inventor - Teacher - Writer',
+                    logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
+
     elif domain == 'markseaman.info':
-        return dict(title='Private Notes', subtitle='My Brain - Secret info and ideas', logo="/static/images/SWS_Logo_200.jpg", logo_text='Shrinking World Solutions')
+        return dict(title='My Brain', subtitle=' - Private notes and secrets',
+                    logo="/static/images/SWS_Logo_200.jpg", logo_text='Shrinking World Solutions')
+
     elif domain == 'seamanslog.com':
-        return dict(title="Seaman's Log", subtitle='Big Ideas & Deep Thoughts', logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
+        return dict(title="Seaman's Log", subtitle='Big Ideas & Deep Thoughts',
+                    logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
+
     elif domain == 'seamansguide.com':
-        return dict(title="Seaman's Log", subtitle='Big Ideas & Deep Thoughts', logo="/static/images/SWS_Logo_200.jpg", logo_text='Shrinking World Solutions')
+        return dict(title="Seaman's Log", subtitle='Big Ideas & Deep Thoughts',
+                    logo="/static/images/SWS_Logo_200.jpg", logo_text='Shrinking World Solutions')
+
+    elif domain == 'spiritual-things.org':
+        return dict(title='Spiritual Things', subtitle='Daily Inspiration',
+                    logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
+
     else:
-        return dict(title="Shrinking World", subtitle='Software Development Training', logo="/static/images/SWS_Logo_200.jpg", logo_text='Shrinking World Solutions')
+        return dict(title="Shrinking World", subtitle='Software Development Training',
+                    logo="/static/images/SWS_Logo_200.jpg", logo_text='Shrinking World Solutions')
 
