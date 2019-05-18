@@ -58,10 +58,13 @@
                             <h1>{{ header.title }}</h1>
                             <h2>{{ header.subtitle }}</h2>
                         </div>
-                        <div class="logo col-xs-2">
-                            <img class="img-rounded img-responsive" src="{{ header.logo }}"
-                                 alt="{{ header.logo_text }}">
-                        </div>
+                        {% if header.logo %}
+                            <div class="logo col-xs-2">
+                                <img class="img-rounded img-responsive" src="{{ header.logo }}"
+                                     alt="{{ header.logo_text }}">
+                            </div>
+                        {% endif %}
+
                     </div>
                 </div>
             </header>

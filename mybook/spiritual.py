@@ -20,7 +20,7 @@ def spiritual():
 
 
 def spiritual_header():
-    return dict(title='Spiritual Things', subtitle='Daily Inspiration', logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
+    return dict(title='Spiritual Things', subtitle='Daily Inspiration', logo=None)
 
 
 def spiritual_menu(title):
