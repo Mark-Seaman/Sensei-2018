@@ -48,7 +48,9 @@ class MyBookDocDisplay(TemplateView):
         log_page(self.request, domdoc)
         text = doc_html_text(domdoc, '/static/images')
         menu = get_menu(title)
-        return dict(title=title, text=text, menu=menu, url=self.request.get_raw_uri(), header=header_info(self.request.get_host()))
+        url = self.request.get_raw_uri()
+        header = header_info(self.request.get_host())
+        return dict(title=title, text=text, menu=menu, url=url, header=header)
 
     def get_template_names(self):
         # title = self.kwargs.get('title')
