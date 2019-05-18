@@ -50,7 +50,8 @@ class SpiritualDoc(TemplateView):
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
         menu = spiritual_menu(title)
-        return dict(title=title, text=text, menu=menu, header=spiritual_header())
+        url = self.request.get_raw_uri()
+        return dict(title=title, text=text, menu=menu, url=url, header=spiritual_header())
 
 
 class SpiritualSelect(RedirectView):
