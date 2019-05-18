@@ -134,9 +134,9 @@ def header_info(domain):
         return dict(title="Seaman's Log", subtitle='Big Ideas & Deep Thoughts',
                     logo="/static/images/SWS_Logo_200.jpg", logo_text='Shrinking World Solutions')
 
-    elif domain == 'spiritual-things.org':
-        return dict(title='Spiritual Things', subtitle='Daily Inspiration',
-                    logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
+    # elif domain == 'spiritual-things.org':
+    #     return dict(title='Spiritual Things', subtitle='Daily Inspiration',
+    #                 logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
 
     else:
         return dict(title="Shrinking World", subtitle='Software Development Training',
