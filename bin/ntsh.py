@@ -58,14 +58,16 @@ def clean():
 
 
 def convert(f1,f2):
-    print('convert '+f1+' '+f2)
-    if not exists(dirname(f2)):
-        mkdir(dirname(f2))
-    b = bytearray(open(f1, 'rb').read())
-    for i in range(len(b)):
-        b[i] ^= 0xff
-    open(f2, 'wb').write(b)
-    remove(f1)
+    try:
+        print('convert '+f1+' '+f2)
+        if not exists(dirname(f2)):
+            mkdir(dirname(f2))
+        b = bytearray(open(f1, 'rb').read())
+        for i in range(len(b)):
+            b[i] ^= 0xff
+        open(f2, 'wb').write(b)
+    finally:
+        remove(f1)
 
 
 def convert_png(f1,f2):
@@ -100,10 +102,11 @@ def hide():
     files = recursive_list(d1)
     for f in files:
         f1 = join(d1, f)
-        if f.endswith('.webp'):
-            remove(f1)
-        if f.endswith('.DS_Store'):
-            remove(f1)
+        print(f1+ '...')
+        # if f.endswith('.webp'):
+        #     remove(f1)
+        # if f.endswith('.DS_Store'):
+        #     remove(f1)
         if f1.endswith('.PNG'):
             convert_png(f1, f1.replace('.PNG', '.jpg'))
         if f1.endswith('.png'):
@@ -111,6 +114,7 @@ def hide():
         f2 = join(d2, new_name(f))
         if f != new_name(f):
             convert (f1,f2)
+        remove(f1)
     for d in listdir(d1):
         d = join(d1, d)
         if isdir(d) and not listdir(d):
