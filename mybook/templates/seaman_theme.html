@@ -54,14 +54,16 @@
             <header>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-sm-10">
+                        <div class="col-sm-8">
                             <h1>{{ header.title }}</h1>
                             <h2>{{ header.subtitle }}</h2>
                         </div>
                         {% if header.logo %}
-                            <div class="logo col-sm-2">
-                                <img class="img-rounded img-responsive" src="{{ header.logo }}"
-                                     alt="{{ header.logo_text }}">
+                            <div class="logo col-sm-4">
+                                <div class="pull-right">
+                                    <img class="img-rounded img-responsive" src="{{ header.logo }}"
+                                         alt="{{ header.logo_text }}">
+                                </div>
                             </div>
                         {% endif %}
 
