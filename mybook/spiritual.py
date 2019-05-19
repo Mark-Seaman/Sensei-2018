@@ -7,10 +7,8 @@ from django.views.generic import TemplateView, RedirectView
 from tool.document import domain_doc, doc_html_text
 from tool.log import log_page
 
-from .mybook import header_info
 
-
-def spiritual():
+def spiritual_topics():
     return [('Index', 'Home'),
             ('reflect', 'Reflect'),
             ('bible', 'Meditate'),
@@ -27,18 +25,17 @@ def spiritual_menu(title):
     def is_active(title, topic):
         return ' active' if title.startswith(topic) else ''
 
-    menu_items = [dict(url='/spiritual/'+i[0], label=i[1], active=is_active(title,i[0])) for i in spiritual()]
+    menu_items = [dict(url='/spiritual/'+i[0], label=i[1], active=is_active(title,i[0])) for i in spiritual_topics()]
 
     return "Spiritual Things", menu_items
 
-    # return "Spiritual Things", [
-    #     dict(url='/spiritual/Index', label='Home', active=is_active(title,'Index')),
-    #     dict(url='/spiritual/reflect', label='Reflect', active=is_active(title,'reflect')),
-    #     dict(url='/spiritual/prayers', label='Pray', active=is_active(title, 'prayers')),
-    #     dict(url='/spiritual/bible', label='Meditate', active=is_active(title, 'bible')),
-    #     dict(url='/spiritual/teaching', label='Learn', active=is_active(title, 'teaching')),
-    #     dict(url='/spiritual/walkabout', label='Journey', active=is_active(title, 'walkabout')),
-    # ]
+
+def page_settings(domain, title):
+    domdoc = domain_doc(domain, title)
+    text = doc_html_text(domdoc, '/static/images')
+    menu = spiritual_menu(title)
+    url = join(domain, title)
+    return dict(title=title, text=text, menu=menu, url=url, header=spiritual_header())
 
 
 class SpiritualDoc(TemplateView):
@@ -47,11 +44,12 @@ class SpiritualDoc(TemplateView):
     def get_context_data(self, **kwargs):
         log_page(self.request)
         title = self.kwargs.get('title', 'Index')
-        domdoc = domain_doc(self.request.get_host(), title)
-        text = doc_html_text(domdoc, '/static/images')
-        menu = spiritual_menu(title)
-        url = self.request.get_raw_uri()
-        return dict(title=title, text=text, menu=menu, url=url, header=spiritual_header())
+        # domdoc = domain_doc(self.request.get_host(), title)
+        # text = doc_html_text(domdoc, '/static/images')
+        # menu = spiritual_menu(title)
+        # url = self.request.get_raw_uri()
+        # return dict(title=title, text=text, menu=menu, url=url, header=spiritual_header())
+        page_settings(self.request.get_host(), title)
 
 
 class SpiritualSelect(RedirectView):
