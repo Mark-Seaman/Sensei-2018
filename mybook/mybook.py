@@ -1,3 +1,4 @@
+from django.utils.timezone import now
 from os import listdir
 from os.path import join
 from random import choice
@@ -161,4 +162,5 @@ def page_settings(domain, title, site_title, menu):
     text = doc_html_text(domdoc, '/static/images')
     url = "https://%s/%s" % (domain, domdoc)
     header = header_settings(site_title)
-    return dict(title=title, text=text, menu=menu, url=url, header=header)
+    time = now()
+    return dict(title=title, text=text, menu=menu, url=url, header=header, time=time)
