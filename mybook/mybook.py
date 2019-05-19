@@ -4,7 +4,7 @@ from random import choice
 
 from bin.shell import read_file
 from hammer.settings import BASE_DIR
-from tool.document import  text_to_html
+from tool.document import text_to_html, domain_doc, doc_html_text
 from tool.log import log
 
 
@@ -102,21 +102,6 @@ def get_menu(title):
         ]
 
 
-def theme(domain):
-    if domain == 'spiritual-things.org':
-        return 'spiritual_theme.html'
-    elif domain == 'markseaman.org':
-        return 'seaman_theme.html'
-    elif domain == 'markseaman.info':
-        return 'task_theme.html'
-    elif domain == 'seamanslog.com':
-        return 'log_theme.html'
-    elif domain == 'seamansguide.com':
-        return 'guide_theme.html'
-    else:
-        return 'mybook_theme.html'
-
-
 def header_info(domain):
     if domain == 'markseaman.org':
         return dict(title='Mark Seaman', subtitle='Inventor - Teacher - Writer',
@@ -142,3 +127,38 @@ def header_info(domain):
         return dict(title="Shrinking World", subtitle='Software Development Training',
                     logo="/static/images/SWS_Logo_200.jpg", logo_text='Shrinking World Solutions')
 
+
+def header_settings(site_title, logo=(None,None)):
+    return dict(title=site_title[0], subtitle=site_title[1], logo=logo[0], logo_text=logo[1])
+
+
+def theme(domain):
+    if domain == 'spiritual-things.org':
+        return 'spiritual_theme.html'
+    elif domain == 'markseaman.org':
+        return 'seaman_theme.html'
+    elif domain == 'markseaman.info':
+        return 'task_theme.html'
+    elif domain == 'seamanslog.com':
+        return 'log_theme.html'
+    elif domain == 'seamansguide.com':
+        return 'guide_theme.html'
+    else:
+        return 'mybook_theme.html'
+
+
+
+def topic_menu(title, topics, base, home):
+    def is_active(title, topic):
+        return ' active' if title.startswith(topic) else ''
+
+    menu_items = [dict(url=base+i[0], label=i[1], active=is_active(title,i[0])) for i in topics]
+    return home, menu_items
+
+
+def page_settings(domain, title, site_title, menu):
+    domdoc = domain_doc(domain, title)
+    text = doc_html_text(domdoc, '/static/images')
+    url = join(domain, title)
+    header = header_settings(site_title)
+    return dict(title=title, text=text, menu=menu, url=url, header=header)
