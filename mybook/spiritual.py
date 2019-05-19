@@ -32,8 +32,10 @@ class SpiritualDoc(TemplateView):
     def get_context_data(self, **kwargs):
         log_page(self.request)
         title = self.kwargs.get('title', 'Index')
-        return spiritual_page_settings(self.request, title)
-
+        settings = spiritual_page_settings(self.request, title)
+        settings['card_title'] = title
+        return settings
+    
 
 class SpiritualSelect(RedirectView):
     permanent = False

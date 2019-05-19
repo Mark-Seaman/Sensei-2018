@@ -25,3 +25,9 @@ pre {
     border-left: 3px solid purple;
     border-right: 3px solid purple;
 }
+
+.card-header {
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+}
