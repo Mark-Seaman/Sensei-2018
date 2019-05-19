@@ -22,7 +22,8 @@ header {
     box-shadow: 2px 2px 5px grey;
     margin: 2em;
     padding: 2em;
-    text-align: center;
+    /*text-align: center;*/
+    border: 1px solid red;
 }
 
 header h1 {
