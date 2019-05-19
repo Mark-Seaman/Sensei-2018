@@ -159,6 +159,6 @@ def topic_menu(title, topics, base, home):
 def page_settings(domain, title, site_title, menu):
     domdoc = domain_doc(domain, title)
     text = doc_html_text(domdoc, '/static/images')
-    url = join(domain, title)
+    url = "https://%s/%s" % (domain, title)
     header = header_settings(site_title)
     return dict(title=title, text=text, menu=menu, url=url, header=header)

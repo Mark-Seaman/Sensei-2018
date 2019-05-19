@@ -15,7 +15,6 @@ def spiritual_page_settings(request, title):
     site_title = ('Spiritual Things', 'Daily Inspiration')
     return page_settings(domain, title, site_title, menu)
 
-    # return dict(title=title, text=text, menu=menu, url=url, header=header)
 
 
 def spiritual_topics():
@@ -34,11 +33,6 @@ class SpiritualDoc(TemplateView):
         log_page(self.request)
         title = self.kwargs.get('title', 'Index')
         return spiritual_page_settings(self.request, title)
-
-        # page_settings(self.request.get_host(),
-        #                      title,
-        #                      ('Spiritual Things', 'Daily Inspiration'),
-        #                      spiritual_topics())
 
 
 class SpiritualSelect(RedirectView):
