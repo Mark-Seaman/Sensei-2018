@@ -29,6 +29,8 @@ header {
 header h1 {
     color: yellow;
     box-shadow: none;
+        border: 1px solid yellow;
+
     text-align: left;
     padding: 0;
 }
@@ -36,6 +38,8 @@ header h1 {
 header h2 {
     color: white;
     /*background-color: inherit;*/
+            border: 1px solid yellow;
+
     box-shadow: none;
     border: none;
     margin: inherit;
