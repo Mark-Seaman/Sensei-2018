@@ -44,12 +44,12 @@ class SpiritualDoc(TemplateView):
     def get_context_data(self, **kwargs):
         log_page(self.request)
         title = self.kwargs.get('title', 'Index')
-        # domdoc = domain_doc(self.request.get_host(), title)
-        # text = doc_html_text(domdoc, '/static/images')
-        # menu = spiritual_menu(title)
-        # url = self.request.get_raw_uri()
-        # return dict(title=title, text=text, menu=menu, url=url, header=spiritual_header())
-        page_settings(self.request.get_host(), title)
+        domdoc = domain_doc(self.request.get_host(), title)
+        text = doc_html_text(domdoc, '/static/images')
+        menu = spiritual_menu(title)
+        url = self.request.get_raw_uri()
+        return dict(title=title, text=text, menu=menu, url=url, header=spiritual_header())
+        # page_settings(self.request.get_host(), title)
 
 
 class SpiritualSelect(RedirectView):
