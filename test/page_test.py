@@ -6,29 +6,17 @@ def check_page(url, min=1, max=1):
      return x if x else 'OK - %s' % url
 
 
-# def page_list_test():
-#     return check_shell_lines('x page list', 18, 30)
-
-
-# def page_text_test():
-#     return check_shell_lines('x page text all', 400, 1000)
-
-
-# def page_diff_test():
-#     return check_shell_lines('x page diff', 1, 100)
-
-
 def page_sites_test():
     pages = [
-        check_page('https://markseaman.info/Index.md',       195, 270),
-        check_page('https://markseaman.org/MarkSeaman/Index',        173, 180),
+        check_page('https://markseaman.info/Index.md',              195, 270),
+        check_page('https://markseaman.org/MarkSeaman/Index',       173, 180),
 
-        check_page('https://seamansguide.com/guide/Index',      112, 112),
-        check_page('https://seamanslog.com/seamanslog/',        127, 127),
-        check_page('https://seamanslog.com/seamanslog/HabitualChange',        129, 129),
+        check_page('https://seamansguide.com/guide/Index',          112, 112),
+        check_page('https://seamanslog.com/seamanslog/',            127, 127),
+        check_page('https://seamanslog.com/seamanslog/HabitualChange', 129, 129),
 
-        check_page('https://shrinking-world.com/shrinkingworld/Index',   129, 129),
-        check_page('https://shrinking-world.com/Leverage', 137, 137),
+        check_page('https://shrinking-world.com/shrinkingworld/Index', 129, 129),
+        check_page('https://shrinking-world.com/Leverage',          137, 137),
 
         check_page('https://spiritual-things.org/spiritual/Index',  147, 147),
         check_page('https://spiritual-things.org/spiritual/reflect/66', 128, 128),
