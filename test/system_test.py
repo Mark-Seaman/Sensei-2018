@@ -32,7 +32,7 @@ def system_env_test():
     
 def system_files_count_test():
     files = file_tree_list(environ['p'])
-    return check_lines('File list', '\n'.join(files), 5800, 6000)
+    return check_lines('File list', '\n'.join(files), 5800, 6100)
 
 
 def system_host_test():

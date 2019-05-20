@@ -35,7 +35,7 @@ class SpiritualDoc(TemplateView):
         settings = spiritual_page_settings(self.request, title)
         settings['card_title'] = title
         return settings
-    
+
 
 class SpiritualSelect(RedirectView):
     permanent = False
