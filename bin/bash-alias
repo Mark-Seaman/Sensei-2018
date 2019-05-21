@@ -90,6 +90,7 @@ alias shell='cd $p && python ./manage.py shell'
 alias ssh-imac='ssh $imac'
 alias ssh-macbook='ssh $macbook'
 
+alias t='ssh sensei@157.230.163.78'
 alias task='x task'
 alias te='x tst edit'
 alias tools='x tool list'
