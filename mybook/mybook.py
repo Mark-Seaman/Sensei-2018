@@ -117,12 +117,12 @@ def header_info(domain):
                     logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
 
     elif domain == 'seamansguide.com':
-        return dict(title="Seaman's Log", subtitle='Big Ideas & Deep Thoughts',
+        return dict(title="Seaman's Guides", subtitle='Software Development Courses',
                     logo="/static/images/SWS_Logo_200.jpg", logo_text='Shrinking World Solutions')
 
     # elif domain == 'spiritual-things.org':
     #     return dict(title='Spiritual Things', subtitle='Daily Inspiration',
-    #                 logo="/static/images/MarkSeaman.100.png", logo_text='Mark Seaman')
+    #                 logo=None, logo_text=None)
 
     else:
         return dict(title="Shrinking World", subtitle='Software Development Training',
