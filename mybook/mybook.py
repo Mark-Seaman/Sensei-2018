@@ -49,11 +49,11 @@ def booknotes_excerpt(doc):
 def get_menu(title):
     if title.startswith('info') or title.startswith('task'):
         time = ' active' if (title == 'task') else ''
-        future = ' active' if (title == 'info/Aspire.md') else ''
+        future = ' active' if (title == 'info/Aspire') else ''
         return 'ASPIRE ', [
-            dict(url='/task/time', label='Past', active=time),
+            dict(url='/info/Done', label='Past', active=time),
             dict(url='/info/Index', label='Present', active=(not future and not time)),
-            dict(url='/info/Aspire.md', label='Future', active=future),
+            dict(url='/info/Aspire', label='Future', active=future),
             dict(url='https://shrinking-world.com', label='Shrinking World', active=''),
             dict(url='https://markseaman.org', label='Mark Seaman', active=''),
         ]
