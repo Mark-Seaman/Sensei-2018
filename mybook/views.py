@@ -1,4 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.utils.timezone import now
 from django.views.generic import RedirectView, TemplateView
 from os import listdir
 from os.path import join
@@ -50,7 +51,7 @@ class MyBookDocDisplay(TemplateView):
         menu = get_menu(title)
         url = self.request.get_raw_uri()
         header = header_info(self.request.get_host())
-        return dict(title=title, text=text, menu=menu, url=url, header=header)
+        return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
 
     def get_template_names(self):
         # title = self.kwargs.get('title')

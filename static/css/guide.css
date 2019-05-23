@@ -5,7 +5,6 @@
 */
 
 * {
-    font-size: 18px;
 }
 
 footer {
@@ -44,7 +43,7 @@ hr {
 
 h1 {
     color: dodgerblue;
-    padding: 20px;
+    /*padding: 20px;*/
     text-align: center;
     text-shadow: 2px 2px 4px grey;
 }
@@ -54,9 +53,9 @@ h2 {
     border-radius: 20px;
     box-shadow: 2px 2px 4px grey;
     color: dodgerblue;
-    margin: 2em;
+    /*margin: 2em;*/
     text-align: center;
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
 h3 {
@@ -65,8 +64,8 @@ h3 {
 }
 
 main {
-    margin: 1em;
-    padding: 2em;
+    /*margin: 1em;*/
+    /*padding: 2em;*/
 }
 
 pre {

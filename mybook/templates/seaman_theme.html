@@ -10,10 +10,10 @@
 
         {% block css %}
 
-            <link rel="stylesheet" href="/static/css/guide.css">
-            {% if aspire_menu %}
-                <link rel="stylesheet" href="/static/css/aspire.css?time={{ time }}">
-            {% endif %}
+            <link rel="stylesheet" href="/static/css/guide.css?time={{ time }}">
+{#            {% if aspire_menu %}#}
+{#                <link rel="stylesheet" href="/static/css/aspire.css?time={{ time }}">#}
+{#            {% endif %}#}
 
         {% endblock %}
 
@@ -24,7 +24,7 @@
         {% block menu %}
             <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     {{ menu.0 }}
                 </a>
 
@@ -49,6 +49,7 @@
         {% block header %}
 
             <header>
+            <h3>{{ time }}</h3>
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-8">
