@@ -29,6 +29,10 @@ class DomainRedirect(RedirectView):
         return '/%s' % domain_doc(self.request.get_host(),'Index')
 
 
+class DocMissing(TemplateView):
+    template_name = 'mybook_missing.html'
+
+
 class MyBookRandom(RedirectView):
     permanent = False
 

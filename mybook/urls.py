@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from django.contrib.auth.views import login, logout
 
-from .views import BookNotes, DocList, DomainRedirect, MyBookDocDisplay, MyBookPrivateDoc, MyBookRandom, SeamansLog
+from .views import BookNotes, DocList, DocMissing, DomainRedirect, MyBookDocDisplay, MyBookPrivateDoc, MyBookRandom, SeamansLog
 from .spiritual import SpiritualDoc, SpiritualSelect
 
 urlpatterns = [
@@ -29,5 +29,6 @@ urlpatterns = [
     # Documents
     url(r'^$',                                  DomainRedirect.as_view()),
     url(r'^(?P<title>[\w/\-_.]*)/Random$',      MyBookRandom.as_view()),
+    url(r'^(?P<title>[\w/\-_.]*)/Missing$',     DocMissing.as_view()),
     url(r'^(?P<title>[\w/\-_.]*)$',             MyBookDocDisplay.as_view()),
 ]
