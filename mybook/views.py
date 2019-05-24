@@ -39,7 +39,7 @@ class DocMissing(TemplateView):
         return dict(title=title, menu=menu, header=header, time=now())
 
 
-class MyBookRandom(RedirectView):
+class DocRandom(RedirectView):
     permanent = False
 
     def get_redirect_url(self, *args, **kwargs):
@@ -49,7 +49,7 @@ class MyBookRandom(RedirectView):
         return '/%s/%s' % (title, file)
 
 
-class MyBookDocDisplay(TemplateView):
+class DocDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
@@ -65,7 +65,7 @@ class MyBookDocDisplay(TemplateView):
         return [theme(self.request.get_host())]
 
 
-class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
+class PrivateDoc(LoginRequiredMixin, DocDisplay):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
@@ -75,7 +75,7 @@ class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
         return dict(title=title, text=text, menu=menu, header=header_info(self.request.get_host()), time=now())
 
 
-class BookNotes(MyBookDocDisplay):
+class BookNotes(DocDisplay):
     template_name = 'mybook_theme.html'
 
     def get_context_data(self, **kwargs):
@@ -86,7 +86,7 @@ class BookNotes(MyBookDocDisplay):
         return super(BookNotes, self).get_context_data(**kwargs)
 
 
-class CardView(MyBookDocDisplay):
+class CardView(DocDisplay):
     template_name = "mybook_cards.html"
 
     def get_context_data(self, **kwargs):
@@ -95,7 +95,7 @@ class CardView(MyBookDocDisplay):
         return super(CardView, self).get_context_data(**kwargs)
 
 
-class OutlineView(MyBookDocDisplay):
+class OutlineView(DocDisplay):
     template_name = "mybook_outline.html"
 
     def get_context_data(self, **kwargs):
@@ -118,7 +118,7 @@ class SeamansLog(RedirectView):
     url = '/seamanslog/Random'
 
 
-class TabsView(MyBookDocDisplay):
+class TabsView(DocDisplay):
     template_name = 'mybook_tabs.html'
 
     def get_context_data(self, **kwargs):
