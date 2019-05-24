@@ -1,7 +1,8 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import redirect
 from django.utils.timezone import now
 from django.views.generic import RedirectView, TemplateView
-from django.views.generic.base import ContextMixin, TemplateResponseMixin
+# from django.views.generic.base import ContextMixin, TemplateResponseMixin
 from os import listdir
 from os.path import join
 from random import choice
@@ -80,7 +81,7 @@ class DocRedirect(RedirectView):
         return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
 
 
-class DocPageDisplay(TemplateResponseMixin, ContextMixin, RedirectView):
+class DocPageDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
@@ -93,17 +94,21 @@ class DocPageDisplay(TemplateResponseMixin, ContextMixin, RedirectView):
         header = header_info(self.request.get_host())
         return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
 
-    def get_redirect_url(self, *args, **kwargs):
+    def get(self, request):
         title = self.kwargs.get('title')
-        log('DocRedirect: %s' % title)
-
-        log_page(self.request, 'DocRedirect.get_redirect_url')
+        log('DocPageDisplay: %s' % title)
         if not title:
-            return '/%s' % domain_doc(self.request.get_host(), 'Index')
+            url = domain_doc(self.request.get_host(), 'Index')
+            log('redirect: /%s' % url)
+            return redirect('/%s' % url)
         if title.endswith('/'):
-            return '/%sIndex' % title
+            url = title + 'Index'
+            log('redirect: /%s' % url)
+            return redirect('/%s' % url)
         if doc_page(title):
-            return '/%s' % doc_page(title)
+            url = doc_page(title)
+            log('redirect: /%s' % url)
+            return redirect('/%s' % url)
         # return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
 
     # def get_redirect_url(self, *args, **kwargs):
