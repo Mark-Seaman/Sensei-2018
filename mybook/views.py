@@ -62,11 +62,12 @@ class DocDisplay(TemplateView):
 class DocRedirect(DocDisplay, RedirectView):
 
     def get_context_data(self, **kwargs):
-        log_page(self.request, 'DocRedirect')
+        log_page(self.request, 'DocRedirect.get_context_data')
         return super(DocRedirect, self).get_context_data(**kwargs)
 
     def get_redirect_url(self, *args, **kwargs):
         title = self.kwargs.get('title')
+        log_page(self.request, 'DocRedirect.get_redirect_url')
         if not title:
             return '/%s' % domain_doc(self.request.get_host(),'Index')
         if title.endswith('/'):
