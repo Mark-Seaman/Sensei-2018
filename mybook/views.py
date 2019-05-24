@@ -80,7 +80,7 @@ class DocRedirect(RedirectView):
         return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
 
 
-class DocPageDisplay(TemplateResponseMixin, ContextMixin, DocRedirect):
+class DocPageDisplay(TemplateResponseMixin, ContextMixin, RedirectView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
@@ -94,8 +94,21 @@ class DocPageDisplay(TemplateResponseMixin, ContextMixin, DocRedirect):
         return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
 
     def get_redirect_url(self, *args, **kwargs):
-        log_page(self.request, 'DocPageDisplay.get_redirect_url')
-        return super(DocPageDisplay, self).get_redirect_url(**kwargs)
+        title = self.kwargs.get('title')
+        log('DocRedirect: %s' % title)
+
+        log_page(self.request, 'DocRedirect.get_redirect_url')
+        if not title:
+            return '/%s' % domain_doc(self.request.get_host(), 'Index')
+        if title.endswith('/'):
+            return '/%sIndex' % title
+        if doc_page(title):
+            return '/%s' % doc_page(title)
+        return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
+
+    # def get_redirect_url(self, *args, **kwargs):
+    #     log_page(self.request, 'DocPageDisplay.get_redirect_url')
+    #     return super(DocPageDisplay, self).get_redirect_url(**kwargs)
 
     def get_template_names(self):
         theme_template = theme(self.request.get_host())
