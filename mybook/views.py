@@ -5,7 +5,7 @@ from os import listdir
 from os.path import join
 from random import choice
 
-from tool.document import doc_html_text, doc_list, domain_doc
+from tool.document import doc_html_text, doc_list, doc_page, domain_doc
 from tool.log import log_page
 
 from .mybook import booknotes_excerpt, get_menu, header_info, theme
@@ -71,12 +71,8 @@ class DocRedirect(DocDisplay, RedirectView):
             return '/%s' % domain_doc(self.request.get_host(),'Index')
         if title.endswith('/'):
             return title+'/Index'
-
-
-# class DomainRedirect(RedirectView):
-#
-#     def get_redirect_url(self, *args, **kwargs):
-#         return '/%s' % domain_doc(self.request.get_host(),'Index')
+        if doc_page(title):
+            return doc_page(title)
 
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):

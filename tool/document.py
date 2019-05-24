@@ -64,6 +64,19 @@ def doc_list(docdir):
     return [(('%s/%s' % (docdir,f)), (title(doc_path('%s/%s') % (docdir,f)))) for f in files]
 
 
+def doc_page(title):
+    log('doc_page', title)
+    path = doc_path(title)
+    if exists(path) and isfile(path):
+        return None
+    elif exists(path + '.md'):
+        return title + '.md'
+    elif isdir(path) and exists(join(path, 'Index')):
+        return join(title, 'Index')
+    elif isdir(path) and exists(join(path, 'Index.md')):
+        return join(title, 'Index.md')
+
+
 def doc_path(page):
     return join(BASE_DIR, 'Documents', page)
 
