@@ -94,7 +94,7 @@ class DocPageDisplay(TemplateView):
         header = header_info(self.request.get_host())
         return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
 
-    def get(self, request):
+    def get(self, request, *args, **kwargs):
         title = self.kwargs.get('title')
         log('DocPageDisplay: %s' % title)
         if not title:
