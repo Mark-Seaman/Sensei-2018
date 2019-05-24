@@ -69,8 +69,9 @@ class DocRedirect(RedirectView, DocDisplay):
 
     def get_redirect_url(self, *args, **kwargs):
         title = self.kwargs.get('title', 'Index')
-        if title != 'Redirect':
+        if title != 'info/Test/Redirect':
             return '/%s' % title
+# http://MarkSeaman.info/info/Test/Redirect
 
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):
