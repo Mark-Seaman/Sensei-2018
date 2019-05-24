@@ -104,7 +104,7 @@ class DocPageDisplay(TemplateResponseMixin, ContextMixin, RedirectView):
             return '/%sIndex' % title
         if doc_page(title):
             return '/%s' % doc_page(title)
-        return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
+        # return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
 
     # def get_redirect_url(self, *args, **kwargs):
     #     log_page(self.request, 'DocPageDisplay.get_redirect_url')
