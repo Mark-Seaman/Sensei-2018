@@ -59,7 +59,7 @@ class DocDisplay(TemplateView):
         return [theme(self.request.get_host())]
 
 
-class DocRedirect(RedirectView, DocDisplay):
+class DocRedirect(DocDisplay, RedirectView):
 
     def get_context_data(self, **kwargs):
         # title = self.kwargs.get('title', 'Index')
