@@ -69,6 +69,8 @@ class DocRedirect(DocDisplay, RedirectView):
         title = self.kwargs.get('title')
         if not title:
             return '/%s' % domain_doc(self.request.get_host(),'Index')
+        if title.endswith('/'):
+            return title+'/Index'
 
 
 # class DomainRedirect(RedirectView):
