@@ -109,11 +109,7 @@ class DocPageDisplay(TemplateView):
             url = doc_page(title)
             log('redirect: /%s' % url)
             return redirect('/%s' % url)
-        # return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
-
-    # def get_redirect_url(self, *args, **kwargs):
-    #     log_page(self.request, 'DocPageDisplay.get_redirect_url')
-    #     return super(DocPageDisplay, self).get_redirect_url(**kwargs)
+        return super(DocPageDisplay).get(request, *args, **kwargs)
 
     def get_template_names(self):
         theme_template = theme(self.request.get_host())
