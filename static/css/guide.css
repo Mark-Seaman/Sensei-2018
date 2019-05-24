@@ -27,6 +27,7 @@ header h1 {
     color: yellow;
     box-shadow: none;
     padding: 0;
+    text-align: left;
 }
 
 header h2 {
@@ -34,7 +35,8 @@ header h2 {
     box-shadow: none;
     border: none;
     margin: inherit;
-    padding: 0;
+    /*padding: 0;*/
+    text-align: left;
 }
 
 hr {
