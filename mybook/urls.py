@@ -32,6 +32,6 @@ urlpatterns = [
 
     # Documents
     url(r'^(?P<title>[\w/\-_.]*)/Random$',      DocRandom.as_view()),
-    url(r'^(?P<title>[\w/\-_.]*)$',             DocPageDisplay.as_view()),
-    # url(r'^(?P<title>[\w/\-_.]*)$',             DocDisplay.as_view()),
+    # url(r'^(?P<title>[\w/\-_.]*)$',             DocPageDisplay.as_view()),
+    url(r'^(?P<title>[\w/\-_.]*)$',             DocDisplay.as_view()),
 ]
