@@ -62,28 +62,19 @@ class DocDisplay(TemplateView):
 class DocRedirect(DocDisplay, RedirectView):
 
     def get_context_data(self, **kwargs):
-        # title = self.kwargs.get('title', 'Index')
-        # domdoc = domain_doc(self.request.get_host(), title)
-        # log_page(self.request, domdoc)
-        # text = doc_html_text(domdoc, '/static/images')
-        # menu = get_menu(title)
-        # url = self.request.get_raw_uri()
-        # header = header_info(self.request.get_host())
-        # return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
         log_page(self.request, 'DocRedirect')
         return super(DocRedirect, self).get_context_data(**kwargs)
 
     def get_redirect_url(self, *args, **kwargs):
-        title = self.kwargs.get('title', 'Index')
-        if title != 'info/Test/Redirect':
-            return '/%s' % title
-# http://MarkSeaman.info/info/Test/Redirect
+        title = self.kwargs.get('title')
+        if not title:
+            return '/%s' % domain_doc(self.request.get_host(),'Index')
 
 
-class DomainRedirect(RedirectView):
-
-    def get_redirect_url(self, *args, **kwargs):
-        return '/%s' % domain_doc(self.request.get_host(),'Index')
+# class DomainRedirect(RedirectView):
+#
+#     def get_redirect_url(self, *args, **kwargs):
+#         return '/%s' % domain_doc(self.request.get_host(),'Index')
 
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):

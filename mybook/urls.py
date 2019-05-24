@@ -1,15 +1,16 @@
 from django.conf.urls import url
 from django.contrib.auth.views import login, logout
 
-from .views import BookNotes, DocList, DocMissing, DocRandom, DocRedirect, DomainRedirect, DocDisplay, PrivateDoc, SeamansLog
+from .views import BookNotes, DocList, DocMissing, DocRandom, DocRedirect, DocDisplay, PrivateDoc, SeamansLog
 from .spiritual import SpiritualDoc, SpiritualSelect
 
 urlpatterns = [
 
     # Redirect
-    url(r'^$',                                  DomainRedirect.as_view()),
+    url(r'^$',                                  DocRedirect.as_view()),
     url(r'^(?P<title>[\w/\-_.]*)/Missing$',     DocMissing.as_view()),
-    url(r'^redirect/(?P<title>[\w/\-_.]*)$',       DocRedirect.as_view()),
+
+    # url(r'^redirect/(?P<title>[\w/\-_.]*)$',       DocRedirect.as_view()),
 
     # Authentication
     url(r'^login',                              login, {'template_name': 'mybook_login.html'}, name='login'),
