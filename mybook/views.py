@@ -1,6 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils.timezone import now
 from django.views.generic import RedirectView, TemplateView
+from django.views.generic.base import ContextMixin, TemplateResponseMixin
 from os import listdir
 from os.path import join
 from random import choice
@@ -79,15 +80,27 @@ class DocRedirect(RedirectView):
         return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
 
 
-class DocPageDisplay(DocDisplay, DocRedirect):
+class DocPageDisplay(TemplateResponseMixin, ContextMixin, DocRedirect):
 
     def get_context_data(self, **kwargs):
-        log_page(self.request, 'DocPageDisplay.get_context_data')
-        return super(DocPageDisplay, self).get_context_data(**kwargs)
+        title = self.kwargs.get('title', 'Index')
+        log('DocPageDisplay: %s' % title)
+        domdoc = domain_doc(self.request.get_host(), title)
+        log_page(self.request, domdoc)
+        text = doc_html_text(domdoc, '/static/images')
+        menu = get_menu(title)
+        url = self.request.get_raw_uri()
+        header = header_info(self.request.get_host())
+        return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
 
     def get_redirect_url(self, *args, **kwargs):
         log_page(self.request, 'DocPageDisplay.get_redirect_url')
         return super(DocPageDisplay, self).get_redirect_url(**kwargs)
+
+    def get_template_names(self):
+        theme_template = theme(self.request.get_host())
+        log('theme = %s' % theme_template)
+        return [theme_template]
 
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):
