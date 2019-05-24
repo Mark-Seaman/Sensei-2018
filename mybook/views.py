@@ -6,7 +6,7 @@ from os.path import join
 from random import choice
 
 from tool.document import doc_html_text, doc_list, doc_page, domain_doc
-from tool.log import log_page
+from tool.log import log, log_page
 
 from .mybook import booknotes_excerpt, get_menu, header_info, theme
 from .outline import outline, read_cards, tabs_data
@@ -47,6 +47,7 @@ class DocDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
+        log('DocDisplay: %s' % title)
         domdoc = domain_doc(self.request.get_host(), title)
         log_page(self.request, domdoc)
         text = doc_html_text(domdoc, '/static/images')
@@ -56,7 +57,9 @@ class DocDisplay(TemplateView):
         return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
 
     def get_template_names(self):
-        return [theme(self.request.get_host())]
+        theme_template = theme(self.request.get_host())
+        log('theme = %s' % theme_template)
+        return [theme_template]
 
 
 class DocRedirect(RedirectView):
@@ -64,6 +67,8 @@ class DocRedirect(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
         title = self.kwargs.get('title')
+        log('DocRedirect: %s' % title)
+
         log_page(self.request, 'DocRedirect.get_redirect_url')
         if not title:
             return '/%s' % domain_doc(self.request.get_host(),'Index')
@@ -71,17 +76,18 @@ class DocRedirect(RedirectView):
             return title+'/Index'
         if doc_page(title):
             return doc_page(title)
+        return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
 
 
 class DocPageDisplay(DocDisplay, DocRedirect):
 
     def get_context_data(self, **kwargs):
         log_page(self.request, 'DocPageDisplay.get_context_data')
-        return super(DocRedirect, self).get_context_data(**kwargs)
+        return super(DocPageDisplay, self).get_context_data(**kwargs)
 
     def get_redirect_url(self, *args, **kwargs):
         log_page(self.request, 'DocPageDisplay.get_redirect_url')
-        return super(DocRedirect, self).get_redirect_url(**kwargs)
+        return super(DocPageDisplay, self).get_redirect_url(**kwargs)
 
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):
