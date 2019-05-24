@@ -94,11 +94,11 @@ class DocPageDisplay(TemplateView):
         header = header_info(self.request.get_host())
         return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
 
-    def dispatch(self, request, *args, **kwargs):
-        title = self.kwargs.get('title')
+    def dispatch(request, *args, **kwargs):
+        title = kwargs.get('title')
         log('DocPageDisplay: %s' % title)
         if not title:
-            url = domain_doc(self.request.get_host(), 'Index')
+            url = domain_doc(request.get_host(), 'Index')
             log('redirect: /%s' % url)
             return redirect('/%s' % url)
         if title.endswith('/'):
@@ -109,7 +109,7 @@ class DocPageDisplay(TemplateView):
             url = doc_page(title)
             log('redirect: /%s' % url)
             return redirect('/%s' % url)
-        return super(DocPageDisplay).get(request, *args, **kwargs)
+        return super(DocPageDisplay).dispatch(request, *args, **kwargs)
 
     def get_template_names(self):
         theme_template = theme(self.request.get_host())
