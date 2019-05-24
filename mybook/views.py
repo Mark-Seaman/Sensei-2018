@@ -29,13 +29,6 @@ class DomainRedirect(RedirectView):
         return '/%s' % domain_doc(self.request.get_host(),'Index')
 
 
-class DocRedirect(RedirectView):
-
-    def get_redirect_url(self, *args, **kwargs):
-        title = self.kwargs.get('title', 'Index')
-        return '/%s' % title
-
-
 class DocMissing(TemplateView):
     template_name = 'mybook_missing.html'
 
@@ -70,6 +63,13 @@ class DocDisplay(TemplateView):
 
     def get_template_names(self):
         return [theme(self.request.get_host())]
+
+
+class DocRedirect(RedirectView, DocDisplay):
+
+    def get_redirect_url(self, *args, **kwargs):
+        title = self.kwargs.get('title', 'Index')
+        return '/%s' % title
 
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):
