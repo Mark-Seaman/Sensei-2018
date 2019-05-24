@@ -59,11 +59,8 @@ class DocDisplay(TemplateView):
         return [theme(self.request.get_host())]
 
 
-class DocRedirect(DocDisplay, RedirectView):
-
-    def get_context_data(self, **kwargs):
-        log_page(self.request, 'DocRedirect.get_context_data')
-        return super(DocRedirect, self).get_context_data(**kwargs)
+class DocRedirect(RedirectView):
+    permanent = False
 
     def get_redirect_url(self, *args, **kwargs):
         title = self.kwargs.get('title')
@@ -74,6 +71,17 @@ class DocRedirect(DocDisplay, RedirectView):
             return title+'/Index'
         if doc_page(title):
             return doc_page(title)
+
+
+class DocPageDisplay(DocDisplay, DocRedirect):
+
+    def get_context_data(self, **kwargs):
+        log_page(self.request, 'DocPageDisplay.get_context_data')
+        return super(DocRedirect, self).get_context_data(**kwargs)
+
+    def get_redirect_url(self, *args, **kwargs):
+        log_page(self.request, 'DocPageDisplay.get_redirect_url')
+        return super(DocRedirect, self).get_redirect_url(**kwargs)
 
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):

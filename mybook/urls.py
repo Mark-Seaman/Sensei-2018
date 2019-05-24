@@ -1,21 +1,20 @@
 from django.conf.urls import url
 from django.contrib.auth.views import login, logout
 
-from .views import BookNotes, DocList, DocMissing, DocRandom, DocRedirect, DocDisplay, PrivateDoc, SeamansLog
+from .views import BookNotes, DocList, DocMissing, DocPageDisplay, DocRandom, DocRedirect, DocDisplay, PrivateDoc, SeamansLog
 from .spiritual import SpiritualDoc, SpiritualSelect
 
 urlpatterns = [
 
     # Redirect
     url(r'^(?P<title>[\w/\-_.]*)/Missing$',     DocMissing.as_view()),
-
+    url(r'^$',                                  DocRedirect.as_view()),
 
     # Authentication
     url(r'^login',                              login, {'template_name': 'mybook_login.html'}, name='login'),
     url(r'^logout$',                            logout, {'next_page': '/login'}),
 
     # Old URLs
-    # url(r'^$',                                  DocRedirect.as_view()),
     # url(r'^redirect/(?P<title>[\w/\-_.]*)$',    DocRedirect.as_view()),
     #url(r'^MarkSeaman/booknotes/(?P<title>[\w/\-.]*)$',    BookNotes.as_view()),
 
@@ -33,6 +32,6 @@ urlpatterns = [
 
     # Documents
     url(r'^(?P<title>[\w/\-_.]*)/Random$',      DocRandom.as_view()),
-    url(r'^(?P<title>[\w/\-_.]*)$',             DocRedirect.as_view()),
-    # url(r'^(?P<title>[\w/\-_.]*)$',           DocDisplay.as_view()),
+    # url(r'^(?P<title>[\w/\-_.]*)$',             DocPageDisplay.as_view()),
+    url(r'^(?P<title>[\w/\-_.]*)$',             DocDisplay.as_view()),
 ]
