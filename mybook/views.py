@@ -29,6 +29,13 @@ class DomainRedirect(RedirectView):
         return '/%s' % domain_doc(self.request.get_host(),'Index')
 
 
+class DocRedirect(RedirectView):
+
+    def get_redirect_url(self, *args, **kwargs):
+        title = self.kwargs.get('title', 'Index')
+        return '/%s' % title
+
+
 class DocMissing(TemplateView):
     template_name = 'mybook_missing.html'
 
