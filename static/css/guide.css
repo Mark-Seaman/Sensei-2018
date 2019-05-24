@@ -53,14 +53,14 @@ h2 {
     border-radius: 20px;
     box-shadow: 2px 2px 4px grey;
     color: dodgerblue;
-    /*margin: 2em;*/
+    margin: 1em;
     text-align: center;
-    /*padding: 20px;*/
+    padding: 1em;
 }
 
 h3 {
     color: #444444;
-    text-size: 120%;
+    /*text-size: 120%;*/
 }
 
 main {
