@@ -23,12 +23,10 @@ class DocList(TemplateView):
         return dict(title=title, list=doclist, menu=menu, url=self.request.get_raw_uri(), header=header_info(self.request.get_host()))
 
 
-
 class DomainRedirect(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
         return '/%s' % domain_doc(self.request.get_host(),'Index')
-
 
 
 class MyBookRandom(RedirectView):
@@ -54,9 +52,7 @@ class MyBookDocDisplay(TemplateView):
         return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
 
     def get_template_names(self):
-        # title = self.kwargs.get('title')
         return [theme(self.request.get_host())]
-
 
 
 class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
@@ -66,7 +62,7 @@ class MyBookPrivateDoc(LoginRequiredMixin, MyBookDocDisplay):
         domdoc = domain_doc(self.request.get_host(), title)
         text = doc_html_text(domdoc, '/static/images')
         menu = get_menu('info/'+title)
-        return dict(title=title, text=text, menu=menu, aspire_menu=True, header=header_info(self.request.get_host()))
+        return dict(title=title, text=text, menu=menu, header=header_info(self.request.get_host()), time=now())
 
 
 class BookNotes(MyBookDocDisplay):
