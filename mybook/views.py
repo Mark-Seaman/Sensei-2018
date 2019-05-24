@@ -32,6 +32,12 @@ class DomainRedirect(RedirectView):
 class DocMissing(TemplateView):
     template_name = 'mybook_missing.html'
 
+    def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title', 'Index')
+        menu = get_menu(title)
+        header = header_info(self.request.get_host())
+        return dict(title=title, menu=menu, header=header, time=now())
+
 
 class MyBookRandom(RedirectView):
     permanent = False
