@@ -34,16 +34,7 @@
 
                 <div class="card">
                     <div class="card-header">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    {{ card_title }}
-                                </div>
-                                <div class="col-xs-6">
-                                    <a href="Random" class="btn btn-primary">Next</a>
-                                </div>
-                            </div>
-                        </div>
+                        {{ card_title }}
                     </div>
                     <div class="card-body">
                         {% if text %}
@@ -56,7 +47,11 @@
 
                         {% if url %}
                             <hr>
-                            <p><a href="{{ url }}">Read More</a></p>
+                            <p>
+                                <a href="{{ url }}">Read More</a> *
+                                <a href="Random">Next</a>
+                            </p> *
+
                         {% endif %}
                     </div>
                 </div>
