@@ -6,9 +6,10 @@ from .spiritual import SpiritualDoc, SpiritualSelect
 
 urlpatterns = [
 
-    # Redirect
-    url(r'^(?P<title>[\w/\-_.]*)/Missing$',     DocMissing.as_view()),
+    # Documents
     url(r'^$',                                  DocRedirect.as_view()),
+    url(r'^(?P<title>[\w/\-_.]*)/Missing$',     DocMissing.as_view()),
+    url(r'^(?P<title>[\w/\-_.]*)/Random$',      DocRandom.as_view()),
 
     # Authentication
     url(r'^login',                              login, {'template_name': 'mybook_login.html'}, name='login'),
@@ -31,7 +32,6 @@ urlpatterns = [
     url(r'^spiritual/(?P<title>[\w/\-_.]*)$',   SpiritualDoc.as_view()),
 
     # Documents
-    url(r'^(?P<title>[\w/\-_.]*)/Random$',      DocRandom.as_view()),
     # url(r'^(?P<title>[\w/\-_.]*)$',             DocPageDisplay.as_view()),
     url(r'^(?P<title>[\w/\-_.]*)$',             DocDisplay.as_view()),
 ]
