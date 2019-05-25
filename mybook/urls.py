@@ -19,7 +19,7 @@ urlpatterns = [
     #url(r'^MarkSeaman/booknotes/(?P<title>[\w/\-.]*)$',    BookNotes.as_view()),
 
     # Private Pages
-    url(r'^info/(?P<title>[\w/\-_.]*)$', PrivateDoc.as_view()),
+    url(r'^info/(?P<title>[\w/\-_.]*)$',        PrivateDoc.as_view()),
 
     # Seaman's Log
     url(r'^seamanslog$',                        SeamansLog.as_view()),
