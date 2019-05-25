@@ -9,6 +9,7 @@ alias blue='ssh uncobacs@unco-bacs.org'
 alias bluepull="ssh uncobacs@unco-bacs.org 'pwd && git pull && git status'"
 alias book='x book'
 alias booknotes='x booknotes'
+alias brain='python $p/bin/brain.py'
 
 alias calendar='x web https://calendar.google.com/calendar/render?pli=1#main_7'
 alias chrome='open /Applications/Google\ Chrome.app/'
