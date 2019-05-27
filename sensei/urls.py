@@ -7,7 +7,7 @@ urlpatterns = [
 
     url(r'^(?P<course>[-_ \w]+)/lesson/$', UncLessonList.as_view()),
 
-    url(r'^schedule/(?P<id>[\d]+)$', UncSchedule.as_view()),
+    url(r'^(?P<course>[-_ \w]+)/schedule$', UncSchedule.as_view()),
     url(r'^students/(?P<id>[\d]+)$', UncStudents.as_view()),
 
     url(r'^register$', UncRegister.as_view()),

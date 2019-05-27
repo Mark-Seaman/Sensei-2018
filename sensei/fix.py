@@ -13,6 +13,10 @@ BACS 200
 Web Design and Development for Small Business
 '''
 
+from sensei.sensei import add_course
+add_course('bacs200', 'UNC BACS 200 - Intro to Web Development')
+add_course('bacs350', 'UNC BACS 350 - Intermediate Web Development')
+
 
 #########################
 # Lessons

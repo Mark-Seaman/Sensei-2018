@@ -16,6 +16,10 @@ def add_lesson(course, lesson, title, date):
     Lesson.objects.get_or_create(course__name=course, lesson=lesson, title=title, date=date, content=url)
 
 
+def add_course(name, title):
+    Course.objects.create(name=name, title=title, author='Mark Seaman', teacher='Mark Seaman', description="None")
+
+
 def course_lessons(course, page):
     if not course.startswith('bacs'):
         return []
@@ -72,8 +76,7 @@ def make_link(href, text=None):
     return '<a href="%s">%s</a>' % (href, text)
 
 
-def schedule(course='1'):
-    course = get_course(course).name
+def schedule(course):
     data_file = 'Documents/unc/%s/schedule.csv' % course
     s = []
     with open(data_file) as f:
