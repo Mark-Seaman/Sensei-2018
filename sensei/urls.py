@@ -4,11 +4,14 @@ from django.conf.urls import url
 from .views import *
 
 urlpatterns = [
-    url(r'^(?P<course>[-_ \w]+)$',                      UncRedirect.as_view()),
-    url(r'^(?P<course>[-_ \w]+)/lesson/$',              UncLessonList.as_view()),
+    url(r'^(?P<course>[-_ \w]+)$',                          UncRedirect.as_view()),
+    url(r'^(?P<course>[-_ \w]+)/lesson/$',                  UncLessonList.as_view()),
+    url(r'^(?P<course>[-_ \w]+)/(?P<id>[\d]*)$',            UncLessonDetail.as_view()),
 
-    url(r'^(?P<course>[-_ \w]+)/schedule$',             UncSchedule.as_view()),
-    url(r'^(?P<course>[-_ \w]+)/student/(?P<id>[\d]*)$', UncStudent.as_view()),
+    url(r'^(?P<course>[-_ \w]+)/schedule$',                 UncSchedule.as_view()),
+
+    url(r'^(?P<course>[-_ \w]+)/student/$',                 UncStudentList.as_view()),
+    url(r'^(?P<course>[-_ \w]+)/student/(?P<id>[\d]*)$',    UncStudentDetail.as_view()),
 
     # url(r'^register$', UncRegister.as_view()),
     # url(r'^registered$', UncStudentDomains.as_view()),

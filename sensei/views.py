@@ -16,6 +16,7 @@ class UncRedirect(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
         course = self.kwargs.get('course')
+        # TODO: Fix this
         return '/unc/bacs200/' #+self.request.path+'/'
 
 
@@ -60,6 +61,13 @@ class UncLessonDetail(DetailView):
     model = Lesson
     template_name = 'unc_lesson_details.html'
 
+    def get_context_data(self, **kwargs):
+        course = self.kwargs.get('course')
+        menu = unc_menu()
+        title = 'LESSON #%s' % id
+        kwargs.update(site_settings(menu=menu, title=title, course=course))
+        return super(UncLessonDetail, self).get_context_data(kwargs)
+
 
 class UncLessonList(ListView):
     model = Lesson
@@ -72,7 +80,9 @@ class UncLessonList(ListView):
         menu = unc_menu()
         return site_settings(menu=menu, title=title, course=course.name,  lessons=lessons)
 
-
+    def get_queryset(self):
+        course  = self.kwargs.get('course')
+        return Lesson.objects.filter(course__name=course)
 
 
 class UncSchedule(TemplateView):
@@ -93,7 +103,7 @@ class UncSlidesDisplay(TemplateView):
         return site_settings(title=title, markdown=text)
 
 
-class UncStudent(TemplateView):
+class UncStudentDetail(TemplateView):
     template_name = 'unc_dashboard.html'
 
     def get_context_data(self, **kwargs):
@@ -108,6 +118,20 @@ class UncStudent(TemplateView):
                              title=title, student=student(student_id), game=game,
                              reviews=reviews, feedback=feedback, done=done)
 
+class UncStudentList(TemplateView):
+    template_name = 'unc_dashboard.html'
+
+    def get_context_data(self, **kwargs):
+        student_id = self.kwargs.get('id')
+        s = Student.objects.get(pk=student_id)
+        game = UrlGame.objects.get(student=s)
+        reviews = student_reviews(student_id)
+        done = student_reviews_done(student_id)
+        feedback = review_feedback(student_id)
+        title = 'Student Dashboard'
+        return site_settings(student_active='active',
+                             title=title, student=student(student_id), game=game,
+                             reviews=reviews, feedback=feedback, done=done)
 
 # class UncRegister(FormView):
 #     class EditDocForm(Form):
