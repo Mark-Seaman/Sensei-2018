@@ -1,5 +1,6 @@
 # from django import forms
 # from django.forms import Form
+from os.path import join
 from django.views.generic import DetailView, FormView, ListView, RedirectView, TemplateView, UpdateView
 from django.utils.timezone import now
 
@@ -24,14 +25,12 @@ class UncDocDisplay(TemplateView):
     template_name = 'unc_doc.html'
 
     def get_context_data(self, **kwargs):
-        title = self.kwargs.get('title')
-        course = title[:7]
-        lessons = course_lessons(course, title)
-        doc = 'unc/' + title
-        title = 'Lesson %s' % title[-2:] if title[-3:-2] == '/' else 'UNC BACS %s' % course[-3:]
+        title = self.kwargs.get('title','Index')
+        course = self.kwargs.get('course')
+        doc = join('unc', course, title)
         text = doc_html_text(doc, '/static/images/unc/%s' % course)
         menu = unc_menu()
-        return site_settings(menu=menu, title=title, text=text, course=course, lessons=lessons)
+        return site_settings(menu=menu, title=title, text=text, course=course)
 
 
 class UncEditReview(UpdateView):
