@@ -9,7 +9,7 @@ urlpatterns = [
 
 
     url(r'^(?P<course>[-_ \w]+)/lesson/$',                  UncLessonList.as_view()),
-    url(r'^(?P<course>[-_ \w]+)/(?P<id>[\d]*)$',            UncLessonDetail.as_view()),
+    # url(r'^(?P<course>[-_ \w]+)/lesson/(?P<id>[\d]*)$',     UncLessonDetail.as_view()),
 
     url(r'^(?P<course>[-_ \w]+)/schedule$',                 UncSchedule.as_view()),
 
