@@ -118,18 +118,3 @@ def unc_menu(course='bacs200'):
         dict(url='/unc/%s/student/' % course,    label='Dashboard',  active=''),
         dict(url='https://markseaman.info/info/Test/UNC', label='Test', active=' active'),
     ]
-
-'''
-<li class="nav-item {{ lesson_active }}">#}
-{#                            <a class="nav-link" href="">Lessons </a>#}
-{#                        </li>#}
-{#                        <li class="nav-item  {{ student_active }}">#}
-{#                            <a class="nav-link" href="">Students</a>#}
-{#                        </li>#}
-{#                        <li class="nav-item {{ resource_active }}">#}
-{#                            <a class="nav-link" href="">Resources</a>#}
-{#                        </li>#}
-{#                        <li class="nav-item {{ project_active }}">#}
-{#                            <a class="nav-link" href="/unc/bacs200/projects/Index">Projects</a>#}
-{#                        </li>#}
-'''

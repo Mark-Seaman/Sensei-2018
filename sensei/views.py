@@ -19,7 +19,7 @@ class UncRedirect(RedirectView):
     def get_redirect_url(self, *args, **kwargs):
         course = self.kwargs.get('course')
         # TODO: Fix this  #+self.request.path+'/'
-        return '/unc/%s/Index' % course
+        return '/%s/Index' % self.request.path
 
 
 class UncDocDisplay(TemplateView):
