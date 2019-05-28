@@ -1,14 +1,12 @@
-# from django import forms
-# from django.forms import Form
 from os.path import join
-from django.views.generic import DetailView, FormView, ListView, RedirectView, TemplateView, UpdateView
+from django.views.generic import  ListView, RedirectView, TemplateView
 
 from tool.document import doc_html_text
 from tool.log import log_page
 
 from .models import Lesson, Student
-from .sensei import get_course_name, schedule, slides_markdown, unc_menu
-from sensei.sensei import site_settings
+from .sensei import get_course_name, schedule, slides_markdown
+from .sensei import site_settings
 
 
 class UncRedirect(RedirectView):
