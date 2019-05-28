@@ -13,8 +13,8 @@ urlpatterns = [
 
     url(r'^(?P<course>[-_ \w]+)/schedule$',                 UncSchedule.as_view()),
 
-    url(r'^(?P<course>[-_ \w]+)/student/$',                 UncStudentList.as_view()),
-    url(r'^(?P<course>[-_ \w]+)/student/(?P<id>[\d]*)$',    UncStudentDetail.as_view()),
+    # url(r'^(?P<course>[-_ \w]+)/student/$',                 UncStudentList.as_view()),
+    # url(r'^(?P<course>[-_ \w]+)/student/(?P<id>[\d]*)$',    UncStudentDetail.as_view()),
 
     url(r'^(?P<title>[\w/\-_.]*)/slides$',                  UncSlidesDisplay.as_view()),
     url(r'^(?P<title>[\w/\-_.]*)$',                         UncDocDisplay.as_view()),
