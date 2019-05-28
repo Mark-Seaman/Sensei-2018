@@ -34,13 +34,10 @@ class UncLessonList(ListView):
     template_name = 'unc_lesson_list.html'
 
     def get_context_data(self, **kwargs):
-        course = get_course_name(self.kwargs.get('course'))
+        course = self.kwargs.get('course')
         title = "Lessons for %s" % course.name
-        return site_settings(title=title, course=course.name)
-
-    def get_queryset(self):
-        course  = self.kwargs.get('course')
-        return Lesson.objects.filter(course__name=course).order_by('date')
+        lessons = Lesson.objects.filter(course__name=course).order_by('date')
+        return site_settings(title=title, course=course.name, lessons=lessons)
 
 
 class UncSchedule(TemplateView):
