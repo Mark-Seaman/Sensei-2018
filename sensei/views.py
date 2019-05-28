@@ -1,18 +1,24 @@
-from django import forms
-from django.forms import Form
+# from django import forms
+# from django.forms import Form
 from django.views.generic import DetailView, FormView, ListView, RedirectView, TemplateView, UpdateView
 from django.utils.timezone import now
-from os.path import join
 
 from tool.document import doc_html_text
 
 from .models import Lesson, Review, Student, UrlGame
 from .review import count_score, get_review, query_reviewers, query_designers, review_feedback, student_reviews, student_reviews_done
-from .sensei import course_lessons, get_course_name, schedule, slides_markdown
+from .sensei import course_lessons, get_course_name, schedule, slides_markdown, unc_menu
 from .student import site_settings, student, students, register_user_domain
 
 
-    
+class UncRedirect(RedirectView):
+    permanent = False
+
+    def get_redirect_url(self, *args, **kwargs):
+        course = self.kwargs.get('course')
+        return '/unc/bacs200/' #+self.request.path+'/'
+
+
 class UncDocDisplay(TemplateView):
     template_name = 'unc_doc.html'
 
@@ -23,7 +29,8 @@ class UncDocDisplay(TemplateView):
         doc = 'unc/' + title
         title = 'Lesson %s' % title[-2:] if title[-3:-2] == '/' else 'UNC BACS %s' % course[-3:]
         text = doc_html_text(doc, '/static/images/unc/%s' % course)
-        return site_settings(lesson_active='active', title=title, text=text, lessons=lessons)
+        menu = unc_menu()
+        return site_settings(menu=menu, title=title, text=text, course=course, lessons=lessons)
 
 
 class UncEditReview(UpdateView):
@@ -62,48 +69,10 @@ class UncLessonList(ListView):
         course = get_course_name(self.kwargs.get('course'))
         title = "Lessons for %s" % course.name
         lessons = Lesson.objects.filter(course=course).order_by('date')
-        return site_settings(lesson_active='active', title=title, lessons=lessons)
+        menu = unc_menu()
+        return site_settings(menu=menu, title=title, course=course.name,  lessons=lessons)
 
 
-class UncRegister(FormView):
-    class EditDocForm(Form):
-        name = forms.CharField()
-        email = forms.CharField()
-        password = forms.CharField()
-        domain = forms.CharField()
-
-    form_class = EditDocForm
-    template_name = 'unc_register.html'
-    success_url = '/unc/registered'
-
-    def form_valid(self, form):
-        name = form.data.get('name')
-        email = form.data.get('email')
-        password = form.data.get('password')
-        domain = form.data.get('domain')
-        register_user_domain(name, email, password, domain)
-        return super(UncRegister, self).form_valid(form)
-
-
-class UncReviewFeedback(TemplateView):
-    template_name = 'unc_feedback.html'
-
-    def get_context_data(self, **kwargs):
-        pk = self.kwargs.get('pk')
-        review = get_review(pk)
-        requirements = review.requirement_labels.labels.split('\n')
-        title = 'Design Review Feedback'
-        return site_settings(student_active='active', title=title, review=review, requirements=requirements)
-
-
-class UncReviews(TemplateView):
-    template_name = 'unc_reviews.html'
-
-    def get_context_data(self, **kwargs):
-        course = '1'
-        reviews = query_reviewers(course)
-        designers = query_designers(course)
-        return site_settings(student_active='active', title='Design Reviews', reviews=reviews, designers=designers)
 
 
 class UncSchedule(TemplateView):
@@ -111,7 +80,8 @@ class UncSchedule(TemplateView):
 
     def get_context_data(self, **kwargs):
         course = self.kwargs.get('course')
-        return site_settings(resource_active='active', title='BACS 200 Schedule', schedule=schedule(course))
+        menu = unc_menu()
+        return site_settings(menu=menu, title=title, course=course, schedule=schedule(course))
 
 
 class UncSlidesDisplay(TemplateView):
@@ -139,19 +109,59 @@ class UncStudent(TemplateView):
                              reviews=reviews, feedback=feedback, done=done)
 
 
-class UncStudentDomains(RedirectView):
-    url = '/unc/students/1'
+# class UncRegister(FormView):
+#     class EditDocForm(Form):
+#         name = forms.CharField()
+#         email = forms.CharField()
+#         password = forms.CharField()
+#         domain = forms.CharField()
+#
+#     form_class = EditDocForm
+#     template_name = 'unc_register.html'
+#     success_url = '/unc/registered'
+#
+#     def form_valid(self, form):
+#         name = form.data.get('name')
+#         email = form.data.get('email')
+#         password = form.data.get('password')
+#         domain = form.data.get('domain')
+#         register_user_domain(name, email, password, domain)
+#         return super(UncRegister, self).form_valid(form)
+#
+#
+# class UncReviewFeedback(TemplateView):
+#     template_name = 'unc_feedback.html'
+#
+#     def get_context_data(self, **kwargs):
+#         pk = self.kwargs.get('pk')
+#         review = get_review(pk)
+#         requirements = review.requirement_labels.labels.split('\n')
+#         title = 'Design Review Feedback'
+#         return site_settings(student_active='active', title=title, review=review, requirements=requirements)
+#
+#
+# class UncReviews(TemplateView):
+#     template_name = 'unc_reviews.html'
+#
+#     def get_context_data(self, **kwargs):
+#         course = '1'
+#         reviews = query_reviewers(course)
+#         designers = query_designers(course)
+#         return site_settings(student_active='active', title='Design Reviews', reviews=reviews, designers=designers)
 
+# class UncStudentDomains(RedirectView):
+#     url = '/unc/students/1'
+#
 
-class UncStudents(ListView):
-    template_name = 'unc_registered.html'
-    model = Student
-
-    def get_context_data(self, **kwargs):
-        course = self.kwargs.get(id, '1')
-        return site_settings(student_active='active',
-                             title='BACS 200 - Student Domains',
-                             students=[])  # students(course)
-
-
+# class UncStudents(ListView):
+#     template_name = 'unc_registered.html'
+#     model = Student
+#
+#     def get_context_data(self, **kwargs):
+#         course = self.kwargs.get(id, '1')
+#         return site_settings(student_active='active',
+#                              title='BACS 200 - Student Domains',
+#                              students=[])  # students(course)
+#
+#
 

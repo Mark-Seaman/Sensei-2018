@@ -110,3 +110,25 @@ def slides_markdown(page):
     bear = '\n\n---\n\n<img src="/static/images/unc/bacs200/Bear_Logo.png">\n\n---\n\n'
     return bear + text + bear
 
+def unc_menu():
+    return 'UNC Course', [
+        dict(url='lesson/',     label='Lessons',    active=''),
+        dict(url='student/',    label='Students',   active=''),
+        dict(url='project/',    label='Projects',   active=''),
+        dict(url='resource/',   label='Resources',  active=' active'),
+    ]
+
+'''
+<li class="nav-item {{ lesson_active }}">#}
+{#                            <a class="nav-link" href="">Lessons </a>#}
+{#                        </li>#}
+{#                        <li class="nav-item  {{ student_active }}">#}
+{#                            <a class="nav-link" href="">Students</a>#}
+{#                        </li>#}
+{#                        <li class="nav-item {{ resource_active }}">#}
+{#                            <a class="nav-link" href="">Resources</a>#}
+{#                        </li>#}
+{#                        <li class="nav-item {{ project_active }}">#}
+{#                            <a class="nav-link" href="/unc/bacs200/projects/Index">Projects</a>#}
+{#                        </li>#}
+'''
