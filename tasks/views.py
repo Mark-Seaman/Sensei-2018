@@ -5,7 +5,6 @@ from django.views.generic.base import ContextMixin
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 from tasks.models import Task
-from tool.document import doc_html_text
 from mybook.mybook import get_menu
 
 from .summary import time_data, time_summary, bad_days_data, bad_days, activity_summary, task_activity_details, \

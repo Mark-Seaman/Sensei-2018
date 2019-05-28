@@ -60,7 +60,7 @@ class DocDisplay(TemplateView):
 
     def get_template_names(self):
         theme_template = theme(self.request.get_host())
-        log('theme = %s' % theme_template)
+        # log('theme = %s' % theme_template)
         return [theme_template]
 
 
