@@ -34,18 +34,18 @@ class UncLessonList(ListView):
     template_name = 'unc_lesson_list.html'
 
     def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title')
         course = self.kwargs.get('course')
-        title = "Lessons for %s" % course.name
         lessons = Lesson.objects.filter(course__name=course).order_by('date')
-        return site_settings(title=title, course=course.name, lessons=lessons)
+        return site_settings(title=title, course=course, lessons=lessons)
 
 
 class UncSchedule(TemplateView):
     template_name = 'unc_schedule.html'
 
     def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title')
         course = self.kwargs.get('course')
-        title = 'Schedule for ' + course
         return site_settings(title=title, course=course, schedule=schedule(course))
 
 
@@ -65,25 +65,10 @@ class UncStudentList(TemplateView):
     def get_context_data(self, **kwargs):
         title = 'Student Dashboards'
         course  = self.kwargs.get('course')
-        return site_settings(title=title, course=course)
-
-    def get_queryset(self):
-        course  = self.kwargs.get('course')
-        return Student.objects.filter(course__name=course)
+        students = Student.objects.filter(course__name=course)
+        return site_settings(title=title, course=course, students=students)
 
 
-
-
-# class UncLessonDetail(DetailView):
-#     model = Lesson
-#     template_name = 'unc_lesson_details.html'
-#
-#     def get_context_data(self, **kwargs):
-#         course = self.kwargs.get('course')
-#         menu = unc_menu()
-#         title = 'LESSON #%s' % id
-#         kwargs.update(site_settings(menu=menu, title=title, course=course))
-#         return super(UncLessonDetail, self).get_context_data(kwargs)
 #
 # class UncRegister(FormView):
 #     class EditDocForm(Form):
