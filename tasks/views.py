@@ -23,6 +23,7 @@ class TaskBase(LoginRequiredMixin, ContextMixin):
                            subtitle='Private notes and secrets',
                            logo="/static/images/SWS_Logo_200.jpg",
                            logo_text='Shrinking World Solutions'),
+            'text': '<h1>Time Accounting</h1>'
         })
         return kwargs
 
