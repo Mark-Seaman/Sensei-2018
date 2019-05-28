@@ -93,7 +93,7 @@ def schedule(course):
     with open(data_file) as f:
         for row in reader(f):
             s.append(row)
-    return s[1:]
+    return s[0], s[1], s[2:]
 
 
 def slide_content_data(course, lesson):

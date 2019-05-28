@@ -49,9 +49,9 @@ class DocDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
-        log_page(request)
+        log_page(self.request)
         domdoc = domain_doc(self.request.get_host(), title)
-        log_page(self.request, domdoc)
+        # log_page(self.request, domdoc)
         text = doc_html_text(domdoc, '/static/images')
         menu = get_menu(title)
         url = self.request.get_raw_uri()
@@ -69,8 +69,7 @@ class DocRedirect(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
         title = self.kwargs.get('title')
-        log('DocRedirect: %s' % title)
-
+        # log('DocRedirect: %s' % title)
         if not title:
             log_page(self.request, 'Redirect Index')
             return '/%s' % domain_doc(self.request.get_host(),'Index')
@@ -81,42 +80,6 @@ class DocRedirect(RedirectView):
             log_page(self.request, 'Redirect doc page')
             return doc_page(title)
         return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
-
-
-# class DocPageDisplay(TemplateView):
-#
-#     def get_context_data(self, **kwargs):
-#         title = self.kwargs.get('title', 'Index')
-#         log('DocPageDisplay: %s' % title)
-#         domdoc = domain_doc(self.request.get_host(), title)
-#         log_page(self.request, domdoc)
-#         text = doc_html_text(domdoc, '/static/images')
-#         menu = get_menu(title)
-#         url = self.request.get_raw_uri()
-#         header = header_info(self.request.get_host())
-#         return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
-#
-#     def dispatch(request, *args, **kwargs):
-#         title = kwargs.get('title')
-#         log('DocPageDisplay: %s' % title)
-#         if not title:
-#             url = domain_doc(request.get_host(), 'Index')
-#             log('redirect: /%s' % url)
-#             return redirect('/%s' % url)
-#         if title.endswith('/'):
-#             url = title + 'Index'
-#             log('redirect: /%s' % url)
-#             return redirect('/%s' % url)
-#         if doc_page(title):
-#             url = doc_page(title)
-#             log('redirect: /%s' % url)
-#             return redirect('/%s' % url)
-#         return super(DocPageDisplay).dispatch(request, *args, **kwargs)
-#
-#     def get_template_names(self):
-#         theme_template = theme(self.request.get_host())
-#         log('theme = %s' % theme_template)
-#         return [theme_template]
 
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):

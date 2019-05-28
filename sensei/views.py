@@ -28,13 +28,13 @@ class UncDocDisplay(TemplateView):
         return site_settings(title=title, text=text, course=course)
 
 
-class UncLessonList(ListView):
-    model = Lesson
+class UncLessonList(TemplateView):
+    # model = Lesson
     template_name = 'unc_lesson_list.html'
 
     def get_context_data(self, **kwargs):
-        title = self.kwargs.get('title')
         course = self.kwargs.get('course')
+        title = 'Lessons for ' + course
         lessons = list_lessons(course)
         # lessons = Lesson.objects.filter(course__name=course).order_by('date')
         return site_settings(title=title, course=course, lessons=lessons)
