@@ -5,6 +5,7 @@ from django.views.generic import DetailView, FormView, ListView, RedirectView, T
 from django.utils.timezone import now
 
 from tool.document import doc_html_text
+from tool.log import log_page
 
 from .models import Lesson, Review, Student, UrlGame
 from .review import count_score, get_review, query_reviewers, query_designers, review_feedback, student_reviews, student_reviews_done
@@ -27,7 +28,8 @@ class UncDocDisplay(TemplateView):
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title','Index')
         course = self.kwargs.get('course', 'bacs200')
-        doc = join('unc', course, title)
+        log_page('course = %s, title = %s' % (course,title))
+        doc = join('unc', title)
         text = doc_html_text(doc, '/static/images/unc/%s' % course)
         menu = unc_menu()
         return site_settings(menu=menu, title=title, text=text, course=course)
