@@ -37,6 +37,10 @@ class Lesson(models.Model):
     date = models.DateField()
     course = models.ForeignKey(Course, on_delete=models.CASCADE, default=1)
 
+    @property
+    def lesson_id(self):
+        return  "%02d" % self.lesson
+
     def __str__(self):
         return 'Lesson %02d. %s - %s' % (self.lesson, self.title, self.date)
 

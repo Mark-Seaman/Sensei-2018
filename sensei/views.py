@@ -58,17 +58,17 @@ class UncEditReview(UpdateView):
         return '/unc/student/%s' % student_id
 
 
-class UncLessonDetail(DetailView):
-    model = Lesson
-    template_name = 'unc_lesson_details.html'
-
-    def get_context_data(self, **kwargs):
-        course = self.kwargs.get('course')
-        menu = unc_menu()
-        title = 'LESSON #%s' % id
-        kwargs.update(site_settings(menu=menu, title=title, course=course))
-        return super(UncLessonDetail, self).get_context_data(kwargs)
-
+# class UncLessonDetail(DetailView):
+#     model = Lesson
+#     template_name = 'unc_lesson_details.html'
+#
+#     def get_context_data(self, **kwargs):
+#         course = self.kwargs.get('course')
+#         menu = unc_menu()
+#         title = 'LESSON #%s' % id
+#         kwargs.update(site_settings(menu=menu, title=title, course=course))
+#         return super(UncLessonDetail, self).get_context_data(kwargs)
+#
 
 class UncLessonList(ListView):
     model = Lesson
