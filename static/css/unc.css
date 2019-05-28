@@ -1,27 +1,23 @@
-/*  ------------------------------
-    Colors
-------------------------------
-
-Purple      -- #0E3D65
-Gold        -- #F6B018
-
-*/
-
-/* ------------------------------
-    Elements
-------------------------------*/
+/* ----------------------------------------------- */
+/* HTML Elements */
 
 body {
-    font-size: 18px;
-    color: #0E3D65;
+    padding: 0;
+    margin: 0;
+}
+
+article {
+    border: 1px solid grey;
+    box-shadow: 2px 2px 5px grey;
+    margin: 3em;
+    padding: 1em;
 }
 
 footer {
+    clear: both;
     text-align: center;
-}
-
-footer a {
-    color: #0E3D65;
+    margin: 2em;
+    padding: 2em;
 }
 
 h1 {
@@ -32,6 +28,7 @@ h1 {
     border: 5px solid #F6B018;
     text-align: center;
     font-size: 300%;
+    box-shadow: 2px 2px 5px gray;
 }
 
 h2 {
@@ -46,17 +43,16 @@ h2 {
 }
 
 h3 {
-    font-size: 150%;
-    margin: 10px 20px;
-    padding: 10px 20px;
+    margin: 20px;
+    font-size: 140%;
 }
 
 header {
+    border: 5px solid #F6B018;
     background-color: #0E3D65;
-    color: #F6B018;
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
+    font-family: sans-serif;
+    /*height: 200px;*/
+    padding: 1.5em;
 }
 
 header a {
@@ -64,224 +60,76 @@ header a {
 }
 
 header a:hover {
-    font-weight: bolder;
-    text-decoration: underline;
+    color: #F6B018;
 }
 
 header h1 {
+    color: #F6B018;
+    font-size: 300%;
     border: none;
-    font-size: 200%;
-    text-align: left;
-    padding: 0px;
-    margin: 10px;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
 }
 
 header h2 {
     color: white;
+    font-size: 200%;
     background-color: #0E3D65;
-    border: none;
-    font-size: 120%;
-    text-align: left;
-    width: 100%;
     box-shadow: none;
-    padding: 0px;
-    margin: 10px;
-
 }
 
 header img {
-    margin: 0px;
-    border: none;
     float: right;
 }
 
-i {
-    padding: 0px;
-    margin: 10px;
-}
 
-li {
-    line-height: 2em;
-    margin: 0em 1em;
-}
-
-img {
-    max-width: 800px;
-    margin: 2em;
-    border: 1px solid gray;
-}
-
-main {
-    background-color: #0E3D65;
-    color: #F6B018;
-}
-
-p {
-    margin: 1em;
-    padding: 0em 1em;
-}
-
-pre {
-    background-color: #eee;
-    color: #444;
-    margin: 10px 100px;
-}
-
-span {
-    padding: 5px;
-}
-
-table {
-    width: 100%;
-    margin: 2em;
-}
-
-td {
-    min-width: 5em;
-    margin: 20px;
-    padding: 0px 20px 10px 0px;
-}
-
-/* ------------------------------
-    Class
-------------------------------*/
-
-.border {
-    border: 1px solid gray;
-}
-
-.box {
-    box-shadow: -2px -2px 5px gray;
-    background-color: white;
-    margin: 40px;
-    padding: 20px;
-}
-
-.btn {
-    color: white;
-    background-color: #0E3D65;
-    font-size: 120%;
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid white;
-    border-radius: 5px;
-    width: 180px;
-}
-
-.card {
+hr {
     border: 4px solid #F6B018;
 }
 
-.card-body {
+li {
+    margin: 5px 3em;
+}
+
+p {
+    margin-left: 2em;
+}
+
+/* ----------------------------------------------- */
+/* Classes */
+
+.card {
     padding: 20px;
 }
 
-.card-header {
-    border: 3px solid #F6B018;
-    background-color: #0E3D65;
-}
-
-.card-header a {
-    color: white;
-}
-
-.card-header a:hover {
-    color: yellow;
-}
-
-.card-header h2 {
-    font-size: 150%;
-    border: none;
-}
-
-.form-btn {
-    color: white;
-    background-color: #0E3D65;
-    font-size: 120%;
-    padding: 5px;
-    margin: 5px 4em;
-    border: 2px solid white;
-    border-radius: 5px;
-    width: 100px;
-}
-
-.image {
-    width: 100px;
-}
-
-.answer-correct {
-    font-size: 48px;
-    color: green;
-    text-align: left;
-}
-
-.answer-incorrect {
-    font-size: 48px;
-    color: red;
-    text-align: left;
-}
-
-.lesson-title {
-    color: red;
-}
-
 .lesson-table {
-    margin: 3em;
-    padding: 3em;
-}
-
-.lesson-table tr {
-    height: 3em;
-}
-
-.lesson-table td {
-    margin: 1em;
+    margin: 5%;
+    padding: 5%;
 }
 
 .page {
-    box-shadow: 2px 2px 5px gray;
-    background-color: white;
-    border: 1px solid black;
-    margin: 40px;
-    padding: 50px;
+    margin: 5%;
+    padding: 2em;
+    box-shadow: 2px 2px 5px grey;
+    background-color: #eeeeee;
+    border: 3px solid #0E3D65;
+    border-radius: 10px;
 }
 
-.tab-pane .active {
-    background-color: #0d3349;
+.pane {
+    background-color: #fff;
+    box-shadow: 2px 2px 5px grey;
+    padding: 2em;
 }
 
-.url-answer {
-    margin-left: 5em;
-    width: 80%;
+.pane * {
+    margin: 20px;
 }
 
-.user-btn {
-    color: white;
-    background-color: #0E3D65;
-    padding: 5px;
-    margin: 5px;
-    border: 2px solid white;
-    border-radius: 5px;
-    width: 180px;
+.navbar-nav .nav-item.active {
+    /*box-shadow: 2px 2px 5px black;*/
+    font-weight: bold;
 }
 
-.user-text * {
-    color: white;
-    padding: 5px;
-    margin: 5px;
-}
 
-/* ------------------------------
-    ID
-------------------------------*/
-
-#content a.normal {
-    color: green;
-    border: none;
-    margin: 5px;
-    padding: 5px;
-}
-
-#s-main-menu li {
-    margin: 0px;
-}

@@ -26,7 +26,7 @@ class UncDocDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title','Index')
-        course = self.kwargs.get('course')
+        course = self.kwargs.get('course', 'bacs200')
         doc = join('unc', course, title)
         text = doc_html_text(doc, '/static/images/unc/%s' % course)
         menu = unc_menu()

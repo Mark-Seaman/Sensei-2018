@@ -11,7 +11,7 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/css/blog.css">
+        <link rel="stylesheet" href="/static/css/unc.css?time={{ time }}">
     </head>
 
     <body>
@@ -34,11 +34,6 @@
                     {{ menu.0 }} - {{ course }}
                 </a>
 
-{#                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"#}
-{#                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">#}
-{#                    <span class="navbar-toggler-icon"></span>#}
-{#                </button>#}
-
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         {% for m in menu.1 %}
@@ -50,31 +45,6 @@
                 </div>
             </nav>
 
-{#            <nav class="navbar navbar-expand-lg navbar-light bg-light">#}
-{#                <button class="navbar-toggler" type="button" data-toggle="collapse"#}
-{#                        data-target="#navbarSupportedContent"#}
-{#                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">#}
-{#                    <span class="navbar-toggler-icon"></span>#}
-{#                </button>#}
-{##}
-{#                <div class="collapse navbar-collapse" id="navbarSupportedContent">#}
-{#                    <ul class="navbar-nav mr-auto">#}
-                        {# <span class="sr-only">(current)</span>#}
-{#                        <li class="nav-item {{ lesson_active }}">#}
-{#                            <a class="nav-link" href="/unc/bacs200/lesson/">Lessons </a>#}
-{#                        </li>#}
-{#                        <li class="nav-item  {{ student_active }}">#}
-{#                            <a class="nav-link" href="/unc/registered">Students</a>#}
-{#                        </li>#}
-{#                        <li class="nav-item {{ resource_active }}">#}
-{#                            <a class="nav-link" href="/unc/bacs200/Resources">Resources</a>#}
-{#                        </li>#}
-{#                        <li class="nav-item {{ project_active }}">#}
-{#                            <a class="nav-link" href="/unc/bacs200/projects/Index">Projects</a>#}
-{#                        </li>#}
-{#                    </ul>#}
-{#                </div>#}
-{#            </nav>#}
         {% endblock %}
 
 

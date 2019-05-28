@@ -14,8 +14,8 @@
                         <td>{{ lesson.date }}</td>
                         <td>Lesson {{ lesson.lesson }}</td>
                         <td><b>{{ lesson.title }}</b></td>
-                        <td><a href="{{ lesson.content }}">Lesson #{{ lesson.lesson }}</a></td>
-                        <td><a href="{{ lesson.content }}/slides">Slides #{{ lesson.lesson }}</a></td>
+                        <td><a href="/unc/{{ course }}/lesson/{{ lesson.lesson }}">Lesson #{{ lesson.lesson }}</a></td>
+                        <td><a href="/unc/{{ course }}/lesson/{{ lesson.lesson }}/slides">Slides #{{ lesson.lesson }}</a></td>
                     </tr>
                 {% endfor %}
             </table>

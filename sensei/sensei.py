@@ -113,9 +113,10 @@ def slides_markdown(page):
 def unc_menu():
     return 'UNC Course', [
         dict(url='lesson/',     label='Lessons',    active=''),
-        dict(url='student/',    label='Students',   active=''),
         dict(url='project/',    label='Projects',   active=''),
-        dict(url='resource/',   label='Resources',  active=' active'),
+        dict(url='resource/',   label='Resources',  active=''),
+        dict(url='student/',    label='Dashboard',  active=''),
+        dict(url='https://markseaman.info/info/Test/UNC', label='Test', active=' active'),
     ]
 
 '''
