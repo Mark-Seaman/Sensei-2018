@@ -6,7 +6,7 @@ from random import choice, randint
 
 from .models import Student, UrlGame
 from .review import url_feedback
-from .student import site_settings
+from sensei.sensei import site_settings
 
 
 def generate_url_question():

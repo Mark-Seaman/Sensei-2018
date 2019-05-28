@@ -134,14 +134,6 @@ def student_totals():
     return reading_table(reading_scores_table())
 
 
-def site_settings(**kwargs):
-    doc = kwargs.get('doc', 'unc/bacs200')
-    site = ('UNC Digital Classroom', 'BACS 200 - Intro Web Dev', '/unc/bacs200/')
-    settings = dict(site=site)
-    settings.update(kwargs)
-    return settings
-
-
 def students(course):
     return Student.objects.filter(course=course).order_by('email')
 

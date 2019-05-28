@@ -3126,7 +3126,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3873	People	    dinner at Fonta's with Stacie	2018-08-22	2	f
 3858	UNC	    first day of classes\n    final run-through of class materials\n    Kendall-Tobey\n    settle into office\n    BACS 200\n    BACS 350\n    meet with Robert & Noah\n    meet office mate - Oil & Gas Man\n    	2018-08-20	8	f
 2071	Hire	\n        create standalone email sender\n        debug send text, HTML, templates\n        investigate password reset\n        implement password reset views\n        implement John Klassen account logic\n        reconcile code changes with src command	2017-06-08	8	f
-3489	UNC	    build mapping of lessons to dates for BACS 350\n    create script to build class schedule\n    develop template for lessons\n    reconcile changes on server\n    write in Teaching Blog	2018-05-30	3	f
+3489	UNC	    build mapping of lesson to dates for BACS 350\n    create script to build class schedule\n    develop template for lesson\n    reconcile changes on server\n    write in Teaching Blog	2018-05-30	3	f
 2225	Fun	\n        drive home	2017-07-22	6	f
 2226	Grow	\n        personal reflections\n        think about goals for coming week\n        prayer time	2017-07-22	4	f
 2227	Church	\n        listen to Amazing Grace\n        think about social justice\n	2017-07-22	4	f
@@ -3144,7 +3144,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3507	UNC	    build mindmap of BACS 350\n    install Simple Mind on iMac\n    UNC Work Goals mind map\n    note - Create Presentations\n    capture mind maps in Evernote\n    setup new doc command	2018-06-01	6	f
 3870	UNC	    grade Lesson 1\n    improve Lesson 2\n    create Lesson 4\n    Chrome UNC login and bookmarks\n    Student name tags\n    teach Lesson 2\n    help 8 students\n    Stacie visit (meet Dan, Moe, Vish)\n    	2018-08-22	9	f
 3869	Grow	    4, 4, 3, 4\n    weight: 206.6	2018-08-22	0	f
-3864	UNC	    help students with assignment 1\n    announcement - Where's my server\n    announcement - lesson 1 change\n    20 emails\n    update lessons 1 and 2\n    	2018-08-21	7	f
+3864	UNC	    help students with assignment 1\n    announcement - Where's my server\n    announcement - lesson 1 change\n    20 emails\n    update lesson 1 and 2\n    	2018-08-21	7	f
 3872	Fun	    Profit, Resident\n    	2018-08-22	3	f
 2670	UNC	\n        classes #36	2017-11-13	9	f
 4012	UNC	    grading 200 exam\n    grading 350 exam\n    build solutions for 11\n    	2018-09-22	6	f
@@ -3155,7 +3155,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2674	UNC	\n        grading of Design Review	2017-11-14	9	f
 2080	Write	\n        creative writing class	2017-06-10	1	f
 2673	Grow	\n        5, 4, 4, 2	2017-11-14	0	f
-4017	UNC	    create map of zybooks lessons for 200/350\n    plan out lesson rhythms\n    350 Exam\n    200 Exam (start grading)\n    	2018-09-21	9	f
+4017	UNC	    create map of zybooks lesson for 200/350\n    plan out lesson rhythms\n    350 Exam\n    200 Exam (start grading)\n    	2018-09-21	9	f
 2675	People	\n        Pelican Lakes - Rachel, Andrew, Christine	2017-11-14	3	f
 2676	Fun	\n        Inhumans, Librarians\n	2017-11-14	2	f
 4013	WAM	    remove extra users	2018-09-22	1	f
@@ -3483,7 +3483,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2376	UNC	\n        lecture prep\n        Lecture #4\n        rebuild Canvas for course\n        follow up with students	2017-08-28	8	f
 2714	Tools	\n        create reusable slide creator	2017-11-24	1	f
 2715	People	\n        9-8 Thanksgiving with Rachel and Andrew	2017-11-24	11	f
-2722	UNC	\n        plan lessons for BACS 200 last week\n        create exercise templates and instructions	2017-11-26	4	f
+2722	UNC	\n        plan lesson for BACS 200 last week\n        create exercise templates and instructions	2017-11-26	4	f
 2377	People	\n        talk with Stacie	2017-08-28	2	f
 2716	Fun	\n        Big Bang\n	2017-11-24	2	f
 2717	Grow	\n        5, 2, 2, 3	2017-11-25	0	f
@@ -3547,7 +3547,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3269	UNC	\n        Lesson 32 - Illustrator\n        grade blog 5	2018-04-06	5	f
 2968	People	\n        talk with Christine and Stacie\n        job query from John Dutton	2018-01-22	1	f
 2957	Grow	\n        walk to HOA meeting\n        get library book about Non-conventional People\n        5, 1, 3, 3	2018-01-20	1	f
-2972	Tools	\n        build Sensei prototype web server\n        update code repos and scripts\n        Uncle Ed Tools\n        fix bash shell prompt\n        build out WebApps lessons 1-5\n        create Sensei Online Courses tool	2018-01-23	7	f
+2972	Tools	\n        build Sensei prototype web server\n        update code repos and scripts\n        Uncle Ed Tools\n        fix bash shell prompt\n        build out WebApps lesson 1-5\n        create Sensei Online Courses tool	2018-01-23	7	f
 2153	Tools	\n        fix issue with blank root parent\n        improve Thot UX\n        debug thot import	2017-06-27	3	f
 3268	Grow	\n        5, 4, 4, 3\n        nts 2\n        think about personal growth	2018-04-06	3	f
 3270	Fun	\n        Homeland\n        Abertos\n    	2018-04-06	6	f
@@ -3654,7 +3654,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2401	Church	\n        church service	2017-09-03	4	f
 2402	Fun	\n        Iron Man 1 & 2, Thor\n	2017-09-03	8	f
 2738	Grow	\n        5, 5, 3, 5	2017-12-01	0	f
-3551	UNC	    plan PHP lessons & apps\n    update BACS 350 content\n    build guide Django app\n    isolate guide from mybook logic	2018-06-15	5	f
+3551	UNC	    plan PHP lesson & apps\n    update BACS 350 content\n    build guide Django app\n    isolate guide from mybook logic	2018-06-15	5	f
 2740	People	\n        Big Fat Pastor with Rachel\n    	2017-12-01	4	f
 3285	Grow	    5, 2,\n    record personal beliefs about business\n    analyze pain for marketing success	2018-04-11	2	f
 3546	Grow	    5, 2, 3, 2\n    nap\n    video on foods to avoid	2018-06-10	3	f
@@ -3838,7 +3838,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 2061	Grow	\n        5, 3, 3, 5\n        read EQ\n        read Essentialist\n        two long walks	2017-06-06	3	f
 2062	Tools	\n        improve booknotes\n        clean up websites\n        build rcp scripts\n        move docs around	2017-06-06	3	f
 3576	Fun	    100 Foot Journey\n    I Can Only Imagine	2018-06-16	4	f
-4049	UNC	    Plan lessons for week \n    	2018-09-30	1	f
+4049	UNC	    Plan lesson for week \n    	2018-09-30	1	f
 2063	Hire	\n        Stacie meets with John Klassen\n        discuss meeting and next steps	2017-06-06	5	f
 2064	Fun	\n        Madam Sec\n	2017-06-06	3	f
 2065	Grow	\n        3, 4, 4, 5\n        walk	2017-06-07	1	f
@@ -4722,7 +4722,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3832	Grow	    3, 3, 3, 4\n    weight: 207.8\n    sleep in till 9	2018-08-13	0	f
 3403	People	    Winking Lizard with 6 new people\n    Greg Dozier	2018-05-12	4	f
 3402	UNC	    think about teaching	2018-05-12	2	f
-3918	UNC	    refactor views for lessons\n    	2018-09-03	3	f
+3918	UNC	    refactor views for lesson\n    	2018-09-03	3	f
 3922	Grow	    3, 3, 1, 2\n    nap	2018-09-02	1	f
 3923	Fun	    finish Turtles All The Way Down\n    Red\n    	2018-09-02	3	f
 3924	People	    Family Birthday celebration\n    Stacie prepares for trip\n    time with Stacie	2018-09-02	6	f
@@ -4821,7 +4821,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3989	UNC	    create solutions for 350 projects\n    	2018-09-16	4	f
 3967	Grow	    3, 3, 2, 4\n    weight: 208.0	2018-09-14	0	f
 4069	Grow	    5, 4, 3, 3\n    weight: 207	2018-10-05	0	f
-3795	UNC	    update lesson slides & class web site\n    rebuild & refine guide theme\n    add bear logo to every page\n    merge and test changes\n    create proper class menus\n    create tabs for lessons\n    	2018-08-07	4	f
+3795	UNC	    update lesson slides & class web site\n    rebuild & refine guide theme\n    add bear logo to every page\n    merge and test changes\n    create proper class menus\n    create tabs for lesson\n    	2018-08-07	4	f
 4071	Fun	    Vikings\n    Father of the Bride\n    	2018-10-05	4	f
 4074	UNC	    experiment with Regex\n    build demo code for search and replace\n    	2018-10-06	4	f
 3988	Grow	    5, 3, 2, 3\n    weight: 207.6\n    nap	2018-09-16	1	f
@@ -4871,7 +4871,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3838	People	    Chicken on patio with Stacie\n    deflate Unicorn float\n    Stacie massage	2018-08-15	3	f
 3852	Grow	    5, 3, 3, 3\n    weight: 207.8\n    nap	2018-08-19	1	f
 3670	Grow	    4, 1, 3, 5	2018-07-07	0	f
-3434	UNC	    investigate setup of PHP server\n    outline of first four lessons in PHP class\n    build list of all apps for 350\n    setup Digital Ocean account\n    investigate pytest on PHP account	2018-05-19	7	f
+3434	UNC	    investigate setup of PHP server\n    outline of first four lesson in PHP class\n    build list of all apps for 350\n    setup Digital Ocean account\n    investigate pytest on PHP account	2018-05-19	7	f
 3445	People	    walk with Stacie	2018-05-22	2	f
 3674	People	    Travel with Stacie	2018-07-07	7	f
 3443	Business	    Shrinking World Partners\n    schedule appointments\n    windshield repair\n    dentist\n    eye dr	2018-05-21	3	f
@@ -4900,7 +4900,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 3895	Grow	    5, 3, 4, 3\n    weight: 207.8\n    nap	2018-08-26	1	f
 3837	Fun	    nts 1\n    Hawaii 50, Dance, ER, Librarians\n    	2018-08-15	5	f
 3854	Tools	    work on text.py and text_test.py	2018-08-19	3	f
-2870	UNC	\n        build first three lessons for BACS 200\n        create standard lesson and ex layout	2017-01-01	4	f
+2870	UNC	\n        build first three lesson for BACS 200\n        create standard lesson and ex layout	2017-01-01	4	f
 2871	Tools	\n        automate all web page creation	2017-01-01	2	f
 3196	UNC	\n        first day back\n        Lesson 24 - Organizing Info\n        CIS program meeting	2018-03-19	9	f
 1692	People	\n        Andrew & Rachel move\n        Josiah	2017-01-15	2	f
@@ -4908,7 +4908,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 1702	Hire	\n        Build production server\n        Create notes for building future servers\n        Rename droplet and create console access\n        Build code directories and version control\n        Debug automation and tests\n        Setup web server and static server	2017-01-17	6	f
 3690	People	    Cassie\n        Cassie sleeps for three hours on the plane\n        Cassie sleeps from 10pm to 2am at home\n        Stacie sleeps downstairs\n        At 6am Cassie is frantic\n        Rachel & Andrew entertain Cassie\n        	2018-07-28	4	f
 3698	UNC	    review book on PHP\n    plan content of first sessions	2018-07-29	3	f
-3682	UNC	    create outline for exercises in 350\n        ex1\n        ex2\n        ex3\n    outline first 7 lessons in 350\n    review Murach PHP book chapter by chapter\n        build schedule for 24 lessons\n    send out email to colleagues\n        moving\n        schedule conflict\n        upcoming schedule\n    discover issue with JavaScript content	2018-07-30	6	f
+3682	UNC	    create outline for exercises in 350\n        ex1\n        ex2\n        ex3\n    outline first 7 lesson in 350\n    review Murach PHP book chapter by chapter\n        build schedule for 24 lesson\n    send out email to colleagues\n        moving\n        schedule conflict\n        upcoming schedule\n    discover issue with JavaScript content	2018-07-30	6	f
 3700	People	    visit with Cassie	2018-07-29	2	f
 3200	UNC	\n        interact with students	2018-03-20	3	f
 3684	Fun	    Record travel log of adventures	2018-07-30	3	f
@@ -6962,7 +6962,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4323	Grow	    4, 3, 2, 3\n    weight: 208	2018-11-26	0	f
 4324	UNC	    debug system for Design Review\n    teach Learning in 200\n    	2018-11-26	8	f
 4328	UNC	    setup up design reviews (final app reviews)\n    Jamari in office hours\n    talk with Vish\n    	2018-11-28	9	f
-4276	UNC	    build up Sensei lessons\n    research LMS tools\n    build Github repo for Sensei-Workshop\n    create wiki	2018-11-23	4	f
+4276	UNC	    build up Sensei lesson\n    research LMS tools\n    build Github repo for Sensei-Workshop\n    create wiki	2018-11-23	4	f
 4329	Fun	    library visit\n    Mr Robot\n    historical fiction books\n    	2018-11-28	4	f
 4330	People	    talk with Stacie	2018-11-28	1	f
 4278	Fun	    Half-blood Prince\n    Resident\n    nts 1\n    	2018-11-23	5	f
@@ -7250,7 +7250,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4481	UNC	    first day of class\n    excellent start to the semester\n    lunch with Moe, Vish, Dan, Mehrgan\n    Lesson 1 - Web Development\n    setup new computer at UNC\n    	2019-01-07	8	f
 4483	Fun	    Hawaii 50\n    Profit\n    	2019-01-07	3	f
 4484	People	    visit with Stacie, Lucy	2019-01-07	2	f
-4491	Tools	    update design plans for Sensei Classroom app\n    rename app unc to sensei\n    rebuild database tables\n    create new data models\n    debug data for Course, Student, Lesson\n    automatic list of lessons	2019-01-08	8	f
+4491	Tools	    update design plans for Sensei Classroom app\n    rename app unc to sensei\n    rebuild database tables\n    create new data models\n    debug data for Course, Student, Lesson\n    automatic list of lesson	2019-01-08	8	f
 4497	Fun	    Windsor library\n    Tom Clancy audio book\n    Avengers graphic novel\n    Miss Congeniality\n    Deep Space 9\n    	2019-01-10	4	f
 4503	Grow	    5, 4, 1, 1\n    weight: 206.6\n    depressing whether\n    rumor about adjuncts\n    self-pity\n    car accident and meth head on way home\n    	2019-01-11	4	f
 4504	UNC	    Lesson 3 - WordPress\n    cleaning (all day at UNC)\n    	2019-01-11	7	f
@@ -7266,7 +7266,7 @@ COPY public.tasks_task (id, name, notes, date, hours, done) FROM stdin;
 4501	Fun	    Beauty and the Beast\n    Avengers Graphic Novel\n    nts 2\n    	2019-01-12	4	f
 4502	People	    lunch with Ben Flebbe (discuss career challenges)\n    demos of training content	2019-01-12	2	f
 4495	UNC	    Project management Ninja\n    build reading score page\n    grade reading assignments\n    create student dashboard page\n    automated reading grader tool\n    links to student domains\n    	2019-01-10	6	f
-4513	UNC	    prep lesson 4 - Domains & Servers\n    outline lessons 5,6\n    Alex Schaffer in office hours\n    figure out how to publish WordPress\n    	2019-01-14	7	f
+4513	UNC	    prep lesson 4 - Domains & Servers\n    outline lesson 5,6\n    Alex Schaffer in office hours\n    figure out how to publish WordPress\n    	2019-01-14	7	f
 4514	Tools	    remove dead code (9000 lines left)	2019-01-14	2	f
 4515	Fun	    Avengers comic\n    Good Place, Goldbergs, Fraiser, Deep Space 9\n    	2019-01-14	3	f
 4516	People	    Chris Newby no show at Fuzzy's tacos\n    dinner with Lucy & Stacie\n    Rachel comes over for rest\n    Stacie works on Challenges for English Learners	2019-01-14	2	f

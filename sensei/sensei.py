@@ -1,4 +1,5 @@
 from csv import reader
+from django.utils.timezone import now
 from re import findall
 
 from tool.document import  read_markdown
@@ -111,7 +112,7 @@ def slides_markdown(page):
     return bear + text + bear
 
 
-def unc_menu(course='bacs200'):
+def unc_menu(course):
     return 'UNC Course', [
         dict(url='/unc/%s/lesson/' % course,     label='Lessons',    active=''),
         dict(url='/unc/%s/projects/' % course,   label='Projects',   active=''),
@@ -119,3 +120,15 @@ def unc_menu(course='bacs200'):
         dict(url='/unc/%s/student/' % course,    label='Dashboard',  active=''),
         dict(url='https://markseaman.info/info/Test/UNC', label='Test', active=' active'),
     ]
+
+
+def site_settings(**kwargs):
+    course = kwargs.get('course')
+    menu = unc_menu(course)
+    title = get_course_name(course).title
+    home = '/unc/%s/' % course
+    site = ('UNC Digital Classroom', title, home)
+    settings = dict(site=site, menu=menu, time=now())
+    settings.update(kwargs)
+    return settings
+
