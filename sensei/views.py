@@ -7,10 +7,10 @@ from django.utils.timezone import now
 from tool.document import doc_html_text
 from tool.log import log_page
 
-from .models import Lesson, Review, Student, UrlGame
-from .review import count_score, get_review, query_reviewers, query_designers, review_feedback, student_reviews, student_reviews_done
-from .sensei import course_lessons, get_course_name, schedule, slides_markdown, unc_menu
-from .student import site_settings, student, students, register_user_domain
+from .models import Lesson, Review, Student
+from .review import count_score, get_review
+from .sensei import get_course_name, schedule, slides_markdown, unc_menu
+from .student import site_settings
 
 
 class UncRedirect(RedirectView):
@@ -18,8 +18,7 @@ class UncRedirect(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
         course = self.kwargs.get('course')
-        # TODO: Fix this  #+self.request.path+'/'
-        return '/%s/Index' % self.request.path
+        return '/unc/%s/Index' % course
 
 
 class UncDocDisplay(TemplateView):
@@ -58,18 +57,6 @@ class UncEditReview(UpdateView):
         return '/unc/student/%s' % student_id
 
 
-# class UncLessonDetail(DetailView):
-#     model = Lesson
-#     template_name = 'unc_lesson_details.html'
-#
-#     def get_context_data(self, **kwargs):
-#         course = self.kwargs.get('course')
-#         menu = unc_menu()
-#         title = 'LESSON #%s' % id
-#         kwargs.update(site_settings(menu=menu, title=title, course=course))
-#         return super(UncLessonDetail, self).get_context_data(kwargs)
-#
-
 class UncLessonList(ListView):
     model = Lesson
     template_name = 'unc_lesson_list.html'
@@ -83,7 +70,21 @@ class UncLessonList(ListView):
 
     def get_queryset(self):
         course  = self.kwargs.get('course')
-        return Lesson.objects.filter(course__name=course)
+        return Lesson.objects.filter(course__name=course).order_by('date')
+
+
+class UncStudentList(TemplateView):
+    template_name = 'unc_dashboard.html'
+
+    def get_context_data(self, **kwargs):
+        title = 'Student Dashboards'
+        course  = self.kwargs.get('course')
+        menu = unc_menu()
+        return site_settings(menu=menu, title=title, course=course)
+
+    def get_queryset(self):
+        course  = self.kwargs.get('course')
+        return Student.objects.filter(course__name=course)
 
 
 class UncSchedule(TemplateView):
@@ -104,36 +105,18 @@ class UncSlidesDisplay(TemplateView):
         return site_settings(title=title, markdown=text)
 
 
-# class UncStudentDetail(TemplateView):
-#     template_name = 'unc_dashboard.html'
-#
-#     def get_context_data(self, **kwargs):
-#         student_id = self.kwargs.get('id')
-#         s = Student.objects.get(pk=student_id)
-#         game = UrlGame.objects.get(student=s)
-#         reviews = student_reviews(student_id)
-#         done = student_reviews_done(student_id)
-#         feedback = review_feedback(student_id)
-#         title = 'Student Dashboard'
-#         return site_settings(student_active='active',
-#                              title=title, student=student(student_id), game=game,
-#                              reviews=reviews, feedback=feedback, done=done)
-#
-# class UncStudentList(TemplateView):
-#     template_name = 'unc_dashboard.html'
-#
-#     def get_context_data(self, **kwargs):
-#         student_id = self.kwargs.get('id')
-#         s = Student.objects.get(pk=student_id)
-#         game = UrlGame.objects.get(student=s)
-#         reviews = student_reviews(student_id)
-#         done = student_reviews_done(student_id)
-#         feedback = review_feedback(student_id)
-#         title = 'Student Dashboard'
-#         return site_settings(student_active='active',
-#                              title=title, student=student(student_id), game=game,
-#                              reviews=reviews, feedback=feedback, done=done)
 
+# class UncLessonDetail(DetailView):
+#     model = Lesson
+#     template_name = 'unc_lesson_details.html'
+#
+#     def get_context_data(self, **kwargs):
+#         course = self.kwargs.get('course')
+#         menu = unc_menu()
+#         title = 'LESSON #%s' % id
+#         kwargs.update(site_settings(menu=menu, title=title, course=course))
+#         return super(UncLessonDetail, self).get_context_data(kwargs)
+#
 # class UncRegister(FormView):
 #     class EditDocForm(Form):
 #         name = forms.CharField()
@@ -152,41 +135,3 @@ class UncSlidesDisplay(TemplateView):
 #         domain = form.data.get('domain')
 #         register_user_domain(name, email, password, domain)
 #         return super(UncRegister, self).form_valid(form)
-#
-#
-# class UncReviewFeedback(TemplateView):
-#     template_name = 'unc_feedback.html'
-#
-#     def get_context_data(self, **kwargs):
-#         pk = self.kwargs.get('pk')
-#         review = get_review(pk)
-#         requirements = review.requirement_labels.labels.split('\n')
-#         title = 'Design Review Feedback'
-#         return site_settings(student_active='active', title=title, review=review, requirements=requirements)
-#
-#
-# class UncReviews(TemplateView):
-#     template_name = 'unc_reviews.html'
-#
-#     def get_context_data(self, **kwargs):
-#         course = '1'
-#         reviews = query_reviewers(course)
-#         designers = query_designers(course)
-#         return site_settings(student_active='active', title='Design Reviews', reviews=reviews, designers=designers)
-
-# class UncStudentDomains(RedirectView):
-#     url = '/unc/students/1'
-#
-
-# class UncStudents(ListView):
-#     template_name = 'unc_registered.html'
-#     model = Student
-#
-#     def get_context_data(self, **kwargs):
-#         course = self.kwargs.get(id, '1')
-#         return site_settings(student_active='active',
-#                              title='BACS 200 - Student Domains',
-#                              students=[])  # students(course)
-#
-#
-

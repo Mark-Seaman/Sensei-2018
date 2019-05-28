@@ -110,6 +110,7 @@ def slides_markdown(page):
     bear = '\n\n---\n\n<img src="/static/images/unc/bacs200/Bear_Logo.png">\n\n---\n\n'
     return bear + text + bear
 
+
 def unc_menu(course='bacs200'):
     return 'UNC Course', [
         dict(url='/unc/%s/lesson/' % course,     label='Lessons',    active=''),
