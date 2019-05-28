@@ -5,8 +5,7 @@ from tool.document import doc_html_text
 from tool.log import log_page
 
 from .models import Lesson, Student
-from .sensei import get_course_name, schedule, slides_markdown
-from .sensei import site_settings
+from .sensei import list_lessons, schedule, slides_markdown, site_settings
 
 
 class UncRedirect(RedirectView):
@@ -22,7 +21,7 @@ class UncDocDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title','Index')
-        course = self.kwargs.get('course', 'bacs200')
+        course = self.kwargs.get('course')
         log_page(self.request, 'course = %s, title = %s' % (course,title))
         doc = join('unc', course, title)
         text = doc_html_text(doc, '/static/images/unc/%s' % course)
@@ -36,7 +35,8 @@ class UncLessonList(ListView):
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title')
         course = self.kwargs.get('course')
-        lessons = Lesson.objects.filter(course__name=course).order_by('date')
+        lessons = list_lessons(course)
+        # lessons = Lesson.objects.filter(course__name=course).order_by('date')
         return site_settings(title=title, course=course, lessons=lessons)
 
 

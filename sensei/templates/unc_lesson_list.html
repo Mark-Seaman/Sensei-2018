@@ -11,10 +11,10 @@
             <table class="table table-hover lesson-table">
                 {% for lesson in lessons %}
                     <tr>
-                        <td>{{ lesson.date }}</td>
-                        <td><b>{{ lesson.title }}</b></td>
-                        <td><a href="/unc/{{ course }}/lesson/{{ lesson.lesson_id }}">Lesson #{{ lesson.lesson }}</a></td>
-                        <td><a href="/unc/{{ course }}/lesson/{{ lesson.lesson_id }}/slides">Slides #{{ lesson.lesson }}</a></td>
+                        <td>{{ lesson.0 }}</td>
+                        <td><b>{{ lesson.1 }}</b></td>
+                        <td><a href="/unc/{{ course }}/lesson/{{ lesson.0 }}">Lesson #{{ lesson.0 }}</a></td>
+                        <td><a href="/unc/{{ course }}/lesson/{{ lesson.0 }}/slides">Slides #{{ lesson.0 }}</a></td>
                     </tr>
                 {% endfor %}
             </table>

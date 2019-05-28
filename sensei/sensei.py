@@ -1,5 +1,6 @@
 from csv import reader
 from django.utils.timezone import now
+from os.path import join
 from re import findall
 
 from tool.document import  read_markdown
@@ -21,21 +22,21 @@ def add_course(name, title):
     Course.objects.create(name=name, title=title, author='Mark Seaman', teacher='Mark Seaman', description="None")
 
 
-def course_lessons(course, page):
-    if not course.startswith('bacs'):
-        return []
-    if page == course or page == '%s/Index' % course :
-        return [x for x in Lesson.objects.filter(course__name=course).order_by('date')][-1:]
-    elif page == '%s/Lessons' % course:
-        return [x for x in Lesson.objects.filter(course__name=course).order_by('date')]
-    else:
-        return []
-
-
-def home_link(title):
-    if title:
-        course = title.split('/')[0]
-        return ('%s' % course, '/guide/%s/Index.md' % course)
+# def course_lessons(course, page):
+#     if not course.startswith('bacs'):
+#         return []
+#     if page == course or page == '%s/Index' % course :
+#         return [x for x in Lesson.objects.filter(course__name=course).order_by('date')][-1:]
+#     elif page == '%s/Lessons' % course:
+#         return [x for x in Lesson.objects.filter(course__name=course).order_by('date')]
+#     else:
+#         return []
+#
+#
+# def home_link(title):
+#     if title:
+#         course = title.split('/')[0]
+#         return ('%s' % course, '/guide/%s/Index.md' % course)
 
 
 def query_students(course, student=None):
@@ -69,6 +70,15 @@ def link(url, title=None):
     if lesson:
         title = 'Lesson #' + lesson[0]
     return (title, url)
+
+
+def list_lessons(course):
+    doc = join('Documents', 'unc', course, 'lessons.csv')
+    s = []
+    with open(doc) as f:
+        for row in reader(f):
+            s.append(row)
+    return s
 
 
 def make_link(href, text=None):
