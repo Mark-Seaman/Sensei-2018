@@ -4,6 +4,8 @@ from django.conf.urls import url
 from .views import *
 
 urlpatterns = [
+    url(r'^$',                                              UncDocDisplay.as_view(), dict(course=None, title='Index')),
+
     url(r'^(?P<course>[-_ \w]+)$',                          UncRedirect.as_view()),
     url(r'^(?P<course>[-_ \w]+)/$',                         UncDocDisplay.as_view()),
 

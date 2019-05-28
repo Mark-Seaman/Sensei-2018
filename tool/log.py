@@ -38,7 +38,7 @@ def log_notifications(title, recipients):
 
 
 def log_page(request, parms=''):
+    message = 'PAGE: url=%s%s, user=%s' % (request.get_host(), request.path, request.user.username)
     if parms:
-        log('log_page (url=%s%s, user=%s, parms=%s)' % (request.get_host(), request.path, request.user.username, parms))
-    else:
-        log('log_page (url=%s%s, user=%s)' % (request.get_host(), request.path, request.user.username))
+        message += ', %s' % parms
+    log(message)

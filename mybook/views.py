@@ -49,7 +49,7 @@ class DocDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
-        log('DocDisplay: %s' % title)
+        log_page(request)
         domdoc = domain_doc(self.request.get_host(), title)
         log_page(self.request, domdoc)
         text = doc_html_text(domdoc, '/static/images')
@@ -71,12 +71,14 @@ class DocRedirect(RedirectView):
         title = self.kwargs.get('title')
         log('DocRedirect: %s' % title)
 
-        log_page(self.request, 'DocRedirect.get_redirect_url')
         if not title:
+            log_page(self.request, 'Redirect Index')
             return '/%s' % domain_doc(self.request.get_host(),'Index')
         if title.endswith('/'):
+            log_page(self.request, 'Redirect /')
             return title+'/Index'
         if doc_page(title):
+            log_page(self.request, 'Redirect doc page')
             return doc_page(title)
         return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
 

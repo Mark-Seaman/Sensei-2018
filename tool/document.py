@@ -34,7 +34,7 @@ def doc_dir_exists(title):
 
 
 def doc_exists(title):
-    log('doc_exists', title)
+    # log('doc_exists', title)
     path = doc_path(title)
     if exists(path) and isfile(path):
         return path
@@ -65,7 +65,7 @@ def doc_list(docdir):
 
 
 def doc_page(title):
-    log('doc_page', title)
+    # log('doc_page', title)
     path = doc_path(title)
     if exists(path) and isfile(path):
         log('no redirect')
