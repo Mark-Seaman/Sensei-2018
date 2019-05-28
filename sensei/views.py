@@ -21,7 +21,7 @@ class UncDocDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title','Index')
-        course = self.kwargs.get('course')
+        course = self.kwargs.get('course','.')
         log_page(self.request, 'course=%s, title=%s' % (course,title))
         doc = join('unc', course, title)
         text = doc_html_text(doc, '/static/images/unc/%s' % course)
@@ -44,8 +44,8 @@ class UncSchedule(TemplateView):
     template_name = 'unc_schedule.html'
 
     def get_context_data(self, **kwargs):
-        title = self.kwargs.get('title')
         course = self.kwargs.get('course')
+        title = 'Schedule for '+course
         return site_settings(title=title, course=course, schedule=schedule(course))
 
 
