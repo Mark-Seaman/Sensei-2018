@@ -83,6 +83,10 @@ pre {
         C L A S S E S
 */
 
+.caption {
+    font-weight: bold;
+    font-style: italic;
+}
 
 .card {
     margin: 1em;
