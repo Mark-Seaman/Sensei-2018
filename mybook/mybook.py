@@ -46,6 +46,7 @@ def booknotes_excerpt(doc):
     return excerpt(doc), 'http://markseaman.org/MarkSeaman/booknotes/%s' % doc
 
 
+# TODO: simplify the menu loading and active item highlight
 def get_menu(title):
     if title.startswith('info') or title.startswith('task'):
         time = ' active' if (title == 'task') else ''

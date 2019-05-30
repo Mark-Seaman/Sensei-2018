@@ -112,16 +112,14 @@ img {
 
 .logo img {
     border-radius: 20px;
-    box-shadow: -2px -2px 6px black;
+    box-shadow: -2px -2px 5px grey;
+    max-width: 25%;
 }
 
 .navbar-dark .navbar-brand {
     color: yellow;
 }
 
-/*.nav-brand {*/
-/*    color: yellow;*/
-/*}*/
 
 /*.page {*/
 /*    border: 1px solid black;*/
@@ -135,7 +133,7 @@ img {
 /*    padding: 2em;*/
 /*}*/
 
-/*.profile img {*/
-/*    width: 200px;*/
-/*    border-radius: 100px;*/
-/*}*/
+.profile img {
+    width: 200px;
+    border-radius: 100px;
+}
