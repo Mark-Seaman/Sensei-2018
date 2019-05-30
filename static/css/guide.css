@@ -60,10 +60,13 @@ h2 {
 }
 
 h3 {
+    color: dodgerblue;
+}
+
+h4 {
     /*color: #444444;*/
     color: green;
 }
-
 main {
     margin: 1em;
 }
