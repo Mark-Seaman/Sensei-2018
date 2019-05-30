@@ -113,7 +113,7 @@ img {
 .logo img {
     border-radius: 20px;
     box-shadow: -2px -2px 5px grey;
-    max-width: 25%;
+    max-width: 100%;
 }
 
 .navbar-dark .navbar-brand {
