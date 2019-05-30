@@ -114,9 +114,8 @@ img {
     color: red;
 }
 
-.form-control {
-    width: 30%;
-    float-left;
+.fg-line {
+    width: 200px;
     margin: 3em;
 }
 
@@ -135,11 +134,12 @@ img {
 }
 
 
-/*.page {*/
-/*    border: 1px solid black;*/
-/*    box-shadow: 2px 2px 5px grey;*/
-/*    padding: 2em;*/
-/*}*/
+.page {
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px grey;
+    padding: 2em;
+    margin: 2em 20%;
+}
 
 /*.panel {*/
 /*    background-color: #eeeeee;*/

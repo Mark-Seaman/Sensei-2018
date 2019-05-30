@@ -11,45 +11,44 @@
 
 {% block content %}
 
-    <h1>Log In to MyBook Online</h1>
+    <div class="page">
 
-    {% if form.errors %}
-        <p style="color: red">
-            <i class="hm-icon zmdi zmdi-alert-triangle"></i>
-            &nbsp; Your username and password didn't match.
-            Please try again.</p>
-    {% endif %}
+        <h1>Log In to use Sensei</h1>
 
-    <form method="post">
-        {% csrf_token %}
+        {% if form.errors %}
+            <p style="color: red">
+                <i class="hm-icon zmdi zmdi-alert-triangle"></i>
+                &nbsp; Your username and password didn't match.
+                Please try again.</p>
+        {% endif %}
 
-        <p class="form-group">
-            <p class="container">
+        <form method="post">
+            {% csrf_token %}
 
-                <p>
-                    <div class="form-control"{{ form.username.label_tag }}</p>
-                    <div class="form-control"><input type="text" class="form-control input" name="username"></div>
-                </p>
+            <div class="form-group">
 
-                <p>
-                    <div class="form-control">{{ form.password.label_tag }}</div>
-                    <div class="form-control"><input type="password" class="form-control input" name="password"></div>
+                <div class="fg-line">
+                    <span class="fg-label">{{ form.username.label_tag }}</span>
+                    <span class="fg-input"><input type="text" class="form-control input" name="username"></span>
+                </div>
+
+                <div class="fg-line">
+                    <span class="fg-label">{{ form.password.label_tag }}</span>
+                    <span class="fg-input"><input type="password" class="form-control input" name="password"></span>
                     {#{{ form.password }}#}
-                </p>
+                </div>
 
-                <p>
-                    <div class="form-control">
-                        <button class="btn palette-Teal bg">Log In</button>
-                    </div>
-                    <div class="form-control">Don't have a login? <a href="/register"><b>Sign Up</b></a> here.</div>
-                </p>
+                <div>
+                    <button class="btn">Log In</button>
+                    Don't have a login? <a href="/register"><b>Sign Up</b></a> here.
+                </div>
 
                 <input type="hidden" name="next" value="{{ next }}"/>
 
             </div>
-        </div>
 
-    </form>
+        </form>
+    </div>
 
 {% endblock %}
 
