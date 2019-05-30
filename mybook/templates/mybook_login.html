@@ -14,36 +14,35 @@
     <h1>Log In to MyBook Online</h1>
 
     {% if form.errors %}
-        <div class="p-10">
-
-            <p style="color: red">
-                <i style="color: red" class="hm-icon zmdi zmdi-alert-triangle"></i>
-                &nbsp; Your username and password didn't match.
-                Please try again.</p>
-        </div>
+        <p style="color: red">
+            <i class="hm-icon zmdi zmdi-alert-triangle"></i>
+            &nbsp; Your username and password didn't match.
+            Please try again.</p>
     {% endif %}
 
     <form method="post">
         {% csrf_token %}
 
-        <div class="form-group">
-            <div class="container">
+        <p class="form-group">
+            <p class="container">
 
-                <div class="row fg-line">
-                    <div class="col-xs-6">{{ form.username.label_tag }}</div>
-                    <div class="col-xs-6"><input type="text" class="form-control input" name="username"></div>
-                </div>
+                <p>
+                    <div class="form-control"{{ form.username.label_tag }}</p>
+                    <div class="form-control"><input type="text" class="form-control input" name="username"></div>
+                </p>
 
-                <div class="row fg-line">
-                    <div class="col-xs-6">{{ form.password.label_tag }}</div>
-                    <div class="col-xs-6"><input type="password" class="form-control input" name="password"></div>
+                <p>
+                    <div class="form-control">{{ form.password.label_tag }}</div>
+                    <div class="form-control"><input type="password" class="form-control input" name="password"></div>
                     {#{{ form.password }}#}
-                </div>
+                </p>
 
-                <div class="row">
-                    <div class="col-xs-6"><button class="btn palette-Teal bg">Log In</button></div>
-                    <div class="col-xs-6">Don't have a login? <a href="/register"><b>Sign Up</b></a> here.</div>
-                </div>
+                <p>
+                    <div class="form-control">
+                        <button class="btn palette-Teal bg">Log In</button>
+                    </div>
+                    <div class="form-control">Don't have a login? <a href="/register"><b>Sign Up</b></a> here.</div>
+                </p>
 
                 <input type="hidden" name="next" value="{{ next }}"/>
 
