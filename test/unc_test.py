@@ -19,5 +19,5 @@ def unc_docs_test():
 
 
 def unc_site_test():
-    return check_page('https://shrinking-world.com/sensei/bacs200/02', 112, 120)
+    return check_page('https://shrinking-world.com/sensei/bacs200/02', 100, 120)
 

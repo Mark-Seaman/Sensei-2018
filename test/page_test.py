@@ -8,8 +8,8 @@ def check_page(url, min=1, max=1):
 
 def page_sites_test():
     pages = [
-        check_page('https://markseaman.info/Index.md',              130, 157),
-        check_page('https://markseaman.org/MarkSeaman/Index',       173, 180),
+        check_page('https://markseaman.info/Index.md',              150, 180),
+        check_page('https://markseaman.org/MarkSeaman/Index',       160, 180),
 
         check_page('https://seamansguide.com/guide/Index',          112, 130),
         check_page('https://seamanslog.com/seamanslog/',            124, 127),
