@@ -7,6 +7,9 @@
 * {
 }
 
+button {
+    margin: 2em;
+}
 footer {
     color: darkgrey;
     padding: 2em;
@@ -115,8 +118,15 @@ img {
 }
 
 .fg-line {
-    width: 200px;
-    margin: 3em;
+    margin: 2em 20%;
+}
+
+.login-form {
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px grey;
+    padding: 2em;
+    margin: auto;
+    max-width: 600px;
 }
 
 .logo {
@@ -137,8 +147,9 @@ img {
 .page {
     border: 1px solid black;
     box-shadow: 2px 2px 5px grey;
-    padding: 2em;
-    margin: 2em 20%;
+    padding: 3em;
+    margin: auto;
+    max-width: 80%;
 }
 
 /*.panel {*/
