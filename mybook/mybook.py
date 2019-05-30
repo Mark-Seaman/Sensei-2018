@@ -121,10 +121,6 @@ def header_info(domain):
         return dict(title="Seaman's Guides", subtitle='Software Development Courses',
                     logo="/static/images/SWS_Logo_200.jpg", logo_text='Shrinking World Solutions')
 
-    # elif domain == 'spiritual-things.org':
-    #     return dict(title='Spiritual Things', subtitle='Daily Inspiration',
-    #                 logo=None, logo_text=None)
-
     else:
         return dict(title="Shrinking World", subtitle='Software Development Training',
                     logo="/static/images/SWS_Logo_200.jpg", logo_text='Shrinking World Solutions')
@@ -144,10 +140,9 @@ def theme(domain):
     elif domain == 'seamanslog.com':
         return 'log_theme.html'
     elif domain == 'seamansguide.com':
-        return 'guide_theme.html'
+        return 'seaman_theme.html'
     else:
         return 'mybook_theme.html'
-
 
 
 def topic_menu(title, topics, base, home):

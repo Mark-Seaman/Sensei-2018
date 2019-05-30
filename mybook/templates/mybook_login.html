@@ -1,96 +1,75 @@
 {% extends "mybook_theme.html" %}
 
 
-
 {% block menu %}
+{% endblock %}
+
+
+{% block header %}
 {% endblock %}
 
 
 {% block content %}
 
-    <section id="content">
+    <h1>Log In to MyBook Online</h1>
 
-        {% block cards %}
-            <div class="card">
-                <div class="card-header ch-alt">
-                    <h1>Log In to MyBook Online</h1>
+    {% if form.errors %}
+        <div class="p-10">
+
+            <p style="color: red">
+                <i style="color: red" class="hm-icon zmdi zmdi-alert-triangle"></i>
+                &nbsp; Your username and password didn't match.
+                Please try again.</p>
+        </div>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+
+            <div class="row p-0 m-0">
+
+                <div class="fg-line">
+                    {{ form.username.label_tag }}
                 </div>
 
-                <div class="card-body card-padding">
-
-                    {% if form.errors %}
-                        <div class="p-10">
-
-                            <p style="color: red">
-                                <i style="color: red" class="hm-icon zmdi zmdi-alert-triangle"></i>
-                                &nbsp; Your username and password didn't match.
-                                Please try again.</p>
-                        </div>
-                    {% endif %}
-
-                    <form method="post">
-                        {% csrf_token %}
-
-                        <div class="form-group">
-
-                            <div class="row p-0 m-0">
-
-                                <div class="fg-line">
-                                    {{ form.username.label_tag }}
-                                </div>
-
-                                <div class="fg-line">
-                                    <input type="text" class="form-control input" name="username">
-                                </div>
-
-                            </div>
-
-                            <div class="row p-t-10 p-b-10">
-
-                                <div class="col-lg-4 fg-line">
-                                    {{ form.password.label_tag }}
-                                </div>
-
-                                <div class="col-lg-8 fg-line">
-                                    {#{{ form.password }}#}
-                                    <input type="password" class="form-control input" name="password">
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-
-                                <div class="col-sm-3">
-                                    <button class="btn palette-Teal bg">Log In</button>
-                                </div>
-
-                                <div class="col-sm-7">
-                                    Don't have a login? <a href="/register"><b>Sign Up</b></a> here.
-                                </div>
-
-                            </div>
-
-                            <input type="hidden" name="next" value="{{ next }}"/>
-
-                        </div>
-
-                    </form>
-
+                <div class="fg-line">
+                    <input type="text" class="form-control input" name="username">
                 </div>
+
             </div>
-        {% endblock %}
 
-    </section>
+            <div class="row p-t-10 p-b-10">
+
+                <div class="col-lg-4 fg-line">
+                    {{ form.password.label_tag }}
+                </div>
+
+                <div class="col-lg-8 fg-line">
+                    {#{{ form.password }}#}
+                    <input type="password" class="form-control input" name="password">
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-3">
+                    <button class="btn palette-Teal bg">Log In</button>
+                </div>
+
+                <div class="col-sm-7">
+                    Don't have a login? <a href="/register"><b>Sign Up</b></a> here.
+                </div>
+
+            </div>
+
+            <input type="hidden" name="next" value="{{ next }}"/>
+
+        </div>
+
+    </form>
+
 {% endblock %}
 
-
-{% block footer %}
-    <footer id="footer">
-
-        <a href="http://shrinking-world.com">
-            {# <img src="/static/SWS_Globe_small.jpg"> #}
-            <p>Copyright &copy; 2017 Shrinking World Solutions, Inc.</p>
-        </a>
-
-    </footer>
-{% endblock %}
