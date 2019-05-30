@@ -60,8 +60,8 @@ h2 {
 }
 
 h3 {
-    color: #444444;
-    /*text-size: 120%;*/
+    /*color: #444444;*/
+    color: green;
 }
 
 main {
@@ -81,14 +81,14 @@ img {
     max-width: 100%;
 }
 
-/*!* --------------------------*/
-/*        C L A S S E S*/
-/**!*/
+/* --------------------------
+        C L A S S E S
+*/
 
-/*.caption {*/
-/*    font-weight: bold;*/
-/*    font-style: italic;*/
-/*}*/
+.caption {
+    font-weight: bold;
+    font-style: italic;
+}
 
 /*.card {*/
 /*    margin: 1em;*/
