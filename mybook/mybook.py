@@ -68,7 +68,7 @@ def get_menu(title):
         listing = ' active' if (title == 'seamanslog/List') else ''
         reading = (not index and not listing)
         return "Seaman's Log", [
-            dict(url='https://seamanslog.com/seamanslog/Index', label='Blog', active=index),
+            # dict(url='https://seamanslog.com/seamanslog/Index', label='Blog', active=index),
             dict(url='https://seamanslog.com/seamanslog/List', label='Articles', active=listing),
             dict(url='https://seamanslog.com/seamanslog/Random', label='Read', active=reading),
             dict(url='https://markseaman.org', label='Mark Seaman', active=''),
