@@ -64,9 +64,9 @@ def get_menu(title):
             dict(url='https://markseaman.org', label='Mark Seaman', active=' active'),
         ]
     elif title.startswith('seamanslog'):
-        index = ' active' if (title == 'seamanslog/Index') else ''
+        # index = ' active' if (title == 'seamanslog/Index') else ''
         listing = ' active' if (title == 'seamanslog/List') else ''
-        reading = (not index and not listing)
+        reading = not listing
         return "Seaman's Log", [
             # dict(url='https://seamanslog.com/seamanslog/Index', label='Blog', active=index),
             dict(url='https://seamanslog.com/seamanslog/List', label='Articles', active=listing),
