@@ -70,7 +70,9 @@ class DocDisplay(TemplateView):
         title = self.kwargs.get('title')
         domdoc = domain_doc(self.request.get_host(), title)
         url = doc_page(title)
-        if title != domdoc and url:
+        if title != domdoc:
+            if not url:
+                url = 'Index'
             url = domain_doc(self.request.get_host(), url)
             log('REDIRECT DOMAIN: %s --> %s' % (title, domdoc))
         if url:
