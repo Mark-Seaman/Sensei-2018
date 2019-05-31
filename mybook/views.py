@@ -70,10 +70,10 @@ class DocDisplay(TemplateView):
         title = self.kwargs.get('title', 'Index')
 
         # Wrong Domain Document
-        domdoc = domain_doc(self.request.get_host(), title)
-        if title != domdoc:
-            log('REDIRECT DOMAIN: %s --> %s' % (title, domdoc))
-            return HttpResponseRedirect('/%s/Index' % domdoc)
+        # domdoc = domain_doc(self.request.get_host(), title)
+        # if title != domdoc:
+        #     log('REDIRECT DOMAIN: %s --> %s' % (title, domdoc))
+        #     return HttpResponseRedirect('/Index')
 
         # Index or Directory or .md
         url = doc_page(title)
