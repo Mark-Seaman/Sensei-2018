@@ -71,10 +71,10 @@ class DocDisplay(TemplateView):
 
         # Wrong Domain Document
         domdoc = domain_doc(self.request.get_host(), title)
-        if title != domdoc:
-            url = domain_doc(self.request.get_host(), title)
-            log('REDIRECT DOMAIN: %s --> %s' % (title, domdoc))
-            return HttpResponseRedirect('/' + url)
+        # if title != domdoc:
+        #     url = domain_doc(self.request.get_host(), title)
+        #     log('REDIRECT DOMAIN: %s --> %s' % (title, domdoc))
+        #     return HttpResponseRedirect('/' + url)
 
         # Index or Directory or .md
         url = doc_page(title)
