@@ -22,12 +22,6 @@
                 <a class="navbar-brand" href="/">
                     {{ menu.0 }}
                 </a>
-
-{#                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"#}
-{#                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">#}
-{#                    <span class="navbar-toggler-icon"></span>#}
-{#                </button>#}
-
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         {% for m in menu.1 %}
@@ -35,8 +29,8 @@
                             </li>
                         {% endfor %}
                     </ul>
-
                 </div>
+
             </nav>
         {% endblock %}
 
@@ -92,7 +86,9 @@
         <footer>
             <a href="http://shrinking-world.com">
                 <div class="logo-text">Copyright &copy; 2019 Shrinking World</div>
-                <img src="/static/images/SWS_Globe_small.jpg" alt="Shrinking World Solutions">
+{#                <img src="/static/images/SWS_Globe_small.jpg" alt="Shrinking World Solutions">#}
+                <img class="img-rounded img-responsive" src="/static/images/SWS_Globe_small.jpg"
+                                     alt="Shrinking World Solutions" width="150px">
             </a>
         </footer>
 
