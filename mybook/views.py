@@ -7,7 +7,7 @@ from os.path import join
 from random import choice
 
 from tool.document import doc_html_text, doc_list, doc_page, domain_doc
-from tool.log import log_page
+from tool.log import log, log_page
 
 from .mybook import booknotes_excerpt, get_menu, header_info, theme
 from .outline import outline, read_cards, tabs_data
@@ -69,7 +69,8 @@ class DocDisplay(TemplateView):
     def get(self, request, *args, **kwargs):
         title = self.kwargs.get('title')
         domdoc = domain_doc(self.request.get_host(), title)
-        # if title != domdoc:
+        if title != domdoc:
+            log('REDIRECT: %s --> %s' % (title, domdoc))
         #     return HttpResponseRedirect('/' + domdoc)
         url = doc_page(domdoc)
         if url:
