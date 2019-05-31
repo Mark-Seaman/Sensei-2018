@@ -24,11 +24,16 @@ class UncDocDisplay(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title','Index')
-        course = self.kwargs.get('course','.')
+        course = self.kwargs.get('course')
         log_page(self.request, 'course=%s, title=%s' % (course,title))
-        doc = join('unc', course, title)
-        text = doc_html_text(doc, '/static/images/unc/%s' % course)
-        return site_settings(title=title, text=text, course=course)
+        if course:
+            doc = join('unc', course, title)
+            text = doc_html_text(doc, '/static/images/unc/%s' % course)
+            return site_settings(title=title, text=text, course=course)
+        else:
+            doc = join('unc', title)
+            text = doc_html_text(doc, '/static/images/unc/%s' % title)
+            return site_settings(title=title, text=text, course='All')
 
 
 class UncLessonList(TemplateView):
