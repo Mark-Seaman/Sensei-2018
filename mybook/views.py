@@ -62,13 +62,13 @@ class DocDisplay(TemplateView):
         # log('theme = %s' % theme_template)
         return [theme_template]
 
-    def get(self, request, *args, **kwargs):
-        title = self.kwargs.get('title')
-        url = doc_page(title)
-        if url:
-            return HttpResponseRedirect('/' + url)
-        else:
-            return self.render_to_response(self.get_context_data(**kwargs))
+    # def get(self, request, *args, **kwargs):
+    #     title = self.kwargs.get('title')
+    #     url = doc_page(title)
+    #     if url:
+    #         return HttpResponseRedirect('/' + url)
+    #     else:
+    #         return self.render_to_response(self.get_context_data(**kwargs))
 
 
 class DocRedirect(RedirectView):
