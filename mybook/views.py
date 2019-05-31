@@ -53,7 +53,7 @@ class DocDisplay(TemplateView):
         # domdoc = domain_doc(self.request.get_host(), title)
         # # log_page(self.request, domdoc)
         # text = doc_html_text(domdoc, '/static/images')
-        
+
         log_page(self.request)
         text = doc_html_text(title, '/static/images')
         menu = get_menu(title)
@@ -68,7 +68,10 @@ class DocDisplay(TemplateView):
 
     def get(self, request, *args, **kwargs):
         title = self.kwargs.get('title')
-        url = doc_page(domain_doc(self.request.get_host(), title))
+        domdoc = domain_doc(self.request.get_host(), title)
+        if title != domdoc:
+            return HttpResponseRedirect('/' + domdoc)
+        url = doc_page(domdoc)
         if url:
             return HttpResponseRedirect('/' + url)
         else:
