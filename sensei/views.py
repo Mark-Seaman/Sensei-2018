@@ -33,7 +33,7 @@ class UncDocDisplay(TemplateView):
         else:
             doc = join('unc', title)
             text = doc_html_text(doc, '/static/images/unc/%s' % title)
-            return site_settings(title=title, text=text, course='All')
+            return site_settings(title=title, text=text, course=None)
 
 
 class UncLessonList(TemplateView):

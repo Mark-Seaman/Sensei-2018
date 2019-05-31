@@ -134,11 +134,12 @@ def unc_menu(course):
 
 def site_settings(**kwargs):
     course = kwargs.get('course')
-    menu = unc_menu(course)
-    title = get_course_name(course).title
-    home = '/unc/%s/' % course
-    site = ('UNC Digital Classroom', title, home)
-    settings = dict(site=site, menu=menu, time=now())
+    if course:
+        menu = unc_menu(course)
+        title = get_course_name(course).title
+        home = '/unc/%s/' % course
+        site = ('UNC Digital Classroom', title, home)
+        settings = dict(site=site, menu=menu, time=now())
     settings.update(kwargs)
     return settings
 
