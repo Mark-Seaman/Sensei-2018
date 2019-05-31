@@ -4,10 +4,9 @@ from django.conf.urls import url
 from .views import *
 
 urlpatterns = [
-    url(r'^$',                                              UncDocDisplay.as_view(), dict(course=None, title='Index')),
 
-    url(r'^(?P<course>[-_ \w]+)$',                          UncRedirect.as_view()),
-    url(r'^(?P<course>[-_ \w]+)/$',                         UncDocDisplay.as_view()),
+    # url(r'^(?P<course>[-_ \w]+)$',                          UncRedirect.as_view()),
+    # url(r'^(?P<course>[-_ \w]+)/$',                         UncDocDisplay.as_view()),
 
 
     url(r'^(?P<course>[-_ \w]+)/lesson/$',                  UncLessonList.as_view()),
@@ -19,7 +18,8 @@ urlpatterns = [
     #url(r'^(?P<course>[-_ \w]+)/student/(?P<id>[\d]*)$',    UncStudentDetail.as_view()),
 
     url(r'^(?P<course>[-_ \w]+)/(?P<title>[\w/\-_.]*)/slides$', UncSlidesDisplay.as_view()),
-    url(r'^(?P<course>[-_ \w]+)/(?P<title>[\w/\-_.]*)$',        UncDocDisplay.as_view()),
+    url(r'^(?P<title>[\w/\-_.]*)$',                         UncDocViewer.as_view()),
+    # url(r'^(?P<course>[-_ \w]+)/(?P<title>[\w/\-_.]*)$',        UncDocDisplay.as_view()),
 
 
 
