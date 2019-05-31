@@ -49,9 +49,13 @@ class DocDisplay(TemplateView):
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
         log_page(self.request)
-        domdoc = domain_doc(self.request.get_host(), title)
-        # log_page(self.request, domdoc)
-        text = doc_html_text(domdoc, '/static/images')
+
+        # domdoc = domain_doc(self.request.get_host(), title)
+        # # log_page(self.request, domdoc)
+        # text = doc_html_text(domdoc, '/static/images')
+        
+        log_page(self.request)
+        text = doc_html_text(title, '/static/images')
         menu = get_menu(title)
         url = self.request.get_raw_uri()
         header = header_info(self.request.get_host())
