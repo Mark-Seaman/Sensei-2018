@@ -140,6 +140,8 @@ def site_settings(**kwargs):
         home = '/unc/%s/' % course
         site = ('UNC Digital Classroom', title, home)
         settings = dict(site=site, menu=menu, time=now())
+    else:
+        settings = {}
     settings.update(kwargs)
     return settings
 
