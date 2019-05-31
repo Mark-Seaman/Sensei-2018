@@ -67,19 +67,22 @@ class DocDisplay(TemplateView):
         return [theme_template]
 
     def get(self, request, *args, **kwargs):
-        title = self.kwargs.get('title')
+        title = self.kwargs.get('title', 'Index')
+
+        # Wrong Domain Document
         domdoc = domain_doc(self.request.get_host(), title)
-        url = doc_page(title)
-        if title != domdoc and url:
-            # if not url:
-            #     url = 'Index'
-            url = domain_doc(self.request.get_host(), url)
+        if title != domdoc:
+            url = domain_doc(self.request.get_host(), title)
             log('REDIRECT DOMAIN: %s --> %s' % (title, domdoc))
+            return HttpResponseRedirect('/' + url)
+
+        # Index or Directory or .md
+        url = doc_page(title)
         if url:
             log('REDIRECT: %s --> %s' % (title, url))
             return HttpResponseRedirect('/' + url)
-        else:
-            return self.render_to_response(self.get_context_data(**kwargs))
+
+        return self.render_to_response(self.get_context_data(**kwargs))
 
 
 class DocRedirect(RedirectView):
