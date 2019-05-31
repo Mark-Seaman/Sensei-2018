@@ -1,5 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import redirect
+from django.http import HttpResponseRedirect
 from django.utils.timezone import now
 from django.views.generic import RedirectView, TemplateView
 # from django.views.generic.base import ContextMixin, TemplateResponseMixin
@@ -7,7 +7,7 @@ from os import listdir
 from os.path import join
 from random import choice
 
-from tool.document import doc_html_text, doc_list, doc_page, domain_doc
+from tool.document import doc_html_text, doc_list, doc_page_redirect, domain_doc
 from tool.log import log, log_page
 
 from .mybook import booknotes_excerpt, get_menu, header_info, theme
@@ -58,28 +58,30 @@ class DocDisplay(TemplateView):
         header = header_info(self.request.get_host())
         return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
 
-    def get_template_names(self):
-        theme_template = theme(self.request.get_host())
-        # log('theme = %s' % theme_template)
-        return [theme_template]
-
-
-class DocRedirect(RedirectView):
-    permanent = False
-
-    def get_redirect_url(self, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
         title = self.kwargs.get('title')
-        # log('DocRedirect: %s' % title)
-        if not title:
-            log_page(self.request, 'Redirect Index')
-            return '/%s' % domain_doc(self.request.get_host(),'Index')
-        if title.endswith('/'):
-            log_page(self.request, 'Redirect /')
-            return title+'/Index'
-        if doc_page(title):
-            log_page(self.request, 'Redirect doc page')
-            return doc_page(title)
-        return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
+        url = doc_page_redirect(title)
+        if url:
+            return HttpResponseRedirect('/' + url)
+        else:
+            return self.render_to_response(self.get_context_data(**kwargs))
+
+# class DocRedirect(RedirectView):
+#     permanent = False
+#
+#     def get_redirect_url(self, *args, **kwargs):
+#         title = self.kwargs.get('title')
+#         # log('DocRedirect: %s' % title)
+#         if not title:
+#             log_page(self.request, 'Redirect Index')
+#             return '/%s' % domain_doc(self.request.get_host(),'Index')
+#         if title.endswith('/'):
+#             log_page(self.request, 'Redirect /')
+#             return title+'/Index'
+#         if doc_page_redirect(title):
+#             log_page(self.request, 'Redirect doc page')
+#             return doc_page_redirect(title)
+#         return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
 
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):
@@ -91,6 +93,7 @@ class PrivateDoc(LoginRequiredMixin, DocDisplay):
         menu = get_menu('info/'+title)
         return dict(title=title, text=text, menu=menu, header=header_info(self.request.get_host()), time=now())
 
+    
 # --------------------------------------
 
 class BookNotes(DocDisplay):

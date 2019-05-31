@@ -2,22 +2,11 @@ from os.path import join
 from django import http
 from django.views.generic import  ListView, RedirectView, TemplateView
 
-from tool.document import doc_html_text, doc_page
+from tool.document import doc_html_text, doc_page_redirect
 from tool.log import log_page
 
 from .models import Lesson, Student
 from .sensei import list_lessons, schedule, slides_markdown, site_settings
-
-
-# class UncRedirect(RedirectView):
-#     permanent = False
-#
-#     def get_redirect_url(self, *args, **kwargs):
-#         title = self.kwargs.get('title', 'xxx')
-#         if title == 'xxx':
-#             return '/unc/Index'
-#         # else:
-#         #     return '/unc/%s/Index' % course
 
 
 class UncDocViewer(TemplateView):
@@ -36,29 +25,29 @@ class UncDocViewer(TemplateView):
 
     def get(self, request, *args, **kwargs):
         title = self.kwargs.get('title', 'xxx')
-        url = doc_page('unc/' + title)
+        url = doc_page_redirect('unc/' + title)
         if url:
             return http.HttpResponseRedirect('/' + url)
         else:
             return self.render_to_response(self.get_context_data(**kwargs))
 
 
-class UncDocDisplay(TemplateView):
-    template_name = 'unc_doc.html'
-
-    def get_context_data(self, **kwargs):
-        title = self.kwargs.get('title', 'Index')
-        course = self.kwargs.get('course')
-        log_page(self.request, 'course=%s, title=%s' % (course, title))
-        if course:
-            doc = join('unc', course, title)
-            text = doc_html_text(doc, '/static/images/unc/%s' % course)
-            return site_settings(title=title, text=text, course=course)
-        else:
-            doc = join('unc', title)
-            text = doc_html_text(doc, '/static/images/unc/%s' % title)
-            return site_settings(title=title, text=text, course=None)
-
+# class UncDocDisplay(TemplateView):
+#     template_name = 'unc_doc.html'
+#
+#     def get_context_data(self, **kwargs):
+#         title = self.kwargs.get('title', 'Index')
+#         course = self.kwargs.get('course')
+#         log_page(self.request, 'course=%s, title=%s' % (course, title))
+#         if course:
+#             doc = join('unc', course, title)
+#             text = doc_html_text(doc, '/static/images/unc/%s' % course)
+#             return site_settings(title=title, text=text, course=course)
+#         else:
+#             doc = join('unc', title)
+#             text = doc_html_text(doc, '/static/images/unc/%s' % title)
+#             return site_settings(title=title, text=text, course=None)
+#
 
 class UncLessonList(TemplateView):
     # model = Lesson

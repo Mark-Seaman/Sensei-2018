@@ -5,21 +5,17 @@ from .views import *
 
 urlpatterns = [
 
-    # url(r'^(?P<course>[-_ \w]+)$',                          UncRedirect.as_view()),
-    # url(r'^(?P<course>[-_ \w]+)/$',                         UncDocDisplay.as_view()),
+    url(r'^(?P<course>[-_ \w]+)/lesson/$',                      UncLessonList.as_view()),
+    # url(r'^(?P<course>[-_ \w]+)/lesson/(?P<id>[\d]*)$',       UncLessonDetail.as_view()),
 
+    url(r'^(?P<course>[-_ \w]+)/schedule$',                     UncSchedule.as_view()),
 
-    url(r'^(?P<course>[-_ \w]+)/lesson/$',                  UncLessonList.as_view()),
-    # url(r'^(?P<course>[-_ \w]+)/lesson/(?P<id>[\d]*)$',     UncLessonDetail.as_view()),
-
-    url(r'^(?P<course>[-_ \w]+)/schedule$',                 UncSchedule.as_view()),
-
-    url(r'^(?P<course>[-_ \w]+)/student/$',                 UncStudentList.as_view()),
-    #url(r'^(?P<course>[-_ \w]+)/student/(?P<id>[\d]*)$',    UncStudentDetail.as_view()),
+    url(r'^(?P<course>[-_ \w]+)/student/$',                     UncStudentList.as_view()),
+    #url(r'^(?P<course>[-_ \w]+)/student/(?P<id>[\d]*)$',       UncStudentDetail.as_view()),
 
     url(r'^(?P<course>[-_ \w]+)/(?P<title>[\w/\-_.]*)/slides$', UncSlidesDisplay.as_view()),
-    url(r'^(?P<title>[\w/\-_.]*)$',                         UncDocViewer.as_view()),
-    # url(r'^(?P<course>[-_ \w]+)/(?P<title>[\w/\-_.]*)$',        UncDocDisplay.as_view()),
+    url(r'^(?P<title>[\w/\-_.]*)$',                             UncDocViewer.as_view()),
+    # url(r'^(?P<course>[-_ \w]+)/(?P<title>[\w/\-_.]*)$',      UncDocDisplay.as_view()),
 
 
 
