@@ -65,8 +65,10 @@ def doc_list(docdir):
 
 
 def doc_page(title):
-    # log('doc_page', title)
+    log('doc_page', title)
     path = doc_path(title)
+    return None
+
     if exists(path) and isfile(path):
         log('no redirect')
         return None
