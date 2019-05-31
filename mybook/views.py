@@ -13,6 +13,40 @@ from .mybook import booknotes_excerpt, get_menu, header_info, theme
 from .outline import outline, read_cards, tabs_data
 
 
+class DocDisplay(TemplateView):
+
+    def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title', 'Index')
+        log_page(self.request)
+        text = doc_html_text(title, '/static/images')
+        menu = get_menu(title)
+        url = self.request.get_raw_uri()
+        header = header_info(self.request.get_host())
+        return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
+
+    def get_template_names(self):
+        theme_template = theme(self.request.get_host())
+        # log('theme = %s' % theme_template)
+        return [theme_template]
+
+    def get(self, request, *args, **kwargs):
+        title = self.kwargs.get('title', 'Index')
+
+        # Wrong Domain Document
+        # domdoc = domain_doc(self.request.get_host(), title)
+        # if title != domdoc:
+        #     log('REDIRECT DOMAIN: %s --> %s' % (title, domdoc))
+        #     return HttpResponseRedirect('/Index')
+
+        # Index or Directory or .md
+        url = doc_page(title)
+        if url:
+            log('REDIRECT: %s --> %s' % (title, url))
+            return HttpResponseRedirect('/' + url)
+
+        return self.render_to_response(self.get_context_data(**kwargs))
+
+
 class DocList(TemplateView):
     template_name = 'mybook_list.html'
 
@@ -42,46 +76,6 @@ class DocRandom(RedirectView):
         files = listdir(join('Documents', title))
         file = choice(files)
         return '/%s/%s' % (title, file)
-
-
-class DocDisplay(TemplateView):
-
-    def get_context_data(self, **kwargs):
-        title = self.kwargs.get('title', 'Index')
-        log_page(self.request)
-
-        # domdoc = domain_doc(self.request.get_host(), title)
-        # # log_page(self.request, domdoc)
-        # text = doc_html_text(domdoc, '/static/images')
-
-        log_page(self.request)
-        text = doc_html_text(title, '/static/images')
-        menu = get_menu(title)
-        url = self.request.get_raw_uri()
-        header = header_info(self.request.get_host())
-        return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
-
-    def get_template_names(self):
-        theme_template = theme(self.request.get_host())
-        # log('theme = %s' % theme_template)
-        return [theme_template]
-
-    def get(self, request, *args, **kwargs):
-        title = self.kwargs.get('title', 'Index')
-
-        # Wrong Domain Document
-        # domdoc = domain_doc(self.request.get_host(), title)
-        # if title != domdoc:
-        #     log('REDIRECT DOMAIN: %s --> %s' % (title, domdoc))
-        #     return HttpResponseRedirect('/Index')
-
-        # Index or Directory or .md
-        url = doc_page(title)
-        if url:
-            log('REDIRECT: %s --> %s' % (title, url))
-            return HttpResponseRedirect('/' + url)
-
-        return self.render_to_response(self.get_context_data(**kwargs))
 
 
 class DocRoot(RedirectView):
