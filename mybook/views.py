@@ -6,11 +6,10 @@ from os import listdir
 from os.path import join
 from random import choice
 
-from tool.document import doc_html_text, doc_list, doc_page, domain_doc
+from tool.document import doc_file_index, doc_html_text, doc_list, doc_page, domain_doc
 from tool.log import log, log_page
 
-from .mybook import booknotes_excerpt, get_menu, header_info, theme
-from .outline import outline, read_cards, tabs_data
+from .mybook import booknotes_excerpt, get_menu, header_info, page_settings, theme
 
 
 class DocDisplay(TemplateView):
@@ -18,6 +17,9 @@ class DocDisplay(TemplateView):
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title', 'Index')
         log_page(self.request)
+        # settings = page_data(self.request.get_host(), title)
+        # return settings
+
         text = doc_html_text(title, '/static/images')
         menu = get_menu(title)
         url = self.request.get_raw_uri()
@@ -47,15 +49,27 @@ class DocDisplay(TemplateView):
         return self.render_to_response(self.get_context_data(**kwargs))
 
 
+class DocFileIndex(TemplateView):
+    template_name = 'mybook_list.html'
+
+    def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title')
+        log_page(self.request, title)
+        doclist = doc_file_index(title)
+        menu = get_menu (title)
+        return dict(title=title, list=doclist, menu=menu, url=self.request.get_raw_uri(), header=header_info(self.request.get_host()))
+
+
 class DocList(TemplateView):
     template_name = 'mybook_list.html'
 
     def get_context_data(self, **kwargs):
-        title = self.request.path[1:-5]
+        title = self.kwargs.get('title')
         log_page(self.request, title)
         doclist = doc_list(title)
         menu = get_menu (title)
         return dict(title=title, list=doclist, menu=menu, url=self.request.get_raw_uri(), header=header_info(self.request.get_host()))
+
 
 
 class DocMissing(TemplateView):
@@ -106,26 +120,6 @@ class BookNotes(DocDisplay):
         return super(BookNotes, self).get_context_data(**kwargs)
 
 
-class CardView(DocDisplay):
-    template_name = "mybook_cards.html"
-
-    def get_context_data(self, **kwargs):
-        doc = self.kwargs.get('title')
-        kwargs = dict(title="Card View", doc=doc, cards=read_cards(doc))
-        return super(CardView, self).get_context_data(**kwargs)
-
-
-class OutlineView(DocDisplay):
-    template_name = "mybook_outline.html"
-
-    def get_context_data(self, **kwargs):
-        doc = self.kwargs.get('title')
-        text = open(join('Documents', doc)).read()
-        cards = outline(text)[0][1]
-        kwargs = dict(title=cards[0][0], doc=doc, cards=cards)
-        return super(OutlineView, self).get_context_data(**kwargs)
-
-
 class DailyTask(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
@@ -138,11 +132,3 @@ class SeamansLog(RedirectView):
     url = '/seamanslog/Random'
 
 
-class TabsView(DocDisplay):
-    template_name = 'mybook_tabs.html'
-
-    def get_context_data(self, **kwargs):
-        doc = self.kwargs.get('title')
-        tabs = tabs_data(doc)
-        kwargs = dict(title=tabs[0][1], doc=doc, tabs=tabs)
-        return super(TabsView, self).get_context_data(**kwargs)

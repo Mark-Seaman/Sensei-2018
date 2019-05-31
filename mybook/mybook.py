@@ -153,10 +153,57 @@ def topic_menu(title, topics, base, home):
     return home, menu_items
 
 
-def page_settings(domain, title, site_title, menu):
-    domdoc = domain_doc(domain, title)
-    text = doc_html_text(domdoc, '/static/images')
-    url = "https://%s/%s" % (domain, domdoc)
+# ----------------------
+# View Adapters
+
+def seamanslog_menu(title):
+
+    def seamanslog_menu_items():
+        return [('List', 'Articles'),
+                ('Random', 'Read'),
+                ('https://markseaman.org', 'Mark Seaman')]
+
+    return topic_menu(title, seamanslog_menu_items(), '/seamanslog/', "Seaman's Log")
+
+
+# def seamanslog_settings(domain, title):
+#     return page_data(domain, title)
+#
+#
+# def seamanslog_data(domain, title):
+#     settings = seamanslog_settings(domain, title)
+#     return page_data(domain, title)
+#
+#
+# def page_data(domain, title):
+#     menu =
+#     settings = page_settings(domain, title, site_title, menu)
+#
+#
+#     page_text(domain, title)
+#     site_title = ('PAGE DATA', 'Subtitle')
+#     settings.update()
+#     return settings
+#
+#
+#     url = "https://%s/%s" % (domain, domdoc)
+#     header = header_settings(site_title)
+#     time = now()
+#     return dict(title=title, text=text, menu=menu, url=url, header=header, theme=theme(domain), time=time)
+#
+
+def page_settings(domain, title, site_title):
+    # domdoc = domain_doc(domain, title)
+    # text = doc_html_text(domdoc, '/static/images')
     header = header_settings(site_title)
+    menu = get_menu(title)
     time = now()
-    return dict(title=title, text=text, menu=menu, url=url, header=header, time=time)
+    return dict(title=title, menu=menu,  header=header, theme=theme(domain), time=time)
+
+
+def page_text(domain, title):
+    domdoc = domain_doc(domain, title)
+    text = doc_html_text(title, '/static/images')
+    url = "https://%s/%s" % (domain, domdoc)
+    doc = title.split('/')[-1]
+    return dict(doc=doc, title=title, text=text, url=url)

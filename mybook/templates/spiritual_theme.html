@@ -34,12 +34,12 @@
 
                 <div class="card">
                     <div class="card-header">
-                        {{ card_title }}
+                        {{ text.doc }}
                     </div>
                     <div class="card-body">
-                        {% if text %}
+                        {% if text.text %}
                             {% autoescape off %}
-                                <p>{{ text }}</p>
+                                <p>{{ text.text }}</p>
                             {% endautoescape %}
                         {% else %}
                             <h2>No document found. {{ doc }}</h2>
@@ -48,7 +48,7 @@
                         {% if url %}
                             <hr>
                             <p>
-                                * <a href="{{ url }}">Read More</a> *
+                                * <a href="{{ text.url }}">Read More</a> *
                                 <a href="Random">Next Selection</a> *
                             </p>
 

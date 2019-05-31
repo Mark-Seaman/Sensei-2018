@@ -1,29 +1,35 @@
 from django.views.generic import TemplateView, RedirectView
+from django.utils.timezone import now
 from os import listdir
 from os.path import join
 from random import choice
 
 from tool.log import log_page
 
-from .mybook import topic_menu, page_settings
+from .mybook import topic_menu, header_settings, page_text
 
 
+def spiritual_menu(title):
 
-def spiritual_page_settings(request, title):
-    domain = request.get_host()
-    menu = topic_menu(title, spiritual_topics(), '/spiritual/', "Spiritual Things")
+    def spiritual_topics():
+        return [('Index',       'Home'),
+                ('reflect',     'Reflect'),
+                ('bible',       'Meditate'),
+                ('teaching',    'Learn'),
+                ('walkabout',   'Journey'),
+                ('prayers',     'Pray')]
+
+    return topic_menu(title, spiritual_topics(), '/spiritual/', "Spiritual Things")
+
+
+def spiritual_page_settings(domain, title):
     site_title = ('Spiritual Things', 'Daily Inspiration')
-    return page_settings(domain, title, site_title, menu)
-
-
-
-def spiritual_topics():
-    return [('Index',       'Home'),
-            ('reflect',     'Reflect'),
-            ('bible',       'Meditate'),
-            ('teaching',    'Learn'),
-            ('walkabout',   'Journey'),
-            ('prayers',     'Pray')]
+    menu = spiritual_menu(title)
+    header = header_settings(site_title)
+    theme = 'spiritual_theme.html'
+    time = now()
+    text = page_text(domain, 'spiritual/' + title)
+    return dict(title=title, menu=menu, header=header, theme=theme, text=text, time=time)
 
 
 class SpiritualDoc(TemplateView):
@@ -32,9 +38,7 @@ class SpiritualDoc(TemplateView):
     def get_context_data(self, **kwargs):
         log_page(self.request)
         title = self.kwargs.get('title', 'Index')
-        settings = spiritual_page_settings(self.request, title)
-        settings['card_title'] = title
-        return settings
+        return spiritual_page_settings(self.request.get_host(), title)
 
 
 class SpiritualSelect(RedirectView):
