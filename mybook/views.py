@@ -64,7 +64,7 @@ class DocDisplay(TemplateView):
 
     def get(self, request, *args, **kwargs):
         title = self.kwargs.get('title')
-        url = doc_page(self.request.get_host(), domain_doc(title))
+        url = doc_page(domain_doc(self.request.get_host(), title))
         if url:
             return HttpResponseRedirect('/' + url)
         else:
