@@ -58,30 +58,30 @@ class DocDisplay(TemplateView):
         header = header_info(self.request.get_host())
         return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
 
-    def get(self, request, *args, **kwargs):
-        title = self.kwargs.get('title')
-        url = doc_page_redirect(title)
-        if url:
-            return HttpResponseRedirect('/' + url)
-        else:
-            return self.render_to_response(self.get_context_data(**kwargs))
+    # def get(self, request, *args, **kwargs):
+    #     title = self.kwargs.get('title')
+    #     url = doc_page_redirect(title)
+    #     if url:
+    #         return HttpResponseRedirect('/' + url)
+    #     else:
+    #         return self.render_to_response(self.get_context_data(**kwargs))
 
-# class DocRedirect(RedirectView):
-#     permanent = False
-#
-#     def get_redirect_url(self, *args, **kwargs):
-#         title = self.kwargs.get('title')
-#         # log('DocRedirect: %s' % title)
-#         if not title:
-#             log_page(self.request, 'Redirect Index')
-#             return '/%s' % domain_doc(self.request.get_host(),'Index')
-#         if title.endswith('/'):
-#             log_page(self.request, 'Redirect /')
-#             return title+'/Index'
-#         if doc_page_redirect(title):
-#             log_page(self.request, 'Redirect doc page')
-#             return doc_page_redirect(title)
-#         return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
+class DocRedirect(RedirectView):
+    permanent = False
+
+    def get_redirect_url(self, *args, **kwargs):
+        title = self.kwargs.get('title')
+        # log('DocRedirect: %s' % title)
+        if not title:
+            log_page(self.request, 'Redirect Index')
+            return '/%s' % domain_doc(self.request.get_host(),'Index')
+        if title.endswith('/'):
+            log_page(self.request, 'Redirect /')
+            return title+'/Index'
+        if doc_page_redirect(title):
+            log_page(self.request, 'Redirect doc page')
+            return doc_page_redirect(title)
+        return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
 
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):
@@ -93,7 +93,7 @@ class PrivateDoc(LoginRequiredMixin, DocDisplay):
         menu = get_menu('info/'+title)
         return dict(title=title, text=text, menu=menu, header=header_info(self.request.get_host()), time=now())
 
-    
+
 # --------------------------------------
 
 class BookNotes(DocDisplay):
