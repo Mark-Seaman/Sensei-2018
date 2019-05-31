@@ -64,8 +64,8 @@ def doc_list(docdir):
     return [(('%s/%s' % (docdir,f)), (title(doc_path('%s/%s') % (docdir,f)))) for f in files]
 
 
-def doc_page_redirect(title):
-    # log('doc_page_redirect', title)
+def doc_page(title):
+    # log('doc_page', title)
     path = doc_path(title)
     if exists(path) and isfile(path):
         log('no redirect')

@@ -7,7 +7,7 @@ from .spiritual import SpiritualDoc, SpiritualSelect
 urlpatterns = [
 
     # Documents
-    url(r'^$',                                  DocRedirect.as_view()),
+    # url(r'^(?P<title>[\w/\-_.]*)$',             DocDisplay.as_view()),
     url(r'^(?P<title>[\w/\-_.]*)/Missing$',     DocMissing.as_view()),
     url(r'^(?P<title>[\w/\-_.]*)/Random$',      DocRandom.as_view()),
 
