@@ -84,22 +84,10 @@ class DocDisplay(TemplateView):
         return self.render_to_response(self.get_context_data(**kwargs))
 
 
-class DocRedirect(RedirectView):
-    permanent = False
-
+class DocRoot(RedirectView):
     def get_redirect_url(self, *args, **kwargs):
-        title = self.kwargs.get('title')
-        # log('DocRedirect: %s' % title)
-        if not title:
-            log_page(self.request, 'Redirect Index')
-            return '/%s' % domain_doc(self.request.get_host(),'Index')
-        if title.endswith('/'):
-            log_page(self.request, 'Redirect /')
-            return title+'/Index'
-        if doc_page(title):
-            log_page(self.request, 'Redirect doc page')
-            return doc_page(title)
-        return super(DocRedirect, self).get_redirect_url(*args, **kwargs)
+        log_page(self.request, 'Redirect Index')
+        return '/%s' % domain_doc(self.request.get_host(),'Index')
 
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):

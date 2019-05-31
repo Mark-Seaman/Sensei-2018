@@ -1,13 +1,13 @@
 from django.conf.urls import url
 from django.contrib.auth.views import login, logout
 
-from .views import BookNotes, DocList, DocMissing, DocRandom, DocRedirect, DocDisplay, PrivateDoc, SeamansLog
+from .views import *
 from .spiritual import SpiritualDoc, SpiritualSelect
 
 urlpatterns = [
 
     # Documents
-    # url(r'^(?P<title>[\w/\-_.]*)$',             DocDisplay.as_view()),
+    url(r'^$',                                  DocRoot.as_view()),
     url(r'^(?P<title>[\w/\-_.]*)/Missing$',     DocMissing.as_view()),
     url(r'^(?P<title>[\w/\-_.]*)/Random$',      DocRandom.as_view()),
 
