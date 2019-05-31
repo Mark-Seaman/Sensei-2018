@@ -69,16 +69,12 @@ class DocDisplay(TemplateView):
     def get(self, request, *args, **kwargs):
         title = self.kwargs.get('title')
         domdoc = domain_doc(self.request.get_host(), title)
-        if title != domdoc:
-            log('REDIRECT: %s --> %s' % (title, domdoc))
-            url = doc_page(domdoc)
-            if url:
-                return HttpResponseRedirect('/' + url)
-            else:
-                return HttpResponseRedirect('/%s/Index' % domdoc)
         url = doc_page(domdoc)
         if url:
-            log('REDIRECT: %s --> %s' % (title, domdoc))
+            if title != domdoc:
+                log('REDIRECT DOMAIN: %s --> %s' % (title, domdoc))
+                url = domain_doc(self.request.get_host(), url)
+            log('REDIRECT: %s --> %s' % (title, url))
             return HttpResponseRedirect('/' + url)
         else:
             return self.render_to_response(self.get_context_data(**kwargs))
