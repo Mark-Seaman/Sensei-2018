@@ -71,9 +71,10 @@ class DocDisplay(TemplateView):
         domdoc = domain_doc(self.request.get_host(), title)
         if title != domdoc:
             log('REDIRECT: %s --> %s' % (title, domdoc))
-        #     return HttpResponseRedirect('/' + domdoc)
+            return HttpResponseRedirect('/' + doc_page(domdoc))
         url = doc_page(domdoc)
         if url:
+            log('REDIRECT: %s --> %s' % (title, domdoc))
             return HttpResponseRedirect('/' + url)
         else:
             return self.render_to_response(self.get_context_data(**kwargs))
