@@ -13,7 +13,10 @@ class UncRedirect(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
         course = self.kwargs.get('course')
-        return '/unc/%s/Index' % course
+        if course:
+            return '/unc/./Index'
+        else:
+            return '/unc/%s/Index' % course
 
 
 class UncDocDisplay(TemplateView):
