@@ -1,5 +1,4 @@
-from django.views.generic import TemplateView, RedirectView
-from django.utils.timezone import now
+from django.views.generic import RedirectView
 from os import listdir
 from os.path import join
 from random import choice

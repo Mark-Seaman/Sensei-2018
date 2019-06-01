@@ -1,8 +1,8 @@
 from django.conf.urls import url
 from django.contrib.auth.views import login, logout
 
+from mybook.seaman import MarkSeaman, PrivateDoc, SeamansLog, DocFileIndex, DocList
 from .guide import SeamansGuide
-from .seamanslog import SeamansLog
 from .views import *
 from .spiritual import SpiritualDoc, SpiritualSelect
 
