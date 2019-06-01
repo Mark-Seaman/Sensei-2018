@@ -5,7 +5,7 @@ from random import choice
 
 from bin.shell import read_file
 from hammer.settings import BASE_DIR
-from tool.document import text_to_html, domain_doc, doc_html_text
+from tool.document import doc_title, text_to_html, domain_doc, doc_html_text
 from tool.log import log
 
 
@@ -44,6 +44,23 @@ def booknotes_excerpt(doc):
 
     doc = booknotes(doc)
     return excerpt(doc), 'http://markseaman.org/MarkSeaman/booknotes/%s' % doc
+
+
+
+def page_settings(domain, title, site_title):
+    header = header_settings(site_title)
+    menu = get_menu(title)
+    time = now()
+    return dict(title=title, menu=menu,  header=header, theme=theme(domain), time=time)
+
+
+def page_text(domain, title):
+    domdoc = domain_doc(domain, title)
+    text = doc_html_text(title, '/static/images')
+    url = "https://%s/%s" % (domain, domdoc)
+    doc = title.split('/')[-1]
+    title = doc_title(title)
+    return dict(doc=doc, title=title, text=text, url=url)
 
 
 # TODO: simplify the menu loading and active item highlight
@@ -146,10 +163,11 @@ def theme(domain):
 
 
 def topic_menu(title, topics, base, home):
-    def is_active(title, topic):
-        return ' active' if title.startswith(topic) else ''
 
-    menu_items = [dict(url=base+i[0], label=i[1], active=is_active(title,i[0])) for i in topics]
+    def is_active(active):
+        return ' active' if active and active[0] else ''
+
+    menu_items = [dict(url=base+i[0], label=i[1], active=is_active(i[2:])) for i in topics]
     return home, menu_items
 
 
@@ -158,52 +176,21 @@ def topic_menu(title, topics, base, home):
 
 def seamanslog_menu(title):
 
-    def seamanslog_menu_items():
-        return [('List', 'Articles'),
-                ('Random', 'Read'),
+    def menu_items(title):
+        return [('List', 'Articles', title == 'Index'),
+                ('Random', 'Read', title != 'List' and title != 'Index'),
                 ('https://markseaman.org', 'Mark Seaman')]
 
-    return topic_menu(title, seamanslog_menu_items(), '/seamanslog/', "Seaman's Log")
+    return topic_menu(title, menu_items(title), '/seamanslog/', "Seaman's Log")
 
 
-# def seamanslog_settings(domain, title):
-#     return page_data(domain, title)
-#
-#
-# def seamanslog_data(domain, title):
-#     settings = seamanslog_settings(domain, title)
-#     return page_data(domain, title)
-#
-#
-# def page_data(domain, title):
-#     menu =
-#     settings = page_settings(domain, title, site_title, menu)
-#
-#
-#     page_text(domain, title)
-#     site_title = ('PAGE DATA', 'Subtitle')
-#     settings.update()
-#     return settings
-#
-#
-#     url = "https://%s/%s" % (domain, domdoc)
-#     header = header_settings(site_title)
-#     time = now()
-#     return dict(title=title, text=text, menu=menu, url=url, header=header, theme=theme(domain), time=time)
-#
-
-def page_settings(domain, title, site_title):
-    # domdoc = domain_doc(domain, title)
-    # text = doc_html_text(domdoc, '/static/images')
-    header = header_settings(site_title)
-    menu = get_menu(title)
+def seamanslog_settings(domain, title):
+    site_title = ("Seaman's Log", 'Big Ideas & Deep Thoughts')
+    logo = ("/static/images/MarkSeaman.100.png", 'Mark Seaman')
+    menu = seamanslog_menu(title)
+    header = header_settings(site_title, logo)
+    theme = 'seaman_theme.html'
     time = now()
-    return dict(title=title, menu=menu,  header=header, theme=theme(domain), time=time)
+    text = page_text(domain, 'seamanslog/' + title)
+    return dict(title=text['title'], menu=menu, header=header, theme=theme, text=text['text'], url=text['url'], time=time)
 
-
-def page_text(domain, title):
-    domdoc = domain_doc(domain, title)
-    text = doc_html_text(title, '/static/images')
-    url = "https://%s/%s" % (domain, domdoc)
-    doc = title.split('/')[-1]
-    return dict(doc=doc, title=title, text=text, url=url)

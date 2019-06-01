@@ -9,27 +9,28 @@ from random import choice
 from tool.document import doc_file_index, doc_html_text, doc_list, doc_page, domain_doc
 from tool.log import log, log_page
 
-from .mybook import booknotes_excerpt, get_menu, header_info, page_settings, theme
+from .mybook import booknotes_excerpt, get_menu, header_info, theme, seamanslog_settings
 
 
 class DocDisplay(TemplateView):
 
-    def get_context_data(self, **kwargs):
+    def get_template_names(self):
+        theme_template = theme(self.request.get_host())
+        # log('theme = %s' % theme_template)
+        return [theme_template]
+
+    def get_settings(self):
         title = self.kwargs.get('title', 'Index')
         log_page(self.request)
-        # settings = page_data(self.request.get_host(), title)
-        # return settings
-
         text = doc_html_text(title, '/static/images')
         menu = get_menu(title)
         url = self.request.get_raw_uri()
         header = header_info(self.request.get_host())
         return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
 
-    def get_template_names(self):
-        theme_template = theme(self.request.get_host())
-        # log('theme = %s' % theme_template)
-        return [theme_template]
+    def get_context_data(self, **kwargs):
+        log_page(self.request)
+        return self.get_settings()
 
     def get(self, request, *args, **kwargs):
         title = self.kwargs.get('title', 'Index')
@@ -127,8 +128,18 @@ class DailyTask(RedirectView):
         return '/info/daily/%s' % choice(listdir(path))
 
 
-class SeamansLog(RedirectView):
-    permanent = False
-    url = '/seamanslog/Random'
+# class SeamansLog(RedirectView):
+#     permanent = False
+#     url = '/seamanslog/Random'
+
+class SeamansLog(DocDisplay):
+
+    def get_settings(self):
+        title = self.kwargs.get('title', 'Index')
+        return seamanslog_settings(self.request.get_host(), title)
+
+    def get_template_names(self):
+        return ['seaman_theme.html']
+
 
 

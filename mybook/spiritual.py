@@ -6,6 +6,7 @@ from random import choice
 
 from tool.log import log_page
 
+from .views import DocDisplay
 from .mybook import topic_menu, header_settings, page_text
 
 
@@ -32,13 +33,14 @@ def spiritual_page_settings(domain, title):
     return dict(title=title, menu=menu, header=header, theme=theme, text=text, time=time)
 
 
-class SpiritualDoc(TemplateView):
-    template_name = 'spiritual_theme.html'
+class SpiritualDoc(DocDisplay):
 
-    def get_context_data(self, **kwargs):
-        log_page(self.request)
+    def get_settings(self):
         title = self.kwargs.get('title', 'Index')
         return spiritual_page_settings(self.request.get_host(), title)
+
+    def get_template_names(self):
+        return ['spiritual_theme.html']
 
 
 class SpiritualSelect(RedirectView):

@@ -92,6 +92,10 @@ def doc_path(page):
     return join(BASE_DIR, 'Documents', page)
 
 
+def doc_title(page):
+    return title(doc_path(page))
+
+
 def domain_doc(domain, page):
     if domain == 'spiritual-things.org':
         d = 'spiritual'

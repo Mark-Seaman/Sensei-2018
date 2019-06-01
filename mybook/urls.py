@@ -25,6 +25,7 @@ urlpatterns = [
 
     # Seaman's Log
     url(r'^seamanslog$',                        SeamansLog.as_view()),
+    url(r'^seamanslog/(?P<title>[\w/\-_.]*)$',  SeamansLog.as_view()),
 
     # Spiritual
     url(r'^spiritual/Index$',                   SpiritualDoc.as_view()),
