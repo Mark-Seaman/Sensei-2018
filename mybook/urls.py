@@ -1,6 +1,8 @@
 from django.conf.urls import url
 from django.contrib.auth.views import login, logout
 
+from .guide import SeamansGuide
+from .seamanslog import SeamansLog
 from .views import *
 from .spiritual import SpiritualDoc, SpiritualSelect
 
@@ -17,8 +19,12 @@ urlpatterns = [
     url(r'^login',                              login, {'template_name': 'mybook_login.html'}, name='login'),
     url(r'^logout$',                            logout, {'next_page': '/login'}),
 
-    # Booknotes
+    # MarkSeaman
     #url(r'^MarkSeaman/booknotes/(?P<title>[\w/\-.]*)$',    BookNotes.as_view()),
+    url(r'MarkSeaman/(?P<title>[\w/\-.]*)$',    MarkSeaman.as_view()),
+
+    # Guide
+    url(r'^guide/(?P<title>[\w/\-_.]*)$',       SeamansGuide.as_view()),
 
     # Private Pages
     url(r'^info/(?P<title>[\w/\-_.]*)$',        PrivateDoc.as_view()),

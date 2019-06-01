@@ -66,7 +66,7 @@ def doc_list(docdir):
 
 def doc_file_index(docdir):
     files = listdir(doc_path(docdir))
-    return [(('%s/%s' % (docdir,f)), (doc_path('%s' % f))) for f in files]
+    return [(('%s/%s' % (docdir,f)), '%s' % f) for f in files]
 
 
 def doc_page(title):

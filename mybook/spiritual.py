@@ -4,40 +4,30 @@ from os import listdir
 from os.path import join
 from random import choice
 
-from tool.log import log_page
-
 from .views import DocDisplay
-from .mybook import topic_menu, header_settings, page_text
-
-
-def spiritual_menu(title):
-
-    def spiritual_topics():
-        return [('Index',       'Home'),
-                ('reflect',     'Reflect'),
-                ('bible',       'Meditate'),
-                ('teaching',    'Learn'),
-                ('walkabout',   'Journey'),
-                ('prayers',     'Pray')]
-
-    return topic_menu(title, spiritual_topics(), '/spiritual/', "Spiritual Things")
-
-
-def spiritual_page_settings(domain, title):
-    site_title = ('Spiritual Things', 'Daily Inspiration')
-    menu = spiritual_menu(title)
-    header = header_settings(site_title)
-    theme = 'spiritual_theme.html'
-    time = now()
-    text = page_text(domain, 'spiritual/' + title)
-    return dict(title=title, menu=menu, header=header, theme=theme, text=text, time=time)
+from .mybook import topic_menu, page_settings, page_text
 
 
 class SpiritualDoc(DocDisplay):
 
-    def get_settings(self):
+    def get_context_data(self, **kwargs):
+
+        def menu(title):
+            def spiritual_topics():
+                return [('Index', 'Home', title.startswith('Index')),
+                        ('reflect', 'Reflect', title.startswith('reflect')),
+                        ('bible', 'Meditate', title.startswith('bible')),
+                        ('teaching', 'Learn', title.startswith('teaching')),
+                        ('walkabout', 'Journey', title.startswith('walkabout')),
+                        ('prayers', 'Pray', title.startswith('prayers'))]
+
+            return topic_menu(spiritual_topics(), '/spiritual/', "Spiritual Things")
+
+        domain = self.request.get_host()
         title = self.kwargs.get('title', 'Index')
-        return spiritual_page_settings(self.request.get_host(), title)
+        site_title = ('Spiritual Things', 'Daily Inspiration')
+        text = page_text(domain, 'spiritual/' + title)
+        return page_settings(title, site_title, None, menu(title), text)
 
     def get_template_names(self):
         return ['spiritual_theme.html']

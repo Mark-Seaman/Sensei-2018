@@ -1,36 +1,31 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
-from django.utils.timezone import now
 from django.views.generic import RedirectView, TemplateView
 from os import listdir
 from os.path import join
 from random import choice
 
-from tool.document import doc_file_index, doc_html_text, doc_list, doc_page, domain_doc
+from .mybook import shrinking_world_menu, info_menu, mark_seaman_menu
+from tool.document import doc_file_index, doc_list, doc_page, domain_doc
 from tool.log import log, log_page
 
-from .mybook import booknotes_excerpt, get_menu, header_info, theme, seamanslog_settings
+from .mybook import booknotes_excerpt, document_text, page_settings
 
 
 class DocDisplay(TemplateView):
 
     def get_template_names(self):
-        theme_template = theme(self.request.get_host())
-        # log('theme = %s' % theme_template)
-        return [theme_template]
-
-    def get_settings(self):
-        title = self.kwargs.get('title', 'Index')
-        log_page(self.request)
-        text = doc_html_text(title, '/static/images')
-        menu = get_menu(title)
-        url = self.request.get_raw_uri()
-        header = header_info(self.request.get_host())
-        return dict(title=title, text=text, menu=menu, url=url, header=header, time=now())
+        return ['seaman_theme.html']
 
     def get_context_data(self, **kwargs):
         log_page(self.request)
-        return self.get_settings()
+        domain = self.request.get_host()
+        title = self.request.path[1:]
+        site_title = "Shrinking World", 'Software Development Training'
+        logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
+        text = document_text(domain_doc(domain,title))
+        return page_settings(title, site_title, logo, shrinking_world_menu(title), text)
+
 
     def get(self, request, *args, **kwargs):
         title = self.kwargs.get('title', 'Index')
@@ -42,7 +37,7 @@ class DocDisplay(TemplateView):
         #     return HttpResponseRedirect('/Index')
 
         # Index or Directory or .md
-        url = doc_page(title)
+        url = doc_page(self.request.path[1:])
         if url:
             log('REDIRECT: %s --> %s' % (title, url))
             return HttpResponseRedirect('/' + url)
@@ -54,33 +49,39 @@ class DocFileIndex(TemplateView):
     template_name = 'mybook_list.html'
 
     def get_context_data(self, **kwargs):
-        title = self.kwargs.get('title')
-        log_page(self.request, title)
-        doclist = doc_file_index(title)
-        menu = get_menu (title)
-        return dict(title=title, list=doclist, menu=menu, url=self.request.get_raw_uri(), header=header_info(self.request.get_host()))
+        log_page(self.request)
+        title = self.request.path[1:-6]
+        site_title = "Shrinking World", 'Software Development Training'
+        logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
+        menu = shrinking_world_menu(title)
+        settings = page_settings(title, site_title, logo, menu, 'no text')
+        settings['list'] = doc_file_index(title)
+        return settings
 
 
 class DocList(TemplateView):
     template_name = 'mybook_list.html'
 
     def get_context_data(self, **kwargs):
-        title = self.kwargs.get('title')
-        log_page(self.request, title)
-        doclist = doc_list(title)
-        menu = get_menu (title)
-        return dict(title=title, list=doclist, menu=menu, url=self.request.get_raw_uri(), header=header_info(self.request.get_host()))
-
+        log_page(self.request)
+        title = self.request.path[1:-5]
+        site_title = "Shrinking World", 'Software Development Training'
+        logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
+        menu = shrinking_world_menu(title)
+        settings = page_settings(title, site_title, logo, menu, 'no text')
+        settings['list'] = doc_list(title)
+        return settings
 
 
 class DocMissing(TemplateView):
     template_name = 'mybook_missing.html'
 
     def get_context_data(self, **kwargs):
-        title = self.kwargs.get('title', 'Index')
-        menu = get_menu(title)
-        header = header_info(self.request.get_host())
-        return dict(title=title, menu=menu, header=header, time=now())
+        title = self.request.path[1:]
+        site_title = "Shrinking World", 'Software Development Training'
+        logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
+        settings = page_settings(title, site_title, logo, shrinking_world_menu(title), 'missing doc')
+        return settings
 
 
 class DocRandom(RedirectView):
@@ -102,11 +103,14 @@ class DocRoot(RedirectView):
 class PrivateDoc(LoginRequiredMixin, DocDisplay):
 
     def get_context_data(self, **kwargs):
+        log_page(self.request)
+        domain = self.request.get_host()
         title = self.kwargs.get('title', 'Index')
-        domdoc = domain_doc(self.request.get_host(), title)
-        text = doc_html_text(domdoc, '/static/images')
-        menu = get_menu('info/'+title)
-        return dict(title=title, text=text, menu=menu, header=header_info(self.request.get_host()), time=now())
+        site_title = "Shrinking World", 'Software Development Training'
+        logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
+        text = document_text(domain_doc(domain, 'info/' + title))
+        return page_settings(title, site_title, logo, info_menu(title), text)
+
 
 # --------------------------------------
 
@@ -121,25 +125,22 @@ class BookNotes(DocDisplay):
         return super(BookNotes, self).get_context_data(**kwargs)
 
 
-class DailyTask(RedirectView):
+# class DailyTask(RedirectView):
+#
+#     def get_redirect_url(self, *args, **kwargs):
+#         path = 'Documents/info/daily'
+#         return '/info/daily/%s' % choice(listdir(path))
+#
 
-    def get_redirect_url(self, *args, **kwargs):
-        path = 'Documents/info/daily'
-        return '/info/daily/%s' % choice(listdir(path))
+class MarkSeaman(DocDisplay):
 
-
-# class SeamansLog(RedirectView):
-#     permanent = False
-#     url = '/seamanslog/Random'
-
-class SeamansLog(DocDisplay):
-
-    def get_settings(self):
-        title = self.kwargs.get('title', 'Index')
-        return seamanslog_settings(self.request.get_host(), title)
-
-    def get_template_names(self):
-        return ['seaman_theme.html']
-
+    def get_context_data(self, **kwargs):
+        log_page(self.request)
+        domain = self.request.get_host()
+        title = self.request.path[1:]  # self.kwargs.get('title', 'Index')
+        site_title = 'Mark Seaman', 'Inventor - Teacher - Writer'
+        logo = "/static/images/MarkSeaman.100.png", 'Mark Seaman'
+        text = document_text(domain_doc(domain,title))
+        return page_settings(title, site_title, logo, mark_seaman_menu(title), text)
 
 
