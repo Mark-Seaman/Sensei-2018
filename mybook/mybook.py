@@ -77,7 +77,13 @@ def topic_menu(topics, base, home):
     def is_active(active):
         return ' active' if active and active[0] else ''
 
-    menu_items = [dict(url=base+i[0], label=i[1], active=is_active(i[2:])) for i in topics]
+    def menu_url (base, page):
+        if page.startswith('http'):
+            return page
+        else:
+            return base + page
+
+    menu_items = [dict(url=menu_url(base, i[0]), label=i[1], active=is_active(i[2:])) for i in topics]
     return home, menu_items
 
 
