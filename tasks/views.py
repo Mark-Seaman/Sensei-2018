@@ -1,30 +1,27 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import DetailView, ListView, RedirectView, TemplateView
-from django.views.generic.base import ContextMixin
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
-from tasks.models import Task
+from mybook.views import DocDisplay
+from mybook.mybook import info_menu, page_settings, domain_doc, document_text
+from tool.log import log_page
 
-from .summary import time_data, time_summary, bad_days_data, bad_days, activity_summary, task_activity_details, \
-    task_list, write_task_files, task_import_files
+from .summary import *
 from .task import save_monthly_reports
 
 
 # Base
-class TaskBase(LoginRequiredMixin, ContextMixin):
+class TaskBase(LoginRequiredMixin, DocDisplay):
+
     def get_context_data(self, **kwargs):
-        kwargs = super(TaskBase, self).get_context_data(**kwargs)
-        kwargs.update({
-            'menu': get_menu('task'),
-            'aspire_menu': True,
-            'header': dict(title='My Brain',
-                           subtitle='Private notes and secrets',
-                           logo="/static/images/SWS_Logo_200.jpg",
-                           logo_text='Shrinking World Solutions'),
-            'text': '<h1>Time Accounting</h1>'
-        })
-        return kwargs
+        log_page(self.request)
+        domain = self.request.get_host()
+        title = self.kwargs.get('title', 'Index')
+        site_title = "My Brain", 'Top secret documents'
+        logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
+        text = document_text(domain_doc(domain, self.request.path[1:]))
+        return page_settings(title, site_title, logo, info_menu(title), text)
 
 
 # --------------------------
