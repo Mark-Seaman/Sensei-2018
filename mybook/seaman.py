@@ -24,7 +24,7 @@ class MarkSeaman(DocDisplay):
     def get_context_data(self, **kwargs):
         log_page(self.request)
         domain = self.request.get_host()
-        title = self.request.path[1:]  # self.kwargs.get('title', 'Index')
+        title = self.request.path[1:]
         site_title = 'Mark Seaman', 'Inventor - Teacher - Writer'
         logo = "/static/images/MarkSeaman.100.png", 'Mark Seaman'
         text = document_text(domain_doc(domain,title))
@@ -39,7 +39,7 @@ class PrivateDoc(LoginRequiredMixin, DocDisplay):
         title = self.kwargs.get('title', 'Index')
         site_title = "Shrinking World", 'Software Development Training'
         logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
-        text = document_text(domain_doc(domain, 'info/' + title))
+        text = document_text(domain_doc(domain, self.request.path[1:]))
         return page_settings(title, site_title, logo, info_menu(title), text)
 
 
@@ -62,7 +62,7 @@ class SeamansLog(DocDisplay):
         domain = self.request.get_host()
         title = self.kwargs.get('title', 'Index')
         site_title = "Seaman's Log", 'Big Ideas & Deep Thoughts'
-        text = page_text(domain, 'seamanslog/' + title)
+        text = page_text(domain, self.request.path[1:])
         menu = seamans_log_menu(title)
         return page_settings(title, site_title, logo(), menu, text['text'], text['url'])
 
@@ -93,3 +93,4 @@ class DocList(TemplateView):
         settings = page_settings(title, site_title, logo, menu, 'no text')
         settings['list'] = doc_list(title)
         return settings
+

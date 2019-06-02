@@ -13,7 +13,7 @@ def text_match_test():
 
 
 def text_no_match_test():
-    return check_shell_lines('x text no-match def mybook/views.py', 100, 150)
+    return check_shell_lines('x text no-match def mybook/views.py', 60, 70)
 
 
 sample_text = '''

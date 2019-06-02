@@ -8,7 +8,7 @@ def app_classes_test():
 
 
 def app_functions_test():
-    return check_lines('App Functions', app_functions(), 850, 890)
+    return check_lines('App Functions', app_functions(), 850, 900)
 
 
 def app_list_test():

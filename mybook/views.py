@@ -12,9 +12,7 @@ from .mybook import document_text, page_settings
 
 
 class DocDisplay(TemplateView):
-
-    def get_template_names(self):
-        return ['seaman_theme.html']
+    template_name = 'seaman_theme.html'
 
     def get_context_data(self, **kwargs):
         log_page(self.request)
@@ -42,7 +40,6 @@ class DocDisplay(TemplateView):
             return HttpResponseRedirect('/' + url)
 
         return self.render_to_response(self.get_context_data(**kwargs))
-
 
 
 class DocMissing(TemplateView):
