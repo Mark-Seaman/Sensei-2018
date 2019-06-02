@@ -32,15 +32,15 @@ class MarkSeaman(DocDisplay):
 
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):
+    template_name = 'task_theme.html'
+    site_title = "Shrinking World", 'Software Development Training'
+    logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
 
-    def get_context_data(self, **kwargs):
-        log_page(self.request)
-        domain = self.request.get_host()
-        title = self.kwargs.get('title', 'Index')
-        site_title = "Shrinking World", 'Software Development Training'
-        logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
-        text = document_text(domain_doc(domain, self.request.path[1:]))
-        return page_settings(title, site_title, logo, info_menu(title), text)
+    def get_content_data(self):
+        self.domain = self.request.get_host()
+        self.title = self.kwargs.get('title', 'Index')
+        self.menu = info_menu(self.title)
+        self.text = document_text(domain_doc(self.domain, self.request.path[1:]))
 
 
 def seamans_log_menu(title):

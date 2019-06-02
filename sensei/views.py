@@ -5,19 +5,8 @@ from django.views.generic import  ListView, RedirectView, TemplateView
 from tool.document import doc_html_text, doc_page
 from tool.log import log_page
 
-from .models import Lesson, Student
+from .models import Student
 from .sensei import list_lessons, schedule, slides_markdown, site_settings
-
-
-# class UncRedirect(RedirectView):
-#     permanent = False
-#
-#     def get_redirect_url(self, *args, **kwargs):
-#         title = self.kwargs.get('title', 'xxx')
-#         if title == 'xxx':
-#             return '/unc/Index'
-#         # else:
-#         #     return '/unc/%s/Index' % course
 
 
 class UncDocViewer(TemplateView):

@@ -4,8 +4,7 @@ from django.views.generic import DetailView, ListView, RedirectView, TemplateVie
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 from mybook.views import DocDisplay
-from mybook.mybook import info_menu, page_settings, domain_doc, document_text
-from tool.log import log_page
+from mybook.mybook import info_menu
 
 from .summary import *
 from .task import save_monthly_reports
@@ -13,15 +12,13 @@ from .task import save_monthly_reports
 
 # Base
 class TaskBase(LoginRequiredMixin, DocDisplay):
+    site_title = "My Brain", 'Top secret documents'
+    logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
+    text = '<h1>Time Accounting</h1><p>Measuring My Life</p>'
 
-    def get_context_data(self, **kwargs):
-        log_page(self.request)
-        domain = self.request.get_host()
-        title = self.kwargs.get('title', 'Index')
-        site_title = "My Brain", 'Top secret documents'
-        logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
-        text = document_text(domain_doc(domain, self.request.path[1:]))
-        return page_settings(title, site_title, logo, info_menu(title), text)
+    def get_content_data(self):
+        self.title = self.kwargs.get('title', 'Index')
+        self.menu = info_menu(self.title)
 
 
 # --------------------------

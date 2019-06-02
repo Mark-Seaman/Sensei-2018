@@ -61,8 +61,9 @@ def combine_work_tasks(table, total):
             work += row[1]
         else:
             results.append(row)
-    results = [('Work', work, work * 100 / total)] + results
-    return results
+    if total != 0:
+        results = [('Work', work, work * 100 / total)] + results
+        return results
 
 
 def tasks_activity(activity):
