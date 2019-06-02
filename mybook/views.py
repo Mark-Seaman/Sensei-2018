@@ -17,13 +17,13 @@ class DocDisplay(TemplateView):
     logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
 
     def get_content_data(self):
-        self.domain = self.request.get_host()
-        self.title = self.request.path[1:]
         self.text = document_text(domain_doc(self.domain, self.title))
         self.menu = shrinking_world_menu(self.title)
 
     def get_context_data(self, **kwargs):
         log_page(self.request)
+        self.domain = self.request.get_host()
+        self.title = self.request.path[1:]
         self.get_content_data()
         return page_settings(self.title, self.site_title, self.logo, self.menu, self.text)
 

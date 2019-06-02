@@ -10,25 +10,33 @@ from .views import DocDisplay
 
 class BookNotes(DocDisplay):
     template_name = 'mybook_theme.html'
+    site_title = 'Book Notes', 'Growth through reading'
+    logo = "/static/images/MarkSeaman.100.png", 'Mark Seaman'
 
-    def get_context_data(self, **kwargs):
-        title = join('booknotes', self.kwargs.get('title', 'Index'))
-        photo = 'MarkSeaman.100.png'
+    def get_content_data(self):
         excerpt, url = booknotes_excerpt(self.kwargs.get('title'))
-        kwargs = dict(title=title, photo=photo, text=excerpt, readmore=(url, url), excerpt=excerpt)
-        return super(BookNotes, self).get_context_data(**kwargs)
+        self.text = dict(title=title, text=excerpt, readmore=(url, url), excerpt=excerpt)
+        self.menu = mark_seaman_menu(self.title)
+
+
+class Leverage(DocDisplay):
+    site_title = 'Software Leverage', 'Best Practices of Software Development'
+    logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
+
+    def get_content_data(self):
+        self.text = document_text(domain_doc(self.domain, self.title))
+        self.menu = leverage_menu(self.kwargs.get('title', 'Index'))
 
 
 class MarkSeaman(DocDisplay):
+    site_title = 'Mark Seaman', 'Inventor - Teacher - Writer'
+    logo = "/static/images/MarkSeaman.100.png", 'Mark Seaman'
 
-    def get_context_data(self, **kwargs):
-        log_page(self.request)
+    def get_content_data(self):
         domain = self.request.get_host()
-        title = self.request.path[1:]
-        site_title = 'Mark Seaman', 'Inventor - Teacher - Writer'
-        logo = "/static/images/MarkSeaman.100.png", 'Mark Seaman'
-        text = document_text(domain_doc(domain,title))
-        return page_settings(title, site_title, logo, mark_seaman_menu(title), text)
+        self.title = self.request.path[1:]
+        self.text = document_text(domain_doc(domain,self.title))
+        self.menu = mark_seaman_menu(self.title)
 
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):

@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from django.contrib.auth.views import login, logout
 
-from .seaman import DocFileIndex, DocList, MarkSeaman, PrivateDoc, SeamansLog
+from .seaman import DocFileIndex, DocList, Leverage, MarkSeaman, PrivateDoc, SeamansLog
 from .guide import SeamansGuide
 from .views import *
 from .spiritual import SpiritualDoc, SpiritualSelect
@@ -32,6 +32,9 @@ urlpatterns = [
     # Seaman's Log
     url(r'^seamanslog$',                        SeamansLog.as_view()),
     url(r'^seamanslog/(?P<title>[\w/\-_.]*)$',  SeamansLog.as_view()),
+
+    # Shrinking World
+    url(r'shrinkingworld/Leverage/(?P<title>[\w/\-.]*)$', Leverage.as_view()),
 
     # Spiritual
     url(r'^spiritual/Index$',                   SpiritualDoc.as_view()),

@@ -90,7 +90,7 @@ def topic_menu(topics, base, home):
 def shrinking_world_menu(title):
     def menu_items(title):
         return [('https://shrinking-world.com', 'Shrinking World', title == 'Index'),
-                ('https://shrinking-world.com/Leverage/', 'Leverage'),
+                ('https://shrinking-world.com/shrinkingworld/Leverage/', 'Leverage'),
                 ('https://seamansguide.com', 'Guides'),
                 ('https://seamanslog.com', 'Blog'),
                 ('https://markseaman.org', 'Mark Seaman')]
@@ -101,13 +101,13 @@ def shrinking_world_menu(title):
 def leverage_menu(title):
 
     def menu_items(title):
-        return [('https://shrinking-world.com/shrinkingworld/Leverage', 'Book', title == 'Index'),
-                ('https://shrinking-world.com/Leverage/Part1', 'Leverage'),
-                ('https://shrinking-world.com/Leverage/Part2', 'Development'),
-                ('https://shrinking-world.com/Leverage/Part3', 'Operations'),
-                ('https://shrinking-world.com/Leverage/Part4', 'Teams')]
+        return [('Index', 'Book', title == 'Index'),
+                ('Part1', 'Leverage', title == 'Part1'),
+                ('Part2', 'Development', title == 'Part2'),
+                ('Part3', 'Operations', title == 'Part3'),
+                ('Part4', 'Teams', title == 'Part4')]
 
-    return topic_menu(menu_items(title), '/shrinkingworld/leverage', "The Leverage Principle")
+    return topic_menu(menu_items(title), '/shrinkingworld/Leverage/', "The Leverage Principle")
 
 
 def info_menu(title):

@@ -4,7 +4,7 @@ from os.path import join
 from random import choice
 
 from .views import DocDisplay
-from .mybook import topic_menu, page_settings, page_text
+from .mybook import topic_menu, page_text
 
 
 def spiritual_menu(title):
@@ -19,15 +19,22 @@ def spiritual_menu(title):
     return topic_menu(spiritual_topics(), '/spiritual/', "Spiritual Things")
 
 
+def select_random_document(title):
+    if not title:
+        title = choice(['reflect', 'teaching', 'prayers', 'bible', 'walkabout'])
+    files = listdir(join('Documents', 'spiritual', title))
+    file = choice(files)
+    return '/spiritual/%s/%s' % (title, file)
+
+
 class SpiritualDoc(DocDisplay):
     template_name = 'spiritual_theme.html'
+    site_title = 'Spiritual Things', 'Daily Inspiration'
+    logo = None
 
-    def get_context_data(self, **kwargs):
-        domain = self.request.get_host()
-        title = self.kwargs.get('title', 'Index')
-        site_title = ('Spiritual Things', 'Daily Inspiration')
-        text = page_text(domain, 'spiritual/' + title)
-        return page_settings(title, site_title, None, spiritual_menu(title), text)
+    def get_content_data(self):
+        self.text = page_text(self.domain, self.title)
+        self.menu = spiritual_menu(self.kwargs.get('title','Index'))
 
 
 class SpiritualSelect(RedirectView):
@@ -35,10 +42,6 @@ class SpiritualSelect(RedirectView):
 
     def get_redirect_url(self, *args, **kwargs):
         title = kwargs.get('title')
-        if not title:
-            title = choice(['reflect', 'teaching', 'prayers', 'bible', 'walkabout'])
-        files = listdir(join('Documents', 'spiritual', title))
-        file = choice(files)
-        return '/spiritual/%s/%s' % (title, file)
+        return select_random_document(title)
 
 
