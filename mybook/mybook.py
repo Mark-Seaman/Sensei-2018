@@ -72,7 +72,7 @@ def page_text(domain, title):
     return dict(doc=doc, title=title, text=text, url=url)
 
 
-def topic_menu(topics, base, home):
+def topic_menu(topics, base, home, href='/'):
 
     def is_active(active):
         return ' active' if active and active[0] else ''
@@ -84,7 +84,7 @@ def topic_menu(topics, base, home):
             return base + page
 
     menu_items = [dict(url=menu_url(base, i[0]), label=i[1], active=is_active(i[2:])) for i in topics]
-    return home, menu_items
+    return (home,href), menu_items
 
 
 def shrinking_world_menu(title):
@@ -107,7 +107,7 @@ def leverage_menu(title):
                 ('Part3', 'Operations', title == 'Part3'),
                 ('Part4', 'Teams', title == 'Part4')]
 
-    return topic_menu(menu_items(title), '/shrinkingworld/Leverage/', "The Leverage Principle")
+    return topic_menu(menu_items(title), '/shrinkingworld/Leverage/', "Leverage Principle", 'Index')
 
 
 def info_menu(title):
