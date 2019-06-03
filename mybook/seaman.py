@@ -15,12 +15,12 @@ class BookNotes(DocDisplay):
 
     def get_content_data(self):
         excerpt, url = booknotes_excerpt(self.kwargs.get('title'))
-        self.text = dict(title=title, text=excerpt, readmore=(url, url), excerpt=excerpt)
+        self.text = dict(title=self.title, text=excerpt, readmore=(url, url), excerpt=excerpt)
         self.menu = mark_seaman_menu(self.title)
 
 
 class Leverage(DocDisplay):
-    site_title = 'Software Leverage', 'Best Practices of Software Development'
+    site_title = 'Software Engineering', 'Best Practices of Software Development'
     logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
 
     def get_content_data(self):

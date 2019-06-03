@@ -101,8 +101,7 @@ def shrinking_world_menu(title):
 def leverage_menu(title):
 
     def menu_items(title):
-        return [('Index', 'Book', title == 'Index'),
-                ('Part1', 'Leverage', title == 'Part1'),
+        return [('Part1', 'Leverage', title == 'Part1'),
                 ('Part2', 'Development', title == 'Part2'),
                 ('Part3', 'Operations', title == 'Part3'),
                 ('Part4', 'Teams', title == 'Part4')]
