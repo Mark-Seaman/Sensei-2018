@@ -10,12 +10,21 @@
 button {
     margin: 2em;
 }
+
 footer {
     color: darkgrey;
     padding: 2em;
     text-align: center;
     padding: 10px;
     border: solid 1px grey;
+}
+
+footer img {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    box-shadow: none;
+    border: none;
 }
 
 header {
@@ -59,7 +68,7 @@ h2 {
     color: dodgerblue;
     margin: 1em;
     text-align: center;
-    padding: 1em;
+    padding: .2em 1em;
 }
 
 h3 {
@@ -69,6 +78,15 @@ h3 {
 h4 {
     /*color: #444444;*/
     color: green;
+}
+
+img {
+    border: 1px solid black;
+    box-shadow: 2px 2px 4px grey;
+    border-radius: 20px;
+    padding: 3em;
+    margin: 3em;
+    max-width: 80%;
 }
 
 main {
@@ -82,10 +100,6 @@ pre {
     background-color: #f0f0f0;
     margin-left: 3em;
     padding: 10px 20px;
-}
-
-img {
-    max-width: 100%;
 }
 
 /* --------------------------
@@ -137,6 +151,9 @@ img {
     border-radius: 20px;
     box-shadow: -2px -2px 5px grey;
     max-width: 50%;
+    border: 1px solid grey;
+    padding: 0px;
+    margin: 0;
 }
 
 .navbar-dark .navbar-brand {
