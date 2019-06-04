@@ -1,6 +1,8 @@
 from os import system
 from sys import argv
 
+host = 'seamanfamily.org'
+
 
 # ----------------------------------
 # Command Interpreter
@@ -66,9 +68,9 @@ def console(args, user=None):
     commmand = ' '.join(args)
     print('Remote Command: %s' % commmand)
     if user:
-        system ('ssh %s@157.230.163.78 %s' % (user,commmand))
+        system ('ssh %s@%s %s' % (user,host,commmand))
     else:
-        system ('ssh sensei@157.230.163.78 %s' % commmand)
+        system ('ssh sensei@%s %s' % (host,commmand))
 
 
 def deploy(args):
@@ -87,7 +89,7 @@ def runserver():
 
 
 def web():
-    url = 'http://157.230.163.78'
+    url = 'http://'+host
     system('open -a "Google Chrome" %s' % url)
 
 
