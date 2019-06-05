@@ -126,7 +126,7 @@ alias x=''; unalias x
 # Functions
 
 function bdeploy {
-    commit $* &&
+    vc commit $* &&
     brain deploy $*
 }
 
