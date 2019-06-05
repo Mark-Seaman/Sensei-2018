@@ -12,6 +12,7 @@ alias booknotes='x booknotes'
 alias brain='python $p/bin/brain.py'
 
 alias calendar='x web https://calendar.google.com/calendar/render?pli=1#main_7'
+alias cb="echo cd Brain;cd $b;figlet Brain;ll"
 alias chrome='open /Applications/Google\ Chrome.app/'
 alias cl='x cmd list'
 alias class='brackets ~/Sensei/Documents/unc/bacs200 && x web https://shrinking-world.com/unc/bacs200'
@@ -123,6 +124,11 @@ alias x=''; unalias x
 
 # ------------------------------
 # Functions
+
+function bdeploy {
+    commit $* &&
+    brain deploy $*
+}
 
 function bup {
     echo 'Commit and push code to Bluehost'
