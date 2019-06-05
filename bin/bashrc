@@ -21,6 +21,8 @@ export mb="$HOME/Archive/MyBook-2018"
 export md="$HOME/Archive/Documents-2018"
 export mbw="$HOME/Archive/rcp/mbw"
 export s="$HOME/Sensei"
+export b="$HOME/Brain"
+alias cb="echo cd Brain;cd $b;figlet Brain;ll"
 
 cat $p/bin/welcome
 

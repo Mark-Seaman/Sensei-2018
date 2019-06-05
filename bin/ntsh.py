@@ -114,7 +114,7 @@ def hide():
         f2 = join(d2, new_name(f))
         if f != new_name(f):
             convert (f1,f2)
-        remove(f1)
+        # remove(f1)
     for d in listdir(d1):
         d = join(d1, d)
         if isdir(d) and not listdir(d):
