@@ -154,17 +154,24 @@ def time_filter(tasks, days):
 
 
 def task_text_list(tasks):
+
     def format(t):
-        return "%s %s\n%s" % (t.name, t.hours, t.notes.strip('\n').replace('      ', '  '))
+        return "%s %s\n\n%s\n" % (t.name, t.hours, t.notes.strip('\n').replace('      ', '  '))
 
     return '\n'.join([format(t) for t in tasks])
 
 
 def task_list(days=8):
+
+    def daily_report(t):
+        date = t.strftime("%Y-%m-%d")
+        summary = task_text_list(Task.objects.filter(date=t))
+        return date, summary
+
     tasks = time_filter(Task.objects.all(), days)
     dates = tasks.order_by('date').values('date').distinct()
     dates = [t['date'] for t in dates]
-    return [(t.strftime("%Y-%m-%d"), task_text_list(Task.objects.filter(date=t))) for t in dates]
+    return [daily_report(t) for t in dates]
 
 
 def time_summary(days):
@@ -174,7 +181,6 @@ def time_summary(days):
     labels = ['Task Name', 'Invested Time', 'Percentage']
     table = [(t['name'], t['task_hours'], percent(t['task_hours'], total)) for t in totals]
     table = combine_work_tasks(table, total)
-
     return {
         'total': total,
         'labels': labels,
