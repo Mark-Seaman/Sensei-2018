@@ -101,7 +101,7 @@ def vc_dirs():
     doc    = join(environ['p'], 'Documents')
     rest   = join(environ['HOME'], 'Rest')
     unc    = join(environ['HOME'], 'UNC')
-    dirs   = [home, doc, unc, angular]
+    dirs   = [home, doc, unc]
     dirs   = [d for d in dirs if exists(d)]
     return dirs
 
