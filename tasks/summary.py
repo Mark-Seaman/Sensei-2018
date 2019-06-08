@@ -209,7 +209,8 @@ def task_export():
         path = join(path, day)
         open(path, 'w').write(tasks + '\n')
 
-    for t in task_list('all'):
+    tlist = task_list('all')
+    for t in tlist:
         export_file(t[0], t[1])
     return tlist
 
