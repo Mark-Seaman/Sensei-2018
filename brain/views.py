@@ -1,9 +1,9 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.views.generic import RedirectView, TemplateView
-from os.path import exists, join, isdir
+from os.path import join
 
-from .brain import doc_list, doc_redirect, list_files, page_settings, render_doc
+from .brain import doc_redirect, list_files, page_settings, render_doc
 
 
 # Display the document that matches the URL
@@ -18,10 +18,8 @@ class DocView(LoginRequiredMixin, TemplateView):
         return self.render_to_response(self.get_context_data(**kwargs))
 
     def get_context_data(self, **kwargs):
-        doc = self.kwargs.get('title')
-        path = join('Documents', doc)
-        text = render_doc(doc)
-        return page_settings(title=path, text=text)
+        title = self.kwargs.get('title')
+        return page_settings(title=title, text=render_doc(title))
 
 
 # Display the list of document files in a directory
@@ -30,24 +28,8 @@ class FilesView(TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title')
-        path = join('Documents', title)
-        if exists(path) and isdir(path):
-            files = list_files(title)
-            return page_settings(title=title, files=files)
-
-
-# # Display the documents in a directory by title
-# class IndexView(TemplateView):
-#     template_name = 'folder.html'
-#
-#     def get_context_data(self, **kwargs):
-#         title = self.kwargs.get('title')
-#         # doc = self.request.path[1:]
-#         path = join('Documents', title)
-#         if exists(path) and isdir(path):
-#             docs = doc_list(title)
-#             text = render_doc(title+'/Index')
-#             return page_settings(title=title, docs=docs, text=text)
+        files = list_files(title)
+        return page_settings(title=title, files=files)
 
 
 # Display the document that matches the URL

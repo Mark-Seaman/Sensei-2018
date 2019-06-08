@@ -2,12 +2,12 @@
 
 {% block content %}
 
+    <a href="..">Folder</a>
+
     <h1>{{ title }}</h1>
 
-    <a href="..">Up</a>
-
     {% if files %}
-        <p>Documents in folder</p>
+        <p><b>Documents</b></p>
         <ul>
             {% for f in files %}
                 <li>
@@ -16,7 +16,5 @@
             {% endfor %}
         </ul>
     {% endif %}
-
-
-
+    
 {% endblock %}

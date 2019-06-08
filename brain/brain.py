@@ -46,16 +46,18 @@ def document_title(doc):
 
 
 # List the file as hyperlinks to documents
-def list_files(path):
+def list_files(title):
 
-    def file_entry(path,f):
+    def file_entry(path, f):
         if isdir(doc_path(join(path, f))):
             return "%s/" % f
         else:
             if f != '.DS_Store':
                 return f
 
-    return [file_entry(path, f) for f in sorted(listdir(doc_path(path)))]
+    path = doc_path(title)
+    if exists(path) and isdir(path):
+        return [file_entry(path, f) for f in sorted(listdir(path))]
 
 
 # Convert markdown text to HTML
