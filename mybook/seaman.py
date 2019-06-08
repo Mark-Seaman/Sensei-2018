@@ -41,7 +41,7 @@ class MarkSeaman(DocDisplay):
 
 class PrivateDoc(LoginRequiredMixin, DocDisplay):
     template_name = 'task_theme.html'
-    site_title = "Shrinking World", 'Software Development Training'
+    site_title = "My Brain", 'Top Secret Notes'
     logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
 
     def get_content_data(self):

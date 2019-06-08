@@ -1,6 +1,7 @@
 from django.db.models import Sum
 from datetime import datetime, timedelta
-from os import listdir
+from os import listdir, mkdir
+from os.path import exists, join
 
 from tasks.models import Task
 
@@ -193,9 +194,21 @@ def work_types():
 
 
 def write_task_files(tlist):
+
+    def write_task_file(date, tasks):
+        year, month, day = date.split('-')
+        path = join('Documents', 'info', 'history', year)
+        if not exists(path):
+            mkdir(path)
+        path = join('Documents', 'info', 'history', year, month)
+        if not exists(path):
+            mkdir(path)
+        open('Documents/info/days/%s/%s/%s' % (year, month, day, tasks), 'w').write(tasks + '\n')
+
     days = []
     for t in tlist:
-        open('Documents/info/days/%s' % t[0], 'w').write(t[1] + '\n')
+        write_task_file(t[0], t[1])
+        # open('Documents/info/days/%s' % t[0], 'w').write(t[1] + '\n')
         days.append(t)
     return days
 
