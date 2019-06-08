@@ -169,7 +169,10 @@ def task_list(days=8):
         summary = task_text_list(Task.objects.filter(date=t))
         return date, summary
 
-    tasks = time_filter(Task.objects.all(), days)
+    tasks = Task.objects.all()
+    if days != 'all':
+        tasks = time_filter(Task.objects.all(), days)
+
     dates = tasks.order_by('date').values('date').distinct()
     dates = [t['date'] for t in dates]
     return [daily_report(t) for t in dates]
@@ -193,7 +196,7 @@ def work_types():
     return 'Hire,Aspire,Business,Family,UNC,Tools,WAM,Sign,Write,Hammer'.split(',')
 
 
-def task_export(tlist):
+def task_export():
 
     def export_file(date, tasks):
         year, month, day = date.split('-')
@@ -206,7 +209,7 @@ def task_export(tlist):
         path = join(path, day)
         open(path, 'w').write(tasks + '\n')
 
-    for t in tlist:
+    for t in task_list('all'):
         export_file(t[0], t[1])
     return tlist
 
