@@ -203,7 +203,7 @@ def write_task_files(tlist):
         path = join('Documents', 'info', 'history', year, month)
         if not exists(path):
             mkdir(path)
-        open('Documents/info/days/%s/%s/%s' % (year, month, day, tasks), 'w').write(tasks + '\n')
+        open('Documents/info/days/%s/%s/%s' % (year, month, day), 'w').write(tasks + '\n')
 
     days = []
     for t in tlist:
