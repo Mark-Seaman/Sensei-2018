@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.views.generic.base import RedirectView
 
+import brain.urls
 import life.urls
 import mybook.urls
 import tasks.urls
@@ -21,6 +22,9 @@ urlpatterns = [
 
     # Admin
     url(r'^admin/',      admin.site.urls),
+
+    # Brain
+    url(r'^brain/',    include(brain.urls)),
 
     # Health
     url(r'^health/',    include(health.urls)),
