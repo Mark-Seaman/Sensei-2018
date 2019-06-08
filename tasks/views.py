@@ -137,8 +137,8 @@ class TaskExport(TaskBase, TemplateView):
 
     def get_context_data(self, **kwargs):
         kwargs = super(TaskExport, self).get_context_data(**kwargs)
-        tlist = task_list(31)
-        days = write_task_files(tlist)
+        tlist = task_list(90)
+        days = task_export(tlist)
         # report = save_monthly_reports('2018')
         # kwargs.update(dict(title='Export Tasks', days=days, report=report))
         kwargs.update(dict(title='Export Tasks', days=days))

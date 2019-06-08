@@ -193,9 +193,9 @@ def work_types():
     return 'Hire,Aspire,Business,Family,UNC,Tools,WAM,Sign,Write,Hammer'.split(',')
 
 
-def write_task_files(tlist):
+def task_export(tlist):
 
-    def write_task_file(date, tasks):
+    def export_file(date, tasks):
         year, month, day = date.split('-')
         path = join('Documents', 'info', 'history', year)
         if not exists(path):
@@ -206,12 +206,9 @@ def write_task_files(tlist):
         path = join(path, day)
         open(path, 'w').write(tasks + '\n')
 
-    days = []
     for t in tlist:
-        write_task_file(t[0], t[1])
-        # open('Documents/info/days/%s' % t[0], 'w').write(t[1] + '\n')
-        days.append(t)
-    return days
+        export_file(t[0], t[1])
+    return tlist
 
 
 def task_import_files():
