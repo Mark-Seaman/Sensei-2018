@@ -7,7 +7,7 @@ from mybook.views import DocDisplay
 from mybook.mybook import info_menu
 
 from .summary import *
-from .task import save_monthly_reports
+# from .task import save_monthly_reports
 
 
 # Base

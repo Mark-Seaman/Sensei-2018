@@ -1,4 +1,4 @@
-from genericpath import exists, isfile, getmtime
+from genericpath import getmtime
 from glob import glob
 from os import remove, getcwd, listdir, mkdir, access, W_OK, walk
 from os.path    import isfile, isdir, join, dirname, exists

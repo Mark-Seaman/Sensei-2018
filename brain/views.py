@@ -3,8 +3,10 @@ from django.http import HttpResponseRedirect
 from django.views.generic import RedirectView, TemplateView
 from os.path import join
 
-from .brain import doc_redirect, list_files, page_settings, render_doc
+from .brain import create_tree_index, doc_html, doc_list, doc_redirect, doc_tree, list_files, page_settings
 
+
+# Todo: New feature - DirectoryView - Display a directory of doc links for direct access to docs
 
 # Display the document that matches the URL
 class DocView(LoginRequiredMixin, TemplateView):
@@ -19,7 +21,17 @@ class DocView(LoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title')
-        return page_settings(title=title, text=render_doc(title))
+        return page_settings(title=title, text=doc_html(title))
+
+
+# Display the list of document files in a directory
+class DirectoryView(TemplateView):
+    template_name = 'folder.html'
+
+    def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title')
+        files = doc_tree(title)
+        return page_settings(title=('Directory - ' + title), docs=files)
 
 
 # Display the list of document files in a directory
@@ -30,6 +42,18 @@ class FilesView(TemplateView):
         title = self.kwargs.get('title')
         files = list_files(title)
         return page_settings(title=title, files=files)
+
+
+# Display the list of document files in a directory tree
+class SiteIndexView(TemplateView):
+    template_name = 'doc.html'
+
+    def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title')
+        # files = list_files(title)
+        # text = 'Site Index Content'
+        text = create_tree_index('Documents/%s' % title)
+        return page_settings(title=title, text=text)
 
 
 # Display the document that matches the URL

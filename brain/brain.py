@@ -1,22 +1,70 @@
 from django.utils.timezone import now
-from os import listdir
 from os.path import exists, isdir, isfile, join
+from os import  listdir, walk
 from subprocess import Popen, PIPE
 from sys import version_info
 
+def create_tree_index(d):
 
-# Read document as HTML
-def document_html(path):
-    return markdown_to_html(read_markdown(path))
+    def bullet_indent(n):
+        return '    ' * n + '* '
+
+    def dir_index(result, root, d, i):
+        dname = d.split('/')[-1]
+        # url = join(d.replace(root, '.'), dname)
+        # url = root+'--'+d+'--'+dname
+        url = d.replace('Documents/', '/brain/')
+        result.append('%s[%s](%s)/\n' % (bullet_indent(i), dname, url))
+        for fname in sorted(listdir(d)):
+            if isfile(join(d, fname)):
+                # url = join(d.replace(root, '.'), dname, fname)
+                url = join(dname, fname)
+                result.append('%s[%s](%s)\n' % (bullet_indent(i + 1), fname, url))
+        for f in sorted(listdir(d)):
+            if isdir(join(d, f)):
+                dir_index(result, root, join(d, f), i + 1)
+    result = []
+    dir_index(result, d, d, 0)
+    return markdown_to_html('\n'.join(result))
 
 
-# Create a list of documents (doc, title)
+# Read the markdown document and convert it to HTML
+def doc_html(doc):
+    # path = doc_path(doc)
+    # if not exists(path) and exists(path + '.md'):
+    #     path = path + '.md'
+    return markdown_to_html(read_markdown(doc))
+
+
+# Create a list of document links (doc, title) for one directory
 def doc_list(path):
 
     def doc_entry(path, f):
-        return document_title(join(path, f)), f
+        return doc_title(join(path, f)), f
 
     return [doc_entry(path, f) for f in list_files(path)]
+
+
+# Recursive list
+def recursive_list(d):
+    matches = []
+    for root, dirnames, filenames in walk(d):
+        for filename in filenames:
+            matches.append((filename, join(root, filename).replace(d + '/', '')))
+    return matches
+
+
+# Create a list of document links (doc, title)
+def doc_tree(doc):
+
+    # def doc_entry(path, f):
+    #     return join(path, f), f
+    #
+    # return [doc_entry(path, f) for f in list_files(path)]
+    while doc.endswith('/'):
+        doc = doc[:-1]
+    path = doc_path(doc)
+    return recursive_list(path)
 
 
 # Find the path to the requested document
@@ -30,19 +78,25 @@ def doc_redirect(doc):
         doc = doc[:-1]
     path = doc_path(doc)
     if isdir(path):
-        if exists(join(path, 'Index')):
-            return '/brain/%s/Index' % doc
-        if exists(join(path, 'Index.md')):
-            return '/brain/%s/Index' % doc
-        return '/brain/%s/Files' % doc
+        # if exists(join(path, 'Index')) or exists(join(path, 'Index.md')):
+            return doc_url(doc + '/Index')
+        # return doc_url(doc + '/Directory')
     if not exists(path) and not exists(path + '.md'):
-        return '/brain/%s/Missing' % doc
+        return doc_url(doc + '/Missing')
 
 
 # Extract the title from the file text
-def document_title(doc):
+def doc_title(doc):
     text = read_markdown(doc)
-    return text.split('\n')[0][2:]
+    if text.startswith('#'):
+        return text.split('\n')[0][2:]
+    else:
+        return "** NO DOCUMENT TITLE **"
+
+
+# Create the URL that corresponds to this document
+def doc_url(doc):
+    return join('/brain', doc)
 
 
 # List the file as hyperlinks to documents
@@ -75,18 +129,20 @@ def page_settings(**kwargs):
 # Read the specific document
 def read_markdown(doc):
     path = doc_path(doc)
+    if not exists(path) and exists(path + '.md'):
+        path = path + '.md'
     if exists(path) and isfile(path):
         return open(path).read()
     else:
-        return 'No DOCUMENT Found, %s' % doc
+        return 'No DOCUMENT Found, doc=%s, path=%s' % (doc, path)
 
 
 # Read the document formatted as HTML
-def render_doc(doc):
-    path = doc_path(doc)
-    if not exists(path) and exists(path + '.md'):
-        doc = doc + '.md'
-    return document_html(doc)
+# def render_doc(doc):
+#     path = doc_path(doc)
+#     if not exists(path) and exists(path + '.md'):
+#         doc = doc + '.md'
+#     return doc_html(doc)
 
 
 # Run an application and connect with input and output
