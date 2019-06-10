@@ -1,7 +1,10 @@
 from os.path import join
 from os import environ
+from platform import node
 
 from bin.shell import shell_file_list
+
+RUN_TEST = node() != 'MyBook'
 
 
 def count_files(filetype=None):
@@ -10,7 +13,10 @@ def count_files(filetype=None):
     return str(len(files))
 
 
-files = shell_file_list(join(environ['HOME'], 'Angular'))
+if RUN_TEST:
+    files = shell_file_list(join(environ['HOME'], 'Angular'))
+else:
+    files = []
 
 
 def angular_css_files_test():
