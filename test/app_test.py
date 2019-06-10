@@ -8,7 +8,7 @@ def app_classes_test():
 
 
 def app_functions_test():
-    return check_lines('App Functions', app_functions(), 850, 900)
+    return check_lines('App Functions', app_functions(), 900, 950)
 
 
 def app_list_test():
@@ -28,8 +28,8 @@ def app_show_test():
 
 
 def app_signature_test():
-    return check_lines('Function Signatures', app_signature(), 1100, 1200)
+    return check_lines('Function Signatures', app_signature(), 1200, 1300)
 
 
 def app_url_test():
-    return check_lines('Function Signatures', app_urls(), 80, 90)
+    return check_lines('Function Signatures', app_urls(), 90, 100)

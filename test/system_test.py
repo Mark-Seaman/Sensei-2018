@@ -32,7 +32,7 @@ def system_env_test():
     
 def system_files_count_test():
     files = file_tree_list(environ['p'])
-    return check_lines('File list', '\n'.join(files), 5800, 6200)
+    return check_lines('File list', '\n'.join(files), 5800, 8000)
 
 
 def system_host_test():
@@ -44,7 +44,7 @@ def system_ip_test():
 
 
 def system_pandoc_test():
-    return shell('pandoc  -t html %s' % TEST_DOC)
+    return shell('pandoc  -t html %s' % 'Documents/info/Test/Index')
 
 
 def system_pipenv_test():
@@ -53,7 +53,7 @@ def system_pipenv_test():
 
 def system_python_files_test():
     files = file_tree_list(environ['p'], '.py')
-    return check_lines('Python file list', '\n'.join(files), 130, 160)
+    return check_lines('Python file list', '\n'.join(files), 160, 180)
 
 
 def system_python_version_test():

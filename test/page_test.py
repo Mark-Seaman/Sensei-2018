@@ -9,9 +9,9 @@ def check_page(url, min=1, max=1):
 def page_sites_test():
     pages = [
 
-        check_page('https://seamanfamily.org/brain/Index',              100, 100),
+        check_page('https://seamanfamily.org/brain/Index',              100, 120),
 
-        check_page('https://markseaman.info/Index.md',                  150, 190),
+        check_page('https://markseaman.info/Index.md',                  120, 190),
         check_page('https://markseaman.org/MarkSeaman/Index.md',        100, 110),
 
         check_page('https://seamansguide.com/guide/Index.md',           112, 130),

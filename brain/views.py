@@ -6,8 +6,6 @@ from os.path import join
 from .brain import doc_html, doc_redirect, doc_tree, list_files, page_settings
 
 
-# Todo: New feature - DirectoryView - Display a directory of doc links for direct access to docs
-
 # Display the document that matches the URL
 class DocView(LoginRequiredMixin, TemplateView):
     template_name = 'doc.html'
@@ -46,11 +44,10 @@ class FilesView(TemplateView):
 
 # Display the list of document files in a directory tree
 class TreeView(TemplateView):
-    template_name = 'doc.html'
+    template_name = 'filetree.html'
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title')
-        # text = tree_index('Documents/%s' % title)
         text = doc_tree(title)
         return page_settings(title=title, text=text)
 
