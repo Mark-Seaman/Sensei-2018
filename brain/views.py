@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from django.views.generic import RedirectView, TemplateView
 from os.path import join
 
-from .brain import create_tree_index, doc_html, doc_list, doc_redirect, doc_tree, list_files, page_settings
+from .brain import doc_html, doc_redirect, doc_tree, list_files, page_settings
 
 
 # Todo: New feature - DirectoryView - Display a directory of doc links for direct access to docs
@@ -45,14 +45,13 @@ class FilesView(TemplateView):
 
 
 # Display the list of document files in a directory tree
-class SiteIndexView(TemplateView):
+class TreeView(TemplateView):
     template_name = 'doc.html'
 
     def get_context_data(self, **kwargs):
         title = self.kwargs.get('title')
-        # files = list_files(title)
-        # text = 'Site Index Content'
-        text = create_tree_index('Documents/%s' % title)
+        # text = tree_index('Documents/%s' % title)
+        text = doc_tree(title)
         return page_settings(title=title, text=text)
 
 

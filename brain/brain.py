@@ -4,35 +4,8 @@ from os import  listdir, walk
 from subprocess import Popen, PIPE
 from sys import version_info
 
-def create_tree_index(d):
-
-    def bullet_indent(n):
-        return '    ' * n + '* '
-
-    def dir_index(result, root, d, i):
-        dname = d.split('/')[-1]
-        # url = join(d.replace(root, '.'), dname)
-        # url = root+'--'+d+'--'+dname
-        url = d.replace('Documents/', '/brain/')
-        result.append('%s[%s](%s)/\n' % (bullet_indent(i), dname, url))
-        for fname in sorted(listdir(d)):
-            if isfile(join(d, fname)):
-                # url = join(d.replace(root, '.'), dname, fname)
-                url = join(dname, fname)
-                result.append('%s[%s](%s)\n' % (bullet_indent(i + 1), fname, url))
-        for f in sorted(listdir(d)):
-            if isdir(join(d, f)):
-                dir_index(result, root, join(d, f), i + 1)
-    result = []
-    dir_index(result, d, d, 0)
-    return markdown_to_html('\n'.join(result))
-
-
 # Read the markdown document and convert it to HTML
 def doc_html(doc):
-    # path = doc_path(doc)
-    # if not exists(path) and exists(path + '.md'):
-    #     path = path + '.md'
     return markdown_to_html(read_markdown(doc))
 
 
@@ -45,26 +18,31 @@ def doc_list(path):
     return [doc_entry(path, f) for f in list_files(path)]
 
 
-# Recursive list
-def recursive_list(d):
-    matches = []
-    for root, dirnames, filenames in walk(d):
-        for filename in filenames:
-            matches.append((filename, join(root, filename).replace(d + '/', '')))
-    return matches
-
-
 # Create a list of document links (doc, title)
 def doc_tree(doc):
 
-    # def doc_entry(path, f):
-    #     return join(path, f), f
-    #
-    # return [doc_entry(path, f) for f in list_files(path)]
-    while doc.endswith('/'):
-        doc = doc[:-1]
-    path = doc_path(doc)
-    return recursive_list(path)
+    def bullet_indent(n):
+        return '    ' * n + '* '
+
+    def dir_index(result, root, d, i):
+        dname = d.split('/')[-1]
+        url = d.replace('Documents/', '/brain/')
+        result.append('%s[%s](%s)/\n' % (bullet_indent(i), dname, url))
+        for fname in sorted(listdir(d)):
+            if isfile(join(d, fname)):
+                # url = root + '--' + d + '--' + fname
+                dname = d.replace('Documents/', '/brain/')
+                url = join(dname, fname)
+                result.append('%s[%s](%s)\n' % (bullet_indent(i + 1), fname, url))
+        for f in sorted(listdir(d)):
+            if isdir(join(d, f)):
+                dir_index(result, root, join(d, f), i + 1)
+    result = []
+    d = join('Documents', doc)
+    dir_index(result, d, d, 0)
+    return markdown_to_html('\n'.join(result))
+
+
 
 
 # Find the path to the requested document
