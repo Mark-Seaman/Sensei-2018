@@ -47,28 +47,3 @@ def writing_score (title):
     ]
     return dict(doc=doc, text=text, scorecards=score)
 
-
-'''
-<!--
- 
-                    <li><a href="http://Unco-Bacs.org">Unco-Bacs.org</a></li>
-                    <li><a href="http://Shrinking-world.com/unco">UNC Classes</a></li>
-                    <li><a href="http://seamansguide.com">Seaman's Guides</a></li>
-                </ul>
-                <h3 id="personal">Personal</h3>
-                <ul>
-                    <li><a href="http://seamanslog.com">Seaman's Log</a></li>
-                    <li><a href="http://Spiritual-Things.org">Spiritual Things</a></li>
-                    <li><a href="http://MarkSeaman.org">MarkSeaman.org</a></li>
-                </ul>
-                <h3 id="private">Private</h3>
-                <ul>
-                    <li><a href="http://MarkSeaman.info">MarkSeaman.info</a></li>
-                    <li><a href="http://seamanfamily.org">Seaman Family</a></li>
-                </ul>
-                </p>
-                <pre>
-                42
-                </pre>
-            -->
-'''
