@@ -1,0 +1,41 @@
+{% extends 'brain_theme.html' %}
+
+{% block content %}
+
+    <a href=".">Folder</a>
+
+    <div class="card">
+        <div class="card-header">
+            {{ title }}
+        </div>
+        <div class="card-body">
+            {% autoescape off %}
+
+                <h1 id="writers-scorecard">Published Word Count</h1>
+                <p>Success is determined by both creativity and project completion. - Mark Seaman</p>
+
+                {% if score.scorecards %}
+
+                        {% for s in score.scorecards %}
+
+                                <h2>{{ s.title }}</h2>
+                                <p>{{ s.document }}</p>
+                                <p>{{ s.words }} words</p>
+
+                                <ul>
+                                    {% for x in s.score %}
+                                        <li>
+                                            <b>{{ x.filename }}</b> - {{ x.words }} words
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+
+                        {% endfor %}
+
+                {% endif %}
+
+            {% endautoescape %}
+        </div>
+    </div>
+
+{% endblock %}

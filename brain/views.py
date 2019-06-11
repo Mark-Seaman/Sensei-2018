@@ -4,6 +4,7 @@ from django.views.generic import RedirectView, TemplateView
 from os.path import join
 
 from .brain import doc_html, doc_redirect, doc_tree, list_files, page_settings
+from .score import writing_score
 
 
 # Display the document that matches the URL
@@ -42,16 +43,6 @@ class FilesView(TemplateView):
         return page_settings(title=title, files=files)
 
 
-# Display the list of document files in a directory tree
-class TreeView(TemplateView):
-    template_name = 'filetree.html'
-
-    def get_context_data(self, **kwargs):
-        title = self.kwargs.get('title')
-        text = doc_tree(title)
-        return page_settings(title=title, text=text)
-
-
 # Display the document that matches the URL
 class MissingView(TemplateView):
     template_name = 'missing.html'
@@ -66,6 +57,26 @@ class MissingView(TemplateView):
 # Forward from / to /brain/info
 class RedirectRoot(RedirectView):
     url = '/brain/info'
+
+
+# Display the document that matches the URL
+class ScorecardView(TemplateView):
+    template_name = 'score.html'
+
+    def get_context_data(self, **kwargs):
+        title = "Writer's Scorecard"
+        score = writing_score(self.kwargs.get('title'))
+        return page_settings(title=title, score=score)
+
+
+# Display the list of document files in a directory tree
+class TreeView(TemplateView):
+    template_name = 'filetree.html'
+
+    def get_context_data(self, **kwargs):
+        title = self.kwargs.get('title')
+        text = doc_tree(title)
+        return page_settings(title=title, text=text)
 
 
 

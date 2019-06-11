@@ -1,6 +1,6 @@
 from django.utils.timezone import now
 from os.path import exists, isdir, isfile, join
-from os import  listdir, walk
+from os import  listdir
 from subprocess import Popen, PIPE
 from sys import version_info
 
@@ -20,15 +20,6 @@ def doc_list(path):
 
     return [doc_entry(path, f) for f in list_files(path)]
 
-
-def count_words(directory):
-    matches = []
-    for dirname, dirnames, filenames in walk(directory):
-        for filename in filenames:
-            base = dirname.replace(directory + '/', '')
-            matches.append((filename, join(base, filename)))
-    for m in matches:
-        print('%-20s %s' % (m[0], m[1]))
 
 # Create a list of document links (doc, title)
 def doc_tree(doc):
