@@ -27,7 +27,6 @@ h1 {
     background-color: #0E3D65;
     border: 5px solid #F6B018;
     text-align: center;
-    font-size: 300%;
     box-shadow: 2px 2px 5px gray;
 }
 
@@ -36,7 +35,6 @@ h2 {
     background-color: #F6B018;
     border: 2px solid #0E3D65;
     text-align: center;
-    font-size: 200%;
     margin: 10px 20px;
     padding: 10px 20px;
     box-shadow: 2px 2px 5px gray;
@@ -44,14 +42,12 @@ h2 {
 
 h3 {
     margin: 20px;
-    font-size: 140%;
 }
 
 header {
     border: 5px solid #F6B018;
     background-color: #0E3D65;
     font-family: sans-serif;
-    /*height: 200px;*/
     padding: 1.5em;
 }
 
@@ -65,7 +61,6 @@ header a:hover {
 
 header h1 {
     color: #F6B018;
-    font-size: 300%;
     border: none;
     padding: 0;
     margin: 0;
@@ -74,7 +69,6 @@ header h1 {
 
 header h2 {
     color: white;
-    font-size: 200%;
     background-color: #0E3D65;
     box-shadow: none;
 }
@@ -95,6 +89,17 @@ li {
 p {
     margin-left: 2em;
 }
+
+pre {
+    border: 1px solid #F6B018;
+    border-left: 3px solid #F6B018;
+    border-right: 3px solid #F6B018;
+    background-color: #f0f0f0;
+    margin-left: 3em;
+    margin-right: 3em;
+    padding: 10px 20px;
+}
+
 
 /* ----------------------------------------------- */
 /* Classes */
@@ -131,5 +136,3 @@ p {
     /*box-shadow: 2px 2px 5px black;*/
     font-weight: bold;
 }
-
-
