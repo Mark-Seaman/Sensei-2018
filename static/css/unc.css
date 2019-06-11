@@ -35,12 +35,16 @@ h2 {
     background-color: #F6B018;
     border: 2px solid #0E3D65;
     text-align: center;
-    /*    margin: 10px 20px;*/
-    /*    padding: 10px 20px;*/
+    margin: 10px 20px;
+    padding: 10px 20px;
     box-shadow: 2px 2px 5px gray;
 }
 
-h3 {}
+h3,
+h4 {
+    margin: 10px 20px;
+    padding: 10px 20px;
+}
 
 header {
     border: 5px solid #F6B018;
