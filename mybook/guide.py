@@ -11,10 +11,10 @@ def seamans_guide_menu(title):
                 ('https://shrinking-world.com/shrinkingworld/Leverage', 'Leverage'),
                 ('https://markseaman.org', 'Mark Seaman')]
 
-    if title.startswith('Software'):
-        return topic_menu(menu_items(title), '/seamansguide/', "Software Engineering")
-    else:
-        return topic_menu(menu_items(title), '/seamansguide/', "Seaman's Guide")
+    # if title.startswith('Software'):
+    return topic_menu(menu_items(title), '/seamansguide/', "Software Engineering")
+    # else:
+    #     return topic_menu(menu_items(title), '/seamansguide/', "Seaman's Guide")
 
 
 class SeamansGuide(DocDisplay):
