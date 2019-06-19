@@ -11,7 +11,7 @@ def guide_menu(page, title):
                 ('https://shrinking-world.com/shrinkingworld/Leverage', 'Leverage'),
                 ('https://markseaman.org', 'Mark Seaman')]
 
-    return topic_menu(menu_items(title), '/seamansguide/', title)
+    return topic_menu(menu_items(title), '/guide/', title)
 
 
 def guide_settings(title):
@@ -19,8 +19,12 @@ def guide_settings(title):
         return guide_menu(title, "Software Engineering")
     elif title.startswith('guide/PhpApps'):
         return guide_menu(title, "PHP Apps")
+    elif title.startswith('guide/PythonApps'):
+        return guide_menu(title, "Python Apps")
+    elif title.startswith('guide/HtmlApps'):
+        return guide_menu(title, "HTML Apps")
     else:
-        return guide_menu(title, "Software Engineering")
+        return guide_menu(title, "Seaman's Guides")
 
 
 class SeamansGuide(DocDisplay):
