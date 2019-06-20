@@ -17,7 +17,7 @@ def guide_menu(page, title):
                 ('Code', 'Code'),
                 ('Test', 'Test')]
 
-    return topic_menu(lifecycle_items(title), './', title)
+    return topic_menu(lifecycle_items(title), '', title)
 
 
 def guide_settings(title):
