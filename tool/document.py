@@ -93,7 +93,10 @@ def doc_path(page):
 
 
 def doc_title(page):
-    return title(doc_path(page))
+    doc = doc_path(page)
+    if not exists(doc):
+        return 'Doc not found, ' + doc
+    return title(doc)
 
 
 def domain_doc(domain, page):
