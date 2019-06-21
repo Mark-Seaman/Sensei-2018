@@ -125,7 +125,7 @@ def percent(actual, total):
     if total == 0:
         return 0
     else:
-        return (int(actual) * 100 + 5) / total
+        return int((int(actual) * 100 + 5) / total)
 
 
 def percent_totals(totals, subtotals):
