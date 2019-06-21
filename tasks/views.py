@@ -103,6 +103,7 @@ class TimeSummary(TaskBase, TemplateView):
         kwargs = super(TimeSummary, self).get_context_data(**kwargs)
         kwargs.update({
             'title': 'Time Invested',
+            'time_data': time_data(),
         })
         return kwargs
 
