@@ -4,7 +4,7 @@ from django.views.generic import DetailView, ListView, RedirectView, TemplateVie
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 from mybook.views import DocDisplay
-from mybook.mybook import info_menu
+from mybook.mybook import info_menu, page_settings
 
 from .summary import *
 # from .task import save_monthly_reports
@@ -59,18 +59,23 @@ class TaskUpdate(TaskBase, UpdateView):
 
 
 # List
-class TaskList(TaskBase, ListView):
+class TaskList(ListView):
     model = Task
     template_name = 'task_list.html'
+    site_title = "My Brain", 'Top secret documents'
+    logo = "/static/images/SWS_Logo_200.jpg", 'Shrinking World Solutions'
+    text = '<h1>Time Accounting</h1>'
 
     def get_context_data(self, **kwargs):
         activity = self.kwargs.get('activity', 'All')
-        context = super(TaskList, self).get_context_data(**kwargs)
-        context.update({
-            'title': 'Tasks Details - %s' % self.kwargs.get('activity', 'All'),
-            'labels': Task.labels()[2:],
-            'types': activity_summary(activity),
-        })
+        labels = Task.labels()[2:]
+        types = activity_summary(activity)
+        tabs = activity_summary(activity)
+        context = dict(tabs=tabs, labels=labels, types=types)
+        self.title = 'Tasks Details - %s' % self.kwargs.get('activity', 'All')
+        self.menu = info_menu(self.title)
+        settings =  page_settings(self.title, self.site_title, self.logo, self.menu, self.text)
+        context.update(settings)
         return context
 
     def get_queryset(self):
