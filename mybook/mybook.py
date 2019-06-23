@@ -112,9 +112,9 @@ def leverage_menu(title):
 def info_menu(title):
 
     def menu_items(title):
-        return [('Done', 'Past', title == 'Done.md'),
+        return [('Past', 'Past', title == 'Past'),
                 ('Index', 'Present', title == 'Index.md'),
-                ('Aspire', 'Future', title == 'Aspire.md'),
+                ('Future', 'Future', title == 'Future'),
                 ('https://shrinking-world.com', 'Shrinking World'),
                 ('https://markseaman.org', 'Mark Seaman')]
 
