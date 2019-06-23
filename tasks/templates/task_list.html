@@ -31,144 +31,36 @@
                  role="tabpanel">
 
                 <h3>{{ tab.0 }}</h3>
-                {% for task in tab.1 %}
-                    <h4>{{ task.2 }}</h4>
 
-                    <ul>
-                        {% for note in task.4 %}
-                            <li>{{ note }}</li>
+                <table class="table table-hover p-20">
+
+                    <tr>
+                        {% for label in labels %}
+                            <th>{{ label }}</th>
                         {% endfor %}
+                    </tr>
 
-                    </ul>
-
-                    <table class="table table-hover p-20">
+                    {% for task in tab.1 %}
 
                         <tr>
-                            {% for label in labels %}
-                                <th>{{ label }}</th>
-                            {% endfor %}
+                            <td>{{ task.2 }}</td>
+                            <td>{{ task.3 }}</td>
+                            <td>
+                                <ul>
+                                    {% for note in task.4 %}
+                                        <li>{{ note }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+
                         </tr>
 
-                        {% for t in task %}
-                            <tr>
-                            <td>{{ t }}</td>
-{#                            <td>{{ t.1 }}</td>#}
-{#                            <td>{{ t.2 }}</td>#}
-{#                            <td>{{ t.3 }}</td>#}
-{#                                <td>#}
-{#                                    <pre>{{ t }}</pre>#}
-                                    {#                                    <a href="/task/{{ object.0 }}">{{ object.2 }}</a>#}
-{#                                </td>#}
-                                {#                                <td>#}
-                                {#                                    {{ object.3 }} hours#}
-                                {#                                </td>#}
-                                {#                                <td>#}
-                                {#                                    <ul>#}
-                                {#                                        {% for d in object.4 %}#}
-                                {#                                            <li>#}
-                                {#                                                {{ d }}#}
-                                {#                                            </li>#}
-                                {#                                        {% endfor %}#}
-                                {#                                    </ul>#}
-                                {#                                </td>#}
-                            </tr>
-                            {#                        {% empty %}#}
-                            {#                            <tr>#}
-                            {#                                <td>#}
-                            {#                                    <b>No events in list</b>#}
-                            {#                                </td>#}
-                            {#                            </tr>#}
-                        {% endfor %}
-                    </table>
-
-                {% endfor %}
+                    {% endfor %}
+                </table>
 
             </div>
         {% endfor %}
 
     </div>
-
-
-    {% for t in tabs %}
-
-        <h3>{{ t.0 }}</h3>
-        {% for task in t.1 %}
-            <h4>{{ task.2 }}</h4>
-            {#            <pre>#}
-            {#                {{ task.2 }}#}
-            {##}
-            {#                {{ task.4 }}#}
-            {#            </pre>#}
-            <ul>
-                {% for note in task.4 %}
-                    <li>{{ note }}</li>
-                {% endfor %}
-
-            </ul>
-        {% endfor %}
-
-    {% endfor %}
-
-    {#    <div role="tabpanel">#}
-    {##}
-    {#        <ul class="tab-nav" role="tablist">#}
-    {#            {% for t in types %}#}
-    {#                <li class="{{ t.2 }}">#}
-    {#                    <a href="#{{ t.0 }}" aria-controls="{{ t.0 }}" role="tab"#}
-    {#                       data-toggle="tab">{{ t.0 }}</a>#}
-    {#                </li>#}
-    {#            {% endfor %}#}
-    {#        </ul>#}
-    {##}
-    {#        <div class="tab-content">#}
-    {##}
-    {##}
-    {#            {% for t in types %}#}
-    {##}
-    {#                <div role="tabpanel" class="tab-pane active" id="{{ t.0 }}">#}
-    {#                    <p>Task details for {{ t.0 }}</p>#}
-    {##}
-    {#                    <table class="table table-hover p-20">#}
-    {##}
-    {#                        <tr>#}
-    {#                            {% for label in labels %}#}
-    {#                                <th>{{ label }}</th>#}
-    {#                            {% endfor %}#}
-    {#                        </tr>#}
-    {##}
-    {#                        {% for object in t.1 %}#}
-    {#                            <tr>#}
-    {#                                <td>#}
-    {#                                    <a href="/task/{{ object.0 }}">{{ object.2 }}</a>#}
-    {#                                </td>#}
-    {#                                <td>#}
-    {#                                    {{ object.3 }} hours#}
-    {#                                </td>#}
-    {#                                <td>#}
-    {#                                    <ul>#}
-    {#                                        {% for d in object.4 %}#}
-    {#                                            <li>#}
-    {#                                                {{ d }}#}
-    {#                                            </li>#}
-    {#                                        {% endfor %}#}
-    {#                                    </ul>#}
-    {#                                </td>#}
-    {#                            </tr>#}
-    {#                        {% empty %}#}
-    {#                            <tr>#}
-    {#                                <td>#}
-    {#                                    <b>No events in list</b>#}
-    {#                                </td>#}
-    {#                            </tr>#}
-    {#                        {% endfor %}#}
-    {##}
-    {#                    </table>#}
-    {##}
-    {#                </div>#}
-    {#            {% endfor %}#}
-    {##}
-    {#        </div>#}
-
-    {#    </div>#}
 
 {% endblock %}
