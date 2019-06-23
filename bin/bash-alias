@@ -27,6 +27,7 @@ alias deploy='x ops deploy; x web https://shrinking-world.com/unc/bacs200'
 alias dj='cd $p && python ./manage.py'
 alias dl='x doc list'
 alias doc='cd $p/Documents; cd'
+alias doclog='cd $p/Documents; git log --name-only; cd $p'
 alias ds='x doc search'
 
 alias ea='e $p/bin/bash-alias'

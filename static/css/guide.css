@@ -186,11 +186,11 @@ pre {
     max-width: 80%;
 }
 
-/*.panel {*/
-/*    background-color: #eeeeee;*/
-/*    box-shadow: 2px 2px 5px grey;*/
-/*    padding: 2em;*/
-/*}*/
+.panel {
+    background-color: #eeeeee;
+    box-shadow: 2px 2px 5px grey;
+    padding: 2em;
+}
 
 .profile img {
     width: 200px;
@@ -200,4 +200,5 @@ pre {
 .tab-pane {
     padding: 2em;
     background-color: #eeeeee;
+    border-radius: 5px;
 }
