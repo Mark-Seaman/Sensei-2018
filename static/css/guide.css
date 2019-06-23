@@ -193,3 +193,7 @@ pre {
     width: 200px;
     border-radius: 100px;
 }
+
+.tab-pane {
+    padding: 2em;
+}
