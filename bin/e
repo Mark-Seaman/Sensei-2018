@@ -8,10 +8,14 @@ from sys import argv
 
 args = ' '.join(argv[1:])
 exe_path = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
+exe_path2 = "C:\Program Files\Sublime Text 3\subl.exe"
 
 if exists(exe_path):
     print("Invoke the Sublime Text editor on "+args)
     system('"%s" %s' % (exe_path, args))
+elif exists(exe_path2):
+    print("Invoke the Sublime Text editor on "+args)
+    system('"%s" %s' % (exe_path2, args))
 else:
     exe_path = 'subl'
     print("Invoke the Sublime Text editor on "+args)

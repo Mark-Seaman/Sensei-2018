@@ -1,5 +1,6 @@
 from os import chdir, environ, system
 from os.path import exists, join
+from sys import argv
 
 from shell import shell_script
 
@@ -52,7 +53,8 @@ def vc_help(args=None):
 # Functions
 
 def git_cmd(cmd):
-    print(git_filter(shell_script(cmd)))
+    system(cmd)
+    # print(git_filter(shell_script(cmd)))
 
 
 def git_filter(text):
@@ -128,3 +130,6 @@ def vc_status(args):
     for d in vc_dirs():
         cmd = 'echo status %s && cd %s && git status'
         git_cmd(cmd % (d, d))
+
+if __name__ == '__main__':
+    vc_command(argv[1:])
