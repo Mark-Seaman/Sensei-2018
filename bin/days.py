@@ -126,8 +126,14 @@ def today():
     return date_str(datetime.now())
 
 
-if __name__ == '__main__':
-    start = '2019-04-29'
-    num_weeks = 17
-    days_weeks(start, num_weeks)
+# Show a list of dates for the last month
+def print_recent_dates():
+    for d in enumerate_days(to_date(today()), 30):
+        print('* [%s](/info/days/%s) - Write - ' % (d, d))
 
+
+if __name__ == '__main__':
+    # start = '2019-04-29'
+    # num_weeks = 17
+    # days_weeks(start, num_weeks)
+    print_recent_dates()
