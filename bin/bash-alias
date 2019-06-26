@@ -112,7 +112,7 @@ alias unc=". $unc/.bashrc"
 alias user='x user'
 alias update='x ops update'
 
-alias vc='x vc'
+alias vc='python $p/bin/vc.py'
 alias ve='. ~/Sensei/bin/venv'
 
 alias walk='e $s/Documents/spiritual/walkabout/Index; web http://spiritual-things.org/walkabout'

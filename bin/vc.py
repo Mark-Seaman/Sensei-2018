@@ -109,9 +109,14 @@ def vc_dirs():
 
 
 def vc_log(args):
-    for d in vc_dirs():
-        cmd = 'echo log %s && cd %s && git log --name-only'
-        git_cmd(cmd %(d, d))
+    d = environ['p']
+    system('figlet Sensei')
+    cmd = 'echo log %s && cd %s && git log --name-only | head -100'
+    git_cmd(cmd %(d, d))
+    d = join(d, 'Documents')
+    system('figlet Documents')
+    cmd = 'echo log %s && cd %s && git log --name-only | head -100'
+    git_cmd(cmd %(d, d))
 
 
 def vc_pull(args):

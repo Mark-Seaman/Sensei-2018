@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from os import environ, system
-from os.path import  join
+from os.path import  abspath, exists, join
 from platform import node
 from sys import argv
 
@@ -27,10 +27,14 @@ def web(page):
     '''Open a web page in Google Chrome'''
     url = page
     if not page.startswith('http://') and not page.startswith('https://'):
-        url = 'http://' + page
+        if exists(page):
+            url = 'file://' + abspath(page)
+        else:
+            url = 'http://' + page
     # Use the correct invocation
     if 'iMac' in node() or 'mac' in node():
-        system('open -a "Google Chrome" '+url)
+        # system('open -a "Google Chrome" '+url)
+        system('open -a "Firefox" '+url)
     else:
         system('start chrome '+url)
 
