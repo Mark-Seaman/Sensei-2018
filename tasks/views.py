@@ -1,5 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 from django.views.generic import DetailView, ListView, RedirectView, TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 

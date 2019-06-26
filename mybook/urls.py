@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from django.contrib.auth.views import login, logout
+from django.contrib.auth import login, logout
 
 from .seaman import DocFileIndex, DocList, Leverage, MarkSeaman, PrivateDoc, SeamansLog
 from .guide import SeamansGuide
