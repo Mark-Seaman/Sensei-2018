@@ -73,7 +73,7 @@ def doc_page(title):
     log('doc_page', title)
     path = doc_path(title)
     if exists(path) and isfile(path):
-        log('no redirect')
+        # log('no redirect')
         return None
     elif exists(path + '.md'):
         log('MD redirect')
@@ -85,7 +85,8 @@ def doc_page(title):
         log('Index.md redirect')
         return join(title, 'Index.md')
     else:
-        return None #join(title, 'Missing')
+        log('Missing document '+title)
+        return join(title, 'Missing')
 
 
 def doc_path(page):
