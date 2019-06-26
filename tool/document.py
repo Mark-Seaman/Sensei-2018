@@ -86,7 +86,7 @@ def doc_page(title):
         return join(title, 'Index.md')
     else:
         log('Missing document '+title)
-        return join(title, 'Missing')
+        return None
 
 
 def doc_path(page):
