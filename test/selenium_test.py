@@ -7,10 +7,10 @@ SELENIUM_TEST = False
 def selenium_test():
     url = 'shrinking-world.com'
     features = fetch_page(url)
-    result = '\nPAGE TEXT:\n'   + features['text']  
-    result += '\nPAGE HTML:\n'  + features['html'] 
-    result += '\nPAGE Title:\n' + features['title'] 
-    result += '\nPAGE headline:\n'    + features['h1'] 
+    result = '\nPAGE TEXT:\n%s' % features['text']
+    result += '\nPAGE HTML:\n%s'  % features['html']
+    result += '\nPAGE Title:\n%s' % features['title']
+    result += '\nPAGE headline:\n%s' % features['h1']
     return result
 
 
