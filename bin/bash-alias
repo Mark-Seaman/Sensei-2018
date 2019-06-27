@@ -88,6 +88,8 @@ alias rest='cd ~/Rest/library && pipenv shell'
 alias robot='x robot'
 
 alias s='app search'
+alias s1='cd ~/Sensei; pipenv shell'
+alias s2='cd ~/S2; pipenv shell'
 alias sensei='cd ~/Sensei && b .'
 alias shell='cd $p && python ./manage.py shell'
 alias ssh-imac='ssh $imac'

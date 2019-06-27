@@ -24,7 +24,7 @@ def app_settings_test():
 
 
 def app_show_test():
-    return check_lines('App Source Code', app_show(), 9000, 10100)
+    return check_lines('App Source Code', app_show(), 10000, 10200)
 
 
 def app_signature_test():

@@ -1,5 +1,17 @@
 # If not running interactively, return
 [ -z "$PS1" ] && return
 
+echo Select Python Context
+echo '   s1'
+echo '   s2'
+echo '   br'
+
+alias s1='cd ~/Sensei/hammer;  pipenv shell'
+alias s2='cd ~/S2;      pipenv shell'
+alias br='cd ~/Brain;   pipenv shell'
+
 # Load the project profile
-[ -f ~/Sensei/bin/bashrc ] && . ~/Sensei/bin/bashrc
+[ -f bin/bashrc ] && . bin/bashrc
+
+# Load the project profile for Sensei
+[ -f ../bin/bashrc ] && cd .. && . bin/bashrc

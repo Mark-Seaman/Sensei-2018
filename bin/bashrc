@@ -23,27 +23,41 @@ export mbw="$HOME/Archive/rcp/mbw"
 export s="$HOME/Sensei"
 export b="$HOME/Brain"
 
-cat $p/bin/welcome
 
-# Path variable
-export PATH=$p:\
-$p/bin:\
-/bin:\
-/sbin:\
-/usr/local/sbin:\
-/usr/local/bin:\
-/opt/local/bin:\
-/usr/bin:\
-/usr/local/mysql/bin
+# # Path variable
+# export PATH=$p:\
+# $p/bin:\
+# /bin:\
+# /sbin:\
+# /usr/local/sbin:\
+# /usr/local/bin:\
+# /opt/local/bin:\
+# /usr/bin:\
+# /usr/local/mysql/bin
 
+export PATH=$PATH:$HOME/S2:$HOME/S2/bin
 
 . $p/bin/bash-alias
 . $p/bin/bash-prompt
 
-cd $p
-[ "$p" != "$HOME/MyBook" ] &&
-[ "$PIPENV_ACTIVE" != '1' ] && 
-cd $p/hammer &&
-figlet pipenv shell &&
-pipenv shell 
+
+# Setup Python Context
+
+# cd $p
+# [ "$p" != "$HOME/MyBook" ] &&
+# [ "$PIPENV_ACTIVE" != '1' ] && 
+# cd $p/hammer &&
+# figlet pipenv shell &&
+# pipenv shell 
+
+
+# Show Context
+
+figlet Sensei Dev Server
+ls -l
+
+which python
+python --version
+
+echo directory is `pwd`
 
