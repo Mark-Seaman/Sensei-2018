@@ -32,9 +32,9 @@ def fetch_page(url):
         browser.get('https://%s' % url)        
         features = extract_features(browser)
         browser.quit()
-        return features
     else:
-        return 'Disabled test', 'Disabled test', 'Disabled test', 'Disabled test'
+        features = dict(text='Disabled test', html='Disabled test', title='Disabled test', h1='Disabled test')
+    return features
 
 
 if __file__ == '__main__':
