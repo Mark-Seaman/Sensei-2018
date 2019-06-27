@@ -1,8 +1,7 @@
-from os import environ
 from selenium import webdriver
 
 
-SELENIUM_TEST = True
+SELENIUM_TEST = False
 
 
 def selenium_test():
