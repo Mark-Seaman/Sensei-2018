@@ -11,7 +11,6 @@ alias s2='cd ~/S2;      pipenv shell'
 alias br='cd ~/Brain;   pipenv shell'
 
 # Load the project profile
+#[ -f bashrc ] && . bashrc
 [ -f bin/bashrc ] && . bin/bashrc
-
-# Load the project profile for Sensei
-[ -f ../bin/bashrc ] && cd .. && . bin/bashrc
+#[ -f ../bin/bashrc ] && cd .. && . bin/bashrc

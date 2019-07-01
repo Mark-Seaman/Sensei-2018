@@ -35,7 +35,7 @@ export b="$HOME/Brain"
 # /usr/bin:\
 # /usr/local/mysql/bin
 
-export PATH=$PATH:$HOME/S2:$HOME/S2/bin
+export PATH=$PATH:$p:$p/bin
 
 . $p/bin/bash-alias
 . $p/bin/bash-prompt
@@ -54,10 +54,11 @@ export PATH=$PATH:$HOME/S2:$HOME/S2/bin
 # Show Context
 
 figlet Sensei Dev Server
-ls -l
 
 which python
 python --version
+pip list
 
 echo directory is `pwd`
+ls -l
 
