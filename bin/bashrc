@@ -9,10 +9,6 @@ else
 fi
 echo "p = $p"
 
-
-#export PIPENV_IGNORE_VIRTUALENVS=1
-#export PIPENV_VENV_IN_PROJECT=1
-
 export CLICOLOR=true
 export imac='seaman@10.0.0.48'
 export macbook='markseaman@10.0.0.167'
@@ -22,6 +18,19 @@ export md="$HOME/Archive/Documents-2018"
 export mbw="$HOME/Archive/rcp/mbw"
 export s="$HOME/Sensei"
 export b="$HOME/Brain"
+export PATH=$PATH:$p:$p/bin
+
+. $p/bin/bash-alias
+. $p/bin/bash-prompt
+
+echo directory is `pwd`
+ls -l
+
+
+## OLD CODE
+
+#export PIPENV_IGNORE_VIRTUALENVS=1
+#export PIPENV_VENV_IN_PROJECT=1
 
 
 # # Path variable
@@ -35,14 +44,7 @@ export b="$HOME/Brain"
 # /usr/bin:\
 # /usr/local/mysql/bin
 
-export PATH=$PATH:$p:$p/bin
-
-. $p/bin/bash-alias
-. $p/bin/bash-prompt
-
-
 # Setup Python Context
-
 # cd $p
 # [ "$p" != "$HOME/MyBook" ] &&
 # [ "$PIPENV_ACTIVE" != '1' ] && 
@@ -52,13 +54,9 @@ export PATH=$PATH:$p:$p/bin
 
 
 # Show Context
+# figlet Sensei Dev Server
+# which python
+# python --version
+# pip list
 
-figlet Sensei Dev Server
-
-which python
-python --version
-pip list
-
-echo directory is `pwd`
-ls -l
 

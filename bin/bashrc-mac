@@ -7,10 +7,10 @@ echo '   s2'
 echo '   br'
 
 alias s1='cd ~/Sensei/hammer;  pipenv shell'
-alias s2='cd ~/S2;      pipenv shell'
-alias br='cd ~/Brain;   pipenv shell'
+alias s2='cd ~/S2/hammer;      pipenv shell'
+alias br='cd ~/Brain/hammer;   pipenv shell'
 
 # Load the project profile
 #[ -f bashrc ] && . bashrc
-[ -f bin/bashrc ] && . bin/bashrc
-#[ -f ../bin/bashrc ] && cd .. && . bin/bashrc
+#[ -f bin/bashrc ] && . bin/bashrc
+[ -f ../bin/bashrc ] && cd .. && . bin/bashrc

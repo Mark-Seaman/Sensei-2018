@@ -9,7 +9,7 @@ alias blue='ssh uncobacs@unco-bacs.org'
 alias bluepull="ssh uncobacs@unco-bacs.org 'pwd && git pull && git status'"
 alias book='x book'
 alias booknotes='x booknotes'
-alias br='cd ~/Brain; pipenv shell'
+alias br='cd ~/Brain/hammer; pipenv shell'
 alias brain='python $p/bin/brain.py'
 
 alias calendar='x web https://calendar.google.com/calendar/render?pli=1#main_7'
@@ -74,6 +74,7 @@ alias n='cd $p && python bin/ntsh.py'
 alias note='open /Applications/Evernote.app'
 
 alias ops='x ops'
+alias o='dj ocean'
 
 alias p='cd $p && python'
 alias page='x page'
@@ -82,7 +83,7 @@ alias plan='b ~/Sensei/Documents/info'
 alias pt='cd $p/bin && python page_tests.py'
 alias pull='vc pull'
 alias push='vc push'
-alias py='figlet Sensei&&which python&&python --version&&pip list&&echo directory is `pwd`'
+alias py='figlet Sensei&&which python&&python --version&&pip list&&echo directory `pwd`&&ls -l'
 
 alias r=reset
 alias rc='. ~/Rest/bashrc'
@@ -90,8 +91,8 @@ alias rest='cd ~/Rest/library && pipenv shell'
 alias robot='x robot'
 
 alias s='app search'
-alias s1='cd ~/Sensei; pipenv shell'
-alias s2='cd ~/S2; pipenv shell'
+alias s1='cd ~/Sensei/hammer; pipenv shell'
+alias s2='cd ~/S2/hammer; pipenv shell'
 alias sensei='cd ~/Sensei && b .'
 alias shell='cd $p && python ./manage.py shell'
 alias ssh-imac='ssh $imac'
