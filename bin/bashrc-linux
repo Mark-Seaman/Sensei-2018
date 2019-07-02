@@ -2,6 +2,7 @@
 [ -z "$PS1" ] && return
 
 # Load the project profile
+cd MyBook
 [ -f ~/MyBook/bin/bashrc ] && . ~/MyBook/bin/bashrc
 
 
