@@ -16,8 +16,8 @@ urlpatterns = [
     url(r'^(?P<title>[\w/\-_.]*)/Files$',       DocFileIndex.as_view()),
 
     # Authentication
-    url(r'^login',                              login, {'template_name': 'mybook_login.html'}, name='login'),
-    url(r'^logout$',                            logout, {'next_page': '/login'}),
+    # url(r'^login',                              login, name='login'),
+    # url(r'^logout$',                            logout, {'next_page': '/login'}),
 
     # MarkSeaman
     #url(r'^MarkSeaman/booknotes/(?P<title>[\w/\-.]*)$',    BookNotes.as_view()),

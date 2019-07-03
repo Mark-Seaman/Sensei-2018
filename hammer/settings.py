@@ -78,7 +78,7 @@ TEMPLATES = [
 ]
 
 ROOT_URLCONF = 'hammer.urls'
-LOGIN_URL='/login/'
+LOGIN_URL='/admin/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'hammer.wsgi.application'
