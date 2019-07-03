@@ -7,7 +7,7 @@ from days import days_ago
 
 
 def todo_command():
-    for d in recent_dates(1):
+    for d in recent_dates():
         edit_task_file(d)
 
 
