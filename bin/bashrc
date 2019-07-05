@@ -1,30 +1,57 @@
 #!/bin/bash
-# Setup project context
+# Linux Shell Contexts
 
 if [ `hostname` == 'MyBook' ]
 then
-    export p=$HOME/MyBook
+    figlet 'S1 Server'
+    . env/bin/activate
+    export p=$HOME
+    
+    which python
+    python --version
+    pip list
 else
-    export p=$HOME/Sensei
+    export p=$HOME/S1
+    figlet 'S1 Dev'
 fi
-echo "p = $p"
 
-export CLICOLOR=true
-export imac='seaman@10.0.0.48'
-export macbook='markseaman@10.0.0.167'
-export blue='uncobacs@unco-bacs.org'
-export mb="$HOME/Archive/MyBook-2018"
-export md="$HOME/Archive/Documents-2018"
-export mbw="$HOME/Archive/rcp/mbw"
-export s="$HOME/Sensei"
-export b="$HOME/Brain"
-export PATH=$PATH:$p:$p/bin
+echo "p = $p"
 
 . $p/bin/bash-alias
 . $p/bin/bash-prompt
 
-echo directory is `pwd`
+export PATH=$PATH:$p:$p/bin
+echo "PATH = $PATH"
+
 ls -l
+
+# #!/bin/bash
+# # Setup project context
+
+# if [ `hostname` == 'MyBook' ]
+# then
+#     export p=$HOME/MyBook
+# else
+#     export p=$HOME/Sensei
+# fi
+# echo "p = $p"
+
+# export CLICOLOR=true
+# export imac='seaman@10.0.0.48'
+# export macbook='markseaman@10.0.0.167'
+# export blue='uncobacs@unco-bacs.org'
+# export mb="$HOME/Archive/MyBook-2018"
+# export md="$HOME/Archive/Documents-2018"
+# export mbw="$HOME/Archive/rcp/mbw"
+# export s="$HOME/Sensei"
+# export b="$HOME/Brain"
+# export PATH=$PATH:$p:$p/bin
+
+# . $p/bin/bash-alias
+# . $p/bin/bash-prompt
+
+# echo directory is `pwd`
+# ls -l
 
 
 ## OLD CODE
