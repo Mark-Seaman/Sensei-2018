@@ -14,6 +14,8 @@ import health.urls
 import superuser.urls
 import sensei.urls
 
+from mybook.views import SeamanFamily
+
 
 urlpatterns = [
 
@@ -22,6 +24,9 @@ urlpatterns = [
 
     # Admin
     url(r'^admin/',      admin.site.urls),
+
+    # SeamanFamily
+    url(r'^', SeamanFamily.as_view()),
 
     # Brain
     url(r'^brain/',    include(brain.urls)),
