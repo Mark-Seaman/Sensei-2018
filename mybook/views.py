@@ -32,7 +32,7 @@ class DocDisplay(TemplateView):
         url = doc_page(request.path[1:])
 
         log('REDIRECT TEST: %s' % request.path[1:])
-        if url == 'info/Test/Index':
+        if request.path[1:] == 'info/Test/Index':
             return HttpResponseRedirect('https://seamanfamily.org/' + url)
 
         if url:
