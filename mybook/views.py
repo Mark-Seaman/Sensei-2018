@@ -15,7 +15,7 @@ class SeamanFamily(RedirectView):
     permanent = False
 
     def get_redirect_url(self, *args, **kwargs):
-        return 'https://seamanfamily.org/%s' % self.kwargs.get('title')
+        return 'https://seamanfamily.org/%s' % self.kwargs.get('title', 'Index')
 
 
 class DocDisplay(TemplateView):
