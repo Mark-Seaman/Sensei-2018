@@ -33,7 +33,7 @@ class DocDisplay(TemplateView):
 
         log('REDIRECT TEST: %s' % request.path[1:])
         if request.path[1:] == 'info/Test/Index':
-            return HttpResponseRedirect('https://seamanfamily.org/' + url)
+            return HttpResponseRedirect('https://seamanfamily.org/' + request.path[1:])
 
         if url:
             log('REDIRECT: %s --> %s' % (title, url))
