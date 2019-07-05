@@ -30,6 +30,8 @@ class DocDisplay(TemplateView):
     def get(self, request, *args, **kwargs):
         title = self.kwargs.get('title', 'Index')
         url = doc_page(self.request.path[1:])
+        if url=='info/Test/Index':
+            return HttpResponseRedirect('https://seamanfamily.org/' + url)
         if url:
             log('REDIRECT: %s --> %s' % (title, url))
             return HttpResponseRedirect('/' + url)
