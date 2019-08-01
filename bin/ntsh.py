@@ -103,10 +103,10 @@ def hide():
     for f in files:
         f1 = join(d1, f)
         print(f1+ '...')
-        # if f.endswith('.webp'):
-        #     remove(f1)
-        # if f.endswith('.DS_Store'):
-        #     remove(f1)
+        if f.endswith('.webp'):
+            remove(f1)
+        if f.endswith('.DS_Store'):
+            remove(f1)
         if f1.endswith('.PNG'):
             convert_png(f1, f1.replace('.PNG', '.jpg'))
         if f1.endswith('.png'):
@@ -132,6 +132,8 @@ def new_name(name):
     name = name.replace('.jpg','.rcp')
     name = name.replace('.jpeg','.rcp')
     name = name.replace('.JPG','.rcp')
+    name = name.replace('.PNG','.rcp')
+    name = name.replace('.png','.rcp')
     return name
 
 
