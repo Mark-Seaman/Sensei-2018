@@ -1,0 +1,132 @@
+/* Element Types */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #444444;
+    margin: 2em;
+
+}
+
+
+h1, h2, h3 {
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 150%;
+    color: green;
+}
+
+h3 {
+    font-size: 110%;
+}
+
+p {
+    color: #444444;
+}
+
+li {
+    line-height: 2;
+}
+
+a {
+    color: green;
+}
+
+label {
+    float: left;
+    width: 8em;
+    text-align: right;
+    margin-right: 2em;
+}
+
+input {
+    margin-bottom: .5em;
+    width: 10em;
+}
+
+tr {
+    margin: 1em;
+    padding: 2em;
+}
+
+td {
+    margin: 1em;
+    min-width: 20em;
+}
+
+textarea {
+    height: 30em;
+    width: 600px;
+}
+
+button {
+    margin-left: 7em;
+    font-size: 20px;
+}
+
+/* Class */
+
+.serif {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.sans-serif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+    font-family: "Courier New";
+}
+
+.large {
+    font-size: 200%;
+}
+
+.small {
+    font-size: 50%;
+}
+
+.box {
+    border: solid #dddddd 2px;
+    padding: 1em;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 4px 4px 6px gray;
+}
+
+.ui-widget-content a {
+    color: blue;
+}
+
+/* ID */
+
+#main_menu {
+    padding-top: 0px;
+    margin: 0px;
+}
+
+#main_menu ul {
+
+    padding-top: 0px;
+    margin: 0px;
+}
+
+#main_menu ul li {
+    display: inline;
+    background-color: #4B6F94;
+    width: 10%;
+    margin-left: 1em;
+    padding: .5em;
+}
+
+#main_menu a {
+    color: white;
+}
