@@ -7,7 +7,7 @@ echo '   s2'
 echo '   br'
 
 alias s1='cd ~/S1/hammer;      pipenv shell; echo closing pipenv shell'
-alias s2='cd ~/S2/hammer;      pipenv shell; echo closing pipenv shell'
+alias s2='cd ~/Sensei/hammer;      pipenv shell; echo closing pipenv shell'
 alias br='cd ~/Brain/hammer;   pipenv shell; echo closing pipenv shell'
 
 # Load the project profile

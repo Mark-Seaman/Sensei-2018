@@ -11,8 +11,8 @@ then
     python --version
     pip list
 else
-    export p=$HOME/S1
-    figlet 'S1 Dev'
+    export p=$HOME/Archive/Sensei-2018
+    figlet 'Sensei-2018 Dev'
 fi
 
 echo "p = $p"
