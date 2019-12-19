@@ -1,7 +1,7 @@
 from selenium import webdriver
 
 
-SELENIUM_TEST = False
+SELENIUM_TEST = True
 
 
 def selenium_test():

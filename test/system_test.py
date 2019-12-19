@@ -48,7 +48,7 @@ def system_pandoc_test():
 
 
 def system_pipenv_test():
-    return open('hammer/Pipfile').read()
+    return open('Pipfile').read()
 
 
 def system_python_files_test():
