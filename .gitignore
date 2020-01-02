@@ -3,8 +3,7 @@
 .idea
 .pytest_cache
 
-Documents-2018
-Documents
+Documents*
 
 bin/pip-list
 bin/welcome
