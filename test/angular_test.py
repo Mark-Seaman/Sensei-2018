@@ -14,7 +14,7 @@ def count_files(filetype=None):
 
 
 if RUN_TEST:
-    files = shell_file_list(join(environ['HOME'], 'Angular'))
+    files = shell_file_list(join(environ['HOME'], 'Archive/Angular'))
 else:
     files = []
 

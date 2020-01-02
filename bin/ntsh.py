@@ -184,7 +184,7 @@ def zip_open():
 
 
 def zip_close():
-    system('cd && zip -r .ntsh.zip ntsh && rm -r ntsh && mv .ntsh.zip %s/.ntsh.opc' % base)
+    system('cd && zip -r .ntsh.zip ntsh && rm -fr ntsh && mv .ntsh.zip %s/.ntsh.opc' % base)
 
 
 
