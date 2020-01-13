@@ -6,9 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "==1.11.23"
+django = "==3.0.2"
 selenium = "*"
-pillow = "*"
+pillow = "==6.2.0"
 
 [requires]
 python_version = "3.7"
