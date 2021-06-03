@@ -174,8 +174,8 @@ def view():
 
 def web(page='%s/notes/fav_list' % archive):
     f = page # 'file://$HOME/Documents/.ntsh/bin/x.py'
-    chrome = 'open -a "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"'
-    system('cd %s && %s --args %s' % (archive, chrome,f) )
+    browser = 'open -a "/Applications/Firefox.app"'
+    system('cd %s && %s --args %s' % (archive, browser,f) )
 
 
 def zip_open():
